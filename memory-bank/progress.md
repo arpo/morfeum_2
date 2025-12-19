@@ -2,6 +2,16 @@
 
 ## 2025-12-19
 
+- [x] **File Size Limit Refactoring (Latest)**: Brought all backend files under 50-300 line limit
+  - [x] Extracted navigation route handlers to separate files (navigation.ts: 997 → 54 lines)
+    - Created handlers/ directory with 6 dedicated handler files
+    - Exported shared utilities (pipelineConfigs, detectPerspectiveFromNode)
+  - [x] Extracted pipeline steps to helper files (createNodePipeline.ts: 430 → 182 lines)
+    - Created destinationAnalysisStep.ts, spaceAnalysisStep.ts, nodeBuildingStep.ts
+    - Clean orchestration with single responsibility per file
+  - [x] TypeScript compilation verified clean
+  - [x] Memory bank updated with changes
+
 - [x] **GOTO/GO_INSIDE Command Alignment**: Complete refactoring to align commands with shared logic
   - [x] Created `CommandContext` interface to replace scattered boolean flags
   - [x] Added `resolveNavigationParentDNA()` helper (single source of truth for DNA resolution)

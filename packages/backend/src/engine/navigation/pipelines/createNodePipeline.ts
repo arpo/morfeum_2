@@ -9,18 +9,13 @@
  * - Structure stored separately from DNA at node level
  */
 
-import { generateNodeDNA, extractParentContext, mergeDNAWithParent } from '../../hierarchyAnalysis/nodeDNAGenerator';
-import { generateLocationImage } from '../../generation/shared/imageGeneration';
-import { buildNode } from '../../generation/shared/nodeBuilder';
-import { generateImagePromptForNode } from '../../generation/shared/imagePromptGeneration';
-import type { NavigationDecision, NavigationContext, IntentResult, DestinationAnalysis, StructureAnalysis, Structure, CommandContext } from '../types';
-import { NICHE_CAMERA } from '../../generation/prompts/shared/cameraConfig';
-import { findParentLocationNode, findParentRegionNode, shouldRunDestinationAnalysis } from '../navigationHelpers';
-import { PipelineHelper } from '../../pipelines/shared/pipelineHelpers';
+import type { NavigationDecision, NavigationContext, IntentResult, CommandContext } from '../types';
+import type { ParsedEnhancements } from '../analyzers/structureAnalyzer';
 import { getPipelineTypeForIntent } from '../../pipelines/shared/pipelineConfig';
-import mediaService from '../../../services/media/mediaService';
-import { analyzeDestination } from '../analyzers/destinationAnalyzer';
-import { analyzeStructure, ParsedEnhancements } from '../analyzers/structureAnalyzer';
+import { PipelineHelper } from '../../pipelines/shared/pipelineHelpers';
+import { runDestinationAnalysisStep } from './helpers/destinationAnalysisStep';
+import { runSpaceAnalysisStep } from './helpers/spaceAnalysisStep';
+import { generateNodeImagePrompt, generateImage, buildFinalNode } from './helpers/nodeBuildingStep';
 
 // Navigation-specific node types (excludes host/region which are created by spawn system)
 export type NavigationNodeType = 'niche' | 'feature' | 'detail' | 'location';
@@ -35,12 +30,12 @@ export interface CreateNodeOptions {
   useUnifiedPipeline?: boolean; // Enable new unified pipeline (defaults to true)
   /** Pre-parsed navigable elements and furnishing from command (user-controlled) */
   parsedEnhancements?: ParsedEnhancements;
-  isSubPipeline?: boolean; // Running as sub-pipeline - skip started/completed events (parent handles progress)
+  isSubPipeline?: boolean; // Running as sub-pipeline - skip started/completed events
   /** True when GOTO is triggered from a location node (creates sibling location instead of niche) */
   isFromLocation?: boolean;
-  /** Pre-resolved parent DNA (from region/host) - used when route handler has already resolved DNA */
+  /** Pre-resolved parent DNA (from region/host) */
   resolvedParentDNA?: any;
-  /** Unified command context (new architecture) - when provided, takes precedence over individual flags */
+  /** Unified command context (new architecture) */
   commandContext?: CommandContext;
 }
 
@@ -58,9 +53,8 @@ export async function runCreateLocationNodePipeline(
   options?: CreateNodeOptions,
   navigationId?: string
 ): Promise<{ imageUrl: string; imagePrompt: string; node: any }> {
-  // Auto-detect pipeline type from intent (GOTO uses 'navigationGoto', GO_INSIDE uses 'navigation')
+  // Auto-detect pipeline type from intent
   const pipelineType = options?.gotoText ? 'navigationGoto' : getPipelineTypeForIntent(intent.intent);
-  // Skip helper entirely for sub-pipelines - parent handles all progress events
   const helper = (navigationId && !options?.isSubPipeline) 
     ? new PipelineHelper(navigationId, 'CreateNodePipeline', pipelineType) 
     : null;
@@ -72,350 +66,111 @@ export async function runCreateLocationNodePipeline(
     const nodeType = cmdCtx?.targetNodeType || options?.nodeType || 'niche';
     const shouldGenerateImage = options?.generateImage !== false;
 
-    // Get style and perspective from decision or options
-    // IMPORTANT: For location-type nodes (GOTO from location), default to exterior
-    let style = options?.style || decision.style || intent.style || 'default';
-    
-    // Default perspective based on node type being created
+    // Determine perspective
     const isFromLocation = cmdCtx ? cmdCtx.sourceNodeType === 'location' : options?.isFromLocation;
     const defaultPerspective = (nodeType === 'location' || isFromLocation) ? 'exterior' : 'interior';
-    let perspective = options?.perspective || decision.perspective || intent.spaceType || defaultPerspective;
-    
-    // DEBUG: Log perspective resolution
-    console.log(`[PERSPECTIVE DEBUG] Pipeline perspective resolution:`);
-    console.log(`  options?.perspective: ${options?.perspective}`);
-    console.log(`  decision.perspective: ${decision.perspective}`);
-    console.log(`  intent.spaceType: ${intent.spaceType}`);
-    console.log(`  nodeType: ${nodeType}`);
-    console.log(`  isFromLocation: ${options?.isFromLocation}`);
-    console.log(`  defaultPerspective: ${defaultPerspective}`);
-    console.log(`  Final perspective: ${perspective}`);
+    let perspective = (options?.perspective || decision.perspective || intent.spaceType || defaultPerspective) as 'interior' | 'exterior' | 'open-air';
 
-    // Only send started event if not a sub-pipeline (parent handles progress)
+    // Only send started event if not a sub-pipeline
     if (helper && !options?.isSubPipeline) {
       helper.started('Starting node creation...');
     }
 
-    // Determine user prompt (from GOTO text or GO_INSIDE reasoning)
+    // Determine user prompt
     const userPrompt = cmdCtx?.userPrompt || options?.userPrompt || options?.gotoText || intent.target || decision.newNodeName || 'interior space';
 
-    // Determine command type for conditional logic
+    // Determine command type
     const command: 'GOTO' | 'GO_INSIDE' = (cmdCtx?.command || (options?.gotoText ? 'GOTO' : 'GO_INSIDE'));
+    const isGotoCommand = command === 'GOTO';
 
     // ═══════════════════════════════════════════════════════════════════════════
     // STEP 0.5: DESTINATION ANALYSIS
     // ═══════════════════════════════════════════════════════════════════════════
-    // GOTO: Always runs destination analysis (synthesizes user prompt with context)
-    // GO_INSIDE: Runs conditionally for rich descriptions (>20 chars)
-    let destinationAnalysis: DestinationAnalysis | null = null;
-    
-    if (command === 'GOTO') {
-      // GOTO always runs destination analysis
-      if (helper) {
-        helper.startStage('destination_analysis', 'Analyzing destination...');
-      }
-      
-      console.log(`\n🎯 [Pipeline] Running destination analysis for GOTO`);
-      console.log(`  User prompt: "${userPrompt}"`);
-      
-      destinationAnalysis = await analyzeDestination(apiKey, userPrompt, context);
-      
-      // Update decision with analysis results
-      if (destinationAnalysis) {
-        decision.newNodeName = destinationAnalysis.name;
-        decision.perspective = destinationAnalysis.perspective;
-        perspective = destinationAnalysis.perspective;
-        console.log(`  Result: name="${destinationAnalysis.name}", perspective="${destinationAnalysis.perspective}"`);
-      }
-      
-      if (helper) {
-        helper.completeStage('destination_analysis', 'Destination analyzed', {
-          name: destinationAnalysis?.name,
-          perspective: destinationAnalysis?.perspective
-        });
-      }
-    } else if (command === 'GO_INSIDE' && shouldRunDestinationAnalysis(command, userPrompt)) {
-      // GO_INSIDE: Update pipeline config to include destination_analysis step (dynamic config)
-      // This gives accurate progress bar for rich GO_INSIDE descriptions
-      if (helper) {
-        helper.updatePipelineConfig('navigationWithDestination', 'Rich description detected...');
-        helper.startStage('destination_analysis', 'Analyzing destination...');
-      }
-      
-      console.log(`\n🎯 [Pipeline] Running conditional destination analysis for GO_INSIDE`);
-      console.log(`  User prompt (${userPrompt.length} chars): "${userPrompt}"`);
-      
-      destinationAnalysis = await analyzeDestination(apiKey, userPrompt, context);
-      
-      // Update decision with analysis results
-      if (destinationAnalysis) {
-        decision.newNodeName = destinationAnalysis.name;
-        decision.perspective = destinationAnalysis.perspective;
-        perspective = destinationAnalysis.perspective;
-        console.log(`  Result: name="${destinationAnalysis.name}", perspective="${destinationAnalysis.perspective}"`);
-      }
-      
-      if (helper) {
-        helper.completeStage('destination_analysis', 'Destination analyzed', {
-          name: destinationAnalysis?.name,
-          perspective: destinationAnalysis?.perspective
-        });
-      }
-    }
+    const { updatedPerspective } = await runDestinationAnalysisStep({
+      command,
+      userPrompt,
+      context,
+      decision,
+      apiKey,
+      helper
+    });
+    perspective = updatedPerspective as 'interior' | 'exterior' | 'open-air';
 
     // ═══════════════════════════════════════════════════════════════════════════
     // STEP 1: SPACE ANALYSIS (Structure + DNA in parallel)
     // ═══════════════════════════════════════════════════════════════════════════
-    if (helper) {
-      helper.startStage('space_analysis', 'Analyzing space (structure + DNA)...');
-    }
-
-    console.log(`\n🔄 [Pipeline] Starting parallel Space Analysis for: "${userPrompt}"`);
-
-    // Determine if this is a GOTO command (creates new destination vs entering current location)
-    const isGotoCommand = command === 'GOTO';
+    const parsedEnhancements = (cmdCtx?.parsedEnhancements || options?.parsedEnhancements) as ParsedEnhancements | undefined;
     
-    // Get parsed enhancements from command context or options
-    const parsedEnhancements = cmdCtx?.parsedEnhancements || options?.parsedEnhancements;
-    
-    // Run Structure Analysis and DNA Generation in PARALLEL
-    const [structureAnalysis, dnaResult] = await Promise.all([
-      // Structure Analysis (determines physical/spatial properties)
-      // NOTE: parsedEnhancements (navigableElements, furnishing) come from user command, not LLM
-      // For GOTO: uses destination-focused prompt (user input is PRIMARY)
-      analyzeStructure(apiKey, userPrompt, context, perspective as 'interior' | 'exterior', parsedEnhancements, { isGotoCommand }),
-      
-      // DNA Generation (determines visual/atmospheric properties)
-      (async () => {
-        // CRITICAL: Use pre-resolved parent DNA if available (from route handler or command context)
-        // This ensures proper cascaded DNA from region/host is used
-        let parentDNA: any;
-        if (cmdCtx?.resolvedParentDNA) {
-          // Command context has resolved DNA - use it directly
-          parentDNA = cmdCtx.resolvedParentDNA;
-          console.log(`[DNA] Using parent DNA from CommandContext`);
-          console.log(`  - architectural_tone: ${parentDNA.architectural_tone || 'null'}`);
-          console.log(`  - palette_bias: ${parentDNA.palette_bias || 'null'}`);
-        } else if (options?.resolvedParentDNA) {
-          // Route handler already resolved cascaded DNA - use it directly
-          parentDNA = options.resolvedParentDNA;
-          console.log(`[DNA] Using PRE-RESOLVED parent DNA from route handler`);
-          console.log(`  - architectural_tone: ${parentDNA.architectural_tone || 'null'}`);
-          console.log(`  - palette_bias: ${parentDNA.palette_bias || 'null'}`);
-        } else if (isGotoCommand && isFromLocation) {
-          // Fallback: try to get region DNA from context (may be incomplete)
-          const { parentRegionDNA } = findParentRegionNode(context);
-          parentDNA = parentRegionDNA;
-          console.log(`[DNA] GOTO from location: Using REGION DNA from context (fallback)`);
-        } else {
-          const { parentLocationDNA } = findParentLocationNode(context);
-          parentDNA = parentLocationDNA;
-        }
-        
-        const parentContext = parentDNA
-          ? extractParentContext(parentDNA)
-          : undefined;
-        
-        // Generate DNA with basic info - we'll enhance with structure later
-        // For GOTO: uses simplified parent context (style only, not content)
-        return generateNodeDNA(
-          apiKey,
-          userPrompt,
-          decision.newNodeName || 'Unnamed Space',
-          nodeType,
-          userPrompt,
-          parentContext,
-          { isGotoCommand }
-        );
-      })()
-    ]);
+    const spaceAnalysisResult = await runSpaceAnalysisStep({
+      userPrompt,
+      nodeName: decision.newNodeName || 'Unnamed Space',
+      nodeType,
+      perspective,
+      context,
+      apiKey,
+      helper,
+      isGotoCommand,
+      isFromLocation: !!isFromLocation,
+      parsedEnhancements,
+      cmdCtx,
+      resolvedParentDNA: options?.resolvedParentDNA
+    });
 
-    // Update decision with analysis results
+    const { structureAnalysis, dnaResult, updatedPerspective: finalPerspective, parentDNAForImagePrompt } = spaceAnalysisResult;
+    
+    // Update decision with structure analysis results
     decision.newNodeName = structureAnalysis.name;
     decision.perspective = structureAnalysis.perspective;
     decision.metadata = decision.metadata || {};
     decision.metadata.structureAnalysis = structureAnalysis;
 
-    // Update perspective from analysis
-    perspective = structureAnalysis.perspective;
-
-    // CRITICAL: If roofType is 'open-sky', the space is EXTERIOR (not interior)
-    // This prevents "interior shot" + "open-sky" contradiction that causes cave-like images
-    if (structureAnalysis.structure.roofType === 'open-sky' && perspective === 'interior') {
-      console.log(`[Pipeline] Overriding perspective from '${perspective}' to 'exterior' (roofType is open-sky)`);
-      perspective = 'exterior';
-      structureAnalysis.perspective = 'exterior';
-    }
-
-    console.log('\n═══════════════════════════════════════════════════════════');
-    console.log('✅ SPACE ANALYSIS COMPLETE (Parallel)');
-    console.log('═══════════════════════════════════════════════════════════');
-    console.log(`  Name: ${structureAnalysis.name}`);
-    console.log(`  Perspective: ${structureAnalysis.perspective}`);
-    console.log(`  Form: ${structureAnalysis.structure.form}`);
-    console.log(`  Scale: ${structureAnalysis.structure.scale}`);
-    console.log(`  Functional Type: ${structureAnalysis.structure.functionalType}`);
-    console.log(`  Required Elements: ${structureAnalysis.structure.requiredElements?.length || 0}`);
-    console.log(`  DNA Generated: ${dnaResult.name ? '✓' : '✗'}`);
-    console.log('═══════════════════════════════════════════════════════════\n');
-
-    if (helper) {
-      helper.completeStage('space_analysis', 'Space analyzed', {
-        name: structureAnalysis.name,
-        perspective: structureAnalysis.perspective,
-        form: structureAnalysis.structure.form
-      });
-    }
-
     // ═══════════════════════════════════════════════════════════════════════════
-    // STEP 2: IMAGE PROMPT GENERATION (LLM-based, unified approach)
+    // STEP 2: IMAGE PROMPT GENERATION
     // ═══════════════════════════════════════════════════════════════════════════
-    if (helper) {
-      helper.startStage('image_prompt', 'Generating image prompt...');
-    }
-
-    // Get parent DNA for visual consistency (architectural_tone, cultural_tone, etc.)
-    // CRITICAL: Use pre-resolved DNA if available (from command context or route handler)
-    let parentDNAForImagePrompt: any;
-    if (cmdCtx?.resolvedParentDNA) {
-      // Command context has resolved DNA - use it directly
-      parentDNAForImagePrompt = cmdCtx.resolvedParentDNA;
-      console.log(`[ImagePrompt] Using parent DNA from CommandContext`);
-    } else if (options?.resolvedParentDNA) {
-      // Route handler already resolved cascaded DNA - use it directly
-      parentDNAForImagePrompt = options.resolvedParentDNA;
-      console.log(`[ImagePrompt] Using PRE-RESOLVED parent DNA from route handler`);
-    } else if (isGotoCommand && isFromLocation) {
-      const { parentRegionDNA } = findParentRegionNode(context);
-      parentDNAForImagePrompt = parentRegionDNA;
-      console.log(`[ImagePrompt] GOTO from location: Using REGION DNA from context (fallback)`);
-    } else {
-      const { parentLocationDNA } = findParentLocationNode(context);
-      parentDNAForImagePrompt = parentLocationDNA;
-    }
-    
-    // Use unified LLM-based image prompt generator
-    // IMPORTANT: includeCurrentNodeDNA is false by default to prevent
-    // the current niche's DNA from affecting the new node's image
-    let imagePrompt = await generateImagePromptForNode(apiKey, {
+    const imagePrompt = await generateNodeImagePrompt({
       structureAnalysis,
       dna: dnaResult.dna || {},
-      parentDNA: parentDNAForImagePrompt || undefined,
+      parentDNA: parentDNAForImagePrompt,
       userPrompt,
       nodeType,
-      perspective: perspective as 'interior' | 'exterior',
-      parentChain: context.parentNode ? [{
-        type: context.parentNode.type,
-        name: context.parentNode.name,
-        description: context.parentNode.data?.description || ''
-      }] : [],
-      includeCurrentNodeDNA: false // NEVER include current niche DNA in /goto image generation
+      perspective: finalPerspective,
+      context,
+      apiKey,
+      helper
     });
 
-    if (helper) {
-      helper.completeStage('image_prompt', 'Image prompt generated', { imagePrompt });
-    }
-
-    // Step 2: Generate FLUX image using shared module
-    let imageUrl: string;
-    imagePrompt += `${NICHE_CAMERA} `;
-
+    // ═══════════════════════════════════════════════════════════════════════════
+    // STEP 3: IMAGE GENERATION
+    // ═══════════════════════════════════════════════════════════════════════════
+    let imageUrl = '';
     if (shouldGenerateImage) {
-      if (helper) {
-        helper.startStage('image_generation', 'Generating image...');
-      }
-
-      const result = await generateLocationImage(apiKey, imagePrompt);
-      imageUrl = result.imageUrl;
-
-      if (helper) {
-        helper.completeStage('image_generation', 'Image generated', { imageUrl });
-      }
-    } else {
-      imageUrl = '';
+      imageUrl = await generateImage(apiKey, imagePrompt, helper);
     }
 
-    // DNA already generated in parallel during space_analysis step
-    // Now merge with parent DNA for CSS-like inheritance (fill null values from parent)
-    // Use the same parent DNA as image prompt (region DNA for GOTO from location)
-    const mergedDNA = mergeDNAWithParent(dnaResult.dna, parentDNAForImagePrompt);
-    const nodeData = { ...dnaResult, dna: mergedDNA };
-
-    // Step 4: Build complete node using shared builder, passing structural fields
-    if (helper) {
-      helper.startStage('node_building', 'Building final node...');
-    }
-
-    // Create media entry for the node image if we have an imageUrl
-    let mediaId: string | undefined;
-    let createdMedia: any;
-    if (shouldGenerateImage && imageUrl) {
-      createdMedia = mediaService.createMedia({
-        type: 'image',
-        url: imageUrl,
-        metadata: {
-          prompt: imagePrompt,
-          model: 'FLUX',
-        },
-        entityRefs: [] // Will be updated after node is created
-      });
-      mediaId = createdMedia.id;
-    }
-
-    // Extract structural fields from structure object to store at ROOT level only (not duplicated inside structure)
-    const { 
-      dominantElements, 
-      uniqueIdentifiers, 
-      navigableElements, 
-      ...cleanStructure 
-    } = structureAnalysis.structure;
-
-    // Build node with SEPARATE structure (new architecture)
-    const node = buildNode(nodeType, structureAnalysis.name, nodeData.dna, {
-      description: structureAnalysis.description || nodeData.description,
-      // Structure is now stored separately at node level (not inside DNA)
-      // These fields are stripped out and stored at root level to avoid duplication
-      structure: cleanStructure,
-      // Furnishing details (when --furnish flag is used)
-      furnishingDetails: structureAnalysis.furnishingDetails,
-      // Structural fields at ROOT level only (not inside structure object)
-      navigableElements: navigableElements || nodeData.navigableElements,
-      dominantElements: dominantElements || nodeData.dominantElements,
-      uniqueIdentifiers: uniqueIdentifiers || nodeData.uniqueIdentifiers,
-      searchDesc: nodeData.searchDesc,
-      slug: nodeData.slug,
-      primaryMedia: mediaId
-    });
-
-    // Update media entityRefs with the actual node ID
-    if (createdMedia && shouldGenerateImage) {
-      createdMedia.entityRefs = [node.id];
-    }
-
-    if (helper) {
-      helper.completeStage('node_building', 'Node built');
-    }
-
-    // Log success details
-    console.log('\n═══════════════════════════════════════════════════════════');
-    console.log('✅ NODE CREATED SUCCESSFULLY');
-    console.log('═══════════════════════════════════════════════════════════');
-    console.log('  ID:', node.id);
-    console.log('  Type:', node.type);
-    console.log('  Name:', node.name);
-    console.log('  Has DNA:', !!node.dna ? '✓' : '✗');
-    console.log('═══════════════════════════════════════════════════════════\n');
-
-    // Only send completion event if not a sub-pipeline (parent handles progress)
-    if (helper && !options?.isSubPipeline) {
-      helper.completed('Node created successfully', { node, imageUrl, imagePrompt });
-    }
-
-    return {
+    // ═══════════════════════════════════════════════════════════════════════════
+    // STEP 4: NODE BUILDING
+    // ═══════════════════════════════════════════════════════════════════════════
+    const nodeResult = buildFinalNode({
+      nodeType,
+      structureAnalysis,
+      dnaResult,
+      parentDNA: parentDNAForImagePrompt,
       imageUrl,
       imagePrompt,
-      node
-    };
+      shouldGenerateImage,
+      helper
+    });
+
+    // Only send completion event if not a sub-pipeline
+    if (helper && !options?.isSubPipeline) {
+      helper.completed('Node created successfully', { 
+        node: nodeResult.node, 
+        imageUrl: nodeResult.imageUrl, 
+        imagePrompt: nodeResult.imagePrompt 
+      });
+    }
+
+    return nodeResult;
   } catch (error: any) {
     if (helper) {
       helper.error(error);
@@ -424,174 +179,4 @@ export async function runCreateLocationNodePipeline(
     }
     throw error;
   }
-}
-
-/**
- * Get dimensional hints based on scale for better image generation
- * Uses tighter, more realistic ranges especially for small spaces
- */
-function getDimensionalHints(scale: string, orientation: string, form: string): string {
-  // Tighter dimension ranges for more accurate image generation
-  const dimensions: Record<string, { primary: string; secondary: string; height: string }> = {
-    small: { primary: '2-4m', secondary: '2-3m', height: '2-3m' },
-    medium: { primary: '4-10m', secondary: '3-6m', height: '3-5m' },
-    large: { primary: '10-30m', secondary: '8-15m', height: '5-15m' }
-  };
-
-  const dim = dimensions[scale] || dimensions.medium;
-
-  // Adjust based on orientation
-  if (orientation === 'vertical') {
-    return `approximately ${dim.secondary} wide, ${dim.height} to ${dim.primary} tall`;
-  } else if (orientation === 'horizontal') {
-    return `approximately ${dim.primary} long, ${dim.secondary} wide, ${dim.height} ceiling height`;
-  } else if (orientation === 'wide') {
-    return `approximately ${dim.primary} wide, ${dim.secondary} deep, ${dim.height} ceiling height`;
-  }
-  // cubic
-  return `approximately ${dim.secondary} in each dimension`;
-}
-
-/**
- * Compose image prompt from Structure + DNA analysis results
- * Includes inherited DNA from ancestors for visual consistency
- */
-function composeImagePrompt(
-  structureAnalysis: StructureAnalysis,
-  dnaResult: any,
-  userPrompt: string,
-  parentDNA?: any
-): string {
-  const { structure } = structureAnalysis;
-  const dna = dnaResult.dna || {};
-
-  // Build the image prompt from pre-computed data
-  const parts: string[] = [];
-
-  // Start with perspective and space type
-  parts.push(`${structureAnalysis.perspective} of ${structureAnalysis.name}.`);
-
-  // Add structural description
-  if (structure.spatialLayout) {
-    parts.push(structure.spatialLayout);
-  }
-
-  // Add form, scale, and dimensional hints for better FLUX accuracy
-  const dimensionalHints = getDimensionalHints(structure.scale, structure.orientation, structure.form);
-  parts.push(`A ${structure.scale} ${structure.form} space (${dimensionalHints}).`);
-
-  // Add orientation hint for cylindrical/spherical forms
-  if (structure.form === 'cylindrical') {
-    if (structure.orientation === 'horizontal') {
-      parts.push('The cylinder is oriented horizontally (lying down), with a curved ceiling following the arc.');
-    } else if (structure.orientation === 'vertical') {
-      parts.push('The cylinder is oriented vertically (standing up), with curved walls and flat ceiling.');
-    }
-  } else if (structure.form === 'spherical') {
-    parts.push('Interior curves follow the sphere in all directions.');
-  }
-
-  // Add DNA visual elements
-  if (dna.looks) {
-    parts.push(dna.looks);
-  }
-
-  // Add materials (prefer inherited materials_base if DNA materials missing)
-  if (dna.materials) {
-    parts.push(`Materials: ${dna.materials}`);
-  } else if (parentDNA?.materials_base) {
-    parts.push(`Materials: ${parentDNA.materials_base}`);
-  }
-
-  // Add colors and lighting
-  if (dna.colorsAndLighting) {
-    parts.push(dna.colorsAndLighting);
-  }
-
-  // Add atmosphere
-  if (dna.atmosphere) {
-    parts.push(dna.atmosphere);
-  }
-
-  // === INHERITED DNA FROM ANCESTORS (CRITICAL FOR VISUAL CONSISTENCY) ===
-  // These ensure the niche looks like it belongs in its host (e.g., Parisian style)
-  if (parentDNA) {
-    if (parentDNA.architectural_tone) {
-      parts.push(`ARCHITECTURAL STYLE (from host): ${parentDNA.architectural_tone}`);
-    }
-    if (parentDNA.cultural_tone) {
-      parts.push(`Cultural context: ${parentDNA.cultural_tone}`);
-    }
-    if (parentDNA.palette_bias) {
-      parts.push(`Color palette bias: ${parentDNA.palette_bias}`);
-    }
-    if (parentDNA.mood_baseline) {
-      parts.push(`Mood: ${parentDNA.mood_baseline}`);
-    }
-  }
-
-  // Add REQUIRED ELEMENTS (user-specified, MUST appear)
-  if (structure.requiredElements && structure.requiredElements.length > 0) {
-    parts.push(`MUST INCLUDE: ${structure.requiredElements.join('. ')}.`);
-  }
-
-  // Add suggested fixtures
-  if (structure.suggestedFixtures && structure.suggestedFixtures.length > 0) {
-    parts.push(`Fixtures: ${structure.suggestedFixtures.join(', ')}.`);
-  }
-
-  // Add navigable elements with visual prominence
-  if (structure.navigableElements && structure.navigableElements.length > 0) {
-    const navDescriptions = structure.navigableElements
-      .map(n => `${n.type} at ${n.position}: ${n.description}`)
-      .join('. ');
-    parts.push(`Navigation points: ${navDescriptions}.`);
-  }
-
-  // Add dominant elements
-  if (structure.dominantElements && structure.dominantElements.length > 0) {
-    parts.push(`Key features: ${structure.dominantElements.join(', ')}.`);
-  }
-
-  // Add opening shape specification (critical for window/porthole consistency)
-  if (structure.openingShape) {
-    const shapeDescriptions: Record<string, string> = {
-      rectangular: 'Windows and openings are rectangular/square-shaped.',
-      circular: 'Windows and openings are circular/round (portholes).',
-      arched: 'Windows and openings have arched tops.',
-      mixed: 'Windows include both rectangular and circular shapes.',
-      irregular: 'Windows and openings have organic, non-standard shapes.'
-    };
-    parts.push(shapeDescriptions[structure.openingShape] || '');
-  }
-
-  // Add furnishing details if present (--furnish flag was used)
-  // Use STRONG emphasis to ensure FLUX renders furniture prominently
-  if (structureAnalysis.furnishingDetails) {
-    const { userSpecified, suggested, placementNotes } = structureAnalysis.furnishingDetails;
-    console.log('\n🪑 [FURNISHING] --furnish flag detected, adding EMPHASIZED furnishing details to image prompt:');
-    
-    // CRITICAL: Add strong furnishing emphasis to prevent empty spaces
-    parts.push('IMPORTANT: This space is FULLY FURNISHED and IN ACTIVE USE - NOT an empty room.');
-    parts.push('Furniture and equipment FILL THE SPACE, distributed throughout the floor area, not just along walls.');
-    parts.push('Items are HUMAN-SCALE and PROMINENTLY VISIBLE in foreground and midground.');
-    
-    if (userSpecified && userSpecified.length > 0) {
-      console.log(`  User-specified: ${userSpecified.join(', ')}`);
-      parts.push(`MUST INCLUDE these user-specified items (prominently visible): ${userSpecified.join(', ')}.`);
-    }
-    if (suggested && suggested.length > 0) {
-      console.log(`  Suggested: ${suggested.join(', ')}`);
-      // Convert list to more descriptive scene setting
-      const furnishingCount = suggested.length;
-      parts.push(`The space contains at least ${Math.min(furnishingCount, 4)}-${Math.min(furnishingCount + 2, 8)} pieces of furniture/equipment: ${suggested.join(', ')}.`);
-      parts.push('These items occupy 40-60% of the visible floor space.');
-    }
-    if (placementNotes && placementNotes.length > 0) {
-      console.log(`  Placement notes: ${placementNotes.join('. ')}`);
-      parts.push(`Spatial arrangement: ${placementNotes.join(' ')}`);
-    }
-  }
-
-  return parts.join(' ');
 }

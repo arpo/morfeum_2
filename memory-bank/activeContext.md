@@ -2,6 +2,52 @@
 
 ## 2025-12-19
 
+### File Size Limit Refactoring (Dec 19, Latest)
+
+**Major code organization refactoring** completed to bring all backend files under the 50-300 line limit:
+
+#### **1. Navigation Route Handler Extraction** (`navigation.ts`: 997 → 54 lines)
+- **Handler Separation**: Extracted all route handlers to dedicated files in `handlers/` directory:
+  - `analyzeHandler.ts` (117 lines) - POST /analyze endpoint
+  - `commandHandler.ts` (358 lines) - POST /command endpoint with sub-handlers for GOTO/GO_INSIDE/CREATE_CHARACTER
+  - `eventsHandler.ts` (27 lines) - GET /events/:navigationId SSE endpoint
+  - `createNodeHandler.ts` (215 lines) - POST /create-node for NEW_WORLD/NEW_REGION/NEW_LOCATION
+  - `createImageHandler.ts` (162 lines) - POST /create-image for VIEW command
+  - `enhancePromptHandler.ts` (95 lines) - POST /enhance-prompt for AI enhancement suggestions
+
+- **Shared Exports**: `navigation.ts` now exports:
+  - `pipelineConfigs` Map for SSE initialization
+  - `detectPerspectiveFromNode()` helper function
+  
+- **Result**: Clean router file with minimal routing logic, ~94% reduction in file size
+
+#### **2. Pipeline Step Extraction** (`createNodePipeline.ts`: 430 → 182 lines)
+- **Step Modularization**: Extracted pipeline steps to dedicated helper files:
+  - `destinationAnalysisStep.ts` (91 lines) - STEP 0.5: Destination analysis for GOTO/rich GO_INSIDE
+  - `spaceAnalysisStep.ts` (166 lines) - STEP 1: Parallel structure + DNA analysis
+  - `nodeBuildingStep.ts` (199 lines) - STEP 2-4: Image prompt generation, image generation, node building
+  - Previously extracted: `dimensionalHints.ts`, `imagePromptComposer.ts`
+
+- **Pipeline Orchestration**: Main pipeline file now focuses on:
+  - Parameter extraction and validation
+  - Step coordination and sequencing
+  - Error handling and SSE event management
+  
+- **Result**: Clean orchestration logic, ~58% reduction in file size
+
+#### **3. Architecture Benefits**
+- **Maintainability**: Each handler/step has single responsibility
+- **Testability**: Isolated functions easier to test
+- **Reusability**: Steps can be reused across different pipelines
+- **Readability**: Clear separation of concerns
+
+#### **4. Files Modified**
+1. `packages/backend/src/routes/mzoo/navigation.ts` - Route registration only (54 lines)
+2. Created `packages/backend/src/routes/mzoo/handlers/` directory with 6 handler files
+3. `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts` - Pipeline orchestration (182 lines)
+4. Created 3 new step helper files in `pipelines/helpers/` directory
+5. TypeScript compilation verified clean
+
 ### GOTO/GO_INSIDE Command Alignment & Pipeline Updates (Dec 19)
 
 **Major refactoring completed** to align GOTO and GO_INSIDE commands with improved shared logic and conditional destination analysis:

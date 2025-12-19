@@ -1293,6 +1293,221 @@
       ],
       "searchDesc": "Luxurious lounge with panoramic views, blending organic and futuristic design elements.",
       "slug": "the-observatorium-lounge"
+    },
+    "location-1766135283278-3jiuzlrqy": {
+      "id": "location-1766135283278-3jiuzlrqy",
+      "type": "location",
+      "name": "The Park",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: A breathtaking skyline of the celestial city, with its numerous elevated structures supported by colossal, ribbed balloon-like foundations, appearing as delicate specks against a vast expanse of softly colored clouds. Distant, indistinct landmarks are visible as mere suggestions of form.",
+        "colorsAndLighting": "Sky awash in gentle gradients of golden yellow, soft orange, and delicate pink, with soft, glowing light from the golden hour bathing the entire city.",
+        "atmosphere": "A serene and tranquil atmosphere, with faint, sparkling elements or petals drifting in the air, suggesting a perpetual state of gentle enchantment.",
+        "materials": "Polished stone and metalwork for structures, translucent fabrics for foundations, vibrant flora.",
+        "mood": "Peaceful and awe-inspiring, evoking feelings of wonder, serenity, and ethereal beauty.",
+        "sounds": "Gentle chimes, rustling leaves, distant celestial music, soft breezes.",
+        "spatialLayout": "Vertically stratified, with structures suspended above cloudscapes and interconnected by airy pathways.",
+        "primary_surfaces": "Expansive, cream-toned rooftops and polished stone facades of elevated structures.",
+        "secondary_surfaces": "Vast, soft, warm clouds forming the immediate environment, with hints of open sky.",
+        "accent_features": "Prominent, floating balloon-like foundations, delicate spires and domes, and iridescent drifting petals.",
+        "dominant": "Cream and off-white",
+        "secondary": "Soft golden yellow and delicate pink",
+        "accent": "Subtle hints of coral from distant flowering elements",
+        "ambient": "Soft, warm, diffused light of sunrise/sunset",
+        "genre": "Fantasy",
+        "architectural_tone": "Ornate Middle Eastern/Indian inspired with ethereal floating elements",
+        "cultural_tone": "Serene and Dreamlike",
+        "palette_bias": "Warm Pastels",
+        "flora_base": "Flowering Trees and Plants",
+        "fauna_base": "Winged Creatures (Birds/Insects)"
+      },
+      "primaryMedia": "media-1766135283277-00ndt7vm3",
+      "description": "An ethereal park inspired by Middle Eastern and Indian aesthetics, featuring pastel and warm earth tones, with floating elements and intricate architectural details.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "path",
+        "openingShape": "arched",
+        "functionalType": "natural",
+        "spatialLayout": "A serene and sprawling public park filled with lush greenery, ornate fountains, and winding pathways. Intricate, Middle Eastern-inspired pavilions offer shaded resting spots.",
+        "requiredElements": [
+          "park"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "bridge",
+          "position": "connecting two elevated platforms",
+          "description": "A shimmering bridge leading to an ornate, domed building."
+        },
+        {
+          "type": "portal",
+          "position": "within the base of a balloon foundation",
+          "description": "A swirling vortex of light leading to the gardens below."
+        },
+        {
+          "type": "passage",
+          "position": "between buildings",
+          "description": "A narrow passage offering glimpses of flowing waterfalls and exotic flora."
+        }
+      ],
+      "dominantElements": [
+        "Ornate Pavilion: shape=domed, scale=medium, style=ornate, surfaces=carved stone, intricate tilework, light=soft-ambient"
+      ],
+      "uniqueIdentifiers": [
+        "floating lanterns",
+        "ornate benches",
+        "water features"
+      ],
+      "searchDesc": "Floating celestial city with ornate architecture, bathed in golden light and pastel clouds.",
+      "slug": "the-celestial-gardens"
+    },
+    "niche-1766135306866-umoev50z2": {
+      "id": "niche-1766135306866-umoev50z2",
+      "type": "niche",
+      "name": "The Park - Ornate Pavilion",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A medium-scale, ornately decorated domed pavilion. Its surfaces are predominantly carved stone, interspersed with intricate, detailed tilework.",
+        "colorsAndLighting": "Bathed in a soft, ambient light that suggests the golden hour, casting gentle shadows and highlights. Colors are muted but rich, reflecting the warm pastel palette.",
+        "atmosphere": "Serene and tranquil, with a sense of gentle enchantment. The air is still and warm, carrying faint, sparkling motes.",
+        "materials": "Carved cream-toned stone, detailed and colorful mosaic tiles, polished marble accents.",
+        "mood": "Peaceful, awe-inspiring, and ethereal, evoking wonder and serenity.",
+        "sounds": "Soft murmuring of a distant fountain, faint tinkling of wind chimes, gentle resonance.",
+        "spatialLayout": "A spacious, domed chamber with a high, vaulted ceiling.",
+        "primary_surfaces": "Expansive, cream-toned carved stone walls and the domed ceiling adorned with intricate, multi-colored tilework.",
+        "secondary_surfaces": "Polished stone flooring, possibly with inlaid patterns, and ornate marble columns.",
+        "accent_features": "Delicate spires and domes visible through openings, iridescent drifting petals, detailed tile mosaics depicting celestial scenes.",
+        "dominant": "Cream and off-white",
+        "secondary": "Soft golden yellow and delicate pink hues from the lighting and tilework",
+        "accent": "Subtle hints of coral and turquoise within the tile mosaics",
+        "ambient": "Soft, warm, diffused light of sunrise/sunset",
+        "genre": "Fantasy",
+        "architectural_tone": "Ornate Middle Eastern/Indian inspired with ethereal floating elements",
+        "cultural_tone": "Serene and Dreamlike",
+        "palette_bias": "Warm Pastels",
+        "flora_base": "Flowering Trees and Plants (visible through openings)",
+        "fauna_base": "Winged Creatures (Birds/Insects) (implied or faintly heard)"
+      },
+      "primaryMedia": "media-1766135306866-9almakl1x",
+      "description": "An ornate domed pavilion stands as a serene and dreamlike centerpiece within the celestial city, its intricate stonework and tilework illuminated by soft ambient light.",
+      "structure": {
+        "form": "round",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "horizontal",
+        "openings": "minimal",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "spatialLayout": "This medium-scale, domed pavilion features ornate carved stone and intricate tilework, creating a serene and dreamlike ambiance. Its surfaces are bathed in soft, ambient light, suggesting a place for quiet contemplation or artistic performance.",
+        "requiredElements": [
+          "Ornate Pavilion: shape=domed, scale=medium, style=ornate, surfaces=carved stone, intricate tilework, light=soft-ambient"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "base of pavilion",
+          "description": "A passage leading into the Ornate Pavilion, revealing its softly lit interior."
+        }
+      ],
+      "dominantElements": [
+        "Ornate Pavilion: shape=domed, scale=medium, style=ornate, surfaces=carved stone, intricate tilework, light=soft-ambient"
+      ],
+      "uniqueIdentifiers": [
+        "Colossal ribbed balloon-like foundations",
+        "Celestial city skyline",
+        "Softly colored clouds"
+      ],
+      "searchDesc": "Ornate domed pavilion with carved stone, tilework, and soft ambient light.",
+      "slug": "celestial-dome-pavilion"
+    },
+    "niche-1766135366701-ach0cunbf": {
+      "id": "niche-1766135366701-ach0cunbf",
+      "type": "niche",
+      "name": "The Sculpture Area",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An expansive, elevated garden space filled with luminous, abstract sculptures. Sculptures are made of solidified light and opalescent materials, appearing to float or defy gravity. Delicate, translucent bridges and pathways connect various displays. Vibrant, fantastical flora blooms with an internal luminescence.",
+        "colorsAndLighting": "The space is bathed in the soft, diffused glow of a perpetual golden hour. Colors are a blend of warm pastels: creamy whites, soft golds, delicate pinks, and subtle coral hues. Accents of iridescent blues and greens shimmer on the flora and sculptures.",
+        "atmosphere": "A profoundly serene and tranquil atmosphere. The air is warm and carries a faint, sweet fragrance. Gentle, sparkling particles drift lazily, and faint, melodic chimes can be heard.",
+        "materials": "Sculptures of solidified light and polished, opalescent stone. Pathways of smooth, glowing quartz. Flora with translucent petals and luminous stamens. Foundations of polished, cream-toned stone.",
+        "mood": "Peaceful, awe-inspiring, and profoundly serene, evoking a sense of dreamlike wonder and ethereal beauty.",
+        "sounds": "Gentle chimes, soft humming, rustling of luminous leaves, distant melodic echoes.",
+        "spatialLayout": "An open, elevated garden with distinct sculptural focal points. Pathways and bridges create a sense of exploration, with different areas offering varied perspectives.",
+        "primary_surfaces": "Cream-toned, polished stone plazas and platforms supporting sculptures and flora.",
+        "secondary_surfaces": "Soft, warm clouds forming the immediate environment, with shimmering pathways and translucent bridge elements.",
+        "accent_features": "The sculptures themselves, glowing crystalline blossoms, floating orbs of light, and iridescent mist streams.",
+        "dominant": "Cream and off-white",
+        "secondary": "Soft golden yellow and delicate pink",
+        "accent": "Iridescent blues and greens, subtle coral",
+        "ambient": "Soft, warm, diffused light of sunrise/sunset",
+        "genre": "Fantasy",
+        "architectural_tone": "Ethereal floating elements",
+        "cultural_tone": "Serene and Dreamlike",
+        "palette_bias": "Warm Pastels",
+        "flora_base": "Flowering Trees and Plants",
+        "fauna_base": "Winged Creatures (Birds/Insects)"
+      },
+      "primaryMedia": "media-1766135366700-wmko4gsfq",
+      "description": "An ornate open-air plaza filled with diverse sculptures, blending Middle Eastern and Indian aesthetics with ethereal floating elements. Warm pastels dominate the palette, creating a serene and inviting atmosphere.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "spatialLayout": "An open-air plaza dotted with various sculptures, featuring ethereal floating elements and intricate architectural details. Paths wind through the area, connecting different artistic installations under a warm, pastel sky.",
+        "requiredElements": [
+          "sculptures"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "intricately carved pedestals displaying sculptures",
+          "plush velvet cushions arranged on low divans",
+          "hanging lanterns casting dappled light",
+          "decorative mosaic floor tiles."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front wall",
+          "description": "archway ornate"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door carved wooden"
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "window large stained-glass"
+        },
+        {
+          "type": "passage",
+          "position": "back wall",
+          "description": "passage at back wall"
+        }
+      ],
+      "dominantElements": [
+        "sculpture: shape=organic, scale=medium, style=ornate, surfaces=polished-stone-and-gold, light=soft-ambient"
+      ],
+      "uniqueIdentifiers": [
+        "floating platforms",
+        "intricate carvings",
+        "pastel color palette"
+      ],
+      "searchDesc": "Ethereal garden of light sculptures, glowing flora, and shimmering mist.",
+      "slug": "the-sculpture-garden"
     }
   },
   "views": {},
@@ -1420,6 +1635,22 @@
                 },
                 {
                   "id": "niche-1766087463381-vcs6x9k37",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "location-1766135283278-3jiuzlrqy",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1766135306866-umoev50z2",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1766135366701-ach0cunbf",
                   "type": "niche",
                   "children": []
                 }
