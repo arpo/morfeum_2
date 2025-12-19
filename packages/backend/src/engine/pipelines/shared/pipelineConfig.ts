@@ -43,7 +43,7 @@ export const PIPELINE_STEPS = {
     { id: 'profile_enrichment', name: 'Building Profile', duration: 5000 }
   ],
   
-  // Navigation intent pipeline (generic - GO_INSIDE and similar)
+  // Navigation intent pipeline (generic - GO_INSIDE with simple prompts)
   // Uses the new unified space analysis (Structure + DNA in parallel)
   navigation: [
     { id: 'space_analysis', name: 'Analyzing Space', duration: 6000 },     // Structure + DNA in parallel
@@ -52,11 +52,22 @@ export const PIPELINE_STEPS = {
     { id: 'node_building', name: 'Building Space', duration: 300 }
   ],
   
-  // GOTO pipeline - same as navigation (now unified)
-  // Kept separate for backward compatibility but uses same steps
+  // Navigation with destination analysis (GO_INSIDE with rich descriptions >20 chars)
+  // Dynamically switched to via updatePipelineConfig() when rich description detected
+  navigationWithDestination: [
+    { id: 'destination_analysis', name: 'Analyzing Destination', duration: 2000 },  // Synthesizes user prompt with context
+    { id: 'space_analysis', name: 'Analyzing Space', duration: 6000 },
+    { id: 'image_prompt', name: 'Composing Scene', duration: 3000 },
+    { id: 'image_generation', name: 'Generating Image', duration: 2000 },
+    { id: 'node_building', name: 'Building Space', duration: 300 }
+  ],
+  
+  // GOTO pipeline - always includes destination analysis
+  // Creates sibling nodes at same hierarchy level
   navigationGoto: [
-    { id: 'space_analysis', name: 'Analyzing Space', duration: 6000 },     // Structure + DNA in parallel
-    { id: 'image_prompt', name: 'Composing Scene', duration: 3000 },       // Uses pre-computed data
+    { id: 'destination_analysis', name: 'Analyzing Destination', duration: 2000 },  // Always runs for GOTO
+    { id: 'space_analysis', name: 'Analyzing Space', duration: 6000 },
+    { id: 'image_prompt', name: 'Composing Scene', duration: 3000 },
     { id: 'image_generation', name: 'Generating Image', duration: 2000 },
     { id: 'node_building', name: 'Building Space', duration: 300 }
   ],

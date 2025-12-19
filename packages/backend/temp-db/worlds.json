@@ -654,101 +654,6 @@
       "searchDesc": "Utopian bar with panoramic views, organic seating, and bioluminescent flora.",
       "slug": "bar"
     },
-    "location-1766063474895-w01fc2v5n": {
-      "id": "location-1766063474895-w01fc2v5n",
-      "type": "location",
-      "name": "The Big Hall Basement",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A massive, cavernous hall carved from dark rock, with exposed pipes and conduits running along the walls and ceiling. A gigantic, irregularly shaped spaceship dominates the center, its surfaces a mix of brushed metal, polished chrome, and matte black panels. Lighting is functional and dim, casting long shadows.",
-        "colorsAndLighting": "Dominated by dark greys and blacks of the stone and spaceship hull. Accents of dull metallic silver and occasional warning lights in red or amber. Lighting is low and industrial, with pools of light directly on the ship and darker areas elsewhere.",
-        "atmosphere": "The air is cool and still, with a faint scent of ozone and machinery. A low, resonant hum emanates from the spaceship. There's a sense of enclosed space and dormant power.",
-        "materials": "Rough-hewn stone, exposed metal (brushed, polished, matte), conduits, industrial piping.",
-        "mood": "Imposing, mysterious, industrial, awe-inspiring.",
-        "sounds": "Distant machinery hum, faint echoing drips, metallic resonance.",
-        "spatialLayout": "Vast, open hall with high ceilings and a single, massive object.",
-        "primary_surfaces": "Dark stone, brushed metal",
-        "secondary_surfaces": "Polished chrome, matte black panels, exposed pipes",
-        "accent_features": "Glow of indicator lights on the spaceship, exposed conduit junctions",
-        "dominant": "Dark Grey",
-        "secondary": "Metallic Silver",
-        "accent": "Amber Glow",
-        "ambient": "Dim-industrial",
-        "genre": null,
-        "architectural_tone": "brutalist-industrial",
-        "cultural_tone": "null",
-        "palette_bias": "null",
-        "flora_base": "null",
-        "fauna_base": "null"
-      },
-      "primaryMedia": "media-1766063474894-vyrkgdkq3",
-      "description": "An immense, organically-futuristic basement hall, awash in a palette of blues and pinks, featuring a massive spaceship as its centerpiece.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "vaulted",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "large-glass",
-        "openingShape": "arched",
-        "functionalType": "industrial",
-        "spatialLayout": "A vast, cavernous basement hall, dimly lit, with a colossal spaceship dominating the central space. The architecture is a fusion of organic curves and futuristic metallic elements.",
-        "requiredElements": [
-          "basement",
-          "big hall",
-          "spaceship",
-          "spaceship standing"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "bio-luminescent flora integrated into walls",
-          "sculpted seating pods",
-          "holographic control interfaces embedded in surfaces",
-          "crystalline energy conduits",
-          "ambient light diffusers",
-          "viewing platforms overlooking the spaceship."
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object large"
-        },
-        {
-          "type": "archway",
-          "position": "front wall",
-          "description": "archway sweeping"
-        },
-        {
-          "type": "door",
-          "position": "left wall",
-          "description": "door seamless panel"
-        },
-        {
-          "type": "object",
-          "position": "right wall",
-          "description": "object vertical transport tube"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object recessed observation deck rear wall"
-        }
-      ],
-      "dominantElements": [
-        "Spaceship: shape=organic, scale=massive, style=futuristic, surfaces=metallic-polished-textured, light=neon-glow"
-      ],
-      "uniqueIdentifiers": [
-        "subterranean location",
-        "integrated organic-futuristic architecture",
-        "prominent spaceship exhibit"
-      ],
-      "searchDesc": "Vast underground hall with a colossal spaceship, industrial lighting, and metallic surfaces.",
-      "slug": "basement-a-big-hall-with-a-spaceship-standing"
-    },
     "location-1766063592345-7qlftn3ar": {
       "id": "location-1766063592345-7qlftn3ar",
       "type": "location",
@@ -1261,6 +1166,133 @@
       ],
       "searchDesc": "Grand hangar filled with airships, featuring ornate architecture and golden hour light.",
       "slug": "the-hangar-with-the-air-ships"
+    },
+    "niche-1766132581359-e0cw5swbb": {
+      "id": "niche-1766132581359-e0cw5swbb",
+      "type": "niche",
+      "name": "Mount Aeridor Observation Deck - Secret Room",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A contained, cylindrical space dominated by a complex, multi-faceted apparatus at its center. The apparatus is a blend of polished metals, glowing conduits, and intricate crystalline components. Semi-transparent glass panels are integrated into the walls, offering glimpses into the apparatus's workings. The styling is futuristic-ornate, with flowing metallic lines and integrated blue lighting.",
+        "colorsAndLighting": "The primary light source is the soft, internal blue glow emanating from the apparatus and its conduits. This is supplemented by the pervasive, cool neon-blue glow from the ambient lighting, reflecting off polished surfaces. Accents of silver and white from the metallic trim catch the light.",
+        "atmosphere": "The air is cool and still, with a faint, pleasant metallic tang. A consistent, low-frequency hum emanates from the apparatus, creating a sense of contained energy. The atmosphere is charged with a quiet, focused intensity.",
+        "materials": "Polished metallic alloys, reinforced crystalline glass, smooth composite paneling, and intricate metallic trim. The apparatus itself is a complex assembly of these materials.",
+        "mood": "Intriguing and focused, evoking a sense of mystery and advanced scientific endeavor. There's a palpable feeling of contained power and meticulous design.",
+        "sounds": "Low hum, soft whirring, faint electronic pulses, subtle clicks",
+        "spatialLayout": "A contained, cylindrical chamber, slightly smaller than the main observation deck, with the primary apparatus occupying the central volume.",
+        "primary_surfaces": "polished metallic alloys, reinforced crystalline glass",
+        "secondary_surfaces": "smooth composite paneling, intricate metallic trim",
+        "accent_features": "glowing blue energy conduits, crystalline components, integrated control interfaces",
+        "dominant": "Deep Blue",
+        "secondary": "Metallic Silver",
+        "accent": "Neon Blue Glow",
+        "ambient": "Soft Internal Glow",
+        "genre": null,
+        "architectural_tone": "futuristic-ornate",
+        "cultural_tone": "scientific, research, advanced",
+        "palette_bias": "Blues and Metallics",
+        "flora_base": "Abundant flowering vines and lush foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1766132581358-t84s26djw",
+      "description": "A hidden chamber within the Mount Aeridor Observation Deck, designed to house a mysterious apparatus.",
+      "structure": {
+        "form": "organic-cylindrical",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "spatialLayout": "This secret room is a compact, irregularly shaped chamber that feels carved out from the main observation deck's structure.  Its walls are a blend of the polished glass and metallic trim seen in the main deck, but with a more utilitarian, concealed feel. The central apparatus dominates the space.",
+        "requiredElements": [
+          "secret room",
+          "secret apparatus"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "concealed within a wall panel",
+          "description": "leads to the main Mount Aeridor Observation Deck"
+        }
+      ],
+      "dominantElements": [
+        "secret apparatus: shape=irregular, scale=medium, style=futuristic-functional, surfaces=polished metal, glowing wires, dark composite, light=low-humming-glow"
+      ],
+      "uniqueIdentifiers": [
+        "concealed access panel",
+        "central, complex apparatus",
+        "dimly lit, utilitarian atmosphere"
+      ],
+      "searchDesc": "Secret room with a humming, glowing apparatus, intricate controls, and polished glass.",
+      "slug": "the-apparatus-chamber"
+    },
+    "location-1766132626718-nakw9egnf": {
+      "id": "location-1766132626718-nakw9egnf",
+      "type": "location",
+      "name": "Bar Room",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A sleek, contemporary lounge seamlessly integrated into the organic structure of the observatorium island. Large, panoramic glass walls offer stunning external views. Furniture is modern and ergonomic, with a focus on comfort and style. Subtle, ambient lighting enhances the sophisticated atmosphere.",
+        "colorsAndLighting": "The interior is illuminated by a soft, ambient glow, complementing the cool blues and vibrant pinks visible through the expansive windows. Accents of metallic silver and white from the furnishings and bar area reflect the light.",
+        "atmosphere": "The air is calm and refined, with a gentle hum of ambient music. Subtle air circulation systems maintain a pleasant temperature. The atmosphere evokes exclusivity and relaxation.",
+        "materials": "The primary materials are polished composite panels and seamless glass. Metallic trim is used for accents, and seating is upholstered in high-quality, smooth fabrics.",
+        "mood": "Sophisticated, relaxing, and exclusive.",
+        "sounds": "soft ambient music, gentle clinking of glasses, hushed conversations",
+        "spatialLayout": "Open plan with defined seating areas and a central bar.",
+        "primary_surfaces": "polished composite panels, glass",
+        "secondary_surfaces": "metallic trim, plush upholstery",
+        "accent_features": "panoramic windows, iridescent bar counter, integrated holographic displays",
+        "dominant": "Sky Blue",
+        "secondary": "Vibrant Pink",
+        "accent": "Soft Blue Glow",
+        "ambient": "Soft Ambient",
+        "genre": null,
+        "architectural_tone": "organic-futuristic integrated architecture",
+        "cultural_tone": "leisure, sophistication, observation",
+        "palette_bias": "Blues and Pinks",
+        "flora_base": "Abundant flowering vines and lush foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1766132626717-n5qamft0f",
+      "description": "An open-air bar and lounge space with an organic-futuristic design, bathed in hues of blue and pink.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "spatialLayout": "A lively, open-air bar area with a futuristic, organic architectural style. Integrated blue and pink lighting creates a vibrant atmosphere, and plush seating areas are scattered throughout.",
+        "requiredElements": [
+          "bar",
+          "seating"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "adjacent to the main observatorium",
+          "description": "Leads from the main observatorium observation deck into the lounge."
+        },
+        {
+          "type": "door",
+          "position": "main entrance",
+          "description": "Opens to the exterior, offering breathtaking views of the surrounding landscape."
+        }
+      ],
+      "dominantElements": [
+        "bar: shape=organic, scale=medium, style=organic-futuristic, surfaces=polished-metal, textured-stone, light=neon-glow"
+      ],
+      "uniqueIdentifiers": [
+        "integrated bio-luminescent flora",
+        "holographic drink menus",
+        "sound-dampening crystalline partitions"
+      ],
+      "searchDesc": "Luxurious lounge with panoramic views, blending organic and futuristic design elements.",
+      "slug": "the-observatorium-lounge"
     }
   },
   "views": {},
@@ -1330,7 +1362,13 @@
                 {
                   "id": "niche-1766063297831-1be6fmz6z",
                   "type": "location",
-                  "children": []
+                  "children": [
+                    {
+                      "id": "niche-1766132581359-e0cw5swbb",
+                      "type": "niche",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "niche-1766063332265-jokgaoe53",
@@ -1338,12 +1376,12 @@
                   "children": []
                 },
                 {
-                  "id": "location-1766063474895-w01fc2v5n",
+                  "id": "location-1766063592345-7qlftn3ar",
                   "type": "location",
                   "children": []
                 },
                 {
-                  "id": "location-1766063592345-7qlftn3ar",
+                  "id": "location-1766132626718-nakw9egnf",
                   "type": "location",
                   "children": []
                 }

@@ -1,5 +1,19 @@
 # Progress
 
+## 2025-12-19
+
+- [x] **GOTO/GO_INSIDE Command Alignment**: Complete refactoring to align commands with shared logic
+  - [x] Created `CommandContext` interface to replace scattered boolean flags
+  - [x] Added `resolveNavigationParentDNA()` helper (single source of truth for DNA resolution)
+  - [x] Added `shouldRunDestinationAnalysis()` helper for conditional destination analysis
+  - [x] Simplified route handlers (GOTO: 80→40 lines, GO_INSIDE: unified pattern)
+  - [x] Added conditional destination analysis for GO_INSIDE (rich descriptions >20 chars)
+  - [x] Updated pipeline configuration with `navigationWithDestination` type
+  - [x] Implemented dynamic pipeline config updates via `updatePipelineConfig()`
+  - [x] Added SSE events for GOTO destination_analysis step
+  - [x] TypeScript compilation verified clean
+  - [x] Memory bank updated with all changes
+
 ## 2025-12-17
 
 - [x] Refactored all prompt pipelines to use shared `DOMINANT_ELEMENTS_RULES` and `NAVIGABLE_ELEMENTS_RULES` for `dominantElements` and `navigableElements`.
@@ -7,10 +21,12 @@
 - [x] Clarified usage: `dominantElements` = GO_INSIDE (enterable, interior seed), `navigableElements` = GOTO (navigation elements).
 - [x] All DNA/prompt files now import these rules from a single source of truth.
 - [x] TypeScript build verified clean after changes.
+
 ## What Works ✅
 
 ### Core Application Features
 - Contextual slash commands for navigation and node creation (NEW_HOST, NEW_REGION, NEW_LOCATION, NEW_NICHE, VIEW, GO_INSIDE, GOTO) with optional `--furnish` flag
+- **Unified GOTO/GO_INSIDE commands** with conditional destination analysis and accurate progress tracking
 - Entity system for character and location creation, storage, and management
 - World tree system with hierarchical location structures
 - 3D World View with depth rendering and stereo support
@@ -30,9 +46,20 @@
 - Centralized design tokens and icon management
 - TypeScript compilation and Vite builds working
 - Feature-based folder structure
+- **Unified CommandContext interface** for navigation commands
+- **Dynamic pipeline configuration** with accurate SSE progress tracking
 
 ### Recent Improvements (Nov-Dec 2025)
-- **GOTO DNA Resolution Fix & Code Cleanup (Dec 16, Latest):**
+- **GOTO/GO_INSIDE Alignment & Pipeline Updates (Dec 19, Latest):**
+  - **Unified Architecture**: Created `CommandContext` interface replacing scattered boolean flags
+  - **DNA Resolution**: New `resolveNavigationParentDNA()` helper as single source of truth
+  - **Conditional Destination Analysis**: GO_INSIDE now runs destination analysis for rich descriptions (>20 chars)
+  - **Dynamic Pipeline Config**: `helper.updatePipelineConfig()` updates progress bar mid-stream
+  - **SSE Events**: Both commands now send proper destination_analysis events
+  - **Code Reduction**: Route handlers reduced ~40% with unified helpers
+  - **Accurate Progress Bars**: Simple GO_INSIDE (4 steps), Rich GO_INSIDE (5 steps), GOTO (5 steps)
+  - Key files: `types.ts`, `navigationHelpers.ts`, `createNodePipeline.ts`, `navigation.ts`, `pipelineConfig.ts`
+- **GOTO DNA Resolution Fix & Code Cleanup (Dec 16):**
   - **Fixed GOTO creating generic locations**: `/GOTO the playground` now inherits DNA from parent region/host
   - **Root cause**: `findParentRegionNode()` was extracting DNA from context object which doesn't include full ancestry
   - **Solution**: Route handler now loads worldsData and pre-resolves cascaded DNA before calling pipeline
@@ -182,6 +209,7 @@
 - Documentation (components, API)
 - Accessibility (ARIA, keyboard nav)
 - Error handling (boundaries, feedback)
+- Flora constraint in image prompt generation (prevent inappropriate vegetation)
 
 ### Architecture Enhancements
 - Plugin system for extensibility
@@ -195,6 +223,8 @@
 - 100% TypeScript coverage, no any types
 - All builds passing
 - Strict separation patterns enforced
+- **GOTO/GO_INSIDE unified architecture** with conditional destination analysis
+- **Dynamic pipeline configuration** with accurate progress tracking
 - Scale consistency system implemented for interior/exterior matching
 - Opening shape inheritance for window consistency
 - Open-sky rooftop/terrace system implemented
@@ -217,3 +247,5 @@
 - Centralized icons and design tokens
 - TypeScript compilation success
 - No console errors in dev
+- **Unified CommandContext** for navigation commands
+- **Dynamic pipeline configuration** with SSE events

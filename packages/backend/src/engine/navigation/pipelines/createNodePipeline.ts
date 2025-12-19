@@ -13,9 +13,9 @@ import { generateNodeDNA, extractParentContext, mergeDNAWithParent } from '../..
 import { generateLocationImage } from '../../generation/shared/imageGeneration';
 import { buildNode } from '../../generation/shared/nodeBuilder';
 import { generateImagePromptForNode } from '../../generation/shared/imagePromptGeneration';
-import type { NavigationDecision, NavigationContext, IntentResult, DestinationAnalysis, StructureAnalysis, Structure } from '../types';
+import type { NavigationDecision, NavigationContext, IntentResult, DestinationAnalysis, StructureAnalysis, Structure, CommandContext } from '../types';
 import { NICHE_CAMERA } from '../../generation/prompts/shared/cameraConfig';
-import { findParentLocationNode, findParentRegionNode } from '../navigationHelpers';
+import { findParentLocationNode, findParentRegionNode, shouldRunDestinationAnalysis } from '../navigationHelpers';
 import { PipelineHelper } from '../../pipelines/shared/pipelineHelpers';
 import { getPipelineTypeForIntent } from '../../pipelines/shared/pipelineConfig';
 import mediaService from '../../../services/media/mediaService';
@@ -40,6 +40,8 @@ export interface CreateNodeOptions {
   isFromLocation?: boolean;
   /** Pre-resolved parent DNA (from region/host) - used when route handler has already resolved DNA */
   resolvedParentDNA?: any;
+  /** Unified command context (new architecture) - when provided, takes precedence over individual flags */
+  commandContext?: CommandContext;
 }
 
 /**
@@ -64,7 +66,10 @@ export async function runCreateLocationNodePipeline(
     : null;
 
   try {
-    const nodeType = options?.nodeType || 'niche';
+    // Extract command context if provided (new unified architecture)
+    const cmdCtx = options?.commandContext;
+    
+    const nodeType = cmdCtx?.targetNodeType || options?.nodeType || 'niche';
     const shouldGenerateImage = options?.generateImage !== false;
 
     // Get style and perspective from decision or options
@@ -72,7 +77,8 @@ export async function runCreateLocationNodePipeline(
     let style = options?.style || decision.style || intent.style || 'default';
     
     // Default perspective based on node type being created
-    const defaultPerspective = (nodeType === 'location' || options?.isFromLocation) ? 'exterior' : 'interior';
+    const isFromLocation = cmdCtx ? cmdCtx.sourceNodeType === 'location' : options?.isFromLocation;
+    const defaultPerspective = (nodeType === 'location' || isFromLocation) ? 'exterior' : 'interior';
     let perspective = options?.perspective || decision.perspective || intent.spaceType || defaultPerspective;
     
     // DEBUG: Log perspective resolution
@@ -91,7 +97,71 @@ export async function runCreateLocationNodePipeline(
     }
 
     // Determine user prompt (from GOTO text or GO_INSIDE reasoning)
-    const userPrompt = options?.userPrompt || options?.gotoText || intent.target || decision.newNodeName || 'interior space';
+    const userPrompt = cmdCtx?.userPrompt || options?.userPrompt || options?.gotoText || intent.target || decision.newNodeName || 'interior space';
+
+    // Determine command type for conditional logic
+    const command: 'GOTO' | 'GO_INSIDE' = (cmdCtx?.command || (options?.gotoText ? 'GOTO' : 'GO_INSIDE'));
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // STEP 0.5: DESTINATION ANALYSIS
+    // ═══════════════════════════════════════════════════════════════════════════
+    // GOTO: Always runs destination analysis (synthesizes user prompt with context)
+    // GO_INSIDE: Runs conditionally for rich descriptions (>20 chars)
+    let destinationAnalysis: DestinationAnalysis | null = null;
+    
+    if (command === 'GOTO') {
+      // GOTO always runs destination analysis
+      if (helper) {
+        helper.startStage('destination_analysis', 'Analyzing destination...');
+      }
+      
+      console.log(`\n🎯 [Pipeline] Running destination analysis for GOTO`);
+      console.log(`  User prompt: "${userPrompt}"`);
+      
+      destinationAnalysis = await analyzeDestination(apiKey, userPrompt, context);
+      
+      // Update decision with analysis results
+      if (destinationAnalysis) {
+        decision.newNodeName = destinationAnalysis.name;
+        decision.perspective = destinationAnalysis.perspective;
+        perspective = destinationAnalysis.perspective;
+        console.log(`  Result: name="${destinationAnalysis.name}", perspective="${destinationAnalysis.perspective}"`);
+      }
+      
+      if (helper) {
+        helper.completeStage('destination_analysis', 'Destination analyzed', {
+          name: destinationAnalysis?.name,
+          perspective: destinationAnalysis?.perspective
+        });
+      }
+    } else if (command === 'GO_INSIDE' && shouldRunDestinationAnalysis(command, userPrompt)) {
+      // GO_INSIDE: Update pipeline config to include destination_analysis step (dynamic config)
+      // This gives accurate progress bar for rich GO_INSIDE descriptions
+      if (helper) {
+        helper.updatePipelineConfig('navigationWithDestination', 'Rich description detected...');
+        helper.startStage('destination_analysis', 'Analyzing destination...');
+      }
+      
+      console.log(`\n🎯 [Pipeline] Running conditional destination analysis for GO_INSIDE`);
+      console.log(`  User prompt (${userPrompt.length} chars): "${userPrompt}"`);
+      
+      destinationAnalysis = await analyzeDestination(apiKey, userPrompt, context);
+      
+      // Update decision with analysis results
+      if (destinationAnalysis) {
+        decision.newNodeName = destinationAnalysis.name;
+        decision.perspective = destinationAnalysis.perspective;
+        perspective = destinationAnalysis.perspective;
+        console.log(`  Result: name="${destinationAnalysis.name}", perspective="${destinationAnalysis.perspective}"`);
+      }
+      
+      if (helper) {
+        helper.completeStage('destination_analysis', 'Destination analyzed', {
+          name: destinationAnalysis?.name,
+          perspective: destinationAnalysis?.perspective
+        });
+      }
+    }
 
     // ═══════════════════════════════════════════════════════════════════════════
     // STEP 1: SPACE ANALYSIS (Structure + DNA in parallel)
@@ -103,27 +173,36 @@ export async function runCreateLocationNodePipeline(
     console.log(`\n🔄 [Pipeline] Starting parallel Space Analysis for: "${userPrompt}"`);
 
     // Determine if this is a GOTO command (creates new destination vs entering current location)
-    const isGotoCommand = !!options?.gotoText;
+    const isGotoCommand = command === 'GOTO';
+    
+    // Get parsed enhancements from command context or options
+    const parsedEnhancements = cmdCtx?.parsedEnhancements || options?.parsedEnhancements;
     
     // Run Structure Analysis and DNA Generation in PARALLEL
     const [structureAnalysis, dnaResult] = await Promise.all([
       // Structure Analysis (determines physical/spatial properties)
       // NOTE: parsedEnhancements (navigableElements, furnishing) come from user command, not LLM
       // For GOTO: uses destination-focused prompt (user input is PRIMARY)
-      analyzeStructure(apiKey, userPrompt, context, perspective as 'interior' | 'exterior', options?.parsedEnhancements, { isGotoCommand }),
+      analyzeStructure(apiKey, userPrompt, context, perspective as 'interior' | 'exterior', parsedEnhancements, { isGotoCommand }),
       
       // DNA Generation (determines visual/atmospheric properties)
       (async () => {
-        // CRITICAL: Use pre-resolved parent DNA if available (from route handler)
+        // CRITICAL: Use pre-resolved parent DNA if available (from route handler or command context)
         // This ensures proper cascaded DNA from region/host is used
         let parentDNA: any;
-        if (options?.resolvedParentDNA) {
+        if (cmdCtx?.resolvedParentDNA) {
+          // Command context has resolved DNA - use it directly
+          parentDNA = cmdCtx.resolvedParentDNA;
+          console.log(`[DNA] Using parent DNA from CommandContext`);
+          console.log(`  - architectural_tone: ${parentDNA.architectural_tone || 'null'}`);
+          console.log(`  - palette_bias: ${parentDNA.palette_bias || 'null'}`);
+        } else if (options?.resolvedParentDNA) {
           // Route handler already resolved cascaded DNA - use it directly
           parentDNA = options.resolvedParentDNA;
           console.log(`[DNA] Using PRE-RESOLVED parent DNA from route handler`);
           console.log(`  - architectural_tone: ${parentDNA.architectural_tone || 'null'}`);
           console.log(`  - palette_bias: ${parentDNA.palette_bias || 'null'}`);
-        } else if (isGotoCommand && options?.isFromLocation) {
+        } else if (isGotoCommand && isFromLocation) {
           // Fallback: try to get region DNA from context (may be incomplete)
           const { parentRegionDNA } = findParentRegionNode(context);
           parentDNA = parentRegionDNA;
@@ -196,13 +275,17 @@ export async function runCreateLocationNodePipeline(
     }
 
     // Get parent DNA for visual consistency (architectural_tone, cultural_tone, etc.)
-    // CRITICAL: Use pre-resolved DNA if available (from route handler)
+    // CRITICAL: Use pre-resolved DNA if available (from command context or route handler)
     let parentDNAForImagePrompt: any;
-    if (options?.resolvedParentDNA) {
+    if (cmdCtx?.resolvedParentDNA) {
+      // Command context has resolved DNA - use it directly
+      parentDNAForImagePrompt = cmdCtx.resolvedParentDNA;
+      console.log(`[ImagePrompt] Using parent DNA from CommandContext`);
+    } else if (options?.resolvedParentDNA) {
       // Route handler already resolved cascaded DNA - use it directly
       parentDNAForImagePrompt = options.resolvedParentDNA;
       console.log(`[ImagePrompt] Using PRE-RESOLVED parent DNA from route handler`);
-    } else if (isGotoCommand && options?.isFromLocation) {
+    } else if (isGotoCommand && isFromLocation) {
       const { parentRegionDNA } = findParentRegionNode(context);
       parentDNAForImagePrompt = parentRegionDNA;
       console.log(`[ImagePrompt] GOTO from location: Using REGION DNA from context (fallback)`);

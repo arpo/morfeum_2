@@ -243,3 +243,27 @@ export interface SpaceAnalysisResult {
   /** Synthesized image prompt */
   imagePrompt?: string;
 }
+
+/**
+ * Unified command context for GOTO and GO_INSIDE commands
+ * Replaces scattered boolean flags with clear semantics
+ */
+export interface CommandContext {
+  /** The command being executed */
+  command: 'GOTO' | 'GO_INSIDE';
+  /** Type of node we're navigating from */
+  sourceNodeType: 'location' | 'niche';
+  /** Type of node being created */
+  targetNodeType: 'location' | 'niche';
+  /** User's prompt/description for the destination */
+  userPrompt: string;
+  /** Pre-resolved parent DNA (cascaded from ancestry) */
+  resolvedParentDNA?: any;
+  /** Parsed enhancements from command flags */
+  parsedEnhancements?: {
+    navigableElements?: NavigableElement[];
+    furnishing?: string[];
+  };
+  /** Parent node ID where new node will be attached */
+  parentNodeId: string;
+}

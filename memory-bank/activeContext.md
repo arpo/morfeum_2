@@ -1,5 +1,56 @@
 # Active Context
 
+## 2025-12-19
+
+### GOTO/GO_INSIDE Command Alignment & Pipeline Updates (Dec 19)
+
+**Major refactoring completed** to align GOTO and GO_INSIDE commands with improved shared logic and conditional destination analysis:
+
+#### **1. New Unified Architecture**
+- **CommandContext Interface** (`types.ts`): Replaces scattered boolean flags with unified interface
+  - Contains: `command`, `sourceNodeType`, `targetNodeType`, `userPrompt`, `resolvedParentDNA`, `parsedEnhancements`, `parentNodeId`
+  - Used by both commands for consistent parameter passing
+
+- **resolveNavigationParentDNA() Helper** (`navigationHelpers.ts`): Single source of truth for DNA resolution
+  - Handles all cases: GOTO from location, GOTO from niche, GO_INSIDE
+  - Properly handles pass-through regions (uses host DNA)
+  - Returns `DNAResolutionResult` with `parentNodeId`, `resolvedParentDNA`, `targetNodeType`
+  - **Reduces duplication**: ~40% code reduction in route handlers
+
+#### **2. Conditional Destination Analysis for GO_INSIDE**
+- **shouldRunDestinationAnalysis() Helper** (`navigationHelpers.ts`): Determines when to run destination analysis
+  - **GOTO**: Always runs (synthesizes user prompt with parent context)
+  - **GO_INSIDE**: Only for rich descriptions (>20 characters)
+  - Examples:
+    - `/GO_INSIDE tower` → Fast path, no destination analysis
+    - `/GO_INSIDE the cozy reading nook with bay windows` → Runs destination analysis
+
+#### **3. Dynamic Pipeline Configuration System**
+- **New Pipeline Type** (`pipelineConfig.ts`): `navigationWithDestination` (5 steps)
+- **Dynamic Config Updates**: GO_INSIDE calls `helper.updatePipelineConfig()` when rich description detected
+- **SSE Flow**:
+  - **Simple GO_INSIDE**: 4 steps → `started → space_analysis → image_prompt → image_generation → node_building → completed`
+  - **Rich GO_INSIDE**: 5 steps → `started → config_update → destination_analysis → space_analysis → ... → completed`
+  - **GOTO**: 5 steps → `started → destination_analysis → space_analysis → ... → completed`
+
+#### **4. Simplified Route Handlers**
+- **GOTO handler** (`navigation.ts`): Reduced from ~80 lines to ~40 lines
+- **GO_INSIDE handler**: Now uses same unified pattern as GOTO
+- Both use `resolveNavigationParentDNA()` for consistent DNA resolution
+- Both build and pass `CommandContext` to pipeline
+
+#### **5. Enhanced Pipeline SSE Events**
+- **GOTO**: Now sends SSE events for destination_analysis step
+- **GO_INSIDE**: Conditionally sends destination_analysis events for rich descriptions
+- **Accurate Progress Bars**: Each command shows correct step count based on complexity
+
+### **Files Modified**
+1. `packages/backend/src/engine/navigation/types.ts` - Added `CommandContext` interface
+2. `packages/backend/src/engine/navigation/navigationHelpers.ts` - Added `resolveNavigationParentDNA()` and `shouldRunDestinationAnalysis()` helpers
+3. `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts` - Added conditional destination analysis and CommandContext support
+4. `packages/backend/src/routes/mzoo/navigation.ts` - Simplified both route handlers using new helpers
+5. `packages/backend/src/engine/pipelines/shared/pipelineConfig.ts` - Added `navigationWithDestination` pipeline type
+
 ## 2025-12-18
 
 - Recent work: Fixes and prompt improvements to navigation & DNA/image pipelines.
@@ -27,6 +78,8 @@
   - `createNodePipeline` accepts `resolvedParentDNA` (pre-resolved by route handler) and uses it when available.
 
 ## Current Focus
+- ✅ **COMPLETED**: GOTO/GO_INSIDE alignment and conditional destination analysis
+- ✅ **COMPLETED**: Unified CommandContext interface and helper functions
+- ✅ **COMPLETED**: Dynamic pipeline configuration with accurate progress bars
 - Stabilize image prompt output to avoid inappropriate vegetation in non-flora worlds (add flora_base guard in image prompt generation).
 - Run integration tests for GOTO/GO_INSIDE flows to confirm cascaded inheritance end-to-end.
-- Update progress.md with completed changes and remaining tasks.

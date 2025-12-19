@@ -11,8 +11,9 @@ import { classifyIntent, routeNavigation, buildIntentFromCommand, analyzeDestina
 import type { RouteOptions } from '../../engine/navigation';
 import { runCreateLocationNodePipeline as runCreateNodePipeline } from '../../engine/navigation/pipelines/createNodePipeline';
 import { runCreateCharacterPipeline } from '../../engine/navigation/pipelines/createCharacterPipeline';
-import { findParentLocationNode, findParentRegionNode, findHostForRegion, addChildToWorldTree } from '../../engine/navigation/navigationHelpers';
+import { findParentLocationNode, findParentRegionNode, findHostForRegion, addChildToWorldTree, resolveNavigationParentDNA } from '../../engine/navigation/navigationHelpers';
 import { getResolvedNodeDNA } from '../../engine/hierarchyAnalysis/dnaMerge';
+import type { CommandContext } from '../../engine/navigation/types';
 import type { NavigationContext, NavigationAnalysisResult } from '../../engine/navigation';
 import { sseService } from '../../services/SSEService';
 import { getStepsForPipeline } from '../../engine/pipelines/shared/pipelineConfig';
@@ -222,9 +223,7 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
     // For GOTO: Send response immediately, run analysis in pipeline
     // Context-aware: from niche = sibling niche, from location = sibling location
     if (command === 'GOTO' && cleanText) {
-      console.log(`[GOTO DEBUG] Raw text received: "${text}"`);
-      console.log(`[GOTO DEBUG] Current node type: ${context.currentNode.type}`);
-      console.log(`[GOTO DEBUG] Parsed: cleanText="${cleanText}", enhancements=${JSON.stringify(parsedEnhancements)}`);
+      console.log(`[GOTO] Raw text: "${text}", Current node type: ${context.currentNode.type}`);
       
       const navigationId = `nav-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
       const eventsUrl = `/api/mzoo/navigation/events/${navigationId}`;
@@ -232,77 +231,26 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
       // Load worldsData for proper DNA resolution
       const worldsData = await storageService.loadWorlds() || { nodes: {}, worldTrees: [], views: {}, pinnedIds: [] };
       
-      // Context-aware parent resolution
-      const isFromLocation = context.currentNode.type === 'location';
-      let parentNodeId: string;
-      let nodeType: 'niche' | 'location';
-      let action: 'create_niche' | 'create_location';
-      let resolvedParentDNA: any = null;
+      // Use unified DNA resolution helper (single source of truth)
+      const dnaResolution = resolveNavigationParentDNA('GOTO', context, worldsData);
+      const { parentNodeId, resolvedParentDNA, targetNodeType } = dnaResolution;
+      const action: 'create_niche' | 'create_location' = targetNodeType === 'location' ? 'create_location' : 'create_niche';
       
-      if (isFromLocation) {
-        // GOTO from location: create sibling location under parent region
-        const { parentRegionId } = findParentRegionNode(context);
-        parentNodeId = parentRegionId;
-        nodeType = 'location';
-        action = 'create_location';
-        console.log(`[GOTO DEBUG] From location - creating sibling location under region ${parentRegionId}`);
-        
-        // CRITICAL: Resolve CASCADED DNA from region (using proper functions)
-        // This ensures parent DNA includes inherited values from host
-        const parentRegionNode = worldsData.nodes[parentRegionId];
-        if (parentRegionNode) {
-          // Check if region is pass-through (use host DNA instead)
-          const isPassThrough = parentRegionNode.isPassThrough || 
-            (parentRegionNode.type === 'region' && (!parentRegionNode.dna || Object.keys(parentRegionNode.dna).length === 0));
-          
-          if (isPassThrough) {
-            // Find host and use its DNA
-            const hostNode = findHostForRegion(parentRegionId, worldsData.worldTrees, worldsData.nodes);
-            if (hostNode?.dna) {
-              resolvedParentDNA = hostNode.dna;
-              console.log(`[GOTO DEBUG] Region is pass-through, using HOST DNA from "${hostNode.name}"`);
-            }
-          } else if (parentRegionNode.dna) {
-            resolvedParentDNA = parentRegionNode.dna;
-            console.log(`[GOTO DEBUG] Using REGION DNA from "${parentRegionNode.name}"`);
-          }
-        }
-      } else {
-        // GOTO from niche: create sibling niche under parent location
-        const { parentLocationId } = findParentLocationNode(context);
-        parentNodeId = parentLocationId;
-        nodeType = 'niche';
-        action = 'create_niche';
-        console.log(`[GOTO DEBUG] From niche - creating sibling niche under location ${parentLocationId}`);
-        
-        // CRITICAL: Use CASCADED DNA resolution (Host → Region → Location)
-        // This ensures the new niche inherits context from the entire hierarchy
-        // (e.g., "on The Moon" from host, not just "Lunar Lounge" from location)
-        resolvedParentDNA = getResolvedNodeDNA(
-          parentLocationId,
-          worldsData.nodes,
-          worldsData.worldTrees
-        );
-        
-        if (resolvedParentDNA) {
-          const parentLocationNode = worldsData.nodes[parentLocationId];
-          console.log(`[GOTO DEBUG] Using CASCADED DNA for "${parentLocationNode?.name}" (includes ancestry)`);
-          console.log(`  - genre: ${resolvedParentDNA.genre || 'null'}`);
-          console.log(`  - architectural_tone: ${resolvedParentDNA.architectural_tone || 'null'}`);
-        } else {
-          console.log(`[GOTO DEBUG] WARNING: No cascaded DNA resolved for location ${parentLocationId}`);
-        }
-      }
-      
-      // Log resolved DNA for debugging
+      console.log(`[GOTO] Creating ${targetNodeType} under ${parentNodeId}`);
       if (resolvedParentDNA) {
-        console.log(`[GOTO DEBUG] Resolved parent DNA:`);
-        console.log(`  - architectural_tone: ${resolvedParentDNA.architectural_tone || 'null'}`);
-        console.log(`  - palette_bias: ${resolvedParentDNA.palette_bias || 'null'}`);
-        console.log(`  - looks: ${(resolvedParentDNA.looks || 'null').substring(0, 60)}...`);
-      } else {
-        console.log(`[GOTO DEBUG] WARNING: No parent DNA resolved!`);
+        console.log(`[GOTO] Parent DNA: architectural_tone="${resolvedParentDNA.architectural_tone || 'null'}"`);
       }
+      
+      // Build CommandContext for unified pipeline
+      const commandContext: CommandContext = {
+        command: 'GOTO',
+        sourceNodeType: context.currentNode.type as 'location' | 'niche',
+        targetNodeType,
+        userPrompt: cleanText,
+        resolvedParentDNA,
+        parsedEnhancements,
+        parentNodeId
+      };
       
       // Use navigationGoto pipeline type (includes destination_analysis step)
       const steps = getStepsForPipeline('navigationGoto');
@@ -323,7 +271,7 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
         intent,
         decision: {
           action,
-          newNodeType: nodeType,
+          newNodeType: targetNodeType,
           reasoning: `GOTO command from ${context.currentNode.type} - destination analysis pending`,
           parentNodeId,
           newNodeName: cleanText
@@ -348,39 +296,35 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
             intent,
             apiKey,
             { 
-              gotoText: cleanText, 
-              parsedEnhancements, 
-              isFromLocation,
-              nodeType: isFromLocation ? 'location' : 'niche',  // Pass correct node type
-              resolvedParentDNA  // CRITICAL: Pass pre-resolved DNA to avoid empty parent DNA
+              gotoText: cleanText,
+              commandContext  // Pass unified command context (new architecture)
             },
             navigationId
           );
           
           // Save node to storage and update worldTrees
           if (result.node) {
-            const worldsData = await storageService.loadWorlds() || { nodes: {}, worldTrees: [], views: {}, pinnedIds: [] };
+            const updatedWorldsData = await storageService.loadWorlds() || { nodes: {}, worldTrees: [], views: {}, pinnedIds: [] };
             
             // Save node to nodes collection
-            worldsData.nodes[result.node.id] = result.node;
+            updatedWorldsData.nodes[result.node.id] = result.node;
             
             // Add to worldTrees under parent using shared utility
             const childEntry = {
               id: result.node.id,
-              type: nodeType,
+              type: targetNodeType,
               children: []
             };
             
-            const added = addChildToWorldTree(worldsData.worldTrees, parentNodeId, childEntry);
+            const added = addChildToWorldTree(updatedWorldsData.worldTrees, parentNodeId, childEntry);
             if (added) {
-              console.log(`[GOTO] Added ${nodeType} "${result.node.name}" as child of ${parentNodeId}`);
+              console.log(`[GOTO] Added ${targetNodeType} "${result.node.name}" as child of ${parentNodeId}`);
             } else {
               console.log(`[GOTO] Warning: Could not find parent ${parentNodeId} in worldTrees`);
             }
             
             // Save updated data
-            await storageService.saveWorlds(worldsData);
-            console.log(`[GOTO] Saved node to storage: ${result.node.id}`);
+            await storageService.saveWorlds(updatedWorldsData);
           }
         } catch (pipelineError) {
           console.error('[GOTO COMMAND ERROR]', pipelineError);
@@ -471,6 +415,29 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
       navigationId = `nav-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
       eventsUrl = `/api/mzoo/navigation/events/${navigationId}`;
       
+      // Load worldsData for proper DNA resolution
+      const worldsData = await storageService.loadWorlds() || { nodes: {}, worldTrees: [], views: {}, pinnedIds: [] };
+      
+      // Use unified DNA resolution helper (same as GOTO for consistency)
+      const dnaResolution = resolveNavigationParentDNA('GO_INSIDE', context, worldsData);
+      const { parentNodeId, resolvedParentDNA } = dnaResolution;
+      
+      // Build CommandContext for unified pipeline
+      const commandContext: CommandContext = {
+        command: 'GO_INSIDE',
+        sourceNodeType: context.currentNode.type as 'location' | 'niche',
+        targetNodeType: 'niche',
+        userPrompt: cleanText || decision.newNodeName || 'interior space',
+        resolvedParentDNA,
+        parsedEnhancements,
+        parentNodeId
+      };
+      
+      console.log(`[GO_INSIDE] Creating niche under ${parentNodeId}`);
+      if (resolvedParentDNA) {
+        console.log(`[GO_INSIDE] Parent DNA: architectural_tone="${resolvedParentDNA.architectural_tone || 'null'}"`);
+      }
+      
       // Store pipeline configuration for SSE initialization (GO_INSIDE uses 'navigation' pipeline)
       const steps = getStepsForPipeline('navigation');
       pipelineConfigs.set(navigationId, {
@@ -492,7 +459,7 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
         }
       });
 
-      // Run pipeline asynchronously - use cleanText (already parsed at top of handler)
+      // Run pipeline asynchronously with unified CommandContext
       (async () => {
         try {
           await runCreateNodePipeline(
@@ -501,13 +468,12 @@ router.post('/command', asyncHandler(async (req: Request, res: Response) => {
             intent, 
             apiKey, 
             { 
-              userPrompt: cleanText || decision.newNodeName,
-              parsedEnhancements  // User-controlled navigable elements and furnishing
+              commandContext  // Pass unified command context (new architecture)
             },
             navigationId
           );
         } catch (pipelineError) {
-          console.error('[NAVIGATION COMMAND ERROR]', pipelineError);
+          console.error('[GO_INSIDE COMMAND ERROR]', pipelineError);
         } finally {
           pipelineConfigs.delete(navigationId);
         }
