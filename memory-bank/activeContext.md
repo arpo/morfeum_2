@@ -2,7 +2,47 @@
 
 ## 2025-12-19
 
-### File Size Limit Refactoring (Dec 19, Latest)
+### Location Perspective Fix for GOTO Command (Dec 19, Latest)
+
+**Fixed critical issue** where GOTO commands creating locations showed interior views instead of exterior:
+
+#### **Problem**
+- `/GOTO space hangar` from a region created a location with `spaceType: "exterior"` ✓
+- But the **description** and **image prompt** said "interior" ✗
+- Example: Description: "The interior of a massive space hangar..." (wrong for exterior view)
+
+#### **Root Cause Analysis**
+1. **Pipeline flow**: `destinationAnalysisStep` → LLM determines perspective based on space description
+2. **LLM logic**: "space hangar" sounds enclosed → LLM returns `perspective: "interior"`
+3. **Node type**: But GOTO from region creates `nodeType: "location"` (should be exterior)
+4. **Override issue**: LLM's perspective was overriding the nodeType-based default
+5. **Late correction**: `spaceType: "exterior"` was set at node building time, after image prompt generation
+
+#### **Solution Implemented**
+**File:** `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts` (lines 97-102)
+
+```typescript
+// CRITICAL: Force exterior for location nodes (GOTO creating new location under region)
+// Locations show building facade from outside, not interior
+// Niches (GOTO under location) keep the LLM-determined perspective
+if (nodeType === 'location' && perspective !== 'exterior') {
+  console.log(`[CreateNodePipeline] Forcing exterior perspective for location node (was: ${perspective})`)
+  perspective = 'exterior';
+}
+```
+
+#### **How It Works Now**
+| Command | Parent Type | NodeType | LLM Says | Final Perspective |
+|---------|-------------|----------|----------|-------------------|
+| `/GOTO space hangar` | Region | location | interior | **exterior** ✓ (forced) |
+| `/GOTO kitchen` | Location | niche | interior | **interior** ✓ (preserved) |
+| `/GOTO terrace` | Location | niche | open-air | **open-air** ✓ (preserved) |
+
+#### **Additional Changes**
+1. **`structureAnalysis.ts`**: Added perspective-aware description instructions
+2. **`nodeBuildingStep.ts`**: Added validation warning when description/spaceType mismatch
+
+### File Size Limit Refactoring (Dec 19)
 
 **Major code organization refactoring** completed to bring all backend files under the 50-300 line limit:
 

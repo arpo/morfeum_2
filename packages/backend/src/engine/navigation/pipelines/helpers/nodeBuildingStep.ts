@@ -183,6 +183,17 @@ export function buildFinalNode(
     helper.completeStage('node_building', 'Node built');
   }
 
+  // Validate description matches spaceType/perspective
+  const descriptionLower = node.description?.toLowerCase() || '';
+  const spaceType = node.spaceType;
+  if (spaceType === 'exterior' && descriptionLower.includes('interior')) {
+    console.warn('⚠️  WARNING: Description says "interior" but spaceType is "exterior"');
+    console.warn('   Description:', node.description);
+  } else if (spaceType === 'interior' && descriptionLower.includes('exterior')) {
+    console.warn('⚠️  WARNING: Description says "exterior" but spaceType is "interior"');
+    console.warn('   Description:', node.description);
+  }
+
   // Log success details
   console.log('\n═══════════════════════════════════════════════════════════');
   console.log('✅ NODE CREATED SUCCESSFULLY');
@@ -190,6 +201,7 @@ export function buildFinalNode(
   console.log('  ID:', node.id);
   console.log('  Type:', node.type);
   console.log('  Name:', node.name);
+  console.log('  SpaceType:', node.spaceType || 'not set');
   console.log('  Has DNA:', !!node.dna ? '✓' : '✗');
   console.log('═══════════════════════════════════════════════════════════\n');
 

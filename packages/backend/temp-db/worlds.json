@@ -187,221 +187,361 @@
       "searchDesc": "Interior of the Lunar Obelisk: polished obsidian, starlight, tiered platforms, profound silence.",
       "slug": "null-of-lunar-obelisk"
     },
-    "niche-1766138646000-whu4yrquo": {
-      "id": "niche-1766138646000-whu4yrquo",
-      "type": "niche",
-      "name": "Top Room of a Tower",
+    "location-1766140954545-izjs31a8d": {
+      "id": "location-1766140954545-izjs31a8d",
+      "type": "location",
+      "name": "Space Hangar",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A colossal, cylindrical chamber with an impossibly smooth, obsidian-like finish that seems to absorb all light, save for what is reflected from the external panorama. The space feels both vast and intimately enclosed by the starfield visible through the transparent walls.",
-        "colorsAndLighting": "Dominated by the deep blacks of space and the muted greys of the lunar surface as seen through the windows. Interior lighting is minimal, provided by strategically placed, recessed panels emitting a cool, stark white light that casts no discernible shadows, accentuating the smoothness of the surfaces. The primary color is deep black, reflecting starlight (8%), with sharp white light accents (2%).",
-        "atmosphere": "Absolute silence, an oppressive void punctuated only by the faintest hum of internal systems. The air is thin and sterile, temperature perfectly regulated, but the profound desolation of the exterior is palpable. No motion is visible save for the slow sweep of distant stars.",
-        "materials": "The interior surfaces are crafted from the same impossibly smooth, obsidian-like substance as the exterior, creating a seamless, almost liquid appearance. The floor is similarly polished.",
-        "mood": "A profound sense of awe, isolation, and cosmic insignificance. The sheer scale of the universe on display instills a deep contemplation of existence and the unknown.",
-        "sounds": "Silence, faint internal hum, distant star whispers, sterile air.",
-        "spatialLayout": "A large, cylindrical chamber, open and vast, with the entire perimeter serving as a window onto the external environment.",
-        "primary_surfaces": "Sleek, polished obsidian-like material",
-        "secondary_surfaces": "None",
-        "accent_features": "Recessed, cool white light emitters, minimalist control console",
-        "dominant": "Deep black (90%)",
-        "secondary": "Starfield reflection (8%)",
-        "accent": "Sharp white light (2%)",
-        "ambient": "Starlight and harsh sunlight reflection (reflected externally, creating internal mood)",
-        "genre": null,
-        "architectural_tone": "Futuristic minimalist monolithic",
-        "cultural_tone": "Alien, ancient, unknown purpose",
-        "palette_bias": "Monochromatic black and grey",
+        "looks": "AERIAL/SATELLITE VIEW: vast, cratered lunar surface stretching to the horizon, Earth visible as a distant celestial body, no individual structures visible. Interior view: immense cavernous space, stark metallic walls, visible structural supports, colossal docking bays.",
+        "colorsAndLighting": "Harsh, direct sunlight casting deep shadows on the exterior. Interior lighting is a mix of harsh, functional work lights and soft ambient glow from Earthlight filtering in. The blackness of space dominates.",
+        "atmosphere": "Utter vacuum outside. Inside, a controlled, breathable atmosphere with faint hum of life support systems.",
+        "materials": "Dominant material is fine, grey lunar regolith exteriorly. Interiorly, weathered metallic plating, raw concrete, and exposed structural steel.",
+        "mood": "Profound isolation, stark beauty, silent desolation, cosmic wonder. Interior adds a sense of immense scale and utilitarian functionality.",
+        "sounds": "Silence outside. Inside: faint hum, distant machinery, occasional metallic clangs.",
+        "spatialLayout": "Vast, cavernous, open plan with high ceilings and immense internal volume.",
+        "primary_surfaces": "Lunar regolith plains and crater floors (exterior). Weathered metallic plating (interior).",
+        "secondary_surfaces": "Impact crater rims and ejecta blankets (exterior). Raw concrete and exposed structural steel (interior).",
+        "accent_features": "Earth as a prominent, colored celestial object. Large, functional docking mechanisms within the hangar.",
+        "dominant": "Deep Black (90%)",
+        "secondary": "Pale Grey",
+        "accent": "Vibrant Blue (Earth)",
+        "ambient": "Starlight and Earthlight. Functional work lighting.",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Existential",
+        "cultural_tone": "Alien",
+        "palette_bias": "Monochromatic",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1766138645999-2tmqf6vsu",
-      "description": "This open-air top room of a tower provides a commanding, unobstructed view of the world below. Designed with a futuristic minimalist aesthetic in black and grey, the space is sleek and functional.",
+      "primaryMedia": "media-1766140954544-b8rey86vh",
+      "description": "The exterior of a colossal space hangar, appearing as a stark, black and grey geometric form suspended against the cosmic backdrop. Large, heavy-duty blast doors are visible, hinting at the immense scale of the craft that might be housed within. The structure's monolithic and minimalist design emphasizes its purely functional purpose in the void.",
       "structure": {
-        "form": "cylindrical",
-        "roofType": "open-sky",
-        "scale": "medium",
-        "orientation": "vertical",
-        "openings": "large-glass",
+        "form": "modular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "minimal",
         "openingShape": "rectangular",
-        "functionalType": "observation",
-        "elevation": "elevated",
-        "spatialLayout": "A minimalist, monochromatic room at the apex of a futuristic tower, offering panoramic views of the surrounding landscape. The space is designed for unobstructed observation, with sleek, dark surfaces and ample, clear viewing areas.",
+        "functionalType": "industrial",
+        "elevation": "floating",
+        "spatialLayout": "A vast, monolithic structure constructed from dark, metallic panels, suspended in the vacuum of space. Its design is stark and functional, with minimal external ornamentation.",
         "requiredElements": [
-          "view over surroundings"
+          "space hangar"
         ]
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "center of back wall",
-          "description": "Leads back down into the main structure of the Lunar Obelisk."
+          "position": "center of the rear wall",
+          "description": "Leads to the lunar surface, offering a view of the cratered landscape and distant Earth."
         },
         {
-          "type": "window",
-          "position": "entire perimeter of the room",
-          "description": "Expansive, seamless transparent panels offering a breathtaking 360-degree view of the lunar surface and the cosmos."
+          "type": "passage",
+          "position": "left side of the main chamber",
+          "description": "Connects to crew quarters and maintenance bays."
+        },
+        {
+          "type": "passage",
+          "position": "right side of the main chamber",
+          "description": "Leads to a docking control center and armory."
         }
       ],
       "dominantElements": [
-        "observation deck: shape=cylindrical-circular, scale=medium, style=futuristic-minimalist, surfaces=polished-metal, stone, glass, light=soft-ambient"
+        "hangar bay: shape=rectangular-industrial, scale=massive, style=futuristic-minimalist, surfaces=matte-metallic-grey, light=harsh-external-lighting"
       ],
       "uniqueIdentifiers": [
-        "monochromatic palette",
-        "tower apex location"
+        "monolithic construction",
+        "suspended in space",
+        "lack of external detail"
       ],
-      "searchDesc": "Top room of a tower with immense panoramic views of space and the lunar surface.",
-      "slug": "the-apex-observatory"
+      "searchDesc": "Vast lunar space hangar with industrial design, housing colossal spacecraft, featuring Earth view.",
+      "slug": "the-void-hangar"
     },
-    "niche-1766138856857-ol0cx1j55": {
-      "id": "niche-1766138856857-ol0cx1j55",
+    "niche-1766140972492-tq4esixrl": {
+      "id": "niche-1766140972492-tq4esixrl",
       "type": "niche",
-      "name": "Rooftop Bar",
-      "spaceType": "exterior",
+      "name": "Space Hangar",
+      "spaceType": "interior",
       "dna": {
-        "looks": "An open-plan rooftop space with expansive, transparent walls offering unobstructed views of the lunar surface and the star-filled sky. The interior is a fusion of stark minimalism and organic, glowing forms.",
-        "colorsAndLighting": "Dominated by the deep blacks of space, punctuated by the cool, internal glow of bioluminescent seating and the crisp white light of holographic menus. The bar counter reflects starlight in fractured patterns. Shadows are soft and diffuse within the bar area, contrasting with the sharp shadows of the exterior.",
-        "atmosphere": "A serene and sophisticated atmosphere. The silence of space is subtly overlaid with ambient, low-frequency electronic music. Temperature is perfectly controlled, offering comfort amidst the lunar void. A gentle, almost imperceptible, hum emanates from the technological furnishings.",
-        "materials": "The bar counter is made of a flawless, clear crystalline material. Seating pods are crafted from a flexible, self-illuminating bio-polymer. Tables are carved from polished, smooth lunar stone. The floor and walls are a seamless extension of the Lunar Obelisk's obsidian-like material.",
-        "mood": "Evokes exclusivity, wonder, and tranquil contemplation. A place for sophisticated indulgence with a sense of cosmic awe.",
-        "sounds": "Ambient electronic, gentle hum, distant echoes of quiet conversation",
-        "spatialLayout": "An expansive, open circular space with the bar as the central focal point, surrounded by clusters of seating pods and tables.",
-        "primary_surfaces": "Polished, obsidian-like material of the building's core structure",
-        "secondary_surfaces": "Crystalline bar counter, smooth lunar stone tables",
-        "accent_features": "Bioluminescent seating pods, floating holographic menus",
-        "dominant": "Deep black with subtle starlight reflections",
-        "secondary": "Cool, soft bioluminescent blues and greens",
-        "accent": "Sharp, crisp white of holographic displays",
-        "ambient": "Starlight and internal luminescence",
-        "genre": null,
-        "architectural_tone": "Futuristic minimalist",
-        "cultural_tone": "Exclusive, sophisticated",
-        "palette_bias": "Monochromatic black and grey with glowing accents",
+        "looks": "Vast, cavernous interior with stark, metallic walls and colossal structural supports. Colossal docking bays dominate the space. Raw concrete and exposed steel elements are visible.",
+        "colorsAndLighting": "Interior lighting is a mix of harsh, functional work lights that cast sharp shadows and a soft ambient glow from Earthlight filtering in through unseen openings. Deep blackness of space is ever-present. Exterior lighting is harsh and direct, casting deep shadows on the lunar surface.",
+        "atmosphere": "A controlled, breathable atmosphere with the faint hum of life support systems. Outside, the utter vacuum of space.",
+        "materials": "Dominant interior material is weathered metallic plating. Raw concrete and exposed structural steel are also prominent.",
+        "mood": "Profound isolation, stark beauty, utilitarian functionality, and a sense of immense scale.",
+        "sounds": "Faint hum of life support, distant clangs, echoes, the silence of vacuum.",
+        "spatialLayout": "Rectangular-industrial, massive scale cavernous space.",
+        "primary_surfaces": "Weathered metallic plating",
+        "secondary_surfaces": "Raw concrete, exposed structural steel",
+        "accent_features": "Colossal docking bay mechanisms, Earth visible as a distant blue object",
+        "dominant": "Deep Black",
+        "secondary": "Pale Grey",
+        "accent": "Vibrant Blue",
+        "ambient": "Starlight, Earthlight, functional work lighting",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Existential",
+        "cultural_tone": "Alien",
+        "palette_bias": "Monochromatic",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1766138856856-dhh1qr3hc",
-      "description": "An open-air rooftop bar with a futuristic, minimalist design. It features a crystalline bar counter, floating holographic menus, bioluminescent seating pods, and minimalist lunar stone tables.",
+      "primaryMedia": "media-1766140972492-w2h2mrcwr",
+      "description": "Inside the hangar, massive rectangular bays stretch out, defined by stark, matte-metallic grey surfaces and supported by colossal structural elements. The lighting is harsh, suggesting external illumination sources.",
       "structure": {
         "form": "rectangular",
-        "roofType": "open-sky",
+        "roofType": "null",
         "scale": "large",
         "orientation": "horizontal",
         "openings": "minimal",
         "openingShape": "rectangular",
-        "functionalType": "entertainment",
-        "elevation": "rooftop",
-        "spatialLayout": "A sleek, open-air rooftop bar with a minimalist aesthetic, offering panoramic views. The space is illuminated by ambient bioluminescence and the glow of holographic menus.",
+        "functionalType": "industrial",
+        "elevation": "ground-level",
+        "spatialLayout": "The immense cavernous space of the hangar is defined by stark, matte-metallic grey walls and colossal structural supports. The overall impression is one of vast, utilitarian industrial design.",
         "requiredElements": [
-          "crystalline bar counter",
-          "floating holographic menus",
-          "bioluminescent seating pods",
-          "minimalist lunar stone tables"
+          "hangar bay: shape=rectangular-industrial, scale=massive, style=futuristic-minimalist, surfaces=matte-metallic-grey, light=harsh-external-lighting"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "far wall",
+          "description": "leads to other sections of the hangar or exterior docking areas"
+        }
+      ],
+      "dominantElements": [
+        "hangar bay: shape=rectangular-industrial, scale=massive, style=futuristic-minimalist, surfaces=matte-metallic-grey, light=harsh-external-lighting"
+      ],
+      "uniqueIdentifiers": [
+        "colossal structural supports",
+        "harsh external lighting",
+        "stark metallic walls"
+      ],
+      "searchDesc": "Massive futuristic-minimalist hangar bay, grey metallic, harsh lighting, docking bays, lunar surface.",
+      "slug": "null-of-space-hangar"
+    },
+    "niche-1766141026820-tyk6m5j7d": {
+      "id": "niche-1766141026820-tyk6m5j7d",
+      "type": "niche",
+      "name": "Roof Top Control Room",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Interior view: immense cavernous space with a dominant wraparound window offering a view of the vast, cratered lunar surface stretching to the horizon, Earth visible as a distant celestial body. The interior features stark metallic walls, visible structural supports, and functional control consoles.",
+        "colorsAndLighting": "Harsh, direct sunlight casts deep shadows on the exterior (visible through the window). Interior lighting is a mix of harsh, functional work lights and soft ambient glow from Earthlight filtering in. The blackness of space dominates the exterior view. The interior is bathed in functional, cool-toned light.",
+        "atmosphere": "A controlled, breathable atmosphere with the faint hum of life support systems. Utter vacuum outside the observation window.",
+        "materials": "Dominant interior material is weathered metallic plating. Exposed structural steel and raw concrete are also visible. Exterior (viewed through window) is fine, grey lunar regolith.",
+        "mood": "Profound isolation, stark beauty, silent desolation, cosmic wonder, combined with a sense of immense scale and utilitarian functionality.",
+        "sounds": "Faint hum of life support, occasional soft beeps from consoles, vast cosmic silence outside.",
+        "spatialLayout": "Vast, open cavernous space dominated by the observation window and a central command console.",
+        "primary_surfaces": "Weathered metallic plating.",
+        "secondary_surfaces": "Raw concrete and exposed structural steel.",
+        "accent_features": "Holographic displays, vibrant blue Earth in the sky, functional docking mechanisms (visible through main door).",
+        "dominant": "Deep Black",
+        "secondary": "Pale Grey",
+        "accent": "Vibrant Blue",
+        "ambient": "Starlight and Earthlight. Functional work lighting.",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Existential",
+        "cultural_tone": "Alien",
+        "palette_bias": "Monochromatic",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1766141026815-1rl8lscyq",
+      "description": "An open-air control room perched atop a building, offering an expansive, unobstructed vista of the city and its environs. The structure itself is a utilitarian box, likely housing essential monitoring equipment, with large glass panels providing a commanding perspective of the world below.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "elevation": "rooftop",
+        "spatialLayout": "A compact, functional control room situated on a building's rooftop, offering panoramic views of the surrounding urban landscape. Minimalist in design, it prioritizes visibility and utility.",
+        "requiredElements": [
+          "control room",
+          "view over the surrounding"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "central",
+          "description": "Leads to the main docking bay, a colossal space humming with unseen activity."
+        },
+        {
+          "type": "passage",
+          "position": "rear",
+          "description": "Connects to the habitation modules, dimly lit and suggesting more contained environments."
+        },
+        {
+          "type": "window",
+          "position": "wraparound",
+          "description": "The primary observation pane, offering an unparalleled, unobstructed view of the cosmos and Earth."
+        }
+      ],
+      "dominantElements": [
+        "control room: shape=rectangular, scale=medium, style=industrial, surfaces=metal, glass, concrete, light=dim-industrial"
+      ],
+      "uniqueIdentifiers": [
+        "rooftop location",
+        "expansive view",
+        "control panel interface"
+      ],
+      "searchDesc": "Lunar rooftop control room with vast Earth view, stark metal and concrete.",
+      "slug": "observation-apex"
+    },
+    "location-1766141209791-t208sv0yp": {
+      "id": "location-1766141209791-t208sv0yp",
+      "type": "location",
+      "name": "The Alien Temple",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A vast, cavernous chamber with smoothly curved, organic walls that seem to absorb light. The ceiling arches upwards into darkness, hinting at immense scale. Strange, faint geometric patterns pulse softly on the surfaces.",
+        "colorsAndLighting": "Dominated by deep, light-absorbing blacks and the subtle, internal glow of faint, shifting bioluminescent veins within the walls. The only external light source is the dim, diffused glow from the passage leading to the lunar surface, casting long, indistinct shadows.",
+        "atmosphere": "Utter vacuum. A profound, tomb-like silence broken only by an almost imperceptible, low-frequency hum. The temperature is absolute zero, the air non-existent.",
+        "materials": "Polished obsidian-like material forming the primary structure, interlaced with veins of softly glowing, unknown bioluminescent organic matter. The floor is a continuation of the polished, seamless material.",
+        "mood": "Awe-inspiring, unsettling, ancient, profound, sacred dread.",
+        "sounds": "Subtle hum, low resonating thrum, echoing silence.",
+        "spatialLayout": "Vast, domed cavern with a seamless, flowing interior.",
+        "primary_surfaces": "Polished, light-absorbing obsidian",
+        "secondary_surfaces": "Bioluminescent veins",
+        "accent_features": "Pulsing geometric patterns, central archway to exterior",
+        "dominant": "Deep Black",
+        "secondary": "Subtle, shifting internal glow (e.g., deep violet or cyan)",
+        "accent": "Pale Grey (from lunar light ingress)",
+        "ambient": "Dim-ambient, internal glow",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Existential",
+        "cultural_tone": "Alien",
+        "palette_bias": "Monochromatic",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1766141209790-rf1wluz3s",
+      "description": "The alien temple hangs in the blackness, a stark silhouette against the distant, cratered surface of the moon. Its monolithic, organic form is a deep, light-absorbing black, broken only by minimal, glowing arched openings. Ethereal light emanates from within, hinting at the mysteries it holds.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "arched",
+        "functionalType": "religious",
+        "elevation": "floating",
+        "spatialLayout": "A monolithic, organic temple structure floats in the void of space near the dark side of the moon. Its surfaces absorb light, creating an unsettling presence.",
+        "requiredElements": [
+          "alien temple"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "central archway",
+          "description": "Leads out to the lunar surface, offering a stark view of the cratered plains and distant Earth."
+        },
+        {
+          "type": "passage",
+          "position": "deeply recessed opening",
+          "description": "Descends into the inner sanctums of the alien temple."
+        }
+      ],
+      "dominantElements": [
+        "Alien Temple: shape=organic, scale=massive, style=futuristic-minimalist-monolithic, surfaces=obsidian-like, light=ethereal-glow"
+      ],
+      "uniqueIdentifiers": [
+        "dark side of the moon",
+        "floating temple"
+      ],
+      "searchDesc": "Massive alien temple antechamber with obsidian walls, dim light, and a passage to the lunar surface.",
+      "slug": "temple-antechamber"
+    },
+    "niche-1766141228672-1ekupre0r": {
+      "id": "niche-1766141228672-1ekupre0r",
+      "type": "niche",
+      "name": "The Alien Temple",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, cavernous chamber with smoothly curved, organic walls that seem to absorb light. The ceiling arches upwards into darkness, hinting at immense scale. Strange, faint geometric patterns pulse softly on the surfaces.",
+        "colorsAndLighting": "Dominated by deep, light-absorbing blacks and the subtle, internal glow of faint, shifting bioluminescent veins within the walls. The only external light source is the dim, diffused glow from the passage leading to the lunar surface, casting long, indistinct shadows.",
+        "atmosphere": "Utter vacuum. A profound, tomb-like silence broken only by an almost imperceptible, low-frequency hum. The temperature is absolute zero, the air non-existent.",
+        "materials": "Polished obsidian-like material forming the primary structure, interlaced with veins of softly glowing, unknown bioluminescent organic matter. The floor is a continuation of the polished, seamless material.",
+        "mood": "Awe-inspiring, unsettling, ancient, profound, sacred dread.",
+        "sounds": "Utter silence, low-frequency hum, tomb-like stillness.",
+        "spatialLayout": "Vast, cavernous chamber with smoothly curved, organic walls and an arching ceiling.",
+        "primary_surfaces": "Polished, light-absorbing obsidian",
+        "secondary_surfaces": "Bioluminescent veins (deep violet or cyan)",
+        "accent_features": "Pulsing geometric patterns, central archway to exterior",
+        "dominant": "Deep Black",
+        "secondary": "Subtle, shifting internal glow (deep violet or cyan)",
+        "accent": "Pale Grey (from lunar light ingress)",
+        "ambient": "Dim-ambient, internal glow",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Existential",
+        "cultural_tone": "Alien",
+        "palette_bias": "Monochromatic",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1766141228672-a5cookmhk",
+      "description": "The interior of the Alien Temple is a vast, cavernous space with smoothly curved, organic walls that seem to absorb light. The ceiling arches upwards into darkness, hinting at immense scale. Strange, faint geometric patterns pulse softly on the obsidian-like surfaces, casting an ethereal glow throughout the chamber.",
+      "structure": {
+        "form": "organic",
+        "roofType": "arched",
+        "scale": "massive",
+        "orientation": "horizontal",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "religious",
+        "elevation": "ground-level",
+        "spatialLayout": "This vast, cavernous chamber features smoothly curved, organic walls that absorb light, creating an ethereal glow. The immense scale is emphasized by the ceiling arching into darkness, punctuated by softly pulsing geometric patterns.",
+        "requiredElements": [
+          "Alien Temple: shape=organic, scale=massive, style=futuristic-minimalist-monolithic, surfaces=obsidian-like, light=ethereal-glow"
         ]
       },
       "furnishingDetails": {
         "userSpecified": [
-          "crystalline bar counter",
-          "floating holographic menus",
-          "bioluminescent seating pods",
-          "minimalist lunar stone tables --open-air"
+          "obsidian-like altar with pulsating light",
+          "holographic celestial charts",
+          "low-lying meditation platforms",
+          "floating crystalline orbs"
         ],
         "suggested": [],
         "placementNotes": []
       },
       "navigableElements": [
         {
-          "type": "door",
-          "position": "center",
-          "description": "door to observatory deck"
-        },
-        {
-          "type": "object",
-          "position": "left wall",
-          "description": "object sealed viewport"
+          "type": "archway",
+          "position": "center wall",
+          "description": "archway monolithic"
         },
         {
           "type": "object",
           "position": "center",
-          "description": "object hidden access panel rear wall"
-        }
-      ],
-      "dominantElements": [
-        "bar: shape=rectangular, scale=medium, style=futuristic-minimalist, surfaces=crystalline, metallic, light=neon-glow"
-      ],
-      "uniqueIdentifiers": [
-        "bioluminescent glow",
-        "holographic menus",
-        "lunar stone textures"
-      ],
-      "searchDesc": "Rooftop bar with crystalline counter, holo menus, glowing pods, and lunar tables. Views of space.",
-      "slug": "lunar-zenith-bar"
-    },
-    "niche-1766139293597-o9xfgtcga": {
-      "id": "niche-1766139293597-o9xfgtcga",
-      "type": "niche",
-      "name": "Room with Two Doors",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A perfectly symmetrical, cubic chamber with intensely polished obsidian-like walls and floor, devoid of any extraneous detail save for two identical, seamless doors set precisely into the left and right walls.",
-        "colorsAndLighting": "The interior is bathed in the same stark, reflected light as the exterior, with deep blacks dominating and sharp, angular reflections creating dramatic, high-contrast shadows. The light intensity is low, emphasizing the monolithic nature of the space.",
-        "atmosphere": "The atmosphere is one of absolute silence and profound desolation, mirroring the exterior. The air is non-existent, and temperature fluctuations would be extreme if not for the presumed internal environmental controls. There is no visible motion.",
-        "materials": "The primary material is an impossibly smooth, obsidian-like substance that appears to absorb and reflect light simultaneously. Textures are non-existent, creating a perfectly polished, almost liquid-like surface. The condition is pristine.",
-        "mood": "Evokes feelings of calculated design, deliberate neutrality, and a sense of being a pivotal, yet impersonal, transition point. The symmetry and identical exits create a feeling of being on the precipice of an unknown, equally balanced choice.",
-        "sounds": "Silence, faint hum of internal systems, subtle echoes.",
-        "spatialLayout": "Cubic chamber",
-        "primary_surfaces": "Sleek, polished obsidian-like material",
-        "secondary_surfaces": "Cracked lunar regolith at base",
-        "accent_features": "The perfectly flush, seamless doors with no visible mechanism.",
-        "dominant": "Deep black (90%)",
-        "secondary": "Starfield reflection (8%)",
-        "accent": "Sharp white light (2%)",
-        "ambient": "Starlight and harsh sunlight reflection",
-        "genre": null,
-        "architectural_tone": "Futuristic minimalist monolithic",
-        "cultural_tone": "Alien, ancient, unknown purpose",
-        "palette_bias": "Monochromatic black and grey",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1766139293595-63zbqyoq3",
-      "description": "A stark, futuristic minimalist room rendered in shades of black and grey. Two identical doors are present, one on the left and one on the right wall, offering egress from the space.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "null",
-        "scale": "medium",
-        "orientation": "horizontal",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "civic",
-        "elevation": "ground-level",
-        "spatialLayout": "A minimalist, monochromatic room with a single point of entry and two exits, one on the left wall and one on the right wall. The overall aesthetic is stark and futuristic.",
-        "requiredElements": [
-          "door in the wall to the left",
-          "door on the wall to the right",
-          "door in the wall to the left and a door on the wall to the right"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "left wall",
-          "description": "Leads to a dimly lit corridor. Visible through the doorway is a continuation of the obsidian-like material, stretching into the darkness."
+          "description": "object seamless portal rear wall"
         },
         {
-          "type": "door",
+          "type": "object",
+          "position": "left wall",
+          "description": "object shimmering curtain"
+        },
+        {
+          "type": "object",
           "position": "right wall",
-          "description": "Leads to a dimly lit corridor. Visible through the doorway is a continuation of the obsidian-like material, stretching into the darkness."
+          "description": "object recessed access panel"
         }
       ],
       "dominantElements": [
-        "minimalist room: shape=rectangular, scale=medium, style=futuristic-minimalist, surfaces=polished-concrete, light=soft-ambient"
+        "Alien Temple: shape=organic, scale=massive, style=futuristic-minimalist-monolithic, surfaces=obsidian-like, light=ethereal-glow"
       ],
       "uniqueIdentifiers": [
-        "two contrasting doors",
-        "monochromatic color scheme"
+        "organic walls",
+        "light-absorbing surfaces",
+        "pulsing geometric patterns",
+        "immense, cavernous scale"
       ],
-      "searchDesc": "Symmetrical chamber with identical obsidian doors on left and right walls.",
-      "slug": "nexus-chamber"
+      "searchDesc": "Vast, light-absorbing chamber of The Alien Temple with organic, obsidian walls and ethereal glows.",
+      "slug": "null-of-the-alien-temple"
     }
   },
   "views": {},
@@ -422,19 +562,31 @@
                   "id": "niche-1766137256715-bp4q1z4mv",
                   "type": "niche",
                   "children": []
-                },
+                }
+              ]
+            },
+            {
+              "id": "location-1766140954545-izjs31a8d",
+              "type": "location",
+              "children": [
                 {
-                  "id": "niche-1766138646000-whu4yrquo",
+                  "id": "niche-1766140972492-tq4esixrl",
                   "type": "niche",
                   "children": []
                 },
                 {
-                  "id": "niche-1766138856857-ol0cx1j55",
+                  "id": "niche-1766141026820-tyk6m5j7d",
                   "type": "niche",
                   "children": []
-                },
+                }
+              ]
+            },
+            {
+              "id": "location-1766141209791-t208sv0yp",
+              "type": "location",
+              "children": [
                 {
-                  "id": "niche-1766139293597-o9xfgtcga",
+                  "id": "niche-1766141228672-1ekupre0r",
                   "type": "niche",
                   "children": []
                 }

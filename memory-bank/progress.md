@@ -2,7 +2,15 @@
 
 ## 2025-12-19
 
-- [x] **LLM-Based Elevation Detection (Dec 19, Latest)**: Replaced string matching with intelligent LLM-based elevation detection
+- [x] **Location Perspective Fix for GOTO Command (Dec 19, Latest)**: Fixed locations showing interior views instead of exterior
+  - [x] Identified root cause: LLM perspective from destination analysis was overriding nodeType-based default
+  - [x] Solution: Force `perspective = 'exterior'` for location nodes after destination analysis
+  - [x] Added perspective-aware description instructions in `structureAnalysis.ts`
+  - [x] Added validation warning in `nodeBuildingStep.ts` for description/spaceType mismatches
+  - [x] Fix correctly handles both cases: locations (force exterior) and niches (preserve LLM perspective)
+  - Key files: `createNodePipeline.ts`, `structureAnalysis.ts`, `nodeBuildingStep.ts`
+
+- [x] **LLM-Based Elevation Detection (Dec 19)**: Replaced string matching with intelligent LLM-based elevation detection
   - [x] Added `elevation` field to Structure interface (`ground-level`, `rooftop`, `elevated`, `underground`, `floating`, `suspended`)
   - [x] Enhanced structure analysis prompt with elevation rules and detection examples
   - [x] Updated image prompt generation to use elevation field instead of string matching

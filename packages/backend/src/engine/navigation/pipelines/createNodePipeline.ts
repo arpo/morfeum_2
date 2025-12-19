@@ -96,6 +96,14 @@ export async function runCreateLocationNodePipeline(
     });
     perspective = updatedPerspective as 'interior' | 'exterior' | 'open-air';
 
+    // CRITICAL: Force exterior for location nodes (GOTO creating new location under region)
+    // Locations show building facade from outside, not interior
+    // Niches (GOTO under location) keep the LLM-determined perspective
+    if (nodeType === 'location' && perspective !== 'exterior') {
+      console.log(`[CreateNodePipeline] Forcing exterior perspective for location node (was: ${perspective})`);
+      perspective = 'exterior';
+    }
+
     // ═══════════════════════════════════════════════════════════════════════════
     // STEP 1: SPACE ANALYSIS (Structure + DNA in parallel)
     // ═══════════════════════════════════════════════════════════════════════════

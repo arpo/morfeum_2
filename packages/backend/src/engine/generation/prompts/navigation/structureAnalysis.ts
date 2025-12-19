@@ -125,7 +125,7 @@ OUTPUT (pure JSON):
     "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
     "uniqueIdentifiers": ["distinctive features of this DESTINATION"]
   },
-  "description": "Brief description of the DESTINATION"
+  "description": "Brief description of the DESTINATION. CRITICAL: Match perspective - if exterior/open-air, describe the EXTERIOR view; if interior, describe the INTERIOR view. Do NOT say 'interior' when perspective is exterior."
 }`;
   }
 
@@ -203,7 +203,7 @@ OUTPUT (pure JSON):
     "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
     "uniqueIdentifiers": ["2-4 distinctive features"]
   },
-  "description": "Brief space description"
+  "description": "Brief space description. CRITICAL: Match perspective - if exterior/open-air, describe the EXTERIOR view; if interior, describe the INTERIOR view. Do NOT say 'interior' when perspective is exterior."
 }`;
 }
 
