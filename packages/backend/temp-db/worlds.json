@@ -101,7 +101,7 @@
     },
     "niche-1766062966897-iq3bncudl": {
       "id": "niche-1766062966897-iq3bncudl",
-      "type": "niche",
+      "type": "location",
       "name": "The Lunar Grotto",
       "spaceType": "interior",
       "dna": {
@@ -188,7 +188,7 @@
     },
     "niche-1766062992405-hszhbnlws": {
       "id": "niche-1766062992405-hszhbnlws",
-      "type": "niche",
+      "type": "location",
       "name": "The Toilet",
       "spaceType": "interior",
       "dna": {
@@ -268,7 +268,7 @@
     },
     "niche-1766063109449-d397usymy": {
       "id": "niche-1766063109449-d397usymy",
-      "type": "niche",
+      "type": "location",
       "name": "Tower Top Room",
       "spaceType": "interior",
       "dna": {
@@ -382,7 +382,8 @@
       "slug": "aethelgard",
       "structure": {
         "spatialLayout": "A scattered cluster of massive, organically shaped floating landmasses, interconnected by slender pathways, with vast open sky between them. A clear hierarchical arrangement of larger and smaller islands."
-      }
+      },
+      "primaryMedia": "media-1766063633271-xg4ld7a7u"
     },
     "5119bf39-9a45-4fa3-9431-0a3a224ecc9f": {
       "id": "5119bf39-9a45-4fa3-9431-0a3a224ecc9f",
@@ -415,7 +416,8 @@
       "slug": "the-verdant-atolls",
       "structure": {
         "spatialLayout": "Interconnected organic pathways and bridges linking various elevated sections of the islands. A sense of organic flow rather than rigid grids."
-      }
+      },
+      "primaryMedia": "media-1766063624582-81mxdqu23"
     },
     "ea2ba97c-f644-443f-8f9e-4534292910d9": {
       "id": "ea2ba97c-f644-443f-8f9e-4534292910d9",
@@ -478,6 +480,787 @@
         "Towering tree-like floating structures in midground"
       ],
       "primaryMedia": "media-1766063268393-txbupzdcv"
+    },
+    "niche-1766063297831-1be6fmz6z": {
+      "id": "niche-1766063297831-1be6fmz6z",
+      "type": "location",
+      "name": "Mount Aeridor Observation Deck",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A large, organic-cylindrical observation deck with futuristic-ornate styling. Its surfaces are primarily polished glass, accented by glowing blue light panels and intricate metallic trim.",
+        "colorsAndLighting": "Dominated by the cool, soft glow of neon-blue light panels and the reflection of the bright blue sky. Metallic trim adds touches of silver and white. The light is a pervasive, soft neon-glow.",
+        "atmosphere": "Crisp and clear air, filled with a serene sense of wonder. Gentle breezes are palpable. A subtle, distant hum of unseen mechanisms provides a quiet dynamism.",
+        "materials": "Polished glass, seamless composite panels, and intricately carved metallic trim.",
+        "mood": "Awe-inspiring and serene, evoking peace and a sense of advanced living with unparalleled views.",
+        "sounds": "soft hum, distant echoes, gentle breeze, muffled environmental sounds",
+        "spatialLayout": "organic-cylindrical",
+        "primary_surfaces": "polished glass, glowing blue light panels, metallic trim",
+        "secondary_surfaces": "smooth composite panels, carved stone accents",
+        "accent_features": "glowing blue light panels, ornate metallic trim, panoramic views",
+        "dominant": "Sky Blue",
+        "secondary": "Metallic Silver",
+        "accent": "Neon Blue Glow",
+        "ambient": "Bright Sunlight",
+        "genre": null,
+        "architectural_tone": "futuristic-ornate",
+        "cultural_tone": "leisure, observation, advanced living",
+        "palette_bias": "Blues and Metallics",
+        "flora_base": "Abundant flowering vines and lush foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1766063297830-4dkycvt7e",
+      "description": "Inside the Mount Aeridor observation deck, the interior mirrors the user-specified futuristic and ornate design. Expansive, polished glass walls provide breathtaking views of the Verdant Atolls, illuminated by a soft, neon-like blue glow from integrated light panels and metallic trim.",
+      "structure": {
+        "form": "cylindrical",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "horizontal",
+        "openings": "large-glass",
+        "openingShape": "circular",
+        "functionalType": "entertainment",
+        "spatialLayout": "This large, cylindrical observation deck offers expansive views through its polished glass surfaces. The space is designed for leisure and appreciation of the surrounding Verdant Atolls.",
+        "requiredElements": [
+          "observation deck: shape=organic-cylindrical, scale=large, style=futuristic-ornate, surfaces=polished glass, glowing blue light panels, metallic trim, light=neon-glow"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "sleek",
+          "ergonomic lounge chairs",
+          "interactive star charts projected onto glass",
+          "floating holographic information displays",
+          "polished chrome railings with integrated lighting",
+          "subtle ambient music emitters"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "window",
+          "position": "center",
+          "description": "window panoramic  facing the cityscape"
+        },
+        {
+          "type": "hatch",
+          "position": "center",
+          "description": "hatch concealed service  rear wall"
+        },
+        {
+          "type": "object",
+          "position": "floor",
+          "description": "object holographic information kiosk central"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object lift access rear wall"
+        }
+      ],
+      "dominantElements": [
+        "observation deck: shape=organic-cylindrical, scale=large, style=futuristic-ornate, surfaces=polished glass, glowing blue light panels, metallic trim, light=neon-glow"
+      ],
+      "uniqueIdentifiers": [
+        "sweeping panoramic views",
+        "soft blue ambient lighting",
+        "sleek metallic accents"
+      ],
+      "searchDesc": "Futuristic ornate observation deck on Mount Aeridor with glass, blue lights, and metal trim.",
+      "slug": "null-of-mount-aeridor"
+    },
+    "niche-1766063332265-jokgaoe53": {
+      "id": "niche-1766063332265-jokgaoe53",
+      "type": "location",
+      "name": "The Bar",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The bar is carved into the living rock of the island, with smooth, flowing lines. Polished composite panels form the bar top and seating, accented by interwoven metallic trim. Large, curved glass panels offer unobstructed views of the vibrant flora and sky.",
+        "colorsAndLighting": "Soft, warm ambient light emanates from integrated fixtures and bioluminescent plants. The dominant sky blue from outside is visible through the windows, complemented by the vibrant pinks of nearby flora. The bar itself might feature subtle color-changing accents.",
+        "atmosphere": "Serene and sophisticated. The gentle hum of distant vehicles is barely audible, replaced by soft ambient music. The air is fresh, carrying faint floral scents.",
+        "materials": "Smooth, carved stone-like composite for structure, polished glass for windows, seamless white composite for surfaces, and brushed metallic accents.",
+        "mood": "Relaxed, sophisticated, awe-inspiring.",
+        "sounds": "Soft ambient music, gentle chinking of glasses, hushed conversations, distant hum of vehicles.",
+        "spatialLayout": "An open, flowing space with a central bar area, surrounded by intimate seating nooks and expansive window views.",
+        "primary_surfaces": "Smooth composite bar top, carved stone-like walls, polished panoramic windows.",
+        "secondary_surfaces": "Plush upholstery, brushed metallic accents, interwoven pathway materials.",
+        "accent_features": "Bioluminescent flora integrated into the walls, floating drink dispensers, holographic menus, strategically placed accent lighting.",
+        "dominant": "Sky Blue",
+        "secondary": "Vibrant Pink",
+        "accent": "Soft Blue Glow",
+        "ambient": "Bright Sunlight (filtered through windows), soft internal lighting",
+        "genre": null,
+        "architectural_tone": "Organic-futuristic integrated architecture",
+        "cultural_tone": "Utopian civilization, leisure, observation, advanced living",
+        "palette_bias": "Blues and Pinks",
+        "flora_base": "Integrated bioluminescent plants, hints of the island's blossoms.",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1766063332265-njihhtf2c",
+      "description": "A futuristic and ornate bar bathed in blues and metallic hues, offering a sophisticated atmosphere for patrons.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "spatialLayout": "A dimly lit, opulent bar with plush seating and intricate metallic accents. Holographic displays shimmer with exotic cocktails.",
+        "requiredElements": [
+          "bar"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "holographic cocktail bar with cascading light display",
+          "plush velvet lounge seating in swirling patterns",
+          "glowing crystalline drink dispensers",
+          "augmented reality menu screens",
+          "abstract metallic sculptures",
+          "atmospheric nebula projection ceiling"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "window",
+          "position": "front wall",
+          "description": "window expansive panoramic   with nebula view"
+        },
+        {
+          "type": "archway",
+          "position": "left wall",
+          "description": "archway ornate"
+        },
+        {
+          "type": "object",
+          "position": "right wall",
+          "description": "object hidden access panel"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object elevator bay rear wall"
+        }
+      ],
+      "dominantElements": [
+        "The Bar Counter: shape=rectangular, scale=medium, style=futuristic-ornate, surfaces=polished-metallic, glass, neon-glow"
+      ],
+      "uniqueIdentifiers": [
+        "holographic cocktail displays",
+        "ornate metallic detailing"
+      ],
+      "searchDesc": "Utopian bar with panoramic views, organic seating, and bioluminescent flora.",
+      "slug": "bar"
+    },
+    "location-1766063474895-w01fc2v5n": {
+      "id": "location-1766063474895-w01fc2v5n",
+      "type": "location",
+      "name": "The Big Hall Basement",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive, cavernous hall carved from dark rock, with exposed pipes and conduits running along the walls and ceiling. A gigantic, irregularly shaped spaceship dominates the center, its surfaces a mix of brushed metal, polished chrome, and matte black panels. Lighting is functional and dim, casting long shadows.",
+        "colorsAndLighting": "Dominated by dark greys and blacks of the stone and spaceship hull. Accents of dull metallic silver and occasional warning lights in red or amber. Lighting is low and industrial, with pools of light directly on the ship and darker areas elsewhere.",
+        "atmosphere": "The air is cool and still, with a faint scent of ozone and machinery. A low, resonant hum emanates from the spaceship. There's a sense of enclosed space and dormant power.",
+        "materials": "Rough-hewn stone, exposed metal (brushed, polished, matte), conduits, industrial piping.",
+        "mood": "Imposing, mysterious, industrial, awe-inspiring.",
+        "sounds": "Distant machinery hum, faint echoing drips, metallic resonance.",
+        "spatialLayout": "Vast, open hall with high ceilings and a single, massive object.",
+        "primary_surfaces": "Dark stone, brushed metal",
+        "secondary_surfaces": "Polished chrome, matte black panels, exposed pipes",
+        "accent_features": "Glow of indicator lights on the spaceship, exposed conduit junctions",
+        "dominant": "Dark Grey",
+        "secondary": "Metallic Silver",
+        "accent": "Amber Glow",
+        "ambient": "Dim-industrial",
+        "genre": null,
+        "architectural_tone": "brutalist-industrial",
+        "cultural_tone": "null",
+        "palette_bias": "null",
+        "flora_base": "null",
+        "fauna_base": "null"
+      },
+      "primaryMedia": "media-1766063474894-vyrkgdkq3",
+      "description": "An immense, organically-futuristic basement hall, awash in a palette of blues and pinks, featuring a massive spaceship as its centerpiece.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "arched",
+        "functionalType": "industrial",
+        "spatialLayout": "A vast, cavernous basement hall, dimly lit, with a colossal spaceship dominating the central space. The architecture is a fusion of organic curves and futuristic metallic elements.",
+        "requiredElements": [
+          "basement",
+          "big hall",
+          "spaceship",
+          "spaceship standing"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "bio-luminescent flora integrated into walls",
+          "sculpted seating pods",
+          "holographic control interfaces embedded in surfaces",
+          "crystalline energy conduits",
+          "ambient light diffusers",
+          "viewing platforms overlooking the spaceship."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object large"
+        },
+        {
+          "type": "archway",
+          "position": "front wall",
+          "description": "archway sweeping"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door seamless panel"
+        },
+        {
+          "type": "object",
+          "position": "right wall",
+          "description": "object vertical transport tube"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object recessed observation deck rear wall"
+        }
+      ],
+      "dominantElements": [
+        "Spaceship: shape=organic, scale=massive, style=futuristic, surfaces=metallic-polished-textured, light=neon-glow"
+      ],
+      "uniqueIdentifiers": [
+        "subterranean location",
+        "integrated organic-futuristic architecture",
+        "prominent spaceship exhibit"
+      ],
+      "searchDesc": "Vast underground hall with a colossal spaceship, industrial lighting, and metallic surfaces.",
+      "slug": "basement-a-big-hall-with-a-spaceship-standing"
+    },
+    "location-1766063592345-7qlftn3ar": {
+      "id": "location-1766063592345-7qlftn3ar",
+      "type": "location",
+      "name": "Rooftop Bar",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive, organic mountain-shaped floating island dominates, intricately carved and heavily adorned with cascading pink blossoms and lush green vines. Modern, sleek buildings with extensive glass facades are embedded within its natural contours. A prominent circular observation deck, emitting a soft blue light, sits atop a section of the structure.",
+        "colorsAndLighting": "The scene is bathed in the bright illumination of a clear blue sky. Vibrant pinks from the abundant flora contrast with the cool blues of the observation deck's glow and the metallic silver and white of the architecture. Shadows are soft and diffused.",
+        "atmosphere": "The air is crisp and clear, with a sense of serene wonder. Gentle breezes rustle the foliage, and the distant hum of flying vehicles adds a subtle dynamism. The atmosphere is one of advanced civilization living in harmony with nature.",
+        "materials": "The island's core appears to be a smooth, stone-like material, intricately carved. Buildings are constructed from polished glass and seamless, white composite materials. The flora is vibrant and healthy.",
+        "mood": "Awe-inspiring and utopian. The sheer scale and beauty evoke a sense of peace and advanced living.",
+        "sounds": "Gentle breeze, rustling leaves, distant hum of flying vehicles.",
+        "spatialLayout": "An open-air setting with integrated architectural elements.",
+        "primary_surfaces": "Carved organic stone, polished glass, smooth white composite panels",
+        "secondary_surfaces": "Metallic trim, plush synthetic seating, interwoven pathways",
+        "accent_features": "Cascading pink blossoms, glowing blue observation deck lights, large panoramic windows",
+        "dominant": "Sky Blue",
+        "secondary": "Vibrant Pink",
+        "accent": "Soft Blue Glow",
+        "ambient": "Bright Sunlight",
+        "genre": null,
+        "architectural_tone": "Organic-futuristic integrated architecture",
+        "cultural_tone": "Utopian civilization, leisure, observation, advanced living",
+        "palette_bias": "Blues and Pinks",
+        "flora_base": "Abundant flowering vines and lush foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1766063592344-cx0ace708",
+      "description": "A chic rooftop bar with a futuristic-ornate design, featuring a stunning blues and metallics palette. Offers breathtaking views of the city below.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "spatialLayout": "A sprawling, open-air bar situated on the highest level of a futuristic building. Guests can enjoy panoramic views of the city lights, bathed in the cool glow of neon and metallic accents.",
+        "requiredElements": [
+          "bar",
+          "seating"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "holographic cocktail dispensers",
+          "sleek chrome bar stools with illuminated seats",
+          "plush velvet lounge seating in geometric patterns",
+          "glowing ambient orb lighting fixtures",
+          "holographic art installations depicting nebulae."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "window",
+          "position": "front wall",
+          "description": "window panoramic   with city view"
+        },
+        {
+          "type": "archway",
+          "position": "left",
+          "description": "archway illuminated  to lounge area"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object discreet service elevator rear wall"
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "door ornate balcony"
+        }
+      ],
+      "dominantElements": [
+        "main bar: shape=long-rectangular, scale=medium, style=futuristic-ornate, surfaces=polished-metallic, glass, light=neon-glow",
+        "seating areas: shape=organic, scale=medium, style=futuristic-ornate, surfaces=velvet, metallic, light=soft-ambient"
+      ],
+      "uniqueIdentifiers": [
+        "panoramic city view",
+        "futuristic-ornate design",
+        "blues and metallics color palette"
+      ],
+      "searchDesc": "Rooftop bar with organic-futuristic architecture, pink blossoms, and blue glowing observation deck.",
+      "slug": "roof-top-bar"
+    },
+    "loc-1766065552593-zjoq9kfnw": {
+      "id": "loc-1766065552593-zjoq9kfnw",
+      "type": "host",
+      "name": "Aethelgard, the City of Whispering Zephyrs",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: A breathtaking skyline of the celestial city, with its numerous elevated structures supported by colossal, ribbed balloon-like foundations, appearing as delicate specks against a vast expanse of softly colored clouds. Distant, indistinct landmarks are visible as mere suggestions of form.",
+        "colorsAndLighting": "Sky awash in gentle gradients of golden yellow, soft orange, and delicate pink, with soft, glowing light from the golden hour bathing the entire city.",
+        "atmosphere": "A serene and tranquil atmosphere, with faint, sparkling elements or petals drifting in the air, suggesting a perpetual state of gentle enchantment.",
+        "materials": "Dominant materials appear as polished stone and metalwork for the structures, with broad coverage of cream and off-white tones, subtly hinting at the translucent fabrics.",
+        "mood": "Peaceful and awe-inspiring, evoking feelings of wonder, serenity, and ethereal beauty across the entire cityscape.",
+        "sounds": "Distant, ethereal hums and gentle whispers, carried on the soft breezes of the upper atmosphere.",
+        "primary_surfaces": "The expansive, cream-toned rooftops of the numerous elevated structures and the visible surfaces of the balloon-like foundations.",
+        "secondary_surfaces": "Vast, soft, and warm clouds that form the immediate environment of the city, with hints of open sky visible through gaps.",
+        "accent_features": "The prominent, floating balloon-like foundations supporting the city's structures, and the distant, delicate spires and domes of the architecture.",
+        "dominant": "Cream and off-white",
+        "secondary": "Soft golden yellow and delicate pink",
+        "accent": "Subtle hints of coral from distant flowering elements",
+        "ambient": "Soft, warm, diffused light from sunrise or sunset",
+        "genre": "Fantasy",
+        "architectural_tone": "Ornate Middle Eastern/Indian inspired with ethereal floating elements",
+        "cultural_tone": "Serene and Dreamlike",
+        "palette_bias": "Warm Pastels",
+        "flora_base": "Flowering Trees and Plants",
+        "fauna_base": "Winged Creatures (Birds/Insects)"
+      },
+      "description": "A celestial metropolis suspended amongst the clouds, renowned for its serene beauty and dreamlike architecture. Vast, ornate structures with numerous domes and arched windows are supported by large, ribbed, off-white balloon-like foundations, creating an awe-inspiring spectacle against the dawn or dusk sky.",
+      "searchDesc": "Ethereal cloud city with ornate architecture, flowing fabrics, and flowering trees.",
+      "slug": "aethelgard-the-city-of-whispering-zephyrs",
+      "structure": {
+        "spatialLayout": "A sprawling, interconnected city layout characterized by widely spaced elevated platforms and structures, implying a vast, airy expanse between them."
+      },
+      "primaryMedia": "media-1766065658268-ii6c7uwxg"
+    },
+    "f6209027-b4bd-4f88-8b1f-85a7ca73a0a8": {
+      "id": "f6209027-b4bd-4f88-8b1f-85a7ca73a0a8",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "293b920b-c253-446e-9f59-a7073bbc8432": {
+      "id": "293b920b-c253-446e-9f59-a7073bbc8432",
+      "type": "location",
+      "name": "The Celestial Atrium",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Elevated structures with numerous smaller domes and arched windows, supported by large, ribbed, off-white balloon-like foundations tapering downwards. Intricate, filigree-like architectural details are prominent. Long, flowing swathes of translucent white fabric trail from many structures.",
+        "colorsAndLighting": "The scene is bathed in the soft, glowing light of the golden hour, with sky gradients of golden yellow, soft orange, and delicate pink. The architecture is primarily cream-toned, with vibrant pink and coral accents from flora.",
+        "atmosphere": "Serene, magical, and tranquil. The air feels soft and warm, with a sense of airy movement from the flowing fabrics and drifting petals. Temperature is mild and pleasant.",
+        "materials": "The primary materials appear to be polished stone and metalwork for the structures, with organic elements from the flowering trees and plants. Translucent fabrics add a delicate textural contrast.",
+        "mood": "Peaceful and awe-inspiring. Evokes feelings of wonder, serenity, and ethereal beauty.",
+        "sounds": "Gentle breezes, distant chimes, soft wingbeats.",
+        "primary_surfaces": "Polished marble, filigree metalwork, soft clouds.",
+        "secondary_surfaces": "Ribbed balloon foundations, translucent fabric, flowering petals.",
+        "accent_features": "Intricate filigree details, vibrant pink/coral blossoms, trailing white fabric.",
+        "dominant": "Cream and off-white with broad coverage.",
+        "secondary": "Soft golds, oranges, and pinks in the sky and flora.",
+        "accent": "Vibrant pink and coral from flowering trees.",
+        "ambient": "Soft, warm golden hour light.",
+        "genre": null,
+        "architectural_tone": "Ornate Middle Eastern/Indian inspired with ethereal floating elements.",
+        "cultural_tone": "Belonging to a celestial or divine civilization, used for dwelling and contemplation.",
+        "palette_bias": "Pastels and warm earth tones.",
+        "flora_base": "Flowering trees and plants",
+        "fauna_base": "Winged creatures"
+      },
+      "description": "A magnificent, ethereal city floating among soft, warm clouds at sunrise/sunset. Elevated structures are supported by large, ribbed, off-white balloon-like foundations, tapering downwards. Intricate, ornate buildings with smaller domes, arched windows, and filigree-like architectural details adorn the platforms. Vibrant pink or coral-colored flowering trees and plants add lushness. Long, flowing swaths of translucent white fabric trail from structures. A slender bridge with tiny figures spans between platforms. Dark, winged creatures soar through the sun-drenched sky, bathed in soft, glowing golden hour light. EXTERIOR VIEW.",
+      "searchDesc": "Magnificent ethereal city floating on clouds at sunrise/sunset with ornate buildings and floral accents.",
+      "slug": "the-celestial-atrium",
+      "structure": {
+        "spatialLayout": "A sprawling, multi-level city with significant verticality, interconnected by bridges. Buildings are clustered on large platforms, with open sky between them."
+      },
+      "navigableElements": [
+        {
+          "type": "bridge",
+          "position": "mid-distance, spanning between two platforms",
+          "description": "Leads to another platform, offering views of distant structures and soaring winged creatures."
+        },
+        {
+          "type": "door",
+          "position": "ground level of main building",
+          "description": "Enters the main building, likely a grand hall or public space."
+        },
+        {
+          "type": "passage",
+          "position": "side of a building",
+          "description": "A shadowed opening leading into the interior of a smaller structure."
+        }
+      ],
+      "dominantElements": [
+        "ornate building: shape=domed-tiered, scale=towering, style=ornate-sacred, surfaces=polished marble, intricate metalwork, light=natural-diffused"
+      ],
+      "uniqueIdentifiers": [
+        "ribbed balloon foundations",
+        "translucent white fabric banners",
+        "pink and coral flowering trees",
+        "dark winged creatures soaring",
+        "filigree architectural details"
+      ],
+      "primaryMedia": "media-1766065583818-znqx9vsin"
+    },
+    "niche-1766065609583-ag0htrd96": {
+      "id": "niche-1766065609583-ag0htrd96",
+      "type": "niche",
+      "name": "The Celestial Atrium",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Elevated structures with numerous smaller domes and arched windows, supported by large, ribbed, off-white balloon-like foundations tapering downwards. Intricate, filigree-like architectural details are prominent. Long, flowing swathes of translucent white fabric trail from many structures.",
+        "colorsAndLighting": "The scene is bathed in the soft, glowing light of the golden hour, with sky gradients of golden yellow, soft orange, and delicate pink. The architecture is primarily cream-toned, with vibrant pink and coral accents from flora.",
+        "atmosphere": "Serene, magical, and tranquil. The air feels soft and warm, with a sense of airy movement from the flowing fabrics and drifting petals. Temperature is mild and pleasant.",
+        "materials": "Polished stone and metalwork for the structures, with organic elements from flowering trees and plants. Translucent fabrics add a delicate textural contrast.",
+        "mood": "Peaceful and awe-inspiring. Evokes feelings of wonder, serenity, and ethereal beauty.",
+        "sounds": "Soft chimes, gentle breeze, distant celestial murmurs, rustling fabric.",
+        "spatialLayout": "Domed-tiered, towering, spacious atrium with multiple levels and alcoves.",
+        "primary_surfaces": "Polished marble, intricate metalwork, soft clouds.",
+        "secondary_surfaces": "Ribbed balloon foundations, translucent fabric, flowering petals.",
+        "accent_features": "Intricate filigree details, vibrant pink/coral blossoms, trailing white fabric.",
+        "dominant": "Cream and off-white with broad coverage.",
+        "secondary": "Soft golds, oranges, and pinks in the sky and flora.",
+        "accent": "Vibrant pink and coral from flowering trees.",
+        "ambient": "Soft, warm golden hour light.",
+        "genre": null,
+        "architectural_tone": "Ornate Middle Eastern/Indian inspired with ethereal floating elements.",
+        "cultural_tone": "Belonging to a celestial or divine civilization, used for dwelling and contemplation.",
+        "palette_bias": "Pastels and warm earth tones.",
+        "flora_base": "Flowering trees and plants",
+        "fauna_base": "Winged creatures"
+      },
+      "primaryMedia": "media-1766065609581-iigk1jgx6",
+      "description": "The interior of the Celestial Atrium is a breathtaking space of divine architecture, designed for contemplation and connection with the celestial.",
+      "structure": {
+        "form": "round",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "religious",
+        "spatialLayout": "A vast, domed space with towering, ribbed foundations that taper downwards, creating a sense of immense height and grandeur. The interior is illuminated by diffused natural light, highlighting intricate filigree details and flowing translucent fabrics.",
+        "requiredElements": [
+          "ornate building: shape=domed-tiered, scale=towering, style=ornate-sacred, surfaces=polished marble, intricate metalwork, light=natural-diffused"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "Leads into the central expanse of the Celestial Atrium, revealing the towering structures within."
+        }
+      ],
+      "dominantElements": [
+        "Celestial Atrium: shape=domed, scale=massive, style=ornate-sacred, surfaces=polished marble, intricate metalwork, light=natural-diffused"
+      ],
+      "uniqueIdentifiers": [
+        "Ribbed balloon-like foundations",
+        "Flowing translucent white fabric",
+        "Filigree-like architectural details",
+        "Diffused natural light"
+      ],
+      "searchDesc": "Ornate domed-tiered building of towering scale, with polished marble and intricate metalwork, bathed in diffused natural light.",
+      "slug": "null-of-the-celestial-atrium"
+    },
+    "niche-1766065646210-yadawb91j": {
+      "id": "niche-1766065646210-yadawb91j",
+      "type": "niche",
+      "name": "The Big Hall",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Elevated structures with numerous smaller domes and arched windows, supported by large, ribbed, off-white balloon-like foundations tapering downwards. Intricate, filigree-like architectural details are prominent. Long, flowing swathes of translucent white fabric trail from many structures.",
+        "colorsAndLighting": "Bathed in the soft, glowing light of the golden hour, with sky gradients of golden yellow, soft orange, and delicate pink. The architecture is primarily cream-toned, with vibrant pink and coral accents from flora.",
+        "atmosphere": "Serene, magical, and tranquil. The air feels soft and warm, with a sense of airy movement from the flowing fabrics and drifting petals. Temperature is mild and pleasant.",
+        "materials": "Polished stone and metalwork for the structures, with organic elements from flowering trees and plants. Translucent fabrics add a delicate textural contrast.",
+        "mood": "Peaceful and awe-inspiring. Evokes feelings of wonder, serenity, and ethereal beauty.",
+        "sounds": "Gentle breeze, distant chimes, soft rustling fabric",
+        "spatialLayout": "Vast, open, with high ceilings and monumental scale.",
+        "primary_surfaces": "Polished marble, filigree metalwork, soft clouds",
+        "secondary_surfaces": "Ribbed balloon foundations, translucent fabric, flowering petals",
+        "accent_features": "Intricate filigree details, vibrant pink/coral blossoms, trailing white fabric",
+        "dominant": "Cream and off-white with broad coverage",
+        "secondary": "Soft golds, oranges, and pinks in the sky and flora",
+        "accent": "Vibrant pink and coral from flowering trees",
+        "ambient": "Soft, warm golden hour light",
+        "genre": null,
+        "architectural_tone": "Ornate Middle Eastern/Indian inspired with ethereal floating elements",
+        "cultural_tone": "Belonging to a celestial or divine civilization, used for dwelling and contemplation",
+        "palette_bias": "Pastels and warm earth tones",
+        "flora_base": "Flowering trees and plants",
+        "fauna_base": "Winged creatures"
+      },
+      "primaryMedia": "media-1766065646209-ke9rz0l0x",
+      "description": "An immense hall, designed with ornate Middle Eastern and Indian influences, featuring ethereal floating elements and a color palette of pastels and warm earth tones. The interior is grand and spacious, with a vaulted ceiling.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "spatialLayout": "A vast, open rectangular space with a high, vaulted ceiling. Ornate decorations and ethereal elements are subtly integrated into the architecture. The hall is bathed in a soft, pastel-toned light.",
+        "requiredElements": [
+          "hall"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "floating celestial orbs casting soft light",
+          "large ornate divans upholstered in iridescent silks",
+          "intricately carved incense burners releasing fragrant ethereal smoke",
+          "low tables inlaid with mother-of-pearl and precious stones",
+          "tapestries depicting cosmic scenes",
+          "crystal pedestals with glowing flora."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front wall",
+          "description": "archway grand   leading to grand avenue"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door ornate golden s"
+        },
+        {
+          "type": "object",
+          "position": "right wall",
+          "description": "object shimmering portal"
+        },
+        {
+          "type": "window",
+          "position": "back wall",
+          "description": "window high arched"
+        }
+      ],
+      "dominantElements": [
+        "Grand Stage: shape=rectangular, scale=medium, style=ornate-middle-eastern, surfaces=polished-marble, light=soft-ambient"
+      ],
+      "uniqueIdentifiers": [
+        "ethereal floating elements",
+        "pastel and warm earth tone palette"
+      ],
+      "searchDesc": "A serene, magical big hall with ornate architecture, balloon foundations, and flowing fabrics, bathed in golden hour light.",
+      "slug": "the-big-hall"
+    },
+    "niche-1766065702833-6638163jg": {
+      "id": "niche-1766065702833-6638163jg",
+      "type": "niche",
+      "name": "The Balcony",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Elevated structure with numerous smaller domes and arched windows, supported by large, ribbed, off-white balloon-like foundations tapering downwards. Intricate, filigree-like architectural details are prominent. Long, flowing swathes of translucent white fabric trail from many structures.",
+        "colorsAndLighting": "Bathed in the soft, glowing light of the golden hour, with sky gradients of golden yellow, soft orange, and delicate pink. The architecture is primarily cream-toned, with vibrant pink and coral accents from flora.",
+        "atmosphere": "Serene, magical, and tranquil. The air feels soft and warm, with a sense of airy movement from the flowing fabrics and drifting petals. Temperature is mild and pleasant.",
+        "materials": "Polished stone and filigree metalwork for the structures, organic elements from flowering trees and plants, translucent fabrics.",
+        "mood": "Peaceful and awe-inspiring. Evokes feelings of wonder, serenity, and ethereal beauty.",
+        "sounds": "Gentle breeze, rustling fabric, distant chime, soft petal fall, faint wing beats.",
+        "spatialLayout": "Open, expansive platform with partial enclosure by ornate railings and supporting columns.",
+        "primary_surfaces": "Polished stone, filigree metalwork, flowing translucent fabric.",
+        "secondary_surfaces": "Ribbed balloon foundations, vibrant flowering petals.",
+        "accent_features": "Intricate filigree details, vibrant pink and coral blossoms, trailing white fabric.",
+        "dominant": "Cream and off-white",
+        "secondary": "Soft golds, oranges, and pinks",
+        "accent": "Vibrant pink and coral",
+        "ambient": "Soft, warm golden hour light.",
+        "genre": null,
+        "architectural_tone": "Ornate Middle Eastern/Indian inspired with ethereal floating elements.",
+        "cultural_tone": "Belonging to a celestial or divine civilization, used for dwelling and contemplation.",
+        "palette_bias": "Pastels and warm earth tones.",
+        "flora_base": "Flowering trees and plants.",
+        "fauna_base": "Winged creatures."
+      },
+      "primaryMedia": "media-1766065702831-tsdgsasoi",
+      "description": "A lavish balcony with ornate Middle Eastern-inspired designs, offering a serene space with ethereal floating elements and a panoramic view.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "arched",
+        "functionalType": "residential",
+        "spatialLayout": "An open-air extension of a building, overlooking a vast landscape. Intricately carved railings and plush seating arrangements create a luxurious and comfortable space.",
+        "requiredElements": [
+          "balcony"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "floating divans upholstered in silk",
+          "intricate brass astronomical instruments",
+          "low tables inlaid with mother-of-pearl",
+          "hanging lanterns casting ethereal light"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "center",
+          "description": "archway ornate  connecting to the Big Hall"
+        },
+        {
+          "type": "object",
+          "position": "right wall",
+          "description": "object shimmering portal to celestial gardens"
+        },
+        {
+          "type": "window",
+          "position": "left wall",
+          "description": "window s revealing nebulae"
+        }
+      ],
+      "dominantElements": [
+        "Ornate Railing: shape=irregular, scale=small, style=ornate-middle-eastern, surfaces=carved-stone-and-brass, light=soft-ambient"
+      ],
+      "uniqueIdentifiers": [
+        "view overlooking a landscape",
+        "carved decorative elements"
+      ],
+      "searchDesc": "Ornate balcony with filigree, flowing fabric, and vibrant pink/coral flowers, bathed in golden hour light.",
+      "slug": "the-balcony"
+    },
+    "niche-1766087463381-vcs6x9k37": {
+      "id": "niche-1766087463381-vcs6x9k37",
+      "type": "niche",
+      "name": "The Hangar with the Airships",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Elevated structures with numerous smaller domes and arched windows, supported by large, ribbed, off-white balloon-like foundations tapering downwards. Intricate, filigree-like architectural details are prominent. Long, flowing swathes of translucent white fabric trail from many structures.",
+        "colorsAndLighting": "The scene is bathed in the soft, glowing light of the golden hour, with sky gradients of golden yellow, soft orange, and delicate pink. The architecture is primarily cream-toned, with vibrant pink and coral accents from flora visible through windows.",
+        "atmosphere": "Serene, magical, and tranquil. The air feels soft and warm, with a sense of airy movement from the flowing fabrics and drifting petals. Temperature is mild and pleasant. A sense of vast, quiet potential.",
+        "materials": "Polished stone and intricately worked metalwork for the internal structures, with large areas of translucent fabric. The foundations appear to be a smooth, slightly yielding composite material.",
+        "mood": "Peaceful and awe-inspiring. Evokes feelings of wonder, serenity, and ethereal beauty, with a palpable sense of readiness for grand journeys.",
+        "sounds": "Distant hum of engines, soft rustling fabric, echoes, gentle creaking of mooring lines.",
+        "spatialLayout": "Vast, cavernous interior with soaring ceilings supported by ribbed, balloon-like structures. Open bays for airships are prominent.",
+        "primary_surfaces": "Polished stone walls and floors, intricately filigreed metalwork on structural supports.",
+        "secondary_surfaces": "Ribbed balloon foundations, translucent fabric drapes, large arched windows.",
+        "accent_features": "Intricate filigree details on metalwork, the sheer scale of the airships, the ethereal quality of the trailing fabric.",
+        "dominant": "Cream and off-white.",
+        "secondary": "Soft golds, oranges, and pinks in the ambient light.",
+        "accent": "Vibrant pink and coral from any visible flora outside.",
+        "ambient": "Soft, warm golden hour light, creating long shadows and highlights.",
+        "genre": null,
+        "architectural_tone": "Ornate Middle Eastern/Indian inspired with ethereal floating elements, scaled up to colossal proportions.",
+        "cultural_tone": "Belonging to a celestial or divine civilization, used for dwelling and contemplation, now serving as a grand port.",
+        "palette_bias": "Pastels and warm earth tones.",
+        "flora_base": "Flowering trees and plants visible through windows.",
+        "fauna_base": "Winged creatures might occasionally fly through the vast space."
+      },
+      "primaryMedia": "media-1766087463380-ywl7g7lzy",
+      "description": "Inside the grand hangar, the immense scale is palpable, with colossal airships suspended or docked, awaiting their next voyage. The architecture blends industrial functionality with ornate Middle Eastern and Indian influences, bathed in a soft, pastel light.",
+      "structure": {
+        "form": "sprawling",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-passages",
+        "openingShape": "arched",
+        "functionalType": "industrial",
+        "spatialLayout": "A vast, cavernous hangar space designed to house and service magnificent airships. The high, vaulted ceiling is supported by ornate pillars, and large, arched openings allow access for the colossal vessels.",
+        "requiredElements": [
+          "hangar",
+          "airships",
+          "air ships"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "towering docking clamps",
+          "intricate celestial navigation consoles",
+          "brass and mother-of-pearl inlay control panels",
+          "ethereal anti-gravity plating",
+          "polished marble floors with inlaid cosmic patterns",
+          "hanging crystal chandeliers emitting soft",
+          "multi-colored light",
+          "plush velvet seating areas with silken cushions",
+          "decorative incense burners releasing fragrant",
+          "luminescent smoke",
+          "shelves displaying ancient star charts and crystalline artifacts."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front",
+          "description": "archway ornate  leading to docking bay"
+        },
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "passage shimmering curtained  rear"
+        },
+        {
+          "type": "window",
+          "position": "left",
+          "description": "window large stained-glass  with celestial map"
+        },
+        {
+          "type": "window",
+          "position": "right",
+          "description": "window smaller circular  with viewport"
+        }
+      ],
+      "dominantElements": [
+        "Airship Dock: shape=modular, scale=massive, style=ornate-industrial, surfaces=metallic-paneled, light=soft-ambient"
+      ],
+      "uniqueIdentifiers": [
+        "oversized docking bays",
+        "cranes and gantries for airship maintenance"
+      ],
+      "searchDesc": "Grand hangar filled with airships, featuring ornate architecture and golden hour light.",
+      "slug": "the-hangar-with-the-air-ships"
     }
   },
   "views": {},
@@ -513,17 +1296,17 @@
               "children": [
                 {
                   "id": "niche-1766062966897-iq3bncudl",
-                  "type": "niche",
+                  "type": "location",
                   "children": []
                 },
                 {
                   "id": "niche-1766062992405-hszhbnlws",
-                  "type": "niche",
+                  "type": "location",
                   "children": []
                 },
                 {
                   "id": "niche-1766063109449-d397usymy",
-                  "type": "niche",
+                  "type": "location",
                   "children": []
                 }
               ]
@@ -543,7 +1326,66 @@
             {
               "id": "ea2ba97c-f644-443f-8f9e-4534292910d9",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "niche-1766063297831-1be6fmz6z",
+                  "type": "location",
+                  "children": []
+                },
+                {
+                  "id": "niche-1766063332265-jokgaoe53",
+                  "type": "location",
+                  "children": []
+                },
+                {
+                  "id": "location-1766063474895-w01fc2v5n",
+                  "type": "location",
+                  "children": []
+                },
+                {
+                  "id": "location-1766063592345-7qlftn3ar",
+                  "type": "location",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1766065552593-zjoq9kfnw",
+      "type": "host",
+      "children": [
+        {
+          "id": "f6209027-b4bd-4f88-8b1f-85a7ca73a0a8",
+          "type": "region",
+          "children": [
+            {
+              "id": "293b920b-c253-446e-9f59-a7073bbc8432",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1766065609583-ag0htrd96",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1766065646210-yadawb91j",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1766065702833-6638163jg",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1766087463381-vcs6x9k37",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -552,6 +1394,7 @@
   ],
   "pinnedIds": [
     "loc-1766062928901-39mm57hpw",
-    "loc-1766063246946-9dboebkv8"
+    "loc-1766063246946-9dboebkv8",
+    "loc-1766065552593-zjoq9kfnw"
   ]
 }
