@@ -110,24 +110,24 @@
       "searchDesc": "Massive alien temple antechamber with obsidian walls, dim light, and a passage to the lunar surface.",
       "slug": "temple-antechamber"
     },
-    "niche-1766145174150-p7zis5c7y": {
-      "id": "niche-1766145174150-p7zis5c7y",
+    "niche-1766145438960-n5noe265e": {
+      "id": "niche-1766145438960-n5noe265e",
       "type": "niche",
       "name": "Alien Temple Hangar",
       "spaceType": "interior",
       "dna": {
-        "looks": "A vast, cavernous chamber with smoothly curved, organic walls that seem to absorb light. The ceiling arches upwards into darkness, hinting at immense scale. Strange, faint geometric patterns pulse softly on the surfaces.",
+        "looks": "A vast, cavernous chamber with smoothly curved, organic walls that seem to absorb light. The ceiling arches upwards into darkness, hinting at immense scale. Strange, faint geometric patterns pulse softly on the surfaces. An immense, dormant alien starship rests at the center.",
         "colorsAndLighting": "Dominated by deep, light-absorbing blacks and the subtle, internal glow of faint, shifting bioluminescent veins within the walls. The only external light source is the dim, diffused glow from the passage leading to the lunar surface, casting long, indistinct shadows.",
         "atmosphere": "Utter vacuum. A profound, tomb-like silence broken only by an almost imperceptible, low-frequency hum. The temperature is absolute zero, the air non-existent.",
         "materials": "Polished obsidian-like material forming the primary structure, interlaced with veins of softly glowing, unknown bioluminescent organic matter. The floor is a continuation of the polished, seamless material.",
         "mood": "Awe-inspiring, unsettling, ancient, profound, sacred dread.",
-        "sounds": "Imperceptible low-frequency hum, absolute silence.",
-        "spatialLayout": "Vast, cavernous chamber with smoothly curved, organic walls and an arching ceiling.",
+        "sounds": "Imperceptible low-frequency hum, tomb-like silence.",
+        "spatialLayout": "Vast, cavernous chamber with a high, arching ceiling and smoothly curved, organic walls.",
         "primary_surfaces": "Polished, light-absorbing obsidian",
         "secondary_surfaces": "Bioluminescent veins",
         "accent_features": "Pulsing geometric patterns, central archway to exterior",
         "dominant": "Deep Black",
-        "secondary": "Subtle, shifting internal glow (e.g., deep violet or cyan)",
+        "secondary": "Subtle, shifting internal glow (deep violet)",
         "accent": "Pale Grey (from lunar light ingress)",
         "ambient": "Dim-ambient, internal glow",
         "genre": "Sci-Fi",
@@ -137,8 +137,8 @@
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1766145174149-5spo2krre",
-      "description": "The air within the hangar is thick with a palpable energy, a low hum resonating through the organic, obsidian-like surfaces. The space is dominated by the sheer scale of the alien vessel, its form both menacing and elegant, bathed in the soft, ethereal glow that permeates the entire Alien Temple.",
+      "primaryMedia": "media-1766145438959-svdb3tk68",
+      "description": "Vast, organically sculpted obsidian-like walls curve upwards and inwards, bathed in the soft, ethereal glow that permeates the space. The air hums with a low, resonant frequency. Dominating the center of this immense hangar is a colossal alien vessel, its form echoing the organic architecture of its surroundings. Minimal, almost invisible openings punctuate the walls, hinting at unseen passages within the temple.",
       "structure": {
         "form": "organic",
         "roofType": "null",
@@ -148,7 +148,7 @@
         "openingShape": "irregular",
         "functionalType": "industrial",
         "elevation": "ground-level",
-        "spatialLayout": "The cavernous interior of the Alien Temple opens into a vast hangar bay, its organic, curving walls seamlessly transitioning into the floor and ceiling. Ethereal light emanates from unseen sources, casting long, fluid shadows across the immense space where an alien ship rests.",
+        "spatialLayout": "The cavernous interior of the Alien Temple opens into a vast, organically shaped hangar. The 'ground' slopes gently towards the center, accommodating the massive alien vessel.",
         "requiredElements": [
           "alien ship"
         ]
@@ -156,50 +156,51 @@
       "navigableElements": [
         {
           "type": "passage",
-          "position": "far end of hangar",
-          "description": "Leads further into the core of the Alien Temple."
+          "position": "far wall, dimly lit",
+          "description": "leads deeper into the Alien Temple's core"
         }
       ],
       "dominantElements": [
-        "Alien Ship: shape=organic, scale=massive, style=futuristic-monolithic, surfaces=metallic-sheen, openings=circular-portholes, interior_materials=obsidian-like|smooth-composite|glowing-panels, enterable=yes, internal_atmosphere=enigmatic"
+        "Alien Ship: shape=organic, orientation=flowing, scale=massive, style=futuristic-minimalist-monolithic, surfaces=metallic-iridescent, openings=circular-portholes, interior_materials=composite-panel|worn-metal-grate|dimly-lit-canopy, enterable=yes, internal_atmosphere=claustrophobic-hum"
       ],
       "uniqueIdentifiers": [
-        "bio-luminescent patterns on walls",
-        "humming ambient sound",
-        "gravity distortion field near ship"
+        "obsidian-like, seamless walls",
+        "ethereal glowing conduits embedded in the floor",
+        "the sheer, overwhelming scale of the hangar",
+        "the silent, imposing presence of the alien vessel"
       ],
-      "searchDesc": "Vast alien hangar with a ship, obsidian walls, bioluminescent veins, and lunar passage.",
+      "searchDesc": "Vast alien hangar with an immense starship, obsidian walls, and pulsing bioluminescent veins.",
       "slug": "null-of-the-alien-temple"
     },
-    "niche-1766145190344-65e77082v": {
-      "id": "niche-1766145190344-65e77082v",
+    "niche-1766145503667-q6cf2pt3q": {
+      "id": "niche-1766145503667-q6cf2pt3q",
       "type": "niche",
       "name": "Alien Ship",
       "spaceType": "interior",
       "dna": {
-        "looks": "A vast, cavernous chamber with smoothly curved, organic walls that have a metallic sheen. The ceiling arches upwards into darkness, hinting at immense scale. Strange, faint geometric patterns pulse softly on the surfaces. Circular portholes are embedded sporadically.",
-        "colorsAndLighting": "Dominated by deep, light-absorbing blacks and the subtle, internal glow of faint, shifting bioluminescent veins or panels within the walls. The metallic surfaces reflect ambient light with a muted sheen.",
-        "atmosphere": "Enigmatic, with an almost imperceptible, low-frequency hum. The air is breathable but carries an unknown, subtle scent. Temperature is neutral.",
-        "materials": "Primary construction is a seamless blend of obsidian-like material and smooth, advanced composite. Interspersed are panels that emit a soft, internal glow.",
-        "mood": "Awe-inspiring, unsettling, ancient, profound, alien.",
-        "sounds": "Imperceptible low hum, faint electronic resonance.",
-        "spatialLayout": "Vast, organically shaped cavernous space with high, curving walls and ceiling.",
-        "primary_surfaces": "Metallic-sheen composite, obsidian-like material",
-        "secondary_surfaces": "Glowing panels",
-        "accent_features": "Circular portholes, subtle pulsing geometric patterns on surfaces",
+        "looks": "A vast, cavernous chamber with smoothly curved, organic walls that seem to absorb light. The ceiling arches upwards into darkness, hinting at immense scale. Strange, faint geometric patterns pulse softly on the surfaces. An immense, dormant alien starship rests at the center.",
+        "colorsAndLighting": "Dominated by deep, light-absorbing blacks and the subtle, internal glow of faint, shifting bioluminescent veins within the walls. The only external light source is the dim, diffused glow from the passage leading to the lunar surface, casting long, indistinct shadows.",
+        "atmosphere": "Utter vacuum. A profound, tomb-like silence broken only by an almost imperceptible, low-frequency hum. The temperature is absolute zero, the air non-existent.",
+        "materials": "Polished obsidian-like material forming the primary structure, interlaced with veins of softly glowing, unknown bioluminescent organic matter. The floor is a continuation of the polished, seamless material.",
+        "mood": "Awe-inspiring, unsettling, ancient, profound, sacred dread.",
+        "sounds": "Imperceptible low-frequency hum, absolute silence, void.",
+        "spatialLayout": "Vast, cavernous, organic curves, immense scale, high arching ceiling.",
+        "primary_surfaces": "Polished, light-absorbing obsidian",
+        "secondary_surfaces": "Bioluminescent veins",
+        "accent_features": "Pulsing geometric patterns, central archway to exterior",
         "dominant": "Deep Black",
-        "secondary": "Soft internal glow (e.g., deep violet or cyan)",
-        "accent": "Muted metallic sheen",
+        "secondary": "Subtle, shifting internal glow (deep violet)",
+        "accent": "Pale Grey (from lunar light ingress)",
         "ambient": "Dim-ambient, internal glow",
         "genre": "Sci-Fi",
-        "architectural_tone": "futuristic-monolithic",
+        "architectural_tone": "Existential",
         "cultural_tone": "Alien",
         "palette_bias": "Monochromatic",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1766145190343-tm8cfpdl4",
-      "description": "The walls are a seamless, obsidian-like material that absorbs most light, punctuated by faint, pulsing veins of bioluminescence. The floor is a flawless, smooth-composite surface that reflects the dim glow from above. The ceiling is a vast expanse of glowing panels, their patterns shifting and morphing, casting an enigmatic and ethereal light throughout the immense, organically shaped interior. Circular portholes, dotted strategically along the curving walls, offer glimpses of the cosmic void or the dimly lit hangar beyond. An ambient hum, a symphony of unknown energies, permeates the air, contributing to the overwhelming sense of mystery and alienness.",
+      "primaryMedia": "media-1766145503667-b1eyl4rm4",
+      "description": "The interior of the Alien Ship envelops you in a sense of immense, organic scale. The walls are clad in smooth, seamless composite panels that reflect a faint, shifting iridescence. The floor is a sturdy, worn metal grate, through which a low, persistent hum seems to emanate, creating a subtly claustrophobic atmosphere. Above, a dimly lit canopy diffuses an unsettling, otherworldly glow. The curving, flowing nature of the ship's structure is evident in every line and surface, guiding your movement through its vast, alien interior.",
       "structure": {
         "form": "organic",
         "roofType": "null",
@@ -207,37 +208,53 @@
         "orientation": "flowing",
         "openings": "circular-portholes",
         "openingShape": "circular",
-        "functionalType": "null",
-        "elevation": "floating",
-        "spatialLayout": "The interior of the Alien Ship is a vast, cavernous space that curves and undulates organically, mirroring its exterior form. Corridors and chambers flow into one another, dictated by the ship's internal logic rather than conventional architecture. The massive scale creates a sense of overwhelming, yet strangely comforting, emptiness.",
+        "functionalType": "transport",
+        "elevation": "ground-level",
+        "spatialLayout": "The interior of the Alien Ship is a vast, organically curving space. Its layout feels less constructed and more grown, with smooth, flowing lines directing movement through its immense volume. The overall impression is one of alien, almost biological, architecture.",
         "requiredElements": [
-          "obsidian-like walls",
-          "smooth-composite floor",
-          "glowing-panels ceiling"
+          "composite-panel",
+          "worn-metal-grate",
+          "dimly-lit-canopy"
         ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "pulsating energy core",
+          "intricate holographic star charts",
+          "levitating meditation platforms",
+          "crystalline seating arrangements"
+        ],
+        "suggested": [],
+        "placementNotes": []
       },
       "navigableElements": [
         {
-          "type": "passage",
-          "position": "center of the chamber",
-          "description": "Leads deeper into the Alien Ship, where the glowing panels pulse with an unknown energy."
+          "type": "object",
+          "position": "front wall",
+          "description": "object glowing portal"
         },
         {
-          "type": "portal",
-          "position": "along the far wall",
-          "description": "Opens to a view of the Alien Temple Hangar, a stark contrast to the ship's interior."
+          "type": "door",
+          "position": "left wall",
+          "description": "door crystalline way"
+        },
+        {
+          "type": "object",
+          "position": "right wall",
+          "description": "object bioluminescent tunnel"
         }
       ],
       "dominantElements": [
-        "Alien Ship Interior: shape=organic, scale=massive, style=futuristic-monolithic, surfaces=metallic-sheen, openings=circular-portholes, interior_materials=obsidian-like|smooth-composite|glowing-panels, enterable=yes, internal_atmosphere=enigmatic"
+        "Alien Ship: shape=organic, orientation=flowing, scale=massive, style=futuristic-minimalist-monolithic, surfaces=metallic-iridescent, openings=circular-portholes, interior_materials=composite-panel|worn-metal-grate|dimly-lit-canopy, enterable=yes, internal_atmosphere=claustrophobic-hum"
       ],
       "uniqueIdentifiers": [
-        "bioluminescent veins within the obsidian walls",
-        "ambient hum of unknown technology",
-        "shifting, ethereal light patterns from the ceiling panels"
+        "flowing organic architecture",
+        "metallic-iridescent sheen",
+        "circular portholes",
+        "claustrophobic hum"
       ],
-      "searchDesc": "Massive, organic alien ship interior with metallic sheen, obsidian, glowing panels, and portholes.",
-      "slug": "interior-of-alien-ship-shape-organic-scale-massive-style-futuristic-monolithic-surfaces-metallic-sheen-openings-circular-portholes-interior-materials-obsidian-like-smooth-composite-glowing-panels-enterable-yes-internal-atmosphere-enigmatic"
+      "searchDesc": "Vast, cavernous alien ship interior with light-absorbing walls, pulsing bioluminescence, and a dormant starship.",
+      "slug": "interior-of-alien-ship"
     }
   },
   "views": {},
@@ -255,11 +272,11 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1766145174150-p7zis5c7y",
+                  "id": "niche-1766145438960-n5noe265e",
                   "type": "niche",
                   "children": [
                     {
-                      "id": "niche-1766145190344-65e77082v",
+                      "id": "niche-1766145503667-q6cf2pt3q",
                       "type": "niche",
                       "children": []
                     }

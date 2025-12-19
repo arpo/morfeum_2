@@ -320,6 +320,19 @@ async function handleCreateCharacter(
 }
 
 /**
+ * Extract clean element name from user input (remove properties if present)
+ * "Alien Ship: shape=organic, scale=massive..." → "Alien Ship"
+ * "alien ship" → "alien ship"
+ */
+function extractElementName(text: string): string {
+  const colonIndex = text.indexOf(':');
+  if (colonIndex > 0) {
+    return text.substring(0, colonIndex).trim();
+  }
+  return text.trim();
+}
+
+/**
  * Handle create_niche action (GO_INSIDE command)
  */
 async function handleCreateNiche(
@@ -342,12 +355,22 @@ async function handleCreateNiche(
   const dnaResolution = resolveNavigationParentDNA('GO_INSIDE', context, worldsData);
   const { parentNodeId, resolvedParentDNA } = dnaResolution;
   
+  // Extract clean element name from user input
+  // If user typed "Alien Ship: shape=organic, scale=massive..." → extract "Alien Ship"
+  // The full properties string is still available in cleanText for element matching
+  const rawUserInput = cleanText || decision.newNodeName || 'interior space';
+  const cleanElementName = extractElementName(rawUserInput);
+  
+  console.log(`[GO_INSIDE] Raw input: "${rawUserInput}"`);
+  console.log(`[GO_INSIDE] Clean element name: "${cleanElementName}"`);
+  
   // Build CommandContext for unified pipeline
+  // Use clean element name for userPrompt (for naming), but keep raw input available
   const commandContext: CommandContext = {
     command: 'GO_INSIDE',
     sourceNodeType: context.currentNode.type as 'location' | 'niche',
     targetNodeType: 'niche',
-    userPrompt: cleanText || decision.newNodeName || 'interior space',
+    userPrompt: cleanElementName,  // Use clean name for node naming
     resolvedParentDNA,
     parsedEnhancements,
     parentNodeId
