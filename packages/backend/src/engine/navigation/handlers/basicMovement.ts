@@ -6,16 +6,16 @@
  */
 
 import type { IntentResult, NavigationContext, NavigationDecision } from '../types';
-import { findParentLocationNode } from '../navigationHelpers';
 
 /**
  * Handle GO_INSIDE intent
- * User wants to enter/go inside current location
+ * User wants to enter/go inside current location or niche
+ * Supports infinite depth: niches can contain niches
  */
 export function handleGoInside(intent: IntentResult, context: NavigationContext): NavigationDecision {
   const { currentNode } = context;
   
-  // Must be at a location (exterior) to go inside
+  // From a location - create child niche
   if (currentNode.type === 'location') {
     // Prioritize intent.target from smart selection, fall back to findEntrance helper
     const entrance = intent.target || findEntrance(context);
@@ -35,21 +35,24 @@ export function handleGoInside(intent: IntentResult, context: NavigationContext)
     };
   }
   
-  // Already inside a niche? Create sibling niche under parent location
-  if (currentNode.type === 'niche' && intent.target) {
-    const { parentLocationId } = findParentLocationNode(context);
+  // From a niche - create CHILD niche under current niche (infinite depth)
+  if (currentNode.type === 'niche') {
+    const entrance = intent.target || findEntrance(context);
     
     return {
       action: 'create_niche',
-      parentNodeId: parentLocationId,
+      parentNodeId: currentNode.id,  // Use current niche as parent, not parent location
       newNodeType: 'niche',
-      newNodeName: `${intent.spaceType || 'Interior'} of ${intent.target}`,
+      newNodeName: intent.target 
+        ? `${intent.spaceType || 'Interior'} of ${intent.target}`
+        : `${intent.spaceType || 'Interior'} of ${currentNode.name}`,
       style: intent.style || 'default',
       perspective: intent.spaceType || 'interior',
       metadata: {
-        relation: 'sibling'
+        relation: 'child',  // Child of current niche, not sibling
+        entrance: entrance
       },
-      reasoning: `Creating sibling niche under parent location for ${intent.target}`
+      reasoning: `Creating child niche under ${currentNode.name} for ${intent.target || 'interior space'}`
     };
   }
   

@@ -276,7 +276,8 @@ export interface DNAResolutionResult {
  * Handles:
  * - GOTO from location → sibling location under parent region (uses region/host DNA)
  * - GOTO from niche → sibling niche under parent location (uses cascaded location DNA)
- * - GO_INSIDE → child niche under current location (uses cascaded location DNA)
+ * - GO_INSIDE from location → child niche under current location
+ * - GO_INSIDE from niche → child niche under current niche (infinite depth)
  * 
  * @param command - The navigation command ('GOTO' or 'GO_INSIDE')
  * @param context - Navigation context with current/parent node info
@@ -290,19 +291,21 @@ export function resolveNavigationParentDNA(
 ): DNAResolutionResult {
   const currentNodeType = context.currentNode.type;
   
-  // GO_INSIDE: Always creates child niche under current location
+  // GO_INSIDE: Creates child niche under CURRENT node (location or niche)
+  // This enables infinite niche depth - niches can contain niches
   if (command === 'GO_INSIDE') {
-    const { parentLocationId } = findParentLocationNode(context);
+    const currentNodeId = context.currentNode.id;
     
     // Use cascaded DNA resolution for full ancestry inheritance
+    // This works for any depth - resolves DNA from host → region → location → niche → ...
     const resolvedParentDNA = getResolvedNodeDNA(
-      parentLocationId,
+      currentNodeId,
       worldsData.nodes,
       worldsData.worldTrees
     );
     
     return {
-      parentNodeId: parentLocationId,
+      parentNodeId: currentNodeId,  // Use current node as parent (not parent location)
       resolvedParentDNA,
       targetNodeType: 'niche'
     };

@@ -130,8 +130,54 @@ OUTPUT (pure JSON):
   }
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // GO_INSIDE COMMAND: Create interior space that matches parent structure
+  // GO_INSIDE COMMAND: Create interior space
+  // If entering a specific element (like a ship inside a hangar), use THAT element's
+  // properties. Otherwise, use parent structure properties.
   // ═══════════════════════════════════════════════════════════════════════════
+  
+  // Check if user input references a dominant element in the current space
+  // This enables entering objects WITHIN a space (like the ship inside a hangar)
+  const dominantElements = currentNodeData?.dominantElements || [];
+  const targetElementInfo = findTargetElementInfo(userPrompt, dominantElements);
+  
+  // Build interior materials string if available
+  const materialsSection = targetElementInfo?.interiorMaterials 
+    ? `\nINTERIOR MATERIALS (MANDATORY - use these exact materials):
+   - WALLS: ${targetElementInfo.interiorMaterials.walls || 'match element style'}
+   - FLOOR: ${targetElementInfo.interiorMaterials.floor || 'match element style'}
+   - CEILING: ${targetElementInfo.interiorMaterials.ceiling || 'match element style'}`
+    : '';
+
+  // Build structure rules based on whether we're entering a specific element
+  const structureRules = targetElementInfo
+    ? `CRITICAL: You are entering "${targetElementInfo.name}" which is an OBJECT WITHIN "${context.currentNode.name}".
+The new space is the INTERIOR OF "${targetElementInfo.name}", NOT another "${context.currentNode.name}".
+
+TARGET ELEMENT PROPERTIES (use these, NOT parent space):
+${targetElementInfo.properties}
+
+STRUCTURE RULES FOR TARGET ELEMENT INTERIOR:
+1. FORM: Match the TARGET element's shape (${targetElementInfo.shape || 'determine from element description'})
+2. ORIENTATION: Interior layout follows element orientation (${targetElementInfo.orientation || 'determine from element'})
+   - vertical orientation → multi-level interior, vertical stacking
+   - horizontal orientation → long corridor/cabin layout
+   - flowing orientation → organic, curving interior spaces
+   - compact orientation → single room, efficient layout
+3. SCALE: Interior of the TARGET element (appropriate for ${targetElementInfo.scale || 'the element size'})
+4. OPENINGS: Windows/doors type = ${targetElementInfo.openings || 'match element style'} (circular-portholes for ships, arched-windows for cathedrals, etc.)
+5. ATMOSPHERE: ${targetElementInfo.internalAtmosphere || 'match the element style'}
+6. EXTERIOR SURFACE: ${targetElementInfo.surfaces || 'element materials'} (for exterior reference only)
+${materialsSection}
+7. The space should feel like being INSIDE "${targetElementInfo.name}"
+8. Do NOT recreate "${context.currentNode.name}" - create the interior of "${targetElementInfo.name}"
+9. Do NOT use materials from "${context.currentNode.name}" - use the TARGET element's materials`
+    : `STRUCTURE RULES:
+1. FORM: Interior MUST match parent form (rectangular→rectangular, round→round)
+2. SCALE: Interior/open-air ≤ parent scale (small parent = small space only)
+3. ORIENTATION: Horizontal parent → horizontal/wide space (NEVER vertical)
+4. OPENINGS: Solid exterior (dome/sphere/pod) → "none" (no windows)
+5. FUNCTIONAL TYPE: Determined by cultural_tone/description, NOT appearance`;
+
   return `Analyze space and determine physical structure.
 
 ${perspectiveSection}
@@ -140,24 +186,25 @@ CONTEXT:
 Current: "${context.currentNode.name}" (${context.currentNode.type})
 ${context.parentNode ? `Parent: "${context.parentNode.name}" (${context.parentNode.type})` : ''}
 
-PARENT DATA:
+${targetElementInfo ? `
+=== ENTERING SPECIFIC ELEMENT ===
+You are creating the INTERIOR of "${targetElementInfo.name}" which exists WITHIN "${context.currentNode.name}".
+This is NOT another "${context.currentNode.name}". This is the INSIDE of "${targetElementInfo.name}".
+
+TARGET ELEMENT: ${targetElementInfo.fullDescription}
+` : `PARENT DATA:
 - Description: "${context.currentNode.data?.description || 'none'}"
 - Cultural tone: "${currentDna?.cultural_tone || 'none'}"
 - Looks: "${currentDna?.looks || 'none'}"
-- DominantElements: ${JSON.stringify(currentNodeData?.dominantElements?.slice(0, 3) || [])}
+- DominantElements: ${JSON.stringify(dominantElements.slice(0, 3))}
 - Form: ${parentStructure?.form || 'determine from looks'}
 - Scale: ${parentStructure?.scale || 'determine'}
 - Functional type: ${parentStructure?.functionalType || 'determine from cultural_tone'}
-- Opening shape: ${parentStructure?.openingShape || 'determine from looks'}
+- Opening shape: ${parentStructure?.openingShape || 'determine from looks'}`}
 
 USER INPUT: "${userPrompt}"
 
-STRUCTURE RULES:
-1. FORM: Interior MUST match parent form (rectangular→rectangular, round→round)
-2. SCALE: Interior/open-air ≤ parent scale (small parent = small space only)
-3. ORIENTATION: Horizontal parent → horizontal/wide space (NEVER vertical)
-4. OPENINGS: Solid exterior (dome/sphere/pod) → "none" (no windows)
-5. FUNCTIONAL TYPE: Determined by cultural_tone/description, NOT appearance
+${structureRules}
 ${perspectiveRules}
 
 SCALE HINTS:
@@ -205,6 +252,109 @@ OUTPUT (pure JSON):
   },
   "description": "Brief space description. CRITICAL: Match perspective - if exterior/open-air, describe the EXTERIOR view; if interior, describe the INTERIOR view. Do NOT say 'interior' when perspective is exterior."
 }`;
+}
+
+/**
+ * Target element info extracted from dominant elements
+ * Enhanced to support full interior seed data: orientation, openings, materials, atmosphere
+ */
+interface TargetElementInfo {
+  name: string;
+  fullDescription: string;
+  properties: string;
+  shape?: string;
+  orientation?: string;
+  scale?: string;
+  style?: string;
+  surfaces?: string;
+  openings?: string;
+  interiorMaterials?: {
+    walls?: string;
+    floor?: string;
+    ceiling?: string;
+  };
+  enterable?: boolean;
+  internalAtmosphere?: string;
+}
+
+/**
+ * Find if user input references a dominant element in the current space
+ * Parses dominant element strings like:
+ * "alien ship: shape=organic, orientation=horizontal, scale=massive, style=futuristic, enterable=yes, internal_atmosphere=dim-mystical"
+ * 
+ * @param userPrompt - User's input (e.g., "alien ship" or "the ship")
+ * @param dominantElements - Array of dominant element strings from current node
+ * @returns TargetElementInfo if match found, null otherwise
+ */
+function findTargetElementInfo(userPrompt: string, dominantElements: string[]): TargetElementInfo | null {
+  if (!dominantElements || dominantElements.length === 0) {
+    return null;
+  }
+
+  const userPromptLower = userPrompt.toLowerCase();
+  
+  for (const element of dominantElements) {
+    // Parse element format: "name: prop1=value1, prop2=value2"
+    const colonIndex = element.indexOf(':');
+    const elementName = colonIndex > 0 ? element.substring(0, colonIndex).trim() : element.trim();
+    const elementNameLower = elementName.toLowerCase();
+    
+    // Check if user prompt contains the element name (or vice versa)
+    // "alien ship" matches "alien ship: shape=organic..."
+    // "the ship" matches "alien ship: ..."
+    // "ship" matches "alien ship: ..."
+    const userWords = userPromptLower.split(/\s+/);
+    const elementWords = elementNameLower.split(/\s+/);
+    
+    const hasMatch = 
+      userPromptLower.includes(elementNameLower) || 
+      elementNameLower.includes(userPromptLower) ||
+      elementWords.some(word => userWords.includes(word) && word.length > 3);
+    
+    if (hasMatch) {
+      // Extract properties from the element string
+      const propertiesStr = colonIndex > 0 ? element.substring(colonIndex + 1).trim() : '';
+      
+      // Parse all properties from the enhanced format
+      const shapeMatch = propertiesStr.match(/shape=([^,]+)/i);
+      const orientationMatch = propertiesStr.match(/orientation=([^,]+)/i);
+      const scaleMatch = propertiesStr.match(/scale=([^,]+)/i);
+      const styleMatch = propertiesStr.match(/style=([^,]+)/i);
+      const surfacesMatch = propertiesStr.match(/surfaces=([^,]+)/i);
+      const openingsMatch = propertiesStr.match(/openings=([^,]+)/i);
+      const interiorMaterialsMatch = propertiesStr.match(/interior_materials=([^,]+)/i);
+      const enterableMatch = propertiesStr.match(/enterable=([^,]+)/i);
+      const atmosphereMatch = propertiesStr.match(/internal_atmosphere=([^,]+)/i);
+      
+      // Parse interior_materials (format: walls|floor|ceiling)
+      let interiorMaterials: { walls?: string; floor?: string; ceiling?: string } | undefined;
+      if (interiorMaterialsMatch) {
+        const parts = interiorMaterialsMatch[1].trim().split('|');
+        interiorMaterials = {
+          walls: parts[0] || undefined,
+          floor: parts[1] || undefined,
+          ceiling: parts[2] || undefined
+        };
+      }
+      
+      return {
+        name: elementName,
+        fullDescription: element,
+        properties: propertiesStr || 'determine from context',
+        shape: shapeMatch ? shapeMatch[1].trim() : undefined,
+        orientation: orientationMatch ? orientationMatch[1].trim() : undefined,
+        scale: scaleMatch ? scaleMatch[1].trim() : undefined,
+        style: styleMatch ? styleMatch[1].trim() : undefined,
+        surfaces: surfacesMatch ? surfacesMatch[1].trim() : undefined,
+        openings: openingsMatch ? openingsMatch[1].trim() : undefined,
+        interiorMaterials,
+        enterable: enterableMatch ? enterableMatch[1].trim().toLowerCase() === 'yes' : undefined,
+        internalAtmosphere: atmosphereMatch ? atmosphereMatch[1].trim() : undefined
+      };
+    }
+  }
+  
+  return null;
 }
 
 /**
