@@ -1,40 +1,40 @@
 {
   "nodes": {
-    "loc-1766062928901-39mm57hpw": {
-      "id": "loc-1766062928901-39mm57hpw",
+    "loc-1766135795180-1yakuhbry": {
+      "id": "loc-1766135795180-1yakuhbry",
       "type": "host",
       "name": "The Moon",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: Vast, cratered plains stretching to a sharp, black horizon under a star-filled sky. Distant Earth hangs as a luminous blue marble. Tiny, scattered lights indicate settlements.",
-        "colorsAndLighting": "Dominated by the stark contrast of deep black shadows and the brilliant white of sunlit regolith. Earthlight casts a subtle, cool blue hue on the illuminated surfaces.",
-        "atmosphere": "Near-vacuum, with no discernible weather patterns. The only 'atmosphere' is the inky blackness of space.",
-        "materials": "Primarily raw lunar regolith, a fine, grey dust covering ancient basaltic plains and impact craters.",
-        "mood": "Profoundly isolated, stark, and awe-inspiring. A sense of immense emptiness and ancient stillness.",
-        "sounds": "Absolute silence, broken only by the imagined hum of machinery or the subtle crackle of cosmic radiation.",
-        "primary_surfaces": "Cratered plains, mountain ranges, shadowed regions.",
-        "secondary_surfaces": "Starkly lit surfaces, impact ejecta blankets.",
-        "accent_features": "The distant, glowing Earth, faint scattered settlement lights.",
-        "dominant": "Lunar Grey",
-        "secondary": "Black",
-        "accent": "Earth Blue",
-        "ambient": "Starfield and Earthlight",
+        "looks": "AERIAL/SATELLITE VIEW: vast, cratered lunar surface stretching to the horizon, Earth visible as a distant celestial body, no individual structures visible.",
+        "colorsAndLighting": "Harsh, direct sunlight casting deep shadows, with the blackness of space dominating. Earth provides a soft, blue and white glow.",
+        "atmosphere": "Utter vacuum. No air, no weather. The sky is a perpetual, inky black.",
+        "materials": "Dominant material is fine, grey lunar regolith. Occasional darker volcanic rock.",
+        "mood": "Profound isolation, stark beauty, silent desolation, cosmic wonder.",
+        "sounds": "Complete silence. The absence of atmosphere means no sound transmission.",
+        "primary_surfaces": "Regolith plains and crater floors.",
+        "secondary_surfaces": "Impact crater rims and ejecta blankets.",
+        "accent_features": "Earth as a prominent, colored celestial object.",
+        "dominant": "Deep Black (90%)",
+        "secondary": "Pale Grey",
+        "accent": "Vibrant Blue (Earth)",
+        "ambient": "Starlight and Earthlight.",
         "genre": "Sci-Fi",
-        "architectural_tone": "Minimalist, Functional",
-        "cultural_tone": "Pioneering, Resilient",
+        "architectural_tone": "Existential",
+        "cultural_tone": "Alien",
         "palette_bias": "Monochromatic",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "Earth's desolate natural satellite, a world of low gravity and stark, cratered landscapes. Permanent twilight casts long shadows across its dusty surface, broken only by the distant glow of Earth.",
-      "searchDesc": "The Moon: A desolate, cratered world under eternal twilight.",
+      "description": "The Moon is a desolate and cratered landscape under a star-filled sky. Its surface is a stark expanse of grey regolith, punctuated by ancient impact craters. Distant Earth hangs as a vibrant blue marble in the black void.",
+      "searchDesc": "Desolate lunar surface, cratered landscape, star-filled sky, distant Earth.",
       "slug": "the-moon",
       "structure": {
-        "spatialLayout": "Vast, open plains punctuated by colossal impact craters and mountain ranges. Settlements appear as minuscule clusters."
+        "spatialLayout": "Vast, unbroken plains interrupted by impact craters of varying sizes. A gentle curvature to the horizon."
       }
     },
-    "c5d936dd-d794-4313-9162-9763d87049f2": {
-      "id": "c5d936dd-d794-4313-9162-9763d87049f2",
+    "c19d4e67-ddf7-4364-a2df-8571e269ae35": {
+      "id": "c19d4e67-ddf7-4364-a2df-8571e269ae35",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -44,268 +44,166 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "47f89eea-165b-4bc1-8d41-5fcd34df180b": {
-      "id": "47f89eea-165b-4bc1-8d41-5fcd34df180b",
+    "8254b0cf-2778-4dcb-81fa-5e3a4e0f479f": {
+      "id": "8254b0cf-2778-4dcb-81fa-5e3a4e0f479f",
       "type": "location",
-      "name": "The Lunar Grotto",
+      "name": "Lunar Obelisk",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The exterior is an irregular, organic extrusion from the lunar regolith, appearing compacted and reinforced. A sturdy, metallic door is set into the rough-hewn surface, directly beneath a large, thick viewport.",
-        "colorsAndLighting": "The dominant colors are muted grays and browns of the regolith, contrasted by the dark, reflective surface of the reinforced viewport. Dim, utilitarian lighting emanates from within and is sparsely placed on the exterior.",
-        "atmosphere": "The air outside is vacuum, silent and still. The exterior itself conveys a sense of ruggedness and isolation, a solitary outpost against the vast emptiness of space.",
-        "materials": "The primary materials are the raw lunar regolith, solidified and fused with a coarse concrete. Accents of weathered, industrial-grade metal are visible on the door and around the viewport.",
-        "mood": "Isolated, utilitarian, and slightly foreboding, yet also suggesting a place of refuge and community in a harsh environment.",
-        "sounds": "None (exterior), subtle hum (interior)",
-        "primary_surfaces": "Rough, textured lunar regolith with embedded concrete",
-        "secondary_surfaces": "Weathered industrial metal, thick reinforced glass",
-        "accent_features": "The large, reinforced viewport offering a view of the moonscape",
-        "dominant": "Lunar gray with extensive coverage",
-        "secondary": "Earth brown and metallic dark gray",
-        "accent": "Subtle, dim amber light from fixtures",
-        "ambient": "Low-key utilitarian glow",
+        "looks": "The Lunar Obelisk is a massive, multi-tiered skyscraper with stark, geometric lines, reminiscent of an ancient monolith but executed with advanced, futuristic aesthetics. Its scale is overwhelming against the barren lunar surface, dominating the landscape with its imposing presence.",
+        "colorsAndLighting": "Dominated by deep blacks and obsidian tones, the structure primarily reflects the ambient starlight and the harsh, direct sunlight of the Moon. Shadows are sharp and absolute, creating dramatic contrasts against the polished, dark surfaces.",
+        "atmosphere": "The atmosphere is one of absolute silence and profound desolation, with the thin lunar dust stirred only by rare micrometeorite impacts. The air is non-existent, and the temperature swings wildly between extreme heat and cold. There is no visible motion save for the slow drift of distant stars.",
+        "materials": "The primary material is an impossibly smooth, obsidian-like substance that appears to absorb and reflect light simultaneously. Textures are non-existent, creating a perfectly polished, almost liquid-like surface. The condition is pristine, showing no signs of wear or erosion.",
+        "mood": "Evokes feelings of awe, mystery, and profound isolation. The sheer scale and alien design inspire a sense of insignificance and wonder about its creators.",
+        "sounds": "Absolute silence, faint cosmic radiation hum",
+        "primary_surfaces": "Sleek, polished obsidian-like material",
+        "secondary_surfaces": "Cracked lunar regolith at base",
+        "accent_features": "Narrow, vertical window slits",
+        "dominant": "Deep black (90%)",
+        "secondary": "Starfield reflection (8%)",
+        "accent": "Sharp white light (2%)",
+        "ambient": "Starlight and harsh sunlight reflection",
         "genre": null,
-        "architectural_tone": "Brutalist lunar outpost with organic integration",
-        "cultural_tone": "A functional gathering place for lunar inhabitants, miners, and travelers.",
-        "palette_bias": "Monochromatic neutrals with metallic undertones",
+        "architectural_tone": "Futuristic minimalist monolithic",
+        "cultural_tone": "Alien, ancient, unknown purpose",
+        "palette_bias": "Monochromatic black and grey",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A rough-hewn dive bar carved into the lunar regolith, with a reinforced viewport showing the desolate landscape. EXTERIOR VIEW.",
-      "searchDesc": "A rough-hewn lunar dive bar with a reinforced viewport showing the desolate landscape.",
-      "slug": "the-lunar-grotto",
+      "description": "A colossal, sleek skyscraper piercing the lunar surface, reflecting the harsh, star-filled void. EXTERIOR VIEW.",
+      "searchDesc": "A colossal, sleek skyscraper on the Moon, reflecting the star-filled void.",
+      "slug": "lunar-obelisk",
       "structure": {
-        "spatialLayout": "The exterior presents as a compact, semi-subterranean structure integrated into the lunar surface, with a clear focus on the entrance and viewport."
+        "spatialLayout": "A single, massive, vertical structure with a rectilinear, tiered base that tapers towards a sharp apex. The dimensions are immense, stretching far into the lunar sky and plunging deep into the regolith."
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "central to the facade",
-          "description": "Leads inside The Lunar Grotto."
+          "position": "central, ground level",
+          "description": "A seamless, retractable portal leading into the obelisk's interior."
         },
         {
-          "type": "passage",
-          "position": "to the right of the entrance",
-          "description": "A short, reinforced tunnel leading to a service entrance or potential emergency exit."
+          "type": "window",
+          "position": "mid-level",
+          "description": "Narrow, vertical slits offering glimpses of dimly lit, cavernous spaces within."
         }
       ],
       "dominantElements": [
-        "The Lunar Grotto: shape=organic-compact, scale=medium, style=rustic-industrial, surfaces=regolith-concrete, reinforced-glass, metallic-hull, light=dim-ambient"
+        "Obelisk: shape=rectangular-tiered, scale=massive, style=futuristic-minimalist, surfaces=obsidian-like, polished, light=starlight-reflection"
       ],
       "uniqueIdentifiers": [
-        "Reinforced viewport",
-        "Carved regolith facade",
-        "Heavy-duty airlock door",
-        "Subtle exterior lighting fixtures"
+        "Impossibly smooth black facade",
+        "Razor-sharp geometric lines",
+        "Reflects the void of space",
+        "Towering scale against lunar horizon",
+        "No visible seams or joints"
       ],
-      "primaryMedia": "media-1766062943682-e2nstc9i8"
+      "primaryMedia": "media-1766135808874-6kkhpjekm"
     },
-    "niche-1766062966897-iq3bncudl": {
-      "id": "niche-1766062966897-iq3bncudl",
-      "type": "location",
-      "name": "The Lunar Grotto",
+    "niche-1766137256715-bp4q1z4mv": {
+      "id": "niche-1766137256715-bp4q1z4mv",
+      "type": "niche",
+      "name": "Lunar Obelisk Interior",
       "spaceType": "interior",
       "dna": {
-        "looks": "Interior spaces are carved into the lunar regolith, with raw, compacted surfaces meeting reinforced structural elements. Organic in form, but industrial in application.",
-        "colorsAndLighting": "Dominated by muted grays and earthen browns of the regolith-concrete, contrasted by the dark sheen of metallic structures. Lighting is dim, functional, and emanates from utilitarian fixtures, casting long shadows.",
-        "atmosphere": "The air is recycled, with a constant, low hum of machinery. A faint metallic and ozone scent permeates the space. It feels enclosed and functional.",
-        "materials": "The primary materials are fused lunar regolith and coarse concrete, providing structural integrity. Accents of weathered, industrial-grade metal and thick, reinforced glass are present.",
-        "mood": "Utilitarian, communal, resilient, and slightly enclosed. A sense of shared purpose and refuge from the harsh lunar exterior.",
-        "sounds": "Low hum of life support, muffled voices, distant clanking, air circulation.",
-        "spatialLayout": "organic-compact",
-        "primary_surfaces": "Fused lunar regolith with embedded concrete, raw and textured.",
-        "secondary_surfaces": "Weathered industrial metal, thick reinforced glass.",
-        "accent_features": "Observation ports offering views of the lunar surface, functional signage, communal gathering areas.",
-        "dominant": "Lunar gray",
-        "secondary": "Earth brown and metallic dark gray",
-        "accent": "Subtle, dim amber light from fixtures",
-        "ambient": "Low-key utilitarian glow",
+        "looks": "The interior of the Obelisk is a continuation of its exterior, featuring sharp, geometric lines and tiered levels. The scale is vast and echoing, with a sense of immense internal volume.",
+        "colorsAndLighting": "Dominated by deep blacks and obsidian tones, the interior reflects ambient starlight and the pale light of distant Earth. Shadows are absolute and sharp.",
+        "atmosphere": "Absolute silence, profound desolation. The air is non-existent, and temperatures are regulated to an alien ideal. No visible motion beyond reflected light.",
+        "materials": "The primary material is an impossibly smooth, obsidian-like substance, perfectly polished, appearing to absorb and reflect light simultaneously. Textures are non-existent.",
+        "mood": "Evokes feelings of awe, mystery, and profound isolation. A sense of immense, ancient purpose hangs in the void.",
+        "sounds": "Silence, faint hum, cosmic whispers.",
+        "spatialLayout": "Vast, multi-tiered internal space with sharp angles and immense verticality.",
+        "primary_surfaces": "Sleek, polished obsidian-like material.",
+        "secondary_surfaces": "Cracked lunar regolith is not present internally.",
+        "accent_features": "Narrow, vertical window slits offering glimpses of the starfield.",
+        "dominant": "Deep black (90%)",
+        "secondary": "Starfield reflection (8%)",
+        "accent": "Sharp white light (2%)",
+        "ambient": "Starlight and distant Earthlight reflection",
         "genre": null,
-        "architectural_tone": "Brutalist lunar outpost with organic integration",
-        "cultural_tone": "A functional gathering place for lunar inhabitants, miners, and travelers.",
-        "palette_bias": "Monochromatic neutrals with metallic undertones",
+        "architectural_tone": "Futuristic minimalist monolithic",
+        "cultural_tone": "Alien, ancient, unknown purpose",
+        "palette_bias": "Monochromatic black and grey",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1766062966896-1efslzn4a",
-      "description": "Within the Lunar Grotto, the interior is a rugged, cavernous space carved from the lunar surface, reflecting its utilitarian purpose.",
+      "primaryMedia": "media-1766137256714-k9pme9zeo",
+      "description": "The interior of the Lunar Obelisk is a cavernous space of immense scale, defined by stark geometric forms and polished, obsidian-like surfaces that reflect the faint starlight filtering in.",
       "structure": {
-        "form": "organic-compact",
-        "roofType": "domed",
-        "scale": "medium",
-        "orientation": "horizontal",
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "vertical",
         "openings": "minimal",
         "openingShape": "irregular",
-        "functionalType": "industrial",
-        "spatialLayout": "This interior space is a rough-hewn cavern, extending organically from the lunar regolith. The walls are a mix of compacted earth and reinforced concrete, with exposed metallic hull sections hinting at structural support.",
+        "functionalType": "unknown",
+        "spatialLayout": "The interior of the Lunar Obelisk is vast and stark, with towering, geometric chambers that echo the monolithic exterior. Polished obsidian-like surfaces reflect the dim, starlight-filtered illumination, creating an atmosphere of immense scale and alien grandeur.",
         "requiredElements": [
-          "The Lunar Grotto: shape=organic-compact, scale=medium, style=rustic-industrial, surfaces=regolith-concrete, reinforced-glass, metallic-hull, light=dim-ambient"
+          "Obelisk: shape=rectangular-tiered, scale=massive, style=futuristic-minimalist, surfaces=obsidian-like, polished, light=starlight-reflection"
         ]
       },
       "furnishingDetails": {
         "userSpecified": [
-          "modular seating clusters made of recycled lunar ore",
-          "low-profile workbench with integrated tool racks",
-          "holographic display showing lunar geological data",
-          "industrial-style lighting fixtures casting pools of dim light",
-          "weathered crates stacked near a service hatch",
-          "sturdy regolith-concrete tables with metallic bases."
+          "monolithic plinth",
+          "holographic star chart projector",
+          "crystalline data terminals",
+          "ethereal light emitters"
         ],
         "suggested": [],
         "placementNotes": []
       },
       "navigableElements": [
         {
-          "type": "hatch",
+          "type": "object",
           "position": "front wall",
-          "description": "hatch reinforced-glass"
+          "description": "object recessed portal"
         },
         {
-          "type": "door",
+          "type": "object",
           "position": "left wall",
-          "description": "door metallic-hull"
-        },
-        {
-          "type": "archway",
-          "position": "right",
-          "description": "archway rough-hewn  leading to tunnel"
+          "description": "object glowing energy conduit"
         },
         {
           "type": "hatch",
-          "position": "center",
-          "description": "hatch smaller service  rear wall"
+          "position": "floor",
+          "description": "hatch subtle"
+        },
+        {
+          "type": "object",
+          "position": "right wall",
+          "description": "object hidden alcove"
         }
       ],
       "dominantElements": [
-        "Lunar Grotto Habitation Unit: shape=organic-compact, scale=medium, style=rustic-industrial, surfaces=regolith-concrete, metallic-hull, light=dim-ambient"
+        "Unknown Chamber: shape=rectangular-tiered, scale=massive, style=futuristic-minimalist, surfaces=obsidian-like, polished, light=starlight-reflection"
       ],
       "uniqueIdentifiers": [
-        "Compacted regolith walls",
-        "Exposed metallic reinforcements",
-        "Dim, ambient lighting"
+        "obsidian-like surfaces",
+        "stark geometric architecture",
+        "overwhelming scale",
+        "dim starlight illumination"
       ],
-      "searchDesc": "A rustic-industrial lunar outpost interior with regolith-concrete, metal, and reinforced glass, dimly lit with utilitarian fixtures.",
-      "slug": "null-of-the-lunar-grotto"
-    },
-    "niche-1766062992405-hszhbnlws": {
-      "id": "niche-1766062992405-hszhbnlws",
-      "type": "location",
-      "name": "The Toilet",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The interior is a compact, enclosed space. The walls are a continuation of the fused lunar regolith and coarse concrete from the exterior, smoothed down but still rough. Simple, functional plumbing fixtures are integrated into the construction. A small, grimy reinforced viewport is set into one wall.",
-        "colorsAndLighting": "Dominated by the dull grays and browns of the fused regolith walls. The plumbing fixtures are a dull, off-white porcelain and weathered metal. Lighting is dim, flickering, and utilitarian amber, casting long shadows.",
-        "atmosphere": "The air is recycled, with a faint metallic tang and the subtle hum of life support. The enclosed space feels close and functional, a stark contrast to the vacuum outside.",
-        "materials": "Fused lunar regolith and coarse concrete walls, off-white porcelain fixtures, weathered industrial metal pipes and hardware.",
-        "mood": "Utilitarian, functional, isolated, a necessary but unglamorous refuge.",
-        "sounds": "Hum of life support, dripping water, muffled exterior silence, faint creaks of metal.",
-        "spatialLayout": "A small, rectangular, enclosed chamber.",
-        "primary_surfaces": "Rough, fused lunar regolith and concrete.",
-        "secondary_surfaces": "Off-white porcelain, weathered industrial metal.",
-        "accent_features": "The small, reinforced viewport, exposed metal pipework, the stark porcelain commode.",
-        "dominant": "Lunar gray",
-        "secondary": "Dull white porcelain and metallic dark gray",
-        "accent": "Flickering amber utility light",
-        "ambient": "Low-key utilitarian glow",
-        "genre": null,
-        "architectural_tone": "Brutalist lunar outpost with organic integration",
-        "cultural_tone": "A functional gathering place for lunar inhabitants, miners, and travelers.",
-        "palette_bias": "Monochromatic neutrals with metallic undertones",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1766062992405-q8qgysnf2",
-      "description": "A functional and stark toilet facility, embodying the utilitarian aesthetic of the lunar outpost.",
-      "structure": {
-        "form": "compact",
-        "roofType": "flat",
-        "scale": "small",
-        "orientation": "cubic",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "civic",
-        "spatialLayout": "A small, utilitarian space designed for a singular purpose.  It features essential fixtures and is built with durable, easily maintainable materials.",
-        "requiredElements": [
-          "toilet"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "utilitarian ceramic toilet bowl",
-          "integrated waste receptacle with bioluminescent indicator",
-          "minimalist concrete sink basin with filtered water dispenser",
-          "rough-hewn stone walls with embedded mineral veins",
-          "low-wattage lumen panels on ceiling"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "front wall",
-          "description": "door reinforced blast"
-        },
-        {
-          "type": "hatch",
-          "position": "ceiling",
-          "description": "hatch maintenance"
-        },
-        {
-          "type": "corridor",
-          "position": "left",
-          "description": "corridor rough-hewn stone archway leading to"
-        }
-      ],
-      "dominantElements": [
-        "Toilet: shape=compact, scale=small, style=brutalist, surfaces=metallic, concrete, light=dim-industrial"
-      ],
-      "uniqueIdentifiers": [
-        "metallic finishes",
-        "exposed conduits"
-      ],
-      "searchDesc": "A stark, utilitarian toilet facility built into lunar regolith, with a viewport and basic fixtures.",
-      "slug": "the-toilet"
+      "searchDesc": "Interior of the Lunar Obelisk: polished obsidian, starlight, tiered platforms, profound silence.",
+      "slug": "null-of-lunar-obelisk"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1765453730970-kciitqlkn",
+      "id": "loc-1766135795180-1yakuhbry",
       "type": "host",
       "children": [
         {
-          "id": "21e30ca0-0745-4a54-82a5-2a6d20103397",
+          "id": "c19d4e67-ddf7-4364-a2df-8571e269ae35",
           "type": "region",
           "children": [
             {
-              "id": "75b783d3-f567-4f26-a110-4a3e25596ff7",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1766062928901-39mm57hpw",
-      "type": "host",
-      "children": [
-        {
-          "id": "c5d936dd-d794-4313-9162-9763d87049f2",
-          "type": "region",
-          "children": [
-            {
-              "id": "47f89eea-165b-4bc1-8d41-5fcd34df180b",
+              "id": "8254b0cf-2778-4dcb-81fa-5e3a4e0f479f",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1766062966897-iq3bncudl",
-                  "type": "location",
-                  "children": []
-                },
-                {
-                  "id": "niche-1766062992405-hszhbnlws",
-                  "type": "location",
+                  "id": "niche-1766137256715-bp4q1z4mv",
+                  "type": "niche",
                   "children": []
                 }
               ]
@@ -316,6 +214,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1766062928901-39mm57hpw"
+    "loc-1766135795180-1yakuhbry"
   ]
 }

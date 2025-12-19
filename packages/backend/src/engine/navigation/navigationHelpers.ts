@@ -358,7 +358,7 @@ export function resolveNavigationParentDNA(
 
 /**
  * Determine if destination analysis should run for a command
- * GOTO always needs it, GO_INSIDE only for rich descriptions (>20 chars)
+ * GOTO always needs it, GO_INSIDE never needs it
  * 
  * @param command - The navigation command
  * @param userPrompt - User's destination description
@@ -373,8 +373,7 @@ export function shouldRunDestinationAnalysis(
     return true;
   }
   
-  // GO_INSIDE: only for rich descriptions
-  // Short prompts like "the tower" or "kitchen" don't need synthesis
-  const RICH_DESCRIPTION_THRESHOLD = 20;
-  return userPrompt.length > RICH_DESCRIPTION_THRESHOLD;
+  // GO_INSIDE: Never run destination analysis
+  // The command itself defines the intent (create interior space)
+  return false;
 }
