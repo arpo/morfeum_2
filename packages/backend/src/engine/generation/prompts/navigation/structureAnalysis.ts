@@ -286,7 +286,7 @@ interface TargetElementInfo {
  * @param dominantElements - Array of dominant element strings from current node
  * @returns TargetElementInfo if match found, null otherwise
  */
-function findTargetElementInfo(userPrompt: string, dominantElements: string[]): TargetElementInfo | null {
+function findTargetElementInfo(userPrompt: string, dominantElements: unknown[]): TargetElementInfo | null {
   if (!dominantElements || dominantElements.length === 0) {
     return null;
   }
@@ -294,9 +294,118 @@ function findTargetElementInfo(userPrompt: string, dominantElements: string[]): 
   const userPromptLower = userPrompt.toLowerCase();
   
   for (const element of dominantElements) {
-    // Parse element format: "name: prop1=value1, prop2=value2"
-    const colonIndex = element.indexOf(':');
-    const elementName = colonIndex > 0 ? element.substring(0, colonIndex).trim() : element.trim();
+    // Parse element format: string or structured object
+    if (!element || (typeof element !== 'string' && typeof element !== 'object')) {
+      continue;
+    }
+
+    let elementName = '';
+    let propertiesStr = '';
+    let shape: string | undefined;
+    let orientation: string | undefined;
+    let scale: string | undefined;
+    let style: string | undefined;
+    let surfaces: string | undefined;
+    let openings: string | undefined;
+    let interiorMaterials: { walls?: string; floor?: string; ceiling?: string } | undefined;
+    let enterable: boolean | undefined;
+    let internalAtmosphere: string | undefined;
+
+    if (typeof element === 'string') {
+      const colonIndex = element.indexOf(':');
+      elementName = colonIndex > 0 ? element.substring(0, colonIndex).trim() : element.trim();
+      propertiesStr = colonIndex > 0 ? element.substring(colonIndex + 1).trim() : '';
+
+      // Parse all properties from the enhanced format
+      const shapeMatch = propertiesStr.match(/shape=([^,]+)/i);
+      const orientationMatch = propertiesStr.match(/orientation=([^,]+)/i);
+      const scaleMatch = propertiesStr.match(/scale=([^,]+)/i);
+      const styleMatch = propertiesStr.match(/style=([^,]+)/i);
+      const surfacesMatch = propertiesStr.match(/surfaces=([^,]+)/i);
+      const openingsMatch = propertiesStr.match(/openings=([^,]+)/i);
+      const interiorMaterialsMatch = propertiesStr.match(/interior_materials=([^,]+)/i);
+      const enterableMatch = propertiesStr.match(/enterable=([^,]+)/i);
+      const atmosphereMatch = propertiesStr.match(/internal_atmosphere=([^,]+)/i);
+
+      shape = shapeMatch ? shapeMatch[1].trim() : undefined;
+      orientation = orientationMatch ? orientationMatch[1].trim() : undefined;
+      scale = scaleMatch ? scaleMatch[1].trim() : undefined;
+      style = styleMatch ? styleMatch[1].trim() : undefined;
+      surfaces = surfacesMatch ? surfacesMatch[1].trim() : undefined;
+      openings = openingsMatch ? openingsMatch[1].trim() : undefined;
+      internalAtmosphere = atmosphereMatch ? atmosphereMatch[1].trim() : undefined;
+      enterable = enterableMatch ? enterableMatch[1].trim().toLowerCase() === 'yes' : undefined;
+
+      if (interiorMaterialsMatch) {
+        const parts = interiorMaterialsMatch[1].trim().split('|');
+        interiorMaterials = {
+          walls: parts[0] || undefined,
+          floor: parts[1] || undefined,
+          ceiling: parts[2] || undefined
+        };
+      }
+    } else {
+      const elementObj = element as Record<string, unknown>;
+      elementName = typeof elementObj.name === 'string' ? elementObj.name : '';
+      shape = typeof elementObj.shape === 'string' ? elementObj.shape : undefined;
+      orientation = typeof elementObj.orientation === 'string' ? elementObj.orientation : undefined;
+      scale = typeof elementObj.scale === 'string' ? elementObj.scale : undefined;
+      style = typeof elementObj.style === 'string' ? elementObj.style : undefined;
+      surfaces = typeof elementObj.surfaces === 'string' ? elementObj.surfaces : undefined;
+      openings = typeof elementObj.openings === 'string' ? elementObj.openings : undefined;
+
+      const materialsRaw = (typeof elementObj.interior_materials === 'string'
+        ? elementObj.interior_materials
+        : typeof elementObj.interiorMaterials === 'string'
+        ? elementObj.interiorMaterials
+        : undefined) as string | undefined;
+      if (materialsRaw) {
+        const parts = materialsRaw.trim().split('|');
+        interiorMaterials = {
+          walls: parts[0] || undefined,
+          floor: parts[1] || undefined,
+          ceiling: parts[2] || undefined
+        };
+      }
+
+      const enterableRaw = elementObj.enterable;
+      if (typeof enterableRaw === 'boolean') {
+        enterable = enterableRaw;
+      } else if (typeof enterableRaw === 'string') {
+        enterable = enterableRaw.trim().toLowerCase() === 'yes';
+      }
+
+      internalAtmosphere =
+        typeof elementObj.internal_atmosphere === 'string'
+          ? elementObj.internal_atmosphere
+          : typeof elementObj.internalAtmosphere === 'string'
+          ? elementObj.internalAtmosphere
+          : undefined;
+
+      const propertiesParts = [
+        shape ? `shape=${shape}` : null,
+        orientation ? `orientation=${orientation}` : null,
+        scale ? `scale=${scale}` : null,
+        style ? `style=${style}` : null,
+        surfaces ? `surfaces=${surfaces}` : null,
+        openings ? `openings=${openings}` : null,
+        interiorMaterials
+          ? `interior_materials=${[
+              interiorMaterials.walls || '',
+              interiorMaterials.floor || '',
+              interiorMaterials.ceiling || ''
+            ].join('|')}`
+          : null,
+        typeof enterable === 'boolean' ? `enterable=${enterable ? 'yes' : 'no'}` : null,
+        internalAtmosphere ? `internal_atmosphere=${internalAtmosphere}` : null
+      ].filter(Boolean);
+      propertiesStr = propertiesParts.join(', ');
+    }
+
+    if (!elementName) {
+      continue;
+    }
+
     const elementNameLower = elementName.toLowerCase();
     
     // Check if user prompt contains the element name (or vice versa)
@@ -312,44 +421,19 @@ function findTargetElementInfo(userPrompt: string, dominantElements: string[]): 
       elementWords.some(word => userWords.includes(word) && word.length > 3);
     
     if (hasMatch) {
-      // Extract properties from the element string
-      const propertiesStr = colonIndex > 0 ? element.substring(colonIndex + 1).trim() : '';
-      
-      // Parse all properties from the enhanced format
-      const shapeMatch = propertiesStr.match(/shape=([^,]+)/i);
-      const orientationMatch = propertiesStr.match(/orientation=([^,]+)/i);
-      const scaleMatch = propertiesStr.match(/scale=([^,]+)/i);
-      const styleMatch = propertiesStr.match(/style=([^,]+)/i);
-      const surfacesMatch = propertiesStr.match(/surfaces=([^,]+)/i);
-      const openingsMatch = propertiesStr.match(/openings=([^,]+)/i);
-      const interiorMaterialsMatch = propertiesStr.match(/interior_materials=([^,]+)/i);
-      const enterableMatch = propertiesStr.match(/enterable=([^,]+)/i);
-      const atmosphereMatch = propertiesStr.match(/internal_atmosphere=([^,]+)/i);
-      
-      // Parse interior_materials (format: walls|floor|ceiling)
-      let interiorMaterials: { walls?: string; floor?: string; ceiling?: string } | undefined;
-      if (interiorMaterialsMatch) {
-        const parts = interiorMaterialsMatch[1].trim().split('|');
-        interiorMaterials = {
-          walls: parts[0] || undefined,
-          floor: parts[1] || undefined,
-          ceiling: parts[2] || undefined
-        };
-      }
-      
       return {
         name: elementName,
-        fullDescription: element,
+        fullDescription: typeof element === 'string' ? element : JSON.stringify(element),
         properties: propertiesStr || 'determine from context',
-        shape: shapeMatch ? shapeMatch[1].trim() : undefined,
-        orientation: orientationMatch ? orientationMatch[1].trim() : undefined,
-        scale: scaleMatch ? scaleMatch[1].trim() : undefined,
-        style: styleMatch ? styleMatch[1].trim() : undefined,
-        surfaces: surfacesMatch ? surfacesMatch[1].trim() : undefined,
-        openings: openingsMatch ? openingsMatch[1].trim() : undefined,
+        shape,
+        orientation,
+        scale,
+        style,
+        surfaces,
+        openings,
         interiorMaterials,
-        enterable: enterableMatch ? enterableMatch[1].trim().toLowerCase() === 'yes' : undefined,
-        internalAtmosphere: atmosphereMatch ? atmosphereMatch[1].trim() : undefined
+        enterable,
+        internalAtmosphere
       };
     }
   }
