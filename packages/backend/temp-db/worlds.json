@@ -3035,6 +3035,70 @@
       ],
       "searchDesc": "Rugged mountains beneath luminous Sky-Gardens, a stark contrast of nature and technology.",
       "slug": "exterior-of-the-national-park"
+    },
+    "niche-1766486166033-pd4czpxpr": {
+      "id": "niche-1766486166033-pd4czpxpr",
+      "type": "niche",
+      "name": "Sky-Garden Pavilion",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An organic, flowing interior space with vast, seamless curved glass walls that offer unparalleled views of the external environment. Smooth, polished surfaces are juxtaposed with shimmering, crystalline structures. The overall impression is one of advanced, elegant, and almost living architecture.",
+        "colorsAndLighting": "The primary light source is the bright, ambient light filtering through the glass surfaces, augmented by the soft, internal glow of the lumina-crystal. Accents of soft blues and greens emanate from the flora displays, while polished stone reflects subtle warm tones from the exterior light. Shadows are minimal, creating an airy feel.",
+        "atmosphere": "Crisp, clean, and gently conditioned air, carrying a faint, pleasant floral scent. A near-imperceptible stillness pervades the space, emphasizing its elevated position.",
+        "materials": "Dominant materials are seamless curved glass, glowing lumina-crystal formations, and highly polished, dark stone. Smaller accents of brushed chrome and iridescent alloys.",
+        "mood": "Serene, awe-inspiring, tranquil, advanced, and connected to nature.",
+        "sounds": "Gentle ambient hum, faint rustling of flora, distant whisper of wind.",
+        "spatialLayout": "An open, organic, and flowing space, with a centered orientation. The curved glass walls create a sense of boundless expanse.",
+        "primary_surfaces": "Curved glass walls, lumina-crystal formations",
+        "secondary_surfaces": "Polished dark stone flooring, brushed chrome accents",
+        "accent_features": "Bioluminescent flora integrated into crystalline structures, subtle light pathways embedded in the floor, floating seating.",
+        "dominant": "Ethereal white and pale blues",
+        "secondary": "Soft greens and golds from light play",
+        "accent": "Iridescent chrome and obsidian black",
+        "ambient": "Bright, diffused daylight and soft internal luminescence",
+        "genre": null,
+        "architectural_tone": "ornate-futuristic",
+        "cultural_tone": "null",
+        "palette_bias": "Blues, greens, whites, golds",
+        "flora_base": "Bioluminescent, exotic species",
+        "fauna_base": "None visible in this immediate depiction"
+      },
+      "primaryMedia": "media-1766486166032-bg4fnlouz",
+      "description": "You are inside the Sky-Garden Pavilion. The space curves organically around you, bathed in a bright, ethereal light that seems to emanate from the lumina-crystal walls. The floor is a smooth, polished stone, reflecting the soft glow. Above, the curved-glass ceiling offers a distorted yet beautiful view of the 'Aethelburg Sky-Garden Terrace' above, hinting at the vastness beyond. Large glass panels seamlessly integrate the interior with the surrounding sky-garden, blurring the lines between inside and out. The style is a stunning fusion of ornate detailing and futuristic design, creating an atmosphere of elegant wonder.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "centered",
+        "openings": "large-glass",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "elevation": "elevated",
+        "spatialLayout": "The interior of the Sky-Garden Pavilion is an organically shaped, medium-scale space with a central focus. The curved lumina-crystal walls emanate a gentle glow, leading the eye towards the polished-stone floor and the domed, curved-glass ceiling.",
+        "requiredElements": [
+          "lumina-crystal",
+          "polished-stone",
+          "curved-glass"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "A grand, open passage leading back out to the Aethelburg Sky-Garden Terrace."
+        }
+      ],
+      "dominantElements": [
+        "Sky-Garden Pavilion: shape=organic, orientation=centered, scale=medium, style=ornate-futuristic, surfaces=glass, openings=large-glass, interior_materials=lumina-crystal|polished-stone|curved-glass, enterable=yes, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "glowing lumina-crystal walls",
+        "organic, flowing architecture",
+        "central view convergence",
+        "ornate-futuristic detailing"
+      ],
+      "searchDesc": "Ornate-futuristic sky-garden pavilion with lumina-crystal and curved glass.",
+      "slug": "interior-of-sky-garden-pavilion-shape-organic-orientation-centered-scale-medium-style-ornate-futuristic-surfaces-glass-openings-large-glass-interior-materials-lumina-crystal-polished-stone-curved-glass-enterable-yes-internal-atmosphere-bright"
     }
   },
   "views": {},
@@ -3274,7 +3338,13 @@
                     {
                       "id": "niche-1766485971663-67e4a5zxh",
                       "type": "niche",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "niche-1766486166033-pd4czpxpr",
+                          "type": "niche",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }
