@@ -2819,6 +2819,222 @@
       ],
       "searchDesc": "Grand observation hangar with a glass dome, showcasing airships and intricate clockwork machinery.",
       "slug": "aethelburg-observation-hangar"
+    },
+    "niche-1766485789475-3xu0y8rcx": {
+      "id": "niche-1766485789475-3xu0y8rcx",
+      "type": "niche",
+      "name": "The Town Square",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A spacious, circular plaza with a central, multi-tiered clockwork fountain. Grand light stone archways surround the space, with polished metallic pathways and seating. Suspended gardens float serenely overhead, tethered by intricate golden chains.",
+        "colorsAndLighting": "Bathed in the bright, natural daylight filtering through the overhead glass dome. The light stone of the plaza floor and archways is warm, complemented by the shimmering gold accents of the fountain and chains. Reflections gleam off polished metallic surfaces.",
+        "atmosphere": "The air is clear and crisp, filled with the gentle hum of unseen machinery and the melodic chimes of the central clockwork. A pleasant, regulated temperature prevails.",
+        "materials": "Polished metallic surfaces, light stone, and golden metallic alloys form the primary structures. Intricate clockwork gears and weathered brass fittings are visible on the fountain and detailing.",
+        "mood": "Awe-inspiring, bustling, and optimistic. The grandeur and intricate design inspire wonder and a sense of vibrant community.",
+        "sounds": "Clockwork chimes, distant city hum, gentle breeze, distant voices, water flow.",
+        "spatialLayout": "A grand, open circular plaza with radiating pathways and surrounding elevated structures.",
+        "primary_surfaces": "Light stone, polished metallic, golden metallic alloys",
+        "secondary_surfaces": "Glass canopy, intricate clockwork gears, weathered brass fittings",
+        "accent_features": "Ornate arches, suspended botanical gardens, delicate metallic railings",
+        "dominant": "Light sky blue (from dome)",
+        "secondary": "Soft gold and light stone",
+        "accent": "Polished silver and brass",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Ornate futuristic with integrated industrial elements",
+        "cultural_tone": "Used by a highly advanced, prosperous civilization for habitation and observation.",
+        "palette_bias": "Blues, golds, silvers, whites",
+        "flora_base": "None",
+        "fauna_base": "Small white birds"
+      },
+      "primaryMedia": "media-1766485789474-x9ei20dwh",
+      "description": "The town square is a vast, open expanse paved with gleaming silver tiles that reflect the soft blues and golds of the surrounding ornate futuristic architecture. Towering buildings, a blend of sleek curves and exposed industrial piping, line the perimeter. In the center, a large, intricate fountain crafted from brushed steel spouts shimmering, iridescent water, catching the light and casting a gentle glow. Holographic advertisements and artistic displays flicker and dance in the air, adding to the dynamic and vibrant atmosphere of this central gathering space.",
+      "structure": {
+        "form": "sprawling",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "civic",
+        "elevation": "ground-level",
+        "spatialLayout": "An open, expansive plaza surrounded by ornate, futuristic buildings with integrated industrial elements. The square serves as a central gathering point, featuring shimmering fountains and holographic displays.",
+        "requiredElements": [
+          "town square"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "crystalline seating pods",
+          "interactive holographic market stalls displaying exotic wares",
+          "polished chrome planter boxes with bio-luminescent flora",
+          "public data terminals integrated into the floor"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front wall",
+          "description": "archway shimmering energy"
+        },
+        {
+          "type": "ramp",
+          "position": "left wall",
+          "description": "ramp observation deck access"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object holographic information kiosk"
+        },
+        {
+          "type": "object",
+          "position": "right wall",
+          "description": "object automated transit tube"
+        }
+      ],
+      "dominantElements": [
+        "ornate-observatory: shape=cylindrical, orientation=vertical, scale=towering, style=ornate-futuristic, surfaces=metallic-polished, openings=large-glass, interior_materials=polished-chrome|grated-steel|glowing-panels, enterable=yes, internal_atmosphere=bright",
+        "industrial-fountain: shape=organic, orientation=centered, scale=medium, style=industrial, surfaces=brushed-steel, openings=none, interior_materials=null, enterable=no, internal_atmosphere=null"
+      ],
+      "uniqueIdentifiers": [
+        "ornate futuristic architecture",
+        "integrated industrial elements",
+        "central plaza",
+        "fountains",
+        "holographic displays"
+      ],
+      "searchDesc": "A magnificent town square with clockwork fountains, ornate arches, and suspended gardens.",
+      "slug": "the-aethelburg-plaza"
+    },
+    "niche-1766485936594-kynor3e78": {
+      "id": "niche-1766485936594-kynor3e78",
+      "type": "niche",
+      "name": "Aethelburg Sky-Garden Terrace",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, rugged mountain landscape with sharp, imposing peaks reaching towards a sky dominated by the immense, luminous structure of the Sky-Gardens. Deep, shadowed valleys carve through the terrain, interspersed with crystalline streams and stark rock faces. The underside of the airborne city casts an otherworldly glow upon the mountains below.",
+        "colorsAndLighting": "The dominant colors are deep blues and grays of the mountains, contrasted with the warm, golden light emanating from the Sky-Gardens. Shafts of bright sunlight pierce through the atmosphere, illuminating patches of the landscape, while shadows pool in the deep ravines. The metallic surfaces of the city reflect the sky's hues.",
+        "atmosphere": "The air is thin, crisp, and cool, carrying the faint scent of pine and rock. A gentle, high-altitude breeze rustles through sparse mountain vegetation. The immense scale of the Sky-Gardens creates a sense of awe and profound silence, broken only by natural sounds.",
+        "materials": "Primarily rough-hewn stone, jagged rock, and patches of hardy mountain soil. Occasional veins of glittering minerals might be visible. The distant underside of the Sky-Gardens hints at polished metallic surfaces and light stone structures.",
+        "mood": "Evokes a sense of raw, untamed nature juxtaposed with advanced technological marvel. It inspires feelings of isolation, wonder, and a profound respect for both natural forces and engineered grandeur.",
+        "sounds": "Whispering wind, distant echoes, faint city hum, trickle of water, crunch of rock underfoot",
+        "spatialLayout": "Expansive and vertical, with vast open skies above and deep, sprawling valleys below. Steep inclines and sheer cliffs dominate the landscape.",
+        "primary_surfaces": "Jagged rock, weathered stone",
+        "secondary_surfaces": "Sparse mountain soil, glacial ice (at higher altitudes)",
+        "accent_features": "Crystalline streams, rare hardy flora, mineral veins",
+        "dominant": "Deep mountain blue/grey",
+        "secondary": "Ethereal gold and white (from the Sky-Gardens' light)",
+        "accent": "Silver and brass (reflecting from the city)",
+        "ambient": "Bright, crisp daylight filtered through high atmosphere",
+        "genre": null,
+        "architectural_tone": "null",
+        "cultural_tone": "null",
+        "palette_bias": "Blues, grays, golds, whites",
+        "flora_base": "Hardy mountain flora (e.g., mosses, lichens, small, resilient shrubs)",
+        "fauna_base": "None visible in this immediate depiction"
+      },
+      "primaryMedia": "media-1766485936593-qqn1j9qqd",
+      "description": "You are standing on a vast, open-air terrace that forms part of the Sky-Gardens of Aethelburg. The air is fresh and carries the scent of exotic blooms. Lush, bioluminescent flora winds its way around sculpted structures, creating a vibrant, living ambiance. In the center, a 'Sky-Garden Pavilion' with a shimmering glass exterior offers a focal point. Gravity-defying water features cascade gently, and the entire space is open to the expansive sky above, offering breathtaking, unobstructed views of the sprawling airborne city and the distant 'mountain region'.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "large-glass",
+        "openingShape": "mixed",
+        "functionalType": "habitation",
+        "elevation": "elevated",
+        "spatialLayout": "This space is an expansive, open-air terrace situated on an elevated level of the airborne city. It features flowing, organic architecture with wide, unobstructed views.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "central",
+          "description": "leads to the main residential sectors of the Sky-Gardens"
+        },
+        {
+          "type": "archway",
+          "position": "south",
+          "description": "opens onto an elevated pathway connecting to other city districts"
+        }
+      ],
+      "dominantElements": [
+        "Sky-Garden Pavilion: shape=organic, orientation=centered, scale=medium, style=ornate-futuristic, surfaces=glass, openings=large-glass, interior_materials=lumina-crystal|polished-stone|curved-glass, enterable=yes, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "lush, bioluminescent flora",
+        "gravity-defying water features",
+        "panoramic views of the cityscape"
+      ],
+      "searchDesc": "Mountainous terrain beneath a luminous airborne city, featuring deep valleys and stark peaks.",
+      "slug": "null-of-the-sky-gardens-of-aethelburg"
+    },
+    "niche-1766485971663-67e4a5zxh": {
+      "id": "niche-1766485971663-67e4a5zxh",
+      "type": "niche",
+      "name": "Aethelburg Sky-Garden Terrace",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, rugged mountain landscape with sharp, imposing peaks reaching towards a sky dominated by the immense, luminous structure of the Sky-Gardens. Deep, shadowed valleys carve through the terrain, interspersed with crystalline streams and stark rock faces. The underside of the airborne city casts an otherworldly glow upon the mountains below.",
+        "colorsAndLighting": "Dominant deep blues and grays of the mountains, contrasted with the warm, golden light from the Sky-Gardens. Shafts of bright sunlight pierce the atmosphere, illuminating patches of landscape, while shadows pool in deep ravines. Metallic surfaces of the city reflect sky hues.",
+        "atmosphere": "Thin, crisp, and cool air carrying the faint scent of pine and rock. A gentle, high-altitude breeze rustles through sparse mountain vegetation. Immense scale of the Sky-Gardens creates profound silence.",
+        "materials": "Primarily rough-hewn stone, jagged rock, and patches of hardy mountain soil. Occasional veins of glittering minerals visible. Distant Sky-Gardens hint at polished metallic surfaces and light stone structures.",
+        "mood": "Raw, untamed nature juxtaposed with advanced technological marvel. Inspires feelings of isolation, wonder, and profound respect.",
+        "sounds": "Whispering wind, distant trickling water, creaking rock, faint hum from above",
+        "spatialLayout": "Vast, open mountain terrain with deep cuts and sheer ascents.",
+        "primary_surfaces": "Jagged rock, weathered stone",
+        "secondary_surfaces": "Sparse mountain soil, glacial ice (at higher altitudes)",
+        "accent_features": "Crystalline streams, rare hardy flora, mineral veins",
+        "dominant": "Deep mountain blue/grey",
+        "secondary": "Ethereal gold and white (from Sky-Gardens)",
+        "accent": "Silver and brass (reflection from city)",
+        "ambient": "Bright, crisp daylight filtered through high atmosphere",
+        "genre": null,
+        "architectural_tone": "null",
+        "cultural_tone": "null",
+        "palette_bias": "Blues, grays, golds, whites",
+        "flora_base": "Hardy mountain flora (mosses, lichens, small shrubs)",
+        "fauna_base": "None visible in this immediate depiction"
+      },
+      "primaryMedia": "media-1766485971661-7atvzxgqu",
+      "description": "The Aethelburg Sky-Garden Terrace is a breathtaking, open-air platform extending from the main Sky-Gardens. It's an organic, flowing structure adorned with lush, otherworldly flora and illuminated by soft, ethereal lights. From here, one can gaze upon the immense, rugged mountain landscape below, with its sharp peaks and shadowed valleys. The underside of the airborne city casts an otherworldly glow on the terrain, making this terrace a prime vantage point for observing the natural beauty and the man-made marvel above.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "medium",
+        "orientation": "centered",
+        "openings": "large-glass",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "elevation": "elevated",
+        "spatialLayout": "This open-air terrace is organically shaped, with flowing lines that lead the eye outwards. It is positioned high above the mountain peaks, offering a panoramic view.",
+        "requiredElements": [
+          "terraced platforms",
+          "overgrown flora",
+          "glowing crystals"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "central",
+          "description": "leading into the Sky-Garden Pavilion."
+        }
+      ],
+      "dominantElements": [
+        "Sky-Garden Pavilion: shape=organic, orientation=centered, scale=medium, style=ornate-futuristic, surfaces=glass, openings=large-glass, interior_materials=lumina-crystal|polished-stone|curved-glass, enterable=yes, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "overlooking vast mountain ranges",
+        "glowing underside",
+        "lush, alien flora"
+      ],
+      "searchDesc": "Rugged mountains beneath luminous Sky-Gardens, a stark contrast of nature and technology.",
+      "slug": "exterior-of-the-national-park"
     }
   },
   "views": {},
@@ -3045,6 +3261,22 @@
                   "id": "niche-1766482058311-0jyvk1o1j",
                   "type": "niche",
                   "children": []
+                },
+                {
+                  "id": "niche-1766485789475-3xu0y8rcx",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1766485936594-kynor3e78",
+                  "type": "niche",
+                  "children": [
+                    {
+                      "id": "niche-1766485971663-67e4a5zxh",
+                      "type": "niche",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }

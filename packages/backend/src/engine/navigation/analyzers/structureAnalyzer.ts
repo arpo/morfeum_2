@@ -9,7 +9,8 @@
 
 import * as mzooService from '../../../services/mzoo.service';
 import { AI_MODELS } from '../../../config';
-import { structureAnalysisPrompt, extractRequiredElements } from '../../generation/prompts/navigation/structureAnalysis';
+import { structureAnalysisPrompt } from '../../generation/prompts/navigation/structureAnalysis';
+import { extractRequiredElements } from '../../generation/prompts/navigation/elementAnalysis';
 import type { NavigationContext, StructureAnalysis, Structure, NavigableElement, ScenePerspective } from '../types';
 
 /** Parsed enhancements from user command */
