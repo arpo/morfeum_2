@@ -3099,6 +3099,213 @@
       ],
       "searchDesc": "Ornate-futuristic sky-garden pavilion with lumina-crystal and curved glass.",
       "slug": "interior-of-sky-garden-pavilion-shape-organic-orientation-centered-scale-medium-style-ornate-futuristic-surfaces-glass-openings-large-glass-interior-materials-lumina-crystal-polished-stone-curved-glass-enterable-yes-internal-atmosphere-bright"
+    },
+    "loc-1766487994842-3n52q0nre": {
+      "id": "loc-1766487994842-3n52q0nre",
+      "type": "host",
+      "name": "Eyes Wide Shut",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: A sprawling, impossibly dense cityscape punctuated by colossal, geometrically abstract towers and serpentine, illuminated roadways. Distant, hazy mountain ranges are barely visible through the smoggy atmosphere.",
+        "colorsAndLighting": "Dominated by the harsh glow of artificial lights – stark whites, lurid purples, and electric blues – contrasting with deep, pervasive shadows. The sky is a bruised, perpetual twilight.",
+        "atmosphere": "A thick, omnipresent smog hangs heavy, obscuring the upper reaches of buildings and muffling the sounds of the city. A sense of oppressive humidity and unseen pollution permeates the air.",
+        "materials": "From this height, the dominant materials appear to be vast expanses of dark, polished obsidian-like facades and dull, metallic sheens on the colossal towers. The roads are slick, dark asphalt.",
+        "mood": "The overall mood is one of overwhelming, impersonal scale, promising both unlimited possibility and profound anonymity. A sense of decadent unease and hidden agendas is palpable.",
+        "sounds": "A low, omnipresent hum of machinery and distant, distorted sirens, overlaid with the faint, disembodied murmur of a million unseen lives.",
+        "primary_surfaces": "The monolithic facades of colossal skyscrapers and the vast, illuminated arterial roadways.",
+        "secondary_surfaces": "Patches of murky, stagnant water in lower levels and occasional, dimly lit parks or plazas.",
+        "accent_features": "Gigantic, luminous advertisements and the faint outlines of impossibly tall, spire-like structures piercing the smog.",
+        "dominant": "deep blue",
+        "secondary": "midnight black",
+        "accent": "electric purple",
+        "ambient": "bruised twilight",
+        "genre": "Neo-Noir",
+        "architectural_tone": "Brutalist-Decadent",
+        "cultural_tone": "Secretive Hedonism",
+        "palette_bias": "Monochromatic with saturated neon accents",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A vast, sprawling metropolis under a perpetually twilight sky. Neon lights bleed into the shadowed canyons of immense, monolithic structures, hinting at both opulence and decay.",
+      "searchDesc": "Neo-noir metropolis of towering structures and shadowed desires.",
+      "slug": "eyes-wide-shut",
+      "structure": {
+        "spatialLayout": "An extreme, almost claustrophobic density of verticality, with massive architectural forms packed tightly together. The city sprawls outwards in chaotic, organic patterns, lacking any discernible order."
+      },
+      "primaryMedia": "media-1766488092723-1b1146bhs"
+    },
+    "5c14434c-03d3-4315-92f7-79fce70cb1df": {
+      "id": "5c14434c-03d3-4315-92f7-79fce70cb1df",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "3c2560dd-b88e-4c12-88fd-0e9e5e958084": {
+      "id": "3c2560dd-b88e-4c12-88fd-0e9e5e958084",
+      "type": "location",
+      "name": "The Mansion",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive, sprawling Victorian mansion with a dominant rectangular form. It features numerous ornate architectural details, including decorative stonework and grand, arched windows. The overall scale is imposing, designed to impress and intimidate.",
+        "colorsAndLighting": "The scene is dominated by deep blues and grays of the night sky and shadowed stone. Moonlight casts stark, long shadows, creating high contrast and a sense of dramatic illumination. Subtle warm lights might be visible through some windows.",
+        "atmosphere": "The air is still and cool, carrying a faint scent of damp earth and old stone. There's a palpable sense of stillness, broken only by the distant chirping of crickets. The sheer presence of the mansion creates an atmosphere of hushed grandeur and concealed secrets.",
+        "materials": "The primary exterior material is weathered, dark stone, giving the mansion a timeless and enduring quality. Accents of darker wood can be seen in window frames and doors. Interior materials hinted at include dark wood paneling and possibly ornate plasterwork.",
+        "mood": "The mood is one of gothic mystery and opulent decadence. It evokes feelings of intrigue, a touch of unease, and the allure of secrets hidden behind grand facades.",
+        "sounds": "crickets, distant owl, wind rustling leaves, creaking gates (imagined)",
+        "primary_surfaces": "weathered dark stone, ornate window frames",
+        "secondary_surfaces": "dark wood, potentially ironwork",
+        "accent_features": "gargoyles, intricate carvings, tall spires",
+        "dominant": "deep blue (night sky, shadows)",
+        "secondary": "gray (moonlit stone)",
+        "accent": "warm yellow (interior lights), black (deep shadows)",
+        "ambient": "cool moonlight",
+        "genre": null,
+        "architectural_tone": "imposing Victorian Gothic with ornate embellishments",
+        "cultural_tone": "wealthy aristocracy, secretive gatherings, historical grandeur",
+        "palette_bias": "cool blues, deep grays, muted earth tones",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "An opulent and imposing mansion, bathed in moonlight. EXTERIOR VIEW.",
+      "searchDesc": "A grand, moonlit Victorian mansion with ornate details and imposing architecture.",
+      "slug": "the-mansion",
+      "structure": {
+        "spatialLayout": "The mansion is a sprawling complex, suggesting a vast interior with many interconnected rooms and wings. Its horizontal spread is significant, punctuated by vertical elements like towers and gables, creating a complex and deep spatial arrangement."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center of the main facade",
+          "description": "Leads into the grand foyer of the mansion."
+        },
+        {
+          "type": "window",
+          "position": "upper stories",
+          "description": "Offer glimpses into dimly lit rooms."
+        }
+      ],
+      "dominantElements": [
+        "The Mansion: shape=rectangular-sprawling, orientation=sprawling, scale=massive, style=victorian-ornate, surfaces=stone-weathered, openings=arched-windows, interior_materials=dark-wood-paneling|ornate-carpet|gilded-plaster, enterable=yes, internal_atmosphere=mysterious"
+      ],
+      "uniqueIdentifiers": [
+        "moonlit facade",
+        "tall, imposing structure",
+        "ornate architectural details",
+        "large, arched windows"
+      ],
+      "primaryMedia": "media-1766488021968-n1cd74fdo"
+    },
+    "niche-1766488042869-pubbkb0al": {
+      "id": "niche-1766488042869-pubbkb0al",
+      "type": "niche",
+      "name": "The Mansion",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A cavernous, empty space with soaring stone walls, a high vaulted ceiling disappearing into shadow, and one grand arched window that admits slivers of moonlight.",
+        "colorsAndLighting": "Dominated by deep blues and grays of the night sky and shadowed stone. Stark, long shadows cast by moonlight create high contrast. No interior lights are visible in this null space.",
+        "atmosphere": "The air is still, cool, and carries a faint scent of damp earth and old stone. An overwhelming sense of stillness and vastness.",
+        "materials": "Primary material is weathered, dark stone, giving the space a timeless and enduring quality. The ceiling is likely dark wood or plaster, lost in shadow.",
+        "mood": "Gothic mystery and a profound sense of emptiness, evoking feelings of isolation, anticipation, and the allure of secrets.",
+        "sounds": "Profound silence, distant crickets, faint whisper of air currents.",
+        "spatialLayout": "Vast, open, rectangular space with extreme verticality.",
+        "primary_surfaces": "weathered dark stone",
+        "secondary_surfaces": "dark wood (ceiling, likely)",
+        "accent_features": "grand arched window, intricate carvings on stonework (faintly visible)",
+        "dominant": "deep blue",
+        "secondary": "gray",
+        "accent": "black (deep shadows)",
+        "ambient": "cool moonlight",
+        "genre": null,
+        "architectural_tone": "imposing Victorian Gothic",
+        "cultural_tone": "wealthy aristocracy, secretive gatherings, historical grandeur",
+        "palette_bias": "cool blues, deep grays",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1766488042866-0d867rf0v",
+      "description": "The air is thick with an enigmatic presence. Dark, polished wood paneling lines the walls, absorbing what little light filters through the grand, arched windows. Intricately patterned carpets, worn with age, cushion every step, muffling sounds and adding to the hushed atmosphere. Above, the ceiling is a breathtaking expanse of gilded plaster, adorned with elaborate, yet faded, frescoes that hint at forgotten grandeur. The sheer scale of the space is overwhelming, creating a sense of being lost within its sprawling, mysterious embrace.",
+      "structure": {
+        "form": "rectangular-sprawling",
+        "roofType": "vaulted",
+        "scale": "massive",
+        "orientation": "sprawling",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "Vast, interconnected rooms stretch out, creating a labyrinthine feel. The layout mirrors the exterior's sprawling nature, with grand hallways branching off into numerous chambers.",
+        "requiredElements": [
+          "dark-wood-paneling",
+          "ornate-carpet",
+          "gilded-plaster",
+          "arched-windows",
+          "mysterious"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "heavy velvet curtains",
+          "antique grandfather clock",
+          "large Persian rug",
+          "carved mahogany desk",
+          "leather-bound books on shelves",
+          "dimly lit oil paintings",
+          "ornate candelabra",
+          "globe on stand",
+          "fireplace with burning logs",
+          "velvet wingback chairs",
+          "ornate fireplace poker set"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door grand double s"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door ornate wooden"
+        },
+        {
+          "type": "passage",
+          "position": "right wall",
+          "description": "passage arched"
+        },
+        {
+          "type": "window",
+          "position": "center",
+          "description": "window large stained-glass  rear wall"
+        },
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door hidden  behind tapestry"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object grand staircase"
+        }
+      ],
+      "dominantElements": [
+        "Grand Hallway: shape=rectangular-sprawling, orientation=sprawling, scale=massive, style=victorian-ornate, surfaces=stone-weathered, openings=arched-windows, interior_materials=dark-wood-paneling|ornate-carpet|gilded-plaster, enterable=yes, internal_atmosphere=mysterious"
+      ],
+      "uniqueIdentifiers": [
+        "Towering ceilings with intricate gilded plasterwork.",
+        "Deeply shadowed alcoves.",
+        "The persistent scent of aged wood and dust."
+      ],
+      "searchDesc": "Vast, empty hall within a grand Victorian mansion, filled with shadows and secrets.",
+      "slug": "null-of-the-mansion"
     }
   },
   "views": {},
@@ -3353,12 +3560,36 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1766487994842-3n52q0nre",
+      "type": "host",
+      "children": [
+        {
+          "id": "5c14434c-03d3-4315-92f7-79fce70cb1df",
+          "type": "region",
+          "children": [
+            {
+              "id": "3c2560dd-b88e-4c12-88fd-0e9e5e958084",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1766488042869-pubbkb0al",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1766135795180-1yakuhbry",
     "loc-1766163147994-pky3j7l9m",
     "loc-1766391005836-21kni44v2",
-    "loc-1766473713810-7zffxwdep"
+    "loc-1766473713810-7zffxwdep",
+    "loc-1766487994842-3n52q0nre"
   ]
 }
