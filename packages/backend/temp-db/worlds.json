@@ -2289,6 +2289,536 @@
       ],
       "searchDesc": "Vast alien control room with a colossal spacecraft and pulsing violet artifact.",
       "slug": "the-command-nexus"
+    },
+    "location-1766403526616-1v060vodu": {
+      "id": "location-1766403526616-1v060vodu",
+      "type": "location",
+      "name": "The Highest Peak",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: vast jungle expanse, distant mountains as hazy shapes, cloud formations, sunbeams piercing canopy (NO individual trees, NO close-up details)",
+        "colorsAndLighting": "sunlight filtering through canopy, dappled light and shadow, atmospheric haze",
+        "atmosphere": "humid, still air, occasional gust of wind, distant bird calls",
+        "materials": "dominant jungle flora, weathered stone, exposed earth",
+        "mood": "contemplative, majestic, serene",
+        "sounds": "distant bird calls, rustling leaves, faint wind",
+        "spatialLayout": "towering vertical",
+        "primary_surfaces": "jungle canopy",
+        "secondary_surfaces": "rock, earth",
+        "accent_features": "ancient stone monoliths, rare exotic flowers",
+        "dominant": "Emerald Green",
+        "secondary": "Earthy Brown",
+        "accent": "Golden Sunlight",
+        "ambient": "Dappled Green Light",
+        "genre": "Fantasy",
+        "architectural_tone": "sacred",
+        "cultural_tone": "null",
+        "palette_bias": "Jungle Greens",
+        "flora_base": "Jungle Vines",
+        "fauna_base": "Exotic Birds"
+      },
+      "primaryMedia": "media-1766403526614-syu5qu60z",
+      "description": "The towering, rugged summit of an ancient mountain, encrusted with moss and stone. From this vantage point, an unparalleled panoramic view stretches across the endless, emerald sea of the surrounding jungle.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "null",
+        "scale": "massive",
+        "orientation": "vertical",
+        "openings": "none",
+        "openingShape": "null",
+        "functionalType": "natural",
+        "elevation": "elevated",
+        "spatialLayout": "A colossal, ancient mountain pierces the humid canopy of a dense jungle. Its jagged, moss-covered summit is the highest point for leagues, offering a breathtaking panorama of the verdant expanse below.",
+        "requiredElements": [
+          "mountain",
+          "jungle",
+          "highest peak",
+          "view over the surrounding"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "base of the mountain",
+          "description": "Leads up the winding path to the summit lookout."
+        },
+        {
+          "type": "archway",
+          "position": "summit",
+          "description": "Opens onto the main lookout platform."
+        }
+      ],
+      "dominantElements": [
+        "the highest peak: shape=irregular, orientation=vertical, scale=towering, style=rustic, surfaces=stone-moss, openings=none, interior_materials=null, enterable=no, internal_atmosphere=null"
+      ],
+      "uniqueIdentifiers": [
+        "jagged summit",
+        "sweeping vista"
+      ],
+      "searchDesc": "A jungle mountain peak lookout with stunning panoramic views and rustic stone architecture.",
+      "slug": "the-sky-peak-lookout"
+    },
+    "location-1766403582562-lhh7og78l": {
+      "id": "location-1766403582562-lhh7og78l",
+      "type": "location",
+      "name": "Beach Bar and Backpacker Resort",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: vast ocean expanse, distant islands as tiny shapes, cloud formations, weather patterns (NO individual ships, NO close-up details)",
+        "colorsAndLighting": "sunlight reflecting on water, cloud shadows, atmospheric haze",
+        "atmosphere": "windy, ocean spray, clear skies",
+        "materials": "dominant water, distant land masses, weathered wood, thatch, bamboo",
+        "mood": "adventurous, untamed, boundless, laid-back",
+        "sounds": "crashing waves, seabird calls, distant music, laughter",
+        "spatialLayout": "coastal, open, sprawling",
+        "primary_surfaces": "ocean surface",
+        "secondary_surfaces": "cloud cover, distant land, sandy beach",
+        "accent_features": "major weather systems, distant mythical landmasses, carved tiki statues",
+        "dominant": "Turquoise",
+        "secondary": "Deep Blue",
+        "accent": "White (clouds/foam)",
+        "ambient": "Bright Blue Sky",
+        "genre": "Fantasy",
+        "architectural_tone": "Nautical",
+        "cultural_tone": "Pirate",
+        "palette_bias": "Oceanic",
+        "flora_base": "Seaweed, palm trees",
+        "fauna_base": "Whales, seabirds"
+      },
+      "primaryMedia": "media-1766403582561-5aoqw0lty",
+      "description": "The sun casts a warm glow on the 'Beach Bar and Backpacker Resort.' Woven thatch roofs and natural wood define the structures, interspersed with lush 'Jungle Greens' vegetation. Open-air walkways connect various sections, leading towards the inviting beach. The overall aesthetic is one of peaceful, sacred connection with nature, enhanced by the vibrant jungle palette.",
+      "structure": {
+        "form": "organic",
+        "roofType": "pitched",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "mixed",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A collection of rustic structures nestled on a sandy beach, blending seamlessly with the surrounding jungle. Open-air spaces and thatched roofs create a relaxed atmosphere.",
+        "requiredElements": [
+          "beach bar",
+          "backpacker resort"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "weathered wooden bar counter with hanging lanterns",
+          "woven straw bar stools",
+          "communal picnic tables with benches",
+          "shelves stocked with colorful local liquors and bottled water",
+          "incense burners",
+          "sacred geometric carvings on the bar front",
+          "potted tropical plants with prayer flags tied to them",
+          "woven mats on the floor",
+          "sound system with ambient instrumental music"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front",
+          "description": "archway open"
+        },
+        {
+          "type": "object",
+          "position": "left wall",
+          "description": "object large bamboo blinds"
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "door wooden"
+        },
+        {
+          "type": "window",
+          "position": "back wall",
+          "description": "window large open s  overlooking the ocean"
+        }
+      ],
+      "dominantElements": [
+        "beach bar: shape=organic, orientation=compact, scale=medium, style=rustic, surfaces=wood|thatched-roof, openings=open-passages, interior_materials=wood|sand|thatched-roof, enterable=yes, internal_atmosphere=lively",
+        "backpacker cabins: shape=organic, orientation=compact, scale=small, style=rustic, surfaces=wood|thatched-roof, openings=minimal, interior_materials=wood|wood|thatched-roof, enterable=yes, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "overhanging palm trees",
+        "fire pits",
+        "hammocks"
+      ],
+      "searchDesc": "Beach bar and backpacker resort, nautical and pirate tones, turquoise and deep blue palette.",
+      "slug": "the-emerald-tide-haven"
+    },
+    "loc-1766473713810-7zffxwdep": {
+      "id": "loc-1766473713810-7zffxwdep",
+      "type": "host",
+      "name": "Aethelburg",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: The city is a vast expanse of interconnected structures, appearing as intricate patterns of light stone and gold from above. Prominent rounded domes and towering spires punctuate the skyline, while elevated pathways form delicate webs across its entirety. Large airborne vessels are visible as distinct, complex shapes suspended above the main city.",
+        "colorsAndLighting": "Bathed in bright daylight, the city's light stone and golden metallic accents shimmer under a clear blue sky, casting warm hues. Shadows are sharp and defined due to the high sun.",
+        "atmosphere": "A clear blue sky with scattered fluffy white clouds forms the backdrop. The air is crisp and bright, hinting at a high-altitude or pristine environment.",
+        "materials": "Dominant materials visible from distance are polished light stone and gleaming golden metallic alloys, forming the city's extensive structures and pathways.",
+        "mood": "Evokes a sense of wonder, awe, and technological advancement. The vastness and intricate design inspire feelings of optimism and ambition, suggesting a civilization at its peak.",
+        "sounds": "Distant hum of machinery, faint echoes of bustling city life, and the gentle flutter of small white birds in flight.",
+        "primary_surfaces": "Rooftops of various buildings, major elevated platforms and promenades.",
+        "secondary_surfaces": "Open sky, visible gaps between city tiers, and potential unseen lower levels.",
+        "accent_features": "The prominent rounded glass domes and the large airborne vessels are the most striking distant landmarks.",
+        "dominant": "Light sky blue",
+        "secondary": "Golden metallic",
+        "accent": "Polished light stone",
+        "ambient": "Bright, warm daylight.",
+        "genre": "futuristic",
+        "architectural_tone": "ornate futuristic",
+        "cultural_tone": "ambitious",
+        "palette_bias": "warm",
+        "flora_base": "none",
+        "fauna_base": "birds"
+      },
+      "description": "A magnificent, multi-tiered city bathed in bright daylight under a clear blue sky with scattered white clouds. It is a thriving metropolis of ornate domes and spires, harmoniously blended with light stone and golden metallic accents, all connected by an elaborate network of bridges and elevated platforms. The city stretches as far as the eye can see, a testament to highly developed and active civilization.",
+      "searchDesc": "Magnificent multi-tiered city, bright daylight, ornate domes, golden accents, airborne vessels.",
+      "slug": "aethelburg",
+      "structure": {
+        "spatialLayout": "A highly organized, multi-tiered metropolis with a clear central focus for major structures and transportation hubs. Pathways and bridges create a dense, interconnected network."
+      },
+      "primaryMedia": "media-1766473748797-8q9s26auc"
+    },
+    "fb9486d9-775e-462f-add5-1ba075f2aef6": {
+      "id": "fb9486d9-775e-462f-add5-1ba075f2aef6",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "671c76e8-37c9-4bc9-bb5d-66a73db8e51b": {
+      "id": "671c76e8-37c9-4bc9-bb5d-66a73db8e51b",
+      "type": "location",
+      "name": "The Sky-Gardens of Aethelburg",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive, sprawling airborne city resembling a living organism, with a prominent rounded glass dome on its upper surface and a dense, complex underside. Elevated pathways and grand arches connect various levels, suggesting a highly advanced, multi-tiered metropolis.",
+        "colorsAndLighting": "Bathed in bright, natural daylight under a clear blue sky, with the metallic surfaces of the vessel reflecting the light. The city itself features a harmonious blend of light stone and golden metallic accents, creating a warm and inviting glow.",
+        "atmosphere": "The air is clear and crisp, with a gentle breeze carrying the distant sounds of the bustling city. The temperature is pleasant, indicative of a well-regulated environment. Small white birds flit through the air, adding a touch of natural life to the engineered wonder.",
+        "materials": "The primary materials are polished metallic surfaces for the airborne vessel and light stone and golden metallic alloys for the city's structures. Intricate machinery is visible, suggesting a blend of advanced engineering and possibly clockwork mechanisms.",
+        "mood": "Evokes a sense of wonder, awe, and technological advancement. The vastness and intricate design inspire feelings of optimism and ambition, suggesting a civilization at its peak.",
+        "sounds": "Distant city bustle, gentle hum of machinery, chirping of birds, faint music.",
+        "primary_surfaces": "Polished metallic, light stone, golden accents",
+        "secondary_surfaces": "Glass canopy, intricate gears, weathered brass fittings",
+        "accent_features": "Delicate railing, ornate domes, soaring spires",
+        "dominant": "Light sky blue, covering the upper atmosphere",
+        "secondary": "Soft gold and light stone, forming the city's structures",
+        "accent": "Polished silver and brass, highlighting the vessel's machinery",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Ornate futuristic with integrated industrial elements",
+        "cultural_tone": "Used by a highly advanced, prosperous civilization for habitation and observation.",
+        "palette_bias": "Blues, golds, silvers, whites",
+        "flora_base": "None",
+        "fauna_base": "Small white birds"
+      },
+      "description": "An elaborate, large airborne vessel or suspended building, featuring a prominent rounded glass canopy on its upper deck with a delicate railing, and a complex underside of gears and machinery. Several figures can be seen on its main balcony, observing the surroundings. EXTERIOR VIEW.",
+      "searchDesc": "Massive airborne city with glass canopy, intricate machinery, and ornate architecture.",
+      "slug": "the-sky-gardens-of-aethelburg",
+      "structure": {
+        "spatialLayout": "The airborne vessel is a sprawling, organic form suspended above a multi-tiered city. Depth is created by the layered architecture and the vast expanse of the cityscape stretching into the background."
+      },
+      "navigableElements": [
+        {
+          "type": "bridge",
+          "position": "mid-ground, spanning the lower city",
+          "description": "Leads to the lower levels of the city, offering views of promenading figures and musical instruments."
+        },
+        {
+          "type": "passage",
+          "position": "main balcony of the airborne vessel",
+          "description": "Allows access into the airborne vessel itself."
+        }
+      ],
+      "dominantElements": [
+        "airborne vessel: shape=organic, orientation=sprawling, scale=massive, style=ornate-futuristic, surfaces=metallic-polished, glass, openings=large-glass, arched-windows, enterable=yes, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "airborne vessel",
+        "rounded glass canopy",
+        "complex underside of gears and machinery",
+        "elevated pathways and bridges",
+        "ornate domes and spires"
+      ],
+      "primaryMedia": "media-1766473728361-11q4hvyjx"
+    },
+    "niche-1766473805340-tga6hi3ir": {
+      "id": "niche-1766473805340-tga6hi3ir",
+      "type": "niche",
+      "name": "airborne vessel",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A massive, sprawling airborne city resembling a living organism, with a prominent rounded glass dome on its upper surface and a dense, complex underside. Elevated pathways and grand arches connect various levels, suggesting a highly advanced, multi-tiered metropolis. The exterior is a polished metallic hull.",
+        "colorsAndLighting": "Bathed in bright, natural daylight under a clear blue sky, with the metallic surfaces of the vessel reflecting the light. The city itself features a harmonious blend of light stone and golden metallic accents, creating a warm and inviting glow.",
+        "atmosphere": "The air is clear and crisp, with a gentle breeze carrying the distant sounds of the bustling city. The temperature is pleasant, indicative of a well-regulated environment.",
+        "materials": "Polished metallic surfaces for the exterior hull, light stone and golden metallic alloys for the city's structures. Intricate machinery and weathered brass fittings are visible.",
+        "mood": "Evokes a sense of wonder, awe, and technological advancement. The vastness and intricate design inspire feelings of optimism and ambition, suggesting a civilization at its peak.",
+        "sounds": "Distant city bustle, gentle breeze, faint whirring of machinery",
+        "spatialLayout": "Vast and multi-tiered, with interconnected levels and expansive open areas.",
+        "primary_surfaces": "Polished metallic, light stone, golden accents",
+        "secondary_surfaces": "Glass canopy, intricate gears, weathered brass fittings",
+        "accent_features": "Delicate railing, ornate domes, soaring spires",
+        "dominant": "Light sky blue",
+        "secondary": "Soft gold and light stone",
+        "accent": "Polished silver and brass",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Ornate futuristic with integrated industrial elements",
+        "cultural_tone": "Used by a highly advanced, prosperous civilization for habitation and observation.",
+        "palette_bias": "Blues, golds, silvers, whites",
+        "flora_base": "None",
+        "fauna_base": "Small white birds"
+      },
+      "primaryMedia": "media-1766473805338-k957drw8h",
+      "description": "The interior of the airborne vessel is a breathtaking expanse of organic, flowing architecture. Massive, polished metallic surfaces gleam under a bright, almost ethereal light, reflecting the intricate, ornate-futuristic designs that adorn every curve and contour. Large, arched glass openings punctuate the walls, offering panoramic views of the Sky-Gardens of Aethelburg, suspended breathtakingly below. The sprawling layout creates a sense of immense, interconnected spaces, bathed in a welcoming luminescence.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "massive",
+        "orientation": "sprawling",
+        "openings": "large-glass",
+        "openingShape": "arched",
+        "functionalType": "civic",
+        "elevation": "floating",
+        "spatialLayout": "Vast, interconnected chambers and corridors spread outward, mimicking natural, flowing forms. Polished metallic surfaces reflect the bright, abundant light, creating a sense of expansive openness within the organic hull.",
+        "requiredElements": [
+          "ornate-futuristic style",
+          "metallic-polished surfaces",
+          "glass"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "plush holographic seating",
+          "holographic display tables showcasing celestial phenomena",
+          "polished chrome railings",
+          "ambient light panels integrated into walls",
+          "living vertical gardens cascading from ceilings."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front",
+          "description": "archway grand  leading to observation deck"
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "door ornate elevator s"
+        },
+        {
+          "type": "hatch",
+          "position": "ceiling",
+          "description": "hatch access"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door discreet"
+        }
+      ],
+      "dominantElements": [
+        "airborne vessel interior: shape=organic, orientation=sprawling, scale=massive, style=ornate-futuristic, surfaces=metallic-polished, glass, openings=large-glass, arched-windows, interior_materials=polished-metal|gleaming-composite|luminescent-panels, enterable=yes, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "organic, flowing architecture",
+        "massive scale",
+        "bright, reflective interiors",
+        "ornate futuristic detailing"
+      ],
+      "searchDesc": "A sprawling airborne city with a glass dome, like a living organism, of polished metal and golden stone.",
+      "slug": "null-of-the-sky-gardens-of-aethelburg"
+    },
+    "niche-1766473847527-4rk335zc6": {
+      "id": "niche-1766473847527-4rk335zc6",
+      "type": "niche",
+      "name": "Roof Top With View",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A broad, open platform constructed from light stone, encircled by a gleaming, polished metallic railing with intricate golden filigree. A vast, clear glass dome rises from the city below, with this vista serving as its apex. Small, elegant spires and decorative golden orbs punctuate the edges of the platform. Small white birds occasionally circle overhead.",
+        "colorsAndLighting": "Bathed in bright, clear daylight. The light stone platform is illuminated, while the polished metallic railing reflects the blue sky and golden accents gleam warmly. Shadows are sharp and defined.",
+        "atmosphere": "The air is crisp and clean, with a gentle breeze rustling. The temperature is pleasant and stable. The distant hum and chimes of the city below are faintly audible.",
+        "materials": "Primary: Polished metallic surfaces (railing), light stone (platform). Secondary: Golden metallic alloys (filigree, decorative orbs), clear glass (distant dome).",
+        "mood": "Inspiring awe and serenity. A sense of expansive freedom and peaceful observation. The height and clarity of the view evoke wonder and tranquility.",
+        "sounds": "Gentle breeze, distant city hum, faint chimes, chirping birds.",
+        "spatialLayout": "An open, circular platform with a raised central area.",
+        "primary_surfaces": "Polished metallic, light stone",
+        "secondary_surfaces": "Golden metallic alloys, clear glass",
+        "accent_features": "Intricate railing design, decorative golden orbs, delicate spires",
+        "dominant": "Light sky blue",
+        "secondary": "Soft gold and light stone",
+        "accent": "Polished silver and brass",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Ornate futuristic with integrated industrial elements",
+        "cultural_tone": "Used by a highly advanced, prosperous civilization for habitation and observation.",
+        "palette_bias": "Blues, golds, silvers, whites",
+        "flora_base": "None",
+        "fauna_base": "Small white birds"
+      },
+      "primaryMedia": "media-1766473847526-tbd7jeajg",
+      "description": "An expansive rooftop terrace, adorned with ornate futuristic architecture and industrial elements, overlooks a sprawling cityscape. The open-air space is a symphony of blues, golds, and silvers, with large glass panels offering unobstructed views.",
+      "structure": {
+        "form": "tiered",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "elevation": "rooftop",
+        "spatialLayout": "A vast, multi-level rooftop terrace offering panoramic vistas. Sleek, modern structures blend with industrial accents, bathed in the cool glow of blues and silvers.",
+        "requiredElements": [
+          "rooftop",
+          "view"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "plush",
+          "modular seating in metallic hues",
+          "holographic display table projecting star charts",
+          "integrated atmospheric regulators with polished chrome accents",
+          "bioluminescent flora accents in recessed planters"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "hatch",
+          "position": "center",
+          "description": "hatch primary access  rear wall"
+        },
+        {
+          "type": "object",
+          "position": "front wall",
+          "description": "object panoramic viewport  with retractable shutters"
+        },
+        {
+          "type": "object",
+          "position": "left wall",
+          "description": "object secondary access portal"
+        },
+        {
+          "type": "object",
+          "position": "ceiling",
+          "description": "object observation dome"
+        }
+      ],
+      "dominantElements": [
+        "observation-deck: shape=tiered, orientation=sprawling, scale=large, style=ornate-futuristic, surfaces=metallic-polished, openings=large-glass, interior_materials=brushed-metal|polished-stone|glowing-panels, enterable=yes, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "panoramic city view",
+        "multi-level terrace",
+        "ornate futuristic design"
+      ],
+      "searchDesc": "Rooftop platform with vast views, polished metal, light stone, gold accents, bright daylight.",
+      "slug": "aethelburg-sky-vista"
+    },
+    "niche-1766482058311-0jyvk1o1j": {
+      "id": "niche-1766482058311-0jyvk1o1j",
+      "type": "niche",
+      "name": "The Hangar",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A colossal hangar space dominated by a massive, curved glass dome that reveals a vast expanse of clear blue sky. Polished metallic platforms, walkways, and gantries crisscross the space, designed for accessing and maintaining large airborne vessels. Visible intricate clockwork mechanisms are integrated into the structural supports, hinting at advanced engineering. Ornate golden accents highlight the edges of platforms and structural elements. A grand archway serves as the primary entrance, leading to the heart of the city, while a larger, more industrial door opens directly into the hangar bay where a magnificent airship is docked.",
+        "colorsAndLighting": "Bathed in bright, natural daylight streaming through the glass dome, casting sharp reflections on the polished metallic surfaces. The dominant colors are the light sky blue of the atmosphere visible through the dome, contrasted by the soft gold and light stone of the city's structures extending into the hangar. Polished silver and brass accents gleam, highlighting the machinery and vessel details. The overall lighting is bright and airy, with deep shadows in alcoves.",
+        "atmosphere": "The air is crisp and clean, with a gentle, cool breeze circulating throughout the vast space. The temperature is pleasantly regulated. A low, constant hum of advanced, unseen machinery permeates the air, punctuated by the metallic clinks and whirs of active maintenance or the distant calls of white birds.",
+        "materials": "The primary materials are polished metallic surfaces (silver and stainless steel) for the hangar structure and platforms, interspersed with light stone for flooring and accent walls. Golden metallic alloys are used for decorative trim and structural highlights. Intricate gears and clockwork mechanisms, possibly of weathered brass, are visible.",
+        "mood": "Evokes a sense of awe, technological mastery, and anticipation. The vastness and clarity of the view inspire wonder and a feeling of boundless possibility. There's a quiet confidence in the advanced engineering on display.",
+        "sounds": "Low hum of machinery, metallic clinks and whirs, distant bird calls, echoing footsteps on metal.",
+        "spatialLayout": "Vast, open cavernous space with a high ceiling, defined by multiple levels of platforms and walkways. Dominated by a large, curved transparent ceiling and a significant open area for airship docking.",
+        "primary_surfaces": "Polished metallic, light stone, glass canopy",
+        "secondary_surfaces": "Golden metallic alloys, intricate gears, weathered brass fittings",
+        "accent_features": "Delicate railing on observation decks, ornate golden trim along archways, visible clockwork mechanisms.",
+        "dominant": "Light sky blue",
+        "secondary": "Soft gold and light stone",
+        "accent": "Polished silver and brass",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Ornate futuristic with integrated industrial elements",
+        "cultural_tone": "Used by a highly advanced, prosperous civilization for habitation and observation.",
+        "palette_bias": "Blues, golds, silvers, whites",
+        "flora_base": "None",
+        "fauna_base": "Small white birds"
+      },
+      "primaryMedia": "media-1766482058308-2ohzg40ch",
+      "description": "The interior of a sprawling hangar, bathed in the cool blues and silvers of integrated lighting. Gilded accents on structural beams and control panels hint at an ornate, yet functional, futuristic design. Massive bay doors are visible in the distance, hinting at the sky beyond, while silver and blue machinery hums with quiet power, and the polished metallic floor reflects the vastness of the space.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "elevation": "ground-level",
+        "spatialLayout": "A vast, cavernous space designed for housing and servicing large aerial vehicles. The primary area is open and cavernous, with high ceilings and robust structural supports.",
+        "requiredElements": [
+          "hangar"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "holographic schematics projector",
+          "antigrav lift platforms",
+          "advanced diagnostic consoles",
+          "modular storage units",
+          "industrial-grade robotic arms",
+          "power core housing",
+          "atmospheric processors",
+          "maintenance access panels"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door reinforced blast"
+        },
+        {
+          "type": "object",
+          "position": "left wall",
+          "description": "object pressurized airlock"
+        },
+        {
+          "type": "object",
+          "position": "ceiling",
+          "description": "object retractable observation dome"
+        },
+        {
+          "type": "hatch",
+          "position": "center",
+          "description": "hatch access  rear wall"
+        }
+      ],
+      "dominantElements": [
+        "hangar bay: shape=rectangular, orientation=wide, scale=massive, style=ornate-futuristic-industrial, surfaces=metallic-polished, openings=large-glass, interior_materials=brushed-metal|grated-floor|ribbed-ceiling, enterable=yes, internal_atmosphere=industrial"
+      ],
+      "uniqueIdentifiers": [
+        "massive vehicle bays",
+        "industrial gantry systems",
+        "integrated control consoles"
+      ],
+      "searchDesc": "Grand observation hangar with a glass dome, showcasing airships and intricate clockwork machinery.",
+      "slug": "aethelburg-observation-hangar"
     }
   },
   "views": {},
@@ -2474,6 +3004,49 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "location-1766403526616-1v060vodu",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "location-1766403582562-lhh7og78l",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1766473713810-7zffxwdep",
+      "type": "host",
+      "children": [
+        {
+          "id": "fb9486d9-775e-462f-add5-1ba075f2aef6",
+          "type": "region",
+          "children": [
+            {
+              "id": "671c76e8-37c9-4bc9-bb5d-66a73db8e51b",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1766473805340-tga6hi3ir",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1766473847527-4rk335zc6",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1766482058311-0jyvk1o1j",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -2483,6 +3056,7 @@
   "pinnedIds": [
     "loc-1766135795180-1yakuhbry",
     "loc-1766163147994-pky3j7l9m",
-    "loc-1766391005836-21kni44v2"
+    "loc-1766391005836-21kni44v2",
+    "loc-1766473713810-7zffxwdep"
   ]
 }
