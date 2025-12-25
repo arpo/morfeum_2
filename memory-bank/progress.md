@@ -1,5 +1,29 @@
 # Progress
 
+## 2025-12-25
+
+- [x] **Comprehensive File Size Refactoring - COMPLETED**: Full 4-phase refactoring to bring all files under architectural limits
+  - [x] **Phase 1: Route Files** - Backend route files refactored to 100-200 line limits
+  - [x] **Phase 2: Backend Files** - Services and pipelines refactored to 100-250 line limits
+  - [x] **Phase 3: Frontend Logic Files** - 3/4 files refactored, 1 skipped (already modular)
+    - `useAppLogic.ts`: 344 → 115 lines (67% reduction) - extracted to 3 focused hooks
+    - `PostProcessorSystem.ts`: 466 → 252 lines (46% reduction) - extracted GLSL shaders
+    - `ParticleSystem.ts`: 462 → 420 lines (9% reduction) - extracted GLSL shaders
+    - `WorldViewRenderer.ts`: Skipped - already well-modularized with 6 helper files
+  - [x] **Phase 4: CSS Consolidation** - Analyzed and skipped (all files within limits)
+    - EntityPanelShared.module.css: 213 lines ✓
+    - SavedEntitiesModal.module.css: 212 lines ✓
+    - SpawnInputBar.module.css: 180 lines ✓
+    - App.module.css: 176 lines ✓
+  - [x] Build verification passed (`npm run build` successful)
+  - [x] Fixed React hooks violations (conditional useStore calls)
+  - New files created:
+    - `useAppInitialization.ts` (113 lines) - Data loading and theme setup
+    - `useDisplayMode.ts` (109 lines) - Display mode and depth map management
+    - `useTrainingData.ts` (67 lines) - Training data save functionality
+    - `postprocessors/shaders.ts` (209 lines) - GLSL shader strings
+    - `particles/shaders.ts` (49 lines) - GLSL shader strings
+
 ## 2025-12-19
 
 - [x] **Location Perspective Fix for GOTO Command (Dec 19, Latest)**: Fixed locations showing interior views instead of exterior
