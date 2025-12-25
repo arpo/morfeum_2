@@ -20,7 +20,7 @@ import { generateText, generateImage } from '../../services/mzoo';
 import { AI_MODELS } from '../../config/constants';
 import { analyzeHierarchy } from '../hierarchyAnalysis';
 import { deepestNodeDNAGeneration } from '../generation/prompts/locations/deepestNodeDNA';
-import { worldTreeImagePrompt } from '../generation/prompts/locations/worldTreeImagePrompt';
+import { worldTreeImagePrompt } from '../generation/prompts/locations/worldTree';
 import { parentChainDNAGeneration } from '../generation/prompts/locations/parentChainDNA';
 import { WorldTreeBuilder } from '../../services/worldTree/builder';
 import { PipelineHelper } from './shared/pipelineHelpers';

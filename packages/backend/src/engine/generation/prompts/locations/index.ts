@@ -12,5 +12,5 @@ export { completeDNAGeneration } from './completeDNAGeneration';
 
 // New optimized world tree pipeline prompts
 export { deepestNodeDNAGeneration } from './deepestNodeDNA';
-export { worldTreeImagePrompt, worldTreeImagePromptContext, type WorldTreeImagePromptParams } from './worldTreeImagePrompt';
+export { worldTreeImagePrompt, worldTreeImagePromptContext, type WorldTreeImagePromptParams } from './worldTree';
 export { parentChainDNAGeneration, type HierarchyNodeInfo } from './parentChainDNA';

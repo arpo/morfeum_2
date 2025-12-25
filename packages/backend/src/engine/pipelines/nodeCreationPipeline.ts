@@ -24,7 +24,7 @@ import { generateImage, generateText } from '../../services/mzoo';
 import { AI_MODELS } from '../../config/constants';
 import { parseJSON } from '../utils/parseJSON';
 import { deepestNodeDNAGeneration } from '../generation/prompts/locations/deepestNodeDNA';
-import { worldTreeImagePromptContext } from '../generation/prompts/locations/worldTreeImagePrompt';
+import { worldTreeImagePromptContext } from '../generation/prompts/locations/worldTree';
 import { parentChainDNAGeneration } from '../generation/prompts/locations/parentChainDNA';
 import { applyMorfeumStyle } from '../generation/shared/applyMorfeumStyle';
 import { runInteriorFlow } from './nodeCreation/interiorFlow';
