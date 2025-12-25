@@ -13,43 +13,15 @@ import type { NodeDNA } from '../../hierarchyAnalysis/types';
 import type {
   NodeType,
   Node,
-  HostNode,
-  RegionNode,
-  LocationNode,
-  NicheNode,
   CreateNodeOptions,
   CreateNodeResult,
   ParentDNAContext,
   ScenePerspective,
 } from '../types';
-import { extractParentDNAContext, mergeDNAWithInheritance } from './dnaInheritance';
+import { mergeDNAWithInheritance } from './dnaInheritance';
 import { getNodeDNAPrompt } from '../prompts/dna';
 import { getNodeImagePrompt } from '../prompts/image';
-
-/**
- * Clean up unwanted/leftover DNA fields that LLM sometimes adds
- * Removes: semantic, visual, profile (duplicates/empty)
- */
-function cleanDNAFields(dna: any): any {
-  const cleaned = { ...dna };
-  
-  // Remove leftover empty/duplicate fields
-  delete cleaned.semantic;
-  delete cleaned.visual;
-  delete cleaned.profile;
-  
-  return cleaned;
-}
-
-/**
- * Generate a slug from a name
- */
-function generateSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
-}
+import { cleanDNAFields, generateSlug, detectPerspective } from './nodeUtils';
 
 /**
  * Create a single node with DNA
@@ -264,28 +236,6 @@ async function generateNodeImage(
     imageUrl: result.data.images[0].url,
     imagePrompt,
   };
-}
-
-/**
- * Detect perspective from description
- */
-function detectPerspective(description: string): ScenePerspective {
-  const lowerDesc = description.toLowerCase();
-  
-  // Interior indicators
-  const interiorWords = ['inside', 'interior', 'room', 'hall', 'chamber', 'within', 'indoor'];
-  if (interiorWords.some(word => lowerDesc.includes(word))) {
-    return 'interior';
-  }
-
-  // Exterior indicators
-  const exteriorWords = ['outside', 'exterior', 'street', 'garden', 'rooftop', 'terrace', 'outdoor'];
-  if (exteriorWords.some(word => lowerDesc.includes(word))) {
-    return 'exterior';
-  }
-
-  // Default to exterior for most cases
-  return 'exterior';
 }
 
 // Note: buildDNAPrompt and buildImagePrompt have been replaced with 

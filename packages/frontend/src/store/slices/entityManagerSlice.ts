@@ -8,72 +8,19 @@ import type { StateCreator } from 'zustand';
 import { EntityUISlice } from './entityUISlice';
 import { 
   buildCharacterSystemPrompt, 
-  buildMinimalSystemPrompt,
-  type CharacterDetails,
-  type EnvironmentContext
+  buildMinimalSystemPrompt
 } from '../../utils/entity/buildCharacterSystemPrompt';
+import type {
+  ChatMessage,
+  DeepProfile,
+  EntityData,
+  EntityManagerSlice,
+  CharacterDetails,
+  EnvironmentContext
+} from './entityManagerTypes';
 
-export interface ChatMessage {
-  id: string;
-  role: 'system' | 'user' | 'assistant';
-  content: string;
-  timestamp: string;
-}
-
-export interface DeepProfile {
-  name: string;
-  looks: string;
-  wearing: string;
-  face: string;
-  body: string;
-  hair: string;
-  specificDetails: string;
-  style: string;
-  personality: string;
-  voice: string;
-  speechStyle: string;
-  gender: string;
-  nationality: string;
-  fictional: string;
-  copyright: string;
-  tags: string;
-}
-
-export interface EntityData {
-  spawnId: string;
-  entityName: string;
-  entityType?: 'character' | 'location';
-  entityPersonality?: string;
-  entityImage?: string;
-  imagePrompt?: string;
-  systemPrompt: string;
-  messages: ChatMessage[];
-  loading?: boolean;
-  error?: string | null;
-  deepProfile?: DeepProfile;
-}
-
-export interface EntityManagerSlice {
-  entities: Map<string, EntityData>;
-  activeEntity: string | null;
-
-  createEntity: (
-    spawnId: string, 
-    seed: any, 
-    entityType?: 'character' | 'location',
-    characterDetails?: CharacterDetails,
-    environment?: EnvironmentContext
-  ) => void;
-  updateEntityImage: (spawnId: string, imageUrl: string) => void;
-  updateEntityImagePrompt: (spawnId: string, imagePrompt: string) => void;
-  updateEntitySystemPrompt: (spawnId: string, systemPrompt: string) => void;
-  updateEntityProfile: (spawnId: string, deepProfile: DeepProfile) => void;
-  setActiveEntity: (spawnId: string) => void;
-  closeEntity: (spawnId: string) => void;
-  sendMessage: (spawnId: string, content: string) => Promise<void>;
-  setLoading: (spawnId: string, loading: boolean) => void;
-  setError: (spawnId: string, error: string | null) => void;
-}
+// Re-export types for consumers
+export type { ChatMessage, DeepProfile, EntityData, EntityManagerSlice };
 
 // Combined type for store that uses both slices
 export type EntitySlices = EntityManagerSlice & EntityUISlice;

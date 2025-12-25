@@ -11,6 +11,12 @@ import {
   deleteWorldTree as deleteWorldTreeOp, 
   deleteNodeWithChildren as deleteNodeWithChildrenOp 
 } from './treeDeletion';
+import {
+  findNodeInTreeRecursive,
+  getAncestorsRecursive,
+  removeNodeFromTreeRecursive,
+  extractTreeStructure
+} from './treeTraversal';
 
 export interface TreesSlice {
   worldTrees: TreeNode[];
@@ -26,60 +32,6 @@ export interface TreesSlice {
   getWorldNodeCount: (worldId: string) => number;
   setCompleteWorldTree: (rootNode: any) => void;
 }
-
-// Tree traversal utilities
-const findNodeInTreeRecursive = (tree: TreeNode, targetId: string): TreeNode | null => {
-  if (tree.id === targetId) return tree;
-  
-  for (const child of tree.children) {
-    const found = findNodeInTreeRecursive(child, targetId);
-    if (found) return found;
-  }
-  
-  return null;
-};
-
-const getAncestorsRecursive = (tree: TreeNode, targetId: string, path: string[] = []): string[] | null => {
-  path.push(tree.id);
-  
-  if (tree.id === targetId) {
-    return path;
-  }
-  
-  for (const child of tree.children) {
-    const found = getAncestorsRecursive(child, targetId, [...path]);
-    if (found) return found;
-  }
-  
-  return null;
-};
-
-const removeNodeFromTreeRecursive = (tree: TreeNode, targetId: string): boolean => {
-  const index = tree.children.findIndex(c => c.id === targetId);
-  if (index !== -1) {
-    tree.children.splice(index, 1);
-    return true;
-  }
-  
-  for (const child of tree.children) {
-    if (removeNodeFromTreeRecursive(child, targetId)) {
-      return true;
-    }
-  }
-  
-  return false;
-};
-
-/**
- * Extract only tree structure (id, type, children) from a node with full data.
- */
-const extractTreeStructure = (node: any): TreeNode => {
-  return {
-    id: node.id,
-    type: node.type,
-    children: node.children?.map((child: any) => extractTreeStructure(child)) || []
-  };
-};
 
 export const createTreesSlice: StateCreator<
   TreesSlice & NodesSlice & UISlice,

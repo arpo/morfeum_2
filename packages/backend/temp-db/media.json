@@ -864,6 +864,20 @@
         "model": "FLUX"
       },
       "entityRefs": []
+    },
+    "media-1766685366041-doaewvic1": {
+      "id": "media-1766685366041-doaewvic1",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a87bf78/eqwcoxUZAi0PfvVfLKvnP_551117bf7c4e425d8ca780bda0f6e54c.png",
+      "createdAt": "2025-12-25T17:56:06.041Z",
+      "metadata": {
+        "parentMedia": "media-1766659824360-obo4dclh6",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "32e0bf6d-96b1-4f88-b5a2-a9557c27a3e8"
+      ],
+      "parentMedia": "media-1766659824360-obo4dclh6"
     }
   }
 }
