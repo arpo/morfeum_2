@@ -5,50 +5,9 @@
  */
 
 import * as THREE from 'three';
-import type { ParticleConfig, Particle, ParticleBlendMode } from './types';
+import type { ParticleConfig, Particle } from './types';
 import { getPreset, DUST_PRESET } from './presets';
-
-// Map blend mode string to Three.js blending constant
-const BLEND_MODES: Record<ParticleBlendMode, THREE.Blending> = {
-  normal: THREE.NormalBlending,
-  additive: THREE.AdditiveBlending,
-  multiply: THREE.MultiplyBlending,
-};
-
-// Vertex shader - passes size and opacity to fragment shader
-const vertexShader = `
-  attribute float size;
-  attribute float opacity;
-  varying float vOpacity;
-  
-  void main() {
-    vOpacity = opacity;
-    vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
-    gl_PointSize = size * (300.0 / -mvPosition.z);
-    gl_Position = projectionMatrix * mvPosition;
-  }
-`;
-
-// Fragment shader - creates soft circular particles with fading edges
-const fragmentShader = `
-  uniform vec3 color;
-  varying float vOpacity;
-  
-  void main() {
-    // Calculate distance from center (gl_PointCoord is 0-1 for the point)
-    vec2 center = gl_PointCoord - 0.5;
-    float dist = length(center);
-    
-    // Discard pixels outside the circle
-    if (dist > 0.5) discard;
-    
-    // Soft edge falloff - smoothstep creates gradient from center to edge
-    float alpha = 1.0 - smoothstep(0.0, 0.5, dist);
-    
-    // Apply particle opacity
-    gl_FragColor = vec4(color, alpha * vOpacity);
-  }
-`;
+import { BLEND_MODES, particleVertexShader, particleFragmentShader } from './shaders';
 
 // Wind gust configuration
 interface WindGust {
@@ -143,8 +102,8 @@ export class ParticleSystem {
       uniforms: {
         color: { value: new THREE.Color(this.config.color) },
       },
-      vertexShader,
-      fragmentShader,
+      vertexShader: particleVertexShader,
+      fragmentShader: particleFragmentShader,
       transparent: true,
       blending: BLEND_MODES[this.config.blendMode] ?? THREE.NormalBlending,
       depthWrite: false,

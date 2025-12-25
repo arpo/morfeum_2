@@ -3306,6 +3306,604 @@
       ],
       "searchDesc": "Vast, empty hall within a grand Victorian mansion, filled with shadows and secrets.",
       "slug": "null-of-the-mansion"
+    },
+    "niche-1766488148448-c5u1lzh32": {
+      "id": "niche-1766488148448-c5u1lzh32",
+      "type": "niche",
+      "name": "Ritual Room",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A perfectly circular chamber with floor-to-ceiling walls of polished, black obsidian, reflecting nothing but distorted, shadowy shapes. In the center rests a rough-hewn stone altar. Flickering braziers are strategically placed around the perimeter, casting dancing shadows.",
+        "colorsAndLighting": "Dominated by absolute black from the obsidian, with the only light provided by the warm, flickering orange and red glow of the braziers. This creates a stark, high-contrast environment with deep, impenetrable shadows.",
+        "atmosphere": "The air is heavy and still, carrying a faint, metallic tang like ozone, mixed with the dry scent of ancient dust. There's an oppressive quiet, a charged stillness that speaks of potent energies.",
+        "materials": "Polished obsidian for walls, rough-hewn, dark grey stone for the altar and floor. Black iron for the braziers and door hinges.",
+        "mood": "Ominous, secretive, powerful, ancient, and potentially dangerous. Evokes a sense of foreboding and awe.",
+        "sounds": "Distant crackling of braziers, faint whispers of moving air, muffled silence.",
+        "spatialLayout": "A perfectly circular chamber.",
+        "primary_surfaces": "polished obsidian",
+        "secondary_surfaces": "rough stone, black iron",
+        "accent_features": "flickering braziers, etched floor symbols",
+        "dominant": "black (obsidian)",
+        "secondary": "orange/red (brazier light)",
+        "accent": "grey (stone altar)",
+        "ambient": "flickering brazier light",
+        "genre": null,
+        "architectural_tone": "functional, ritualistic",
+        "cultural_tone": "arcane practitioners, secretive cults",
+        "palette_bias": "black, deep reds, oranges",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1766488148447-txeqxutnb",
+      "description": "The air is thick with the scent of incense, and shadows dance in the flickering candlelight. Deep blue and gray tapestries hang from the stone walls, depicting scenes of ancient rites. An imposing stone altar stands at the far end of the room, bathed in an ethereal glow. The vaulted ceiling soars above, contributing to the room's solemn and imposing atmosphere. Tall, arched windows, lined with cool blue stained glass, cast muted patterns of light across the floor. The silence is profound, broken only by the faint crackling of the candles and the distant whisper of chanting. This is a space consecrated to ceremony, imbued with a sense of powerful, ancient magic.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "religious",
+        "elevation": "ground-level",
+        "spatialLayout": "A somber chamber designed for solemn ceremonies, with high ceilings and an air of ancient reverence.",
+        "requiredElements": [
+          "ritual"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "stone altar with ancient carvings",
+          "velvet-draped lectern",
+          "ornate candelabra with black candles",
+          "heavy iron brazier emitting ethereal smoke",
+          "antique ritualistic dagger on a velvet cushion",
+          "shelves lined with forbidden tomes",
+          "a single",
+          "high-backed obsidian chair",
+          "unsettling taxidermied raven perched on a stand"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door heavy oak"
+        },
+        {
+          "type": "passage",
+          "position": "right wall",
+          "description": "passage secret  hidden behind bookshelf"
+        },
+        {
+          "type": "window",
+          "position": "center",
+          "description": "window large stained-glass  rear wall"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door smaller ornate"
+        },
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door arched way leading to crypt below furnish: stone altar with ancient carvings"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object velvet-draped lectern"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object ornate candelabra with black candles"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object heavy iron brazier emitting ethereal smoke"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object antique ritualistic dagger on a velvet cushion"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object shelves lined with forbidden tomes"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object a single"
+        },
+        {
+          "type": "object",
+          "position": "back",
+          "description": "object high-ed obsidian chair"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object unsettling taxidermied raven perched on a stand"
+        }
+      ],
+      "dominantElements": [
+        "altar: shape=rectangular, orientation=centered, scale=small, style=ornate, surfaces=stone, openings=none, interior_materials=carved-stone|smooth-stone|vaulted-stone, enterable=no, internal_atmosphere=sacred"
+      ],
+      "uniqueIdentifiers": [
+        "flickering candlelight",
+        "aromatic incense",
+        "intricate carvings"
+      ],
+      "searchDesc": "A circular ritual chamber with polished obsidian walls and a central altar, bathed in flickering brazier light.",
+      "slug": "the-obsidian-chamber"
+    },
+    "loc-1766659745419-fr81cd182": {
+      "id": "loc-1766659745419-fr81cd182",
+      "type": "host",
+      "name": "Dalí's Dreamscape",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: A vast, impossible landscape where colossal, dreamlike creatures traverse a barren expanse under a highly stylized sky. The scale is immense, with distant, indistinct forms suggesting an infinite, surreal world.",
+        "colorsAndLighting": "Intense, saturated colors in the sky, contrasting with muted, earthy tones of the landscape. Dramatic, almost theatrical lighting.",
+        "atmosphere": "Highly charged with mystery, wonder, and a sense of the uncanny.",
+        "materials": "Implied rocky or sandy ground, ethereal forms of creatures, polished gold, dark liquids.",
+        "mood": "Profound awe, surreal mystery, existential contemplation.",
+        "sounds": "Distant, echoing roars or otherworldly hums, profound silence.",
+        "primary_surfaces": "Vast, cracked plains.",
+        "secondary_surfaces": "Ethereal, impossible structures carried by creatures.",
+        "accent_features": "Gigantic elephants with spindly legs, golden pedestals, obelisks, classical structures, distant faint figures.",
+        "dominant": "grey (elephants, sky)",
+        "secondary": "earth tones",
+        "accent": "gold, white (light)",
+        "ambient": "Dreamlike, intense, and shifting atmospheric light.",
+        "genre": "Surrealism",
+        "architectural_tone": "Classical motifs distorted and scaled unnaturally",
+        "cultural_tone": "Subconscious, dream logic",
+        "palette_bias": "surreal, high contrast",
+        "flora_base": null,
+        "fauna_base": "gigantic, surreal elephants"
+      },
+      "description": "A surreal dimension governed by the logic of dreams and subconscious imagery. Reality is fluid, and familiar forms are distorted into bizarre and awe-inspiring spectacles.",
+      "searchDesc": "A surreal dimension where dreams manifest with distorted forms and impossible physics.",
+      "slug": "dalí's-dreamscape",
+      "structure": {
+        "spatialLayout": "Endless, flat expanse that distorts perspective, with elements appearing simultaneously near and far."
+      }
+    },
+    "c2aeaa32-bc1b-4a89-b944-da3bc0ea3371": {
+      "id": "c2aeaa32-bc1b-4a89-b944-da3bc0ea3371",
+      "type": "region",
+      "name": "The Barren Plains",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "ELEVATED STREET VIEW: Vast, cracked, dry earth stretching to a dramatic horizon. Sparse, weathered scrub dots the landscape. The sky is expansive and dynamic, with shifting colors and gathering clouds.",
+        "colorsAndLighting": "Dramatic, high-contrast lighting with intense sunlight casting deep shadows. Colors shift from dusty earth tones to vibrant sky hues.",
+        "atmosphere": "Profoundly still and empty, carrying a sense of ancientness and desolation.",
+        "materials": "Cracked earth, weathered scrub, dry soil.",
+        "mood": "Existential contemplation, mystery, and desolate beauty.",
+        "sounds": "Whispering winds, the crunch of dry earth, profound silence.",
+        "primary_surfaces": "Cracked, dry earth.",
+        "secondary_surfaces": "Sparse, weathered scrub vegetation.",
+        "accent_features": "Dramatic sky, distant horizon.",
+        "dominant": "earth tones (browns, greys)",
+        "secondary": "sky blues and oranges",
+        "accent": "white (sun), darks (clouds, shadows)",
+        "ambient": "Intense, sharp daylight with dramatic shadows.",
+        "genre": null,
+        "architectural_tone": null,
+        "cultural_tone": null,
+        "palette_bias": "muted earth tones with vibrant sky contrasts",
+        "flora_base": "sparse, weathered scrub",
+        "fauna_base": null
+      },
+      "description": "An endless, desolate landscape where reality bends and surreal elements dominate. This region is characterized by cracked earth, sparse vegetation, and an immense, dramatic sky.",
+      "searchDesc": "Surreal barren plains with cracked earth and a dramatic sky.",
+      "slug": "the-barren-plains",
+      "structure": {
+        "spatialLayout": "Vast, open expanse with no discernible features beyond the immediate foreground."
+      },
+      "primaryMedia": "media-1766659777908-cy5iu59q3"
+    },
+    "ffa6fd65-3b6d-4997-b848-7f8d60760acd": {
+      "id": "ffa6fd65-3b6d-4997-b848-7f8d60760acd",
+      "type": "location",
+      "name": "The March of the Elephants",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A desolate, expansive barren plain stretches under a dramatic sky. Gigantic elephants, each supported by impossibly thin, spindly legs, move in a slow procession. One elephant carries a golden pedestal with a woman, another an obelisk, and a third an ornate classical structure.",
+        "colorsAndLighting": "The sky transitions from bright blue to warm yellow-orange with gathering dark storm clouds, illuminated by a brilliant white light source. The elephants are primarily grey and light grey, with accents of gold on the structures they carry. Shadows are long and dramatic.",
+        "atmosphere": "The air is dry and vast, carrying a sense of immense scale and quietude. There is a feeling of stillness punctuated by the slow movement of the elephants and the shifting, dynamic sky suggesting a dreamlike, ethereal quality.",
+        "materials": "The ground appears as cracked, dry earth with sparse, weathered scrub. The elephants' bodies are a rough, grey hide, contrasting with the impossibly delicate, segmented legs. Accents include polished gold, dark liquid, and stone.",
+        "mood": "The scene evokes a profound sense of awe, mystery, and existential contemplation, typical of surrealist art.",
+        "sounds": "Distant wind, subtle creaking, a low rumble, ethereal hum, faint whispers.",
+        "primary_surfaces": "cracked earth, dry plains",
+        "secondary_surfaces": "weathered scrub, rough hide",
+        "accent_features": "spindly elephant legs, golden pedestal, ornate architecture, crucifix",
+        "dominant": "grey (elephants, sky)",
+        "secondary": "yellow-orange (sky horizon), white (light source)",
+        "accent": "gold (pedestal, architecture), dark liquid (dripping hooves)",
+        "ambient": "brightly lit, with deep shadows",
+        "genre": null,
+        "architectural_tone": "ornate classical structure on elephant",
+        "cultural_tone": "Surrealist art, allegorical procession",
+        "palette_bias": "earth tones, sky colors, metallic accents",
+        "flora_base": "sparse scrub",
+        "fauna_base": "elephants"
+      },
+      "description": "A vast, barren landscape under a shifting, dynamic sky, featuring a procession of surreal elephants with impossibly long, spindly legs.",
+      "searchDesc": "Surreal elephants with spindly legs in a barren landscape under a dynamic sky.",
+      "slug": "the-march-of-the-elephants",
+      "structure": {
+        "spatialLayout": "The space is a vast, horizontal expanse with a deep sense of depth created by the receding plain and the towering sky. The procession moves diagonally across this space."
+      },
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "lower-left foreground",
+          "description": "Leads into the vast, desolate plain."
+        },
+        {
+          "type": "archway",
+          "position": "middle ground, behind third elephant",
+          "description": "Leads towards a distant horizon with indistinct figures."
+        }
+      ],
+      "dominantElements": [
+        {
+          "shape": "organic",
+          "orientation": "flowing",
+          "scale": "massive",
+          "style": "surreal",
+          "surfaces": "weathered ivory, grey hide",
+          "openings": "none",
+          "interior_materials": "n/a|n/a|n/a",
+          "enterable": "no",
+          "internal_atmosphere": "n/a"
+        },
+        {
+          "shape": "irregular",
+          "orientation": "sprawling",
+          "scale": "vast",
+          "style": "barren-plains",
+          "surfaces": "cracked earth, sparse scrub",
+          "openings": "none",
+          "interior_materials": "n/a|n/a|n/a",
+          "enterable": "no",
+          "internal_atmosphere": "n/a"
+        },
+        {
+          "shape": "irregular",
+          "orientation": "vertical",
+          "scale": "towering",
+          "style": "ornate-classical",
+          "surfaces": "gilded bronze, polished stone",
+          "openings": "minimal",
+          "interior_materials": "marble|marble|domed-stone",
+          "enterable": "yes",
+          "internal_atmosphere": "sacred"
+        }
+      ],
+      "uniqueIdentifiers": [
+        "elephants with spindly legs",
+        "nude woman on pedestal",
+        "pointed obelisk with spheres",
+        "kneeling figure with crucifix",
+        "dynamic, shifting sky"
+      ],
+      "primaryMedia": "media-1766659762251-ecfs70rks"
+    },
+    "loc-1766659811395-32lqqfyr3": {
+      "id": "loc-1766659811395-32lqqfyr3",
+      "type": "host",
+      "name": "The Persistence of Memory",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: vast sandy plain, distant golden cliffs, dreamlike sky as tiny shapes (NO individual buildings, NO facades, NO close-up details)",
+        "colorsAndLighting": "overall light and color from above, transitioning sky",
+        "atmosphere": "clear, dreamlike air, atmospheric light",
+        "materials": "dominant materials visible from distance: sand, stone",
+        "mood": "overall surreal stillness and disquiet",
+        "sounds": "distant ambient sounds of a desolate landscape",
+        "primary_surfaces": "sandy plain",
+        "secondary_surfaces": "water, cliffs, sky",
+        "accent_features": "dominant golden cliffs",
+        "dominant": "dark sand",
+        "secondary": "golden cliffs",
+        "accent": "pale blue/warm orange sky",
+        "ambient": "sky/atmospheric light",
+        "genre": "Surrealism",
+        "architectural_tone": "Natural Landscape",
+        "cultural_tone": "Dreamlike",
+        "palette_bias": "Earthy",
+        "flora_base": "Minimalist/Twisted Tree",
+        "fauna_base": "Minimalist"
+      },
+      "description": "A desolate, dreamlike coastal plain under a soft, clear sky transitions from pale blue to warm yellow and orange. Rugged, golden cliffs rise sharply from a tranquil body of water in the distance. The central foreground is a dark, sandy expanse receding into shadow.",
+      "searchDesc": "Dalí's Persistence of Memory landscape: sandy plain, golden cliffs, melting clocks.",
+      "slug": "the-persistence-of-memory",
+      "structure": {
+        "spatialLayout": "vast open plain with distant cliffs"
+      },
+      "primaryMedia": "media-1766661315709-onu4h3jhi"
+    },
+    "a951a98d-eea0-4869-b23c-dd69b9651766": {
+      "id": "a951a98d-eea0-4869-b23c-dd69b9651766",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "32e0bf6d-96b1-4f88-b5a2-a9557c27a3e8": {
+      "id": "32e0bf6d-96b1-4f88-b5a2-a9557c27a3e8",
+      "type": "location",
+      "name": "Desolate Coastal Plain",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The scene is dominated by a vast, dark, sandy plain that stretches into shadowed depths. In the distance, imposing golden cliffs rise sharply, meeting a sky that shifts from pale blue to warm oranges. Surreal, melting forms and a twisted tree add to the dreamlike quality.",
+        "colorsAndLighting": "The lighting is soft and diffuse, with warm hues dominating the horizon. The foreground is cast in deep shadow, contrasting with the golden tones of the distant cliffs. Subtle highlights catch the metallic surfaces of the melting watches.",
+        "atmosphere": "The air feels still and heavy, imbued with a sense of profound quiet and temporal distortion. There is no perceptible wind or weather, creating an unsettling, timeless tranquility.",
+        "materials": "The primary materials are dark, fine sand for the foreground, weathered wood for the block, and rough, golden stone for the cliffs. Organic, fleshy textures define the amorphous form, and metallic surfaces are seen on the watches.",
+        "mood": "The overall mood is one of surreal stillness and disquiet, evoking a sense of unease and fascination with the fluid nature of time.",
+        "sounds": "Silence, distant waves, soft wind, dripping.",
+        "primary_surfaces": "Dark, fine sand, weathered wood, rough golden stone.",
+        "secondary_surfaces": "Smooth metallic surfaces (watch frames), soft, fleshy textures.",
+        "accent_features": "Melting pocket watches, orange oval object with ants, twisted tree trunk.",
+        "dominant": "Dark sand (foreground)",
+        "secondary": "Golden cliffs (horizon)",
+        "accent": "Warm sky hues (horizon), metallic watch surfaces.",
+        "ambient": "Soft, diffused light with warm undertones.",
+        "genre": null,
+        "architectural_tone": "Surreal, Dali-esque, dreamlike landscape.",
+        "cultural_tone": "Artistic expression, surrealism, exploration of subconscious themes.",
+        "palette_bias": "Earth tones, warm oranges and yellows, deep browns and blacks, with metallic accents.",
+        "flora_base": "None",
+        "fauna_base": "Ants"
+      },
+      "description": "A dreamlike coastal plain under a soft, clear sky transitioning to warm hues at the horizon. In the distance, rugged golden cliffs rise from tranquil water. The central foreground is a dark, sandy expanse receding into shadow. EXTERIOR VIEW.",
+      "searchDesc": "Dreamlike desolate coastal plain with golden cliffs, melting clocks, and a strange fleshy form.",
+      "slug": "desolate-coastal-plain",
+      "structure": {
+        "spatialLayout": "The space is expansive and open, with a clear foreground, middle ground, and distant background. Depth is created through recession into shadow and atmospheric perspective. The layout is generally flat with vertical elements in the distance."
+      },
+      "dominantElements": [
+        "wooden block: shape=rectangular, orientation=horizontal, scale=medium, style=rustic, surfaces=weathered-wood, openings=none, interior_materials=wood|wood|wood, enterable=no, internal_atmosphere=none"
+      ],
+      "uniqueIdentifiers": [
+        "melting pocket watch",
+        "amorphous fleshy form",
+        "swarm of black ants",
+        "bare, twisted tree trunk",
+        "rugged golden cliffs"
+      ],
+      "primaryMedia": "media-1766659824360-obo4dclh6"
+    },
+    "niche-1766660020132-c7lm3fck9": {
+      "id": "niche-1766660020132-c7lm3fck9",
+      "type": "niche",
+      "name": "Inside Wooden Block",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, dark, sandy plain that stretches into shadowed depths. In the distance, imposing golden cliffs rise sharply, meeting a sky that shifts from pale blue to warm oranges. Surreal, melting forms and a twisted tree add to the dreamlike quality.",
+        "colorsAndLighting": "Soft and diffuse lighting with warm hues dominating the horizon. The foreground is cast in deep shadow, contrasting with the golden tones of the distant cliffs. Subtle highlights catch the metallic surfaces of the melting watches.",
+        "atmosphere": "Still and heavy air, imbued with a sense of profound quiet and temporal distortion. No perceptible wind or weather, creating an unsettling, timeless tranquility.",
+        "materials": "Dark, fine sand; weathered wood; rough, golden stone; organic, fleshy textures; metallic surfaces.",
+        "mood": "Surreal stillness and disquiet, evoking a sense of unease and fascination with the fluid nature of time.",
+        "sounds": "Profound silence, faint metallic hum, occasional soft organic sigh.",
+        "spatialLayout": "An open, flat plain receding into a hazy distance, framed by towering cliffs.",
+        "primary_surfaces": "dark fine sand, rough golden stone, weathered wood",
+        "secondary_surfaces": "smooth metallic surfaces, soft fleshy textures",
+        "accent_features": "melting pocket watches, orange oval object with ants, twisted tree trunk",
+        "dominant": "dark sand",
+        "secondary": "golden cliffs",
+        "accent": "warm sky hues, metallic watch surfaces",
+        "ambient": "soft diffused light with warm undertones",
+        "genre": null,
+        "architectural_tone": "surreal, Dali-esque, dreamlike landscape",
+        "cultural_tone": "artistic expression, surrealism, exploration of subconscious themes",
+        "palette_bias": "earth tones, warm oranges and yellows, deep browns and blacks, metallic accents",
+        "flora_base": "None",
+        "fauna_base": "ants"
+      },
+      "primaryMedia": "media-1766660020130-yori13el3",
+      "description": "The inside of the wooden block is a stark, enclosed space. The walls, floor, and ceiling are all constructed from rough, weathered wood. There are no windows or doors, creating a sense of absolute containment and darkness, with a faint smell of aged timber.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "null",
+        "scale": "medium",
+        "orientation": "horizontal",
+        "openings": "none",
+        "openingShape": "none",
+        "functionalType": "storage",
+        "elevation": "ground-level",
+        "spatialLayout": "The interior is a simple, unadorned rectangular space, entirely enclosed by weathered wooden planks. The horizontal orientation suggests a long, narrow chamber, devoid of any light or ventilation.",
+        "requiredElements": [
+          "wood|wood|wood"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "a single",
+          "warped grandfather clock melting over a distorted wooden crate",
+          "spectral wisps of fog drifting from the floor",
+          "a large",
+          "unblinking eye painted on the far wall that seems to follow the viewer."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object none"
+        }
+      ],
+      "dominantElements": [
+        "wooden block: shape=rectangular, orientation=horizontal, scale=medium, style=rustic, surfaces=weathered-wood, openings=none, interior_materials=wood|wood|wood, enterable=no, internal_atmosphere=none"
+      ],
+      "uniqueIdentifiers": [
+        "complete absence of openings",
+        "uninterrupted wood surfaces",
+        "claustrophobic, unlit atmosphere"
+      ],
+      "searchDesc": "Dark sandy plain with golden cliffs, melting watches, and a twisted tree under a surreal sky.",
+      "slug": "null-of-desolate-coastal-plain"
+    },
+    "location-1766661870111-b7rlk3f4e": {
+      "id": "location-1766661870111-b7rlk3f4e",
+      "type": "location",
+      "name": "Nearby Town",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast, featureless sandy plain stretching towards distant, impossibly golden cliffs under a dreamlike sky filled with abstract, colorful shapes. The overall impression is aerial and serene, yet profoundly alien.",
+        "colorsAndLighting": "Overall light and color emanate from above, casting soft, diffused illumination. The sky transitions through pale blue and warm orange hues, creating an ethereal glow.",
+        "atmosphere": "Clear, dreamlike air with a subtle, almost imperceptible shimmer. There is a sense of profound stillness, as if motion itself is reluctant to disturb the scene.",
+        "materials": "Dominant materials visible from this distance are endless stretches of dark sand and the colossal forms of stone cliffs.",
+        "mood": "Overall surreal stillness and a deep, unsettling quietude. A sense of timelessness pervades, accompanied by a gentle but persistent disquiet.",
+        "sounds": "Whispers of wind, distant echoes, the soft sigh of sand, silence, dreams.",
+        "spatialLayout": "An expansive, flat plain leading towards towering, distant geological formations, with an immense, colorful sky overhead.",
+        "primary_surfaces": "dark sand",
+        "secondary_surfaces": "golden cliffs, pale blue/warm orange sky",
+        "accent_features": "dominant golden cliffs",
+        "dominant": "dark sand",
+        "secondary": "golden cliffs",
+        "accent": "pale blue/warm orange sky",
+        "ambient": "sky/atmospheric light",
+        "genre": "Surrealism",
+        "architectural_tone": "Natural Landscape",
+        "cultural_tone": "Dreamlike",
+        "palette_bias": "Earthy",
+        "flora_base": "Minimalist/Twisted Tree",
+        "fauna_base": "Minimalist"
+      },
+      "primaryMedia": "media-1766661870108-z44qgbfrm",
+      "description": "The exterior of a nearby town unfolds as a surreal, Dali-esque landscape. Buildings with organic, melting forms rise from the ground, interconnected by flowing pathways. Warm oranges and yellows dominate the earthy tones, accented by deep browns and blacks, with occasional metallic gleams catching the light. The overall impression is one of a dreamlike, slightly unsettling, yet captivating settlement.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "civic",
+        "elevation": "ground-level",
+        "spatialLayout": "This town appears to be a collection of oddly shaped buildings that seem to melt into the surreal landscape. Structures are clustered together, hinting at a whimsical and dreamlike community.",
+        "requiredElements": [
+          "town"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center of sandy plain",
+          "description": "A rippling mirage leading into the bazaar's heart"
+        }
+      ],
+      "dominantElements": [
+        "town square: shape=organic, orientation=sprawling, scale=large, style=surreal, surfaces=weathered-stone, openings=open-passages, interior_materials=carved-stone|worn-cobblestone|arched-stone, enterable=no, internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "melting architecture",
+        "dreamlike atmosphere",
+        "surreal forms"
+      ],
+      "searchDesc": "A surreal, vast sandy plain with golden cliffs and a dreamlike sky. Home to the Timeless Bazaar.",
+      "slug": "the-timeless-bazaar"
+    },
+    "niche-1766676007720-t9xub9pi0": {
+      "id": "niche-1766676007720-t9xub9pi0",
+      "type": "niche",
+      "name": "town square",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Vast, featureless sandy plain stretching towards distant, impossibly golden cliffs under a dreamlike sky filled with abstract, colorful shapes. A colossal, smooth, dark stone monolith stands at its center. The overall impression is aerial and serene, yet profoundly alien.",
+        "colorsAndLighting": "Overall light and color emanate from above, casting soft, diffused illumination. The sky transitions through pale blue and warm orange hues, creating an ethereal glow. The monolith absorbs light, appearing almost as a void.",
+        "atmosphere": "Clear, dreamlike air with a subtle, almost imperceptible shimmer. There is a sense of profound stillness, as if motion itself is reluctant to disturb the scene. The air feels thin and ancient.",
+        "materials": "Dominant materials visible are endless stretches of dark, fine sand, the colossal forms of smooth, dark stone cliffs, and the monolithic structure.",
+        "mood": "Overall surreal stillness and a deep, unsettling quietude. A sense of timelessness pervades, accompanied by a gentle but persistent disquiet. There is an overwhelming feeling of being in a place outside of normal reality.",
+        "sounds": "A faint, resonant hum; distant, almost inaudible whispers; the profound absence of ambient noise.",
+        "spatialLayout": "An expansive, flat, circular plain defined by its edges and the central monolith, with visual cues for distant horizons.",
+        "primary_surfaces": "dark sand",
+        "secondary_surfaces": "golden cliffs, pale blue/warm orange sky",
+        "accent_features": "colossal featureless monolith, abstract sky shapes",
+        "dominant": "dark sand",
+        "secondary": "golden cliffs",
+        "accent": "pale blue/warm orange sky",
+        "ambient": "sky/atmospheric light",
+        "genre": "Surrealism",
+        "architectural_tone": "Natural Landscape",
+        "cultural_tone": "Dreamlike",
+        "palette_bias": "Earthy",
+        "flora_base": "Minimalist/Twisted Tree",
+        "fauna_base": "Minimalist"
+      },
+      "primaryMedia": "media-1766676007719-modfjv84e",
+      "description": "You are within the town square. The space is vast and cavernous, its organic form defined by irregularly shaped walls of ancient, weathered stone. Intricate carvings, depicting forgotten symbols and ethereal beings, adorn the surfaces. The floor is a mosaic of worn cobblestones, smoothed by countless unseen footsteps. Above, the ceiling is a network of massive, impossibly arched stones, some seeming to float unsupported, casting deep, shifting shadows. Open passages, framed by more carved stone, punctuate the walls, leading into unseen areas. The atmosphere is thick with a mystical, almost tangible silence, broken only by the faint echo of a distant, unidentifiable sound.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "civic",
+        "elevation": "ground-level",
+        "spatialLayout": "The interior of the town square unfolds in a sprawling, organic manner, characterized by a vast, open expanse paved with worn cobblestones. Weathered stone walls, intricately carved, rise unevenly, creating a surreal, almost dreamlike environment. Arched stone passages intermittently break the solid walls, hinting at unseen connections and depths.",
+        "requiredElements": [
+          "carved-stone walls",
+          "worn-cobblestone floor",
+          "arched-stone ceiling"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "floating orbs of light",
+          "moss-covered stone benches",
+          "ancient stone pedestal with swirling mist",
+          "crystalline flora",
+          "ethereal tapestries"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front wall",
+          "description": "archway grand"
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "passage carved stone"
+        },
+        {
+          "type": "object",
+          "position": "right wall",
+          "description": "object shimmering portal"
+        }
+      ],
+      "dominantElements": [
+        "central fountain: shape=organic, orientation=centered, scale=medium, style=surreal, surfaces=weathered-stone, openings=none, interior_materials=carved-stone|worn-cobblestone|arched-stone, enterable=no, internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "disorienting angles",
+        "whispering winds",
+        "shifting shadows",
+        "illusions of movement"
+      ],
+      "searchDesc": "A surreal town square with a monolith on a sandy plain under a dreamlike sky.",
+      "slug": "null-of-nearby-town"
     }
   },
   "views": {},
@@ -3577,6 +4175,62 @@
                   "id": "niche-1766488042869-pubbkb0al",
                   "type": "niche",
                   "children": []
+                },
+                {
+                  "id": "niche-1766488148448-c5u1lzh32",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1766659745419-fr81cd182",
+      "type": "host",
+      "children": [
+        {
+          "id": "c2aeaa32-bc1b-4a89-b944-da3bc0ea3371",
+          "type": "region",
+          "children": [
+            {
+              "id": "ffa6fd65-3b6d-4997-b848-7f8d60760acd",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1766659811395-32lqqfyr3",
+      "type": "host",
+      "children": [
+        {
+          "id": "a951a98d-eea0-4869-b23c-dd69b9651766",
+          "type": "region",
+          "children": [
+            {
+              "id": "32e0bf6d-96b1-4f88-b5a2-a9557c27a3e8",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1766660020132-c7lm3fck9",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "location-1766661870111-b7rlk3f4e",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1766676007720-t9xub9pi0",
+                  "type": "niche",
+                  "children": []
                 }
               ]
             }
@@ -3590,6 +4244,8 @@
     "loc-1766163147994-pky3j7l9m",
     "loc-1766391005836-21kni44v2",
     "loc-1766473713810-7zffxwdep",
-    "loc-1766487994842-3n52q0nre"
+    "loc-1766487994842-3n52q0nre",
+    "loc-1766659745419-fr81cd182",
+    "loc-1766659811395-32lqqfyr3"
   ]
 }
