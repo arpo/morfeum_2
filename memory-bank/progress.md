@@ -1,5 +1,21 @@
 # Progress
 
+## 2025-12-26
+
+- [x] **Dead Code Cleanup - COMPLETED**: Comprehensive analysis and removal of unused code
+  - [x] **Phase 1: Unused Imports** (5 files fixed)
+    - `Tabs.tsx`: Removed unused `useEffect`
+    - `EntityExplorer.tsx`: Removed unused `TreeNode`
+    - `WorldViewRenderer.ts`: Removed unused `ScenePresetConfig`
+    - `helpers.tsx`: Removed unused `React`
+    - `useProgressAnimation.ts`: Removed unused `ProgressStep`
+  - [x] **Phase 2: Deep Logic Review** (3 files fixed)
+    - `useEntityGeneratorLogic.ts`: Removed unused `cancelSpawn`, `activeSpawns` store fetches
+    - `nodeDNAExtractor.ts`: Removed obsolete `EXCLUSIONS`, `METADATA_FIELDS`, `generateSlug`
+    - `completionHandlers.ts`: Prefixed unused params with `_` for API consistency
+  - [x] Build verification passed (frontend and backend `tsc --noEmit`)
+  - **Design debt identified**: `EntityGeneratorState` has loading states never actually updated
+
 ## 2025-12-25
 
 - [x] **Comprehensive File Size Refactoring - COMPLETED**: Full 4-phase refactoring to bring all files under architectural limits

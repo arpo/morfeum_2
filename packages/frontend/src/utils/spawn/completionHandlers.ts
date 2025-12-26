@@ -14,7 +14,7 @@ import { expandTreeToNode } from '../tree/expansion';
  * Handle character completion
  */
 export async function handleCharacterCompletion(
-  spawnId: string,
+  _spawnId: string,
   character: any,
   store: any
 ) {
@@ -38,7 +38,7 @@ export async function handleCharacterCompletion(
  * Handle location/world tree completion
  */
 export function handleLocationCompletion(
-  spawnId: string,
+  _spawnId: string,
   worldTree: any,
   store: any,
   imageUrl?: string  // Now passed from top-level completion data
@@ -79,9 +79,9 @@ export function handleLocationCompletion(
  * This handler is a no-op since the callback handles node creation
  */
 export function handleNavigationCompletion(
-  spawnId: string,
-  completionData: any,
-  store: any
+  _spawnId: string,
+  _completionData: any,
+  _store: any
 ) {
   // Navigation completions are handled by custom callbacks in useLocationPanel
   // This is intentionally a no-op to avoid duplicate handling

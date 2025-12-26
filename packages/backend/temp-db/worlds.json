@@ -4006,6 +4006,66 @@
         "layered, textured cliff face"
       ],
       "primaryMedia": "media-1766741652422-qeydubeco"
+    },
+    "location-1766748942738-x4j49c3jd": {
+      "id": "location-1766748942738-x4j49c3jd",
+      "type": "location",
+      "name": "The Beach",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: vast dark sandy plain meeting distant golden cliffs under a dreamlike sky with tiny, shifting shapes.",
+        "colorsAndLighting": "Overall light and color from above, with a soft, ethereal glow from the sky.  The golden cliffs catch and reflect this light.",
+        "atmosphere": "Clear, dreamlike air with a palpable sense of stillness. Atmospheric light creates long, soft shadows.",
+        "materials": "Dominant: dark sand. Secondary: golden stone. Accent: sky.",
+        "mood": "Surreal stillness and a profound sense of disquiet, a feeling of being at the edge of reality.",
+        "sounds": "Whispers of wind, distant, echoing chimes, the soft sigh of sand.",
+        "spatialLayout": "Vast, flat expanse with towering, distant cliffs. A central, monumental object.",
+        "primary_surfaces": "dark sand",
+        "secondary_surfaces": "water, cliffs, sky",
+        "accent_features": "dominant golden cliffs",
+        "dominant": "dark sand",
+        "secondary": "golden cliffs",
+        "accent": "pale blue/warm orange sky",
+        "ambient": "sky/atmospheric light",
+        "genre": "Surrealism",
+        "architectural_tone": "Natural Landscape",
+        "cultural_tone": "Dreamlike",
+        "palette_bias": "Earthy",
+        "flora_base": "Minimalist/Twisted Tree",
+        "fauna_base": "Minimalist"
+      },
+      "primaryMedia": "media-1766748942735-6o8le3gs8",
+      "description": "The end of a surreal beach, where warm, ochre sands morph into an ocean of molten gold. Twisted metallic sculptures, reminiscent of skeletal remains, punctuate the landscape, their polished surfaces reflecting the alien sky in shades of deep brown and black. The air shimmers with a dreamlike quality, and the distant horizon seems to stretch into infinity.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "flowing",
+        "openings": "none",
+        "openingShape": "none",
+        "functionalType": "natural",
+        "elevation": "ground-level",
+        "spatialLayout": "A vast expanse of surreal, dreamlike sand stretches out, meeting an equally unreal ocean. Twisted, metallic forms rise from the dunes, casting long, distorted shadows.",
+        "requiredElements": [
+          "beach"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "A shimmering portal leading into the unknown."
+        }
+      ],
+      "dominantElements": [
+        "surreal-dunes: shape=organic, orientation=flowing, scale=large, style=surreal, surfaces=weathered-sand, openings=none, interior_materials=null, enterable=no, internal_atmosphere=null"
+      ],
+      "uniqueIdentifiers": [
+        " Dali-esque sand formations",
+        "metallic organic structures"
+      ],
+      "searchDesc": "Vast dark sandplain meeting golden cliffs under a surreal, colored sky. A portal awaits.",
+      "slug": "the-temporal-shoreline"
     }
   },
   "views": {},
@@ -4335,6 +4395,11 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "id": "location-1766748942738-x4j49c3jd",
+              "type": "location",
+              "children": []
             }
           ]
         }

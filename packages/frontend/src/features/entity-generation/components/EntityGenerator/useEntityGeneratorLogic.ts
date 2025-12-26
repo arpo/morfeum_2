@@ -15,8 +15,6 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
   
   // Get spawn manager from store
   const startSpawn = useStore(state => state.startSpawn);
-  const cancelSpawn = useStore(state => state.cancelSpawn);
-  const activeSpawns = useStore(state => state.activeSpawns);
 
   // Fetch sample prompts based on entity type
   useEffect(() => {

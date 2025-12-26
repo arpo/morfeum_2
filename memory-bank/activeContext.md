@@ -1,5 +1,47 @@
 # Active Context
 
+## 2025-12-26
+
+### Dead Code Cleanup - COMPLETED
+
+Comprehensive dead code analysis and cleanup across frontend and backend.
+
+#### **Phase 1: Unused Imports ✅ (5 files)**
+Removed unused imports that were flagged by TypeScript strict mode:
+
+| File | Removed Import |
+|------|----------------|
+| `Tabs.tsx` | `useEffect` |
+| `EntityExplorer.tsx` | `TreeNode` |
+| `WorldViewRenderer.ts` | `ScenePresetConfig` |
+| `helpers.tsx` | `React` |
+| `useProgressAnimation.ts` | `ProgressStep` |
+
+#### **Phase 2: Deep Logic Review ✅ (3 files)**
+
+**`useEntityGeneratorLogic.ts`** - Removed unused store fetches:
+- Removed `cancelSpawn`, `activeSpawns` from store
+- These were legacy from when component managed spawns directly
+- Now delegates to `startSpawn` from store
+
+**`nodeDNAExtractor.ts`** - Removed obsolete extraction logic:
+- Removed `EXCLUSIONS` constant (was for stripping nested arrays)
+- Removed `METADATA_FIELDS` constant (never used)
+- Removed `generateSlug` function (never called)
+- Backend now sends correct structure, old extraction logic obsolete
+
+**`completionHandlers.ts`** - Prefixed intentionally unused params:
+- `_spawnId` in `handleCharacterCompletion`, `handleLocationCompletion`
+- `_spawnId`, `_completionData`, `_store` in `handleNavigationCompletion` (intentional no-op)
+- These are intentionally unused for API consistency
+
+#### **Design Debt Identified**
+`EntityGeneratorState` interface requires loading states (`generatedSeed`, `loading`, `imageLoading`, etc.) but their setters are never called. Values are always their initial values (false/null). Future refactor could simplify this interface.
+
+#### **Build Verification**
+✅ Frontend: `tsc --noEmit` passes
+✅ Backend: `tsc --noEmit` passes
+
 ## 2025-12-25
 
 ### Comprehensive File Size Refactoring - COMPLETED

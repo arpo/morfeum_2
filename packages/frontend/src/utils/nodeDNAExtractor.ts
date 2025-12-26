@@ -33,22 +33,6 @@
 export type NodeType = 'host' | 'region' | 'location' | 'niche';
 
 /**
- * Fields to exclude for each node type
- * These are the nested child arrays that shouldn't be stored in node.dna
- */
-const EXCLUSIONS: Record<NodeType, string[]> = {
-  host: ['regions'],           // Don't store child regions array
-  region: ['locations'],       // Don't store child locations array
-  location: ['niches'],        // Don't store child niches array
-  niche: []                    // No children to exclude
-};
-
-/**
- * Metadata fields handled separately (not part of DNA content)
- */
-const METADATA_FIELDS = ['imageUrl', 'slug'];
-
-/**
  * Extract clean DNA from a backend node
  * 
  * NEW BEHAVIOR: Backend now sends correct structure with:
@@ -151,14 +135,4 @@ function mergeNonNull(target: any, source: any): void {
       target[key] = value;
     }
   }
-}
-
-/**
- * Generate URL-friendly slug from name
- */
-function generateSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
 }
