@@ -201,7 +201,26 @@ Creates: London (no image) → Camden (no image) → Pub (IMAGE)
 
 ---
 
-## 9. Two-Step Navigation Architecture
+## 9. Elevation Detection
+
+The `elevation` field in Structure determines spatial positioning:
+
+| Value | Description | Example |
+|-------|-------------|---------|
+| `ground-level` | Standard ground floor | Street-level shop |
+| `rooftop` | On top of a building | Rooftop bar |
+| `elevated` | Above ground but not rooftop | Tower room, penthouse |
+| `underground` | Below ground level | Basement, cave |
+| `floating` | Suspended in air | Floating island |
+| `suspended` | Hanging from structure | Hanging garden |
+
+**Detection**: LLM analyzes destination text during structure analysis (no extra API call).
+
+**Image prompt**: Each elevation type receives appropriate context (e.g., rooftop gets cityscape views).
+
+---
+
+## 10. Two-Step Navigation Architecture
 
 Navigation separates understanding from action:
 
@@ -227,3 +246,26 @@ Navigation separates understanding from action:
 ✅ **Do** pass full parent context when generating children  
 ✅ **Do** use `getCascadedDNA()` + `getMergedDNA()` for DNA operations  
 ✅ **Do** use `generateImage()` from `pipelines/shared/imageGeneration.ts`
+
+---
+
+## Available Slash Commands
+
+| Command | Purpose |
+|---------|---------|
+| `NEW_HOST` | Create a new world/setting |
+| `NEW_REGION` | Create a region within current host |
+| `NEW_LOCATION` | Create a location within current region |
+| `NEW_NICHE` | Create a niche/room within current location |
+| `VIEW` | Regenerate view of current node |
+| `GOTO` | Navigate to a new sibling location |
+| `GO_INSIDE` | Enter a structure to create interior niche |
+| `CREATE_CHARACTER_REAL` | Create realistic character at location |
+| `CREATE_CHARACTER_UNREAL` | Create stylized character at location |
+
+**Perspective Flags** (for `GO_INSIDE`):
+- `--exterior` - Force exterior/outdoor perspective
+- `--interior` - Force interior perspective  
+- `--open-air` - Force open-sky outdoor space
+
+**Prompt Enhancer**: Use `furnish:` prefix in prompt text for furnishing suggestions (e.g., `GO_INSIDE the cafe furnish: cozy reading nook`).

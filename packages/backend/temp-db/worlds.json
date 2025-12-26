@@ -3904,6 +3904,108 @@
       ],
       "searchDesc": "A surreal town square with a monolith on a sandy plain under a dreamlike sky.",
       "slug": "null-of-nearby-town"
+    },
+    "loc-1766741639799-vgzgqmxkv": {
+      "id": "loc-1766741639799-vgzgqmxkv",
+      "type": "host",
+      "name": "World of Aethelgard",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: vast, untamed landscapes of massive cliffs, deep canyons, and sprawling natural formations. Distant, naturally occurring features like immense rock structures and large bodies of water are visible as tiny shapes. NO individual trees, NO close-up details of flora or fauna, NO structures.",
+        "colorsAndLighting": "Dominant earthy-browns of stone, deep blues and greens of distant water bodies, and soft, atmospheric haze. Light shafts piercing through mist are key. Ambient light from a clear sky.",
+        "atmosphere": "Vast, open skies with potential for atmospheric mist in canyons. Sense of immense scale and depth.",
+        "materials": "Dominant raw, layered stone for geological features, vast expanses of water.",
+        "mood": "Profound connection to nature, immense natural power, serene beauty, awe-inspiring.",
+        "sounds": "Distant echoes of wind, faint sounds of water.",
+        "primary_surfaces": "Vast rock formations, exposed stone cliffs.",
+        "secondary_surfaces": "Large lakes, rivers, open sky.",
+        "accent_features": "Colossal, naturally formed rock spires or unusually shaped geological anomalies visible from afar.",
+        "dominant": "earthy-browns",
+        "secondary": "deep-blues",
+        "accent": "vibrant-greens",
+        "ambient": "clear-sky-light",
+        "genre": "Fantasy",
+        "architectural_tone": "Natural",
+        "cultural_tone": "Primal",
+        "palette_bias": "Earthy",
+        "flora_base": "None visible from this scale",
+        "fauna_base": "None visible from this scale"
+      },
+      "description": "A world sculpted by the slow hand of time, Aethelgard is characterized by breathtaking natural wonders and ancient, colossal geological formations. Its landscapes whisper tales of primordial forces and enduring natural artistry.",
+      "searchDesc": "Aethelgard: Breathtaking natural wonders and ancient geological formations.",
+      "slug": "world-of-aethelgard",
+      "structure": {
+        "spatialLayout": "Dominated by grand geological features, vast plains, and deep canyons, as seen from above."
+      }
+    },
+    "e701b8e5-4ef8-4320-a0ed-11dcc6e4afa9": {
+      "id": "e701b8e5-4ef8-4320-a0ed-11dcc6e4afa9",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "8008620a-c2da-4be2-8925-bca53303782f": {
+      "id": "8008620a-c2da-4be2-8925-bca53303782f",
+      "type": "location",
+      "name": "The Skyfall Precipice",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The location is dominated by a massive, irregular cliff face of layered stone, topped by a naturally formed infinity pool. A singular, organically shaped, ancient tree stands near the pool's edge, its branches reaching outwards.",
+        "colorsAndLighting": "Bright, natural light illuminates the scene, highlighting vibrant turquoise water and lush green foliage against earthy stone tones. Shafts of sunlight pierce through atmospheric mist, creating a luminous effect.",
+        "atmosphere": "The air is crisp and clear above the mist, with a palpable sense of tranquility. A gentle, cool mist rises from the canyon below, creating a soft, diffused atmosphere. The overall feeling is one of awe-inspiring serenity and untouched natural beauty.",
+        "materials": "The primary materials are rugged, layered stone for the cliffs and smooth, crystalline water for the pool. The ancient tree exhibits weathered wood textures, with vibrant green foliage providing a stark contrast.",
+        "mood": "This location evokes feelings of peace, wonder, and a profound connection to nature. It is a place of immense natural power and serene beauty.",
+        "sounds": "gentle water flow, distant wind, bird calls, mist rustling",
+        "primary_surfaces": "rugged, layered stone",
+        "secondary_surfaces": "crystalline water, weathered wood, vibrant foliage",
+        "accent_features": "cascading waterfalls, sunbeams through mist",
+        "dominant": "earthy-browns (stone)",
+        "secondary": "vibrant turquoise (water), lush greens (foliage)",
+        "accent": "golden (sunlight)",
+        "ambient": "bright, natural, slightly diffused by mist",
+        "genre": null,
+        "architectural_tone": "untamed natural grandeur",
+        "cultural_tone": "Sacred natural site, place of contemplation",
+        "palette_bias": "Earthy tones, vibrant blues and greens",
+        "flora_base": "Lush vegetation, ancient gnarled tree",
+        "fauna_base": "None"
+      },
+      "description": "A majestic natural landscape featuring a serene infinity pool perched atop a towering, rugged cliff face. The crystalline turquoise water of the pool gently spills over the edge, forming multiple delicate waterfalls that plunge into a deep, misty canyon below. A single, gnarled tree with vibrant green foliage stands prominently near the pool's edge, its roots firmly embedded in the textured, layered rock of the cliff. Lush green trees and vegetation cling to the various ledges and crevices of the ancient-looking cliffs, which extend far into the hazy distance, where shafts of sunlight pierce through the atmospheric mist. The scene is bathed in bright, natural light, highlighting the vibrant colors of the water and foliage against the earthy tones of the stone, creating an awe-inspiring and tranquil atmosphere under a clear sky.",
+      "searchDesc": "Majestic cliffside with an infinity pool, waterfalls, ancient tree, and misty canyon.",
+      "slug": "the-skyfall-precipice",
+      "structure": {
+        "spatialLayout": "The space is defined by a towering vertical cliff face that opens into a deep, expansive canyon. The infinity pool creates an illusion of limitless depth at the precipice, drawing the eye outward."
+      },
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "edge of the cliff near the pool",
+          "description": "Leads to the base of the cliff and into the misty canyon."
+        },
+        {
+          "type": "passage",
+          "position": "behind the gnarled tree",
+          "description": "An opening in the rock face, possibly leading to caves or a hidden interior."
+        }
+      ],
+      "dominantElements": [
+        "infinity-pool: shape=organic, orientation=horizontal, scale=large, style=natural, surfaces=water-glass, openings=none, interior_materials=null, enterable=no, internal_atmosphere=serene",
+        "gnarled-tree: shape=organic, orientation=vertical, scale=medium, style=rustic, surfaces=wood, openings=none, interior_materials=null, enterable=no, internal_atmosphere=null",
+        "cliff-face: shape=irregular, orientation=vertical, scale=massive, style=natural, surfaces=stone, openings=crevices, interior_materials=null, enterable=no, internal_atmosphere=null"
+      ],
+      "uniqueIdentifiers": [
+        "infinity pool overlooking a canyon",
+        "gnarled ancient tree",
+        "cascading waterfalls from the pool",
+        "sunlight shafts through mist",
+        "layered, textured cliff face"
+      ],
+      "primaryMedia": "media-1766741652422-qeydubeco"
     }
   },
   "views": {},
@@ -4237,6 +4339,23 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1766741639799-vgzgqmxkv",
+      "type": "host",
+      "children": [
+        {
+          "id": "e701b8e5-4ef8-4320-a0ed-11dcc6e4afa9",
+          "type": "region",
+          "children": [
+            {
+              "id": "8008620a-c2da-4be2-8925-bca53303782f",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -4246,6 +4365,7 @@
     "loc-1766473713810-7zffxwdep",
     "loc-1766487994842-3n52q0nre",
     "loc-1766659745419-fr81cd182",
-    "loc-1766659811395-32lqqfyr3"
+    "loc-1766659811395-32lqqfyr3",
+    "loc-1766741639799-vgzgqmxkv"
   ]
 }

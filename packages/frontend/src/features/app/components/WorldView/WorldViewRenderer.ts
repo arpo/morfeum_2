@@ -13,7 +13,6 @@ import { processAnimationFrame, renderFrame, ScissorDimensions } from './animati
 import { ParticleSystem } from './effects/particles';
 import { PostProcessorSystem } from './effects/postprocessors';
 import type { ColorEffects } from './effects/postprocessors';
-import type { ScenePresetConfig } from './effects/scenes';
 import {
   createSceneState,
   applyScenePreset,

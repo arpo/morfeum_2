@@ -4,7 +4,6 @@ import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useStore } from '@/store';
 import { Tabs, TreeView, TreeItem } from '@/components/ui';
 import { IconWorld, IconMapPin, IconInfoCircle } from '@/icons';
-import { TreeNode } from '@/store/slices/locations/types';
 import { findNodeInTree } from '@/utils/treeUtils';
 import { useEntityImages } from '@/hooks';
 import { getPrimaryMediaUrl } from '@/services/mediaService';

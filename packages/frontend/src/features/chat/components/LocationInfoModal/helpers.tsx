@@ -3,8 +3,6 @@
  * Utility functions for rendering and formatting location data
  */
 
-import React from 'react';
-
 // Helper to render array values
 export const renderArray = (arr: any[] | undefined): string => {
   if (!arr || arr.length === 0) return 'None';

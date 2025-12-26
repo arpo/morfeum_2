@@ -4,9 +4,10 @@
  * Options for creating nodes/hierarchies and their result types.
  */
 
-import type { ScenePerspective } from './scene';
-import type { ParentDNAContext } from './context';
+
+import { ParentDNAContext } from './context';
 import type { Node, NodeType, HostNode } from './nodes';
+import { ScenePerspective } from './scene';
 
 // =============================================================================
 // CREATE NODE OPTIONS

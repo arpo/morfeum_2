@@ -4,7 +4,7 @@
  */
 
 import { useMemo, useState, useEffect } from 'react';
-import type { UseProgressAnimationProps, AnimationResult, ProgressStep } from './types';
+import type { UseProgressAnimationProps, AnimationResult } from './types';
 
 /**
  * Hook that calculates animated progress values for the ProgressBar
