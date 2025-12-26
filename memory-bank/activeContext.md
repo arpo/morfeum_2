@@ -2,13 +2,48 @@
 
 ## 2025-12-26
 
-### Dead Code Cleanup - COMPLETED
+### Component Refactoring - COMPLETED (Latest)
+
+Refactored oversized frontend files to comply with architectural size limits.
+
+#### **Phase 1: ParticleSystem.ts ✅ (42% reduction)**
+
+| File | Before | After |
+|------|--------|-------|
+| `ParticleSystem.ts` | 421 lines | 245 lines |
+| `particleBehaviors.ts` | - | 131 lines (NEW) |
+| `particleHelpers.ts` | - | 130 lines (NEW) |
+
+**Extracted:**
+- `particleBehaviors.ts`: Behavior-specific movement functions (float, fall, rise, flicker, swim, wander, spiral)
+- `particleHelpers.ts`: Particle lifecycle helpers (create, respawn, wrap, lifetime, initialize)
+
+#### **Phase 2: entityManagerSlice.ts ✅ (40% reduction)**
+
+| File | Before | After |
+|------|--------|-------|
+| `entityManagerSlice.ts` | 284 lines | 169 lines |
+| `entityChatService.ts` | - | 55 lines (NEW) |
+| `entityManagerHelpers.ts` | - | 58 lines (NEW) |
+
+**Extracted:**
+- `entityChatService.ts`: Chat API communication (`sendChatMessage`, `createUserMessage`)
+- `entityManagerHelpers.ts`: Entity Map update utilities (`updateEntity`, `updateEntityMessages`, `updateSystemPromptInMessages`)
+
+#### **Files Not Refactored (Already Acceptable)**
+- `WorldViewRenderer.ts` (442 lines) - Complex renderer class already delegates to 6+ helper modules (sceneManager, stereoRenderer, cameraAnimation, animationLoop)
+- `charactersSlice.ts` (220 lines) - Within acceptable range for slice complexity
+- `treesSlice.ts` (218 lines) - Already has extracted helpers (treeDeletion.ts, treeTraversal.ts)
+
+#### **Build Verification**
+✅ Frontend: `tsc && vite build` passes
+✅ Backend: `tsc` passes
+
+### Dead Code Cleanup - COMPLETED (Earlier Today)
 
 Comprehensive dead code analysis and cleanup across frontend and backend.
 
 #### **Phase 1: Unused Imports ✅ (5 files)**
-Removed unused imports that were flagged by TypeScript strict mode:
-
 | File | Removed Import |
 |------|----------------|
 | `Tabs.tsx` | `useEffect` |
@@ -18,99 +53,38 @@ Removed unused imports that were flagged by TypeScript strict mode:
 | `useProgressAnimation.ts` | `ProgressStep` |
 
 #### **Phase 2: Deep Logic Review ✅ (3 files)**
-
-**`useEntityGeneratorLogic.ts`** - Removed unused store fetches:
-- Removed `cancelSpawn`, `activeSpawns` from store
-- These were legacy from when component managed spawns directly
-- Now delegates to `startSpawn` from store
-
-**`nodeDNAExtractor.ts`** - Removed obsolete extraction logic:
-- Removed `EXCLUSIONS` constant (was for stripping nested arrays)
-- Removed `METADATA_FIELDS` constant (never used)
-- Removed `generateSlug` function (never called)
-- Backend now sends correct structure, old extraction logic obsolete
-
-**`completionHandlers.ts`** - Prefixed intentionally unused params:
-- `_spawnId` in `handleCharacterCompletion`, `handleLocationCompletion`
-- `_spawnId`, `_completionData`, `_store` in `handleNavigationCompletion` (intentional no-op)
-- These are intentionally unused for API consistency
-
-#### **Design Debt Identified**
-`EntityGeneratorState` interface requires loading states (`generatedSeed`, `loading`, `imageLoading`, etc.) but their setters are never called. Values are always their initial values (false/null). Future refactor could simplify this interface.
-
-#### **Build Verification**
-✅ Frontend: `tsc --noEmit` passes
-✅ Backend: `tsc --noEmit` passes
+- `useEntityGeneratorLogic.ts`: Removed unused `cancelSpawn`, `activeSpawns` store fetches
+- `nodeDNAExtractor.ts`: Removed obsolete `EXCLUSIONS`, `METADATA_FIELDS`, `generateSlug`
+- `completionHandlers.ts`: Prefixed intentionally unused params with `_`
 
 ## 2025-12-25
 
 ### Comprehensive File Size Refactoring - COMPLETED
 
-**Major refactoring project completed** to bring all frontend and backend files under architectural size limits.
-
-#### **Phase 1: Route Files ✅**
-Refactored backend route files to comply with 100-200 line limits.
-
-#### **Phase 2: Backend Files ✅**
-Refactored backend services and pipelines to comply with 100-250 line limits.
-
-Key extractions included:
-- Navigation helpers extracted to utility files
-- Pipeline steps modularized
-- Handler files separated from route definitions
-
-#### **Phase 3: Frontend Logic Files ✅**
-
-| File | Before | After | Reduction | Method |
-|------|--------|-------|-----------|--------|
-| `useAppLogic.ts` | 344 lines | 115 lines | 67% | Extracted to 3 focused hooks |
-| `PostProcessorSystem.ts` | 466 lines | 252 lines | 46% | Extracted GLSL shaders |
-| `ParticleSystem.ts` | 462 lines | 420 lines | 9% | Extracted GLSL shaders |
-| `WorldViewRenderer.ts` | 443 lines | Skipped | - | Already well-modularized |
-
-**Frontend Hook Extraction Details:**
-- `useAppInitialization.ts` (113 lines) - Data loading and theme setup
-- `useDisplayMode.ts` (109 lines) - Display mode and depth map management  
-- `useTrainingData.ts` (67 lines) - Training data save functionality
-
-**GLSL Shader Extraction:**
-- `postprocessors/shaders.ts` (209 lines) - Shader strings and effect type map
-- `particles/shaders.ts` (49 lines) - Shader strings and blend mode constants
-
-**React Hooks Fix:**
-Fixed conditional hook calls in `useDisplayMode.ts` and `useTrainingData.ts` that caused "Cannot read properties of undefined" errors. Changed from conditional `useStore` calls to unconditional hook calls followed by conditional access.
-
-#### **Phase 4: CSS Consolidation ✅ (Skipped - Already Compliant)**
-
-Analyzed all 4 CSS files and found them within acceptable limits:
-- `EntityPanelShared.module.css`: 213 lines
-- `SavedEntitiesModal.module.css`: 212 lines
-- `SpawnInputBar.module.css`: 180 lines
-- `App.module.css`: 176 lines
-
-Minor duplication identified (skeleton breathing animation ~30 lines) but deemed acceptable given files are already under limits.
-
-#### **Build Verification**
-✅ `npm run build` passed successfully after all refactoring
-
-### Files Created/Modified
-
-**Frontend - App Component:**
-- `packages/frontend/src/features/app/components/App/useAppLogic.ts` - Reduced to coordinator
-- `packages/frontend/src/features/app/components/App/useAppInitialization.ts` - NEW
-- `packages/frontend/src/features/app/components/App/useDisplayMode.ts` - NEW
-- `packages/frontend/src/features/app/components/App/useTrainingData.ts` - NEW
-
-**Frontend - WorldView Effects:**
-- `packages/frontend/src/features/app/components/WorldView/effects/postprocessors/shaders.ts` - NEW
-- `packages/frontend/src/features/app/components/WorldView/effects/postprocessors/PostProcessorSystem.ts` - Reduced
-- `packages/frontend/src/features/app/components/WorldView/effects/particles/shaders.ts` - NEW
-- `packages/frontend/src/features/app/components/WorldView/effects/particles/ParticleSystem.ts` - Reduced
+See progress.md for full details on:
+- Phase 1: Route Files
+- Phase 2: Backend Files  
+- Phase 3: Frontend Logic Files (useAppLogic.ts, PostProcessorSystem.ts, ParticleSystem.ts shaders)
+- Phase 4: CSS Consolidation
 
 ## Current Focus
-- ✅ **COMPLETED**: Comprehensive file size refactoring (all 4 phases)
+
+- ✅ **COMPLETED**: Component refactoring (ParticleSystem, entityManagerSlice)
+- ✅ **COMPLETED**: Dead code cleanup
 - ✅ **COMPLETED**: Build verification passed
 - All files now comply with architectural size limits
+
+## Files Created/Modified (Today)
+
+**Frontend - Particles:**
+- `packages/frontend/src/features/app/components/WorldView/effects/particles/ParticleSystem.ts` - Reduced from 421 to 245 lines
+- `packages/frontend/src/features/app/components/WorldView/effects/particles/particleBehaviors.ts` - NEW (131 lines)
+- `packages/frontend/src/features/app/components/WorldView/effects/particles/particleHelpers.ts` - NEW (130 lines)
+
+**Frontend - Store:**
+- `packages/frontend/src/store/slices/entityManagerSlice.ts` - Reduced from 284 to 169 lines
+- `packages/frontend/src/store/slices/entityChatService.ts` - NEW (55 lines)
+- `packages/frontend/src/store/slices/entityManagerHelpers.ts` - NEW (58 lines)
 
 ## Previous Context (Dec 19)
 

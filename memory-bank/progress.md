@@ -2,6 +2,21 @@
 
 ## 2025-12-26
 
+- [x] **Component Refactoring - COMPLETED (Latest)**: Refactored oversized frontend files
+  - [x] **Phase 1: ParticleSystem.ts** (42% reduction)
+    - `ParticleSystem.ts`: 421 → 245 lines
+    - Created `particleBehaviors.ts` (131 lines) - behavior movement functions
+    - Created `particleHelpers.ts` (130 lines) - particle lifecycle helpers
+  - [x] **Phase 2: entityManagerSlice.ts** (40% reduction)
+    - `entityManagerSlice.ts`: 284 → 169 lines
+    - Created `entityChatService.ts` (55 lines) - chat API communication
+    - Created `entityManagerHelpers.ts` (58 lines) - entity Map update utilities
+  - [x] **Files skipped** (already acceptable):
+    - `WorldViewRenderer.ts` (442 lines) - delegates to 6+ helper modules
+    - `charactersSlice.ts` (220 lines) - within acceptable range
+    - `treesSlice.ts` (218 lines) - has extracted helpers already
+  - [x] Build verification passed (frontend and backend)
+
 - [x] **Dead Code Cleanup - COMPLETED**: Comprehensive analysis and removal of unused code
   - [x] **Phase 1: Unused Imports** (5 files fixed)
     - `Tabs.tsx`: Removed unused `useEffect`
