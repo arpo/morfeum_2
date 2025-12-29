@@ -262,8 +262,79 @@
       ],
       "searchDesc": "A basement room with a fantastical, miniature house in the center, surrounded by salvaged materials and industrial remnants.",
       "slug": "the-whimsical-shelter"
+    },
+    "loc-1767018461592-y3ymsdsjg": {
+      "id": "loc-1767018461592-y3ymsdsjg",
+      "type": "location",
+      "name": "house to a room with big windows with view of the surrounding",
+      "spaceType": "structure",
+      "dna": {},
+      "description": "Structure: house to a room with big windows with view of the surrounding",
+      "searchDesc": "house to a room with big windows with view of the surrounding",
+      "slug": "house-to-a-room-with-big-windows-with-view-of-the-surrounding",
+      "isPassThrough": true
+    },
+    "niche-1767018471089-xca2sk3g3": {
+      "id": "niche-1767018471089-xca2sk3g3",
+      "type": "niche",
+      "name": "whimsical house interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A warm and inviting living space, furnished for comfort and to maximize the stunning outdoor views. Natural light floods the room.",
+        "colorsAndLighting": "Bright and airy, with sunlight streaming through the large windows. Warm, ambient lighting from lamps and a fireplace creates a cozy atmosphere in the evenings.",
+        "atmosphere": "Peaceful and serene, filled with natural light and the gentle sounds of nature from outside.",
+        "materials": "Dominantly natural materials: polished hardwood floors, exposed wooden beams, comfortable fabric upholstery, and stone for the fireplace. The windows are large panes of clear glass.",
+        "mood": "Tranquil, inviting, and connected to nature. A sense of peace and relaxation.",
+        "sounds": "Soft murmurs of nature, crackling fireplace, distant birdsong.",
+        "spatialLayout": "Open plan with a central seating area oriented towards the windows. Ample space for movement and relaxation.",
+        "primary_surfaces": "Polished hardwood floors, plastered and painted walls, large glass window panes.",
+        "secondary_surfaces": "Exposed wooden ceiling beams, stone fireplace surround, fabric upholstery.",
+        "accent_features": "A well-stocked bookshelf, decorative houseplants, framed landscape art.",
+        "dominant": "Natural light",
+        "secondary": "Warm wood tones",
+        "accent": "Subtle earthy greens and blues from the view",
+        "ambient": "Bright, airy, warm",
+        "genre": null,
+        "architectural_tone": "Modern Rustic",
+        "cultural_tone": "Nature-inspired, comfortable living",
+        "palette_bias": "Earthy tones, natural greens and blues, warm wood hues",
+        "flora_base": "Houseplants, natural outdoor flora visible",
+        "fauna_base": "Birds, small wildlife visible from windows"
+      },
+      "primaryMedia": "media-1767018471088-kpp51tp8w",
+      "description": "You are inside a small, whimsically shaped house constructed entirely of wood. The interior is warm and inviting, with smooth, curved wooden walls that create an organic flow. Natural light pours in through a series of elegant, arched windows that offer stunning, expansive views of the surrounding area. The air feels snug and comforting.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "small",
+        "orientation": "centered",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "The interior of the whimsical house is a single, cozy room with curving wooden walls and a central focus. Light streams in through large, arched windows that offer panoramic views of the surrounding environment.",
+        "requiredElements": [
+          "big windows with view of the surrounding"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "side",
+          "description": "leads to the \"Basement\""
+        }
+      ],
+      "dominantElements": [
+        "whimsical house: shape=organic, orientation=centered, scale=small, style=ornate, surfaces=wood, openings=arched-windows, interior_materials=wood|wood|wood, enterable=yes, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "curving wooden walls",
+        "large arched windows",
+        "cozy atmosphere"
+      ],
+      "searchDesc": "Living room with large windows overlooking nature, cozy seating, and a fireplace.",
+      "slug": "interior-of-house-to-a-room-with-big-windows-with-view-of-the-surrounding"
     }
-    
   },
   "views": {},
   "worldTrees": [
@@ -288,7 +359,17 @@
                   "id": "niche-1767018304000-ja53jk3lt",
                   "type": "niche",
                   "children": [
-                    
+                    {
+                      "id": "loc-1767018461592-y3ymsdsjg",
+                      "type": "location",
+                      "children": [
+                        {
+                          "id": "niche-1767018471089-xca2sk3g3",
+                          "type": "niche",
+                          "children": []
+                        }
+                      ]
+                    }
                   ]
                 }
               ]
