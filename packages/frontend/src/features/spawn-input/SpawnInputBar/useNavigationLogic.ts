@@ -18,7 +18,13 @@ function getDefaultNavigationArg(command: string, node: any): string | null {
   if (command === 'GO_INSIDE') {
     const dominantElements = node.dominantElements || node.structure?.dominantElements || [];
     if (dominantElements.length > 0) {
-      return dominantElements[0];
+      const elem = dominantElements[0];
+      // Handle object-type dominantElements (new structure with shape, style, etc.)
+      if (typeof elem === 'object' && elem !== null) {
+        // Build description from object properties
+        return elem.style || `${elem.shape || 'main'} ${elem.orientation || ''} structure`.trim();
+      }
+      return String(elem);
     }
   } else if (command === 'GOTO') {
     const navigableElements = node.navigableElements || node.structure?.navigableElements || [];
