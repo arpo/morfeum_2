@@ -203,7 +203,12 @@ export async function handleNavigationCommand(
               {
                 node: completedData.node,
                 parentNodeId: capturedParentNodeId,
-                imageUrl: completedData.imageUrl
+                imageUrl: completedData.imageUrl,
+                // Pass-through location from GO_INSIDE (for proper hierarchy)
+                passThroughLocation: completedData.passThroughLocation,
+                // CRITICAL: Use nicheParentId from completion event (pass-through location ID)
+                // This overrides the stale capturedParentNodeId
+                nicheParentId: completedData.nicheParentId
               },
               capturedCurrentNode
             );

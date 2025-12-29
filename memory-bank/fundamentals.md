@@ -20,6 +20,7 @@ The world is structured in **4 layers**. Not all layers are required - a world c
 - A world can be just one Host - layers are added as needed
 - Children inherit from parents via the DNA system
 - Regions can be "pass-through" (see below)
+- Locations can be nested within niches (for structures inside spaces)
 
 ### Pass-Through Regions
 
@@ -55,6 +56,38 @@ Pass-through regions are for **GENERIC/UNDEFINED** places where no specific know
 - Faster creation (no LLM call for region DNA)
 - Can add real sibling regions later
 - DNA flows directly from host to location
+
+### Nested Structures (Pass-Through Locations)
+
+When using `GO_INSIDE` to enter a distinct structure from within a niche (e.g., a little house inside a basement), the system automatically creates a **pass-through location** for that structure:
+
+```
+Basement Hall (niche)
+  └── little house (location, isPassThrough=true) ← AUTO-CREATED
+        └── little house interior (niche) ← Where user lands
+```
+
+| Aspect | Behavior |
+|--------|----------|
+| **Trigger** | `GO_INSIDE` from a niche targeting a structure |
+| **Creates** | Pass-through location + interior niche |
+| **DNA** | Empty on location - inherits from ancestors |
+| **GOTO behavior** | Creates siblings under the location ✓ |
+| **No LLM call** | Location is created instantly |
+
+**Why this matters:**
+- `GOTO` from inside the structure creates sibling rooms correctly
+- DNA inheritance works through the location
+- Each structure can have its own distinct interior spaces
+
+**Example flow:**
+```
+/GO_INSIDE the little house    → Creates location + interior niche
+/GOTO the room on the right    → Creates sibling niche under "little house" location
+/GOTO the kitchen              → Creates another sibling niche
+```
+
+All rooms are siblings under the "little house" location, not under the basement.
 
 ---
 

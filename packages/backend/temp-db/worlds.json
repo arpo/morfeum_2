@@ -269,85 +269,6 @@
       ],
       "searchDesc": "Vast basement hall with a tiny, cozy house at its center. Shadows abound.",
       "slug": "the-shadowed-hearth"
-    },
-    "niche-1767011931586-2ts43bjzm": {
-      "id": "niche-1767011931586-2ts43bjzm",
-      "type": "niche",
-      "name": "little house",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A tiny, surprisingly furnished interior. Walls are a mix of rough-hewn timber and perhaps some packed earth or stone. A miniature hearth is the focal point, with a small, sturdy wooden table and chairs nearby. Shelves are packed with tiny objects.",
-        "colorsAndLighting": "Dominated by the warm, flickering amber and orange light from the hearth. The walls are a mix of deep browns and muted earthy tones. Shadows are present but softened by the ambient glow.",
-        "atmosphere": "Warm and inviting, with a palpable sense of coziness and safety. The air is still, carrying the comforting scent of woodsmoke and perhaps dried herbs.",
-        "materials": "Rough-hewn dark wood for furniture and wall accents, packed earth or rough stone for walls, a small stone hearth, woven textiles for the rug.",
-        "mood": "Comforting, secure, and a refuge from the cold vastness outside. A sense of quiet contentment and humble living.",
-        "sounds": "Crackling fire, soft creak of wood, distant water drip (from hall)",
-        "spatialLayout": "Compact and intimate, centered around a hearth.",
-        "primary_surfaces": "Dark, weathered wood (interior walls and furniture)",
-        "secondary_surfaces": "Rough stone (hearth), packed earth (some wall sections), woven fibers (rug)",
-        "accent_features": "Gleaming embers in the hearth, tiny ceramic or wooden ornaments on shelves, a miniature, well-tended fire.",
-        "dominant": "Deep amber",
-        "secondary": "Muted earth tones",
-        "accent": "Dark brown",
-        "ambient": "Warm, flickering",
-        "genre": null,
-        "architectural_tone": "miniature folk dwelling",
-        "cultural_tone": "forgotten refuge, hidden hearth",
-        "palette_bias": "earth tones, warm amber",
-        "flora_base": "overgrown, gnarled oak trees, thorny bushes, creeping ivy",
-        "fauna_base": "scurrying rodents"
-      },
-      "primaryMedia": "media-1767011931585-3ddxl0gdr",
-      "description": "The interior of the little house is a snug and intimate space. Walls are clad in warm, weathered wood-paneling, lending a rustic and antique charm. Underfoot, worn carpet absorbs sound, contributing to the cozy ambiance. The ceiling, a simple plaster surface, offers a smooth contrast to the textured walls. Despite its minimal openings, the space feels inviting and sheltered.",
-      "structure": {
-        "form": "compact",
-        "roofType": "null",
-        "scale": "small",
-        "orientation": "compact",
-        "openings": "minimal",
-        "openingShape": "irregular",
-        "functionalType": "residential",
-        "elevation": "ground-level",
-        "spatialLayout": "A compact, single-room interior, efficiently laid out with minimal wasted space. The layout emphasizes a cozy and contained feel, reflecting its small scale.",
-        "requiredElements": [
-          "wood-paneling",
-          "worn-carpet",
-          "plaster"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "miniature hearth with glowing embers",
-          "tiny wooden table with carved stools",
-          "shelves of dried herbs and roots",
-          "woven straw bedding"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "front wall",
-          "description": "door rough-hewn wooden"
-        },
-        {
-          "type": "archway",
-          "position": "right wall",
-          "description": "archway small stone  to deeper tunnel"
-        }
-      ],
-      "dominantElements": [
-        "little house interior: shape=compact, orientation=centered, scale=small, style=weathered-Victorian, surfaces=wood-and-stone, openings=minimal, interior_materials=wood-paneling|worn-carpet|plaster, enterable=yes, internal_atmosphere=cozy"
-      ],
-      "uniqueIdentifiers": [
-        "paneled walls",
-        "worn flooring",
-        "plastered ceiling",
-        "cozy atmosphere"
-      ],
-      "searchDesc": "Cozy interior of a tiny house, stone hearth, miniature furniture, warm amber light.",
-      "slug": "interior-of-little-house"
     }
   },
   "views": {},
@@ -373,11 +294,7 @@
                   "id": "niche-1767011903575-8u3a81s3c",
                   "type": "niche",
                   "children": [
-                    {
-                      "id": "niche-1767011931586-2ts43bjzm",
-                      "type": "niche",
-                      "children": []
-                    }
+                    
                   ]
                 }
               ]

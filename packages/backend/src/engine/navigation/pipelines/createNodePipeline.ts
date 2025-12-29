@@ -37,6 +37,11 @@ export interface CreateNodeOptions {
   resolvedParentDNA?: any;
   /** Unified command context (new architecture) */
   commandContext?: CommandContext;
+  /** Pass-through location created before entering structure (for GO_INSIDE from niche) */
+  passThroughLocation?: {
+    node: any;
+    parentId: string;  // The niche ID that the location was added under
+  };
 }
 
 /**
@@ -171,11 +176,25 @@ export async function runCreateLocationNodePipeline(
 
     // Only send completion event if not a sub-pipeline
     if (helper && !options?.isSubPipeline) {
-      helper.completed('Node created successfully', { 
+      // Build completion data with optional pass-through location for frontend to sync
+      const completionData: Record<string, any> = { 
         node: nodeResult.node, 
         imageUrl: nodeResult.imageUrl, 
         imagePrompt: nodeResult.imagePrompt 
-      });
+      };
+      
+      // Include pass-through location if created (GO_INSIDE from niche)
+      // Frontend needs this to add to its store before saving
+      if (options?.passThroughLocation) {
+        completionData.passThroughLocation = options.passThroughLocation;
+        // CRITICAL: The niche's parent is the pass-through location, NOT the original parent
+        // Frontend needs this because it captured parentNodeId BEFORE pass-through was created
+        completionData.nicheParentId = options.passThroughLocation.node.id;
+        console.log(`[CreateNodePipeline] Including pass-through location in completion event: ${options.passThroughLocation.node.id}`);
+        console.log(`[CreateNodePipeline] Niche parent ID for frontend: ${options.passThroughLocation.node.id}`);
+      }
+      
+      helper.completed('Node created successfully', completionData);
     }
 
     return nodeResult;

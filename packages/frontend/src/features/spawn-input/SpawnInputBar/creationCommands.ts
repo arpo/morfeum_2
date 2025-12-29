@@ -218,15 +218,22 @@ async function handleNewWorldCommand(
 
 /**
  * Handle node creation from navigation (GO_INSIDE creating a niche)
+ * Also handles pass-through locations that need to be added to the store
  */
 export async function handleNodeCreation(
-  navigation: { node: any; parentNodeId?: string; imageUrl?: string },
+  navigation: { 
+    node: any; 
+    parentNodeId?: string; 
+    imageUrl?: string;
+    passThroughLocation?: { node: any; parentId: string };  // Pass-through location from GO_INSIDE
+    nicheParentId?: string;  // The correct parent ID for the niche (from completion event)
+  },
   currentNode: any
 ): Promise<void> {
-  const { node, parentNodeId, imageUrl } = navigation;
+  const { node, parentNodeId, imageUrl, passThroughLocation, nicheParentId } = navigation;
   
   const createNodeInStore = useLocationsStore.getState().createNode;
-  createNodeInStore(node);
+  const addNodeToTree = useLocationsStore.getState().addNodeToTree;
   
   const currentWorldTrees = useLocationsStore.getState().worldTrees;
   const worldTree = currentWorldTrees.find(tree => {
@@ -242,10 +249,38 @@ export async function handleNodeCreation(
     return;
   }
   
-  const correctParentId = parentNodeId || currentNode.id;
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PASS-THROUGH LOCATION: Add to store first if present
+  // This ensures proper hierarchy: niche → pass-through location → interior niche
+  // ═══════════════════════════════════════════════════════════════════════════
+  let worldTreeId = worldTree.id;
   
-  const addNodeToTree = useLocationsStore.getState().addNodeToTree;
-  addNodeToTree(worldTree.id, correctParentId, node.id, node.type);
+  if (passThroughLocation) {
+    console.log(`[handleNodeCreation] Adding pass-through location: ${passThroughLocation.node.id}`);
+    createNodeInStore(passThroughLocation.node);
+    addNodeToTree(worldTreeId, passThroughLocation.parentId, passThroughLocation.node.id, 'location');
+    
+    // IMPORTANT: Re-fetch addNodeToTree after adding pass-through location
+    // The tree state was updated, so we need a fresh reference for the next operation
+    // The worldTreeId stays the same, but the tree structure has changed
+  }
+  
+  // Add the main node to store
+  createNodeInStore(node);
+  
+  // Determine correct parent:
+  // 1. Use nicheParentId from completion event (pass-through location ID) if present
+  // 2. Fall back to parentNodeId (stale - captured before pass-through was created)
+  // 3. Fall back to current node ID
+  const correctParentId = nicheParentId || parentNodeId || currentNode.id;
+  
+  if (nicheParentId) {
+    console.log(`[handleNodeCreation] Using nicheParentId from completion event: ${nicheParentId}`);
+  }
+  
+  // Get fresh addNodeToTree reference to ensure we're working with updated tree state
+  const addNodeToTreeFresh = useLocationsStore.getState().addNodeToTree;
+  addNodeToTreeFresh(worldTreeId, correctParentId, node.id, node.type);
   
   const saveToBackend = useLocationsStore.getState().saveToBackend;
   await saveToBackend();
