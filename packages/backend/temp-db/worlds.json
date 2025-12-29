@@ -1,6 +1,393 @@
 {
-  "nodes": {},
+  "nodes": {
+    "loc-1767011477009-bkwk62qyy": {
+      "id": "loc-1767011477009-bkwk62qyy",
+      "type": "host",
+      "name": "Deserted Swedish Town",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL/SATELLITE VIEW: A cluster of small, scattered wooden structures nestled within a vast, rolling landscape of muted green fields and dark, dense pine forests. Distant, shimmering lakes reflect a pale, overcast sky.",
+        "colorsAndLighting": "Overall muted and desaturated, dominated by the pale grey light of an overcast sky, with patches of deep forest green and the dull brown of decaying wood.",
+        "atmosphere": "Still and heavy, with a pervasive dampness and the faint scent of pine needles and wet earth. An occasional, almost imperceptible breeze rustles through the distant trees.",
+        "materials": "Predominantly dark, weathered wood from the scattered buildings and the dense pine forests that encircle the settlement. Patches of dull, grey-brown earth and the occasional gleam of water.",
+        "mood": "Overwhelmingly melancholic and desolate, evoking a profound sense of abandonment and lost memories. A quiet stillness hangs heavy, hinting at stories untold.",
+        "sounds": "The distant, mournful cry of a lone bird, the rustle of unseen creatures in the undergrowth, and the almost inaudible sigh of the wind through the trees.",
+        "primary_surfaces": "The weathered wooden roofs of scattered, low-lying buildings and the dense canopy of pine forests.",
+        "secondary_surfaces": "Vast, open fields of muted green and patches of dark, still water.",
+        "accent_features": "The occasional glint of sunlight on a distant lake, the dark silhouette of a church steeple barely visible through the trees.",
+        "dominant": "muted greens",
+        "secondary": "weathered wood brown",
+        "accent": "pale grey",
+        "ambient": "overcast sky light",
+        "genre": "Horror",
+        "architectural_tone": "Rural Decay",
+        "cultural_tone": "Nordic Melancholy",
+        "palette_bias": "Desaturated Earth Tones",
+        "flora_base": "Pine Forest",
+        "fauna_base": "Forest Wildlife"
+      },
+      "description": "A forgotten settlement in the Swedish countryside, now shrouded in silence and the melancholic whispers of the past. Dilapidated wooden structures and overgrown paths hint at a once-thriving community.",
+      "searchDesc": "Forgotten Swedish town, silent, melancholic, wooden structures, overgrown paths",
+      "slug": "deserted-swedish-town",
+      "structure": {
+        "spatialLayout": "A loosely organized collection of buildings spread across the landscape, connected by faint, winding tracks. The surrounding natural geography dictates the settlement's sparse placement."
+      }
+    },
+    "8b70e1fe-a2f2-4fb4-9f6c-f56a8298d068": {
+      "id": "8b70e1fe-a2f2-4fb4-9f6c-f56a8298d068",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "dc7a7c92-a607-4fd0-972f-c57cc8d4fca6": {
+      "id": "dc7a7c92-a607-4fd0-972f-c57cc8d4fca6",
+      "type": "location",
+      "name": "The Crimson Manor",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive, sprawling Victorian manor house with an irregular, decaying silhouette. Its scale is imposing, conveying a sense of lost grandeur. Notable features include a prominent, darkened facade and signs of severe neglect.",
+        "colorsAndLighting": "Dominated by muted, desaturated colors like deep crimsons, faded greys, and earthy browns. Lighting is dim and fractured, with weak shafts of pale light struggling through dusty windows, creating long, deep shadows.",
+        "atmosphere": "The air is heavy with the scent of dust, decay, and damp. A palpable stillness pervades, broken only by the whisper of wind through broken panes and the occasional creak of aged timber. The temperature is unnaturally cool, even on a warm day.",
+        "materials": "Primarily weathered stone and rotting wood form the exterior structure. Interior surfaces are a mix of dark, age-stained wood paneling, threadbare rugs, and crumbling plaster walls, all coated in a thick layer of dust.",
+        "mood": "The mood is overwhelmingly melancholic and foreboding, evoking a sense of dread and sorrow for its past opulence. It feels like a place where time has stopped, leaving only ghosts and regret.",
+        "sounds": "wind, creaking, rustling, distant groans, echoing drips, scurrying",
+        "primary_surfaces": "weathered grey stone, rotting dark wood",
+        "secondary_surfaces": "dusty plaster, faded velvet, tarnished brass",
+        "accent_features": "crimson stained glass, gargoyle carvings, gnarled oak trees",
+        "dominant": "deep crimson (window), secondary",
+        "secondary": "faded grey (stone), primary",
+        "accent": "dark brown (wood), accent",
+        "ambient": "dim, spectral",
+        "genre": null,
+        "architectural_tone": "weathered Victorian Gothic with elements of decay",
+        "cultural_tone": "abandoned aristocratic residence, haunted dwelling",
+        "palette_bias": "earth tones, muted jewel tones, greys",
+        "flora_base": "overgrown, gnarled oak trees, thorny bushes, creeping ivy",
+        "fauna_base": "scurrying rodents, nesting birds, spectral apparitions"
+      },
+      "description": "A dilapidated, once grand manor house, rumored to be haunted. EXTERIOR VIEW.",
+      "searchDesc": "Haunted Victorian manor in a deserted Swedish town, featuring weathered stone, rotting wood, and a creepy interior.",
+      "slug": "the-crimson-manor",
+      "structure": {
+        "spatialLayout": "The manor's layout is complex and sprawling, with numerous rooms and corridors likely interconnected in a disorienting fashion. Its depth is significant, with many shadowed recesses and unseen areas."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center of facade",
+          "description": "Leads inside the manor."
+        },
+        {
+          "type": "window",
+          "position": "second story, left side",
+          "description": "Offers a glimpse into a dark, dusty room."
+        },
+        {
+          "type": "window",
+          "position": "second story, right side",
+          "description": "Reveals a similar dark interior, perhaps a bedroom."
+        }
+      ],
+      "dominantElements": [
+        "The Crimson Manor: shape=irregular, orientation=sprawling, scale=massive, style=victorian, surfaces=weathered-stone-and-rotting-wood, openings=minimal, interior_materials=wood-paneled|dusty-rugs|cobwebbed-plaster, enterable=yes, internal_atmosphere=creepy"
+      ],
+      "uniqueIdentifiers": [
+        "Crimson stained glass window above the main entrance",
+        "Overgrown, gnarled oak trees surrounding the property",
+        "A lone, rusted weathervane in the shape of a crow",
+        "Crumbling stone gargoyles flanking the entrance steps",
+        "The overwhelming sense of decay and neglect"
+      ],
+      "primaryMedia": "media-1767011494699-psrw4e8c1"
+    },
+    "niche-1767011521425-7ijoscod3": {
+      "id": "niche-1767011521425-7ijoscod3",
+      "type": "niche",
+      "name": "The Crimson Manor",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, high-ceilinged hall with sections of crumbling plaster revealing damp stone beneath. Skeletal remains of once-ornate furniture are scattered, draped in cobwebs. The air is thick with dust motes dancing in weak light beams.",
+        "colorsAndLighting": "Dominated by deep, desaturated crimsons and faded greys. Lighting is dim and fractured, with weak shafts of pale light struggling through a large, partially shattered crimson stained glass window, casting eerie, elongated shadows.",
+        "atmosphere": "The air is heavy with the scent of dust, decay, and damp earth. A palpable stillness pervades, broken only by the whisper of wind through broken panes and the occasional creak of aged timber. The temperature is unnaturally cool.",
+        "materials": "Primarily crumbling plaster walls revealing weathered stone beneath, interspersed with sections of dark, age-stained wood paneling and threadbare, moth-eaten rugs.",
+        "mood": "The mood is overwhelmingly melancholic and foreboding, evoking a profound sense of loss and spectral loneliness.",
+        "sounds": "whispers, creaks, distant moans, shuffling, wind, dripping",
+        "spatialLayout": "A large, open hall with significant areas of structural decay and debris.",
+        "primary_surfaces": "crumbling plaster, weathered grey stone",
+        "secondary_surfaces": "rotting dark wood, threadbare rugs",
+        "accent_features": "shattered crimson stained glass, gargoyle carvings on damaged cornices, tattered velvet drapery",
+        "dominant": "faded grey",
+        "secondary": "deep crimson",
+        "accent": "dark brown",
+        "ambient": "dim, spectral",
+        "genre": null,
+        "architectural_tone": "weathered Victorian Gothic with elements of decay",
+        "cultural_tone": "abandoned aristocratic residence, haunted dwelling",
+        "palette_bias": "earth tones, muted jewel tones, greys",
+        "flora_base": "creeping ivy, mould",
+        "fauna_base": "scurrying rodents, spectral apparitions"
+      },
+      "primaryMedia": "media-1767011521424-cq9y3fn6t",
+      "description": "The air is thick with dust and the musty scent of decay. Towering walls of dark, aged wood paneling stretch upwards, disappearing into the shadows of a cobweb-laden plaster ceiling. Beneath your feet, threadbare and dusty rugs absorb every sound, muffling your footsteps. Minimal, small openings offer no significant light, leaving the vast, sprawling interior in a perpetual, creaky gloom. The sheer scale of the space is overwhelming, hinting at a history of opulence now consumed by time and neglect. Shadows cling to every corner, and the oppressive atmosphere prickles the skin.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "null",
+        "scale": "massive",
+        "orientation": "sprawling",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "Vast, interconnected rooms spread outwards, with dark, labyrinthine corridors connecting them. The sheer scale suggests a once-grand estate now fallen into disrepair.",
+        "requiredElements": [
+          "wood-paneled",
+          "dusty-rugs",
+          "cobwebbed-plaster"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "tattered velvet armchairs",
+          "grand piano with missing keys",
+          "dusty portraits with gouged-out eyes",
+          "cobweb-draped chandelier",
+          "ornate but broken fireplace",
+          "mahogany desk with quill and inkwell",
+          "stacks of yellowed books",
+          "fallen candelabra"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door heavy oak"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object decaying grand staircase"
+        },
+        {
+          "type": "corridor",
+          "position": "left wall",
+          "description": "corridor narrow"
+        },
+        {
+          "type": "window",
+          "position": "back wall",
+          "description": "window boarded-up"
+        },
+        {
+          "type": "object",
+          "position": "right wall",
+          "description": "object dusty tapestry"
+        }
+      ],
+      "dominantElements": [
+        "Grand Hall: shape=irregular, orientation=sprawling, scale=massive, style=victorian, surfaces=weathered-stone-and-rotting-wood, openings=minimal, interior_materials=wood-paneled|dusty-rugs|cobwebbed-plaster, enterable=yes, internal_atmosphere=creepy"
+      ],
+      "uniqueIdentifiers": [
+        "ominous silence",
+        "perpetual gloom",
+        "scent of decay",
+        "shadows that seem to move"
+      ],
+      "searchDesc": "A vast, dim hall with crumbling grandeur, filled with dust and melancholic shadows.",
+      "slug": "null-of-the-crimson-manor"
+    },
+    "niche-1767011903575-8u3a81s3c": {
+      "id": "niche-1767011903575-8u3a81s3c",
+      "type": "niche",
+      "name": "The Basement Hall and Little House",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A massive, cavernous hall hewn from rough stone, its scale overwhelming and oppressive. In the center, a stark contrast is presented by a small, quaint house, complete with a smoking chimney and glowing windows.",
+        "colorsAndLighting": "Dominated by deep, desaturated greys of the stone, with pockets of intense, warm light emanating from the miniature house. Shadows are deep and impenetrable, swallowing most of the hall. The little house's light is a rich, inviting amber.",
+        "atmosphere": "The air is still and cold, carrying the scent of damp earth and the faint, comforting aroma of woodsmoke from the tiny dwelling. An unnerving silence pervades, broken only by the distant drip of water.",
+        "materials": "Rough, unworked grey stone forms the hall. The little house appears to be constructed from dark, weathered wood, with a moss-covered thatched roof and a tiny stone chimney.",
+        "mood": "A profound sense of isolation and melancholic contrast. The grand emptiness of the hall evokes a sorrowful solitude, juxtaposed with the warmth and security implied by the miniature home.",
+        "sounds": "Dripping water, faint wind whispers, distant creaks, crackling fire (from house), hushed silence",
+        "spatialLayout": "An immense, irregular rectangular hall with a small, perfectly formed house situated in its central expanse.",
+        "primary_surfaces": "Rough-hewn grey stone",
+        "secondary_surfaces": "Dark, weathered wood (house), thatched roof (house)",
+        "accent_features": "Warm, glowing windows of the little house, miniature smoking chimney",
+        "dominant": "faded grey",
+        "secondary": "deep crimson (implied warmth from hearth)",
+        "accent": "dark brown (wood of house)",
+        "ambient": "dim, spectral",
+        "genre": null,
+        "architectural_tone": "rough-hewn subterranean hall, miniature folk dwelling",
+        "cultural_tone": "forgotten refuge, hidden hearth",
+        "palette_bias": "earth tones, muted greys, warm amber",
+        "flora_base": "overgrown, gnarled oak trees, thorny bushes, creeping ivy",
+        "fauna_base": "scurrying rodents"
+      },
+      "primaryMedia": "media-1767011903574-k5zmfvgtu",
+      "description": "The air in the vast, subterranean hall is thick with dust and the scent of decay. Stone pillars, partially crumbled, loom overhead, supporting a vaulted, shadowy ceiling. Muted earth tones and greys dominate the scene, reflecting the weathered Victorian Gothic style. In the center of this somber expanse, a charmingly incongruous little house stands, its windows casting a faint, inviting glow.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "elevation": "underground",
+        "spatialLayout": "A vast, cavernous basement hall with decaying Victorian Gothic architecture. Within this grand, somber space, a small, oddly intact house sits as a prominent feature.",
+        "requiredElements": [
+          "basement",
+          "large hall",
+          "little house"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "stairs",
+          "position": "upper end of hall",
+          "description": "Stairs leading up to the main manor house."
+        },
+        {
+          "type": "door",
+          "position": "front of the little house",
+          "description": "A small, welcoming door leading into the miniature house."
+        }
+      ],
+      "dominantElements": [
+        "little house: shape=compact, orientation=centered, scale=small, style=weathered-Victorian, surfaces=wood-and-stone, openings=minimal, interior_materials=wood-paneling|worn-carpet|plaster, enterable=yes, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "contrast between the grand, decaying hall and the intact house",
+        "underground setting"
+      ],
+      "searchDesc": "Vast basement hall with a tiny, cozy house at its center. Shadows abound.",
+      "slug": "the-shadowed-hearth"
+    },
+    "niche-1767011931586-2ts43bjzm": {
+      "id": "niche-1767011931586-2ts43bjzm",
+      "type": "niche",
+      "name": "little house",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A tiny, surprisingly furnished interior. Walls are a mix of rough-hewn timber and perhaps some packed earth or stone. A miniature hearth is the focal point, with a small, sturdy wooden table and chairs nearby. Shelves are packed with tiny objects.",
+        "colorsAndLighting": "Dominated by the warm, flickering amber and orange light from the hearth. The walls are a mix of deep browns and muted earthy tones. Shadows are present but softened by the ambient glow.",
+        "atmosphere": "Warm and inviting, with a palpable sense of coziness and safety. The air is still, carrying the comforting scent of woodsmoke and perhaps dried herbs.",
+        "materials": "Rough-hewn dark wood for furniture and wall accents, packed earth or rough stone for walls, a small stone hearth, woven textiles for the rug.",
+        "mood": "Comforting, secure, and a refuge from the cold vastness outside. A sense of quiet contentment and humble living.",
+        "sounds": "Crackling fire, soft creak of wood, distant water drip (from hall)",
+        "spatialLayout": "Compact and intimate, centered around a hearth.",
+        "primary_surfaces": "Dark, weathered wood (interior walls and furniture)",
+        "secondary_surfaces": "Rough stone (hearth), packed earth (some wall sections), woven fibers (rug)",
+        "accent_features": "Gleaming embers in the hearth, tiny ceramic or wooden ornaments on shelves, a miniature, well-tended fire.",
+        "dominant": "Deep amber",
+        "secondary": "Muted earth tones",
+        "accent": "Dark brown",
+        "ambient": "Warm, flickering",
+        "genre": null,
+        "architectural_tone": "miniature folk dwelling",
+        "cultural_tone": "forgotten refuge, hidden hearth",
+        "palette_bias": "earth tones, warm amber",
+        "flora_base": "overgrown, gnarled oak trees, thorny bushes, creeping ivy",
+        "fauna_base": "scurrying rodents"
+      },
+      "primaryMedia": "media-1767011931585-3ddxl0gdr",
+      "description": "The interior of the little house is a snug and intimate space. Walls are clad in warm, weathered wood-paneling, lending a rustic and antique charm. Underfoot, worn carpet absorbs sound, contributing to the cozy ambiance. The ceiling, a simple plaster surface, offers a smooth contrast to the textured walls. Despite its minimal openings, the space feels inviting and sheltered.",
+      "structure": {
+        "form": "compact",
+        "roofType": "null",
+        "scale": "small",
+        "orientation": "compact",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "A compact, single-room interior, efficiently laid out with minimal wasted space. The layout emphasizes a cozy and contained feel, reflecting its small scale.",
+        "requiredElements": [
+          "wood-paneling",
+          "worn-carpet",
+          "plaster"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "miniature hearth with glowing embers",
+          "tiny wooden table with carved stools",
+          "shelves of dried herbs and roots",
+          "woven straw bedding"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door rough-hewn wooden"
+        },
+        {
+          "type": "archway",
+          "position": "right wall",
+          "description": "archway small stone  to deeper tunnel"
+        }
+      ],
+      "dominantElements": [
+        "little house interior: shape=compact, orientation=centered, scale=small, style=weathered-Victorian, surfaces=wood-and-stone, openings=minimal, interior_materials=wood-paneling|worn-carpet|plaster, enterable=yes, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "paneled walls",
+        "worn flooring",
+        "plastered ceiling",
+        "cozy atmosphere"
+      ],
+      "searchDesc": "Cozy interior of a tiny house, stone hearth, miniature furniture, warm amber light.",
+      "slug": "interior-of-little-house"
+    }
+  },
   "views": {},
-  "worldTrees": [],
-  "pinnedIds": []
+  "worldTrees": [
+    {
+      "id": "loc-1767011477009-bkwk62qyy",
+      "type": "host",
+      "children": [
+        {
+          "id": "8b70e1fe-a2f2-4fb4-9f6c-f56a8298d068",
+          "type": "region",
+          "children": [
+            {
+              "id": "dc7a7c92-a607-4fd0-972f-c57cc8d4fca6",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767011521425-7ijoscod3",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767011903575-8u3a81s3c",
+                  "type": "niche",
+                  "children": [
+                    {
+                      "id": "niche-1767011931586-2ts43bjzm",
+                      "type": "niche",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinnedIds": [
+    "loc-1767011477009-bkwk62qyy"
+  ]
 }
