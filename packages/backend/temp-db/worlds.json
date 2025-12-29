@@ -269,6 +269,229 @@
       ],
       "searchDesc": "Vast basement hall with a tiny, cozy house at its center. Shadows abound.",
       "slug": "the-shadowed-hearth"
+    },
+    "loc-1767017861335-pe0e7mhxq": {
+      "id": "loc-1767017861335-pe0e7mhxq",
+      "type": "location",
+      "name": "little house",
+      "spaceType": "structure",
+      "dna": {},
+      "description": "Structure: little house",
+      "searchDesc": "little house",
+      "slug": "little-house",
+      "isPassThrough": true
+    },
+    "niche-1767017869604-nxvh2wrbf": {
+      "id": "niche-1767017869604-nxvh2wrbf",
+      "type": "niche",
+      "name": "little house",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A compact, warm interior with low ceilings and visible wooden beams, furnished sparsely with sturdy, antique furniture.",
+        "colorsAndLighting": "Dominated by the warm glow of a hearth and a single oil lamp, casting dancing shadows on the dark wood paneling and faded carpet. Accents of faded floral patterns on the plaster walls.",
+        "atmosphere": "Warm, dry, and still, filled with the comforting aroma of burning wood and a faint hint of dried herbs. The air is thick with a sense of quiet contentment.",
+        "materials": "Primarily dark, aged wood paneling and a heavily worn, deep red carpet. Sections of cracked, off-white plaster are visible in places.",
+        "mood": "Intensely cozy, secure, and welcoming, a stark contrast to the oppressive emptiness outside.",
+        "sounds": "Soft crackling of the fire, faint creaks of the house settling, muffled distant drips from the hall.",
+        "spatialLayout": "compact",
+        "primary_surfaces": "wood-paneling",
+        "secondary_surfaces": "worn-carpet|plaster",
+        "accent_features": "stone fireplace with active fire, antique oil lamp, sturdy wooden table",
+        "dominant": "deep brown (wood)",
+        "secondary": "crimson (carpet)",
+        "accent": "amber (light)",
+        "ambient": "warm, flickering",
+        "genre": null,
+        "architectural_tone": "weathered-Victorian",
+        "cultural_tone": "forgotten refuge, hidden hearth",
+        "palette_bias": "earth tones, warm amber",
+        "flora_base": "overgrown, gnarled oak trees, thorny bushes, creeping ivy",
+        "fauna_base": "scurrying rodents"
+      },
+      "primaryMedia": "media-1767017869604-ch0u6vd2s",
+      "description": "You are inside the 'little house'. The walls are clad in dark, weathered wood paneling, giving a sense of age and warmth. Underfoot, a worn carpet with a faded floral pattern muffles your steps. The ceiling is a simple, slightly uneven plaster, showing faint water stains from years past. The space feels small and intimately contained, with a few strategically placed, minimal openings that allow only slivers of dim light to penetrate. Despite its modest size and worn materials, the overall impression is one of cozy refuge, a small haven within the larger structure.",
+      "structure": {
+        "form": "compact",
+        "roofType": "null",
+        "scale": "small",
+        "orientation": "compact",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "The interior of the little house is a single, compact room, efficiently laid out to maximize its small scale. The layout is centered, with key features arranged around a central point, lending a cozy and contained feel.",
+        "requiredElements": [
+          "wood-paneling",
+          "worn-carpet",
+          "plaster"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "forward",
+          "description": "leads out to The Basement Hall and Little House"
+        }
+      ],
+      "dominantElements": [
+        "little house interior: shape=compact, orientation=centered, scale=small, style=weathered-Victorian, surfaces=wood-and-stone, openings=minimal, interior_materials=wood-paneling|worn-carpet|plaster, enterable=yes, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "low, beamed ceiling",
+        "small, deep-set windows",
+        "worn but comfortable furnishings",
+        "faint scent of aged wood and dust"
+      ],
+      "searchDesc": "Cozy, compact, weathered-Victorian interior with wood paneling and worn carpet.",
+      "slug": "interior-of-little-house-shape-compact-orientation-centered-scale-small-style-weathered-victorian-surfaces-wood-and-stone-openings-minimal-interior-materials-wood-paneling-worn-carpet-plaster-enterable-yes-internal-atmosphere-cozy"
+    },
+    "niche-1767017899107-bzjegusfj": {
+      "id": "niche-1767017899107-bzjegusfj",
+      "type": "niche",
+      "name": "The Kitchen",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A massive, cavernous hall hewn from rough, unworked grey stone. In the center, a stark contrast is presented by a small, quaint house constructed from dark, weathered wood, with a moss-covered thatched roof and a tiny stone chimney, complete with a smoking chimney and glowing windows.",
+        "colorsAndLighting": "Dominated by deep, desaturated greys of the stone, with pockets of intense, warm amber light emanating from the miniature house. Shadows are deep and impenetrable. The little house's light is a rich, inviting amber.",
+        "atmosphere": "The air is still and cold, carrying the scent of damp earth and the faint, comforting aroma of woodsmoke from the tiny dwelling. An unnerving silence pervades, broken only by the distant drip of water.",
+        "materials": "Rough, unworked grey stone forms the hall. The little house is constructed from dark, weathered wood, with a moss-covered thatched roof and a tiny stone chimney.",
+        "mood": "A profound sense of isolation and melancholic contrast. The grand emptiness of the hall evokes a sorrowful solitude, juxtaposed with the warmth and security implied by the miniature home.",
+        "sounds": "Dripping water, faint crackling fire, silent vastness.",
+        "spatialLayout": "Vast, open cavern with a centralized, small structure.",
+        "primary_surfaces": "Rough-hewn grey stone",
+        "secondary_surfaces": "Dark, weathered wood (house), moss-covered thatched roof (house)",
+        "accent_features": "Warm, glowing windows of the little house, miniature smoking chimney",
+        "dominant": "faded grey",
+        "secondary": "deep crimson",
+        "accent": "dark brown",
+        "ambient": "dim, spectral",
+        "genre": null,
+        "architectural_tone": "rough-hewn subterranean hall, miniature folk dwelling",
+        "cultural_tone": "forgotten refuge, hidden hearth",
+        "palette_bias": "earth tones, muted greys, warm amber",
+        "flora_base": "overgrown, gnarled oak trees, thorny bushes, creeping ivy",
+        "fauna_base": "scurrying rodents"
+      },
+      "primaryMedia": "media-1767017899106-um3mhvk6o",
+      "description": "Warm amber light spills from a few strategically placed lamps, illuminating the well-worn surfaces of a spacious kitchen. The air hums with the subtle scent of baked goods and aged wood. Rich, dark wood cabinetry lines the walls, contrasting with the slightly uneven, earth-toned tiles underfoot. A large, sturdy wooden table sits centrally, its surface bearing the marks of countless meals. Pots and pans hang from hooks, their metallic gleam catching the light, and the gentle ticking of a grandfather clock punctuates the quiet.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "null",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "A functional kitchen space with a central island, ample counter space, and various appliances. The design emphasizes warmth and usability with a touch of Victorian charm.",
+        "requiredElements": [
+          "kitchen"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "far end of the hall",
+          "description": "Leads to a dimly lit, winding tunnel, possibly an exit."
+        },
+        {
+          "type": "door",
+          "position": "small house's front door",
+          "description": "Opens into the warm, inviting interior of the miniature dwelling."
+        }
+      ],
+      "dominantElements": [
+        "kitchen: shape=rectangular, orientation=compact, scale=medium, style=weathered-Victorian, surfaces=wood, openings=minimal, interior_materials=wood-paneling|worn-tile|plaster, enterable=yes, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "worn-tile floor",
+        "large wooden table",
+        "exposed wooden beams"
+      ],
+      "searchDesc": "Vast stone hall with a tiny, warm house at its center.",
+      "slug": "the-hearth-kitchen"
+    },
+    "niche-1767017996191-80acbr286": {
+      "id": "niche-1767017996191-80acbr286",
+      "type": "niche",
+      "name": "Room to the Right with an Abandoned Old Car",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An outdoor space dominated by the skeletal remains of a vintage automobile, partially obscured by aggressive, thorny vegetation and a thick layer of natural detritus.",
+        "colorsAndLighting": "Dominated by the muted reds and oranges of rust, the deep greens and browns of overgrown foliage, and the dull greys of decaying metal. Lighting is dappled and dim, filtered through dense leaves, casting long, shifting shadows.",
+        "atmosphere": "The air is thick with the metallic tang of rust, the dampness of decay, and the scent of wild, unkempt earth. A profound stillness reigns, punctuated by the rustle of unseen creatures and the whisper of the wind through broken metal.",
+        "materials": "Primarily rusted steel, decaying rubber, and dense, thorny organic growth. Patches of damp earth and scattered fragments of weathered stone are also present.",
+        "mood": "Melancholy and desolate, evoking a sense of time's relentless passage and the inevitable decay of man-made objects.",
+        "sounds": "Rustling leaves, creaking metal, wind whistling, scurrying unseen, distant bird calls.",
+        "spatialLayout": "An irregular, open space, seemingly an extension of the manor's neglected grounds, with the car acting as a central, immobile feature.",
+        "primary_surfaces": "rust-eaten metal, thorny vegetation",
+        "secondary_surfaces": "damp earth, dead leaves, crumbling stone",
+        "accent_features": "shattered car windows, a faded, cracked leather seat",
+        "dominant": "rust red",
+        "secondary": "overgrown green",
+        "accent": "dull grey",
+        "ambient": "dappled, somber",
+        "genre": null,
+        "architectural_tone": "weathered Victorian Gothic with elements of decay",
+        "cultural_tone": "abandoned aristocratic residence, haunted dwelling",
+        "palette_bias": "earth tones, muted jewel tones, greys",
+        "flora_base": "overgrown, gnarled oak trees, thorny bushes, creeping ivy",
+        "fauna_base": "scurrying rodents, nesting birds"
+      },
+      "primaryMedia": "media-1767017996190-wygtnegwd",
+      "description": "You are inside a medium-sized room, the air thick with the scent of dust and decay. The walls are rough-hewn, reminiscent of a subterranean hall, and the muted earth tones and warm amber light cast long shadows. Dominating the space is an abandoned old car, its once proud form now slumped and weathered, a relic of forgotten times. The room feels like a forgotten corner of a miniature folk dwelling.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "null",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "open-passages",
+        "openingShape": "rectangular",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "This is a medium-sized room, likely a garage or workshop space, characterized by its rough-hewn subterranean feel and the presence of a dilapidated old car.",
+        "requiredElements": [
+          "abandoned old car",
+          "abbandoned old car"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "rusted-out vintage pickup truck",
+          "oil stains on concrete floor",
+          "scattered tools",
+          "cobwebs",
+          "discarded oil cans"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front wall",
+          "description": "archway rough-hewn stone"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door narrow wooden"
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "window small grimy"
+        }
+      ],
+      "dominantElements": [
+        "abandoned old car: shape=organic, orientation=horizontal, scale=medium, style=rustic, surfaces=weathered, openings=none, interior_materials=none, enterable=no, internal_atmosphere=null"
+      ],
+      "uniqueIdentifiers": [
+        "abandoned old car",
+        "rough-hewn subterranean hall aesthetic"
+      ],
+      "searchDesc": "A rusted car lies decaying amidst overgrown bushes and debris. Room to the right.",
+      "slug": "the-abandoned-vehicle-niche"
     }
   },
   "views": {},
@@ -294,8 +517,28 @@
                   "id": "niche-1767011903575-8u3a81s3c",
                   "type": "niche",
                   "children": [
-                    
+                    {
+                      "id": "loc-1767017861335-pe0e7mhxq",
+                      "type": "location",
+                      "children": [
+                        {
+                          "id": "niche-1767017869604-nxvh2wrbf",
+                          "type": "niche",
+                          "children": []
+                        },
+                        {
+                          "id": "niche-1767017899107-bzjegusfj",
+                          "type": "niche",
+                          "children": []
+                        }
+                      ]
+                    }
                   ]
+                },
+                {
+                  "id": "niche-1767017996191-80acbr286",
+                  "type": "niche",
+                  "children": []
                 }
               ]
             }

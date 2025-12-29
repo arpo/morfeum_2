@@ -1,5 +1,20 @@
 # Progress
 
+## 2025-12-29
+
+- [x] **GO_INSIDE Hierarchy Fix - Pass-Through Locations - COMPLETED**: Fixed critical bug where interior niches were added as siblings instead of children of pass-through locations
+  - **Problem**: When using `/GO_INSIDE` on a structure inside a niche (e.g., "little house" in basement), the interior niche was incorrectly placed as a sibling of the pass-through location instead of as its child
+  - **Root cause**: Frontend captured `parentNodeId` from `data.decision.parentNodeId` BEFORE the pass-through location was created; pipeline runs ~11 seconds, then frontend uses stale parent ID
+  - **Solution**: Send `nicheParentId` (pass-through location ID) in SSE completion event; frontend uses this instead of stale `parentNodeId`
+  - **Backend changes**:
+    - `createNodePipeline.ts`: Added `nicheParentId` to completion event data
+    - `nicheHandler.ts`: Passes pass-through location to pipeline options
+  - **Frontend changes**:
+    - `creationCommands.ts`: Uses `nicheParentId` from completion event (priority: nicheParentId > parentNodeId > currentNode.id)
+    - `navigationCommands.ts`: Passes `nicheParentId` from completion event to handler
+  - **Correct hierarchy now**: `niche → pass-through location → interior niche` (child, not sibling)
+  - Build verification passed (frontend and backend)
+
 ## 2025-12-26
 
 - [x] **Component Refactoring - COMPLETED (Latest)**: Refactored oversized frontend files

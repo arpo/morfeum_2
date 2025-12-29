@@ -1,8 +1,69 @@
 # Active Context
 
+## 2025-12-29
+
+### GO_INSIDE Hierarchy Fix - Pass-Through Locations - COMPLETED (Latest)
+
+Fixed critical hierarchy bug where pass-through locations were created but interior niches were added as siblings instead of children.
+
+#### Problem
+When using `/GO_INSIDE` on a structure (e.g., "little house" inside a basement), the system should create:
+```
+The Basement Hall (niche)
+  └── little house (location, isPassThrough=true)
+        └── little house interior (niche) ← Should be CHILD
+```
+
+But was creating:
+```
+The Basement Hall (niche)
+  ├── little house (location, isPassThrough=true)
+  └── little house interior (niche) ← WRONG: SIBLING!
+```
+
+#### Root Cause Analysis
+1. **Pass-through location created correctly** by backend nicheHandler
+2. **Frontend captured `parentNodeId` BEFORE pass-through existed** (from `data.decision.parentNodeId`)
+3. **Pipeline runs ~11 seconds**, then sends SSE completion event
+4. **Frontend uses STALE `parentNodeId`** (original parent, not pass-through location)
+5. **Frontend saves → overwrites backend's correct hierarchy**
+
+#### Solution
+Send the correct parent ID (`nicheParentId`) in the SSE completion event:
+
+**Backend (createNodePipeline.ts):**
+```typescript
+if (options?.passThroughLocation) {
+  completionData.passThroughLocation = options.passThroughLocation;
+  // CRITICAL: Niche's parent is the pass-through location
+  completionData.nicheParentId = options.passThroughLocation.node.id;
+}
+```
+
+**Frontend (creationCommands.ts):**
+```typescript
+// Priority: nicheParentId > parentNodeId > currentNode.id
+const correctParentId = nicheParentId || parentNodeId || currentNode.id;
+```
+
+**Frontend (navigationCommands.ts):**
+```typescript
+nicheParentId: completedData.nicheParentId  // Pass from completion event
+```
+
+#### Files Modified
+- `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts` - Added `nicheParentId` to completion event
+- `packages/backend/src/routes/mzoo/handlers/nicheHandler.ts` - Pass pass-through location to pipeline
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/creationCommands.ts` - Use `nicheParentId` from completion event
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/navigationCommands.ts` - Pass `nicheParentId` to handler
+
+#### Build Verification
+✅ Frontend: `tsc --noEmit` passes
+✅ Backend: `tsc --noEmit` passes
+
 ## 2025-12-26
 
-### Component Refactoring - COMPLETED (Latest)
+### Component Refactoring - COMPLETED
 
 Refactored oversized frontend files to comply with architectural size limits.
 
@@ -14,10 +75,6 @@ Refactored oversized frontend files to comply with architectural size limits.
 | `particleBehaviors.ts` | - | 131 lines (NEW) |
 | `particleHelpers.ts` | - | 130 lines (NEW) |
 
-**Extracted:**
-- `particleBehaviors.ts`: Behavior-specific movement functions (float, fall, rise, flicker, swim, wander, spiral)
-- `particleHelpers.ts`: Particle lifecycle helpers (create, respawn, wrap, lifetime, initialize)
-
 #### **Phase 2: entityManagerSlice.ts ✅ (40% reduction)**
 
 | File | Before | After |
@@ -26,70 +83,31 @@ Refactored oversized frontend files to comply with architectural size limits.
 | `entityChatService.ts` | - | 55 lines (NEW) |
 | `entityManagerHelpers.ts` | - | 58 lines (NEW) |
 
-**Extracted:**
-- `entityChatService.ts`: Chat API communication (`sendChatMessage`, `createUserMessage`)
-- `entityManagerHelpers.ts`: Entity Map update utilities (`updateEntity`, `updateEntityMessages`, `updateSystemPromptInMessages`)
-
-#### **Files Not Refactored (Already Acceptable)**
-- `WorldViewRenderer.ts` (442 lines) - Complex renderer class already delegates to 6+ helper modules (sceneManager, stereoRenderer, cameraAnimation, animationLoop)
-- `charactersSlice.ts` (220 lines) - Within acceptable range for slice complexity
-- `treesSlice.ts` (218 lines) - Already has extracted helpers (treeDeletion.ts, treeTraversal.ts)
-
-#### **Build Verification**
-✅ Frontend: `tsc && vite build` passes
-✅ Backend: `tsc` passes
-
-### Dead Code Cleanup - COMPLETED (Earlier Today)
+### Dead Code Cleanup - COMPLETED
 
 Comprehensive dead code analysis and cleanup across frontend and backend.
 
-#### **Phase 1: Unused Imports ✅ (5 files)**
-| File | Removed Import |
-|------|----------------|
-| `Tabs.tsx` | `useEffect` |
-| `EntityExplorer.tsx` | `TreeNode` |
-| `WorldViewRenderer.ts` | `ScenePresetConfig` |
-| `helpers.tsx` | `React` |
-| `useProgressAnimation.ts` | `ProgressStep` |
-
-#### **Phase 2: Deep Logic Review ✅ (3 files)**
-- `useEntityGeneratorLogic.ts`: Removed unused `cancelSpawn`, `activeSpawns` store fetches
-- `nodeDNAExtractor.ts`: Removed obsolete `EXCLUSIONS`, `METADATA_FIELDS`, `generateSlug`
-- `completionHandlers.ts`: Prefixed intentionally unused params with `_`
-
-## 2025-12-25
-
-### Comprehensive File Size Refactoring - COMPLETED
-
-See progress.md for full details on:
-- Phase 1: Route Files
-- Phase 2: Backend Files  
-- Phase 3: Frontend Logic Files (useAppLogic.ts, PostProcessorSystem.ts, ParticleSystem.ts shaders)
-- Phase 4: CSS Consolidation
-
 ## Current Focus
 
+- ✅ **COMPLETED**: GO_INSIDE hierarchy fix for pass-through locations
 - ✅ **COMPLETED**: Component refactoring (ParticleSystem, entityManagerSlice)
 - ✅ **COMPLETED**: Dead code cleanup
 - ✅ **COMPLETED**: Build verification passed
 - All files now comply with architectural size limits
 
-## Files Created/Modified (Today)
+## Files Modified (Dec 29)
 
-**Frontend - Particles:**
-- `packages/frontend/src/features/app/components/WorldView/effects/particles/ParticleSystem.ts` - Reduced from 421 to 245 lines
-- `packages/frontend/src/features/app/components/WorldView/effects/particles/particleBehaviors.ts` - NEW (131 lines)
-- `packages/frontend/src/features/app/components/WorldView/effects/particles/particleHelpers.ts` - NEW (130 lines)
+**Backend:**
+- `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts` - Added `nicheParentId` to completion event
+- `packages/backend/src/routes/mzoo/handlers/nicheHandler.ts` - Pass pass-through location to pipeline
 
-**Frontend - Store:**
-- `packages/frontend/src/store/slices/entityManagerSlice.ts` - Reduced from 284 to 169 lines
-- `packages/frontend/src/store/slices/entityChatService.ts` - NEW (55 lines)
-- `packages/frontend/src/store/slices/entityManagerHelpers.ts` - NEW (58 lines)
+**Frontend:**
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/creationCommands.ts` - Use `nicheParentId` from completion event
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/navigationCommands.ts` - Pass `nicheParentId` to handler
 
-## Previous Context (Dec 19)
+## Previous Context (Dec 26)
 
 See progress.md for details on:
-- Location Perspective Fix for GOTO Command
-- LLM-Based Elevation Detection
-- GOTO/GO_INSIDE Command Alignment
-- File Size Limit Refactoring (backend)
+- Component refactoring (ParticleSystem, entityManagerSlice)
+- Dead code cleanup
+- File size limit refactoring
