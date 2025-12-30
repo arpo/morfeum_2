@@ -291,6 +291,48 @@ For testing and examples, see:
 
 ---
 
+## Space Type Registry
+
+As of Dec 2025, the system uses a **Space Type Registry** to handle different container types (buildings, vehicles, boats, tents, etc.).
+
+### File Location
+`generation/shared/spaceTypeRegistry.ts`
+
+### Container Types
+
+| Type | Description | Perspectives |
+|------|-------------|--------------|
+| `building` | Standard architectural structures | interior, exterior, open-air |
+| `vehicle-car` | Automotive vehicles (cars, trucks) | interior (cabin) |
+| `vehicle-boat` | Watercraft (ships, boats, yachts) | interior (cabin), open-air (deck) |
+| `natural` | Natural formations (clearings, groves) | exterior |
+| `tent-like` | Temporary fabric structures | interior |
+
+### How It Works
+
+1. **LLM determines** `containerType` during structure analysis (structureAnalysis.ts)
+2. **Registry provides** specialized guidance for DNA generation and image constraints
+3. **Pipelines use** registry functions to get type-specific prompts
+
+### Key Functions
+
+```typescript
+import { 
+  getDNAGuidance,       // Get DNA prompt guidance for a container type
+  getImageConstraints,  // Get FLUX constraints for a container type
+  getStructureGuidance, // Get structure analysis guidance
+  SPACE_TYPE_REGISTRY   // Full registry object
+} from '../shared/spaceTypeRegistry';
+```
+
+### Adding New Container Types
+
+1. Add type to `ContainerType` union in `spaceTypeRegistry.ts`
+2. Add entry to `SPACE_TYPE_REGISTRY` with all fields
+3. The LLM prompt in `structureAnalysis.ts` auto-updates via `getContainerTypeDescriptions()`
+
+---
+
 ## Adding New Prompts
 
 1. **Create prompt file** in appropriate category folder

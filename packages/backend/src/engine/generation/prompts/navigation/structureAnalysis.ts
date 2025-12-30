@@ -4,6 +4,7 @@
  * Runs in parallel with DNA analysis for both GO_INSIDE and GOTO commands
  * 
  * Now determines perspective (interior/exterior/open-air) when not provided
+ * Also determines containerType (building/vehicle-car/vehicle-boat/natural/tent-like)
  */
 
 import type { NavigationContext, ScenePerspective } from '../../../navigation/types';
@@ -14,6 +15,7 @@ import {
   NAVIGABLE_ELEMENTS_EXAMPLE 
 } from '../shared/elementRules';
 import { findTargetElementInfo, extractRequiredElements, type TargetElementInfo } from './elementAnalysis';
+import { getContainerTypeDescriptions } from '../../shared/spaceTypeRegistry';
 
 export interface StructureAnalysisInput {
   userPrompt: string;
@@ -61,6 +63,21 @@ PERSPECTIVE RULES:
 - For OPEN-AIR: roofType MUST be "open-sky", may have partial walls/railings
 - For INTERIOR: roofType is domed/flat/vaulted/etc, enclosed`;
 
+  // Container type determination (LLM decides based on context)
+  const containerTypeSection = `
+CONTAINER TYPE DETERMINATION:
+Analyze what type of container/enclosure this space is:
+${getContainerTypeDescriptions()}
+
+CONTAINER TYPE RULES:
+- Analyze the USER INPUT and CONTEXT to determine the container type
+- "go inside the car" → vehicle-car
+- "the ship's cabin" → vehicle-boat
+- "the deck" (on a boat) → vehicle-boat
+- "a room", "the kitchen", "the basement" → building
+- "the tent", "the pavilion" → tent-like
+- Most spaces default to "building" unless clearly a vehicle, natural area, or tent`;
+
   // ═══════════════════════════════════════════════════════════════════════════
   // GOTO COMMAND: User's destination text is PRIMARY - parent is just for style
   // ═══════════════════════════════════════════════════════════════════════════
@@ -70,6 +87,8 @@ PERSPECTIVE RULES:
 CRITICAL: The USER INPUT describes the DESTINATION to create. The name and type should match what the user asked for.
 
 ${perspectiveSection}
+
+${containerTypeSection}
 
 USER INPUT (THIS IS THE DESTINATION): "${userPrompt}"
 
@@ -112,6 +131,7 @@ OUTPUT (pure JSON):
 {
   "name": "Destination Name (from USER INPUT)",
   "perspective": "${perspective || 'interior|exterior|open-air'}",
+  "containerType": "building|vehicle-car|vehicle-boat|natural|tent-like",
   "structure": {
     "form": "rectangular|round|organic|irregular",
     "roofType": "open-sky|domed|flat|vaulted|pitched|arched|null",
@@ -189,6 +209,8 @@ CRITICAL - DOMINANT ELEMENTS FOR INTERIOR:
 
 ${perspectiveSection}
 
+${containerTypeSection}
+
 CONTEXT:
 Current: "${context.currentNode.name}" (${context.currentNode.type})
 ${context.parentNode ? `Parent: "${context.parentNode.name}" (${context.parentNode.type})` : ''}
@@ -242,6 +264,7 @@ OUTPUT (pure JSON):
 {
   "name": "Space Name",
   "perspective": "${perspective || 'interior|exterior|open-air'}",
+  "containerType": "building|vehicle-car|vehicle-boat|natural|tent-like",
   "structure": {
     "form": "rectangular|round|cylindrical|spherical|organic|arched|gothic|irregular",
     "roofType": "domed|flat|vaulted|pitched|arched|open-sky|null",

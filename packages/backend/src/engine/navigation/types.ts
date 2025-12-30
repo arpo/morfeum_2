@@ -3,7 +3,12 @@
  * Type definitions for the new LLM-based navigation system
  */
 
+import type { ContainerType } from '../generation/shared/spaceTypeRegistry';
+
 export type NodeType = 'host' | 'region' | 'location' | 'niche' | 'detail' | 'view';
+
+// Re-export ContainerType for convenience
+export type { ContainerType } from '../generation/shared/spaceTypeRegistry';
 
 /**
  * Navigation intents - only implemented commands
@@ -222,6 +227,8 @@ export interface StructureAnalysis {
   name: string;
   /** Whether this is an interior, exterior, or open-air space */
   perspective: ScenePerspective;
+  /** Type of container/enclosure (building, vehicle, natural, etc.) */
+  containerType?: ContainerType;
   /** Physical structure data */
   structure: Structure;
   /** Brief description of the space */

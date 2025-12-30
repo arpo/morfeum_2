@@ -3,6 +3,8 @@
  * 
  * Generates DNA for niche nodes (spaces within locations - rooms, areas, etc.).
  * Niche nodes can be interior or exterior and represent the deepest navigable level.
+ * 
+ * Now supports containerType for vehicle/boat/tent-specific DNA guidance.
  */
 
 import { DNA_SCENE_FIELDS } from '../../../generation/prompts/shared/dnaSchema';
@@ -11,20 +13,27 @@ import {
   NAVIGABLE_ELEMENTS_RULES,
   NAVIGABLE_ELEMENTS_EXAMPLE 
 } from '../../../generation/prompts/shared/elementRules';
+import { 
+  getDNAGuidance,
+  type ContainerType,
+  type SpacePerspective 
+} from '../../../generation/shared/spaceTypeRegistry';
 import type { ParentDNAContext, ScenePerspective } from '../../types';
 
 /**
  * Generate DNA prompt for a niche node
  * 
  * @param description - User description of the niche
- * @param perspective - Interior or exterior
+ * @param perspective - Interior, exterior, or open-air
  * @param parentContext - DNA context inherited from parent location
+ * @param containerType - Type of container (building, vehicle-car, vehicle-boat, etc.)
  * @returns Prompt string for LLM
  */
 export function nicheDNAPrompt(
   description: string, 
   perspective: ScenePerspective = 'interior',
-  parentContext?: ParentDNAContext
+  parentContext?: ParentDNAContext,
+  containerType: ContainerType = 'building'
 ): string {
   const contextSection = parentContext ? `
 PARENT LOCATION CONTEXT (inherit and respect these attributes):
@@ -37,7 +46,14 @@ PARENT LOCATION CONTEXT (inherit and respect these attributes):
 - Palette Bias: ${parentContext.palette_bias || 'Not specified'}
 ` : '';
 
-  const perspectiveGuidance = perspective === 'interior' 
+  // Get perspective guidance from registry (handles vehicles, boats, tents, etc.)
+  // For non-building container types, use the registry's specialized guidance
+  const registryGuidance = getDNAGuidance(containerType, perspective as SpacePerspective);
+  
+  // Use registry guidance if available, otherwise fall back to standard building guidance
+  const perspectiveGuidance = containerType !== 'building' 
+    ? registryGuidance
+    : perspective === 'interior' 
     ? `
 PERSPECTIVE: INTERIOR
 - This is an enclosed indoor space (room, hall, chamber, cave, etc.)

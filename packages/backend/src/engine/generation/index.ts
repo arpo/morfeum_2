@@ -32,3 +32,20 @@ export type { ImagePromptStructure, AssemblePromptOptions } from './shared/image
 
 // Image generation
 export { generateLocationImage } from './shared/imageGeneration';
+
+// Space type registry
+export {
+  getSpaceTypeDefinition,
+  getDNAGuidance,
+  getStructureGuidance,
+  getImageConstraints,
+  getContainerTypeDescriptions,
+  SPACE_TYPE_REGISTRY,
+  ALL_CONTAINER_TYPES
+} from './shared/spaceTypeRegistry';
+
+export type {
+  ContainerType,
+  SpacePerspective,
+  SpaceTypeDefinition
+} from './shared/spaceTypeRegistry';

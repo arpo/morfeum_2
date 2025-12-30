@@ -26,6 +26,7 @@ import {
 } from './imagePromptHelpers';
 import type { ImagePromptStructure } from './imagePromptTypes';
 import { assembleImagePrompt } from './imagePromptAssembler';
+import { getImageConstraints, type ContainerType, type SpacePerspective } from './spaceTypeRegistry';
 
 export interface ImagePromptGenerationInput {
   /** Structure analysis result (form, scale, navigableElements, etc.) */
@@ -347,6 +348,15 @@ function buildConstraints(input: ImagePromptGenerationInput): string[] {
   const constraints: string[] = [];
   
   const isOpenSky = input.structureAnalysis?.structure?.roofType === 'open-sky';
+  
+  // Container type constraints from registry (vehicle, boat, tent, etc.)
+  const containerType = input.structureAnalysis?.containerType as ContainerType | undefined;
+  if (containerType && containerType !== 'building') {
+    // Get container-specific constraints from registry
+    const perspective = input.perspective as SpacePerspective;
+    const containerConstraints = getImageConstraints(containerType, perspective);
+    constraints.push(...containerConstraints);
+  }
   
   // Open-sky constraint
   if (isOpenSky) {
