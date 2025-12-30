@@ -73,6 +73,14 @@ export function assembleImagePrompt(
     parts.push('');
   }
 
+  // Creature mode handling - PLACED EARLY for higher FLUX attention
+  // PopulateScene needs to come before camera/lens to ensure model sees it
+  if (creatureMode === 'populate') {
+    // Populate scene - add crowd directive (early placement = higher priority)
+    parts.push(PopulateScene);
+    parts.push('');
+  }
+
   // Camera and lens
   if (structure.camera) {
     parts.push(`[CAMERA:] ${structure.camera}`);
@@ -90,14 +98,9 @@ export function assembleImagePrompt(
     parts.push('');
   }
 
-  // Creature mode handling
+  // NoCreatures filter - placed at end as negative constraint
   if (creatureMode === 'none') {
-    // NoCreatures filter - exclude all people/animals
     parts.push(NoCreatures);
-    parts.push('');
-  } else if (creatureMode === 'populate') {
-    // Populate scene - add crowd directive
-    parts.push(PopulateScene);
     parts.push('');
   }
   // creatureMode === 'allow' - no filter added, people can appear naturally
