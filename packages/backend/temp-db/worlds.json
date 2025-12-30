@@ -334,6 +334,98 @@
       ],
       "searchDesc": "Industrial chic restaurant and bar with exposed brick, metal, and vibrant art.",
       "slug": "null-of-old-factory-restaurant-and-bar"
+    },
+    "niche-1767090093299-7jkvi5rjb": {
+      "id": "niche-1767090093299-7jkvi5rjb",
+      "type": "niche",
+      "name": "Roof Top Bar",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A high-ceilinged, open-plan space dominated by exposed brick walls and robust steel beams. Modern, low-profile furniture upholstered in rich velvets is arranged for social interaction, interspersed with sleek metal accents. Large, floor-to-ceiling windows wrap around the perimeter, framing breathtaking views of the urban sprawl at twilight. Custom, abstract light fixtures hang from the ceiling, casting dynamic patterns.",
+        "colorsAndLighting": "The dominant palette features the deep blues of the twilight sky filtering through the windows, complemented by the warm terracotta of the exposed brick. Pops of vibrant electric yellow and neon pink are strategically placed in art pieces and accent lighting, creating visual excitement. Warm, inviting interior lighting glows from within, contrasting with the cooler ambient light from outside.",
+        "atmosphere": "Lively and sophisticated. The air is filled with the pleasant hum of conversation, curated ambient electronic music, and the clinking of glasses. A faint scent of premium spirits and gourmet bar snacks permeates the air. There's an undeniable buzz of urban energy and a sense of elevated exclusivity.",
+        "materials": "Primarily exposed brick, structural steel girders, polished concrete floors, brushed stainless steel for the bar and table bases, and plush velvet for seating. Reclaimed dark wood is used for accents and shelving.",
+        "mood": "Inviting and awe-inspiring, fostering a sense of urban pride and sophisticated revelry. It evokes the thrill of experiencing the city from a grand vantage point, blending historical gravitas with contemporary flair.",
+        "sounds": "Distant city hum, ambient electronic music, chatter, laughter, clinking glasses.",
+        "spatialLayout": "Open-plan with distinct zones for the bar, lounge seating, and smaller, more intimate areas. High ceilings with visible industrial architecture.",
+        "primary_surfaces": "Textured, aged exposed brick walls.",
+        "secondary_surfaces": "Polished concrete floors, exposed steel beams, brushed metal bar front, dark wood paneling.",
+        "accent_features": "Large-scale abstract sculptures with integrated neon lighting, custom filament bulb chandeliers, geometric planters with dark foliage.",
+        "dominant": "Deep Blue",
+        "secondary": "Warm Terracotta",
+        "accent": "Vibrant Artificial Color (Electric Yellow/Neon Pink)",
+        "ambient": "Cool twilight sky glow with warm interior lighting.",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Modern commercial with historical brick elements",
+        "cultural_tone": "Urban social hub",
+        "palette_bias": "Cool blues and warm earth tones with pops of vibrant artificial color",
+        "flora_base": "Minimal, stylized industrial planters with deep green foliage.",
+        "fauna_base": "None visible from this scale"
+      },
+      "primaryMedia": "media-1767090093297-9baerh56g",
+      "description": "An expansive open-air rooftop bar with a breathtaking city skyline view. Modern seating areas are scattered across the rooftop, complemented by glowing string lights and lush planters. The sleek bar area stands ready to serve patrons, surrounded by the cool blues and warm earth tones characteristic of the area, with pops of vibrant artificial color from ambient lighting.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "elevation": "rooftop",
+        "spatialLayout": "This is a sprawling, open-air rooftop bar situated atop a modern commercial building with historical brick elements. It features various seating areas, a bar, and decorative lighting.",
+        "requiredElements": [
+          "bar",
+          "seating"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "industrial steel bar stools",
+          "reclaimed wood communal tables",
+          "hanging Edison bulb pendant lights",
+          "potted succulents",
+          "exposed brick planters",
+          "urban art murals on walls",
+          "mesh metal railings",
+          "ambient string lights."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door large glass s opening to the main bar area"
+        },
+        {
+          "type": "object",
+          "position": "left wall",
+          "description": "object industrial metal staircase winding up from the bar's kitchen access"
+        },
+        {
+          "type": "archway",
+          "position": "right wall",
+          "description": "archway exposed brick  connecting to a private lounge area"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object open railing overlooking the city view"
+        }
+      ],
+      "dominantElements": [
+        "bar: shape=rectangular, orientation=horizontal, scale=medium, style=modern commercial, surfaces=polished-concrete|wood, openings=open-passages, interior_materials=wood|tile|metal, enterable=yes, internal_atmosphere=bright",
+        "seating-area: shape=organic, orientation=compact, scale=medium, style=modern commercial, surfaces=weathered-wood|glass, openings=minimal, enterable=no, internal_atmosphere=null"
+      ],
+      "uniqueIdentifiers": [
+        "city skyline view",
+        "string lights",
+        "rooftop garden elements"
+      ],
+      "searchDesc": "Rooftop bar, industrial modern, urban social hub, cool blues, warm earth tones, city views.",
+      "slug": "the-apex-loft"
     }
   },
   "views": {},
@@ -357,6 +449,11 @@
               "children": [
                 {
                   "id": "niche-1767089202637-fmtya0q02",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767090093299-7jkvi5rjb",
                   "type": "niche",
                   "children": []
                 }
