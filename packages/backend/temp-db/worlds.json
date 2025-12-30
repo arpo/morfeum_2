@@ -1,40 +1,51 @@
 {
   "nodes": {
-    "loc-1767018188161-f5dfwgoex": {
-      "id": "loc-1767018188161-f5dfwgoex",
+    "loc-1767031951327-jkbe4mh05": {
+      "id": "loc-1767031951327-jkbe4mh05",
+      "type": "location",
+      "name": "basement with a big room with a whimsical house",
+      "spaceType": "structure",
+      "dna": {},
+      "description": "Structure: basement with a big room with a whimsical house",
+      "searchDesc": "basement with a big room with a whimsical house",
+      "slug": "basement-with-a-big-room-with-a-whimsical-house",
+      "isPassThrough": true
+    },
+    "loc-1767080283680-3au0tf6ly": {
+      "id": "loc-1767080283680-3au0tf6ly",
       "type": "host",
-      "name": "The Scorched Expanse",
+      "name": "The Dustlands",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: A sprawling, sun-baked expanse of ochre deserts and cracked earth, punctuated by the dark, irregular shapes of scattered settlements and the faint glint of heat haze on distant, rocky outcrops. Vast, empty plains dominate, with occasional, winding ravines and the occasional silhouette of a colossal, half-buried ruin.",
-        "colorsAndLighting": "Harsh, high-contrast sunlight casting deep shadows. Dominant tones of burnt orange, dusty brown, and bleached bone, with a bleached, washed-out sky.",
-        "atmosphere": "Dry, suffocating heat and constant, fine dust. Occasional, violent sandstorms that obscure vision for miles.",
-        "materials": "Expanses of cracked earth, sand, gravel, and rock. Scattered, heavily weathered metal debris from ancient vehicles and structures.",
-        "mood": "Desolate, dangerous, and unforgiving. A palpable sense of survival against overwhelming odds and the ghosts of a ruined past.",
-        "sounds": "Distant, mournful wind. The occasional rumble of heavy machinery or the whine of an approaching vehicle. The faint cries of scavengers.",
-        "primary_surfaces": "Dusty plains, cracked earth, rocky outcrops.",
-        "secondary_surfaces": "Distant mountain ranges, occasional dry riverbeds, heat haze.",
-        "accent_features": "The irregular, low-lying shapes of settlements, the glint of scavenged metal, colossal skeletal remains of ancient structures.",
-        "dominant": "ochre",
-        "secondary": "dusty brown",
-        "accent": "scorched metal grey",
-        "ambient": "blindingly bright, pale blue sky with a yellow haze",
-        "genre": "post-apocalyptic",
-        "architectural_tone": "brutalist industrial",
-        "cultural_tone": "nomadic survivalist",
-        "palette_bias": "warm earth tones",
-        "flora_base": "none",
-        "fauna_base": "none"
+        "looks": "AERIAL/SATELLITE VIEW: A vast, undulating desert punctuated by colossal, skeletal industrial ruins. Crumbled cities appear as distant, weathered scars on the earth, with only the largest structures visible as faint silhouettes against the hazy horizon. Vast, empty plains dominate the view, broken by the occasional dried riverbed or impact crater.",
+        "colorsAndLighting": "Harsh, direct sunlight casting long, stark shadows. Dominant hues of ochre, rust-orange, and bleached earth tones, with metallic glints from distant, decaying structures under a pale, washed-out sky.",
+        "atmosphere": "Thick, dry air shimmering with heat haze. Occasional dust storms swirl in the distance, obscuring visibility. The atmosphere is heavy with the silence of abandonment.",
+        "materials": "Dominant materials are baked earth, vast expanses of sand and dust, and the distant, rust-corroded skeletal remains of massive industrial complexes.",
+        "mood": "A pervasive sense of extreme desolation, emptiness, and the overwhelming power of nature reclaiming its territory. A feeling of profound loss and forgotten grandeur.",
+        "sounds": "The whisper of wind across desolate plains, the distant creak of decaying metal, the occasional rumble of dust storms.",
+        "primary_surfaces": "Expanses of sand, dust, cracked earth, and the corroded metal roofs and skeletal frameworks of industrial ruins visible from orbit.",
+        "secondary_surfaces": "Dried riverbeds, impact craters, rocky outcrops, and the occasional patch of hardy, sun-bleached scrub vegetation.",
+        "accent_features": "The colossal, decaying silhouettes of the largest industrial structures and forgotten cities, appearing as dark smudges against the brighter desert.",
+        "dominant": "Ochre",
+        "secondary": "Rust-orange",
+        "accent": "Bleached bone white",
+        "ambient": "Pale, hazy blue sky with intense, unfiltered sunlight.",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "Brutalist Industrial Decay",
+        "cultural_tone": "Desperate Survival",
+        "palette_bias": "Warm and Desaturated",
+        "flora_base": "Extremely Sparse and Hardy Scrub",
+        "fauna_base": "Scavenging Insects and Reptiles"
       },
-      "description": "A vast, arid wasteland stretching to the horizon, scarred by nuclear fire and relentless sun. Nomadic tribes and fortified settlements carve out precarious existences amidst the desolate, dust-choked plains and skeletal remains of a forgotten civilization.",
-      "searchDesc": "Mad Max-style post-apocalyptic wasteland, arid deserts, scarce resources, fortified settlements.",
-      "slug": "the-scorched-expanse",
+      "description": "A vast, arid expanse stretching to the horizon, scarred by ancient wars and environmental collapse. The remnants of civilization are mere skeletons against a harsh, sun-baked landscape, hinting at a once-thriving world now reduced to dust and ruin.",
+      "searchDesc": "Post-apocalyptic desert world with Mad Max-inspired abandoned ruins and harsh environments.",
+      "slug": "the-dustlands",
       "structure": {
-        "spatialLayout": "Vast, open plains with sparse, scattered points of interest (settlements, ruins). Nomadic routes crisscross the landscape like faded scars."
+        "spatialLayout": "Chaotic, fragmented, and sprawling. Ruined cities are scattered organically, connected by faint, eroded tracks and ancient, broken highways. Vast swathes of untouched, barren desert separate these remnants."
       }
     },
-    "6bdac171-ce8c-416a-8435-c91ba9560f71": {
-      "id": "6bdac171-ce8c-416a-8435-c91ba9560f71",
+    "48fe05ab-fba7-44db-879b-90bf208b0e58": {
+      "id": "48fe05ab-fba7-44db-879b-90bf208b0e58",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -44,327 +55,312 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "e86a10c8-7842-4feb-a954-ec4826b694cd": {
-      "id": "e86a10c8-7842-4feb-a954-ec4826b694cd",
+    "8a7b95d4-3930-4272-891a-1ba1be008385": {
+      "id": "8a7b95d4-3930-4272-891a-1ba1be008385",
       "type": "location",
-      "name": "The Rust Dome",
+      "name": "Rustbucket Ruins",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The primary form is a colossal, fractured geodesic dome. Its surface is a patchwork of corroded metal panels, tattered tarps, and scavenged sheet metal, creating an irregular, organic silhouette against the sky. The scale is immense, dwarfing any individual within.",
-        "colorsAndLighting": "Dominated by rust-reds, muted ochres, and dull grays. Light filters through gaps and broken panels, casting long, dramatic shadows and creating shafts of dusty illumination.",
-        "atmosphere": "The air is thick with dust and the metallic tang of decay. A constant, low hum of activity and the occasional clang of metal echo within the vast space. The temperature is likely variable, with cooler pockets and sun-baked areas.",
-        "materials": "The dominant materials are heavily weathered, oxidized metal and various forms of salvaged, rough-hewn materials. Textures range from flaky rust and pitted surfaces to coarse wood and frayed fabric.",
-        "mood": "A sense of desperate resilience and grim functionality pervades the space. It evokes feelings of scarcity, danger, and a hard-won community.",
-        "sounds": "creaking metal, wind whistling, distant shouts, clanging, scraping, shuffling",
-        "primary_surfaces": "corroded metal, rough-hewn wood, tattered fabric",
-        "secondary_surfaces": "grated flooring, exposed steel girders, shattered glass",
-        "accent_features": "makeshift signs, brightly colored rags, flickering fires",
-        "dominant": "rust-red (extensive)",
-        "secondary": "dull gray (significant)",
-        "accent": "ochre (scattered)",
-        "ambient": "dusty, diffused",
+        "looks": "Vast, sprawling industrial ruins dominate the landscape. Massive, skeletal structures of rusted metal and weathered concrete rise precariously against the horizon. The layout is chaotic and fragmented, with collapsed sections and piles of debris.",
+        "colorsAndLighting": "The scene is bathed in harsh, golden sunlight that casts long, deep shadows. Dominant colors are muted ochres, sandy browns, and the deep rust tones of decaying metal. The light is intense and unforgiving.",
+        "atmosphere": "The air is dry, hot, and thick with swirling dust particles. A faint, metallic tang hangs in the still, oppressive atmosphere. There's a profound sense of stillness, broken only by the whisper of wind.",
+        "materials": "The primary materials are heavily weathered concrete and deeply corroded, rusted metal. Textures are rough, pitted, and uneven, bearing the marks of decades of neglect and harsh environmental exposure.",
+        "mood": "A profound sense of desolation and abandonment pervades the area. It evokes feelings of forgotten purpose and the relentless passage of time, a monument to industrial decline.",
+        "sounds": "Whispering wind, creaking metal, distant echoes of collapse, skittering insects, crunching grit underfoot.",
+        "primary_surfaces": "Rough, pockmarked concrete and deeply oxidized, flaking metal.",
+        "secondary_surfaces": "Gravel, sand, shattered glass, brittle plastic fragments.",
+        "accent_features": "Twisted rebar extruding from concrete, dangling chains, broken gauges and control panels.",
+        "dominant": "Rust-orange with extensive coverage on metal structures.",
+        "secondary": "Desert-sand beige for concrete and ground cover.",
+        "accent": "Muted grey for shadows and deeper decay, occasional flashes of corroded green patina.",
+        "ambient": "Harsh, high-contrast sunlight.",
         "genre": null,
-        "architectural_tone": "brutalist industrial with organic salvage",
-        "cultural_tone": "survivalist, scavenger, post-apocalyptic",
-        "palette_bias": "earth tones, metallic hues",
-        "flora_base": "None",
-        "fauna_base": "None"
+        "architectural_tone": "Brutalist industrial decay with elements of post-apocalyptic ruin.",
+        "cultural_tone": "A relic of a failed industrial past, now reclaimed by the desert and perhaps scavenged by hardy survivors.",
+        "palette_bias": "Warm earth tones and metallic hues.",
+        "flora_base": "Sparse, hardy desert scrub and tenacious weeds.",
+        "fauna_base": "Scuttling insects, desert rodents, and opportunistic birds of prey."
       },
-      "description": "A sprawling settlement built within a massive, derelict dome, serving as a hub for scavengers and survivors. EXTERIOR VIEW.",
-      "searchDesc": "Massive, decaying geodesic dome settlement in the wasteland, a hub for scavengers.",
-      "slug": "the-rust-dome",
+      "description": "A collection of crumbling, abandoned buildings in a vast desert landscape. EXTERIOR VIEW.",
+      "searchDesc": "Massive, decaying industrial ruins in a harsh desert, with rusted silos and crumbling concrete structures.",
+      "slug": "rustbucket-ruins",
       "structure": {
-        "spatialLayout": "The space is a vast, domed cavern, with its interior filled with makeshift structures and a network of pathways. There is a strong sense of depth due to the immense scale."
+        "spatialLayout": "The space is characterized by vast, open desert dotted with imposing, broken industrial structures. There's a sense of depth created by the scale of the ruins and the endless horizon."
       },
       "navigableElements": [
         {
-          "type": "gate",
-          "position": "center-front",
-          "description": "A massive, rusted iron gate, partially ajar, leading into the main concourse of the dome."
+          "type": "door",
+          "position": "center of main building facade",
+          "description": "Leads into the central factory building, potentially dark and dusty."
         },
         {
           "type": "passage",
-          "position": "left-side",
-          "description": "A gaping hole in the dome's side panels, revealing a dark, rubble-strewn path leading to a less-maintained section."
+          "position": "between two collapsed silos",
+          "description": "Opens into a more overgrown and chaotic section of the ruins."
+        }
+      ],
+      "dominantElements": [
+        "abandoned-factory: shape=rectangular-industrial, orientation=sprawling, scale=massive, style=brutalist, surfaces=weathered-concrete, openings=minimal, interior_materials=concrete|rubble|corroded-metal, enterable=yes, internal_atmosphere=dim",
+        "crumbling-storage-silo: shape=cylindrical, orientation=vertical, scale=large, style=industrial, surfaces=rusted-metal, openings=open-passages, interior_materials=metal|metal-grating|none, enterable=no, internal_atmosphere=n/a"
+      ],
+      "uniqueIdentifiers": [
+        "Towering, rusted metal silos",
+        "Skeletal remains of conveyor belts",
+        "Wind-eroded concrete structures",
+        "Scattered piles of industrial debris",
+        "A pervasive scent of decay and hot metal"
+      ],
+      "primaryMedia": "media-1767080300657-5mu8fmllo"
+    },
+    "niche-1767080392947-7miepi01s": {
+      "id": "niche-1767080392947-7miepi01s",
+      "type": "niche",
+      "name": "abandoned-factory",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, open interior space within a decaying industrial structure. Skeletal remnants of enormous machinery, concrete pillars, and exposed metal frameworks dominate the view. Dust and debris cover the floor, with shafts of sunlight piercing the gloom from holes in the roof.",
+        "colorsAndLighting": "Harsh sunlight streams through gaps in the structure, creating stark contrasts and long shadows. Dominant colors are rust-orange, desaturated greys of concrete, and the pervasive ochre of dust. Metallic glints catch the light from decaying machinery.",
+        "atmosphere": "Still, dry air, heavy with the scent of rust, oil, and dust. The silence is profound, broken only by the occasional creak of stressed metal or the whisper of wind through openings.",
+        "materials": "Corroded steel, heavily weathered concrete, thick layers of ochre dust, shattered glass, exposed rebar.",
+        "mood": "Profound desolation, a sense of lost purpose, and the quiet triumph of entropy. A feeling of oppressive emptiness and forgotten ambition.",
+        "sounds": "Distant metallic groans, wind whistling, settling dust, echoes of emptiness, dripping water (rare).",
+        "spatialLayout": "Vast, cavernous open spaces with high ceilings, broken up by the imposing forms of defunct machinery and structural supports. Narrow passages and service tunnels are hinted at in the shadows.",
+        "primary_surfaces": "Crumbling concrete walls and floors, large expanses of rusted metal plating.",
+        "secondary_surfaces": "Heaps of scrap metal, broken pipes, tangled wires, drifts of fine ochre dust.",
+        "accent_features": "The colossal, inactive machinery, skeletal framework of gantries and conveyor belts, patches of hardy, sun-bleached scrub pushing through cracks.",
+        "dominant": "Ochre",
+        "secondary": "Rust-orange",
+        "accent": "Bleached bone white",
+        "ambient": "Pale, hazy light filtered through dust and decay.",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "Brutalist Industrial Decay",
+        "cultural_tone": "Desperate Survival",
+        "palette_bias": "Warm and Desaturated",
+        "flora_base": "Extremely Sparse and Hardy Scrub",
+        "fauna_base": "Scavenging Insects and Reptiles"
+      },
+      "primaryMedia": "media-1767080392946-k61o3y4w4",
+      "description": "The interior of the abandoned factory is a colossal, dimly lit space. Massive concrete pillars, stained and scarred, rise to meet a ceiling of corroded metal. The floor is a chaotic carpet of rubble and industrial detritus, with the skeletal remains of long-dormant machinery scattered throughout the sprawling layout. Minimal, grimy openings high on the walls allow only slivers of weak light to penetrate the pervasive gloom. The air is heavy with the scent of decay and damp.",
+      "structure": {
+        "form": "rectangular-industrial",
+        "roofType": "flat",
+        "scale": "massive",
+        "orientation": "sprawling",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "industrial",
+        "elevation": "ground-level",
+        "spatialLayout": "Vast, cavernous industrial spaces stretch out horizontally, marked by towering support pillars and a network of elevated walkways. The interior is a maze of forgotten machinery and debris, dimly lit by sparse, high-placed windows.",
+        "requiredElements": [
+          "concrete",
+          "rubble",
+          "corroded-metal"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "far wall",
+          "description": "A heavy, rusted metal door leading back outside to 'Rustbucket Ruins'."
+        },
+        {
+          "type": "passage",
+          "position": "left side",
+          "description": "A dark, debris-strewn passage leading further into the factory's depths."
         },
         {
           "type": "stairs",
-          "position": "inner-right",
-          "description": "A rickety metal staircase winding upwards along the interior of the dome's support structure, leading to higher platforms."
+          "position": "center-right",
+          "description": "A rickety metal staircase leading up to an elevated walkway."
         }
       ],
       "dominantElements": [
-        "main-dome-structure: shape=domed, orientation=centered, scale=massive, style=industrial-rustic, surfaces=weathered-metal|scavenged-panels, openings=narrow-slits|open-passages, interior_materials=corrugated-metal|grated-floor|exposed-girders, enterable=yes, internal_atmosphere=cavernous"
+        "assembly-line-machinery: shape=industrial-complex, orientation=linear, scale=massive, style=brutalist, surfaces=corroded-metal, openings=none, interior_materials=concrete|rubble|corroded-metal, enterable=no, internal_atmosphere=dim",
+        "collapsed-gantry: shape=irregular, orientation=scattered, scale=large, style=industrial, surfaces=corroded-metal, openings=none, interior_materials=concrete|rubble|corroded-metal, enterable=no, internal_atmosphere=dim",
+        "control-booth: shape=rectangular, orientation=elevated, scale=medium, style=industrial, surfaces=concrete, openings=minimal, interior_materials=concrete|rubble|corroded-metal, enterable=yes, internal_atmosphere=dim"
       ],
       "uniqueIdentifiers": [
-        "enormous geodesic dome structure",
-        "patchwork of scavenged materials",
-        "skeletal metal framework",
-        "constant dust and debris",
-        "makeshift dwellings built within"
+        "faint smell of oil and decay",
+        "constant, low hum of residual power",
+        "shadows stretching long and deep",
+        "scattered puddles of stagnant water"
       ],
-      "primaryMedia": "media-1767018206846-24ng74fkj"
+      "searchDesc": "Abandoned factory ruins, vast, desolate, rusted machinery, ochre dust.",
+      "slug": "null-of-rustbucket-ruins"
     },
-    "niche-1767018235186-8a36uv6xy": {
-      "id": "niche-1767018235186-8a36uv6xy",
+    "niche-1767080517427-d3ndepob3": {
+      "id": "niche-1767080517427-d3ndepob3",
       "type": "niche",
-      "name": "main-dome-structure",
+      "name": "Basement a large room with a whimsical house",
       "spaceType": "interior",
       "dna": {
-        "looks": "The primary form is the colossal, fractured geodesic dome itself, but here it is perceived as the boundary. The 'null' is the space between the irregular silhouette of corroded metal panels, tattered tarps, and scavenged sheet metal that form the dome's shell. It is an irregular, organic void against the sky.",
-        "colorsAndLighting": "Dominated by the rust-reds, muted ochres, and dull grays of the dome's structure, but primarily experienced as the interplay of light and shadow. Light filters through immense gaps and broken panels, casting long, dramatic shadows and creating vast, shifting shafts of dusty illumination that emphasize the emptiness.",
-        "atmosphere": "The air is thick with dust. A constant, low hum of unseen activity and the occasional clang of metal echo through the immense, hollow space. The temperature is likely variable, with cooler pockets in deep shadow and warmer areas where sunbeams penetrate.",
-        "materials": "Perceived as the negative space defined by heavily weathered, oxidized metal and various forms of salvaged, rough-hewn materials. The absence of solid ground or immediate structure is key.",
-        "mood": "A sense of overwhelming scale, profound emptiness, and the latent danger of the unknown. It evokes feelings of immense scarcity of defined space, the vastness of potential threats, and the sheer isolation of this 'non-place'.",
-        "sounds": "Echoing hum, distant clangs, settling dust, wind whistling through gaps.",
-        "spatialLayout": "An immense, irregular void within a fractured geodesic dome.",
-        "primary_surfaces": "Absence of structure, defined by the edges of corroded metal, rough-hewn wood, and tattered fabric that form the dome.",
-        "secondary_surfaces": "The perceived edges of grated flooring, exposed steel girders, and shattered glass fragments from a distance.",
-        "accent_features": "The play of light and shadow, the visible dust motes, the distant glint of makeshift signs or flickering fires.",
-        "dominant": "rust-red (as the dominant color of the surrounding structure)",
-        "secondary": "dull gray (as the color of shadows and unlit expanses)",
-        "accent": "ochre (seen in scattered light patches)",
-        "ambient": "dusty, diffused light and deep shadow",
-        "genre": null,
-        "architectural_tone": "null",
-        "cultural_tone": "null",
-        "palette_bias": "null",
-        "flora_base": "None",
-        "fauna_base": "None"
+        "looks": "A large, cavernous basement space dominated by the skeletal, fragmented structure of a 'whimsical' house. The house is built from scavenged, brightly colored but now faded and peeling materials like corrugated metal, brittle plastic sheets, and stained fabric. It's precariously assembled and clearly a jury-rigged attempt at cheerfulness. Piles of industrial debris, rusted pipes, and shattered concrete are everywhere, encroaching on the playhouse structure. Shadows are deep and unforgiving.",
+        "colorsAndLighting": "The primary colors are muted ochres and sandy browns from the concrete and dust, interspersed with the deep rust-orange of corroded metal. Patches of faded, once-vibrant colors from the playhouse materials (pale blues, washed-out yellows, faded pinks) are scattered, creating jarring but poignant accents. Lighting is dim and harsh, with strong directional light from occasional cracks or gaps, creating stark contrasts.",
+        "atmosphere": "The air is thick with dust and carries a faint metallic tang. It feels damp and cold in places, with a persistent dripping sound. A profound sense of abandonment and faded joy permeates the space, a stark contrast between the intended whimsy and the pervasive decay.",
+        "materials": "Heavily weathered concrete, deeply corroded and flaking rusted metal, brittle and faded plastic sheeting, shredded and stained fabrics.",
+        "mood": "Melancholy, eerie, a profound sense of loss and forgotten innocence.",
+        "sounds": "Dripping water, creaking metal, distant wind, faint discordant chimes.",
+        "spatialLayout": "A large, open, rectangular basement with a central, fragmented structure representing the 'house'. Debris is piled around the edges and throughout the space, creating obstacles and uneven terrain.",
+        "primary_surfaces": "Rough, pockmarked concrete floor and walls, sections of warped and peeling metal sheeting.",
+        "secondary_surfaces": "Piles of industrial scrap metal, shattered concrete chunks, dust, tattered fabric.",
+        "accent_features": "Faded painted figures on metal, a broken tricycle, a damaged music box, exposed rusting rebar.",
+        "dominant": "Rust-orange",
+        "secondary": "Desert-sand beige",
+        "accent": "Faded, patchy remnants of bright colors (pale blue, yellow, pink)",
+        "ambient": "Dim, high-contrast light with deep shadows.",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "Brutalist industrial decay with scavenged elements.",
+        "cultural_tone": "A failed attempt at creating a joyful space within a desolated world; perhaps a child's sanctuary long abandoned.",
+        "palette_bias": "Warm earth tones and metallic hues.",
+        "flora_base": "Sparse, hardy desert scrub and tenacious weeds.",
+        "fauna_base": "Scuttling insects, desert rodents, and opportunistic birds of prey."
       },
-      "primaryMedia": "media-1767018235186-9cgfbvd6e",
-      "description": "The interior of the main dome is a vast, cavernous space defined by its domed shape. Exposed girders crisscross overhead, supporting the weathered metal and scavenged paneling that forms the walls. The grated floor allows for visibility into lower levels or service areas. Narrow slits in the walls offer glimpses of the exterior rust-colored landscape, while open passages lead deeper into the structure.",
-      "structure": {
-        "form": "domed",
-        "roofType": "domed",
-        "scale": "massive",
-        "orientation": "centered",
-        "openings": "narrow-slits|open-passages",
-        "openingShape": "mixed",
-        "functionalType": "industrial",
-        "elevation": "ground-level",
-        "spatialLayout": "The interior of the main dome is a vast, cavernous space defined by its domed shape. Exposed girders crisscross overhead, supporting the weathered metal and scavenged paneling that forms the walls. The grated floor allows for visibility into lower levels or service areas.",
-        "requiredElements": [
-          "corrugated-metal walls",
-          "grated-floor",
-          "exposed-girders ceiling"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "workbenches with scavenged electronics",
-          "towering stacks of salvaged scrap metal",
-          "grimy control panels with flickering lights",
-          "industrial floodlights casting harsh shadows",
-          "tool racks with improvised tools",
-          "discarded ration packs",
-          "oil stains on grated floor"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "center",
-          "description": "passage large open  of front wall"
-        },
-        {
-          "type": "door",
-          "position": "center",
-          "description": "door reinforced steel  rear wall"
-        },
-        {
-          "type": "hatch",
-          "position": "left wall",
-          "description": "hatch narrow maintenance"
-        },
-        {
-          "type": "corridor",
-          "position": "right wall",
-          "description": "corridor dimly lit"
-        }
-      ],
-      "dominantElements": [
-        "control-station: shape=compact, orientation=adjacent, scale=medium, style=industrial, surfaces=scavenged-panels, openings=narrow-slits, interior_materials=corrugated-metal|grated-floor|exposed-girders, enterable=yes, internal_atmosphere=functional",
-        "assembly-platform: shape=rectangular, orientation=flat, scale=large, style=industrial, surfaces=weathered-metal, openings=none, interior_materials=corrugated-metal|grated-floor|exposed-girders, enterable=no, internal_atmosphere=industrial"
-      ],
-      "uniqueIdentifiers": [
-        "Immense domed volume",
-        "Ubiquitous grated flooring",
-        "Gleaming, yet functional, exposed structural elements"
-      ],
-      "searchDesc": "The vast, dusty void within The Rust Dome, defined by absence and scale.",
-      "slug": "null-of-the-rust-dome"
-    },
-    "niche-1767018304000-ja53jk3lt": {
-      "id": "niche-1767018304000-ja53jk3lt",
-      "type": "niche",
-      "name": "Basement",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The space is a basement, a roughly excavated, low-ceilinged room. Dominating the center is a wildly imaginative, miniature house constructed from an eclectic mix of salvaged materials, appearing whimsical and out of place. The rest of the room is filled with utilitarian elements: crates, makeshift furniture, and exposed pipes.",
-        "colorsAndLighting": "The basement itself is a palette of dull grays and rust-reds, with the dusty, diffused light filtering from unseen sources. The miniature house, however, is a riot of unexpected color - bright blues, yellows, and reds in its construction and painted details, illuminated by its own small, flickering internal lights.",
-        "atmosphere": "The air is cool and damp, carrying the faint scent of earth and metal. A quiet hum emanates from the house's internal workings, contrasting with the ambient echoes of the larger structure.",
-        "materials": "The basement walls are rough-hewn concrete and stained earth. The house is constructed from a bizarre assortment of salvaged items: polished tin cans, scraps of brightly colored fabric, painted wood shards, and tiny, repurposed glass shards for windows. Utilitarian furniture is made from scavenged metal and rough wood.",
-        "mood": "The mood is one of stark juxtaposition: the grim resilience of the basement setting against the unexpected joy and defiance of the whimsical house. It evokes a sense of manufactured sanctuary and defiant cheerfulness.",
-        "sounds": "low hum, faint clinks, soft whistling, distant clangs, rustling fabric",
-        "spatialLayout": "A contained, rectangular basement room with a prominent central feature.",
-        "primary_surfaces": "rough-hewn concrete, stained earth, salvaged colorful materials",
-        "secondary_surfaces": "corroded metal, rough-hewn wood, tattered fabric, exposed steel girders",
-        "accent_features": "the miniature whimsical house, dollhouse-like windows, brightly colored rags used in the house's construction, tiny flickering lights within the house",
-        "dominant": "dull gray",
-        "secondary": "rust-red",
-        "accent": "various bright colors (from the house)",
-        "ambient": "dusty, diffused, cool, damp",
-        "genre": null,
-        "architectural_tone": "brutalist industrial with organic salvage",
-        "cultural_tone": "survivalist, scavenger, post-apocalyptic",
-        "palette_bias": "earth tones, metallic hues, and contrasting vibrant colors",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767018304000-4uix9k1xe",
-      "description": "You are in a dimly lit basement. Concrete walls and a dusty floor surround you. In the center of the room, a small, whimsical house stands, its windows inviting curiosity.",
+      "primaryMedia": "media-1767080517426-ffhhh2quu",
+      "description": "You are in a large, cavernous basement. The concrete walls and floor bear the marks of industrial decay, with a warm, desaturated palette lending a somber mood. In the center of this expanse, a small, whimsical house stands in stark contrast. Its surfaces are weathered wood, and its minimal openings suggest a cozy, albeit peculiar, interior. The air is thick with a sense of forgotten history and unexpected charm.",
       "structure": {
         "form": "irregular",
         "roofType": "null",
-        "scale": "medium",
-        "orientation": "cubic",
+        "scale": "large",
+        "orientation": "sprawling",
         "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "residential",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
         "elevation": "underground",
-        "spatialLayout": "A dimly lit basement room with various storage items and a central, whimsical house structure.",
+        "spatialLayout": "This is a sprawling, large underground space. The dominant feature is a whimsical house set within the larger basement room. The overall aesthetic is one of Brutalist Industrial Decay with a warm and desaturated color palette.",
         "requiredElements": [
           "basement",
-          "whimsical house",
-          "whimsical house in the middle"
+          "large room",
+          "whimsical house"
         ]
       },
       "navigableElements": [
         {
-          "type": "stairs",
-          "position": "at the far end of the room",
-          "description": "leads up to the main compound above"
+          "type": "passage",
+          "position": "far wall, center",
+          "description": "A jagged opening leading to a dark, debris-strewn corridor."
         },
         {
-          "type": "passage",
-          "position": "behind the whimsical house",
-          "description": "a dimly lit tunnel, origin unknown"
+          "type": "stairs",
+          "position": "left wall, near entrance",
+          "description": "Crumbling concrete stairs leading up to the surface."
         }
       ],
       "dominantElements": [
-        "whimsical house: shape=organic, orientation=centered, scale=small, style=ornate, surfaces=wood, openings=arched-windows, interior_materials=wood|wood|wood, enterable=yes, internal_atmosphere=cozy"
+        "whimsical house: shape=organic, orientation=compact, scale=medium, style=whimsical, surfaces=weathered-wood, openings=minimal, interior_materials=painted-wood|worn-carpet|textured-plaster, enterable=yes, internal_atmosphere=cozy"
       ],
       "uniqueIdentifiers": [
-        "central whimsical house"
+        "contrast between Brutalist industrial decay and whimsical interior",
+        "underground setting"
       ],
-      "searchDesc": "A basement room with a fantastical, miniature house in the center, surrounded by salvaged materials and industrial remnants.",
-      "slug": "the-whimsical-shelter"
+      "searchDesc": "A derelict basement housing a decaying, whimsical playhouse amidst industrial ruin.",
+      "slug": "the-children-s-ruin"
     },
-    "loc-1767018461592-y3ymsdsjg": {
-      "id": "loc-1767018461592-y3ymsdsjg",
+    "loc-1767080676998-q206z8hqx": {
+      "id": "loc-1767080676998-q206z8hqx",
       "type": "location",
-      "name": "house to a room with big windows with view of the surrounding",
+      "name": "whimsical house",
       "spaceType": "structure",
       "dna": {},
-      "description": "Structure: house to a room with big windows with view of the surrounding",
-      "searchDesc": "house to a room with big windows with view of the surrounding",
-      "slug": "house-to-a-room-with-big-windows-with-view-of-the-surrounding",
+      "description": "Structure: whimsical house",
+      "searchDesc": "whimsical house",
+      "slug": "whimsical-house",
       "isPassThrough": true
     },
-    "niche-1767018471089-xca2sk3g3": {
-      "id": "niche-1767018471089-xca2sk3g3",
+    "niche-1767080688102-zh4pxp7m6": {
+      "id": "niche-1767080688102-zh4pxp7m6",
       "type": "niche",
-      "name": "whimsical house interior",
+      "name": "whimsical house",
       "spaceType": "interior",
       "dna": {
-        "looks": "A warm and inviting living space, furnished for comfort and to maximize the stunning outdoor views. Natural light floods the room.",
-        "colorsAndLighting": "Bright and airy, with sunlight streaming through the large windows. Warm, ambient lighting from lamps and a fireplace creates a cozy atmosphere in the evenings.",
-        "atmosphere": "Peaceful and serene, filled with natural light and the gentle sounds of nature from outside.",
-        "materials": "Dominantly natural materials: polished hardwood floors, exposed wooden beams, comfortable fabric upholstery, and stone for the fireplace. The windows are large panes of clear glass.",
-        "mood": "Tranquil, inviting, and connected to nature. A sense of peace and relaxation.",
-        "sounds": "Soft murmurs of nature, crackling fireplace, distant birdsong.",
-        "spatialLayout": "Open plan with a central seating area oriented towards the windows. Ample space for movement and relaxation.",
-        "primary_surfaces": "Polished hardwood floors, plastered and painted walls, large glass window panes.",
-        "secondary_surfaces": "Exposed wooden ceiling beams, stone fireplace surround, fabric upholstery.",
-        "accent_features": "A well-stocked bookshelf, decorative houseplants, framed landscape art.",
-        "dominant": "Natural light",
-        "secondary": "Warm wood tones",
-        "accent": "Subtle earthy greens and blues from the view",
-        "ambient": "Bright, airy, warm",
-        "genre": null,
-        "architectural_tone": "Modern Rustic",
-        "cultural_tone": "Nature-inspired, comfortable living",
-        "palette_bias": "Earthy tones, natural greens and blues, warm wood hues",
-        "flora_base": "Houseplants, natural outdoor flora visible",
-        "fauna_base": "Birds, small wildlife visible from windows"
+        "looks": "A small, organically shaped interior with low, curving walls and a slightly uneven floor. Furniture is pieced together from salvaged wood, painted in faded but cheerful colors like sky blue, sun yellow, and faded pink. Minimal openings create a sense of enclosure. The overall impression is one of resourceful, defiant cheerfulness against a backdrop of decay.",
+        "colorsAndLighting": "Muted, sun-bleached pastels from the painted wood and plaster dominate, interspersed with the earthy browns and grays of the worn carpet. Light is dim, cast by a single, flickering oil lamp, creating a warm, intimate glow that accentuates the textures.",
+        "atmosphere": "Warm, dry, and still. The air carries a faint scent of old wood, dust, and perhaps a hint of lamp oil. It feels intentionally sheltered and comforting, a stark contrast to the external desolation.",
+        "materials": "Primary: Weathered wood (painted and chipped), worn, faded carpet, textured plaster. Secondary: Patches of salvaged metal, fragments of brittle plastic for decoration.",
+        "mood": "Cozy, hopeful, defiant, secluded, resourceful, intimate.",
+        "sounds": "Faint creaking of wood, soft hiss of the lamp, distant whisper of wind.",
+        "spatialLayout": "Compact, organically shaped, rounded corners, low ceilings.",
+        "primary_surfaces": "Painted, weathered wood paneling; textured, uneven plaster.",
+        "secondary_surfaces": "Worn, threadbare carpet on floors and lower walls; salvaged metal accents.",
+        "accent_features": "Mismatched painted tin can decorations, crude but charming painted murals on wood panels, a small, salvaged collection of colorful shards embedded in plaster.",
+        "dominant": "Faded pastel blues and yellows.",
+        "secondary": "Earthy browns and grays of worn carpet and raw wood.",
+        "accent": "Rust-orange from exposed metal, hints of verdigris from salvaged items.",
+        "ambient": "Warm, flickering, low-contrast light.",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "Brutalist industrial decay with elements of post-apocalyptic ruin.",
+        "cultural_tone": "A relic of a failed industrial past, now reclaimed by the desert and perhaps scavenged by hardy survivors.",
+        "palette_bias": "Warm earth tones and metallic hues.",
+        "flora_base": "Sparse, hardy desert scrub and tenacious weeds.",
+        "fauna_base": "Scuttling insects, desert rodents, and opportunistic birds of prey."
       },
-      "primaryMedia": "media-1767018471088-kpp51tp8w",
-      "description": "You are inside a small, whimsically shaped house constructed entirely of wood. The interior is warm and inviting, with smooth, curved wooden walls that create an organic flow. Natural light pours in through a series of elegant, arched windows that offer stunning, expansive views of the surrounding area. The air feels snug and comforting.",
+      "primaryMedia": "media-1767080688102-tp4k52kpw",
+      "description": "You are inside the whimsical house. The walls are made of painted wood, exhibiting a variety of faded, cheerful colors. The floor is covered in a worn, patterned carpet that feels soft underfoot. Above, the ceiling is a textured plaster, giving it a slightly uneven, organic feel. Minimal, small, irregularly shaped openings punctuate the walls, letting in a soft, diffused light. The overall atmosphere is one of deep coziness and playful charm, a stark contrast to the more weathered exterior of the house.",
       "structure": {
         "form": "organic",
-        "roofType": "null",
-        "scale": "small",
-        "orientation": "centered",
-        "openings": "arched-windows",
-        "openingShape": "arched",
+        "roofType": null,
+        "scale": "medium",
+        "orientation": "compact",
+        "openings": "minimal",
+        "openingShape": "irregular",
         "functionalType": "residential",
         "elevation": "ground-level",
-        "spatialLayout": "The interior of the whimsical house is a single, cozy room with curving wooden walls and a central focus. Light streams in through large, arched windows that offer panoramic views of the surrounding environment.",
+        "spatialLayout": "The interior is a single, cozy space shaped organically, with curving walls and a low ceiling. The layout is efficient and compact, focusing on creating a warm and inviting atmosphere within the small footprint.",
         "requiredElements": [
-          "big windows with view of the surrounding"
+          "painted-wood",
+          "worn-carpet",
+          "textured-plaster"
         ]
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "side",
-          "description": "leads to the \"Basement\""
+          "position": "north wall",
+          "description": "leads back to 'Basement a large room with a whimsical house'"
         }
       ],
       "dominantElements": [
-        "whimsical house: shape=organic, orientation=centered, scale=small, style=ornate, surfaces=wood, openings=arched-windows, interior_materials=wood|wood|wood, enterable=yes, internal_atmosphere=cozy"
+        "curved-sofa: shape=organic, orientation=centered, scale=medium, style=whimsical, surfaces=fabric, openings=none, interior_materials=fabric|worn-carpet|textured-plaster, enterable=no, internal_atmosphere=cozy",
+        "wooden-table: shape=irregular, orientation=compact, scale=small, style=whimsical, surfaces=wood, openings=none, interior_materials=wood|worn-carpet|textured-plaster, enterable=no, internal_atmosphere=cozy",
+        "stuffed-creatures: shape=organic, orientation=scattered, scale=small, style=whimsical, surfaces=fabric, openings=none, interior_materials=fabric|worn-carpet|textured-plaster, enterable=no, internal_atmosphere=cozy"
       ],
       "uniqueIdentifiers": [
-        "curving wooden walls",
-        "large arched windows",
-        "cozy atmosphere"
+        "asymmetrical wall curves",
+        "hand-painted murals (faded)",
+        "a low, slightly slanted ceiling"
       ],
-      "searchDesc": "Living room with large windows overlooking nature, cozy seating, and a fireplace.",
-      "slug": "interior-of-house-to-a-room-with-big-windows-with-view-of-the-surrounding"
+      "searchDesc": "Cozy, compact whimsical house interior with painted wood, worn carpet, and plaster.",
+      "slug": "interior-of-whimsical-house-shape-organic-orientation-compact-scale-medium-style-whimsical-surfaces-weathered-wood-openings-minimal-interior-materials-painted-wood-worn-carpet-textured-plaster-enterable-yes-internal-atmosphere-cozy"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1767018188161-f5dfwgoex",
+      "id": "loc-1767080283680-3au0tf6ly",
       "type": "host",
       "children": [
         {
-          "id": "6bdac171-ce8c-416a-8435-c91ba9560f71",
+          "id": "48fe05ab-fba7-44db-879b-90bf208b0e58",
           "type": "region",
           "children": [
             {
-              "id": "e86a10c8-7842-4feb-a954-ec4826b694cd",
+              "id": "8a7b95d4-3930-4272-891a-1ba1be008385",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1767018235186-8a36uv6xy",
+                  "id": "niche-1767080392947-7miepi01s",
                   "type": "niche",
                   "children": []
                 },
                 {
-                  "id": "niche-1767018304000-ja53jk3lt",
+                  "id": "niche-1767080517427-d3ndepob3",
                   "type": "niche",
                   "children": [
                     {
-                      "id": "loc-1767018461592-y3ymsdsjg",
+                      "id": "loc-1767080676998-q206z8hqx",
                       "type": "location",
                       "children": [
                         {
-                          "id": "niche-1767018471089-xca2sk3g3",
+                          "id": "niche-1767080688102-zh4pxp7m6",
                           "type": "niche",
                           "children": []
                         }
@@ -380,6 +376,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1767018188161-f5dfwgoex"
+    "loc-1767080283680-3au0tf6ly"
   ]
 }

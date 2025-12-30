@@ -4,7 +4,7 @@
  */
 
 import type { NavigationContext } from '../types';
-import { getResolvedNodeDNA } from '../../hierarchyAnalysis/dnaMerge';
+import { getResolvedNodeDNA, resolveAncestryDNASkippingPassThrough } from '../../hierarchyAnalysis/dnaMerge';
 import { findParentLocationNode, findParentRegionNode } from './parentResolution';
 import { findHostForRegion } from './treeTraversal';
 
@@ -64,9 +64,15 @@ export function resolveNavigationParentDNA(
   if (command === 'GO_INSIDE') {
     const currentNodeId = context.currentNode.id;
     
-    // Use cascaded DNA resolution for full ancestry inheritance
-    // This works for any depth - resolves DNA from host → region → location → niche → ...
-    const resolvedParentDNA = getResolvedNodeDNA(
+    // Use pass-through skipping DNA resolution for proper ancestry inheritance
+    // This ensures we get DNA from meaningful ancestors, not empty pass-through nodes
+    // Example: whimsical house interior → pass-through location → Basement
+    // The interior should inherit from Basement's Mad Max DNA, not from empty pass-through
+    const resolvedParentDNA = resolveAncestryDNASkippingPassThrough(
+      currentNodeId,
+      worldsData.nodes,
+      worldsData.worldTrees
+    ) || getResolvedNodeDNA(
       currentNodeId,
       worldsData.nodes,
       worldsData.worldTrees

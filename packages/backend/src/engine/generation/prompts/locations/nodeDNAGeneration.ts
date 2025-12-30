@@ -26,16 +26,37 @@ export function nodeDNAGeneration(
   // This ensures proper world context (e.g., "on The Moon") is passed for all navigation
   const contextSection = parentContext 
     ? `
-PARENT CONTEXT (inherit unless overriding):
+═══════════════════════════════════════════════════════════════════
+WORLD DNA ANCHORING (ABSOLUTE - 80% preservation required)
+═══════════════════════════════════════════════════════════════════
+These define the WORLD identity and MUST influence this space:
 - Genre: ${parentContext.genre || 'none'}
+- Architectural tone: ${parentContext.architectural_tone || 'none'}
+- Cultural tone: ${parentContext.cultural_tone || 'none'}
+- Palette bias: ${parentContext.palette_bias || 'none'}
+- Mood baseline: ${parentContext.mood_baseline || parentContext.mood || 'none'}
+
+CRITICAL BLENDING RULE:
+When user requests CONTRASTING concepts (e.g., "whimsical" in post-apocalyptic):
+- DO NOT replace world DNA with opposite aesthetics
+- BLEND the concepts - the new space must still FEEL like it belongs in this world
+- The world's tone should be the foundation, the user's concept is an adaptation
+
+BLENDING EXAMPLES:
+- "whimsical house" in post-apocalyptic → colorful salvaged materials, quirky but rough, defiant cheerfulness
+  NOT: polished hardwood, pastoral cottage, nature-inspired serenity
+- "elegant room" in industrial setting → refined surfaces from industrial materials, polished metal, clean lines
+  NOT: ornate Victorian, gilded mirrors, delicate fabrics
+- "cozy space" in brutalist world → warm lighting on concrete, soft furnishings on hard surfaces
+  NOT: log cabin, rustic wood, country cottage
+
+═══════════════════════════════════════════════════════════════════
+PARENT VISUAL CONTEXT (adapt, don't replace):
+═══════════════════════════════════════════════════════════════════
 - Looks: ${parentContext.looks || 'none'}
 - Colors/Lighting: ${parentContext.colorsAndLighting || 'none'}
 - Atmosphere: ${parentContext.atmosphere || 'none'}
 - Materials: ${parentContext.materials || 'none'}
-- Mood: ${parentContext.mood || 'none'}
-- Architectural tone: ${parentContext.architectural_tone || 'none'}
-- Cultural tone: ${parentContext.cultural_tone || 'none'}
-- Palette: ${parentContext.palette_bias || 'none'}
 - Primary surfaces: ${parentContext.primary_surfaces || 'none'}
 - Secondary surfaces: ${parentContext.secondary_surfaces || 'none'}
 - Accent features: ${parentContext.accent_features || 'none'}
@@ -48,13 +69,14 @@ PARENT CONTEXT (inherit unless overriding):
 
 MATERIAL RULES:
 - Exterior→Exterior: KEEP same facade
-- Exterior→Interior: TRANSFORM facade to interior finish (wood facade→plaster/wallpaper, stone→keep for grand spaces)
-- User-specified surfaces override all
+- Exterior→Interior: TRANSFORM facade to interior finish using SAME material family
+  (metal facade → metal panels/grating inside, wood → rough planks, stone → stone walls)
+- User-specified surfaces override but should still fit the world
 
 INHERITANCE RULES:
-- Set field to null to INHERIT from parent
-- Only override when the new space has DIFFERENT characteristics
+- Set cascading fields (genre, architectural_tone, cultural_tone, palette_bias) to null to INHERIT
 - Genre MUST be inherited (set to null) - only host defines genre
+- Scene fields (looks, materials, mood) should BLEND parent + new concept, not replace entirely
 `
     : '';
 

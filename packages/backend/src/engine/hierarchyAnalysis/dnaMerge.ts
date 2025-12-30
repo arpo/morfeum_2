@@ -2,9 +2,25 @@
  * DNA Merge Utility
  * Merges parent and child DNA, with child overriding parent where specified
  * Based on frontend's locationCascading.ts logic
+ * 
+ * Enhanced with DNA inheritance enforcement to prevent "DNA dilution"
+ * when creating nested spaces with contrasting concepts.
  */
 
 import type { NodeDNA } from './types';
+
+/**
+ * Cascading fields that define world identity
+ * These should be preserved across child nodes (80% preservation rule)
+ */
+const WORLD_IDENTITY_FIELDS: (keyof NodeDNA)[] = [
+  'genre',
+  'architectural_tone', 
+  'cultural_tone',
+  'palette_bias',
+  'mood_baseline',
+  'materials_base'
+];
 
 /**
  * WorldTree node structure for traversal
@@ -29,6 +45,9 @@ interface NodeWithDNA {
  * Merge parent DNA with child DNA (sparse overrides)
  * Returns a complete DNA object where child values override parent values
  * Null/undefined child values inherit from parent
+ * 
+ * IMPORTANT: Uses nullish coalescing (??) for cascading fields to ensure
+ * that null values properly inherit from parent instead of blocking inheritance.
  */
 export function mergeDNA(parentDNA: NodeDNA, childDNA?: Partial<NodeDNA>): NodeDNA {
   if (!childDNA) {
@@ -37,6 +56,7 @@ export function mergeDNA(parentDNA: NodeDNA, childDNA?: Partial<NodeDNA>): NodeD
 
   return {
     // Scene-specific visual fields (always present)
+    // Uses || because empty strings should also fallback to parent
     looks: childDNA.looks || parentDNA.looks,
     colorsAndLighting: childDNA.colorsAndLighting || parentDNA.colorsAndLighting,
     atmosphere: childDNA.atmosphere || parentDNA.atmosphere,
@@ -52,16 +72,18 @@ export function mergeDNA(parentDNA: NodeDNA, childDNA?: Partial<NodeDNA>): NodeD
     accent: childDNA.accent || parentDNA.accent,
     ambient: childDNA.ambient || parentDNA.ambient,
     
-    // Cascading style attributes (can be sparse/null in children)
-    genre: childDNA.genre !== undefined ? childDNA.genre : parentDNA.genre,
-    architectural_tone: childDNA.architectural_tone !== undefined ? childDNA.architectural_tone : parentDNA.architectural_tone,
-    cultural_tone: childDNA.cultural_tone !== undefined ? childDNA.cultural_tone : parentDNA.cultural_tone,
-    materials_base: childDNA.materials_base !== undefined ? childDNA.materials_base : parentDNA.materials_base,
-    mood_baseline: childDNA.mood_baseline !== undefined ? childDNA.mood_baseline : parentDNA.mood_baseline,
-    palette_bias: childDNA.palette_bias !== undefined ? childDNA.palette_bias : parentDNA.palette_bias,
-    soundscape_base: childDNA.soundscape_base !== undefined ? childDNA.soundscape_base : parentDNA.soundscape_base,
-    flora_base: childDNA.flora_base !== undefined ? childDNA.flora_base : parentDNA.flora_base,
-    fauna_base: childDNA.fauna_base !== undefined ? childDNA.fauna_base : parentDNA.fauna_base
+    // Cascading style attributes (WORLD IDENTITY FIELDS)
+    // Uses ?? to ensure null values inherit from parent instead of blocking inheritance
+    // This fixes the "DNA dilution" bug where genre: null blocked Post-Apocalyptic from propagating
+    genre: childDNA.genre ?? parentDNA.genre,
+    architectural_tone: childDNA.architectural_tone ?? parentDNA.architectural_tone,
+    cultural_tone: childDNA.cultural_tone ?? parentDNA.cultural_tone,
+    materials_base: childDNA.materials_base ?? parentDNA.materials_base,
+    mood_baseline: childDNA.mood_baseline ?? parentDNA.mood_baseline,
+    palette_bias: childDNA.palette_bias ?? parentDNA.palette_bias,
+    soundscape_base: childDNA.soundscape_base ?? parentDNA.soundscape_base,
+    flora_base: childDNA.flora_base ?? parentDNA.flora_base,
+    fauna_base: childDNA.fauna_base ?? parentDNA.fauna_base
   };
 }
 
@@ -193,4 +215,106 @@ export function getResolvedNodeDNA(
 
   // Merge node's DNA with ancestry (node overrides ancestry)
   return mergeDNA(ancestryDNA as NodeDNA, node.dna as Partial<NodeDNA>);
+}
+
+/**
+ * Check if a node is a pass-through node (empty or minimal DNA)
+ * Pass-through nodes should be skipped when resolving ancestry DNA
+ * to ensure proper inheritance from meaningful ancestors.
+ */
+function isPassThroughNode(node: any): boolean {
+  // Explicitly marked as pass-through
+  if (node.isPassThrough === true) {
+    return true;
+  }
+  
+  // Empty DNA object
+  if (!node.dna || Object.keys(node.dna).length === 0) {
+    return true;
+  }
+  
+  return false;
+}
+
+/**
+ * Resolve ancestry DNA while SKIPPING pass-through nodes
+ * This ensures that when parent is pass-through (empty DNA),
+ * we get DNA from the nearest meaningful ancestor.
+ * 
+ * Example: whimsical house → pass-through location → Basement
+ * The whimsical house should inherit from Basement, not from the empty pass-through.
+ */
+export function resolveAncestryDNASkippingPassThrough(
+  nodeId: string,
+  nodesMap: Record<string, any>,
+  worldTrees: WorldTreeNode[]
+): Partial<NodeDNA> | null {
+  const ancestryIds = findAncestryChain(nodeId, worldTrees);
+
+  if (ancestryIds.length === 0) {
+    return null;
+  }
+
+  let resolvedDNA: Partial<NodeDNA> = {};
+
+  // Merge DNA from each ancestor, SKIPPING pass-through nodes
+  for (const ancestorId of ancestryIds) {
+    const ancestor = nodesMap[ancestorId];
+    
+    // Skip pass-through nodes - they have no meaningful DNA
+    if (isPassThroughNode(ancestor)) {
+      continue;
+    }
+    
+    if (ancestor?.dna) {
+      resolvedDNA = mergeDNA(resolvedDNA as NodeDNA, ancestor.dna as Partial<NodeDNA>);
+    }
+  }
+
+  return Object.keys(resolvedDNA).length > 0 ? resolvedDNA : null;
+}
+
+/**
+ * Enforce DNA inheritance for world identity fields
+ * Prevents "DNA dilution" when LLM generates completely different DNA
+ * 
+ * @param generatedDNA - DNA generated by LLM for new node
+ * @param ancestryDNA - Resolved DNA from ancestors (non-pass-through)
+ * @param breakInheritance - If true, skip enforcement (for --break flag)
+ * @returns DNA with world identity fields enforced
+ */
+export function enforceDNAInheritance(
+  generatedDNA: Partial<NodeDNA>,
+  ancestryDNA: Partial<NodeDNA> | null,
+  breakInheritance: boolean = false
+): Partial<NodeDNA> {
+  // If breaking inheritance or no ancestry, return as-is
+  if (breakInheritance || !ancestryDNA) {
+    return generatedDNA;
+  }
+
+  const enforced = { ...generatedDNA };
+
+  // Enforce world identity fields
+  for (const field of WORLD_IDENTITY_FIELDS) {
+    const ancestryValue = ancestryDNA[field];
+    const generatedValue = generatedDNA[field];
+    
+    if (!ancestryValue) {
+      // No ancestry value, keep generated
+      continue;
+    }
+    
+    if (!generatedValue || generatedValue === null) {
+      // LLM left it null/empty - inherit from ancestry
+      (enforced as any)[field] = ancestryValue;
+    } else if (generatedValue !== ancestryValue) {
+      // LLM generated different value - blend them
+      // Format: "ancestryValue with generatedValue elements"
+      (enforced as any)[field] = `${ancestryValue} with ${generatedValue} elements`;
+    }
+    // If same value, keep as-is
+  }
+
+  return enforced;
 }

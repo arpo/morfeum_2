@@ -136,7 +136,8 @@ export async function handleCreateNiche(
     userPrompt: cleanElementName,  // Use clean name for node naming
     resolvedParentDNA,
     parsedEnhancements,
-    parentNodeId
+    parentNodeId,
+    breakInheritance: parsedEnhancements?.breakInheritance  // Pass --break flag for DNA inheritance
   };
   
   console.log(`[GO_INSIDE] Creating niche under ${parentNodeId}`);

@@ -78,9 +78,10 @@ export async function commandHandler(req: Request, res: Response): Promise<void>
     console.log(`[PERSPECTIVE DEBUG] intent.spaceType after buildIntentFromCommand: ${intent.spaceType}`);
 
     // Build parsedEnhancements for pipeline
-    const parsedEnhancements = (parsed.navigableElements || parsed.furnishing) ? {
+    const parsedEnhancements = (parsed.navigableElements || parsed.furnishing || parsed.breakInheritance) ? {
       navigableElements: parsed.navigableElements,
-      furnishing: parsed.furnishing
+      furnishing: parsed.furnishing,
+      breakInheritance: parsed.breakInheritance
     } : undefined;
 
     // For GOTO: Send response immediately, run analysis in pipeline

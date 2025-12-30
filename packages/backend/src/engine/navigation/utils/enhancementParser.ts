@@ -20,6 +20,12 @@ export interface ParsedEnhancements {
   facade?: string;
   /** User-specified perspective override (--interior, --exterior, --open-air) */
   perspectiveOverride?: ScenePerspective;
+  /** 
+   * Break DNA inheritance (--break flag)
+   * When true, the new space can completely differ from parent world DNA
+   * Use for portals, dimensional shifts, or intentionally contrasting spaces
+   */
+  breakInheritance?: boolean;
   /** Clean command text with enhancement sections removed */
   cleanCommand: string;
 }
@@ -48,6 +54,13 @@ export function parseEnhancements(commandText: string): ParsedEnhancements {
   if (perspectiveMatch) {
     result.perspectiveOverride = perspectiveMatch[1].toLowerCase() as ScenePerspective;
     result.cleanCommand = result.cleanCommand.replace(perspectiveMatch[0], '');
+  }
+
+  // Extract and remove --break flag (disables DNA inheritance)
+  const breakMatch = result.cleanCommand.match(/\s*--break\b/i);
+  if (breakMatch) {
+    result.breakInheritance = true;
+    result.cleanCommand = result.cleanCommand.replace(breakMatch[0], '');
   }
 
   // Extract and remove "navigable elements:" section

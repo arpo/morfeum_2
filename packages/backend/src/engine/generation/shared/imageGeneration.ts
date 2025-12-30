@@ -40,9 +40,9 @@ export async function generateLocationImage(
  
   // Apply general prompt fixes
   const fixedPrompt = applyMorfeumStyle(imagePrompt);
-  // console.log('\n\n##################### ACTUAL NICHE IMAGE PROMPT  #####################');
-  // console.log(fixedPrompt);
-  // console.log('##################### ACTUAL NICHE IMAGE PROMPT END  #####################\n\n');
+  console.log('\n\n##################### ACTUAL NICHE IMAGE PROMPT  #####################');
+  console.log(fixedPrompt);
+  console.log('##################### ACTUAL NICHE IMAGE PROMPT END  #####################\n\n');
 
   // Generate image via MZOO service
   const result = await generateImage(

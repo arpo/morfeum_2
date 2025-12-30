@@ -15,6 +15,85 @@ import { AI_MODELS } from '../../../config/constants';
 import { fluxInstructionsShort } from '../prompts/shared/constants';
 import type { StructureAnalysis } from '../../navigation/types';
 
+/**
+ * Parse a dominant element string to extract visual properties
+ * Format: "name: shape=X, orientation=Y, scale=Z, style=W, surfaces=S, openings=O, ..."
+ */
+function parseDominantElement(elementStr: string): {
+  name: string;
+  shape?: string;
+  orientation?: string;
+  scale?: string;
+  style?: string;
+  surfaces?: string;
+  openings?: string;
+} | null {
+  // Match "name: key=value, key=value, ..." format
+  const match = elementStr.match(/^([^:]+):\s*(.+)$/);
+  if (!match) {
+    return { name: elementStr.trim() };
+  }
+  
+  const name = match[1].trim();
+  const propsStr = match[2];
+  
+  const result: any = { name };
+  
+  // Extract key=value pairs
+  const propRegex = /(\w+)=([^,]+)/g;
+  let propMatch;
+  while ((propMatch = propRegex.exec(propsStr)) !== null) {
+    const key = propMatch[1].toLowerCase();
+    const value = propMatch[2].trim();
+    if (['shape', 'orientation', 'scale', 'style', 'surfaces', 'openings'].includes(key)) {
+      result[key] = value;
+    }
+  }
+  
+  return result;
+}
+
+/**
+ * Build a visually-emphasized description of dominant elements for the image prompt
+ * Extracts and highlights shape, style, and surface info for key structures
+ */
+function buildDominantElementsContext(dominantElements: string[]): string {
+  if (!dominantElements || dominantElements.length === 0) {
+    return '';
+  }
+  
+  const parsed = dominantElements.map(parseDominantElement).filter(Boolean);
+  
+  if (parsed.length === 0) {
+    return `Dominant Elements: ${dominantElements.join(', ')}`;
+  }
+  
+  // Build enhanced visual descriptions
+  const descriptions = parsed.map(el => {
+    if (!el) return '';
+    
+    const parts: string[] = [`"${el.name}"`];
+    
+    if (el.shape) {
+      // Emphasize non-rectangular shapes
+      if (el.shape !== 'rectangular') {
+        parts.push(`SHAPE=${el.shape.toUpperCase()} (NOT rectangular - must show ${el.shape} form)`);
+      } else {
+        parts.push(`shape=${el.shape}`);
+      }
+    }
+    
+    if (el.style) parts.push(`style=${el.style}`);
+    if (el.surfaces) parts.push(`surfaces=${el.surfaces}`);
+    if (el.scale) parts.push(`scale=${el.scale}`);
+    if (el.orientation) parts.push(`orientation=${el.orientation}`);
+    
+    return parts.join(', ');
+  });
+  
+  return `\n=== KEY STRUCTURES TO VISUALIZE ===\n${descriptions.join('\n')}\n\nCRITICAL: If shape is ORGANIC, ROUND, SPHERICAL, or DOMED - the structure MUST appear curved/organic, NOT rectangular.\n`;
+}
+
 export interface ImagePromptGenerationInput {
   /** Structure analysis result (form, scale, navigableElements, etc.) */
   structureAnalysis?: StructureAnalysis;
@@ -22,6 +101,11 @@ export interface ImagePromptGenerationInput {
   dna: Record<string, any>;
   /** Parent DNA for inheritance (cascaded from all ancestors) */
   parentDNA?: Record<string, any>;
+  /** 
+   * Surroundings DNA - resolved ancestry DNA for window/view context
+   * Used when parent is pass-through (empty DNA) to show correct exterior through windows
+   */
+  surroundingsDNA?: Record<string, any>;
   /** User's original prompt/description */
   userPrompt: string;
   /** Node type being created */
@@ -124,6 +208,11 @@ This space is ${s.elevation === 'floating' ? 'floating' : 'suspended'} in the ai
 `;
     }
     
+    // Build enhanced dominant elements context with visual emphasis
+    const dominantElementsContext = s.dominantElements && s.dominantElements.length > 0 
+      ? buildDominantElementsContext(s.dominantElements)
+      : '';
+    
     structureContext = `
 === STRUCTURE (Pre-analyzed by structureAnalysis.ts) ===
 Name: ${structureAnalysis.name}
@@ -142,7 +231,7 @@ ${elevationContext}
 ${s.requiredElements && s.requiredElements.length > 0 ? `MUST INCLUDE (User-specified): ${s.requiredElements.join(', ')}` : ''}
 ${s.suggestedFixtures && s.suggestedFixtures.length > 0 ? `Suggested Fixtures: ${s.suggestedFixtures.join(', ')}` : ''}
 ${s.navigableElements && s.navigableElements.length > 0 ? `Navigable Elements: ${s.navigableElements.map(n => `${n.type} at ${n.position}: ${n.description}`).join('; ')}` : ''}
-${s.dominantElements && s.dominantElements.length > 0 ? `Dominant Elements: ${s.dominantElements.join(', ')}` : ''}
+${dominantElementsContext}
 ${s.uniqueIdentifiers && s.uniqueIdentifiers.length > 0 ? `Unique Identifiers: ${s.uniqueIdentifiers.join(', ')}` : ''}
 `;
   }
@@ -188,6 +277,27 @@ ${parentDNA.materials ? `Parent Materials: ${parentDNA.materials}` : ''}
 `;
   }
 
+  // Build surroundings context for window views (uses ancestry DNA, skipping pass-through nodes)
+  // This ensures windows show the correct exterior even when parent is a pass-through location
+  const surroundings = input.surroundingsDNA || parentDNA;
+  let surroundingsContext = '';
+  if (surroundings && input.perspective === 'interior') {
+    surroundingsContext = `
+=== SURROUNDINGS (visible through windows/openings) ===
+Any windows, openings, or views to the outside should reflect:
+- Exterior Style: ${surroundings.architectural_tone || 'consistent with interior'}
+- Outside Palette: ${surroundings.palette_bias || 'matching world'}
+- Cultural Context Outside: ${surroundings.cultural_tone || 'same as interior'}
+- Exterior Mood: ${surroundings.mood || surroundings.mood_baseline || 'consistent'}
+- Outside Materials Visible: ${surroundings.materials || surroundings.materials_base || 'world-appropriate'}
+
+CRITICAL: If this interior has windows with "views of surrounding", the view should show:
+- The world's aesthetic (${surroundings.genre || 'as defined'})
+- NOT generic pastoral/nature views unless the world is pastoral
+- The outside should match the world DNA, not the interior concept
+`;
+  }
+
   // Build furnishing context if available
   let furnishingContext = '';
   if (structureAnalysis?.furnishingDetails) {
@@ -219,6 +329,8 @@ ${structureContext}
 ${dnaContext}
 
 ${inheritedContext}
+
+${surroundingsContext}
 
 ${furnishingContext}
 

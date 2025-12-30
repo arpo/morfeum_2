@@ -17,6 +17,11 @@ export interface ImagePromptInput {
   structureAnalysis: StructureAnalysis;
   dna: any;
   parentDNA: any;
+  /** 
+   * Surroundings DNA - resolved ancestry DNA for window/view context
+   * Used when parent is pass-through (empty DNA) to show correct exterior through windows
+   */
+  surroundingsDNA?: any;
   userPrompt: string;
   nodeType: string;
   perspective: 'interior' | 'exterior' | 'open-air';
@@ -52,6 +57,7 @@ export async function generateNodeImagePrompt(
     structureAnalysis,
     dna,
     parentDNA,
+    surroundingsDNA,
     userPrompt,
     nodeType,
     perspective,
@@ -71,6 +77,7 @@ export async function generateNodeImagePrompt(
     structureAnalysis,
     dna: dna || {},
     parentDNA: parentDNA || undefined,
+    surroundingsDNA: surroundingsDNA || undefined, // For window views - shows world DNA, not interior concept
     userPrompt,
     nodeType: nodeType as LayerType,
     perspective: imageGenPerspective,

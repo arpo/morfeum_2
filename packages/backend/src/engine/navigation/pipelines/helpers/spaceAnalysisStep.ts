@@ -9,6 +9,8 @@ import { generateNodeDNA, extractParentContext, mergeDNAWithParent } from '../..
 import { analyzeStructure, ParsedEnhancements } from '../../analyzers/structureAnalyzer';
 import { findParentLocationNode, findParentRegionNode } from '../../navigationHelpers';
 import { PipelineHelper } from '../../../pipelines/shared/pipelineHelpers';
+import { resolveAncestryDNASkippingPassThrough, findAncestryChain } from '../../../hierarchyAnalysis/dnaMerge';
+import { storageService } from '../../../../services/storage/storageService';
 
 export interface SpaceAnalysisInput {
   userPrompt: string;
@@ -30,6 +32,12 @@ export interface SpaceAnalysisOutput {
   dnaResult: any;
   updatedPerspective: 'interior' | 'exterior' | 'open-air';
   parentDNAForImagePrompt: any;
+  /** 
+   * Surroundings DNA for window/view context
+   * Resolved from ancestry, skipping pass-through nodes
+   * Shows correct world DNA through windows even when parent is pass-through
+   */
+  surroundingsDNA?: any;
 }
 
 /**
@@ -147,11 +155,51 @@ export async function runSpaceAnalysisStep(
     parentDNAForImagePrompt = parentLocationDNA;
   }
 
+  // ═══════════════════════════════════════════════════════════════════════════
+  // RESOLVE SURROUNDINGS DNA FOR WINDOW VIEWS
+  // This ensures windows show the correct world exterior, not the interior concept
+  // Uses ancestry resolution that SKIPS pass-through nodes
+  // ═══════════════════════════════════════════════════════════════════════════
+  let surroundingsDNA: any = undefined;
+  
+  // Only needed for interior spaces (exterior spaces don't have "windows to outside")
+  if (updatedPerspective === 'interior') {
+    try {
+      // Load worlds data to access nodes and worldTrees
+      const worldsData = await storageService.loadWorlds();
+      if (worldsData?.nodes && worldsData?.worldTrees) {
+        // Get the current node ID (parent of the new node being created)
+        const currentNodeId = context.currentNode.id;
+        
+        // Resolve ancestry DNA, skipping pass-through nodes
+        // This gives us the WORLD DNA for window views, not the pass-through location DNA
+        surroundingsDNA = resolveAncestryDNASkippingPassThrough(
+          currentNodeId,
+          worldsData.nodes,
+          worldsData.worldTrees
+        );
+        
+        if (surroundingsDNA) {
+          console.log(`[SpaceAnalysis] Resolved surroundings DNA for window views:`);
+          console.log(`  - genre: ${surroundingsDNA.genre || 'null'}`);
+          console.log(`  - architectural_tone: ${surroundingsDNA.architectural_tone || 'null'}`);
+        } else {
+          console.log(`[SpaceAnalysis] No surroundings DNA found (using parentDNA fallback)`);
+        }
+      }
+    } catch (error) {
+      console.warn(`[SpaceAnalysis] Could not resolve surroundings DNA:`, error);
+      // Fallback - use parentDNA for surroundings
+      surroundingsDNA = parentDNAForImagePrompt;
+    }
+  }
+
   return {
     structureAnalysis,
     dnaResult,
     updatedPerspective,
-    parentDNAForImagePrompt
+    parentDNAForImagePrompt,
+    surroundingsDNA
   };
 }
 

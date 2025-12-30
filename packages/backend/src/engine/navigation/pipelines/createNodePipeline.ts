@@ -129,7 +129,7 @@ export async function runCreateLocationNodePipeline(
       resolvedParentDNA: options?.resolvedParentDNA
     });
 
-    const { structureAnalysis, dnaResult, updatedPerspective: finalPerspective, parentDNAForImagePrompt } = spaceAnalysisResult;
+    const { structureAnalysis, dnaResult, updatedPerspective: finalPerspective, parentDNAForImagePrompt, surroundingsDNA } = spaceAnalysisResult;
     
     // Update decision with structure analysis results
     decision.newNodeName = structureAnalysis.name;
@@ -144,6 +144,7 @@ export async function runCreateLocationNodePipeline(
       structureAnalysis,
       dna: dnaResult.dna || {},
       parentDNA: parentDNAForImagePrompt,
+      surroundingsDNA, // For window views - shows world DNA, not interior concept
       userPrompt,
       nodeType,
       perspective: finalPerspective,

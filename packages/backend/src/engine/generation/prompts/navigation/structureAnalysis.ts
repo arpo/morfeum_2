@@ -171,7 +171,13 @@ STRUCTURE RULES FOR TARGET ELEMENT INTERIOR:
 ${materialsSection}
 7. The space should feel like being INSIDE "${targetElementInfo.name}"
 8. Do NOT recreate "${context.currentNode.name}" - create the interior of "${targetElementInfo.name}"
-9. Do NOT use materials from "${context.currentNode.name}" - use the TARGET element's materials`
+9. Do NOT use materials from "${context.currentNode.name}" - use the TARGET element's materials
+
+CRITICAL - DOMINANT ELEMENTS FOR INTERIOR:
+- Do NOT include "${targetElementInfo.name}" as a dominant element - you are INSIDE it!
+- dominantElements should be OBJECTS/FURNITURE/FIXTURES inside this space (tables, chairs, equipment, machinery)
+- For interiors, use format: "object_name: brief description of the object"
+- NOT enterable structures - those are for exterior views only`
     : `STRUCTURE RULES:
 1. FORM: Interior MUST match parent form (rectangular→rectangular, round→round)
 2. SCALE: Interior/open-air ≤ parent scale (small parent = small space only)

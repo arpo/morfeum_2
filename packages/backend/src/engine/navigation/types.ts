@@ -268,4 +268,10 @@ export interface CommandContext {
   };
   /** Parent node ID where new node will be attached */
   parentNodeId: string;
+  /** 
+   * Break DNA inheritance (--break flag)
+   * When true, the new space can completely differ from parent world DNA
+   * Use for portals, dimensional shifts, or intentionally contrasting spaces
+   */
+  breakInheritance?: boolean;
 }
