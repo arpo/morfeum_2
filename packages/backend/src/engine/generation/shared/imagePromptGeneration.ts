@@ -357,6 +357,45 @@ The prompt should be rich, specific, and capture the unique character of this ${
 }
 
 /**
+ * Non-rectangular shapes that need direct FLUX constraints
+ * FLUX tends to default to rectangular buildings, so we need to explicitly enforce these
+ */
+const NON_RECTANGULAR_SHAPES = [
+  'organic', 'round', 'circular', 'spherical', 'domed', 'cylindrical', 
+  'oval', 'curved', 'blob', 'amorphous', 'pod', 'egg', 'capsule'
+];
+
+/**
+ * Build direct FLUX constraints for non-rectangular dominant elements
+ * This bypasses the LLM and tells FLUX directly to render curved shapes
+ */
+function buildShapeConstraints(dominantElements: string[]): string {
+  if (!dominantElements || dominantElements.length === 0) {
+    return '';
+  }
+  
+  const constraints: string[] = [];
+  
+  for (const elementStr of dominantElements) {
+    const parsed = parseDominantElement(elementStr);
+    if (!parsed || !parsed.shape) continue;
+    
+    const shapeLower = parsed.shape.toLowerCase();
+    const isNonRectangular = NON_RECTANGULAR_SHAPES.some(s => shapeLower.includes(s));
+    
+    if (isNonRectangular) {
+      constraints.push(
+        `[CRITICAL SHAPE: The "${parsed.name}" has ${parsed.shape.toUpperCase()} shape - ` +
+        `it MUST appear with CURVED/ROUNDED form, NOT rectangular walls or sharp corners. ` +
+        `Show organic, flowing curves appropriate for a ${parsed.shape} structure.]`
+      );
+    }
+  }
+  
+  return constraints.join('\n');
+}
+
+/**
  * Generate an LLM-powered image prompt
  * 
  * This is the UNIFIED function used by both spawn and navigation pipelines.
@@ -395,5 +434,69 @@ export async function generateImagePromptForNode(
     finalPrompt += '\n[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]';
   }
 
+  // CRITICAL: Append shape constraints for non-rectangular dominant elements
+  // FLUX tends to default to rectangular buildings, so we explicitly enforce curved shapes
+  const dominantElements = input.structureAnalysis?.structure?.dominantElements;
+  if (dominantElements && dominantElements.length > 0) {
+    const shapeConstraints = buildShapeConstraints(dominantElements);
+    if (shapeConstraints) {
+      finalPrompt += '\n' + shapeConstraints;
+      console.log(`[ImagePromptGeneration] Added shape constraints for non-rectangular structures`);
+    }
+  }
+
+  // CRITICAL: Append exterior view constraint for interior spaces with windows/openings
+  // FLUX tends to default to generic pastoral/forest views through windows
+  // This ensures the exterior matches the world DNA (e.g., post-apocalyptic wasteland, not green forest)
+  const surroundings = input.surroundingsDNA || input.parentDNA;
+  const hasOpenings = input.structureAnalysis?.structure?.openings && 
+                      input.structureAnalysis.structure.openings !== 'none';
+  
+  if (input.perspective === 'interior' && surroundings && hasOpenings) {
+    const genre = surroundings.genre || '';
+    const architecturalTone = surroundings.architectural_tone || '';
+    const paletteBias = surroundings.palette_bias || '';
+    
+    // Only add constraint if we have meaningful surroundings info
+    if (genre || architecturalTone) {
+      const exteriorConstraint = buildExteriorViewConstraint(genre, architecturalTone, paletteBias);
+      finalPrompt += '\n' + exteriorConstraint;
+      console.log(`[ImagePromptGeneration] Added exterior view constraint: ${genre || architecturalTone}`);
+    }
+  }
+
   return finalPrompt;
+}
+
+/**
+ * Build a direct FLUX constraint for exterior views through windows/openings
+ * This ensures the world DNA is reflected in what's visible outside
+ */
+function buildExteriorViewConstraint(genre: string, architecturalTone: string, paletteBias: string): string {
+  const genreUpper = genre.toUpperCase();
+  
+  // Build the constraint based on available info
+  let exteriorDescription = '';
+  if (genre) {
+    exteriorDescription += `${genre} environment`;
+  }
+  if (architecturalTone) {
+    exteriorDescription += exteriorDescription ? ` with ${architecturalTone}` : architecturalTone;
+  }
+  
+  // Build list of things to avoid based on genre
+  let avoidList = 'green forests, lush vegetation, pastoral meadows, idyllic countryside';
+  
+  // Add genre-specific avoidance
+  if (genre.toLowerCase().includes('apocaly') || genre.toLowerCase().includes('wasteland')) {
+    avoidList = 'green forests, lush vegetation, blue sunny skies, pastoral scenes, healthy trees, green grass';
+  } else if (genre.toLowerCase().includes('urban') || genre.toLowerCase().includes('industrial')) {
+    avoidList = 'natural forests, countryside, pastoral scenes, wilderness';
+  }
+  
+  return `[CRITICAL EXTERIOR VIEWS: Any windows, doors, or openings showing the OUTSIDE must display: ` +
+    `${exteriorDescription}. ` +
+    `${paletteBias ? `Colors visible outside: ${paletteBias}. ` : ''}` +
+    `DO NOT show through windows: ${avoidList}. ` +
+    `The exterior MUST match the world's ${genreUpper || 'established'} aesthetic, NOT generic nature.]`;
 }
