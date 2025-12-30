@@ -14,85 +14,11 @@ import { generateText } from '../../../services/mzoo';
 import { AI_MODELS } from '../../../config/constants';
 import { fluxInstructionsShort } from '../prompts/shared/constants';
 import type { StructureAnalysis } from '../../navigation/types';
-
-/**
- * Parse a dominant element string to extract visual properties
- * Format: "name: shape=X, orientation=Y, scale=Z, style=W, surfaces=S, openings=O, ..."
- */
-function parseDominantElement(elementStr: string): {
-  name: string;
-  shape?: string;
-  orientation?: string;
-  scale?: string;
-  style?: string;
-  surfaces?: string;
-  openings?: string;
-} | null {
-  // Match "name: key=value, key=value, ..." format
-  const match = elementStr.match(/^([^:]+):\s*(.+)$/);
-  if (!match) {
-    return { name: elementStr.trim() };
-  }
-  
-  const name = match[1].trim();
-  const propsStr = match[2];
-  
-  const result: any = { name };
-  
-  // Extract key=value pairs
-  const propRegex = /(\w+)=([^,]+)/g;
-  let propMatch;
-  while ((propMatch = propRegex.exec(propsStr)) !== null) {
-    const key = propMatch[1].toLowerCase();
-    const value = propMatch[2].trim();
-    if (['shape', 'orientation', 'scale', 'style', 'surfaces', 'openings'].includes(key)) {
-      result[key] = value;
-    }
-  }
-  
-  return result;
-}
-
-/**
- * Build a visually-emphasized description of dominant elements for the image prompt
- * Extracts and highlights shape, style, and surface info for key structures
- */
-function buildDominantElementsContext(dominantElements: string[]): string {
-  if (!dominantElements || dominantElements.length === 0) {
-    return '';
-  }
-  
-  const parsed = dominantElements.map(parseDominantElement).filter(Boolean);
-  
-  if (parsed.length === 0) {
-    return `Dominant Elements: ${dominantElements.join(', ')}`;
-  }
-  
-  // Build enhanced visual descriptions
-  const descriptions = parsed.map(el => {
-    if (!el) return '';
-    
-    const parts: string[] = [`"${el.name}"`];
-    
-    if (el.shape) {
-      // Emphasize non-rectangular shapes
-      if (el.shape !== 'rectangular') {
-        parts.push(`SHAPE=${el.shape.toUpperCase()} (NOT rectangular - must show ${el.shape} form)`);
-      } else {
-        parts.push(`shape=${el.shape}`);
-      }
-    }
-    
-    if (el.style) parts.push(`style=${el.style}`);
-    if (el.surfaces) parts.push(`surfaces=${el.surfaces}`);
-    if (el.scale) parts.push(`scale=${el.scale}`);
-    if (el.orientation) parts.push(`orientation=${el.orientation}`);
-    
-    return parts.join(', ');
-  });
-  
-  return `\n=== KEY STRUCTURES TO VISUALIZE ===\n${descriptions.join('\n')}\n\nCRITICAL: If shape is ORGANIC, ROUND, SPHERICAL, or DOMED - the structure MUST appear curved/organic, NOT rectangular.\n`;
-}
+import { 
+  buildDominantElementsContext, 
+  buildShapeConstraints, 
+  buildExteriorViewConstraint 
+} from './imagePromptHelpers';
 
 export interface ImagePromptGenerationInput {
   /** Structure analysis result (form, scale, navigableElements, etc.) */
@@ -357,45 +283,6 @@ The prompt should be rich, specific, and capture the unique character of this ${
 }
 
 /**
- * Non-rectangular shapes that need direct FLUX constraints
- * FLUX tends to default to rectangular buildings, so we need to explicitly enforce these
- */
-const NON_RECTANGULAR_SHAPES = [
-  'organic', 'round', 'circular', 'spherical', 'domed', 'cylindrical', 
-  'oval', 'curved', 'blob', 'amorphous', 'pod', 'egg', 'capsule'
-];
-
-/**
- * Build direct FLUX constraints for non-rectangular dominant elements
- * This bypasses the LLM and tells FLUX directly to render curved shapes
- */
-function buildShapeConstraints(dominantElements: string[]): string {
-  if (!dominantElements || dominantElements.length === 0) {
-    return '';
-  }
-  
-  const constraints: string[] = [];
-  
-  for (const elementStr of dominantElements) {
-    const parsed = parseDominantElement(elementStr);
-    if (!parsed || !parsed.shape) continue;
-    
-    const shapeLower = parsed.shape.toLowerCase();
-    const isNonRectangular = NON_RECTANGULAR_SHAPES.some(s => shapeLower.includes(s));
-    
-    if (isNonRectangular) {
-      constraints.push(
-        `[CRITICAL SHAPE: The "${parsed.name}" has ${parsed.shape.toUpperCase()} shape - ` +
-        `it MUST appear with CURVED/ROUNDED form, NOT rectangular walls or sharp corners. ` +
-        `Show organic, flowing curves appropriate for a ${parsed.shape} structure.]`
-      );
-    }
-  }
-  
-  return constraints.join('\n');
-}
-
-/**
  * Generate an LLM-powered image prompt
  * 
  * This is the UNIFIED function used by both spawn and navigation pipelines.
@@ -409,7 +296,6 @@ export async function generateImagePromptForNode(
   // This prevents "interior shot" + "open-sky" contradiction that causes cave-like images
   const isOpenSky = input.structureAnalysis?.structure?.roofType === 'open-sky';
   if (isOpenSky && input.perspective === 'interior') {
-    console.log(`[ImagePromptGeneration] Overriding perspective from 'interior' to 'exterior' (roofType is open-sky)`);
     input.perspective = 'exterior';
   }
 
@@ -441,7 +327,6 @@ export async function generateImagePromptForNode(
     const shapeConstraints = buildShapeConstraints(dominantElements);
     if (shapeConstraints) {
       finalPrompt += '\n' + shapeConstraints;
-      console.log(`[ImagePromptGeneration] Added shape constraints for non-rectangular structures`);
     }
   }
 
@@ -461,42 +346,8 @@ export async function generateImagePromptForNode(
     if (genre || architecturalTone) {
       const exteriorConstraint = buildExteriorViewConstraint(genre, architecturalTone, paletteBias);
       finalPrompt += '\n' + exteriorConstraint;
-      console.log(`[ImagePromptGeneration] Added exterior view constraint: ${genre || architecturalTone}`);
     }
   }
 
   return finalPrompt;
-}
-
-/**
- * Build a direct FLUX constraint for exterior views through windows/openings
- * This ensures the world DNA is reflected in what's visible outside
- */
-function buildExteriorViewConstraint(genre: string, architecturalTone: string, paletteBias: string): string {
-  const genreUpper = genre.toUpperCase();
-  
-  // Build the constraint based on available info
-  let exteriorDescription = '';
-  if (genre) {
-    exteriorDescription += `${genre} environment`;
-  }
-  if (architecturalTone) {
-    exteriorDescription += exteriorDescription ? ` with ${architecturalTone}` : architecturalTone;
-  }
-  
-  // Build list of things to avoid based on genre
-  let avoidList = 'green forests, lush vegetation, pastoral meadows, idyllic countryside';
-  
-  // Add genre-specific avoidance
-  if (genre.toLowerCase().includes('apocaly') || genre.toLowerCase().includes('wasteland')) {
-    avoidList = 'green forests, lush vegetation, blue sunny skies, pastoral scenes, healthy trees, green grass';
-  } else if (genre.toLowerCase().includes('urban') || genre.toLowerCase().includes('industrial')) {
-    avoidList = 'natural forests, countryside, pastoral scenes, wilderness';
-  }
-  
-  return `[CRITICAL EXTERIOR VIEWS: Any windows, doors, or openings showing the OUTSIDE must display: ` +
-    `${exteriorDescription}. ` +
-    `${paletteBias ? `Colors visible outside: ${paletteBias}. ` : ''}` +
-    `DO NOT show through windows: ${avoidList}. ` +
-    `The exterior MUST match the world's ${genreUpper || 'established'} aesthetic, NOT generic nature.]`;
 }
