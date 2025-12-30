@@ -28,13 +28,13 @@ export function deepestNodeDNAGeneration(
   }>
 ): string {
   const parentContext = parentChain.length > 0
-    ? `\nCONTEXT: ${parentChain.map(p => `${p.type}: ${p.name}`).join(' → ')}\n`
+    ? `CONTEXT: ${parentChain.map(p => `${p.type}: ${p.name}`).join(' → ')}\n`
     : '';
 
   const hints = [classificationData.looks, classificationData.atmosphere, classificationData.mood]
     .filter(Boolean)
     .join('; ');
-  const hintsSection = hints ? `\nHINTS: ${hints}\n` : '';
+  const hintsSection = hints ? `HINTS: ${hints}\n` : '';
 
   const typeHint = getTypeHint(nodeType);
   const dnaFields = buildDNAFieldsString({
@@ -73,18 +73,18 @@ OUTPUT (pure JSON):
   }
 }
 
-RULES: Be SPECIFIC (not "nice" but "weathered brass with verdigris"). architectural_tone is CRITICAL. Pure JSON only.`;
+Be SPECIFIC (not "nice" but "weathered brass with verdigris"). architectural_tone is CRITICAL. Pure JSON only.`;
 }
 
 function getTypeHint(nodeType: 'host' | 'region' | 'location' | 'niche'): string {
   switch (nodeType) {
     case 'host':
-      return 'VIEW: VAST AERIAL (satellite/airplane). Epic panoramic. MUST set genre.';
+      return 'VIEW: Aerial/satellite, vast panorama. MUST set genre.';
     case 'region':
-      return 'VIEW: DISTRICT (rooftop/drone height). Street-level elevated. No genre.';
+      return 'VIEW: Elevated/drone, district level. No genre.';
     case 'location':
-      return 'VIEW: BUILDING EXTERIOR (facade/entrance). No genre.';
+      return 'VIEW: Street level, building exterior. No genre.';
     case 'niche':
-      return 'VIEW: INTERIOR (room from entrance). No genre.';
+      return 'VIEW: Interior, room from entrance. No genre.';
   }
 }

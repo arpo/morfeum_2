@@ -1,513 +1,585 @@
 {
   "nodes": {
-    "loc-1767096264812-ozz9clnj1": {
-      "id": "loc-1767096264812-ozz9clnj1",
+    "loc-1767099773145-7xrwcuxwh": {
+      "id": "loc-1767099773145-7xrwcuxwh",
       "type": "host",
-      "name": "The Shattered Plains",
+      "name": "Moscow",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: A desolate expanse of rust-colored earth and sand, broken by the colossal, jagged silhouettes of immense, decaying industrial complexes. Distant mountains appear as smudged, darker shapes on the horizon. No individual buildings or close-up details are visible, only the immense scale of the ruined landscape.",
-        "colorsAndLighting": "Harsh, sun-bleached daylight casting long, stark shadows across the desolate terrain. Dominated by muted earth tones, rust-reds from the ruins, and a hazy, dust-filtered sky.",
-        "atmosphere": "A dry, scorching heat permeates the air, carrying fine particulate matter that creates a constant, hazy haze. Occasional fierce dust devils swirl across the plains.",
-        "materials": "Dominant materials visible from this distance are vast expanses of heavily rusted metal, cracked and weathered concrete, and dry, sparse earth.",
-        "mood": "A sense of profound emptiness, immense scale of destruction, and the enduring struggle for survival in a post-apocalyptic world.",
-        "sounds": "The low, mournful howl of the wind across the barren plains, punctuated by the distant groan of stressed metal structures.",
-        "primary_surfaces": "Vast stretches of cracked, dry earth and rust-colored metal plains.",
-        "secondary_surfaces": "Infrequent, parched riverbeds and small, hardy scrublands.",
-        "accent_features": "The colossal, almost mountain-like forms of the decaying industrial complexes.",
-        "dominant": "Rust-red",
-        "secondary": "Ochre",
-        "accent": "Dusty grey",
-        "ambient": "Hazy, sun-bleached sky",
-        "genre": "Post-Apocalyptic",
-        "architectural_tone": "Massive Industrial Decay",
-        "cultural_tone": "Scavenger Civilization",
-        "palette_bias": "Desaturated Earth Tones",
-        "flora_base": "Drought-resistant scrub and hardy weeds",
-        "fauna_base": "Scavenging creatures and mutated insects"
+        "looks": "AERIAL VIEW: skyline, geography (NO individual buildings)",
+        "colorsAndLighting": "Bathed in warm, golden sunrise/sunset light, highlighting the city's prominent structures.",
+        "atmosphere": "Majestic, culturally rich, historically significant.",
+        "materials": "Stone, brick, metal domes, gilded spires visible from afar.",
+        "mood": "Peaceful, majestic, awe-inspiring.",
+        "sounds": "Distant urban hum, faint church bells.",
+        "primary_surfaces": "Urban rooftops, distant facades",
+        "secondary_surfaces": "Varying architectural materials",
+        "accent_features": "Golden spires, colorful domes, prominent landmarks",
+        "dominant": "Terracotta and earth tones of buildings",
+        "secondary": "Deep greens of parks, blues of sky",
+        "accent": "Gilded domes, vibrant dome colors",
+        "ambient": "Warm, soft golden light",
+        "genre": "REQUIRED",
+        "architectural_tone": "REQUIRED",
+        "cultural_tone": "REQUIRED",
+        "palette_bias": "REQUIRED",
+        "flora_base": "REQUIRED",
+        "fauna_base": "REQUIRED"
       },
-      "description": "A vast, arid wasteland stretching to the horizon, punctuated by the skeletal remains of colossal, rusted industrial structures. Scarce, hardy vegetation clings to life amidst the wreckage, and the perpetual dust storms paint the sky in muted, ochre tones.",
-      "searchDesc": "Mad Max inspired wasteland with massive, decaying industrial ruins.",
-      "slug": "the-shattered-plains",
+      "description": "Moscow, Russia's dynamic capital, is a city where history and modernity converge, renowned for its breathtaking onion domes, grand Kremlin, and vibrant cultural scene.",
+      "searchDesc": "Moscow skyline: iconic architecture, Kremlin, St. Basil's Cathedral, Red Square",
+      "slug": "moscow",
       "structure": {
-        "spatialLayout": "An immense, relatively flat plain broken by scattered, gargantuan industrial ruins. Roads are almost indistinguishable from natural, cracked earth from this height."
+        "spatialLayout": "Sprawling urban landscape with distinct architectural clusters and green spaces."
+      },
+      "primaryMedia": "media-1767100175608-n4couv6l2"
+    },
+    "8d375d88-d09a-492d-b1f8-b9dff385ded9": {
+      "id": "8d375d88-d09a-492d-b1f8-b9dff385ded9",
+      "type": "region",
+      "name": "Red Square",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "ELEVATED VIEW: district atmosphere, street character",
+        "colorsAndLighting": "Warm golden light casting long shadows; vibrant hues of cathedral and surrounding buildings.",
+        "atmosphere": "Majestic and historically significant, with a sense of grand public space.",
+        "materials": "Cobblestone pavement, brickwork of surrounding buildings, distant hints of metal domes.",
+        "mood": "Awe-inspiring, serene, historically grand.",
+        "sounds": "Distant city hum, echoes of footsteps, faint murmurs of crowds.",
+        "primary_surfaces": "Cobblestone",
+        "secondary_surfaces": "Brick facades, painted elements",
+        "accent_features": "Ornate domes, golden spires, intricate patterns",
+        "dominant": "Warm oranges and reds",
+        "secondary": "Teal, blue, green, white",
+        "accent": "Gold",
+        "ambient": "Soft golden light",
+        "genre": null,
+        "architectural_tone": "Sacred and civic monumental",
+        "cultural_tone": "Russian historical and ceremonial",
+        "palette_bias": "Warm sunset/sunrise palette",
+        "flora_base": "Distant trees",
+        "fauna_base": "Indistinct figures"
+      },
+      "description": "Moscow's iconic Red Square is a vast, historical plaza surrounded by magnificent architecture. It serves as the central stage for many of Russia's most important events and celebrations.",
+      "searchDesc": "Red Square, Moscow: historic plaza, UNESCO World Heritage site, surrounding landmarks",
+      "slug": "red-square",
+      "structure": {
+        "spatialLayout": "Expansive, open plaza with focal points of impressive architecture."
       }
     },
-    "27e4a0a3-41e4-4df3-a4da-0368b9ce0024": {
-      "id": "27e4a0a3-41e4-4df3-a4da-0368b9ce0024",
-      "type": "region",
-      "name": "Region",
-      "spaceType": "exterior",
-      "dna": {},
-      "description": "",
-      "searchDesc": "",
-      "slug": "region",
-      "isPassThrough": true
-    },
-    "af75e1ff-de1f-47d3-861e-7907213feab7": {
-      "id": "af75e1ff-de1f-47d3-861e-7907213feab7",
+    "97d9d5dd-02f6-42c7-ad06-f87bf70aa08d": {
+      "id": "97d9d5dd-02f6-42c7-ad06-f87bf70aa08d",
       "type": "location",
-      "name": "The Rusting Shell",
+      "name": "St. Basil's Cathedral",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The Rusting Shell is a massive, sprawling industrial complex. Its primary form is irregular, composed of interlocking modular sections that have succumbed to time and the elements. Towering structures and sprawling platforms are visible, dominated by exposed skeletal frameworks and large, gaping openings.",
-        "colorsAndLighting": "Dominated by a palette of rust-reds and muted greys. Sunlight, where it penetrates, casts long, harsh shadows through the numerous openings, creating a stark and dramatic interplay of light and dark.",
-        "atmosphere": "The air is thick with the scent of decay and mineral dust. A chilling breeze often whistles through the skeletal structure, carrying the whispers of the wasteland. The temperature is cool, often mirroring the harsh external conditions.",
-        "materials": "The predominant materials are heavily weathered, rusted steel and decaying corrugated metal sheeting. Patches of crumbling concrete and exposed structural beams are also evident, all contributing to a sense of profound dilapidation.",
-        "mood": "Evokes feelings of desolation, lost grandeur, and a haunting stillness. It is a monument to industrial decline and the relentless power of nature.",
-        "sounds": "Wind, creaking metal, distant rustling, dripping water, echoes.",
-        "primary_surfaces": "Heavily rusted corrugated metal, exposed steel girders.",
-        "secondary_surfaces": "Cracked concrete, shattered glass, dirt, debris.",
-        "accent_features": "Large, gaping holes in walls and roof, dangling chains, remnants of machinery.",
-        "dominant": "Rust-red (covering large structural elements)",
-        "secondary": "Muted grey (weathered metal and concrete)",
-        "accent": "Dark brown/black (shadows, deep decay)",
-        "ambient": "Dim, with shafts of harsh sunlight.",
+        "looks": "The cathedral presents a complex, organic form with multiple towers of varying heights, each topped with distinctively shaped onion domes. Its main structure is a reddish-orange base, intricately decorated with white patterns, and crowned by vibrant, patterned domes.",
+        "colorsAndLighting": "The scene is bathed in the warm, golden light of sunrise or sunset, casting dramatic shadows and highlighting the vibrant colors of the cathedral. The sky is a canvas of fiery oranges and yellows transitioning to softer peach and blue.",
+        "atmosphere": "The atmosphere is peaceful and majestic, with a sense of historical grandeur. The air is likely still, carrying the quiet hum of a city at dawn or dusk. The cobblestone square is vast and empty, emphasizing the cathedral's imposing presence.",
+        "materials": "The cathedral's surfaces appear to be primarily stone, with decorative elements suggesting painted or tiled sections. The domes are likely metal with colorful coatings, and the spires are gilded. The ground is dark grey cobblestone.",
+        "mood": "A sense of awe and spiritual serenity pervades the scene, evoking wonder at the cathedral's beauty and historical significance.",
+        "sounds": "Distant city hum, gentle breeze, faint footfalls on cobblestone.",
+        "primary_surfaces": "Textured reddish-orange stone, vibrantly colored painted domes.",
+        "secondary_surfaces": "White decorative plasterwork, gilded spires, grey cobblestone pavement.",
+        "accent_features": "Striped blue and white dome, green and white striped dome, textured yellow and red dome patterns, golden Orthodox crosses.",
+        "dominant": "Reddish-orange facade",
+        "secondary": "Teal green trim",
+        "accent": "Vibrant dome colors (blue, white, green, yellow, red)",
+        "ambient": "Golden hour light",
         "genre": null,
-        "architectural_tone": "Massive industrial decay with exposed skeletal framework.",
-        "cultural_tone": "Represents forgotten industry and post-apocalyptic survival, a shelter or a relic.",
-        "palette_bias": "Earth tones, metallic hues, muted colors.",
-        "flora_base": "None",
+        "architectural_tone": "Intricate sacred architecture",
+        "cultural_tone": "Russian Orthodox church, landmark",
+        "palette_bias": "Warm earth tones with vibrant jewel tones",
+        "flora_base": "Dark green trees",
         "fauna_base": "None"
       },
-      "description": "A vast, abandoned factory, its metal skeleton exposed to the harsh elements, surrounded by the desolate wasteland. EXTERIOR VIEW.",
-      "searchDesc": "Vast, abandoned industrial factory complex with skeletal metal framework, weathered surfaces, and gaping openings.",
-      "slug": "the-rusting-shell",
+      "description": "An iconic Russian Orthodox cathedral on Red Square, renowned for its distinctive, colorful onion domes and intricate architectural details. EXTERIOR VIEW.",
+      "searchDesc": "Iconic St. Basil's Cathedral in Moscow, bathed in golden light, with vibrant domes.",
+      "slug": "st-basil-s-cathedral",
       "structure": {
-        "spatialLayout": "The space is vast and cavernous, with a sprawling, irregular layout that offers significant depth and a maze-like quality. Large open areas are punctuated by smaller, debris-filled rooms and corridors."
+        "spatialLayout": "The cathedral is a sprawling, multi-towered complex on a vast, flat cobblestone square, with clear depth provided by the foreground, the main structure, and distant buildings."
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "center-front",
-          "description": "Leads into the main factory interior, a cavernous space."
+          "position": "base of central structure",
+          "description": "Leads into the cathedral interior."
         },
         {
           "type": "passage",
-          "position": "left-side",
-          "description": "An open breach in the wall leading to a dark, debris-strewn workshop area."
-        },
-        {
-          "type": "path",
-          "position": "right-side",
-          "description": "A cracked asphalt path winding around the exterior, potentially leading to other access points or the rear of the structure."
+          "position": "between towers",
+          "description": "Allows for movement around the cathedral's exterior complex."
         }
       ],
       "dominantElements": [
-        "factory: shape=irregular-modular, orientation=sprawling, scale=massive, style=industrial, surfaces=weathered-metal, openings=open-passages, interior_materials=corrugated-metal|concrete|exposed-beams, enterable=yes, internal_atmosphere=industrial"
+        "St. Basil's Cathedral: shape=organic, orientation=centered, scale=massive, style=sacred, surfaces=stone, openings=arched-windows, interior_materials=stone|stone|stone, enterable=yes, internal_atmosphere=mystical"
       ],
       "uniqueIdentifiers": [
-        "exposed steel girders",
-        "shattered windows",
-        "large ventilation shafts",
-        "rusted corrugated metal sheeting",
-        "general sense of abandonment"
+        "Colorful onion domes",
+        "Intricate architectural details",
+        "Red Square location",
+        "Russian Orthodox iconography",
+        "Fiery sunrise/sunset lighting"
       ],
-      "primaryMedia": "media-1767096281146-h5f8iogls"
+      "primaryMedia": "media-1767099787858-c0zlg2v2e"
     },
-    "niche-1767096300068-hjlysbaag": {
-      "id": "niche-1767096300068-hjlysbaag",
+    "niche-1767099817716-p6s6qse6a": {
+      "id": "niche-1767099817716-p6s6qse6a",
       "type": "niche",
-      "name": "factory",
+      "name": "St. Basil's Cathedral Interior",
       "spaceType": "interior",
       "dna": {
-        "looks": "A vast, cavernous industrial interior. Massive, skeletal steel beams crisscross overhead, many twisted or broken. Jagged openings in the walls and roof allow shafts of harsh, sun-bleached light to pierce the gloom, illuminating swirling dust motes. Remnants of colossal machinery, pipes, and conveyors lie scattered across the floor, all coated in layers of rust and grime. The scale is immense, dwarfing any notion of individual human presence.",
-        "colorsAndLighting": "Harsh, high-contrast lighting with deep shadows. Dominant colors are rust-red, dull metallic grey, and ochre. Sunlight, filtered through dust and debris, casts a desaturated, pale glow. Pockets of deep, impenetrable darkness.",
-        "atmosphere": "Dry, dusty air thick with the metallic tang of rust and the faint, acrid smell of old chemicals. A palpable sense of stillness and immense, echoing emptiness. Occasional metallic groans and the whisper of wind through broken structures.",
-        "materials": "Heavily rusted steel, cracked and stained concrete, thick layers of industrial grime, occasional shards of broken glass.",
-        "mood": "Profound emptiness, awe-inspiring industrial decay, oppressive scale, a haunting monument to forgotten industry.",
-        "sounds": "Distant wind, metallic groans, creaking structures, echoes, dripping, scuttling, phantom machinery hum.",
-        "spatialLayout": "Vast, open central hall with multiple levels of gantries and walkways accessible via stairs and precarious passages. Large, gaping entrances and openings.",
-        "primary_surfaces": "Rusted steel girders, stained concrete floors and walls.",
-        "secondary_surfaces": "Debris piles, shattered machinery parts, collapsed piping.",
-        "accent_features": "Skeletal cranes, frozen conveyor belts, remnants of control panels.",
-        "dominant": "Rust-red",
-        "secondary": "Ochre",
-        "accent": "Dusty grey",
-        "ambient": "Hazy, sun-bleached",
-        "genre": "Post-Apocalyptic",
-        "architectural_tone": "Massive Industrial Decay",
-        "cultural_tone": "Scavenger Civilization",
-        "palette_bias": "Desaturated Earth Tones",
-        "flora_base": "Drought-resistant scrub and hardy weeds",
-        "fauna_base": "Scavenging creatures and mutated insects"
+        "looks": "An elevated, spectral view of a district atmosphere, where the essence of St. Basil's Cathedral is present but intangible, with soft, undefined outlines and a palpable sense of grand public space.",
+        "colorsAndLighting": "Bathed in the warm, soft glow of a perpetual sunset, casting long, ethereal shadows. Hues of warm oranges, deep reds, and muted golds dominate, interspersed with spectral blues and greens.",
+        "atmosphere": "A profound sense of awe-inspiring serenity, imbued with the historical grandeur of the cathedral. The air is still, carrying faint echoes of distant ceremonies.",
+        "materials": "Composed of intangible, spectral materials that mimic the forms of cobblestone, brickwork, and ornate domes. Textures are suggested rather than physically present, like heat haze or shimmering light.",
+        "mood": "Awe-inspiring, serene, historically grand, contemplative, spiritual.",
+        "sounds": "Faint liturgical chants, distant bells, hushed reverence, spectral echoes, wind whispers.",
+        "spatialLayout": "An open, undefined space that hints at the complex and layered architecture of St. Basil's Cathedral, with elements suggesting multiple levels and interconnected chambers.",
+        "primary_surfaces": "Spectral cobblestone and ethereal brickwork.",
+        "secondary_surfaces": "Translucent representations of painted elements and metal domes.",
+        "accent_features": "Ghostly outlines of ornate domes, shimmering gold spires, and abstract patterns.",
+        "dominant": "Warm oranges and reds",
+        "secondary": "Teal, blue, green, white",
+        "accent": "Gold",
+        "ambient": "Soft golden light",
+        "genre": "REQUIRED",
+        "architectural_tone": "Sacred and civic monumental",
+        "cultural_tone": "Russian historical and ceremonial",
+        "palette_bias": "Warm sunset/sunrise palette",
+        "flora_base": "Distant trees",
+        "fauna_base": "Indistinct spectral figures"
       },
-      "primaryMedia": "media-1767096300067-z017dhm9l",
-      "description": "You are inside a massive, sprawling factory. The walls are made of corrugated metal, and the floor is worn concrete. Exposed beams crisscross the high ceiling, disappearing into the dim industrial atmosphere. Massive pieces of machinery loom in the shadows, their surfaces weathered and stained. Open passages lead off into other sections of this immense industrial complex.",
+      "primaryMedia": "media-1767099817715-v88agozcw",
+      "description": "The interior of St. Basil's Cathedral is a captivating space, characterized by its organic forms, massive scale, and mystical atmosphere. Arched windows allow diffused light to illuminate the stone surfaces, creating a sacred ambiance.",
       "structure": {
-        "form": "irregular-modular",
-        "roofType": "null",
+        "form": "organic",
+        "roofType": "domed",
         "scale": "massive",
-        "orientation": "sprawling",
-        "openings": "open-passages",
-        "openingShape": "irregular",
-        "functionalType": "industrial",
+        "orientation": "centered",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "religious",
         "elevation": "ground-level",
-        "spatialLayout": "Vast, cavernous chambers are interconnected by wide, open passages, with machinery and industrial equipment scattered throughout. The sprawling layout emphasizes horizontal expansion, creating a sense of immense industrial activity.",
-        "requiredElements": []
-      },
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "north wall",
-          "description": "leads to another section of the factory"
-        },
-        {
-          "type": "passage",
-          "position": "east wall",
-          "description": "leads to an exterior loading bay"
-        }
-      ],
-      "dominantElements": [
-        "industrial press: shape=rectangular, orientation=vertical, scale=large, style=industrial, surfaces=rusted-metal, openings=minimal, interior_materials=metal|oil-stained-concrete|exposed-pipes, enterable=no, internal_atmosphere=industrial",
-        "conveyor belt: shape=long-rectangular, orientation=horizontal, scale=massive, style=industrial, surfaces=metal, openings=none, interior_materials=metal|concrete|none, enterable=no, internal_atmosphere=industrial"
-      ],
-      "uniqueIdentifiers": [
-        "faint smell of oil and ozone",
-        "constant low hum of machinery",
-        "vast scale suggesting extensive production"
-      ],
-      "searchDesc": "Colossal, decaying factory ruins, skeletal industrial structures, rust, concrete, vast emptiness.",
-      "slug": "null-of-the-rusting-shell"
-    },
-    "niche-1767096355594-cadisdfso": {
-      "id": "niche-1767096355594-cadisdfso",
-      "type": "niche",
-      "name": "Whimsical House Basement",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A large, cavernous basement space dominated by the massive, rusting skeletal framework of a forgotten industrial building.  Centrally, a 'house' constructed from an absurdly colorful array of salvaged metal sheets, scavenged plastic, and brightly painted scrap lumber stands in defiance of its surroundings.  The house's architecture is playfully asymmetrical and seemingly cobbled together with an optimistic, if rough, hand.",
-        "colorsAndLighting": "The dominant industrial palette of rust-red and muted greys is aggressively disrupted by the house's vibrant patchwork of blues, yellows, greens, and reds.  Harsh shafts of sunlight pierce the gloom from above, illuminating dust motes and casting dramatic shadows.  Repurposed industrial lamps and strings of salvaged Christmas lights (glowing with a surprisingly warm, if slightly flickering, light) provide illumination within the house and around its immediate vicinity.",
-        "atmosphere": "Despite the underlying chill and the pervasive scent of dust and decay from the larger structure, the immediate area around the whimsical house possesses a peculiar, defiant warmth. A faint hum of repurposed electrical components from the house's lighting can be heard.",
-        "materials": "The surrounding space is composed of heavily rusted corrugated metal, exposed steel girders, and crumbling concrete. The house itself is a riot of salvaged materials: brightly painted corrugated metal, warped plastic sheeting, scraps of brightly colored industrial fabric, and various found objects repurposed as decorative elements.",
-        "mood": "A strange blend of haunting desolation from the industrial ruins and a defiant, quirky cheerfulness emanating from the whimsical house. It feels like a pocket of manufactured joy in a world of decay.",
-        "sounds": "Dripping water, distant wind whistles, gentle hum of lights, occasional creaking metal, muffled clatter from within the house.",
-        "spatialLayout": "A vast, open basement space with the whimsical house occupying a significant central portion.  The house itself is a compact, multi-level structure with an irregular, playful shape.",
-        "primary_surfaces": "Heavily rusted corrugated metal and exposed steel girders (in the surrounding area); brightly painted, mismatched metal sheets and salvaged wood (for the house).",
-        "secondary_surfaces": "Cracked concrete, shattered glass, dirt, debris (in the surrounding area); scavenged plastic sheeting, fabric scraps, and repurposed industrial components (for the house).",
-        "accent_features": "The entirety of the whimsical house structure, dangling chains and remnants of machinery in the surrounding area, repurposed string lights, salvaged object art.",
-        "dominant": "Rust-red (from the industrial structure, countered by the house)",
-        "secondary": "Muted grey (from the industrial structure, contrasted by the house)",
-        "accent": "Vibrant, mismatched colors (blues, yellows, greens, reds - from the house)",
-        "ambient": "Dim, with shafts of harsh sunlight and warm, localized artificial light.",
-        "genre": "Post-Apocalyptic",
-        "architectural_tone": "Massive industrial decay with exposed skeletal framework, adapted with whimsical, salvaged construction.",
-        "cultural_tone": "Represents forgotten industry and post-apocalyptic survival, with a defiant pocket of quirky, handmade joy and shelter.",
-        "palette_bias": "Earth tones, metallic hues, muted colors, heavily contrasted by vibrant, salvaged accent colors.",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767096355594-3x654zfy0",
-      "description": "You are in a large, subterranean space that serves as the foundation for a peculiar house. The walls are a mix of rough-hewn stone and packed earth, with portions of the whimsical house's structure — perhaps a peculiar staircase or a brightly colored wall — seemingly growing out of them. The air is cool and carries the faint scent of damp earth and something faintly sweet.  The only prominent feature is the entrance into the house itself, a peculiar, inviting opening in the earthen wall.",
-      "structure": {
-        "form": "organic",
-        "roofType": "null",
-        "scale": "large",
-        "orientation": "sprawling",
-        "openings": "open-passages",
-        "openingShape": "irregular",
-        "functionalType": "residential",
-        "elevation": "underground",
-        "spatialLayout": "A vast, cavernous basement area that opens into the foundation of a whimsical, slightly off-kilter house. The space feels like the roots of a playful structure, with unusual architectural elements poking through the earthen walls.",
+        "spatialLayout": "The interior is a labyrinthine network of interconnected chapels and passages, each adorned with vibrant frescoes and intricate architectural details. The stone surfaces absorb and reflect light, creating a sense of awe and wonder.",
         "requiredElements": [
-          "basement",
-          "whimsical house"
+          "stone",
+          "arched-windows",
+          "mystical"
         ]
       },
+      "furnishingDetails": {
+        "userSpecified": [
+          "central iconostasis adorned with icons",
+          "tiered wooden pews",
+          "ornate candelabras with flickering candles",
+          "rich velvet prayer cushions",
+          "incense burner emitting fragrant smoke"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
       "navigableElements": [
         {
-          "type": "passage",
-          "position": "north wall, center",
-          "description": "A rough-hewn opening leading into the main industrial complex."
+          "type": "archway",
+          "position": "front",
+          "description": "archway grand"
         },
         {
           "type": "door",
-          "position": "east wall, slightly left of center",
-          "description": "The entrance to the whimsical house, made of mismatched, brightly painted metal sheets."
-        }
-      ],
-      "dominantElements": [
-        "whimsical house: shape=organic, orientation=compact, scale=large, style=whimsical, surfaces=wood|plaster|glass, openings=mixed, interior_materials=painted-wood|worn-rug|exposed-beams, enterable=yes, internal_atmosphere=cozy"
-      ],
-      "uniqueIdentifiers": [
-        "uneven foundations",
-        "playful structural elements",
-        "earthy and stone textures"
-      ],
-      "searchDesc": "A vibrant, makeshift house built from salvaged parts in a massive industrial ruin.",
-      "slug": "the-whimsical-den"
-    },
-    "loc-1767096364463-e1uhqgyqr": {
-      "id": "loc-1767096364463-e1uhqgyqr",
-      "type": "location",
-      "name": "whimsical house",
-      "spaceType": "structure",
-      "dna": {},
-      "description": "Structure: whimsical house",
-      "searchDesc": "whimsical house",
-      "slug": "whimsical-house",
-      "isPassThrough": true
-    },
-    "niche-1767096375518-5y595ijh4": {
-      "id": "niche-1767096375518-5y595ijh4",
-      "type": "niche",
-      "name": "whimsical house",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "An irregularly shaped, compact large-scale interior. The walls are a blend of rough, unpainted plaster and sections of salvaged, crudely painted wood panels. Gaping openings, some covered with salvaged glass, reveal glimpses of the industrial exterior. Exposed, rusted steel beams are a prominent structural element, integrated into the ceiling and walls.",
-        "colorsAndLighting": "Dominant colors are muted earth tones and rust-reds from the exposed structural elements, contrasted with splashes of faded, vibrant colors on the painted wood and worn rugs. Lighting is dim, with sharp shafts of sunlight filtering through salvaged glass, creating dramatic shadows.",
-        "atmosphere": "A surprisingly cozy and lived-in atmosphere despite the surrounding desolation. The air carries a faint scent of old wood and dust. A gentle, internal stillness prevails, broken only by the occasional whisper of wind from the external openings.",
-        "materials": "Primary interior surfaces are a mix of rough plaster and salvaged, painted wood panels. Worn, patterned rugs are scattered across the floor. Exposed, weathered steel beams form part of the interior structure.",
-        "mood": "Evokes a sense of defiant cheerfulness and resourceful comfort, a pocket of warmth and personality amidst industrial decay and desolation. It feels like a refuge, a place of personal expression salvaged from ruin.",
-        "sounds": "Muffled wind, creaking wood, distant industrial hum, gentle settling.",
-        "spatialLayout": "Compact, organic, and large-scale within its defined area. The layout is somewhat irregular, accommodating the natural contours of the salvaged industrial shell.",
-        "primary_surfaces": "Rough plaster, painted wood panels, worn rugs.",
-        "secondary_surfaces": "Exposed rusted steel beams, salvaged glass.",
-        "accent_features": "Mismatched hand-painted decorative motifs, collections of salvaged glass containers, rough-hewn wooden furniture.",
-        "dominant": "Rust-red (from exposed structural elements and salvaged metal), blending with muted earth tones.",
-        "secondary": "Muted grey (from plaster and weathered metal), with accents of faded vibrant colors.",
-        "accent": "Faded vibrant colors (on painted wood and rugs), catching sunlight.",
-        "ambient": "Dim, with stark shafts of sunlight.",
-        "genre": "Post-Apocalyptic",
-        "architectural_tone": "Massive industrial decay with exposed skeletal framework. The whimsical elements are adaptations and embellishments within this existing structure.",
-        "cultural_tone": "Represents forgotten industry and post-apocalyptic survival, a shelter or a relic, now adapted with a unique, playful spirit by its inhabitants.",
-        "palette_bias": "Earth tones, metallic hues, muted colors, with unexpected splashes of faded, salvaged color.",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767096375518-xqvmgbigi",
-      "description": "You are inside the whimsical house. The walls are a cheerful, painted wood that curve gently, creating an organic flow to the space. A worn, colorful rug covers the floor, absorbing sound and adding to the cozy atmosphere. Above, exposed wooden beams crisscross the ceiling, giving a rustic yet charming feel. The air is warm and inviting, filled with the scent of old books and something subtly sweet. Mismatched furniture, like an overstuffed armchair and a winding bookshelf, are nestled into the curves of the walls. Small, irregular openings, some resembling round windows and others simply archways, allow soft light to filter in.",
-      "structure": {
-        "form": "organic",
-        "roofType": "null",
-        "scale": "large",
-        "orientation": "compact",
-        "openings": "mixed",
-        "openingShape": "irregular",
-        "functionalType": "residential",
-        "elevation": "ground-level",
-        "spatialLayout": "The interior of the whimsical house is a single, cozy space with an organic, flowing layout. Despite its compact orientation, the large scale allows for an airy feel within its winding walls.",
-        "requiredElements": [
-          "painted-wood walls",
-          "worn-rug floor",
-          "exposed-beams ceiling"
-        ]
-      },
-      "navigableElements": [
+          "position": "center",
+          "description": "door ornate wooden  rear"
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "passage vaulted way"
+        },
         {
           "type": "door",
-          "position": "north wall",
-          "description": "leads back to Whimsical House Basement"
+          "position": "left",
+          "description": "door small chapel"
         }
       ],
       "dominantElements": [
-        "overstuffed armchair: shape=organic, orientation=centered, scale=medium, style=whimsical, surfaces=fabric, openings=minimal, interior_materials=fabric|worn-rug|exposed-beams, enterable=yes, internal_atmosphere=cozy",
-        "curved bookshelf: shape=organic, orientation=flowing, scale=large, style=whimsical, surfaces=wood, openings=mixed, interior_materials=painted-wood|worn-rug|exposed-beams, enterable=no, internal_atmosphere=cozy",
-        "glowing mushroom lamp: shape=organic, orientation=compact, scale=small, style=whimsical, surfaces=organic-membrane, openings=minimal, interior_materials=organic-membrane|worn-rug|exposed-beams, enterable=no, internal_atmosphere=cozy"
+        "chapel: shape=organic, orientation=compact, scale=medium, style=sacred, surfaces=stone, openings=arched-windows, interior_materials=stone|stone|fresco, enterable=yes, internal_atmosphere=mystical"
       ],
       "uniqueIdentifiers": [
-        "uneven, curving walls",
-        "mismatched, colorful furniture",
-        "soft, diffused lighting"
+        "vibrant frescoes",
+        "onion domes (visible through windows)",
+        "intricate stone carvings"
       ],
-      "searchDesc": "Whimsical, cozy shelter within post-apocalyptic industrial ruins.",
-      "slug": "interior-of-whimsical-house-shape-organic-orientation-compact-scale-large-style-whimsical-surfaces-wood-plaster-glass-openings-mixed-interior-materials-painted-wood-worn-rug-exposed-beams-enterable-yes-internal-atmosphere-cozy"
+      "searchDesc": "Ethereal null space of St. Basil's Cathedral, awe-inspiring, serene, historically grand, sunset palette.",
+      "slug": "null-of-st-basil-s-cathedral"
     },
-    "niche-1767096431094-3tdfzapkc": {
-      "id": "niche-1767096431094-3tdfzapkc",
+    "niche-1767099879058-14s542kxt": {
+      "id": "niche-1767099879058-14s542kxt",
       "type": "niche",
-      "name": "A Room with a Space Ship",
+      "name": "Steampunk Techno Bar Rooftop",
       "spaceType": "interior",
       "dna": {
-        "looks": "A vast, echoing industrial bay, heavily featuring the colossal, rusted skeleton of a starship. Dangling chains and remnants of industrial machinery hang from the decaying structure. Clinging to the starship's hull is a 'house' made of an absurdly colorful patchwork of salvaged metal sheets, plastic, and scrap lumber, featuring asymmetrical and playful construction. Harsh sunlight beams down, illuminating dust motes and casting dramatic shadows.",
-        "colorsAndLighting": "The dominant rust-red and muted greys of the industrial decay are violently interrupted by the habitation's vibrant, clashing palette of blues, yellows, greens, and reds. Light is a stark contrast: harsh, dusty shafts of sunlight from above, and localized, warm, slightly flickering glows from repurposed industrial lamps and strings of salvaged Christmas lights within and around the habitation.",
-        "atmosphere": "A chilling, cavernous emptiness pervades the main bay, thick with the scent of dust and decay. However, the area around the salvaged habitation emanates a peculiar, defiant warmth and a faint hum of repurposed electrical components.",
-        "materials": "The surrounding space is dominated by heavily rusted corrugated metal, exposed steel girders, and crumbling concrete. The habitation is a riot of brightly painted, mismatched metal sheets, warped plastic sheeting, scraps of industrial fabric, and various found objects repurposed as decorative elements.",
-        "mood": "A haunting desolation from the industrial ruins, juxtaposed with a defiant, quirky cheerfulness from the whimsical habitation. A strange, manufactured pocket of joy.",
-        "sounds": "Echoing emptiness, groaning metal, dripping water, faint hum of electronics, crackling lights.",
-        "spatialLayout": "A massive, cavernous open space with a dominant central feature (the starship) and a clustered, asymmetrical habitation built upon it.",
-        "primary_surfaces": "Heavily rusted corrugated metal, exposed steel girders, crumbling concrete, brightly painted mismatched metal sheets, salvaged wood planks.",
-        "secondary_surfaces": "Cracked concrete, shattered glass, dirt, debris, scavenged plastic sheeting, industrial fabric scraps, repurposed industrial components.",
-        "accent_features": "The entirety of the colorful salvaged habitation, dangling chains, remnants of industrial machinery, repurposed string lights, found object art on the habitation.",
-        "dominant": "Rust-red",
-        "secondary": "Muted grey",
-        "accent": "Vibrant, mismatched colors (blues, yellows, greens, reds)",
-        "ambient": "Dim, with harsh shafts of sunlight and warm, localized artificial light.",
-        "genre": "Post-Apocalyptic",
-        "architectural_tone": "Massive industrial decay with exposed skeletal framework, adapted with whimsical, salvaged construction.",
-        "cultural_tone": "Represents forgotten industry and post-apocalyptic survival, with a defiant pocket of quirky, handmade joy and shelter.",
-        "palette_bias": "Earth tones, metallic hues, muted colors, heavily contrasted by vibrant, salvaged accent colors.",
-        "flora_base": "None",
+        "looks": "A fusion of intricate sacred architecture and robust industrial design. Domed roofs echo the cathedral's form, but are constructed from riveted copper, brass, and stained glass illuminated from within. Gears, pipes, and clockwork mechanisms are integrated into the structure and furniture. Multiple levels and viewing platforms offer panoramic cityscapes.",
+        "colorsAndLighting": "Warm earth tones of aged brass and copper are punctuated by vibrant jewel tones from stained glass panels and internal lighting. Gas lamps and Edison bulbs cast a warm, inviting glow, with occasional flashes of electric blue from the Tesla coil. The ambient light is reminiscent of a perpetual sunset.",
+        "atmosphere": "A dynamic and buzzing atmosphere. The air is alive with the gentle hum of machinery, the hiss of steam, and the distant thrum of electronic music. It's energetic yet retains an underlying sense of awe and wonder. The feel is one of skilled craftsmanship and inventive spirit.",
+        "materials": "Primary materials are weathered brass, polished copper, dark stained wood, riveted iron, and textured, patterned glass. Reclaimed industrial elements and salvaged mechanical parts are abundant. Upholstery features rich velvets and distressed leather.",
+        "mood": "A sense of inventive wonder and communal revelry. It evokes curiosity and excitement, combined with a grounded appreciation for craftsmanship and a touch of mystical energy.",
+        "sounds": "Whirring gears, hissing steam, pulsing techno beats, clinking glasses, distant city hum.",
+        "spatialLayout": "Multi-tiered open-plan space with distinct zones for lounging, dancing, and intimate conversation. The layout encourages exploration and discovery, with hidden alcoves and elevated platforms.",
+        "primary_surfaces": "Aged brass plating, riveted copper sheeting, dark stained hardwood panels.",
+        "secondary_surfaces": "Exposed pipework, polished steel accents, velvet upholstery, stained glass panels.",
+        "accent_features": "Intricate clockwork mechanisms, Tesla coils, Victorian scientific instruments, salvaged gears and sprockets, custom-made steampunk lighting fixtures.",
+        "dominant": "Warm brass and copper tones",
+        "secondary": "Deep jewel-toned velvet and stained glass",
+        "accent": "Pulsing electric blue and golden light",
+        "ambient": "Golden hour glow with internal, dynamic lighting",
+        "genre": "REQUIRED",
+        "architectural_tone": "Intricate sacred architecture blended with industrial steampunk",
+        "cultural_tone": "Russian Orthodox church, landmark fused with Burning Man burner culture",
+        "palette_bias": "Warm earth tones with vibrant jewel tones",
+        "flora_base": "None apparent, perhaps metallic or mechanical 'plants'",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1767096431093-hakjzsuxa",
-      "description": "You are inside a utilitarian room, its walls bearing the marks of heavy industry. Exposed metal beams and conduits crisscross overhead, and the floor is a patchwork of worn concrete and salvaged plating. In the center of the space, dominating the view, is a large, weathered spaceship, its hull bearing the scars of countless journeys. Smaller, repurposed metallic structures and tool racks are scattered around, hinting at its function as a workshop or maintenance bay. The overall impression is one of massive industrial decay, but with an undeniable, functional purpose.",
+      "primaryMedia": "media-1767099879058-bz7pd3ajg",
+      "description": "An open-air rooftop bar with a distinct steampunk techno vibe, catering to burners, bathed in the warm hues of a sunset.",
       "structure": {
         "form": "irregular",
-        "roofType": "null",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "mixed",
+        "functionalType": "entertainment",
+        "elevation": "rooftop",
+        "spatialLayout": "A sprawling rooftop space filled with modular, industrial-inspired structures and seating areas. Open passages connect various zones of the bar.",
+        "requiredElements": [
+          "steampunk techno bar",
+          "roof top",
+          "burners from burning man"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "copper-plated bar",
+          "plush velvet seating in jewel tones",
+          "intricate brass pipe detailing",
+          "tesla coils",
+          "glowing geometric light fixtures",
+          "holographic projections of celestial maps."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front",
+          "description": "archway ornate"
+        },
+        {
+          "type": "door",
+          "position": "left",
+          "description": "door gilded double s"
+        },
+        {
+          "type": "window",
+          "position": "right",
+          "description": "window crimson velvet curtains covering s"
+        }
+      ],
+      "dominantElements": [
+        "Steampunk Bar Structure: shape=organic, orientation=compact, scale=medium, style=industrial, surfaces=metallic-polished, openings=arched-windows, interior_materials=metallic|wood|tile, enterable=yes, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "Steampunk aesthetic",
+        "Burner culture elements",
+        "Rooftop setting"
+      ],
+      "searchDesc": "Steampunk rooftop bar for burners, merging industrial design with cathedral grandeur on a vibrant rooftop.",
+      "slug": "steampunk-rooftop-bar"
+    },
+    "loc-1767099944535-gtl5ktjra": {
+      "id": "loc-1767099944535-gtl5ktjra",
+      "type": "location",
+      "name": "to big hall for dj, music and dance floor",
+      "spaceType": "structure",
+      "dna": {},
+      "description": "Structure: to big hall for dj, music and dance floor",
+      "searchDesc": "to big hall for dj, music and dance floor",
+      "slug": "to-big-hall-for-dj,-music-and-dance-floor",
+      "isPassThrough": true
+    },
+    "niche-1767099958096-tnovnal9g": {
+      "id": "niche-1767099958096-tnovnal9g",
+      "type": "niche",
+      "name": "Steampunk Techno Bar Rooftop DJ Hall",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Vast, cavernous hall with soaring vaulted ceilings, retaining elements of intricate sacred architecture.  The space is dominated by a central DJ booth and a dynamic LED dance floor, with seating areas arranged in alcoves.  Modern lighting fixtures are integrated into the ornate decorative elements.",
+        "colorsAndLighting": "The foundational warm earth tones are present in the stone walls, but are dramatically contrasted by vibrant, jewel-toned LED lighting that cycles through blues, greens, purples, and reds, reflecting off the dance floor and metallic accents.  The ambient light is moody and dynamic, shifting with the music.",
+        "atmosphere": "A pulsating energy pervades the space, a blend of the awe-inspiring grandeur of the cathedral and the vibrant, infectious rhythm of the music.  The air hums with the bass and excitement of the crowd, yet still carries a faint echo of the sacred silence.",
+        "materials": "The primary materials are rough-hewn stone walls that retain the texture of the cathedral's exterior.  These are complemented by polished dark wood for the DJ booth and bar areas, mirrored surfaces on the dance floor, and brushed metal accents in the lighting rigs and decorative elements.  Gilded elements remain, catching and reflecting light.",
+        "mood": "Exhilarating, awe-inspiring, vibrant, spiritual, celebratory.",
+        "sounds": "Deep bass, pulsating electronic music, cheering crowd, echoing melodies, rhythmic beats.",
+        "spatialLayout": "A grand, open central hall with a high, vaulted ceiling. The dance floor occupies the central space, with the DJ booth positioned as a focal point. Alcoves and tiered seating are integrated into the side walls.",
+        "primary_surfaces": "Textured reddish-orange stone walls, polished dark wood, mirrored LED dance floor.",
+        "secondary_surfaces": "Brushed metal accents, gilded decorative elements, velvet upholstery in seating alcoves.",
+        "accent_features": "Integrated LED light strips outlining architectural features, stylized Orthodox crosses as light sculptures, vibrant jewel-toned frescoes illuminated with modern lighting, holographic projections.",
+        "dominant": "Reddish-orange (stone walls)",
+        "secondary": "Teal green (lighting accents and some decorative elements)",
+        "accent": "Vibrant jewel tones (blue, emerald green, deep purple, ruby red)",
+        "ambient": "Dynamic, pulsating, and moody lighting.",
+        "genre": "REQUIRED",
+        "architectural_tone": "Intricate sacred architecture, adapted and modernized.",
+        "cultural_tone": "Russian Orthodox church, landmark (reimagined as a cultural hub).",
+        "palette_bias": "Warm earth tones with vibrant jewel tones.",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767099958096-gxqp7nr9t",
+      "description": "The interior of a large, rectangular hall on the rooftop of a building, designed for music and dancing, with a distinct steampunk aesthetic.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "elevation": "rooftop",
+        "spatialLayout": "A spacious, rectangular hall designed to accommodate a DJ booth, a dance floor, and seating areas. The interior features exposed metallic pipes and gears integrated with ornate Victorian detailing.",
+        "requiredElements": [
+          "dj booth",
+          "music",
+          "dance floor"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "intricate steampunk DJ booth with tesla coils and brass piping",
+          "massive rotating disco ball adorned with clockwork gears",
+          "hexagonal dance floor inlaid with glowing neon circuits",
+          "plush velvet seating arranged in bohemian clusters",
+          "towering industrial pipe scaffolding draped with fairy lights",
+          "ornate gilded icons of technological deities",
+          "scattered worn leather ottomans and salvaged metal furniture",
+          "large industrial fans with ornate grilles."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door ornate brass-plated double s"
+        },
+        {
+          "type": "archway",
+          "position": "left wall",
+          "description": "archway gothic   leading to VIP lounge"
+        },
+        {
+          "type": "object",
+          "position": "right wall",
+          "description": "object spiral iron staircase  to rooftop access"
+        },
+        {
+          "type": "window",
+          "position": "back wall",
+          "description": "window large stained-glass   depicting celestial gears"
+        }
+      ],
+      "dominantElements": [
+        "Steampunk Bar Structure: shape=organic, orientation=compact, scale=medium, style=industrial, surfaces=metallic-polished, openings=arched-windows, interior_materials=metallic|wood|tile, enterable=yes, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "Victorian-industrial fusion",
+        "Integrated DJ stage",
+        "Ornate metallic detailing"
+      ],
+      "searchDesc": "Grand hall for DJ, music, and dance, blending sacred architecture with modern party atmosphere.",
+      "slug": "interior-of-to-big-hall-for-dj-music-and-dance-floor"
+    },
+    "niche-1767100013888-vzlz3kg6e": {
+      "id": "niche-1767100013888-vzlz3kg6e",
+      "type": "niche",
+      "name": "The Room with a Car",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A spacious garage space transformed into a workshop cathedral. The central feature is a meticulously restored or custom-built car, heavily integrated with steampunk aesthetic elements like brass plating, exposed pipes, and intricate gearwork. The walls are a mosaic of riveted copper sheets, dark stained wood panels, and large stained glass windows depicting mechanical diagrams and stylized religious motifs. Elevated platforms and alcoves are filled with glowing scientific instruments, custom tools, and devotional shrines to engineering. The ceiling is a partial dome of hammered copper and richly colored stained glass, casting jewel-toned light.",
+        "colorsAndLighting": "Dominated by warm, aged brass and copper tones. Jewel tones of ruby, emerald, and sapphire emanate from the stained glass. Accent lighting from Edison bulbs, gas lamps, and the pulsing blue glow of Tesla coils creates an atmosphere of perpetual, magical sunset.",
+        "atmosphere": "A buzzing yet reverent atmosphere. The air is thick with the scent of fine oil, ozone, and aged metal. A low hum of unseen machinery, the occasional crackle of electricity, and the rhythmic tick-tock of intricate clockwork create a meditative soundscape, punctuated by bursts of creative energy.",
+        "materials": "Weathered brass, polished copper, dark stained hardwood, riveted iron, textured and patterned stained glass, distressed leather upholstery on built-in seating.",
+        "mood": "A profound sense of inventive wonder, dedicated craftsmanship, and spiritual devotion to the art of mechanics and the automobile. It evokes curiosity, reverence, and the thrill of creation.",
+        "sounds": "Low hum of machinery, rhythmic ticking of clockwork, occasional electrical crackle, gentle hiss of steam, soft metal clinks.",
+        "spatialLayout": "A high-ceilinged, open central space dominated by the car, with layered platforms and alcoves for work, display, and contemplation. Functional and aesthetic.",
+        "primary_surfaces": "Riveted copper sheeting, dark stained hardwood panels, aged brass plating.",
+        "secondary_surfaces": "Exposed pipework, polished steel accents, stained glass panels, distressed leather.",
+        "accent_features": "Intricate clockwork mechanisms, active Tesla coils, custom steampunk car modifications, mechanical reliquaries, devotional tools.",
+        "dominant": "Warm brass and copper tones",
+        "secondary": "Deep jewel-toned stained glass",
+        "accent": "Pulsing electric blue and golden light",
+        "ambient": "Golden hour glow with internal, dynamic lighting",
+        "genre": "REQUIRED",
+        "architectural_tone": "Intricate sacred architecture blended with industrial steampunk",
+        "cultural_tone": "Russian Orthodox church, landmark fused with Burning Man burner culture",
+        "palette_bias": "Warm earth tones with vibrant jewel tones",
+        "flora_base": "None apparent, perhaps metallic or mechanical 'plants'",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767100013887-hbqz594jo",
+      "description": "You are inside a medium-sized, rectangular room with a vaulted ceiling. The architecture is a modern interpretation of intricate sacred design, bathed in warm earth tones accented by vibrant jewel tones. A striking, futuristic car sits centrally within the space, its polished metallic surface gleaming under the ambient light. Large, arched glass openings allow glimpses of the outside, and the overall atmosphere is one of reverent display.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
         "scale": "medium",
-        "orientation": "compact",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "industrial",
+        "orientation": "cubic",
+        "openings": "large-glass",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
         "elevation": "ground-level",
-        "spatialLayout": "A utilitarian room, likely a workshop or hangar, designed to house and service a spacecraft. Exposed structural elements and salvaged materials dominate the space.",
+        "spatialLayout": "A spacious, architecturally significant room designed to showcase a vehicle. The car is centrally placed, inviting closer inspection, with ample space around it for viewing and movement.",
         "requiredElements": [
           "room",
-          "space ship"
+          "car"
         ]
       },
       "navigableElements": [
         {
-          "type": "passage",
-          "position": "leading from the main cavern floor towards the ship's hull",
-          "description": "A makeshift ramp of warped metal plating and wooden planks, leading towards the habitation built onto the starship's hull."
+          "type": "door",
+          "position": "front",
+          "description": "A heavy, riveted metal door with stained glass panels depicting gears and celestial bodies, leading to the outside."
         },
         {
-          "type": "door",
-          "position": "on the primary salvaged habitation structure",
-          "description": "A mismatched door of brightly painted scrap metal, opening into the colorful interior of the salvaged dwelling."
+          "type": "passage",
+          "position": "side",
+          "description": "An archway leading to a cluttered but organized workbench area."
         },
         {
           "type": "stairs",
-          "position": "leading from the habitation down to the cavern floor",
-          "description": "A precarious set of metal grating stairs, descending from the salvaged dwelling back to the main industrial bay floor."
+          "position": "rear",
+          "description": "Spiral metal stairs leading to a small loft overlooking the main space."
         }
       ],
       "dominantElements": [
-        "space ship: shape=organic, orientation=vertical, scale=large, style=futuristic-industrial, surfaces=metallic-weathered, openings=circular-portholes, interior_materials=brushed-metal|grated-floor|ribbed-ceiling, enterable=yes, internal_atmosphere=dim"
+        "car: shape=organic, orientation=centered, scale=medium, style=futuristic, surfaces=metallic-polished, openings=none, interior_materials=null|null|null, enterable=yes, internal_atmosphere=sterile"
       ],
       "uniqueIdentifiers": [
-        "exposed skeletal framework",
-        "salvaged embellishments"
+        "Intricate sacred architecture",
+        "Warm earth tones with vibrant jewel tones"
       ],
-      "searchDesc": "Vast industrial bay with a decaying starship and a quirky, colorful salvaged dwelling.",
-      "slug": "the-salvaged-starship-bay"
+      "searchDesc": "Steampunk sanctuary devoted to a car, blending sacred architecture and industrial grit.",
+      "slug": "the-garage-sanctuary"
     },
-    "loc-1767096445273-kvtmzu4bx": {
-      "id": "loc-1767096445273-kvtmzu4bx",
+    "loc-1767100024463-mhz4um7fu": {
+      "id": "loc-1767100024463-mhz4um7fu",
       "type": "location",
-      "name": "space ship",
+      "name": "car",
       "spaceType": "structure",
       "dna": {},
-      "description": "Structure: space ship",
-      "searchDesc": "space ship",
-      "slug": "space-ship",
+      "description": "Structure: car",
+      "searchDesc": "car",
+      "slug": "car",
       "isPassThrough": true
     },
-    "niche-1767096460979-85o3iyvhi": {
-      "id": "niche-1767096460979-85o3iyvhi",
+    "niche-1767100035820-lnmjdqzl3": {
+      "id": "niche-1767100035820-lnmjdqzl3",
       "type": "niche",
-      "name": "space ship",
+      "name": "futuristic_car_interior",
       "spaceType": "interior",
       "dna": {
-        "looks": "The interior is a jarring juxtaposition of a vast, derelict industrial space – think exposed, rusting girders, corroded pipes, and vast, unfinished concrete walls – seamlessly integrated with a central, quirky 'spaceship' habitation. This habitation is a riot of color and asymmetry, constructed from salvaged corrugated metal sheets, brightly painted scrap lumber, repurposed plastic sheeting, and a bewildering array of found objects. Exposed wiring is bundled with colorful tape and fabric.",
-        "colorsAndLighting": "The dominant colors are the rust-reds and muted greys of the decaying industrial structure, aggressively interrupted by the vibrant, mismatched blues, yellows, greens, and reds of the salvaged spaceship habitation. Lighting is a dramatic mix of harsh, piercing shafts of sunlight from unseen breaches above, casting long shadows, and the warm, flickering glow of salvaged industrial lamps and strings of repurposed Christmas lights, concentrated around the habitation area.",
-        "atmosphere": "A unique blend of cold, vast emptiness from the industrial shell and a surprisingly warm, defiant cheerfulness within the salvaged dwelling. The air is thick with the scent of dust, old metal, and a hint of ozone, but a faint, persistent hum of functioning, repurposed electronics provides a sense of life and activity. It feels like a well-defended, quirky sanctuary.",
-        "materials": "Heavily rusted corrugated metal, exposed steel girders, crumbling concrete, and pitted metal plating form the base structure. The 'spaceship' interior is a patchwork of brightly painted, mismatched metal sheets, warped and colored plastic sheeting, rough-hewn scrap lumber, salvaged industrial fabrics, and numerous repurposed everyday objects.",
-        "mood": "A curious duality of haunting desolation from the massive industrial ruin and a defiant, quirky sense of manufactured joy and security within the salvaged habitation. It evokes resilience, creativity, and a stubborn will to thrive amidst decay.",
-        "sounds": "Low hum of electronics, occasional creaks of metal, distant echoes, faint clatter of movement.",
-        "spatialLayout": "A large, cavernous space with a central, more defined 'habitation' area. The skeletal framework of the industrial ruin forms the overarching structure, with the salvaged spaceship components integrated into and built around it.",
-        "primary_surfaces": "Rusting corrugated metal panels, exposed steel beams, patchwork of painted salvaged metal sheets, rough-sawn lumber.",
-        "secondary_surfaces": "Cracked concrete floors, exposed wiring conduits, scavenged plastic sheeting, worn industrial fabrics, repurposed plastic containers.",
-        "accent_features": "The vibrant, asymmetrical construction of the habitation house, dangling chains and remnants of original machinery, strings of colorful salvaged lights, found object art and decorations, control panels with salvaged dials and switches.",
-        "dominant": "Rust-red",
-        "secondary": "Muted grey",
-        "accent": "Vibrant, mismatched colors (blues, yellows, greens, reds)",
-        "ambient": "Dim, with localized warm illumination",
-        "genre": "Post-Apocalyptic",
-        "architectural_tone": "Massive industrial decay with exposed skeletal framework, adapted with whimsical, salvaged construction.",
-        "cultural_tone": "Represents forgotten industry and post-apocalyptic survival, with a defiant pocket of quirky, handmade joy and shelter.",
-        "palette_bias": "Earth tones, metallic hues, muted colors, heavily contrasted by vibrant, salvaged accent colors.",
-        "flora_base": "None",
+        "looks": "A compact, enclosed space with a fusion of intricate mechanical elements and luxurious, aged materials. The overall impression is that of a finely crafted, mobile jewel box. Riveted brass and copper panels line the walls, interspersed with sections of dark, polished wood. Plush, deep red velvet or distressed leather upholstery adorns the seats and some wall sections. Intricate clockwork mechanisms are integrated into the dashboard and decorative elements.",
+        "colorsAndLighting": "Dominant warm brass and copper tones are enhanced by the deep jewel tones of the upholstery. The lighting is a warm, inviting glow from Edison bulbs housed in ornate brass fixtures, with occasional flickering pulses of electric blue from the integrated Tesla coil. The interior feels perpetually bathed in a warm, golden hour light.",
+        "atmosphere": "The air is warm and slightly humid, carrying the faint scent of polished metal, aged leather, and a hint of ozone from the Tesla coil. There's a low, constant hum of machinery, punctuated by the occasional hiss of a steam valve or the gentle click of gears. The atmosphere is one of concentrated focus and inventive power, tinged with a sense of luxurious confinement.",
+        "materials": "Weathered brass plating, polished copper sheeting, dark stained hardwood panels, rich velvet or distressed leather upholstery, riveted iron accents.",
+        "mood": "A sense of inventive wonder and contained excitement. It evokes curiosity about the journey and the craftsmanship, combined with a grounded appreciation for tactile quality and a touch of powerful, contained energy.",
+        "sounds": "Hum of machinery, gentle gear clicks, faint hiss of steam, subtle electrical crackle.",
+        "spatialLayout": "A confined, often curved space, designed for two to four occupants. The layout prioritizes function with the driver's controls at the forefront, surrounded by intricate instrumentation. Seating is plush and enveloping.",
+        "primary_surfaces": "Brass plating, leather upholstery, polished wood panels.",
+        "secondary_surfaces": "Riveted copper sheeting, velvet accents, exposed pipework, glass instrument covers.",
+        "accent_features": "Intricate clockwork mechanisms on the dashboard, small Tesla coil with blue arcing, polished brass steering wheel, custom-made steampunk lighting fixtures, visible steam valves.",
+        "dominant": "Warm brass and copper tones",
+        "secondary": "Deep jewel-toned upholstery (reds, purples, emeralds)",
+        "accent": "Pulsing electric blue and golden light",
+        "ambient": "Golden hour glow with internal, dynamic lighting",
+        "genre": "REQUIRED",
+        "architectural_tone": "Intricate sacred architecture blended with industrial steampunk",
+        "cultural_tone": "Russian Orthodox church, landmark fused with Burning Man burner culture",
+        "palette_bias": "Warm earth tones with vibrant jewel tones",
+        "flora_base": "None apparent, perhaps metallic or mechanical 'plants'",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1767096460977-vrl0deabz",
-      "description": "You are inside a large, vertically oriented spaceship. The walls are made of brushed metal, the floor is a grated metal, and the ceiling is ribbed. The overall atmosphere is dim, with a futuristic-industrial style. Circular portholes offer distorted views of the surrounding void, and the organic shape of the ship creates a curving, multi-level interior.",
+      "primaryMedia": "media-1767100035819-6tsk152yp",
+      "description": "The interior of a futuristic, sterile, and medium-scale car with polished metallic surfaces.",
       "structure": {
         "form": "organic",
         "roofType": null,
-        "scale": "large",
-        "orientation": "vertical",
-        "openings": "circular-portholes",
-        "openingShape": "circular",
-        "functionalType": "vehicle",
-        "elevation": "floating",
-        "spatialLayout": "This is the interior of a large, vertically oriented spaceship. The organic form of the ship creates curving internal spaces, illuminated by a dim, futuristic-industrial atmosphere. Multiple levels are implied by the vertical orientation.",
+        "scale": "medium",
+        "orientation": "compact",
+        "openings": "none",
+        "openingShape": "none",
+        "functionalType": null,
+        "elevation": "ground-level",
+        "spatialLayout": "The interior of the car is a compact, organic space designed for efficiency and a sterile environment.",
         "requiredElements": [
-          "brushed-metal walls",
-          "grated-floor",
-          "ribbed-ceiling"
+          "car"
         ]
       },
-      "navigableElements": [
-        {
-          "type": "portal",
-          "position": "central area",
-          "description": "A shimmering portal that likely leads to other parts of the ship or a docking bay."
-        },
-        {
-          "type": "stairs",
-          "position": "along the curving wall",
-          "description": "A set of metallic stairs winding upwards, hinting at the multi-level nature of the ship."
-        }
-      ],
+      "navigableElements": [],
       "dominantElements": [
-        "control console: shape=organic, orientation=horizontal, scale=medium, style=futuristic-industrial, surfaces=brushed-metal, openings=minimal, interior_materials=brushed-metal|grated-floor|ribbed-ceiling, enterable=yes, internal_atmosphere=dim",
-        "crew seating: shape=organic, orientation=horizontal, scale=small, style=futuristic-industrial, surfaces=brushed-metal, openings=none, interior_materials=brushed-metal|grated-floor|ribbed-ceiling, enterable=no, internal_atmosphere=dim",
-        "machinery housing: shape=organic, orientation=vertical, scale=medium, style=futuristic-industrial, surfaces=metallic-weathered, openings=narrow-slits, interior_materials=brushed-metal|grated-floor|ribbed-ceiling, enterable=no, internal_atmosphere=dim"
+        "car: shape=organic, orientation=centered, scale=medium, style=futuristic, surfaces=metallic-polished, openings=none, interior_materials=null|null|null, enterable=yes, internal_atmosphere=sterile"
       ],
       "uniqueIdentifiers": [
-        "dim internal atmosphere",
-        "circular portholes revealing glimpses of space",
-        "organic, curving interior architecture"
+        "sterile atmosphere",
+        "futuristic metallic surfaces",
+        "organic form"
       ],
-      "searchDesc": "Cozy patchwork dwelling inside a massive, decaying industrial ruin adapted into a spaceship.",
-      "slug": "interior-of-space-ship"
+      "searchDesc": "Steampunk car interior: brass, leather, clockwork dashboard, Tesla coil lights.",
+      "slug": "interior-of-car"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1767096264812-ozz9clnj1",
+      "id": "loc-1767099773145-7xrwcuxwh",
       "type": "host",
       "children": [
         {
-          "id": "27e4a0a3-41e4-4df3-a4da-0368b9ce0024",
+          "id": "8d375d88-d09a-492d-b1f8-b9dff385ded9",
           "type": "region",
           "children": [
             {
-              "id": "af75e1ff-de1f-47d3-861e-7907213feab7",
+              "id": "97d9d5dd-02f6-42c7-ad06-f87bf70aa08d",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1767096300068-hjlysbaag",
+                  "id": "niche-1767099817716-p6s6qse6a",
                   "type": "niche",
                   "children": []
                 },
                 {
-                  "id": "niche-1767096355594-cadisdfso",
+                  "id": "niche-1767099879058-14s542kxt",
                   "type": "niche",
                   "children": [
                     {
-                      "id": "loc-1767096364463-e1uhqgyqr",
+                      "id": "loc-1767099944535-gtl5ktjra",
                       "type": "location",
                       "children": [
                         {
-                          "id": "niche-1767096375518-5y595ijh4",
+                          "id": "niche-1767099958096-tnovnal9g",
                           "type": "niche",
                           "children": []
                         },
                         {
-                          "id": "niche-1767096431094-3tdfzapkc",
+                          "id": "niche-1767100013888-vzlz3kg6e",
                           "type": "niche",
                           "children": [
                             {
-                              "id": "loc-1767096445273-kvtmzu4bx",
+                              "id": "loc-1767100024463-mhz4um7fu",
                               "type": "location",
                               "children": [
                                 {
-                                  "id": "niche-1767096460979-85o3iyvhi",
+                                  "id": "niche-1767100035820-lnmjdqzl3",
                                   "type": "niche",
                                   "children": []
                                 }
@@ -527,6 +599,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1767096264812-ozz9clnj1"
+    "loc-1767099773145-7xrwcuxwh"
   ]
 }

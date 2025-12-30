@@ -1,16 +1,13 @@
 /**
- * Destination Analysis Prompt
+ * Destination Analysis Prompt - Optimized
  * LLM prompt for analyzing GOTO command destinations
- * Synthesizes user's destination prompt with parent location context
  */
 
 import type { NavigationContext, ScenePerspective } from '../../../navigation/types';
 import { mergeDNA } from '../../../hierarchyAnalysis/dnaMerge';
 
 interface DestinationAnalysisInput {
-  /** User's destination prompt (e.g., "the kitchen with a large window") */
   userPrompt: string;
-  /** Context including current niche and parent location */
   context: NavigationContext;
 }
 
@@ -20,76 +17,51 @@ interface DestinationAnalysisInput {
 export function destinationAnalysisPrompt(input: DestinationAnalysisInput): string {
   const { userPrompt, context } = input;
   
-  // Merge parent DNA with current node DNA for complete cascaded values
   const mergedDNA = (context.parentNode?.dna && context.currentNode.dna)
     ? mergeDNA(context.parentNode.dna as any, context.currentNode.dna as any)
     : (context.currentNode.dna || {}) as any;
 
-  return `You are an expert at spatial navigation and architectural analysis.
+  // Build DNA context - only non-empty fields
+  const dnaLines: string[] = [];
+  if (mergedDNA.genre) dnaLines.push(`Genre: ${mergedDNA.genre}`);
+  if (mergedDNA.architectural_tone) dnaLines.push(`Style: ${mergedDNA.architectural_tone}`);
+  if (mergedDNA.cultural_tone) dnaLines.push(`Cultural: ${mergedDNA.cultural_tone}`);
+  if (mergedDNA.mood) dnaLines.push(`Mood: ${mergedDNA.mood}`);
+  if (mergedDNA.materials) dnaLines.push(`Materials: ${mergedDNA.materials}`);
+  if (mergedDNA.palette_bias) dnaLines.push(`Palette: ${mergedDNA.palette_bias}`);
+  if (mergedDNA.atmosphere) dnaLines.push(`Atmosphere: ${mergedDNA.atmosphere}`);
 
-TASK: Analyze a destination within a location and determine how to create a cohesive new space.
+  return `Analyze destination within location.
 
-=== CURRENT CONTEXT ===
-You are currently in: "${context.currentNode.name}" (${context.currentNode.type})
-${context.currentNode.data?.description ? `Current space description: ${context.currentNode.data.description}` : ''}
-${context.currentNode.data?.looks ? `Current space appearance: ${context.currentNode.data.looks}` : ''}
+CURRENT: "${context.currentNode.name}" (${context.currentNode.type})
+${context.currentNode.data?.description ? `Desc: ${context.currentNode.data.description}` : ''}
+PARENT: "${context.parentNode?.name || 'Unknown'}" (${context.parentNode?.type || 'unknown'})
 
-Parent location: "${context.parentNode?.name || 'Unknown'}" (${context.parentNode?.type || 'unknown'})
+INHERITED STYLE:
+${dnaLines.join('\n')}
 
-=== PARENT LOCATION DNA (inherited style) ===
-${mergedDNA.genre ? `Genre: ${mergedDNA.genre}` : ''}
-${mergedDNA.architectural_tone ? `Architectural Tone: ${mergedDNA.architectural_tone}` : ''}
-${mergedDNA.cultural_tone ? `Cultural Tone: ${mergedDNA.cultural_tone}` : ''}
-${mergedDNA.mood ? `Mood: ${mergedDNA.mood}` : ''}
-${mergedDNA.mood_baseline ? `Mood Baseline: ${mergedDNA.mood_baseline}` : ''}
-${mergedDNA.materials_base ? `Materials Base: ${mergedDNA.materials_base}` : ''}
-${mergedDNA.materials ? `Materials: ${mergedDNA.materials}` : ''}
-${mergedDNA.palette_bias ? `Palette Bias: ${mergedDNA.palette_bias}` : ''}
-${mergedDNA.dominant ? `Dominant Colors: ${mergedDNA.dominant}` : ''}
-${mergedDNA.atmosphere ? `Atmosphere: ${mergedDNA.atmosphere}` : ''}
-${mergedDNA.structure ? `
-Structure:
-- Form: ${mergedDNA.structure.form || 'not specified'}
-- Scale: ${mergedDNA.structure.scale || 'not specified'}
-- Functional Type: ${mergedDNA.structure.functionalType || 'not specified'}` : ''}
+DESTINATION: "${userPrompt}"
 
-=== USER'S DESTINATION ===
-"${userPrompt}"
+TASK: Determine:
+1. Name: Concise space name ("The Kitchen", "Wine Cellar")
+2. Perspective: INTERIOR (enclosed, roof) | EXTERIOR (open outdoor) | OPEN-AIR (semi-enclosed, open sky)
+3. SpaceType: room|outdoor|hallway|cellar|attic|balcony|garden|courtyard
+4. IsEnclosed: true (walls+ceiling) | false
+5. AtmosphereHint: Brief atmosphere blending request with parent style
+6. SynthesizedDescription: Rich description combining user request + inherited DNA
 
-=== YOUR TASK ===
-Analyze the user's destination and determine:
+RULES:
+- New space must BELONG to parent (same style, era, materials)
+- Honor user's specific requests, blend with inherited DNA
+- Kitchen in Victorian mansion = Victorian; in medieval castle = medieval
 
-1. **Name**: Extract or create a concise name for this space (e.g., "The Kitchen", "Rooftop Terrace", "Wine Cellar")
-
-2. **Perspective**: What type of space is this?
-   - INTERIOR: Fully enclosed space with roof/ceiling (room, hall, chamber, cave, vehicle interior)
-   - EXTERIOR: Fully open outdoor space (park path, plaza, sculpture garden, forest clearing)
-   - OPEN-AIR: Semi-enclosed with open sky (balcony, terrace, rooftop, covered patio, pergola)
-
-3. **Space Type**: What type of space is this? (room, outdoor, hallway, cellar, attic, balcony, garden, courtyard, etc.)
-
-4. **Is Enclosed**: Does this space have walls and ceiling? (true for most interiors, false for most exteriors)
-
-5. **Atmosphere Hint**: A brief description of the atmosphere that blends the user's request with the parent location's style
-
-6. **Synthesized Description**: A rich description that combines:
-   - The user's specific requests
-   - The parent location's architectural style, materials, and mood
-   - Logical spatial connection to the current location
-
-IMPORTANT RULES:
-- The new space must feel like it BELONGS to the parent location (same architectural style, era, materials)
-- Honor the user's specific requests but blend them with the inherited DNA
-- A kitchen in a Victorian mansion should feel Victorian; in a medieval castle, it should feel medieval
-- Exterior spaces should still match the building's overall style
-
-OUTPUT: Return ONLY valid JSON with this exact structure:
+OUTPUT (pure JSON):
 {
-  "name": "string - concise space name",
-  "perspective": "interior" | "exterior" | "open-air",
-  "spaceType": "string - type of space",
+  "name": "space name",
+  "perspective": "interior|exterior|open-air",
+  "spaceType": "type",
   "isEnclosed": boolean,
-  "atmosphereHint": "string - brief atmosphere description",
-  "synthesizedDescription": "string - rich description blending user prompt with context"
+  "atmosphereHint": "brief description",
+  "synthesizedDescription": "rich description"
 }`;
 }

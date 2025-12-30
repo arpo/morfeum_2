@@ -1,11 +1,6 @@
 /**
- * World Tree Context Prompt Builder
- * 
- * Creates a CONTEXT prompt that is sent to an LLM to generate the actual FLUX image description.
- * This mirrors the approach used in nicheImagePrompt.ts for better quality images.
- * 
- * Step 1: Build detailed context prompt with ALL DNA + composition instructions
- * Step 2: LLM generates the actual FLUX image description (in pipeline)
+ * World Tree Context Prompt Builder - Optimized
+ * Creates CONTEXT prompt for LLM to generate FLUX image description.
  */
 
 import { fluxInstructionsShort } from '../../shared/constants';
@@ -26,92 +21,79 @@ export interface WorldTreeImagePromptParams {
 
 /**
  * Generate CONTEXT prompt for LLM to create FLUX image description
- * This is sent to an LLM which then generates the actual FLUX prompt
  */
 export function worldTreeImagePromptContext(params: WorldTreeImagePromptParams): string {
   const { nodeType, nodeName, dna, originalPrompt, parentChain } = params;
   
-  // Get appropriate composition instructions based on node type
   const compositionInstructions = getCompositionInstructions(nodeType);
   
-  // Build parent context
   const parentContext = parentChain.length > 0
-    ? parentChain.map(p => `${p.type.charAt(0).toUpperCase() + p.type.slice(1)} "${p.name}": ${p.description}`).join('\n')
-    : 'No parent context (this is the root node)';
+    ? parentChain.map(p => `${p.type}: "${p.name}" - ${p.description}`).join('\n')
+    : 'Root node';
 
-  const prompt = `
-You are an expert at creating image prompts for FLUX image generation.
+  // Build DNA section - only include non-empty fields
+  const dnaLines: string[] = [];
+  if (dna.looks) dnaLines.push(`Looks: ${dna.looks}`);
+  if (dna.spatialLayout) dnaLines.push(`Layout: ${dna.spatialLayout}`);
+  if (dna.atmosphere) dnaLines.push(`Atmosphere: ${dna.atmosphere}`);
+  if (dna.colorsAndLighting) dnaLines.push(`Colors: ${dna.colorsAndLighting}`);
+  if (dna.materials) dnaLines.push(`Materials: ${dna.materials}`);
+  if (dna.mood) dnaLines.push(`Mood: ${dna.mood}`);
+  if (dna.sounds) dnaLines.push(`Sounds: ${dna.sounds}`);
+  
+  // Material breakdown
+  const materialLines: string[] = [];
+  if (dna.primary_surfaces) materialLines.push(`Primary: ${dna.primary_surfaces}`);
+  if (dna.secondary_surfaces) materialLines.push(`Secondary: ${dna.secondary_surfaces}`);
+  if (dna.accent_features) materialLines.push(`Accents: ${dna.accent_features}`);
+  
+  // Color palette
+  const colorLines: string[] = [];
+  if (dna.dominant) colorLines.push(`Dominant: ${dna.dominant}`);
+  if (dna.secondary) colorLines.push(`Secondary: ${dna.secondary}`);
+  if (dna.accent) colorLines.push(`Accent: ${dna.accent}`);
+  if (dna.ambient) colorLines.push(`Ambient: ${dna.ambient}`);
+  
+  // Style fields
+  const styleLines: string[] = [];
+  if (dna.genre) styleLines.push(`Genre: ${dna.genre}`);
+  if (dna.architectural_tone) styleLines.push(`ARCHITECTURAL TONE (CRITICAL): ${dna.architectural_tone}`);
+  if (dna.cultural_tone) styleLines.push(`Cultural: ${dna.cultural_tone}`);
+  if (dna.palette_bias) styleLines.push(`Palette: ${dna.palette_bias}`);
 
-USER'S ORIGINAL REQUEST:
-"${originalPrompt}"
+  return `FLUX image prompt expert.
 
-NODE TO VISUALIZE:
-Type: ${nodeType}
-Name: "${nodeName}"
+USER REQUEST: "${originalPrompt}"
 
-PARENT CONTEXT (for world coherence):
+NODE: ${nodeType} "${nodeName}"
+
+PARENT CONTEXT:
 ${parentContext}
 
 ${compositionInstructions}
 
-=== SCENE-SPECIFIC DETAILS (from DNA) ===
-${dna.looks ? `Looks: ${dna.looks}` : ''}
-${dna.spatialLayout ? `Spatial Layout: ${dna.spatialLayout}` : ''}
-${dna.atmosphere ? `Atmosphere: ${dna.atmosphere}` : ''}
-${dna.colorsAndLighting ? `Colors & Lighting: ${dna.colorsAndLighting}` : ''}
-${dna.materials ? `Materials: ${dna.materials}` : ''}
-${dna.mood ? `Mood: ${dna.mood}` : ''}
-${dna.sounds ? `Sounds (for atmosphere hints): ${dna.sounds}` : ''}
+=== DNA ===
+${dnaLines.join('\n')}
 
-Material Surface Breakdown:
-${dna.primary_surfaces ? `Primary Surfaces: ${dna.primary_surfaces}` : ''}
-${dna.secondary_surfaces ? `Secondary Surfaces: ${dna.secondary_surfaces}` : ''}
-${dna.accent_features ? `Accent Features: ${dna.accent_features}` : ''}
-
-Color Palette Breakdown:
-${dna.dominant ? `Dominant Colors: ${dna.dominant}` : ''}
-${dna.secondary ? `Secondary Colors: ${dna.secondary}` : ''}
-${dna.accent ? `Accent Colors: ${dna.accent}` : ''}
-${dna.ambient ? `Ambient Light: ${dna.ambient}` : ''}
-
-${dna.genre ? `Genre: ${dna.genre}` : ''}
-
-${dna.architectural_tone ? `
-ARCHITECTURAL TONE (CRITICAL - MUST MATCH EXACTLY): ${dna.architectural_tone}
-The building/environment MUST reflect this architectural style in ALL visible details (facade, windows, doors, decorative elements, materials, finishes).` : ''}
-
-${dna.cultural_tone ? `Cultural Tone: ${dna.cultural_tone}` : ''}
-${dna.mood_baseline ? `Mood Baseline: ${dna.mood_baseline}` : ''}
-${dna.materials_base ? `Materials Base Style: ${dna.materials_base}` : ''}
-${dna.palette_bias ? `Palette Bias Style: ${dna.palette_bias}` : ''}
+${materialLines.length > 0 ? `Materials: ${materialLines.join(', ')}` : ''}
+${colorLines.length > 0 ? `Colors: ${colorLines.join(', ')}` : ''}
+${styleLines.length > 0 ? styleLines.join('\n') : ''}
 
 ${fluxInstructionsShort}
 
 REQUIREMENTS:
-1. Create a detailed, vivid image prompt that captures ALL the DNA details above
-2. The image should be visually interesting with ASYMMETRIC composition
-3. Include environmental context and atmosphere
-4. Match the architectural_tone EXACTLY in all visible architectural details
-5. Use the color palette breakdown to inform the visual
-6. Describe scene elements in hierarchical layers (foreground → midground → background)
+1. Capture ALL DNA details. ASYMMETRIC composition.
+2. Match architectural_tone in ALL visible elements.
+3. Describe layers: foreground → midground → background
 
-**OUTPUT FORMAT - STRUCTURED JSON:**
-Return a JSON object with these fields:
-
+OUTPUT JSON:
 {
-  "background": "Distant elements: sky, horizon, mountains, environmental context at the far back of the scene",
-  "midground": "Central focus: main structures, primary subject matter, the main scene elements",
-  "foreground": "Closest elements: objects, furniture, details, items near the viewer",
-  "lighting": "Light direction, quality, and how it affects each layer",
-  "atmosphere": "Mood, tone, atmospheric effects, style qualifiers"
+  "background": "Distant elements: sky, horizon, environmental context",
+  "midground": "Central focus: main structures, primary subject",
+  "foreground": "Closest elements: objects, details near viewer",
+  "lighting": "Light direction, quality, layer effects",
+  "atmosphere": "Mood, tone, atmospheric effects"
 }
 
-**LIGHTING DIRECTION:**
-Include how light affects each layer (e.g., "warm sunset light catching the foreground details while the background fades into cool shadow").
-
-OUTPUT: Return ONLY the JSON object, no markdown, no explanations, no code blocks.
-Each field should be rich, specific, and capture the unique character of this ${nodeType}.
-`;
-
-  return prompt;
+Pure JSON only. No markdown. Rich, specific descriptions for this ${nodeType}.`;
 }

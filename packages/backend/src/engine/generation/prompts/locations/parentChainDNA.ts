@@ -1,4 +1,3 @@
-import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS } from '../shared/dnaSchema';
 import { 
   DOMINANT_ELEMENTS_RULES, 
   DOMINANT_ELEMENTS_EXAMPLE,
@@ -37,107 +36,66 @@ export function parentChainDNAGeneration(
   const hasRegion = nodesToGen.includes('region');
   const hasLocation = nodesToGen.includes('location');
 
-  // Build element rules for location section
   const locationElementRules = hasLocation 
     ? `\n${NAVIGABLE_ELEMENTS_RULES}\n\n${DOMINANT_ELEMENTS_RULES}\n` 
     : '';
 
-  return `Generate PARENT DNA working backwards from deepest node.
+  return `Generate PARENT DNA backwards from deepest node.
 
-DEEPEST NODE (established truth):
-${deepestSummary}
+DEEPEST NODE: ${deepestSummary}
 
 PARENTS TO GENERATE:
 ${parentList}
 
 USER: ${originalPrompt}
 
-CRITICAL SCALE RULES (different "looks" per level):
-- HOST: AERIAL/SATELLITE view of entire city/world. NO individual buildings, NO facades, NO close-up details. Focus: skyline, geography, distant landmarks as tiny shapes. Example: "A sprawling coastal metropolis stretching along a curved bay, with clusters of tall buildings in the center and green hills beyond."
-- REGION: ELEVATED STREET view of district/neighborhood. NO specific building facades. Focus: street character, general architectural style, neighborhood atmosphere. Example: "A bohemian district of narrow streets lined with Victorian shopfronts, street art, and market stalls."
-- LOCATION: GROUND LEVEL view of specific building. Show facade, entrance, signage. This is where individual buildings are described.
+SCALE RULES (different view per level):
+- HOST: Aerial/satellite view. NO individual buildings. Focus: skyline, geography, distant landmarks.
+- REGION: Elevated street view. NO specific facades. Focus: street character, neighborhood atmosphere.
+- LOCATION: Ground level, specific building. Show facade, entrance, signage.
 ${locationElementRules}
 OUTPUT (pure JSON):
 {
   ${hasLocation ? `"location": {
-    "name": "Name", "description": "2-3 sentences",
+    "name": "", "description": "2-3 sentences",
     "navigableElements": [${NAVIGABLE_ELEMENTS_EXAMPLE}],
     "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
     "uniqueIdentifiers": ["distinctive"],
     "searchDesc": "75-100 chars", "slug": "kebab-case",
     "dna": {
-      "looks": "GROUND LEVEL: building facade, entrance, signage visible",
-      "colorsAndLighting": "colors and light",
-      "atmosphere": "air, temp, motion",
-      "materials": "facade materials",
-      "mood": "emotional tone",
-      "sounds": "5-10 words",
-      "spatialLayout": "building footprint",
-      "primary_surfaces": "facade materials",
-      "secondary_surfaces": "trim, details",
-      "accent_features": "signage, decorations",
-      "dominant": "primary color",
-      "secondary": "secondary color",
-      "accent": "accent color",
-      "ambient": "light tone",
-      "genre": null,
-      "architectural_tone": "style or null",
-      "cultural_tone": "who uses or null",
-      "palette_bias": "colors or null",
-      "flora_base": "plants or null",
-      "fauna_base": "animals or null"
+      "looks": "GROUND LEVEL: facade, entrance, signage",
+      "colorsAndLighting": "", "atmosphere": "", "materials": "",
+      "mood": "", "sounds": "", "spatialLayout": "",
+      "primary_surfaces": "", "secondary_surfaces": "", "accent_features": "",
+      "dominant": "", "secondary": "", "accent": "", "ambient": "",
+      "genre": null, "architectural_tone": "", "cultural_tone": "",
+      "palette_bias": "", "flora_base": "", "fauna_base": ""
     }
   },` : ''}
   ${hasRegion ? `"region": {
-    "name": "Name", "description": "2-3 sentences about district character",
+    "name": "", "description": "2-3 sentences",
     "searchDesc": "75-100 chars", "slug": "kebab-case",
     "dna": {
-      "looks": "ELEVATED STREET VIEW: district atmosphere, street character, general building styles (NOT specific facades)",
-      "colorsAndLighting": "neighborhood light quality",
-      "atmosphere": "district air and energy",
-      "materials": "common building materials in area",
-      "mood": "neighborhood emotional tone",
-      "sounds": "district ambient sounds",
-      "spatialLayout": "street layout, density",
-      "primary_surfaces": "typical facade materials",
-      "secondary_surfaces": "street surfaces, common features",
-      "accent_features": "neighborhood character elements",
-      "dominant": "primary color",
-      "secondary": "secondary color",
-      "accent": "accent color",
-      "ambient": "light tone",
-      "genre": null,
-      "architectural_tone": "district style or null",
-      "cultural_tone": "who lives here or null",
-      "palette_bias": "colors or null",
-      "flora_base": "plants or null",
-      "fauna_base": "animals or null"
+      "looks": "ELEVATED VIEW: district atmosphere, street character",
+      "colorsAndLighting": "", "atmosphere": "", "materials": "",
+      "mood": "", "sounds": "", "spatialLayout": "",
+      "primary_surfaces": "", "secondary_surfaces": "", "accent_features": "",
+      "dominant": "", "secondary": "", "accent": "", "ambient": "",
+      "genre": null, "architectural_tone": "", "cultural_tone": "",
+      "palette_bias": "", "flora_base": "", "fauna_base": ""
     }
   },` : ''}
   ${hasHost ? `"host": {
-    "name": "Name", "description": "2-3 sentences about entire city/world",
+    "name": "", "description": "2-3 sentences",
     "searchDesc": "75-100 chars", "slug": "kebab-case",
     "dna": {
-      "looks": "AERIAL/SATELLITE VIEW: city skyline, geography, distant landmarks as tiny shapes (NO individual buildings, NO facades, NO close-up details)",
-      "colorsAndLighting": "city-wide light and color from above",
-      "atmosphere": "city-wide air, weather patterns",
-      "materials": "dominant materials visible from distance",
-      "mood": "overall city character",
-      "sounds": "distant city ambience",
-      "spatialLayout": "city layout from above",
-      "primary_surfaces": "rooftops, major roads",
-      "secondary_surfaces": "water, parks, open spaces",
-      "accent_features": "major landmarks visible from distance",
-      "dominant": "primary color from aerial view",
-      "secondary": "secondary color",
-      "accent": "accent color",
-      "ambient": "sky/atmospheric light",
-      "genre": "REQUIRED",
-      "architectural_tone": "REQUIRED",
-      "cultural_tone": "REQUIRED",
-      "palette_bias": "REQUIRED",
-      "flora_base": "REQUIRED",
-      "fauna_base": "REQUIRED"
+      "looks": "AERIAL VIEW: skyline, geography (NO individual buildings)",
+      "colorsAndLighting": "", "atmosphere": "", "materials": "",
+      "mood": "", "sounds": "", "spatialLayout": "",
+      "primary_surfaces": "", "secondary_surfaces": "", "accent_features": "",
+      "dominant": "", "secondary": "", "accent": "", "ambient": "",
+      "genre": "REQUIRED", "architectural_tone": "REQUIRED", "cultural_tone": "REQUIRED",
+      "palette_bias": "REQUIRED", "flora_base": "REQUIRED", "fauna_base": "REQUIRED"
     }
   }` : ''}
 }`;
