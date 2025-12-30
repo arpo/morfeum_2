@@ -93,9 +93,24 @@ REQUIREMENTS:
 3. Include environmental context and atmosphere
 4. Match the architectural_tone EXACTLY in all visible architectural details
 5. Use the color palette breakdown to inform the visual
+6. Describe scene elements in hierarchical layers (foreground → midground → background)
 
-OUTPUT: Return ONLY a detailed image prompt for FLUX, no JSON, no explanations.
-The prompt should be rich, specific, and capture the unique character of this ${nodeType}.
+**OUTPUT FORMAT - STRUCTURED JSON:**
+Return a JSON object with these fields:
+
+{
+  "background": "Distant elements: sky, horizon, mountains, environmental context at the far back of the scene",
+  "midground": "Central focus: main structures, primary subject matter, the main scene elements",
+  "foreground": "Closest elements: objects, furniture, details, items near the viewer",
+  "lighting": "Light direction, quality, and how it affects each layer",
+  "atmosphere": "Mood, tone, atmospheric effects, style qualifiers"
+}
+
+**LIGHTING DIRECTION:**
+Include how light affects each layer (e.g., "warm sunset light catching the foreground details while the background fades into cool shadow").
+
+OUTPUT: Return ONLY the JSON object, no markdown, no explanations, no code blocks.
+Each field should be rich, specific, and capture the unique character of this ${nodeType}.
 `;
 
   return prompt;

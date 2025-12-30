@@ -7,7 +7,11 @@ import type { StructureAnalysis, NavigationContext } from '../../types';
 import type { LayerType } from '../../../hierarchyAnalysis/types';
 import { buildNode } from '../../../generation/shared/nodeBuilder';
 import { generateLocationImage } from '../../../generation/shared/imageGeneration';
-import { generateImagePromptForNode } from '../../../generation/shared/imagePromptGeneration';
+import { 
+  generateStructuredImagePrompt, 
+  assembleImagePrompt 
+} from '../../../generation/shared/imagePromptGeneration';
+import type { ImagePromptStructure } from '../../../generation/shared/imagePromptTypes';
 import { NICHE_CAMERA } from '../../../generation/prompts/shared/cameraConfig';
 import { PipelineHelper } from '../../../pipelines/shared/pipelineHelpers';
 import mediaService from '../../../../services/media/mediaService';
@@ -37,6 +41,8 @@ export interface NodeBuildingInput {
   parentDNA: any;
   imageUrl: string;
   imagePrompt: string;
+  /** Structured prompt for storage and reuse */
+  promptStructure?: ImagePromptStructure;
   shouldGenerateImage: boolean;
   helper: PipelineHelper | null;
 }
@@ -45,14 +51,27 @@ export interface NodeBuildingOutput {
   node: any;
   imageUrl: string;
   imagePrompt: string;
+  /** Structured prompt for storage and reuse */
+  promptStructure?: ImagePromptStructure;
+}
+
+/**
+ * Result from generating structured image prompt
+ */
+export interface ImagePromptResult {
+  /** Assembled string prompt */
+  prompt: string;
+  /** Structured prompt for storage */
+  structure: ImagePromptStructure;
 }
 
 /**
  * Generate image prompt for node using LLM
+ * Returns both structured format and assembled string
  */
 export async function generateNodeImagePrompt(
   input: ImagePromptInput
-): Promise<string> {
+): Promise<ImagePromptResult> {
   const {
     structureAnalysis,
     dna,
@@ -73,11 +92,12 @@ export async function generateNodeImagePrompt(
   // Map open-air to exterior for image generation (which only supports interior/exterior)
   const imageGenPerspective: 'interior' | 'exterior' = perspective === 'open-air' ? 'exterior' : perspective;
   
-  const imagePrompt = await generateImagePromptForNode(apiKey, {
+  // Generate structured prompt
+  const structure = await generateStructuredImagePrompt(apiKey, {
     structureAnalysis,
     dna: dna || {},
     parentDNA: parentDNA || undefined,
-    surroundingsDNA: surroundingsDNA || undefined, // For window views - shows world DNA, not interior concept
+    surroundingsDNA: surroundingsDNA || undefined,
     userPrompt,
     nodeType: nodeType as LayerType,
     perspective: imageGenPerspective,
@@ -86,14 +106,20 @@ export async function generateNodeImagePrompt(
       name: context.parentNode.name,
       description: context.parentNode.data?.description || ''
     }] : [],
-    includeCurrentNodeDNA: false // NEVER include current niche DNA in /goto image generation
+    includeCurrentNodeDNA: false
+  });
+
+  // Assemble into string (Morfeum style added later by imageGeneration.ts)
+  const prompt = assembleImagePrompt(structure, {
+    includeNoCreatures: false,
+    includeMorfeumStyle: false
   });
 
   if (helper) {
-    helper.completeStage('image_prompt', 'Image prompt generated', { imagePrompt });
+    helper.completeStage('image_prompt', 'Image prompt generated', { imagePrompt: prompt });
   }
 
-  return imagePrompt;
+  return { prompt, structure };
 }
 
 /**
@@ -132,6 +158,7 @@ export function buildFinalNode(
     parentDNA,
     imageUrl,
     imagePrompt,
+    promptStructure,
     shouldGenerateImage,
     helper
   } = input;
@@ -153,6 +180,7 @@ export function buildFinalNode(
       url: imageUrl,
       metadata: {
         prompt: imagePrompt,
+        promptStructure, // Store structured prompt for reuse
         model: 'FLUX',
       },
       entityRefs: [] // Will be updated after node is created
@@ -215,6 +243,7 @@ export function buildFinalNode(
   return {
     node,
     imageUrl,
-    imagePrompt
+    imagePrompt,
+    promptStructure
   };
 }

@@ -6,6 +6,7 @@
 import mediaService from '../../../services/media/mediaService';
 import type { TreeNode } from '../../../services/worldTree/types';
 import type { HierarchyNodeInfo } from '../../generation/prompts/locations/parentChainDNA';
+import type { ImagePromptStructure } from '../../generation/shared/imagePromptTypes';
 
 /**
  * Clean unwanted DNA fields that LLM sometimes adds
@@ -126,7 +127,8 @@ export function buildHierarchyStructure(
 export function assignMediaToTree(
   tree: TreeNode,
   imageUrl: string,
-  imagePrompt: string
+  imagePrompt: string,
+  promptStructure?: ImagePromptStructure
 ): TreeNode {
   function findDeepestNode(node: TreeNode): TreeNode {
     if (!node.children || node.children.length === 0) {
@@ -137,12 +139,13 @@ export function assignMediaToTree(
 
   const deepestNode = findDeepestNode(tree);
 
-  // Create media entry
+  // Create media entry with structured prompt for reuse
   const media = mediaService.createMedia({
     type: 'image',
     url: imageUrl,
     metadata: {
       prompt: imagePrompt,
+      promptStructure, // Store structured prompt for character placement, regeneration, etc.
       model: 'FLUX',
     },
     entityRefs: [deepestNode.id]

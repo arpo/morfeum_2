@@ -8,6 +8,11 @@
  * Takes structure analysis + DNA + parent DNA and generates creative image prompts.
  * All analysis (form, materials, scale, etc.) is ALREADY DONE by structureAnalysis.ts
  * This module just creates an image prompt from that pre-analyzed data.
+ * 
+ * Returns STRUCTURED output (ImagePromptStructure) for:
+ * - Layer-based scene composition
+ * - Character placement in specific layers
+ * - Reusable scene generation
  */
 
 import { generateText } from '../../../services/mzoo';
@@ -19,6 +24,8 @@ import {
   buildShapeConstraints, 
   buildExteriorViewConstraint 
 } from './imagePromptHelpers';
+import type { ImagePromptStructure } from './imagePromptTypes';
+import { assembleImagePrompt } from './imagePromptAssembler';
 
 export interface ImagePromptGenerationInput {
   /** Structure analysis result (form, scale, navigableElements, etc.) */
@@ -263,12 +270,25 @@ ${furnishingContext}
 ${fluxInstructionsShort}
 
 YOUR TASK:
-Create a detailed, vivid image prompt for FLUX that:
-1. Respects the STRUCTURE data (form, scale, orientation, functional type)
-2. Uses ALL the DNA details (materials, colors, atmosphere, mood)
-3. Includes ALL required elements and navigable elements
-4. Creates an ASYMMETRIC, visually interesting composition
-5. Matches the architectural_tone and cultural_tone
+Create a structured image prompt for FLUX with SEPARATE sections for each layer.
+
+**OUTPUT FORMAT - STRUCTURED JSON:**
+Return a JSON object with these fields:
+
+{
+  "background": "Distant elements: sky, horizon, mountains, environmental context at the far back of the scene",
+  "midground": "Central focus: main structures, primary subject matter, the main scene elements",
+  "foreground": "Closest elements: objects, furniture, details, items near the viewer",
+  "lighting": "Light direction, quality, and how it affects each layer",
+  "atmosphere": "Mood, tone, atmospheric effects, style qualifiers"
+}
+
+**REQUIREMENTS:**
+1. Respect the STRUCTURE data (form, scale, orientation, functional type)
+2. Use ALL the DNA details (materials, colors, atmosphere, mood)
+3. Include ALL required elements and navigable elements
+4. Create an ASYMMETRIC, visually interesting composition
+5. Match the architectural_tone and cultural_tone
 
 **CRITICAL FOR INTERIORS - MATERIAL PRIORITY:**
 For INTERIOR spaces, the scene-specific DNA fields take PRIORITY over inherited/cascading fields:
@@ -277,23 +297,107 @@ For INTERIOR spaces, the scene-specific DNA fields take PRIORITY over inherited/
 - The parent's "architectural_tone" and "materials_base" may reference the EXTERIOR landscape - do NOT use landscape materials for interior walls
 - Interior walls are made of BUILDING materials (composites, metals, polished surfaces), NOT surrounding landscape (rocks, sand)
 
-OUTPUT: Return ONLY a detailed image prompt for FLUX, no JSON, no explanations.
-The prompt should be rich, specific, and capture the unique character of this ${nodeType}.
+**LIGHTING DIRECTION:**
+Include how light affects each layer (e.g., "warm sunset light catching the foreground details while the background fades into cool shadow").
+
+OUTPUT: Return ONLY the JSON object, no markdown, no explanations, no code blocks.
+Each field should be rich, specific, and capture the unique character of this ${nodeType}.
 `;
 }
 
 /**
- * Generate an LLM-powered image prompt
- * 
- * This is the UNIFIED function used by both spawn and navigation pipelines.
- * It takes structure analysis + DNA + parent DNA and generates a creative image prompt.
+ * Parse LLM JSON response into ImagePromptStructure
+ * Handles both clean JSON and JSON with surrounding text
  */
-export async function generateImagePromptForNode(
+function parseStructuredResponse(text: string): Partial<ImagePromptStructure> {
+  // Try to extract JSON from the response
+  let jsonStr = text.trim();
+  
+  // Remove markdown code blocks if present
+  if (jsonStr.startsWith('```json')) {
+    jsonStr = jsonStr.replace(/^```json\s*/, '').replace(/\s*```$/, '');
+  } else if (jsonStr.startsWith('```')) {
+    jsonStr = jsonStr.replace(/^```\s*/, '').replace(/\s*```$/, '');
+  }
+  
+  // Try to find JSON object in the text
+  const jsonMatch = jsonStr.match(/\{[\s\S]*\}/);
+  if (jsonMatch) {
+    jsonStr = jsonMatch[0];
+  }
+  
+  try {
+    return JSON.parse(jsonStr);
+  } catch {
+    // Fallback: treat entire response as a single description
+    return {
+      background: '',
+      midground: text,
+      foreground: '',
+      lighting: '',
+      atmosphere: ''
+    };
+  }
+}
+
+/**
+ * Build constraints array based on input analysis
+ */
+function buildConstraints(input: ImagePromptGenerationInput): string[] {
+  const constraints: string[] = [];
+  
+  const isOpenSky = input.structureAnalysis?.structure?.roofType === 'open-sky';
+  
+  // Open-sky constraint
+  if (isOpenSky) {
+    constraints.push('[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]');
+  }
+  
+  // Shape constraints for non-rectangular dominant elements
+  const dominantElements = input.structureAnalysis?.structure?.dominantElements;
+  if (dominantElements && dominantElements.length > 0) {
+    const shapeConstraints = buildShapeConstraints(dominantElements);
+    if (shapeConstraints) {
+      constraints.push(shapeConstraints);
+    }
+  }
+  
+  // Exterior view constraint for interior spaces with windows/openings
+  const surroundings = input.surroundingsDNA || input.parentDNA;
+  const hasOpenings = input.structureAnalysis?.structure?.openings && 
+                      input.structureAnalysis.structure.openings !== 'none';
+  
+  if (input.perspective === 'interior' && surroundings && hasOpenings) {
+    const genre = surroundings.genre || '';
+    const architecturalTone = surroundings.architectural_tone || '';
+    const paletteBias = surroundings.palette_bias || '';
+    
+    if (genre || architecturalTone) {
+      const exteriorConstraint = buildExteriorViewConstraint(genre, architecturalTone, paletteBias);
+      constraints.push(exteriorConstraint);
+    }
+  }
+  
+  return constraints;
+}
+
+/**
+ * Generate a STRUCTURED image prompt (ImagePromptStructure)
+ * 
+ * Returns structured format for:
+ * - Layer-based scene composition (background → midground → foreground)
+ * - Character placement in specific layers
+ * - Reusable scene generation
+ * 
+ * @param apiKey - MZOO API key
+ * @param input - Image prompt generation input
+ * @returns Structured image prompt with separate layers
+ */
+export async function generateStructuredImagePrompt(
   apiKey: string,
   input: ImagePromptGenerationInput
-): Promise<string> {
+): Promise<ImagePromptStructure> {
   // CRITICAL: Override perspective to 'exterior' when roofType is 'open-sky'
-  // This prevents "interior shot" + "open-sky" contradiction that causes cave-like images
   const isOpenSky = input.structureAnalysis?.structure?.roofType === 'open-sky';
   if (isOpenSky && input.perspective === 'interior') {
     input.perspective = 'exterior';
@@ -311,43 +415,53 @@ export async function generateImagePromptForNode(
     throw new Error(result.error || 'Failed to generate image prompt');
   }
 
-  let finalPrompt = result.data.text.trim();
-
-  // CRITICAL: Append open-sky constraint DIRECTLY to FLUX prompt
-  // The LLM often ignores the guidance due to overwhelming "cave" references in DNA
-  // By appending directly, FLUX receives the instruction regardless of LLM behavior
-  if (isOpenSky) {
-    finalPrompt += '\n[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]';
-  }
-
-  // CRITICAL: Append shape constraints for non-rectangular dominant elements
-  // FLUX tends to default to rectangular buildings, so we explicitly enforce curved shapes
-  const dominantElements = input.structureAnalysis?.structure?.dominantElements;
-  if (dominantElements && dominantElements.length > 0) {
-    const shapeConstraints = buildShapeConstraints(dominantElements);
-    if (shapeConstraints) {
-      finalPrompt += '\n' + shapeConstraints;
-    }
-  }
-
-  // CRITICAL: Append exterior view constraint for interior spaces with windows/openings
-  // FLUX tends to default to generic pastoral/forest views through windows
-  // This ensures the exterior matches the world DNA (e.g., post-apocalyptic wasteland, not green forest)
-  const surroundings = input.surroundingsDNA || input.parentDNA;
-  const hasOpenings = input.structureAnalysis?.structure?.openings && 
-                      input.structureAnalysis.structure.openings !== 'none';
+  // Parse the structured JSON response
+  const parsed = parseStructuredResponse(result.data.text);
   
-  if (input.perspective === 'interior' && surroundings && hasOpenings) {
-    const genre = surroundings.genre || '';
-    const architecturalTone = surroundings.architectural_tone || '';
-    const paletteBias = surroundings.palette_bias || '';
-    
-    // Only add constraint if we have meaningful surroundings info
-    if (genre || architecturalTone) {
-      const exteriorConstraint = buildExteriorViewConstraint(genre, architecturalTone, paletteBias);
-      finalPrompt += '\n' + exteriorConstraint;
-    }
-  }
-
-  return finalPrompt;
+  // Build constraints from input analysis
+  const constraints = buildConstraints(input);
+  
+  // Construct full structure
+  const structure: ImagePromptStructure = {
+    background: parsed.background || '',
+    midground: parsed.midground || '',
+    foreground: parsed.foreground || '',
+    lighting: parsed.lighting || '',
+    atmosphere: parsed.atmosphere || '',
+    constraints,
+    negatives: [], // Will be populated by assembler based on options
+    camera: parsed.camera,
+    lens: parsed.lens
+  };
+  
+  return structure;
 }
+
+/**
+ * Generate an LLM-powered image prompt (STRING format for backward compatibility)
+ * 
+ * This is the UNIFIED function used by both spawn and navigation pipelines.
+ * It takes structure analysis + DNA + parent DNA and generates a creative image prompt.
+ * 
+ * NOTE: Internally uses generateStructuredImagePrompt and assembles the result.
+ * For new code, prefer using generateStructuredImagePrompt directly.
+ */
+export async function generateImagePromptForNode(
+  apiKey: string,
+  input: ImagePromptGenerationInput
+): Promise<string> {
+  // Generate structured prompt
+  const structure = await generateStructuredImagePrompt(apiKey, input);
+  
+  // Assemble into string (without Morfeum style - that's added later by applyMorfeumStyle)
+  const prompt = assembleImagePrompt(structure, {
+    includeNoCreatures: false,  // Added later by imageGeneration.ts
+    includeMorfeumStyle: false  // Added later by applyMorfeumStyle
+  });
+  
+  return prompt;
+}
+
+// Re-export types and utilities for consumers
+export type { ImagePromptStructure } from './imagePromptTypes';
+export { assembleImagePrompt } from './imagePromptAssembler';
