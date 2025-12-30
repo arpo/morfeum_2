@@ -1,301 +1,519 @@
 {
   "nodes": {
-    "loc-1767088812477-gml74skmk": {
-      "id": "loc-1767088812477-gml74skmk",
+    "loc-1767096264812-ozz9clnj1": {
+      "id": "loc-1767096264812-ozz9clnj1",
       "type": "host",
-      "name": "Urban Metropolis",
+      "name": "The Shattered Plains",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: City skyline, geography, distant landmarks as tiny shapes. Focus on the vastness of the urban landscape, the density of buildings, and the distant glow of lights.",
-        "colorsAndLighting": "City-wide light and color from above, a tapestry of artificial lights glowing against the dark sky, interspersed with the occasional park or body of water.",
-        "atmosphere": "City-wide air, weather patterns. A generally clear, cool evening with a slight urban haze.",
-        "materials": "Dominant materials visible from distance, largely concrete, glass, and steel in the building density, with patches of green from parks and blue from water.",
-        "mood": "Overall city character, energetic, ceaseless, and awe-inspiring in its scale.",
-        "sounds": "Distant city ambience, a low, continuous hum of activity and distant sirens.",
-        "primary_surfaces": "Rooftops of varied heights and materials, major illuminated roads.",
-        "secondary_surfaces": "Parks, rivers, or other open green/blue spaces.",
-        "accent_features": "Iconic distant landmarks, major bridges, or unusually dense clusters of lights.",
-        "dominant": "Deep indigo/black (night sky)",
-        "secondary": "Golden yellow/orange (city lights)",
-        "accent": "Silver/white (brightest lights, distant water)",
-        "ambient": "Dark sky with scattered city glow",
-        "genre": "Sci-Fi",
-        "architectural_tone": "Modernist and Postmodernist",
-        "cultural_tone": "Cosmopolitan and Globalized",
-        "palette_bias": "Dark blues, purples, and grays with vibrant artificial light highlights",
-        "flora_base": "Distant parks and green belts",
-        "fauna_base": "None visible from this scale"
+        "looks": "AERIAL/SATELLITE VIEW: A desolate expanse of rust-colored earth and sand, broken by the colossal, jagged silhouettes of immense, decaying industrial complexes. Distant mountains appear as smudged, darker shapes on the horizon. No individual buildings or close-up details are visible, only the immense scale of the ruined landscape.",
+        "colorsAndLighting": "Harsh, sun-bleached daylight casting long, stark shadows across the desolate terrain. Dominated by muted earth tones, rust-reds from the ruins, and a hazy, dust-filtered sky.",
+        "atmosphere": "A dry, scorching heat permeates the air, carrying fine particulate matter that creates a constant, hazy haze. Occasional fierce dust devils swirl across the plains.",
+        "materials": "Dominant materials visible from this distance are vast expanses of heavily rusted metal, cracked and weathered concrete, and dry, sparse earth.",
+        "mood": "A sense of profound emptiness, immense scale of destruction, and the enduring struggle for survival in a post-apocalyptic world.",
+        "sounds": "The low, mournful howl of the wind across the barren plains, punctuated by the distant groan of stressed metal structures.",
+        "primary_surfaces": "Vast stretches of cracked, dry earth and rust-colored metal plains.",
+        "secondary_surfaces": "Infrequent, parched riverbeds and small, hardy scrublands.",
+        "accent_features": "The colossal, almost mountain-like forms of the decaying industrial complexes.",
+        "dominant": "Rust-red",
+        "secondary": "Ochre",
+        "accent": "Dusty grey",
+        "ambient": "Hazy, sun-bleached sky",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "Massive Industrial Decay",
+        "cultural_tone": "Scavenger Civilization",
+        "palette_bias": "Desaturated Earth Tones",
+        "flora_base": "Drought-resistant scrub and hardy weeds",
+        "fauna_base": "Scavenging creatures and mutated insects"
       },
-      "description": "A vibrant and diverse city, characterized by its blend of old and new architecture, with a lively atmosphere and illuminated streets. It is a sprawling urban center that never sleeps.",
-      "searchDesc": "Sprawling metropolis, diverse architecture, illuminated streets, vibrant nightlife, blend of old and new.",
-      "slug": "urban-metropolis",
+      "description": "A vast, arid wasteland stretching to the horizon, punctuated by the skeletal remains of colossal, rusted industrial structures. Scarce, hardy vegetation clings to life amidst the wreckage, and the perpetual dust storms paint the sky in muted, ochre tones.",
+      "searchDesc": "Mad Max inspired wasteland with massive, decaying industrial ruins.",
+      "slug": "the-shattered-plains",
       "structure": {
-        "spatialLayout": "City layout from above, a dense core of skyscrapers surrounded by a spread of lower buildings, with major arterial routes cutting through."
-      },
-      "primaryMedia": "media-1767090406108-rnxkwa148"
-    },
-    "3e8932c8-66ab-45fd-a3b3-7c67fb1f7d40": {
-      "id": "3e8932c8-66ab-45fd-a3b3-7c67fb1f7d40",
-      "type": "region",
-      "name": "Central Plaza District",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "ELEVATED STREET VIEW: District atmosphere, street character, general building styles (NOT specific facades). Focus on the interplay of brick structures and modern elements, with the vast glass canopy dominating the overhead view.",
-        "colorsAndLighting": "Neighborhood light quality, a mix of warm uplights on brick facades and the cool, deep blue of the canopy's twilight reflection.",
-        "atmosphere": "District air and energy, a vibrant and social environment with the hum of activity beneath the canopy.",
-        "materials": "Common building materials in the area, primarily textured brick for older structures and reflective glass and metal for the canopy and modern additions.",
-        "mood": "Neighborhood emotional tone, inviting and awe-inspiring, with a sense of urban spectacle and social gathering.",
-        "sounds": "District ambient sounds, a low murmur of conversation, distant traffic, and the faint echo of footsteps on pavement.",
-        "primary_surfaces": "Textured brick facades of historical buildings.",
-        "secondary_surfaces": "Paved plaza grounds, glass canopy surface, metallic walkways.",
-        "accent_features": "The grand glass canopy, the stylized elephant mural, and the small trees with bright red foliage.",
-        "dominant": "Deep blue (from canopy reflection)",
-        "secondary": "Warm terracotta (from brick buildings)",
-        "accent": "Vibrant purple (from mural spotlights)",
-        "ambient": "Cool twilight sky",
-        "genre": null,
-        "architectural_tone": "Modern commercial with historical brick elements",
-        "cultural_tone": "Urban social hub",
-        "palette_bias": "Cool blues and warm earth tones with pops of vibrant artificial color",
-        "flora_base": "Lush green bushes, small trees with bright red foliage",
-        "fauna_base": null
-      },
-      "description": "A lively urban hub featuring historical brick buildings and a central plaza, all sheltered by a grand glass canopy. Modern connecting structures hint at the city's expansive reach.",
-      "searchDesc": "Urban plaza district with historical brick buildings under a glass canopy, vibrant social hub.",
-      "slug": "central-plaza-district",
-      "structure": {
-        "spatialLayout": "Street layout, density, characterized by an open central plaza surrounded by buildings, with interconnected walkways."
+        "spatialLayout": "An immense, relatively flat plain broken by scattered, gargantuan industrial ruins. Roads are almost indistinguishable from natural, cracked earth from this height."
       }
     },
-    "03819cb9-350b-4994-9efd-36bdd18f8e18": {
-      "id": "03819cb9-350b-4994-9efd-36bdd18f8e18",
-      "type": "location",
-      "name": "The Grand Marque Museum",
+    "27e4a0a3-41e4-4df3-a4da-0368b9ce0024": {
+      "id": "27e4a0a3-41e4-4df3-a4da-0368b9ce0024",
+      "type": "region",
+      "name": "Region",
       "spaceType": "exterior",
-      "description": "A striking modern edifice dedicated to automotive history, featuring sweeping glass facades and a sleek, metallic exterior. This museum showcases a curated collection of classic and contemporary vehicles, drawing enthusiasts from across the district.",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "af75e1ff-de1f-47d3-861e-7907213feab7": {
+      "id": "af75e1ff-de1f-47d3-861e-7907213feab7",
+      "type": "location",
+      "name": "The Rusting Shell",
+      "spaceType": "exterior",
       "dna": {
-        "looks": "A large, rectangular structure with a dominant sweeping glass facade that reflects the surrounding plaza and canopy. Polished metallic panels clad the upper sections, interspersed with sharp, geometric lines. The building appears modern and sophisticated, designed to impress.",
-        "colorsAndLighting": "The deep blue of the overhead canopy reflects intensely on the building's glass and metallic surfaces. Warm uplighting illuminates the base of the structure, contrasting with the cooler, almost ethereal glow emanating from within the museum.",
-        "atmosphere": "The air here is crisp and clean, carrying a faint scent of polished metal and wax. There's a hushed reverence within the museum, punctuated by the soft hum of climate control and the distant murmur of visitors. The atmosphere is one of curated awe and admiration.",
-        "materials": "Primary materials include vast expanses of polished glass and gleaming, brushed metallic sheeting. The base features smooth, dark concrete, providing a sturdy contrast to the lighter, reflective upper elements. Textures are predominantly smooth and cool.",
-        "mood": "Inviting and awe-inspiring, fostering a sense of wonder and appreciation for design and engineering. The museum evokes a feeling of sophisticated urban spectacle.",
-        "sounds": "Low hum, hushed voices, soft footsteps, distant traffic murmur",
-        "primary_surfaces": "Polished glass, reflective metallic panels",
-        "secondary_surfaces": "Smooth concrete base, brushed metal accents",
-        "accent_features": "Angled glass supports, illuminated chrome signage",
-        "dominant": "Deep blue (reflections)",
-        "secondary": "Silver and polished chrome (cladding and accents)",
-        "accent": "Warm yellow and orange (uplighting, interior displays)",
-        "ambient": "Cool, diffused light with strategic warm highlights",
+        "looks": "The Rusting Shell is a massive, sprawling industrial complex. Its primary form is irregular, composed of interlocking modular sections that have succumbed to time and the elements. Towering structures and sprawling platforms are visible, dominated by exposed skeletal frameworks and large, gaping openings.",
+        "colorsAndLighting": "Dominated by a palette of rust-reds and muted greys. Sunlight, where it penetrates, casts long, harsh shadows through the numerous openings, creating a stark and dramatic interplay of light and dark.",
+        "atmosphere": "The air is thick with the scent of decay and mineral dust. A chilling breeze often whistles through the skeletal structure, carrying the whispers of the wasteland. The temperature is cool, often mirroring the harsh external conditions.",
+        "materials": "The predominant materials are heavily weathered, rusted steel and decaying corrugated metal sheeting. Patches of crumbling concrete and exposed structural beams are also evident, all contributing to a sense of profound dilapidation.",
+        "mood": "Evokes feelings of desolation, lost grandeur, and a haunting stillness. It is a monument to industrial decline and the relentless power of nature.",
+        "sounds": "Wind, creaking metal, distant rustling, dripping water, echoes.",
+        "primary_surfaces": "Heavily rusted corrugated metal, exposed steel girders.",
+        "secondary_surfaces": "Cracked concrete, shattered glass, dirt, debris.",
+        "accent_features": "Large, gaping holes in walls and roof, dangling chains, remnants of machinery.",
+        "dominant": "Rust-red (covering large structural elements)",
+        "secondary": "Muted grey (weathered metal and concrete)",
+        "accent": "Dark brown/black (shadows, deep decay)",
+        "ambient": "Dim, with shafts of harsh sunlight.",
         "genre": null,
-        "architectural_tone": "Modern commercial with striking geometric forms and extensive use of glass",
-        "cultural_tone": "Enthusiast hub, historical preservation, public spectacle",
-        "palette_bias": "Cool blues, silver, and stark white with occasional vibrant reds or yellows from vehicle paint",
+        "architectural_tone": "Massive industrial decay with exposed skeletal framework.",
+        "cultural_tone": "Represents forgotten industry and post-apocalyptic survival, a shelter or a relic.",
+        "palette_bias": "Earth tones, metallic hues, muted colors.",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "searchDesc": "A grand modern car museum with glass and metal facades, showcasing automotive history in the Central Plaza District.",
-      "slug": "the-grand-marque-museum",
+      "description": "A vast, abandoned factory, its metal skeleton exposed to the harsh elements, surrounded by the desolate wasteland. EXTERIOR VIEW.",
+      "searchDesc": "Vast, abandoned industrial factory complex with skeletal metal framework, weathered surfaces, and gaping openings.",
+      "slug": "the-rusting-shell",
+      "structure": {
+        "spatialLayout": "The space is vast and cavernous, with a sprawling, irregular layout that offers significant depth and a maze-like quality. Large open areas are punctuated by smaller, debris-filled rooms and corridors."
+      },
       "navigableElements": [
         {
           "type": "door",
-          "position": "center-foreground",
-          "description": "The main entrance, leading into the museum's grand foyer. Through the open doors, polished floors and glimpses of gleaming vehicles are visible."
+          "position": "center-front",
+          "description": "Leads into the main factory interior, a cavernous space."
         },
         {
           "type": "passage",
-          "position": "right-midground",
-          "description": "A wide, open archway connecting to an outdoor display area, revealing more cars bathed in plaza light."
+          "position": "left-side",
+          "description": "An open breach in the wall leading to a dark, debris-strewn workshop area."
         },
         {
-          "type": "window",
-          "position": "left-background",
-          "description": "Large, rectangular windows offering a clear view into an exhibition hall, displaying vehicles and informational placards."
+          "type": "path",
+          "position": "right-side",
+          "description": "A cracked asphalt path winding around the exterior, potentially leading to other access points or the rear of the structure."
         }
       ],
       "dominantElements": [
-        "building: shape=rectangular, orientation=sprawling, scale=large, style=modern-commercial, surfaces=glass-metallic, openings=large-glass, interior_materials=polished-concrete|dark-tile|high-ceiling, enterable=yes, internal_atmosphere=bright-clinical"
+        "factory: shape=irregular-modular, orientation=sprawling, scale=massive, style=industrial, surfaces=weathered-metal, openings=open-passages, interior_materials=corrugated-metal|concrete|exposed-beams, enterable=yes, internal_atmosphere=industrial"
       ],
       "uniqueIdentifiers": [
-        "Sweeping glass facade with angled supports",
-        "Prominent, polished chrome signage",
-        "Outdoor display area with sculpted planters",
-        "Reflective metallic cladding on upper levels"
+        "exposed steel girders",
+        "shattered windows",
+        "large ventilation shafts",
+        "rusted corrugated metal sheeting",
+        "general sense of abandonment"
       ],
-      "structure": {
-        "spatialLayout": "A predominantly rectangular footprint that expands horizontally, featuring a grand, open foyer and large, well-lit exhibition halls. The scale feels expansive and designed for spacious display."
-      },
-      "imageUrl": "https://v3b.fal.media/files/b/0a885f3b/97iDFNf_HS7_eSE_pOMa7.jpg",
-      "primaryMedia": "media-1767094360520-syu3d3d67"
+      "primaryMedia": "media-1767096281146-h5f8iogls"
     },
-    "niche-1767094706792-i6h2kzdlz": {
-      "id": "niche-1767094706792-i6h2kzdlz",
+    "niche-1767096300068-hjlysbaag": {
+      "id": "niche-1767096300068-hjlysbaag",
       "type": "niche",
-      "name": "Grand Marque Museum",
+      "name": "factory",
       "spaceType": "interior",
       "dna": {
-        "looks": "Vast, brightly lit exhibition halls filled with meticulously maintained cars of all eras. Modern architectural lines are softened by exposed, aged brickwork on accent walls. Elevated walkways and viewing platforms offer different perspectives of the collection.",
-        "colorsAndLighting": "Dominated by the cool, deep blues reflecting from a massive overhead glass canopy, punctuated by the warm terracotta hues of exposed brick. Spotlights highlight the vehicles with vibrant, artificial colors, creating dynamic contrasts.",
-        "atmosphere": "A lively, social gathering space with a palpable sense of awe and urban spectacle. The air is clean and conditioned, with a low hum of excited chatter and the subtle, ambient sounds of the museum.",
-        "materials": "Polished chrome and automotive paint finishes of the cars are primary. Secondary materials include textured brick walls, smooth concrete floors, brushed metal accents, and large expanses of reflective glass.",
-        "mood": "Inviting and awe-inspiring, a place of shared fascination and urban excitement. It evokes a sense of wonder at human ingenuity and design, blended with the comfortable energy of a popular social destination.",
-        "sounds": "Polished chrome gleam, engine purrs, futuristic hums, ambient chatter, soft footsteps, distant announcements.",
-        "spatialLayout": "Expansive, multi-level halls with open sightlines. Areas are clearly defined for different eras or types of vehicles, with ample circulation space.",
-        "primary_surfaces": "Polished car bodies, smooth concrete floors, exposed brick walls.",
-        "secondary_surfaces": "Brushed metal railings, glass display cases, digital screens, ceiling grids.",
-        "accent_features": "Spotlighted concept cars, interactive timelines, large-scale vehicle schematics, stylized automotive artwork.",
-        "dominant": "Deep blue",
-        "secondary": "Warm terracotta",
-        "accent": "Vibrant artificial colors (e.g., electric green, neon pink)",
-        "ambient": "Cool twilight sky reflected overhead, with warm uplighting on brickwork.",
-        "genre": "Sci-Fi",
-        "architectural_tone": "Modern commercial with historical brick elements",
-        "cultural_tone": "Urban social hub",
-        "palette_bias": "Cool blues and warm earth tones with pops of vibrant artificial color",
-        "flora_base": "Strategically placed minimalist planters with sleek, dark foliage.",
-        "fauna_base": "None visible"
+        "looks": "A vast, cavernous industrial interior. Massive, skeletal steel beams crisscross overhead, many twisted or broken. Jagged openings in the walls and roof allow shafts of harsh, sun-bleached light to pierce the gloom, illuminating swirling dust motes. Remnants of colossal machinery, pipes, and conveyors lie scattered across the floor, all coated in layers of rust and grime. The scale is immense, dwarfing any notion of individual human presence.",
+        "colorsAndLighting": "Harsh, high-contrast lighting with deep shadows. Dominant colors are rust-red, dull metallic grey, and ochre. Sunlight, filtered through dust and debris, casts a desaturated, pale glow. Pockets of deep, impenetrable darkness.",
+        "atmosphere": "Dry, dusty air thick with the metallic tang of rust and the faint, acrid smell of old chemicals. A palpable sense of stillness and immense, echoing emptiness. Occasional metallic groans and the whisper of wind through broken structures.",
+        "materials": "Heavily rusted steel, cracked and stained concrete, thick layers of industrial grime, occasional shards of broken glass.",
+        "mood": "Profound emptiness, awe-inspiring industrial decay, oppressive scale, a haunting monument to forgotten industry.",
+        "sounds": "Distant wind, metallic groans, creaking structures, echoes, dripping, scuttling, phantom machinery hum.",
+        "spatialLayout": "Vast, open central hall with multiple levels of gantries and walkways accessible via stairs and precarious passages. Large, gaping entrances and openings.",
+        "primary_surfaces": "Rusted steel girders, stained concrete floors and walls.",
+        "secondary_surfaces": "Debris piles, shattered machinery parts, collapsed piping.",
+        "accent_features": "Skeletal cranes, frozen conveyor belts, remnants of control panels.",
+        "dominant": "Rust-red",
+        "secondary": "Ochre",
+        "accent": "Dusty grey",
+        "ambient": "Hazy, sun-bleached",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "Massive Industrial Decay",
+        "cultural_tone": "Scavenger Civilization",
+        "palette_bias": "Desaturated Earth Tones",
+        "flora_base": "Drought-resistant scrub and hardy weeds",
+        "fauna_base": "Scavenging creatures and mutated insects"
       },
-      "primaryMedia": "media-1767094706791-zpf3ssd3f",
-      "description": "The interior of the Grand Marque Museum is a grand, open exhibition hall. The space is filled with a diverse collection of cars, from vintage models to modern marvels, all meticulously displayed. Bright, clinical lighting illuminates the polished concrete floors and the dark-tiled walls, creating a clean and sophisticated atmosphere. High ceilings contribute to the feeling of immense space, making the vehicles appear even more impressive.",
+      "primaryMedia": "media-1767096300067-z017dhm9l",
+      "description": "You are inside a massive, sprawling factory. The walls are made of corrugated metal, and the floor is worn concrete. Exposed beams crisscross the high ceiling, disappearing into the dim industrial atmosphere. Massive pieces of machinery loom in the shadows, their surfaces weathered and stained. Open passages lead off into other sections of this immense industrial complex.",
       "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "large-glass",
-        "openingShape": "rectangular",
-        "functionalType": "entertainment",
+        "form": "irregular-modular",
+        "roofType": "null",
+        "scale": "massive",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "industrial",
         "elevation": "ground-level",
-        "spatialLayout": "The museum is a vast, open hall designed to showcase vehicles. Polished concrete floors reflect the bright, clinical lighting. High ceilings create a sense of spaciousness, with walls clad in dark tile and interspersed with large display areas.",
-        "requiredElements": [
-          "cars"
-        ]
+        "spatialLayout": "Vast, cavernous chambers are interconnected by wide, open passages, with machinery and industrial equipment scattered throughout. The sprawling layout emphasizes horizontal expansion, creating a sense of immense industrial activity.",
+        "requiredElements": []
       },
       "navigableElements": [
         {
-          "type": "door",
-          "position": "south wall",
-          "description": "leads to Central Plaza District"
+          "type": "passage",
+          "position": "north wall",
+          "description": "leads to another section of the factory"
         },
         {
           "type": "passage",
           "position": "east wall",
-          "description": "leads to the gift shop"
+          "description": "leads to an exterior loading bay"
         }
       ],
       "dominantElements": [
-        "museum display area: shape=rectangular, orientation=sprawling, scale=large, style=modern-commercial, surfaces=glass-metallic, openings=large-glass, interior_materials=polished-concrete|dark-tile|high-ceiling, enterable=yes, internal_atmosphere=bright-clinical",
-        "classic car: shape=organic, orientation=compact, scale=small, style=vintage, surfaces=chrome-paint, openings=minimal, interior_materials=leather|carpet|padded-headliner, enterable=yes, internal_atmosphere=cozy"
+        "industrial press: shape=rectangular, orientation=vertical, scale=large, style=industrial, surfaces=rusted-metal, openings=minimal, interior_materials=metal|oil-stained-concrete|exposed-pipes, enterable=no, internal_atmosphere=industrial",
+        "conveyor belt: shape=long-rectangular, orientation=horizontal, scale=massive, style=industrial, surfaces=metal, openings=none, interior_materials=metal|concrete|none, enterable=no, internal_atmosphere=industrial"
       ],
       "uniqueIdentifiers": [
-        "sweeping glass facade (visible from interior)",
-        "polished metallic panels",
-        "sharp, geometric lines"
+        "faint smell of oil and ozone",
+        "constant low hum of machinery",
+        "vast scale suggesting extensive production"
       ],
-      "searchDesc": "Sci-fi car museum, modern brick, urban social hub, cool blues, warm earth tones.",
-      "slug": "null-of-the-grand-marque-museum"
+      "searchDesc": "Colossal, decaying factory ruins, skeletal industrial structures, rust, concrete, vast emptiness.",
+      "slug": "null-of-the-rusting-shell"
     },
-    "loc-1767094728363-4886choyh": {
-      "id": "loc-1767094728363-4886choyh",
-      "type": "location",
-      "name": "a sport car",
-      "spaceType": "structure",
-      "dna": {},
-      "description": "Structure: a sport car",
-      "searchDesc": "a sport car",
-      "slug": "a-sport-car",
-      "isPassThrough": true
-    },
-    "niche-1767094737837-ulhsmg623": {
-      "id": "niche-1767094737837-ulhsmg623",
+    "niche-1767096355594-cadisdfso": {
+      "id": "niche-1767096355594-cadisdfso",
       "type": "niche",
-      "name": "Sport Car",
+      "name": "Whimsical House Basement",
       "spaceType": "interior",
       "dna": {
-        "looks": "A tightly integrated cockpit designed for driver focus. The form is sculpted and ergonomic, with a low-slung seating position. Integrated ambient lighting casts a cool, focused glow. Surfaces are a blend of advanced composites and premium textiles.",
-        "colorsAndLighting": "Dominated by deep blacks and charcoal grays, punctuated by the cool blue and silver of digital displays. Subtle red or yellow accent lighting emanates from the dashboard and console, highlighting key controls. The overall lighting is low-key and directional.",
-        "atmosphere": "Enclosed, focused, and humming with latent power. The air is clean, with a faint scent of high-performance materials like leather and carbon fiber.",
-        "materials": "Primary materials include premium leather or Alcantara for seating and trim, carbon fiber composites for structural elements and dashboard, and brushed aluminum or dark chrome for controls and accents.",
-        "mood": "Intense, focused, and aspirational. Evokes a sense of precision engineering and thrilling performance.",
-        "sounds": "Low ambient hum, soft clicking of controls, synthesized engine sound simulation.",
-        "spatialLayout": "A compact, driver-centric layout, emphasizing horizontal lines and ergonomic curves. The space feels intimate and enclosed.",
-        "primary_surfaces": "Premium leather/Alcantara, carbon fiber weave",
-        "secondary_surfaces": "Brushed aluminum, dark chrome, soft-touch plastics",
-        "accent_features": "Illuminated digital displays, anodized control knobs, stitching details on seats and steering wheel",
-        "dominant": "Deep black/Charcoal",
-        "secondary": "Cool blue/Silver (display light)",
-        "accent": "Racing red/Yellow (control highlights)",
-        "ambient": "Cool, focused, directional lighting",
-        "genre": "Sci-Fi",
-        "architectural_tone": "Modern commercial with striking geometric forms and extensive use of glass",
-        "cultural_tone": "Enthusiast hub, historical preservation, public spectacle",
-        "palette_bias": "Cool blues, silver, and stark white with occasional vibrant reds or yellows from vehicle paint",
+        "looks": "A large, cavernous basement space dominated by the massive, rusting skeletal framework of a forgotten industrial building.  Centrally, a 'house' constructed from an absurdly colorful array of salvaged metal sheets, scavenged plastic, and brightly painted scrap lumber stands in defiance of its surroundings.  The house's architecture is playfully asymmetrical and seemingly cobbled together with an optimistic, if rough, hand.",
+        "colorsAndLighting": "The dominant industrial palette of rust-red and muted greys is aggressively disrupted by the house's vibrant patchwork of blues, yellows, greens, and reds.  Harsh shafts of sunlight pierce the gloom from above, illuminating dust motes and casting dramatic shadows.  Repurposed industrial lamps and strings of salvaged Christmas lights (glowing with a surprisingly warm, if slightly flickering, light) provide illumination within the house and around its immediate vicinity.",
+        "atmosphere": "Despite the underlying chill and the pervasive scent of dust and decay from the larger structure, the immediate area around the whimsical house possesses a peculiar, defiant warmth. A faint hum of repurposed electrical components from the house's lighting can be heard.",
+        "materials": "The surrounding space is composed of heavily rusted corrugated metal, exposed steel girders, and crumbling concrete. The house itself is a riot of salvaged materials: brightly painted corrugated metal, warped plastic sheeting, scraps of brightly colored industrial fabric, and various found objects repurposed as decorative elements.",
+        "mood": "A strange blend of haunting desolation from the industrial ruins and a defiant, quirky cheerfulness emanating from the whimsical house. It feels like a pocket of manufactured joy in a world of decay.",
+        "sounds": "Dripping water, distant wind whistles, gentle hum of lights, occasional creaking metal, muffled clatter from within the house.",
+        "spatialLayout": "A vast, open basement space with the whimsical house occupying a significant central portion.  The house itself is a compact, multi-level structure with an irregular, playful shape.",
+        "primary_surfaces": "Heavily rusted corrugated metal and exposed steel girders (in the surrounding area); brightly painted, mismatched metal sheets and salvaged wood (for the house).",
+        "secondary_surfaces": "Cracked concrete, shattered glass, dirt, debris (in the surrounding area); scavenged plastic sheeting, fabric scraps, and repurposed industrial components (for the house).",
+        "accent_features": "The entirety of the whimsical house structure, dangling chains and remnants of machinery in the surrounding area, repurposed string lights, salvaged object art.",
+        "dominant": "Rust-red (from the industrial structure, countered by the house)",
+        "secondary": "Muted grey (from the industrial structure, contrasted by the house)",
+        "accent": "Vibrant, mismatched colors (blues, yellows, greens, reds - from the house)",
+        "ambient": "Dim, with shafts of harsh sunlight and warm, localized artificial light.",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "Massive industrial decay with exposed skeletal framework, adapted with whimsical, salvaged construction.",
+        "cultural_tone": "Represents forgotten industry and post-apocalyptic survival, with a defiant pocket of quirky, handmade joy and shelter.",
+        "palette_bias": "Earth tones, metallic hues, muted colors, heavily contrasted by vibrant, salvaged accent colors.",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1767094737836-grjxt0sxd",
-      "description": "You are inside a sport car. The seats are form-fitting, and the steering wheel is within reach. The dashboard features a array of gauges and controls, all focused on the driving experience. The windows offer a limited but clear view of the surroundings.",
+      "primaryMedia": "media-1767096355594-3x654zfy0",
+      "description": "You are in a large, subterranean space that serves as the foundation for a peculiar house. The walls are a mix of rough-hewn stone and packed earth, with portions of the whimsical house's structure — perhaps a peculiar staircase or a brightly colored wall — seemingly growing out of them. The air is cool and carries the faint scent of damp earth and something faintly sweet.  The only prominent feature is the entrance into the house itself, a peculiar, inviting opening in the earthen wall.",
       "structure": {
         "form": "organic",
         "roofType": "null",
-        "scale": "small",
-        "orientation": "compact",
-        "openings": "minimal",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "open-passages",
         "openingShape": "irregular",
-        "functionalType": "entertainment",
-        "elevation": "ground-level",
-        "spatialLayout": "A small, enclosed space with a driver's seat and controls. The interior is designed for functionality and a direct connection to the driving experience.",
+        "functionalType": "residential",
+        "elevation": "underground",
+        "spatialLayout": "A vast, cavernous basement area that opens into the foundation of a whimsical, slightly off-kilter house. The space feels like the roots of a playful structure, with unusual architectural elements poking through the earthen walls.",
         "requiredElements": [
-          "driver's seat",
-          "steering wheel",
-          "dashboard"
+          "basement",
+          "whimsical house"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "north wall, center",
+          "description": "A rough-hewn opening leading into the main industrial complex."
+        },
+        {
+          "type": "door",
+          "position": "east wall, slightly left of center",
+          "description": "The entrance to the whimsical house, made of mismatched, brightly painted metal sheets."
+        }
+      ],
+      "dominantElements": [
+        "whimsical house: shape=organic, orientation=compact, scale=large, style=whimsical, surfaces=wood|plaster|glass, openings=mixed, interior_materials=painted-wood|worn-rug|exposed-beams, enterable=yes, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "uneven foundations",
+        "playful structural elements",
+        "earthy and stone textures"
+      ],
+      "searchDesc": "A vibrant, makeshift house built from salvaged parts in a massive industrial ruin.",
+      "slug": "the-whimsical-den"
+    },
+    "loc-1767096364463-e1uhqgyqr": {
+      "id": "loc-1767096364463-e1uhqgyqr",
+      "type": "location",
+      "name": "whimsical house",
+      "spaceType": "structure",
+      "dna": {},
+      "description": "Structure: whimsical house",
+      "searchDesc": "whimsical house",
+      "slug": "whimsical-house",
+      "isPassThrough": true
+    },
+    "niche-1767096375518-5y595ijh4": {
+      "id": "niche-1767096375518-5y595ijh4",
+      "type": "niche",
+      "name": "whimsical house",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An irregularly shaped, compact large-scale interior. The walls are a blend of rough, unpainted plaster and sections of salvaged, crudely painted wood panels. Gaping openings, some covered with salvaged glass, reveal glimpses of the industrial exterior. Exposed, rusted steel beams are a prominent structural element, integrated into the ceiling and walls.",
+        "colorsAndLighting": "Dominant colors are muted earth tones and rust-reds from the exposed structural elements, contrasted with splashes of faded, vibrant colors on the painted wood and worn rugs. Lighting is dim, with sharp shafts of sunlight filtering through salvaged glass, creating dramatic shadows.",
+        "atmosphere": "A surprisingly cozy and lived-in atmosphere despite the surrounding desolation. The air carries a faint scent of old wood and dust. A gentle, internal stillness prevails, broken only by the occasional whisper of wind from the external openings.",
+        "materials": "Primary interior surfaces are a mix of rough plaster and salvaged, painted wood panels. Worn, patterned rugs are scattered across the floor. Exposed, weathered steel beams form part of the interior structure.",
+        "mood": "Evokes a sense of defiant cheerfulness and resourceful comfort, a pocket of warmth and personality amidst industrial decay and desolation. It feels like a refuge, a place of personal expression salvaged from ruin.",
+        "sounds": "Muffled wind, creaking wood, distant industrial hum, gentle settling.",
+        "spatialLayout": "Compact, organic, and large-scale within its defined area. The layout is somewhat irregular, accommodating the natural contours of the salvaged industrial shell.",
+        "primary_surfaces": "Rough plaster, painted wood panels, worn rugs.",
+        "secondary_surfaces": "Exposed rusted steel beams, salvaged glass.",
+        "accent_features": "Mismatched hand-painted decorative motifs, collections of salvaged glass containers, rough-hewn wooden furniture.",
+        "dominant": "Rust-red (from exposed structural elements and salvaged metal), blending with muted earth tones.",
+        "secondary": "Muted grey (from plaster and weathered metal), with accents of faded vibrant colors.",
+        "accent": "Faded vibrant colors (on painted wood and rugs), catching sunlight.",
+        "ambient": "Dim, with stark shafts of sunlight.",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "Massive industrial decay with exposed skeletal framework. The whimsical elements are adaptations and embellishments within this existing structure.",
+        "cultural_tone": "Represents forgotten industry and post-apocalyptic survival, a shelter or a relic, now adapted with a unique, playful spirit by its inhabitants.",
+        "palette_bias": "Earth tones, metallic hues, muted colors, with unexpected splashes of faded, salvaged color.",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767096375518-xqvmgbigi",
+      "description": "You are inside the whimsical house. The walls are a cheerful, painted wood that curve gently, creating an organic flow to the space. A worn, colorful rug covers the floor, absorbing sound and adding to the cozy atmosphere. Above, exposed wooden beams crisscross the ceiling, giving a rustic yet charming feel. The air is warm and inviting, filled with the scent of old books and something subtly sweet. Mismatched furniture, like an overstuffed armchair and a winding bookshelf, are nestled into the curves of the walls. Small, irregular openings, some resembling round windows and others simply archways, allow soft light to filter in.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "compact",
+        "openings": "mixed",
+        "openingShape": "irregular",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "The interior of the whimsical house is a single, cozy space with an organic, flowing layout. Despite its compact orientation, the large scale allows for an airy feel within its winding walls.",
+        "requiredElements": [
+          "painted-wood walls",
+          "worn-rug floor",
+          "exposed-beams ceiling"
         ]
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "side",
-          "description": "Opens to the outside of the car"
+          "position": "north wall",
+          "description": "leads back to Whimsical House Basement"
         }
       ],
       "dominantElements": [
-        "sport car: shape=organic, orientation=compact, scale=small, style=modern-performance, surfaces=painted-metal|glass, openings=minimal, interior_materials=leather|plastic|metal, enterable=yes, internal_atmosphere=cozy"
+        "overstuffed armchair: shape=organic, orientation=centered, scale=medium, style=whimsical, surfaces=fabric, openings=minimal, interior_materials=fabric|worn-rug|exposed-beams, enterable=yes, internal_atmosphere=cozy",
+        "curved bookshelf: shape=organic, orientation=flowing, scale=large, style=whimsical, surfaces=wood, openings=mixed, interior_materials=painted-wood|worn-rug|exposed-beams, enterable=no, internal_atmosphere=cozy",
+        "glowing mushroom lamp: shape=organic, orientation=compact, scale=small, style=whimsical, surfaces=organic-membrane, openings=minimal, interior_materials=organic-membrane|worn-rug|exposed-beams, enterable=no, internal_atmosphere=cozy"
       ],
       "uniqueIdentifiers": [
-        "low-slung profile",
-        "aerodynamic design",
-        "powerful engine"
+        "uneven, curving walls",
+        "mismatched, colorful furniture",
+        "soft, diffused lighting"
       ],
-      "searchDesc": "Inside a sleek sportscar cockpit with digital displays and racing seats.",
-      "slug": "interior-of-a-sport-car"
+      "searchDesc": "Whimsical, cozy shelter within post-apocalyptic industrial ruins.",
+      "slug": "interior-of-whimsical-house-shape-organic-orientation-compact-scale-large-style-whimsical-surfaces-wood-plaster-glass-openings-mixed-interior-materials-painted-wood-worn-rug-exposed-beams-enterable-yes-internal-atmosphere-cozy"
+    },
+    "niche-1767096431094-3tdfzapkc": {
+      "id": "niche-1767096431094-3tdfzapkc",
+      "type": "niche",
+      "name": "A Room with a Space Ship",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, echoing industrial bay, heavily featuring the colossal, rusted skeleton of a starship. Dangling chains and remnants of industrial machinery hang from the decaying structure. Clinging to the starship's hull is a 'house' made of an absurdly colorful patchwork of salvaged metal sheets, plastic, and scrap lumber, featuring asymmetrical and playful construction. Harsh sunlight beams down, illuminating dust motes and casting dramatic shadows.",
+        "colorsAndLighting": "The dominant rust-red and muted greys of the industrial decay are violently interrupted by the habitation's vibrant, clashing palette of blues, yellows, greens, and reds. Light is a stark contrast: harsh, dusty shafts of sunlight from above, and localized, warm, slightly flickering glows from repurposed industrial lamps and strings of salvaged Christmas lights within and around the habitation.",
+        "atmosphere": "A chilling, cavernous emptiness pervades the main bay, thick with the scent of dust and decay. However, the area around the salvaged habitation emanates a peculiar, defiant warmth and a faint hum of repurposed electrical components.",
+        "materials": "The surrounding space is dominated by heavily rusted corrugated metal, exposed steel girders, and crumbling concrete. The habitation is a riot of brightly painted, mismatched metal sheets, warped plastic sheeting, scraps of industrial fabric, and various found objects repurposed as decorative elements.",
+        "mood": "A haunting desolation from the industrial ruins, juxtaposed with a defiant, quirky cheerfulness from the whimsical habitation. A strange, manufactured pocket of joy.",
+        "sounds": "Echoing emptiness, groaning metal, dripping water, faint hum of electronics, crackling lights.",
+        "spatialLayout": "A massive, cavernous open space with a dominant central feature (the starship) and a clustered, asymmetrical habitation built upon it.",
+        "primary_surfaces": "Heavily rusted corrugated metal, exposed steel girders, crumbling concrete, brightly painted mismatched metal sheets, salvaged wood planks.",
+        "secondary_surfaces": "Cracked concrete, shattered glass, dirt, debris, scavenged plastic sheeting, industrial fabric scraps, repurposed industrial components.",
+        "accent_features": "The entirety of the colorful salvaged habitation, dangling chains, remnants of industrial machinery, repurposed string lights, found object art on the habitation.",
+        "dominant": "Rust-red",
+        "secondary": "Muted grey",
+        "accent": "Vibrant, mismatched colors (blues, yellows, greens, reds)",
+        "ambient": "Dim, with harsh shafts of sunlight and warm, localized artificial light.",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "Massive industrial decay with exposed skeletal framework, adapted with whimsical, salvaged construction.",
+        "cultural_tone": "Represents forgotten industry and post-apocalyptic survival, with a defiant pocket of quirky, handmade joy and shelter.",
+        "palette_bias": "Earth tones, metallic hues, muted colors, heavily contrasted by vibrant, salvaged accent colors.",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767096431093-hakjzsuxa",
+      "description": "You are inside a utilitarian room, its walls bearing the marks of heavy industry. Exposed metal beams and conduits crisscross overhead, and the floor is a patchwork of worn concrete and salvaged plating. In the center of the space, dominating the view, is a large, weathered spaceship, its hull bearing the scars of countless journeys. Smaller, repurposed metallic structures and tool racks are scattered around, hinting at its function as a workshop or maintenance bay. The overall impression is one of massive industrial decay, but with an undeniable, functional purpose.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "null",
+        "scale": "medium",
+        "orientation": "compact",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "industrial",
+        "elevation": "ground-level",
+        "spatialLayout": "A utilitarian room, likely a workshop or hangar, designed to house and service a spacecraft. Exposed structural elements and salvaged materials dominate the space.",
+        "requiredElements": [
+          "room",
+          "space ship"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "leading from the main cavern floor towards the ship's hull",
+          "description": "A makeshift ramp of warped metal plating and wooden planks, leading towards the habitation built onto the starship's hull."
+        },
+        {
+          "type": "door",
+          "position": "on the primary salvaged habitation structure",
+          "description": "A mismatched door of brightly painted scrap metal, opening into the colorful interior of the salvaged dwelling."
+        },
+        {
+          "type": "stairs",
+          "position": "leading from the habitation down to the cavern floor",
+          "description": "A precarious set of metal grating stairs, descending from the salvaged dwelling back to the main industrial bay floor."
+        }
+      ],
+      "dominantElements": [
+        "space ship: shape=organic, orientation=vertical, scale=large, style=futuristic-industrial, surfaces=metallic-weathered, openings=circular-portholes, interior_materials=brushed-metal|grated-floor|ribbed-ceiling, enterable=yes, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "exposed skeletal framework",
+        "salvaged embellishments"
+      ],
+      "searchDesc": "Vast industrial bay with a decaying starship and a quirky, colorful salvaged dwelling.",
+      "slug": "the-salvaged-starship-bay"
+    },
+    "loc-1767096445273-kvtmzu4bx": {
+      "id": "loc-1767096445273-kvtmzu4bx",
+      "type": "location",
+      "name": "space ship",
+      "spaceType": "structure",
+      "dna": {},
+      "description": "Structure: space ship",
+      "searchDesc": "space ship",
+      "slug": "space-ship",
+      "isPassThrough": true
+    },
+    "niche-1767096460979-85o3iyvhi": {
+      "id": "niche-1767096460979-85o3iyvhi",
+      "type": "niche",
+      "name": "space ship",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a jarring juxtaposition of a vast, derelict industrial space – think exposed, rusting girders, corroded pipes, and vast, unfinished concrete walls – seamlessly integrated with a central, quirky 'spaceship' habitation. This habitation is a riot of color and asymmetry, constructed from salvaged corrugated metal sheets, brightly painted scrap lumber, repurposed plastic sheeting, and a bewildering array of found objects. Exposed wiring is bundled with colorful tape and fabric.",
+        "colorsAndLighting": "The dominant colors are the rust-reds and muted greys of the decaying industrial structure, aggressively interrupted by the vibrant, mismatched blues, yellows, greens, and reds of the salvaged spaceship habitation. Lighting is a dramatic mix of harsh, piercing shafts of sunlight from unseen breaches above, casting long shadows, and the warm, flickering glow of salvaged industrial lamps and strings of repurposed Christmas lights, concentrated around the habitation area.",
+        "atmosphere": "A unique blend of cold, vast emptiness from the industrial shell and a surprisingly warm, defiant cheerfulness within the salvaged dwelling. The air is thick with the scent of dust, old metal, and a hint of ozone, but a faint, persistent hum of functioning, repurposed electronics provides a sense of life and activity. It feels like a well-defended, quirky sanctuary.",
+        "materials": "Heavily rusted corrugated metal, exposed steel girders, crumbling concrete, and pitted metal plating form the base structure. The 'spaceship' interior is a patchwork of brightly painted, mismatched metal sheets, warped and colored plastic sheeting, rough-hewn scrap lumber, salvaged industrial fabrics, and numerous repurposed everyday objects.",
+        "mood": "A curious duality of haunting desolation from the massive industrial ruin and a defiant, quirky sense of manufactured joy and security within the salvaged habitation. It evokes resilience, creativity, and a stubborn will to thrive amidst decay.",
+        "sounds": "Low hum of electronics, occasional creaks of metal, distant echoes, faint clatter of movement.",
+        "spatialLayout": "A large, cavernous space with a central, more defined 'habitation' area. The skeletal framework of the industrial ruin forms the overarching structure, with the salvaged spaceship components integrated into and built around it.",
+        "primary_surfaces": "Rusting corrugated metal panels, exposed steel beams, patchwork of painted salvaged metal sheets, rough-sawn lumber.",
+        "secondary_surfaces": "Cracked concrete floors, exposed wiring conduits, scavenged plastic sheeting, worn industrial fabrics, repurposed plastic containers.",
+        "accent_features": "The vibrant, asymmetrical construction of the habitation house, dangling chains and remnants of original machinery, strings of colorful salvaged lights, found object art and decorations, control panels with salvaged dials and switches.",
+        "dominant": "Rust-red",
+        "secondary": "Muted grey",
+        "accent": "Vibrant, mismatched colors (blues, yellows, greens, reds)",
+        "ambient": "Dim, with localized warm illumination",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "Massive industrial decay with exposed skeletal framework, adapted with whimsical, salvaged construction.",
+        "cultural_tone": "Represents forgotten industry and post-apocalyptic survival, with a defiant pocket of quirky, handmade joy and shelter.",
+        "palette_bias": "Earth tones, metallic hues, muted colors, heavily contrasted by vibrant, salvaged accent colors.",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767096460977-vrl0deabz",
+      "description": "You are inside a large, vertically oriented spaceship. The walls are made of brushed metal, the floor is a grated metal, and the ceiling is ribbed. The overall atmosphere is dim, with a futuristic-industrial style. Circular portholes offer distorted views of the surrounding void, and the organic shape of the ship creates a curving, multi-level interior.",
+      "structure": {
+        "form": "organic",
+        "roofType": null,
+        "scale": "large",
+        "orientation": "vertical",
+        "openings": "circular-portholes",
+        "openingShape": "circular",
+        "functionalType": "vehicle",
+        "elevation": "floating",
+        "spatialLayout": "This is the interior of a large, vertically oriented spaceship. The organic form of the ship creates curving internal spaces, illuminated by a dim, futuristic-industrial atmosphere. Multiple levels are implied by the vertical orientation.",
+        "requiredElements": [
+          "brushed-metal walls",
+          "grated-floor",
+          "ribbed-ceiling"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "portal",
+          "position": "central area",
+          "description": "A shimmering portal that likely leads to other parts of the ship or a docking bay."
+        },
+        {
+          "type": "stairs",
+          "position": "along the curving wall",
+          "description": "A set of metallic stairs winding upwards, hinting at the multi-level nature of the ship."
+        }
+      ],
+      "dominantElements": [
+        "control console: shape=organic, orientation=horizontal, scale=medium, style=futuristic-industrial, surfaces=brushed-metal, openings=minimal, interior_materials=brushed-metal|grated-floor|ribbed-ceiling, enterable=yes, internal_atmosphere=dim",
+        "crew seating: shape=organic, orientation=horizontal, scale=small, style=futuristic-industrial, surfaces=brushed-metal, openings=none, interior_materials=brushed-metal|grated-floor|ribbed-ceiling, enterable=no, internal_atmosphere=dim",
+        "machinery housing: shape=organic, orientation=vertical, scale=medium, style=futuristic-industrial, surfaces=metallic-weathered, openings=narrow-slits, interior_materials=brushed-metal|grated-floor|ribbed-ceiling, enterable=no, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "dim internal atmosphere",
+        "circular portholes revealing glimpses of space",
+        "organic, curving interior architecture"
+      ],
+      "searchDesc": "Cozy patchwork dwelling inside a massive, decaying industrial ruin adapted into a spaceship.",
+      "slug": "interior-of-space-ship"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1767088812477-gml74skmk",
+      "id": "loc-1767096264812-ozz9clnj1",
       "type": "host",
       "children": [
         {
-          "id": "3e8932c8-66ab-45fd-a3b3-7c67fb1f7d40",
+          "id": "27e4a0a3-41e4-4df3-a4da-0368b9ce0024",
           "type": "region",
           "children": [
             {
-              "id": "03819cb9-350b-4994-9efd-36bdd18f8e18",
+              "id": "af75e1ff-de1f-47d3-861e-7907213feab7",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1767094706792-i6h2kzdlz",
+                  "id": "niche-1767096300068-hjlysbaag",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767096355594-cadisdfso",
                   "type": "niche",
                   "children": [
                     {
-                      "id": "loc-1767094728363-4886choyh",
+                      "id": "loc-1767096364463-e1uhqgyqr",
                       "type": "location",
                       "children": [
                         {
-                          "id": "niche-1767094737837-ulhsmg623",
+                          "id": "niche-1767096375518-5y595ijh4",
                           "type": "niche",
                           "children": []
+                        },
+                        {
+                          "id": "niche-1767096431094-3tdfzapkc",
+                          "type": "niche",
+                          "children": [
+                            {
+                              "id": "loc-1767096445273-kvtmzu4bx",
+                              "type": "location",
+                              "children": [
+                                {
+                                  "id": "niche-1767096460979-85o3iyvhi",
+                                  "type": "niche",
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
@@ -309,6 +527,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1767088812477-gml74skmk"
+    "loc-1767096264812-ozz9clnj1"
   ]
 }
