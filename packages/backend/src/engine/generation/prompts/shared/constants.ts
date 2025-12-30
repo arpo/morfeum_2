@@ -16,7 +16,8 @@ export const NoCreatures = `
 `;
 
 export const PopulateScene = `
-[REQUIRED: PEOPLE IN SCENE] This location MUST show multiple people. Include 5-15 visible human figures - some in midground engaged in activities, others in background. Show clear body forms, clothing details, natural poses. People are an ESSENTIAL part of this image, not optional.
+[REQUIRED: PEOPLE IN SCENE] This location MUST show multiple people. The scene is crowded and lively.
+  Include visible human figures - some in midground engaged in activities, others in background. Show clear body forms, clothing details, natural poses. People are an ESSENTIAL part of this image, not optional.
 `;
 
 export const fluxInstructionsShort = `

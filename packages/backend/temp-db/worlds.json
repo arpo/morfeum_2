@@ -628,26 +628,98 @@
       "searchDesc": "Urban art night club with bohemian flair, vibrant and joyous.",
       "slug": "null-of-night-club-building"
     },
-    "niche-1767106796653-395u36xzq": {
-      "id": "niche-1767106796653-395u36xzq",
+    "niche-1767106886564-hqj7ldh86": {
+      "id": "niche-1767106886564-hqj7ldh86",
       "type": "niche",
-      "name": "The Crowded Dance Floor",
+      "name": "Crowded Bar",
       "spaceType": "interior",
       "dna": {
-        "looks": "An immersive, multi-level dance hall. The primary visual is the dense, moving mass of people. Walls are clad in dark, sound-dampening materials, but are almost entirely obscured by dynamic, projected light patterns that pulse and swirl in time with the music. Scattered throughout are geometric sculptures made of polished metal and illuminated tubing, casting sharp reflections. Above, a complex network of spotlights and moving heads create a constantly changing atmospheric light show. The floor itself is a dark, polished material, reflecting the overhead lights and the energy of the dancers. Balconies and elevated platforms offer different perspectives on the pulsating crowd.",
-        "colorsAndLighting": "A dazzling interplay of warm and cool brights. Deep indigo and electric blues form the backdrop, pierced by vibrant fuchsia, emerald green, and golden yellow light. Neon accents are integrated into architectural features and decorative elements. Spotlights create dramatic chiaroscuro effects, while the projected wall art offers a continuously morphing palette. The overall impression is one of intense, saturated color and dynamic light.",
-        "atmosphere": "Electrifying and highly energetic. The air is thick with the thrum of bass, the collective sound of many voices, and the palpable kinetic energy of hundreds of bodies moving in rhythm. It's a space of uninhibited expression and shared euphoria. The temperature is warm from body heat and intense lighting.",
-        "materials": "Primarily dark, sound-absorbent fabrics and treated concrete on walls and structural elements. Polished, dark, reflective flooring. Accents of brushed metal, mirrored surfaces, and illuminated acrylic or glass tubing. Digital projection surfaces.",
-        "mood": "Joyous artistry, vibrant urban life, inspiring, lively, celebratory, electric. A sense of communal transcendence through dance and music.",
-        "sounds": "Pounding bass, driving beats, shouts, laughter, rhythmic footfalls, echoing cheers.",
-        "spatialLayout": "A large, cavernous main floor with a central dance area. Elevated balconies and platforms offer varying vantage points. A prominent DJ booth is a focal point. Ceilings are high and fitted with extensive lighting rigs. Passages and staircases lead to different levels and exits.",
-        "primary_surfaces": "Projected light murals, dark sound-dampening panels, polished concrete dance floor.",
-        "secondary_surfaces": "Brushed metal accents, mirrored panels, illuminated acrylic tubes, exposed structural beams.",
-        "accent_features": "Kinetic sculptures, integrated LED strip lighting, large sound system elements, subtle decorative mosaics on structural supports.",
-        "dominant": "The vibrant, shifting colors of the projected light art.",
-        "secondary": "The intense, saturated hues of neon and LED lighting.",
-        "accent": "The deep, resonant tones of the sound system's visualizers.",
-        "ambient": "Urban glow, amplified and stylized.",
+        "looks": "The interior is a dynamic fusion of raw urban elements and bohemian artistry. Walls are a mix of exposed, graffiti-adorned brick and sections covered in intricately laid mosaic tiles. A prominent, brightly lit bar serves as the focal point, made from polished concrete and shimmering mosaic shards. Overhead, a chaotic yet artistic arrangement of Edison bulbs and pendant lights casts a warm, inviting glow. Seating is a bohemian mix of salvaged industrial stools, plush velvet armchairs, and custom-made mosaic benches. Neon signs in electric blues, magentas, and oranges accent various corners, reflecting off polished concrete floors and the bar's surfaces.",
+        "colorsAndLighting": "A high-contrast interplay of warm and cool brights. Dominant hues of sapphire blue, emerald green, and ruby red from the mosaic are punctuated by electric neon pinks, oranges, and yellows. Lighting is a dynamic mix: the warm, inviting glow from Edison bulbs mixes with the sharp, vibrant beams of neon. Spotlights highlight artwork and the stage, while dimmer areas create intimate pockets. Reflections dance across metallic surfaces and the bar.",
+        "atmosphere": "Electric and buzzing with life. The air is thick with the mingled scents of craft cocktails, popcorn, and a faint undercurrent of urban street air. A palpable energy flows from the patrons and the live music. It's a space where diverse individuals converge, creating a constant hum of conversation, laughter, and animated discussion, all underscored by an eclectic, upbeat soundtrack.",
+        "materials": "Mosaic tiles (dominant on bar and accent walls), exposed brick (graffiti-adorned), polished concrete (floors, bar top), weathered metal (signage, seating frames), salvaged wood (some tables), plush fabrics (seating).",
+        "mood": "Joyous artistry, vibrant urban life, inspiring, lively, celebratory, electric, communal, slightly chaotic.",
+        "sounds": "Live music (eclectic genres), lively chatter, clinking glasses, laughter, upbeat music playlist.",
+        "spatialLayout": "Open-plan with distinct zones. A prominent bar dominates the center, with a designated stage area on one side. Seating is arranged in conversational clusters throughout the space, with some more secluded alcoves. High ceilings with exposed beams and industrial-style light fixtures.",
+        "primary_surfaces": "Mosaic tiles, graffiti-adorned brick",
+        "secondary_surfaces": "Polished concrete, weathered metal",
+        "accent_features": "Hanging Edison bulb installations, neon signs, custom mosaic bar stools, projection mapped art.",
+        "dominant": "Mosaic tile colors (riot of warm and cool brights)",
+        "secondary": "Neon light colors (electric pinks, blues, oranges)",
+        "accent": "Graffiti art colors (bold, layered)",
+        "ambient": "Urban glow, dynamic and shifting",
+        "genre": "Urban Art",
+        "architectural_tone": "Bohemian Urban",
+        "cultural_tone": "Artistic",
+        "palette_bias": "Warm and Cool Brights",
+        "flora_base": "Absent",
+        "fauna_base": "Absent"
+      },
+      "primaryMedia": "media-1767106886563-wddzjjp7s",
+      "description": "Inside a bustling 'Crowded Bar', the interior is a vibrant, albeit somewhat cramped, space. Bohemian urban decor blends with a lively palette of warm and cool brights, creating an energetic atmosphere. The main entrance leads to a central area where a prominent bar serves as the focal point, bustling with patrons.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "null",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A dimly lit, irregularly shaped interior filled with a dense arrangement of tables and seating. The air is thick with the sounds of conversation and clinking glasses, illuminated by a mix of warm and cool, bright lighting.",
+        "requiredElements": [
+          "bar"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front center",
+          "description": "Large, artfully arranged mosaic glass doors leading to the street."
+        },
+        {
+          "type": "passage",
+          "position": "back left",
+          "description": "A vibrant passage leading to the restrooms, adorned with graffiti art."
+        },
+        {
+          "type": "bar",
+          "position": "center stage",
+          "description": "The heart of the bar, crafted from polished concrete and shimmering mosaic."
+        }
+      ],
+      "dominantElements": [
+        "bar: shape=rectangular, orientation=compact, scale=medium, style=bohemian-urban, surfaces=wood, openings=minimal, interior_materials=wood|tile|wood, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "dim lighting",
+        "warm and cool bright accents",
+        "dense seating arrangement",
+        "ambient noise"
+      ],
+      "searchDesc": "A crowded, vibrant urban bar with mosaic art, live music, and electric energy.",
+      "slug": "the-lively-bar"
+    },
+    "location-1767107000216-vi9vd2h95": {
+      "id": "location-1767107000216-vi9vd2h95",
+      "type": "location",
+      "name": "The Park with Art",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A dynamic interplay of natural foliage and bold, colorful urban art installations. Sculptures emerge from unexpected places, and murals adorn surfaces.",
+        "colorsAndLighting": "A bright and lively palette of warm and cool brights. Dappled sunlight filters through lush greenery, creating dynamic shadows and highlights on art pieces.",
+        "atmosphere": "Air buzzing with creative energy. Gentle breezes rustle leaves. A sense of joyful artistic expression and lively urban life.",
+        "materials": "Mosaic tiles, painted plaster, reclaimed wood, weathered metal, and abundant natural foliage.",
+        "mood": "Joyous artistry, vibrant urban life, inspiring, lively, and eclectic.",
+        "sounds": "Chirping birds, distant city hum, gentle water flow, occasional laughter.",
+        "spatialLayout": "An open, sprawling park with interconnected zones featuring diverse art pieces and natural elements.",
+        "primary_surfaces": "Building facades, ground mosaics, pathways.",
+        "secondary_surfaces": "Overhead canopies adorned with art, walls of planters, sculpted hedges.",
+        "accent_features": "Mosaic shards embedded in pathways, vibrant graffiti art, kinetic sculptures, large potted plants with artistic arrangements.",
+        "dominant": "Architecture",
+        "secondary": "Art",
+        "accent": "Nature",
+        "ambient": "Urban",
         "genre": "Urban Art",
         "architectural_tone": "Bohemian Urban",
         "cultural_tone": "Artistic",
@@ -655,48 +727,395 @@
         "flora_base": "Tropical Lush",
         "fauna_base": "Absent"
       },
-      "primaryMedia": "media-1767106796652-c3uhz511n",
-      "description": "You are on a crowded dance floor, surrounded by a vibrant throng of people moving to the rhythm of the music. Warm and cool bright lights pulse around you, creating an energetic and immersive experience.",
+      "primaryMedia": "media-1767107000214-jgbnbc9bt",
+      "description": "An exterior view of a Bohemian urban mosaic park, alive with a vibrant spectrum of warm and cool colors. Art installations are interspersed throughout the natural landscape.",
       "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
+        "form": "organic",
+        "roofType": "null",
         "scale": "large",
         "orientation": "wide",
         "openings": "open-passages",
-        "openingShape": "rectangular",
+        "openingShape": "irregular",
+        "functionalType": "natural",
+        "elevation": "ground-level",
+        "spatialLayout": "A sprawling, open-air park dotted with various art installations. Paths wind through the landscape, leading to different sculptures and gathering areas.",
+        "requiredElements": [
+          "park",
+          "art"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "mosaic benches",
+          "ceramic tile sculptures",
+          "mosaic bird baths",
+          "potted succulents with mosaic planters"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "left wall",
+          "description": "archway mosaic-tiled"
+        },
+        {
+          "type": "window",
+          "position": "front wall",
+          "description": "window large stained-glass   depicting local flora"
+        },
+        {
+          "type": "object",
+          "position": "right wall",
+          "description": "object ornate wrought-iron gate"
+        },
+        {
+          "type": "door",
+          "position": "back wall",
+          "description": "door small wooden"
+        }
+      ],
+      "dominantElements": [
+        "Sculpture: shape=organic, orientation=centered, scale=medium, style=Bohemian urban mosaic, surfaces=weathered, openings=minimal, interior_materials=stone|stone|stone, internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "Eclectic art installations",
+        "Lush greenery with curated sculptures"
+      ],
+      "searchDesc": "Urban park filled with vibrant art, eclectic sculptures, and lush greenery.",
+      "slug": "the-art-garden"
+    },
+    "niche-1767110625894-qna8yqqnt": {
+      "id": "niche-1767110625894-qna8yqqnt",
+      "type": "niche",
+      "name": "The Packed Dance Floor",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A dynamic interior space with a packed dance floor at its heart. Bohemian tapestries adorn the walls, interwoven with strings of fairy lights that cast a warm glow. Vintage velvet couches and mismatched ornate chairs are scattered throughout, interspersed with plush floor cushions. A low, intricately carved wooden bar with brass accents anchors one side of the room, while a small, elevated DJ booth houses retro equipment, commanding attention.",
+        "colorsAndLighting": "A rich tapestry of warm and cool brights from the bohemian tapestries and fairy lights, contrasted with the deep tones of velvet and polished wood. Neon accents from the parent context might be subtly integrated or reinterpreted as vibrant LED strips. Light is dynamic, with spotlights on the dance floor and softer, ambient glows in seating areas.",
+        "atmosphere": "Energetic and electric, filled with the thumping bass of music and the joyous chatter of a diverse crowd. The air is thick with the scent of excitement and a shared love for dance. Motion is constant on the dance floor, with pockets of animated conversation around the bar and seating areas.",
+        "materials": "Dominant materials include rich velvet upholstery, carved dark wood, worn brass accents, rough-hewn wood for the bar, and aged plaster walls. Secondary materials include mosaic shards repurposed as decorative elements, possibly integrated into the bar or wall art. Floor cushions are made of textured, bohemian fabrics.",
+        "mood": "Joyous artistry, vibrant urban life, inspiring, lively, celebratory, electric.",
+        "sounds": "Pulsating bass, energetic beats, cheers, laughter, animated chatter, clinking glasses.",
+        "spatialLayout": "An open central space for dancing, with distinct zones for seating and the bar. The DJ booth is elevated, providing a focal point. The layout encourages flow and mingling.",
+        "primary_surfaces": "Painted plaster walls, carved wooden bar surface",
+        "secondary_surfaces": "Velvet upholstery, brass accents, ornate chair frames, mosaic shards, exposed concrete (potentially decorated)",
+        "accent_features": "Strings of fairy lights, bohemian tapestries, retro DJ equipment, ornate chair legs, brass detailing on the bar.",
+        "dominant": "Warm and Cool Brights",
+        "secondary": "Deep jewel tones (velvet), rich wood tones",
+        "accent": "Brass, mosaic shards",
+        "ambient": "Electric glow",
+        "genre": "Urban Art",
+        "architectural_tone": "Bohemian Urban",
+        "cultural_tone": "Artistic",
+        "palette_bias": "Warm and Cool Brights",
+        "flora_base": "Tropical Lush",
+        "fauna_base": "Absent"
+      },
+      "primaryMedia": "media-1767110625893-vycvaenqk",
+      "description": "Inside a lively, packed dance floor, illuminated by strings of fairy lights. The space is adorned with bohemian tapestries and furnished with vintage velvet couches, mismatched ornate chairs, and scattered floor cushions. A carved wooden bar with brass accents stands ready, while a small, elevated DJ booth with retro equipment hosts the energetic music.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "arched",
         "functionalType": "entertainment",
         "elevation": "ground-level",
-        "spatialLayout": "A large, open rectangular space filled with a dense crowd of people dancing. The atmosphere is energetic and vibrant, with pulsating lights and music.",
+        "spatialLayout": "A vibrant, open space filled with energetic dancers and eclectic furnishings. Bohemian tapestries adorn the walls, and strings of fairy lights create a warm, inviting glow.",
         "requiredElements": [
-          "crowded dance floor"
+          "vintage velvet couches",
+          "mismatched ornate chairs",
+          "a low, carved wooden bar with brass accents",
+          "scattered floor cushions",
+          "bohemian tapestries on walls",
+          "strings of fairy lights",
+          "a small, elevated DJ booth with retro equipment",
+          "brass accents",
+          "retro equipment"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "vintage velvet couches",
+          "mismatched ornate chairs",
+          "a low",
+          "carved wooden bar with brass accents",
+          "scattered floor cushions",
+          "bohemian tapestries on walls",
+          "strings of fairy lights",
+          "a small",
+          "elevated DJ booth with retro equipment",
+          "diverse crowd dancing energetically --populate"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "object",
+          "position": "entrance",
+          "description": "object main  with beaded curtain"
+        },
+        {
+          "type": "archway",
+          "position": "left",
+          "description": "archway ornate"
+        },
+        {
+          "type": "door",
+          "position": "right",
+          "description": "door distressed wooden"
+        },
+        {
+          "type": "window",
+          "position": "back wall",
+          "description": "window large arched   with city lights"
+        }
+      ],
+      "dominantElements": [
+        "dance_floor: shape=organic, orientation=centered, scale=massive, style=bohemian-urban, surfaces=wood|fabric, openings=open-passages, interior_materials=wood|fabric|tapestry, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "diverse crowd dancing energetically"
+      ],
+      "searchDesc": "Vibrant dance haven with vintage furniture, mosaic art, and electrifying energy.",
+      "slug": "electric-dance-haven"
+    },
+    "niche-1767110695028-34805z1im": {
+      "id": "niche-1767110695028-34805z1im",
+      "type": "niche",
+      "name": "The Park with Art",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A lively and colorful urban art park entrance, characterized by a fusion of bohemian architecture and bold sculptural installations. The skyline silhouette is punctuated by the unique forms of the sculptures.",
+        "colorsAndLighting": "A dynamic interplay of warm and cool brights. Dappled sunlight filters through overhead foliage and casts vibrant shadows on the ground and sculptures. The overall lighting is bright and energetic, with strong contrasts.",
+        "atmosphere": "Air hums with a palpable sense of creativity and joy. There's a gentle breeze rustling through the foliage. The atmosphere is lively, inspiring, and filled with the energy of urban artistic expression.",
+        "materials": "A rich mix of mosaic tiles on pathways and building facades, painted plaster walls with a textured, weathered finish, and polished, brushed, and patinated metals for sculptures. Rough-hewn wood is used for benches and kiosks.",
+        "mood": "Joyous artistry, vibrant urban life, inspiring, lively, celebratory, playful, eclectic.",
+        "sounds": "Distant city hum, cheerful chatter, occasional light music, wind chimes, rustling leaves.",
+        "spatialLayout": "An open and inviting plaza leading into pathways that weave between sculptures. The space feels expansive yet intimate, with distinct zones created by the artwork.",
+        "primary_surfaces": "Mosaic-tiled ground and building facades, painted plaster walls.",
+        "secondary_surfaces": "Overhead canopies made of colorful fabrics or reclaimed materials, large potted plants with tropical foliage.",
+        "accent_features": "Mosaic shards embedded in pathways, patterned designs on building elements, brightly painted metal elements, abstract sculptural forms.",
+        "dominant": "Architecture",
+        "secondary": "Art",
+        "accent": "Nature",
+        "ambient": "Urban",
+        "genre": "Urban Art",
+        "architectural_tone": "Bohemian Urban",
+        "cultural_tone": "Artistic",
+        "palette_bias": "Warm and Cool Brights",
+        "flora_base": "Tropical Lush",
+        "fauna_base": "Absent"
+      },
+      "primaryMedia": "media-1767110695027-r12pkutrr",
+      "description": "The entrance to a sprawling park, where organic and weathered sculptures, styled with a Bohemian urban mosaic, are the dominant features. These medium-scale installations are primarily open to the sky with minimal openings, suggesting a natural integration rather than enclosed spaces.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "An expansive park filled with various outdoor art installations. The main focus is on the sculptures integrated into the natural landscape.",
+        "requiredElements": [
+          "entrance of park",
+          "sculptures"
         ]
       },
       "navigableElements": [
         {
-          "type": "door",
-          "position": "front center",
-          "description": "Large, inviting glass doors, the entrance to the Rhythmic Floor."
+          "type": "gate",
+          "position": "front",
+          "description": "the main park entrance"
         },
         {
-          "type": "passage",
-          "position": "rear left",
-          "description": "A dimly lit passage leading to backstage or service areas."
-        },
-        {
-          "type": "stairs",
-          "position": "rear right",
-          "description": "A metal staircase spiraling upwards to a mezzanine viewing area."
+          "type": "path",
+          "position": "throughout the park",
+          "description": "various art installations"
         }
       ],
       "dominantElements": [
-        "bar: shape=rectangular, orientation=compact, scale=medium, style=bohemian-urban, surfaces=wood, openings=minimal, interior_materials=wood|tile|fabric, internal_atmosphere=dim"
+        "Sculpture: shape=organic, orientation=centered, scale=medium, style=Bohemian urban mosaic, surfaces=weathered, openings=minimal, interior_materials=stone|stone|stone, internal_atmosphere=mystical"
       ],
       "uniqueIdentifiers": [
-        "pulsating lights",
-        "loud music"
+        "Bohemian urban mosaic sculptures",
+        "Weathered surfaces",
+        "Mystical internal atmosphere of sculptures"
       ],
-      "searchDesc": "A vibrant, crowded dance floor bathed in shifting neon, pulsing with urban art and joyous energy.",
-      "slug": "the-rhythmic-floor"
+      "searchDesc": "Urban art park entrance with bohemian architecture and vibrant sculptures.",
+      "slug": "the-park-entrance-with-sculptures"
+    },
+    "niche-1767110789416-ey6s0m9v6": {
+      "id": "niche-1767110789416-ey6s0m9v6",
+      "type": "niche",
+      "name": "The Big Lonely Tree",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A massive, ancient tree with a gnarled trunk and expansive branches. The bark is heavily adorned with bold, colorful, and abstract graffiti. Intricate mosaic tiles are embedded in the bark and branches, catching the light, alongside various rusted metal sculptures that appear to grow from the tree itself. Lush, tropical foliage spills from planters at its base and weaves through its lower branches.",
+        "colorsAndLighting": "Warm and cool brights dominate. Dappled sunlight filters through the canopy of branches, leaves, and art installations, creating a dynamic play of light and shadow. The graffiti offers intense bursts of color against the muted tones of the weathered bark and rusted metal.",
+        "atmosphere": "A sense of quiet solitude but also enduring artistic spirit. A gentle breeze rustles the leaves and carries faint whispers of distant city sounds. The air is alive with the quiet hum of creativity.",
+        "materials": "Weathered bark, painted plaster, mosaic tiles, rusted metal, reclaimed wood, abundant natural foliage.",
+        "mood": "Inspiring solitude, resilient artistry, vibrant history, a sanctuary of self-expression.",
+        "sounds": "Rustling leaves, distant city hum, faint wind chimes, creaking branches.",
+        "spatialLayout": "A clearing dominated by a single, massive tree, with an organic, spreading form. The ground is uneven, softened by foliage and mosaic pathways. The canopy creates a semi-enclosed, intimate space.",
+        "primary_surfaces": "Tree trunk and branches, ground mosaics, pathways.",
+        "secondary_surfaces": "Walls of planters, sculpted hedges around the clearing, overhead art installations.",
+        "accent_features": "Mosaic shards embedded in pathways, vibrant graffiti art, kinetic sculptures integrated into branches, large potted plants with artistic arrangements.",
+        "dominant": "Nature",
+        "secondary": "Art",
+        "accent": "Architecture",
+        "ambient": "Urban",
+        "genre": "Urban Art",
+        "architectural_tone": "Bohemian Urban",
+        "cultural_tone": "Artistic",
+        "palette_bias": "Warm and Cool Brights",
+        "flora_base": "Tropical Lush",
+        "fauna_base": "Absent"
+      },
+      "primaryMedia": "media-1767110789415-4oiwi61op",
+      "description": "The exterior of a grand, solitary tree, its form organic and sprawling. Sunlight filters through its wide canopy, illuminating the natural surroundings.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "flowing",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "natural",
+        "elevation": "ground-level",
+        "spatialLayout": "A single, magnificent tree stands solitary in an open expanse. Its branches reach wide, offering shade and a sense of peaceful isolation.",
+        "requiredElements": [
+          "the big lonley tree"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "leading to the base of the tree",
+          "description": "a winding mosaic path"
+        },
+        {
+          "type": "passage",
+          "position": "through the dense undergrowth surrounding the clearing",
+          "description": "a barely visible passage"
+        }
+      ],
+      "dominantElements": [
+        "the big lonley tree: shape=organic, orientation=flowing, scale=large, style=rustic, surfaces=wood, openings=open-passages, interior_materials=wood|earth|leaves, internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "solitary nature",
+        "vast canopy"
+      ],
+      "searchDesc": "A solitary, art-covered tree with mosaic and metal accents in a vibrant urban garden.",
+      "slug": "the-lonely-tree"
+    },
+    "niche-1767110950923-cp7lwwq41": {
+      "id": "niche-1767110950923-cp7lwwq41",
+      "type": "niche",
+      "name": "Bohemian Urban Cafe",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A charmingly cluttered outdoor space with a strong artistic vibe, featuring a mix of vintage furniture, abundant greenery, and handmade art. Dappled light from string lights creates a warm, inviting glow.",
+        "colorsAndLighting": "A lively palette of warm and cool brights, with splashes of earthy tones from the plants and rugs. String lights cast a soft, inviting glow, complemented by the natural light filtering through.",
+        "atmosphere": "The air buzzes with lively conversation and the gentle strumming of instruments. A pleasant warmth emanates from the crowd and the overhead lights, with a faint scent of coffee and aged paper.",
+        "materials": "Weathered wood of tables and chairs, rough-hewn cobblestones, woven textures of bohemian rugs, metal of string lights and ashtrays, chalk on blackboards, ceramic of planters.",
+        "mood": "Joyous artistry, vibrant urban life, inspiring, lively, and eclectic. A sense of creative freedom and convivial gathering.",
+        "sounds": "Chatter, laughter, clinking glasses, acoustic music, sketching pencil sounds, distant city hum.",
+        "spatialLayout": "An open, somewhat crowded outdoor area with distinct zones for dining, performance, and artistic creation. Tables are arranged organically, with walkways weaving through.",
+        "primary_surfaces": "Cobblestone floor, blackboard menus",
+        "secondary_surfaces": "Mismatched wooden tables, eclectic chairs and stools, planters",
+        "accent_features": "Trailing vines, string lights, bohemian rugs, instruments on stage, ashtrays, artists' sketchpads",
+        "dominant": "Architecture",
+        "secondary": "Art",
+        "accent": "Nature",
+        "ambient": "Urban",
+        "genre": "Urban Art",
+        "architectural_tone": "Bohemian Urban",
+        "cultural_tone": "Artistic",
+        "palette_bias": "Warm and Cool Brights",
+        "flora_base": "Tropical Lush",
+        "fauna_base": "Absent"
+      },
+      "primaryMedia": "media-1767110950922-4gxxn73jj",
+      "description": "An eclectic outdoor cafe, a vibrant hub of Bohemian Urban style, bathed in the warm and cool brights of string lights and adorned with lush greenery and artistic touches.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "commercial",
+        "elevation": "ground-level",
+        "spatialLayout": "An open-air cafe spread across a cobblestone area, adorned with temporary structures and vibrant decor.",
+        "requiredElements": [
+          "mismatched vintage bistro tables",
+          "eclectic chairs and stools",
+          "overflowing planters with trailing vines",
+          "string lights overhead",
+          "chalk art menus on blackboards",
+          "bohemian rugs scattered on cobblestone floor",
+          "small makeshift stage in corner with instruments",
+          "overflowing ashtrays on tables",
+          "artists sketching patrons",
+          "trailing vines",
+          "instruments"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "mismatched vintage bistro tables",
+          "eclectic chairs and stools",
+          "overflowing planters with trailing vines",
+          "string lights overhead",
+          "chalk art menus on blackboards",
+          "bohemian rugs scattered on cobblestone floor",
+          "small makeshift stage in corner with instruments",
+          "overflowing ashtrays on tables",
+          "artists sketching patrons. --exterior --populate"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front",
+          "description": "door reclaimed wooden"
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "window large arched"
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "passage open"
+        },
+        {
+          "type": "door",
+          "position": "back wall",
+          "description": "door small service"
+        }
+      ],
+      "dominantElements": [
+        "outdoor cafe: shape=organic, orientation=sprawling, scale=medium, style=bohemian, surfaces=cobblestone|wood|fabric, openings=open-passages, interior_materials=stone|wood|fabric, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "string lights overhead",
+        "makeshift stage",
+        "bohemian rugs"
+      ],
+      "searchDesc": "Crowded outdoor bistro with vintage furniture, plants, string lights, chalk art, rugs, stage, and artists.",
+      "slug": "the-bohemian-bistro"
     }
   },
   "views": {},
@@ -750,7 +1169,33 @@
                   "children": []
                 },
                 {
-                  "id": "niche-1767106796653-395u36xzq",
+                  "id": "niche-1767106886564-hqj7ldh86",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767110625894-qna8yqqnt",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "location-1767107000216-vi9vd2h95",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767110695028-34805z1im",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767110789416-ey6s0m9v6",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767110950923-cp7lwwq41",
                   "type": "niche",
                   "children": []
                 }

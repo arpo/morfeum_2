@@ -72,6 +72,7 @@ export function parseEnhancements(commandText: string): ParsedEnhancements {
   }
 
   // Extract and remove creature mode flags (--populate, --people)
+  // Both flags should set 'populate' mode to add people to the scene
   const populateMatch = result.cleanCommand.match(/\s*--populate\b/i);
   if (populateMatch) {
     result.creatureMode = 'populate';
@@ -79,7 +80,7 @@ export function parseEnhancements(commandText: string): ParsedEnhancements {
   } else {
     const peopleMatch = result.cleanCommand.match(/\s*--people\b/i);
     if (peopleMatch) {
-      result.creatureMode = 'allow';
+      result.creatureMode = 'populate';  // Same as --populate
       result.cleanCommand = result.cleanCommand.replace(peopleMatch[0], '');
     }
   }
