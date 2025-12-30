@@ -536,6 +536,102 @@
       ],
       "searchDesc": "Steampunk car interior: brass, leather, clockwork dashboard, Tesla coil lights.",
       "slug": "interior-of-car"
+    },
+    "loc-1767100656976-oy669py35": {
+      "id": "loc-1767100656976-oy669py35",
+      "type": "host",
+      "name": "Aethelburg",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "AERIAL VIEW: vast, multi-tiered cityscape of ivory hues, adorned with gold accents, domes, and minarets. A colossal, graceful archway of white stone with intricate golden patterns dominates the upper vista, with a magnificent flying galleon suspended within its opening.",
+        "colorsAndLighting": "Bright blue sky with soft white clouds. Dominant colors are white and gold, with rich blue for the ship's hull. Warm internal light glows from city windows.",
+        "atmosphere": "Ethereal beauty, elevated civilization, celestial harmony.",
+        "materials": "White stone, polished gold, metallic blue for ship's hull, ivory-toned material for cityscape.",
+        "mood": "Awe, wonder, ethereal beauty, elevated civilization, celestial harmony.",
+        "sounds": "Distant hum of airships, faint echoes of city life.",
+        "primary_surfaces": "White stone, ivory-toned materials",
+        "secondary_surfaces": "Polished gold",
+        "accent_features": "Gold patterns, domes, minarets, flying galleon, glowing windows",
+        "dominant": "White stone and gold architecture",
+        "secondary": "Ivory cityscape",
+        "accent": "Blue flying galleon",
+        "ambient": "Soft white clouds in a bright blue sky",
+        "genre": "Fantasy",
+        "architectural_tone": "Sacred, ornate",
+        "cultural_tone": "Celestial, elevated civilization",
+        "palette_bias": "White and gold",
+        "flora_base": "None specified",
+        "fauna_base": "None specified"
+      },
+      "description": "A breathtaking, sprawling fantastical city interwoven with monumental architectural structures. The city is a testament to celestial harmony, with ivory hues and gold accents dominating its multi-tiered design.",
+      "searchDesc": "Fantastical city with grand archways and flying ships.",
+      "slug": "aethelburg",
+      "structure": {
+        "spatialLayout": "Multi-tiered cityscape with interconnected buildings, a colossal archway above, and a body of water and waterfront below."
+      }
+    },
+    "b02e2604-e676-425a-9ba8-44e96e0fb6d3": {
+      "id": "b02e2604-e676-425a-9ba8-44e96e0fb6d3",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "f18d4e54-b15d-4328-85f4-d493bea2cbfd": {
+      "id": "f18d4e54-b15d-4328-85f4-d493bea2cbfd",
+      "type": "location",
+      "name": "The Celestial Archway & Sky-Harbor",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A colossal, graceful archway of white stone with intricate golden patterns dominates the upper vista. Suspended within its opening is a magnificent flying galleon, detailed with multiple masts and sails. Below, a vast, multi-tiered cityscape of ivory hues unfolds, adorned with gold accents, domes, and minarets.",
+        "colorsAndLighting": "The scene is bathed in the bright blue of a clear sky, with soft white clouds. The archway and city are primarily white and ivory, heavily accented with shimmering gold. The flying ship features a rich blue hull and golden adornments. Windows throughout the city glow with a warm internal light.",
+        "atmosphere": "The air is clear and bright, suggesting a high altitude. There is a sense of awe and grandeur. Soft white clouds drift lazily in the sky. The distant water provides a serene counterpoint to the bustling city.",
+        "materials": "The primary materials appear to be white stone and polished gold for the architectural elements. The flying ship's hull is a rich, perhaps metallic, blue with ornate gold detailing. The cityscape is built from a light, ivory-toned material, likely stone or a similar substance, with extensive gold detailing.",
+        "mood": "The mood is one of awe, wonder, and ethereal beauty, evoking a sense of elevated civilization and celestial harmony.",
+        "sounds": "Distant hum of airships, gentle wind, faint city bustle, lapping water.",
+        "primary_surfaces": "Smooth white stone, shimmering gold filigree, polished metallic blue hull.",
+        "secondary_surfaces": "Ivory-hued building material, fabric sails, glass windows.",
+        "accent_features": "Intricate golden decorative patterns on the archway, ornate superstructures on the flying ship, glowing windows.",
+        "dominant": "White and gold archway",
+        "secondary": "Blue and gold flying ship",
+        "accent": "Ivory cityscape with gold trim",
+        "ambient": "Bright, clear daylight",
+        "genre": null,
+        "architectural_tone": "Sacred, ornate, celestial",
+        "cultural_tone": "Advanced, possibly divine civilization; hub of aerial trade and travel",
+        "palette_bias": "White, gold, blue, ivory",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A colossal, graceful archway or bridge, intricate with golden decorative patterns and white stone, curving majestically across the upper half of the vista. Suspended within an opening of this grand structure is a magnificent, highly detailed flying ship, resembling an ancient galleon with multiple masts and sails, its hull a rich blue and golden, adorned with ornate superstructures. Below this, a vast, multi-tiered cityscape unfurls, characterized by numerous domes, minarets, and interconnected buildings in a light, almost ivory hue, all outlined and accented with shimmering gold details. EXTERIOR VIEW.",
+      "searchDesc": "Breathtaking celestial city with archway, flying ship, and ornate ivory architecture.",
+      "slug": "the-celestial-archway-sky-harbor",
+      "structure": {
+        "spatialLayout": "The scene is arranged vertically, with the archway and flying ship at the highest point, cascading down to the multi-tiered cityscape. Depth is created by the expanse of the city and the receding architectural elements."
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "upper half of vista",
+          "description": "Leads into the main opening of the archway."
+        }
+      ],
+      "dominantElements": [
+        "flying ship: shape=organic, orientation=flowing(vessel), scale=massive, style=sacred, surfaces=metallic-polished, openings=circular-portholes, interior_materials=\"wood|fabric|tile\", enterable=yes, internal_atmosphere=mystical",
+        "cityscape: shape=modular, orientation=sprawling(complex), scale=massive, style=sacred, surfaces=stone, openings=open-passages, interior_materials=\"stone|tile|fabric\", enterable=no, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Colossal white and gold archway",
+        "Suspended blue and gold flying galleon",
+        "Ivory cityscape with gold accents",
+        "Glowing windows",
+        "Waterfront with robed figures"
+      ],
+      "primaryMedia": "media-1767100673028-ulas0mb2c"
     }
   },
   "views": {},
@@ -596,9 +692,27 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1767100656976-oy669py35",
+      "type": "host",
+      "children": [
+        {
+          "id": "b02e2604-e676-425a-9ba8-44e96e0fb6d3",
+          "type": "region",
+          "children": [
+            {
+              "id": "f18d4e54-b15d-4328-85f4-d493bea2cbfd",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1767099773145-7xrwcuxwh"
+    "loc-1767099773145-7xrwcuxwh",
+    "loc-1767100656976-oy669py35"
   ]
 }
