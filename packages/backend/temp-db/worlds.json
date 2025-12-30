@@ -333,6 +333,163 @@
       ],
       "searchDesc": "Cozy washroom with urban art flair, mosaic details, plush seating, and vibrant colors.",
       "slug": "cozy-washroom"
+    },
+    "niche-1767101886231-bqm08me93": {
+      "id": "niche-1767101886231-bqm08me93",
+      "type": "niche",
+      "name": "The Garden With Tables",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A sun-drenched garden space filled with an array of tables and chairs. Mosaic tiles in vibrant warm and cool brights adorn tabletops and pathways. Lush, overflowing potted plants create natural divisions and a sense of enclosure. Wrought iron furniture is accented with mosaic shards. Irregularly shaped pergolas draped with vines provide dappled shade.",
+        "colorsAndLighting": "A bright, energetic mix of warm jewel tones (sapphire, ruby, emerald) and cool, electric hues (cyan, magenta, lime green). Dappled sunlight streams through leafy canopies and stained glass accents, creating dynamic light play. Warm, inviting ambient light from Edison bulbs is visible in nearby cafe structures.",
+        "atmosphere": "Bustling and cheerful, filled with the murmur of conversations and the gentle rustle of leaves. A sense of joyous artistry and vibrant urban life permeates the air, which smells of coffee, baked goods, and fresh earth.",
+        "materials": "Dominantly mosaic tiles (glass, ceramic, stone) on tables and pathways, with weathered wood for planters. Wrought iron for furniture and structural elements.",
+        "mood": "Joyous artistry, vibrant urban life, inspiring, lively, eclectic, welcoming.",
+        "sounds": "Chirping birds, distant city hum, clinking ceramic cups, soft chatter.",
+        "spatialLayout": "An open-air garden with scattered seating areas, interconnected by mosaic paths and defined by lush flora.",
+        "primary_surfaces": "Mosaic tile tabletops, mosaic pathways",
+        "secondary_surfaces": "Wrought iron furniture, weathered wood planters, stained glass panels",
+        "accent_features": "Overflowing potted plants with tropical lush foliage, mosaic shard detailing on furniture, hand-painted bird feeders, quirky found-object art installations.",
+        "dominant": "Architecture",
+        "secondary": "Art",
+        "accent": "Nature",
+        "ambient": "Urban",
+        "genre": "Urban Art",
+        "architectural_tone": "Bohemian Urban",
+        "cultural_tone": "Artistic",
+        "palette_bias": "Warm and Cool Brights",
+        "flora_base": "Tropical Lush",
+        "fauna_base": "Absent"
+      },
+      "primaryMedia": "media-1767101886230-3v2u3nksq",
+      "description": "An open-air Bohemian Urban garden scene, bathed in warm and cool bright light, featuring a central garden pavilion and scattered tables amidst natural elements.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "natural",
+        "elevation": "ground-level",
+        "spatialLayout": "A sprawling garden space filled with lush greenery and scattered tables for dining or relaxation. The layout is informal and inviting.",
+        "requiredElements": [
+          "garden",
+          "tables"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front",
+          "description": "Main entrance leading to the bustling cafe interior."
+        },
+        {
+          "type": "passage",
+          "position": "side",
+          "description": "A tiled archway leading to a quieter seating nook."
+        },
+        {
+          "type": "path",
+          "position": "center",
+          "description": "A winding mosaic path through the garden beds."
+        }
+      ],
+      "dominantElements": [
+        "Garden Pavilion: shape=organic, orientation=sprawling, scale=medium, style=Bohemian Urban, surfaces=wood, openings=open-passages, interior_materials=wood|stone|fabric, enterable=yes, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "lush greenery",
+        "scattered tables"
+      ],
+      "searchDesc": "Artistic cafe garden with mosaic tables and lush plants.",
+      "slug": "cafe-garden"
+    },
+    "niche-1767102051348-9cox9bnz0": {
+      "id": "niche-1767102051348-9cox9bnz0",
+      "type": "niche",
+      "name": "Lush Incense Spa",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A tranquil outdoor spa area, partially covered by a low-lying, undulating mosaic-tiled pavilion. Lush, overflowing planters of various tropical and medicinal plants surround worn stone pathways and serene water features. Incense burners are artfully placed, emitting gentle plumes of fragrant smoke.",
+        "colorsAndLighting": "A blend of the parent's warm and cool brights, softened by natural, dappled sunlight. Jewel tones from the mosaic tiles peek through the vibrant greens of the flora. Lighting is soft and diffused, with occasional warm glows from hidden lanterns.",
+        "atmosphere": "Calm, peaceful, and restorative. The air is thick with the fragrant, calming scent of various incenses, mingling with the earthy aroma of damp soil and lush foliage. The ambient sounds are a gentle murmur of trickling water and the rustling of leaves, a stark contrast to the vibrant urban hum.",
+        "materials": "Dominantly mosaic tiles (glass, ceramic, stone) on the pavilion structure, with natural, weathered stone for pathways and retaining walls. Abundant, lush plant life. Accents of dark, smooth wood for benches and decorative elements.",
+        "mood": "Serene, peaceful, introspective, and rejuvenating, with an underlying current of artistic vibrancy from the mosaic elements.",
+        "sounds": "Trickling water, rustling leaves, gentle breeze, distant urban hum, faint chiming",
+        "spatialLayout": "An organic, sprawling layout with winding paths that encourage slow exploration, centered around a communal meditation pavilion.",
+        "primary_surfaces": "Mosaic tile pavilion, lush foliage",
+        "secondary_surfaces": "Worn stone pathways, smooth wooden benches",
+        "accent_features": "Artfully arranged incense burners, small reflective water pools, strategically placed smooth river stones, delicate wind chimes.",
+        "dominant": "Nature",
+        "secondary": "Art",
+        "accent": "Spirituality",
+        "ambient": "Serene",
+        "genre": "Urban Art",
+        "architectural_tone": "Bohemian Urban",
+        "cultural_tone": "Artistic",
+        "palette_bias": "Warm and Cool Brights",
+        "flora_base": "Lush, tropical, medicinal herbs",
+        "fauna_base": "Absent"
+      },
+      "primaryMedia": "media-1767102051348-r04vh4q2j",
+      "description": "An exterior view of a tranquil, open-air spa area bathed in warm and cool bright light. Lush vegetation surrounds the space, and the air is thick with the scent of incense.  Bohemian urban elements are subtly integrated into the natural setting.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "This is an open-air spa area, nestled amidst lush greenery, designed for relaxation and sensory immersion.",
+        "requiredElements": [
+          "spa area",
+          "outdoors",
+          "lush",
+          "Incense"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "woven rattan loungers",
+          "stone water fountain with moss",
+          "hanging macrame plant holders with ferns",
+          "scattered scattered silk cushions",
+          "terracotta pots with herbs",
+          "natural wood incense holders with wisps of smoke"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front",
+          "description": "archway large open"
+        },
+        {
+          "type": "door",
+          "position": "left",
+          "description": "door sliding wooden"
+        },
+        {
+          "type": "object",
+          "position": "right",
+          "description": "object stone pathway leading out"
+        }
+      ],
+      "dominantElements": [
+        "zen pavilions: shape=organic, orientation=flowing, scale=intimate, style=sacred, surfaces=wood, openings=open-passages, interior_materials=fabric|wood|fabric, internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "fragrant incense smoke",
+        "abundant plant life",
+        "tranquil water features"
+      ],
+      "searchDesc": "Outdoor spa sanctuary with lush plants, mosaic art, and calming incense.",
+      "slug": "the-zen-garden"
     }
   },
   "views": {},
@@ -361,6 +518,16 @@
                 },
                 {
                   "id": "niche-1767101617345-6myogdty4",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767101886231-bqm08me93",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767102051348-9cox9bnz0",
                   "type": "niche",
                   "children": []
                 }

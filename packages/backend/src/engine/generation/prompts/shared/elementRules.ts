@@ -8,13 +8,13 @@
 // ============================================================================
 
 /**
- * Compact rules for dominantElements - PROMINENT ENTERABLE THINGS in scene
+ * Compact rules for dominantElements - ENTERABLE structures only
  */
 export const DOMINANT_ELEMENTS_RULES = `DOMINANT ELEMENTS (GO_INSIDE targets):
-Prominent STRUCTURES/OBJECTS you can ENTER: buildings, vehicles, containers, kiosks
-NOT areas/zones (like "factory floor", "main hall")
+ONLY include ENTERABLE structures: buildings, vehicles, containers, kiosks
+NOT areas/zones, NOT furniture, NOT non-enterable objects
 
-FORMAT: "name: shape=form, orientation=pos, scale=size, style=aesthetic, surfaces=exterior, openings=windows/doors, interior_materials=walls|floor|ceiling, enterable=yes|no, internal_atmosphere=mood"
+FORMAT: "name: shape=form, orientation=pos, scale=size, style=aesthetic, surfaces=exterior, openings=type, interior_materials=walls|floor|ceiling, internal_atmosphere=mood"
 
 VALUES:
 - SHAPE: rectangular|cylindrical|spherical|domed|organic|irregular|pyramidal|modular
@@ -26,13 +26,13 @@ VALUES:
 - INTERIOR_MATERIALS: "wall|floor|ceiling" (metallic|wood|stone|glass|fabric|concrete|tile)
 - INTERNAL_ATMOSPHERE: dim|bright|mystical|industrial|cozy|cramped|sterile|sacred
 
-RULES: 1-3 items max. First item = main GO_INSIDE target. enterable=yes for enterable objects.`;
+RULES: 1-3 items max. First item = main GO_INSIDE target. ALL items must be enterable.`;
 
 /**
  * Format example for JSON templates
  */
 export const DOMINANT_ELEMENTS_EXAMPLE = 
-  `"<structure>: shape=<form>, orientation=<pos>, scale=<size>, style=<aesthetic>, surfaces=<exterior>, openings=<type>, interior_materials=<walls|floor|ceiling>, enterable=<yes|no>, internal_atmosphere=<mood>"`;
+  `"<structure>: shape=<form>, orientation=<pos>, scale=<size>, style=<aesthetic>, surfaces=<exterior>, openings=<type>, interior_materials=<walls|floor|ceiling>, internal_atmosphere=<mood>"`;
 
 /**
  * Format specifications for different node types

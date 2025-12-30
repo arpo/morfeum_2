@@ -22,14 +22,13 @@ export interface TargetElementInfo {
     floor?: string;
     ceiling?: string;
   };
-  enterable?: boolean;
   internalAtmosphere?: string;
 }
 
 /**
  * Find if user input references a dominant element in the current space
  * Parses dominant element strings like:
- * "alien ship: shape=organic, orientation=horizontal, scale=massive, style=futuristic, enterable=yes, internal_atmosphere=dim-mystical"
+ * "alien ship: shape=organic, orientation=horizontal, scale=massive, style=futuristic, internal_atmosphere=dim-mystical"
  * 
  * @param userPrompt - User's input (e.g., "alien ship" or "the ship")
  * @param dominantElements - Array of dominant element strings from current node
@@ -57,7 +56,6 @@ export function findTargetElementInfo(userPrompt: string, dominantElements: unkn
     let surfaces: string | undefined;
     let openings: string | undefined;
     let interiorMaterials: { walls?: string; floor?: string; ceiling?: string } | undefined;
-    let enterable: boolean | undefined;
     let internalAtmosphere: string | undefined;
 
     if (typeof element === 'string') {
@@ -73,7 +71,6 @@ export function findTargetElementInfo(userPrompt: string, dominantElements: unkn
       const surfacesMatch = propertiesStr.match(/surfaces=([^,]+)/i);
       const openingsMatch = propertiesStr.match(/openings=([^,]+)/i);
       const interiorMaterialsMatch = propertiesStr.match(/interior_materials=([^,]+)/i);
-      const enterableMatch = propertiesStr.match(/enterable=([^,]+)/i);
       const atmosphereMatch = propertiesStr.match(/internal_atmosphere=([^,]+)/i);
 
       shape = shapeMatch ? shapeMatch[1].trim() : undefined;
@@ -83,7 +80,6 @@ export function findTargetElementInfo(userPrompt: string, dominantElements: unkn
       surfaces = surfacesMatch ? surfacesMatch[1].trim() : undefined;
       openings = openingsMatch ? openingsMatch[1].trim() : undefined;
       internalAtmosphere = atmosphereMatch ? atmosphereMatch[1].trim() : undefined;
-      enterable = enterableMatch ? enterableMatch[1].trim().toLowerCase() === 'yes' : undefined;
 
       if (interiorMaterialsMatch) {
         const parts = interiorMaterialsMatch[1].trim().split('|');
@@ -117,13 +113,6 @@ export function findTargetElementInfo(userPrompt: string, dominantElements: unkn
         };
       }
 
-      const enterableRaw = elementObj.enterable;
-      if (typeof enterableRaw === 'boolean') {
-        enterable = enterableRaw;
-      } else if (typeof enterableRaw === 'string') {
-        enterable = enterableRaw.trim().toLowerCase() === 'yes';
-      }
-
       internalAtmosphere =
         typeof elementObj.internal_atmosphere === 'string'
           ? elementObj.internal_atmosphere
@@ -145,7 +134,6 @@ export function findTargetElementInfo(userPrompt: string, dominantElements: unkn
               interiorMaterials.ceiling || ''
             ].join('|')}`
           : null,
-        typeof enterable === 'boolean' ? `enterable=${enterable ? 'yes' : 'no'}` : null,
         internalAtmosphere ? `internal_atmosphere=${internalAtmosphere}` : null
       ].filter(Boolean);
       propertiesStr = propertiesParts.join(', ');
@@ -181,7 +169,6 @@ export function findTargetElementInfo(userPrompt: string, dominantElements: unkn
         surfaces,
         openings,
         interiorMaterials,
-        enterable,
         internalAtmosphere
       };
     }
