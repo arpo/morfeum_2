@@ -140,7 +140,7 @@ export async function runCreateLocationNodePipeline(
     // ═══════════════════════════════════════════════════════════════════════════
     // STEP 2: IMAGE PROMPT GENERATION
     // ═══════════════════════════════════════════════════════════════════════════
-    const imagePrompt = await generateNodeImagePrompt({
+    const imagePromptResult = await generateNodeImagePrompt({
       structureAnalysis,
       dna: dnaResult.dna || {},
       parentDNA: parentDNAForImagePrompt,
@@ -158,7 +158,7 @@ export async function runCreateLocationNodePipeline(
     // ═══════════════════════════════════════════════════════════════════════════
     let imageUrl = '';
     if (shouldGenerateImage) {
-      imageUrl = await generateImage(apiKey, imagePrompt, helper);
+      imageUrl = await generateImage(apiKey, imagePromptResult.prompt, helper);
     }
 
     // ═══════════════════════════════════════════════════════════════════════════
@@ -170,7 +170,8 @@ export async function runCreateLocationNodePipeline(
       dnaResult,
       parentDNA: parentDNAForImagePrompt,
       imageUrl,
-      imagePrompt,
+      imagePrompt: imagePromptResult.prompt,
+      promptStructure: imagePromptResult.structure,
       shouldGenerateImage,
       helper
     });

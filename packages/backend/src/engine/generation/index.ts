@@ -20,3 +20,15 @@ export {
   characterVisualAnalysisPrompt,
   characterDeepProfilePrompt
 } from './prompts/index';
+
+// Image prompt generation (structured output)
+export {
+  generateImagePromptForNode,
+  generateStructuredImagePrompt,
+  assembleImagePrompt
+} from './shared/imagePromptGeneration';
+
+export type { ImagePromptStructure, AssemblePromptOptions } from './shared/imagePromptTypes';
+
+// Image generation
+export { generateLocationImage } from './shared/imageGeneration';

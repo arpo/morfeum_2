@@ -1,372 +1,168 @@
 {
   "nodes": {
-    "loc-1767031951327-jkbe4mh05": {
-      "id": "loc-1767031951327-jkbe4mh05",
-      "type": "location",
-      "name": "basement with a big room with a whimsical house",
-      "spaceType": "structure",
-      "dna": {},
-      "description": "Structure: basement with a big room with a whimsical house",
-      "searchDesc": "basement with a big room with a whimsical house",
-      "slug": "basement-with-a-big-room-with-a-whimsical-house",
-      "isPassThrough": true
-    },
-    "loc-1767080283680-3au0tf6ly": {
-      "id": "loc-1767080283680-3au0tf6ly",
+    "loc-1767088812477-gml74skmk": {
+      "id": "loc-1767088812477-gml74skmk",
       "type": "host",
-      "name": "The Dustlands",
+      "name": "Urban Metropolis",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL/SATELLITE VIEW: A vast, undulating desert punctuated by colossal, skeletal industrial ruins. Crumbled cities appear as distant, weathered scars on the earth, with only the largest structures visible as faint silhouettes against the hazy horizon. Vast, empty plains dominate the view, broken by the occasional dried riverbed or impact crater.",
-        "colorsAndLighting": "Harsh, direct sunlight casting long, stark shadows. Dominant hues of ochre, rust-orange, and bleached earth tones, with metallic glints from distant, decaying structures under a pale, washed-out sky.",
-        "atmosphere": "Thick, dry air shimmering with heat haze. Occasional dust storms swirl in the distance, obscuring visibility. The atmosphere is heavy with the silence of abandonment.",
-        "materials": "Dominant materials are baked earth, vast expanses of sand and dust, and the distant, rust-corroded skeletal remains of massive industrial complexes.",
-        "mood": "A pervasive sense of extreme desolation, emptiness, and the overwhelming power of nature reclaiming its territory. A feeling of profound loss and forgotten grandeur.",
-        "sounds": "The whisper of wind across desolate plains, the distant creak of decaying metal, the occasional rumble of dust storms.",
-        "primary_surfaces": "Expanses of sand, dust, cracked earth, and the corroded metal roofs and skeletal frameworks of industrial ruins visible from orbit.",
-        "secondary_surfaces": "Dried riverbeds, impact craters, rocky outcrops, and the occasional patch of hardy, sun-bleached scrub vegetation.",
-        "accent_features": "The colossal, decaying silhouettes of the largest industrial structures and forgotten cities, appearing as dark smudges against the brighter desert.",
-        "dominant": "Ochre",
-        "secondary": "Rust-orange",
-        "accent": "Bleached bone white",
-        "ambient": "Pale, hazy blue sky with intense, unfiltered sunlight.",
-        "genre": "Post-Apocalyptic",
-        "architectural_tone": "Brutalist Industrial Decay",
-        "cultural_tone": "Desperate Survival",
-        "palette_bias": "Warm and Desaturated",
-        "flora_base": "Extremely Sparse and Hardy Scrub",
-        "fauna_base": "Scavenging Insects and Reptiles"
+        "looks": "AERIAL/SATELLITE VIEW: City skyline, geography, distant landmarks as tiny shapes. Focus on the vastness of the urban landscape, the density of buildings, and the distant glow of lights.",
+        "colorsAndLighting": "City-wide light and color from above, a tapestry of artificial lights glowing against the dark sky, interspersed with the occasional park or body of water.",
+        "atmosphere": "City-wide air, weather patterns. A generally clear, cool evening with a slight urban haze.",
+        "materials": "Dominant materials visible from distance, largely concrete, glass, and steel in the building density, with patches of green from parks and blue from water.",
+        "mood": "Overall city character, energetic, ceaseless, and awe-inspiring in its scale.",
+        "sounds": "Distant city ambience, a low, continuous hum of activity and distant sirens.",
+        "primary_surfaces": "Rooftops of varied heights and materials, major illuminated roads.",
+        "secondary_surfaces": "Parks, rivers, or other open green/blue spaces.",
+        "accent_features": "Iconic distant landmarks, major bridges, or unusually dense clusters of lights.",
+        "dominant": "Deep indigo/black (night sky)",
+        "secondary": "Golden yellow/orange (city lights)",
+        "accent": "Silver/white (brightest lights, distant water)",
+        "ambient": "Dark sky with scattered city glow",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Modernist and Postmodernist",
+        "cultural_tone": "Cosmopolitan and Globalized",
+        "palette_bias": "Dark blues, purples, and grays with vibrant artificial light highlights",
+        "flora_base": "Distant parks and green belts",
+        "fauna_base": "None visible from this scale"
       },
-      "description": "A vast, arid expanse stretching to the horizon, scarred by ancient wars and environmental collapse. The remnants of civilization are mere skeletons against a harsh, sun-baked landscape, hinting at a once-thriving world now reduced to dust and ruin.",
-      "searchDesc": "Post-apocalyptic desert world with Mad Max-inspired abandoned ruins and harsh environments.",
-      "slug": "the-dustlands",
+      "description": "A vibrant and diverse city, characterized by its blend of old and new architecture, with a lively atmosphere and illuminated streets. It is a sprawling urban center that never sleeps.",
+      "searchDesc": "Sprawling metropolis, diverse architecture, illuminated streets, vibrant nightlife, blend of old and new.",
+      "slug": "urban-metropolis",
       "structure": {
-        "spatialLayout": "Chaotic, fragmented, and sprawling. Ruined cities are scattered organically, connected by faint, eroded tracks and ancient, broken highways. Vast swathes of untouched, barren desert separate these remnants."
+        "spatialLayout": "City layout from above, a dense core of skyscrapers surrounded by a spread of lower buildings, with major arterial routes cutting through."
       }
     },
-    "48fe05ab-fba7-44db-879b-90bf208b0e58": {
-      "id": "48fe05ab-fba7-44db-879b-90bf208b0e58",
+    "3e8932c8-66ab-45fd-a3b3-7c67fb1f7d40": {
+      "id": "3e8932c8-66ab-45fd-a3b3-7c67fb1f7d40",
       "type": "region",
-      "name": "Region",
-      "spaceType": "exterior",
-      "dna": {},
-      "description": "",
-      "searchDesc": "",
-      "slug": "region",
-      "isPassThrough": true
-    },
-    "8a7b95d4-3930-4272-891a-1ba1be008385": {
-      "id": "8a7b95d4-3930-4272-891a-1ba1be008385",
-      "type": "location",
-      "name": "Rustbucket Ruins",
+      "name": "Central Plaza District",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Vast, sprawling industrial ruins dominate the landscape. Massive, skeletal structures of rusted metal and weathered concrete rise precariously against the horizon. The layout is chaotic and fragmented, with collapsed sections and piles of debris.",
-        "colorsAndLighting": "The scene is bathed in harsh, golden sunlight that casts long, deep shadows. Dominant colors are muted ochres, sandy browns, and the deep rust tones of decaying metal. The light is intense and unforgiving.",
-        "atmosphere": "The air is dry, hot, and thick with swirling dust particles. A faint, metallic tang hangs in the still, oppressive atmosphere. There's a profound sense of stillness, broken only by the whisper of wind.",
-        "materials": "The primary materials are heavily weathered concrete and deeply corroded, rusted metal. Textures are rough, pitted, and uneven, bearing the marks of decades of neglect and harsh environmental exposure.",
-        "mood": "A profound sense of desolation and abandonment pervades the area. It evokes feelings of forgotten purpose and the relentless passage of time, a monument to industrial decline.",
-        "sounds": "Whispering wind, creaking metal, distant echoes of collapse, skittering insects, crunching grit underfoot.",
-        "primary_surfaces": "Rough, pockmarked concrete and deeply oxidized, flaking metal.",
-        "secondary_surfaces": "Gravel, sand, shattered glass, brittle plastic fragments.",
-        "accent_features": "Twisted rebar extruding from concrete, dangling chains, broken gauges and control panels.",
-        "dominant": "Rust-orange with extensive coverage on metal structures.",
-        "secondary": "Desert-sand beige for concrete and ground cover.",
-        "accent": "Muted grey for shadows and deeper decay, occasional flashes of corroded green patina.",
-        "ambient": "Harsh, high-contrast sunlight.",
+        "looks": "ELEVATED STREET VIEW: District atmosphere, street character, general building styles (NOT specific facades). Focus on the interplay of brick structures and modern elements, with the vast glass canopy dominating the overhead view.",
+        "colorsAndLighting": "Neighborhood light quality, a mix of warm uplights on brick facades and the cool, deep blue of the canopy's twilight reflection.",
+        "atmosphere": "District air and energy, a vibrant and social environment with the hum of activity beneath the canopy.",
+        "materials": "Common building materials in the area, primarily textured brick for older structures and reflective glass and metal for the canopy and modern additions.",
+        "mood": "Neighborhood emotional tone, inviting and awe-inspiring, with a sense of urban spectacle and social gathering.",
+        "sounds": "District ambient sounds, a low murmur of conversation, distant traffic, and the faint echo of footsteps on pavement.",
+        "primary_surfaces": "Textured brick facades of historical buildings.",
+        "secondary_surfaces": "Paved plaza grounds, glass canopy surface, metallic walkways.",
+        "accent_features": "The grand glass canopy, the stylized elephant mural, and the small trees with bright red foliage.",
+        "dominant": "Deep blue (from canopy reflection)",
+        "secondary": "Warm terracotta (from brick buildings)",
+        "accent": "Vibrant purple (from mural spotlights)",
+        "ambient": "Cool twilight sky",
         "genre": null,
-        "architectural_tone": "Brutalist industrial decay with elements of post-apocalyptic ruin.",
-        "cultural_tone": "A relic of a failed industrial past, now reclaimed by the desert and perhaps scavenged by hardy survivors.",
-        "palette_bias": "Warm earth tones and metallic hues.",
-        "flora_base": "Sparse, hardy desert scrub and tenacious weeds.",
-        "fauna_base": "Scuttling insects, desert rodents, and opportunistic birds of prey."
+        "architectural_tone": "Modern commercial with historical brick elements",
+        "cultural_tone": "Urban social hub",
+        "palette_bias": "Cool blues and warm earth tones with pops of vibrant artificial color",
+        "flora_base": "Lush green bushes, small trees with bright red foliage",
+        "fauna_base": null
       },
-      "description": "A collection of crumbling, abandoned buildings in a vast desert landscape. EXTERIOR VIEW.",
-      "searchDesc": "Massive, decaying industrial ruins in a harsh desert, with rusted silos and crumbling concrete structures.",
-      "slug": "rustbucket-ruins",
+      "description": "A lively urban hub featuring historical brick buildings and a central plaza, all sheltered by a grand glass canopy. Modern connecting structures hint at the city's expansive reach.",
+      "searchDesc": "Urban plaza district with historical brick buildings under a glass canopy, vibrant social hub.",
+      "slug": "central-plaza-district",
       "structure": {
-        "spatialLayout": "The space is characterized by vast, open desert dotted with imposing, broken industrial structures. There's a sense of depth created by the scale of the ruins and the endless horizon."
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "center of main building facade",
-          "description": "Leads into the central factory building, potentially dark and dusty."
-        },
-        {
-          "type": "passage",
-          "position": "between two collapsed silos",
-          "description": "Opens into a more overgrown and chaotic section of the ruins."
-        }
-      ],
-      "dominantElements": [
-        "abandoned-factory: shape=rectangular-industrial, orientation=sprawling, scale=massive, style=brutalist, surfaces=weathered-concrete, openings=minimal, interior_materials=concrete|rubble|corroded-metal, enterable=yes, internal_atmosphere=dim",
-        "crumbling-storage-silo: shape=cylindrical, orientation=vertical, scale=large, style=industrial, surfaces=rusted-metal, openings=open-passages, interior_materials=metal|metal-grating|none, enterable=no, internal_atmosphere=n/a"
-      ],
-      "uniqueIdentifiers": [
-        "Towering, rusted metal silos",
-        "Skeletal remains of conveyor belts",
-        "Wind-eroded concrete structures",
-        "Scattered piles of industrial debris",
-        "A pervasive scent of decay and hot metal"
-      ],
-      "primaryMedia": "media-1767080300657-5mu8fmllo"
+        "spatialLayout": "Street layout, density, characterized by an open central plaza surrounded by buildings, with interconnected walkways."
+      }
     },
-    "niche-1767080392947-7miepi01s": {
-      "id": "niche-1767080392947-7miepi01s",
-      "type": "niche",
-      "name": "abandoned-factory",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A vast, open interior space within a decaying industrial structure. Skeletal remnants of enormous machinery, concrete pillars, and exposed metal frameworks dominate the view. Dust and debris cover the floor, with shafts of sunlight piercing the gloom from holes in the roof.",
-        "colorsAndLighting": "Harsh sunlight streams through gaps in the structure, creating stark contrasts and long shadows. Dominant colors are rust-orange, desaturated greys of concrete, and the pervasive ochre of dust. Metallic glints catch the light from decaying machinery.",
-        "atmosphere": "Still, dry air, heavy with the scent of rust, oil, and dust. The silence is profound, broken only by the occasional creak of stressed metal or the whisper of wind through openings.",
-        "materials": "Corroded steel, heavily weathered concrete, thick layers of ochre dust, shattered glass, exposed rebar.",
-        "mood": "Profound desolation, a sense of lost purpose, and the quiet triumph of entropy. A feeling of oppressive emptiness and forgotten ambition.",
-        "sounds": "Distant metallic groans, wind whistling, settling dust, echoes of emptiness, dripping water (rare).",
-        "spatialLayout": "Vast, cavernous open spaces with high ceilings, broken up by the imposing forms of defunct machinery and structural supports. Narrow passages and service tunnels are hinted at in the shadows.",
-        "primary_surfaces": "Crumbling concrete walls and floors, large expanses of rusted metal plating.",
-        "secondary_surfaces": "Heaps of scrap metal, broken pipes, tangled wires, drifts of fine ochre dust.",
-        "accent_features": "The colossal, inactive machinery, skeletal framework of gantries and conveyor belts, patches of hardy, sun-bleached scrub pushing through cracks.",
-        "dominant": "Ochre",
-        "secondary": "Rust-orange",
-        "accent": "Bleached bone white",
-        "ambient": "Pale, hazy light filtered through dust and decay.",
-        "genre": "Post-Apocalyptic",
-        "architectural_tone": "Brutalist Industrial Decay",
-        "cultural_tone": "Desperate Survival",
-        "palette_bias": "Warm and Desaturated",
-        "flora_base": "Extremely Sparse and Hardy Scrub",
-        "fauna_base": "Scavenging Insects and Reptiles"
-      },
-      "primaryMedia": "media-1767080392946-k61o3y4w4",
-      "description": "The interior of the abandoned factory is a colossal, dimly lit space. Massive concrete pillars, stained and scarred, rise to meet a ceiling of corroded metal. The floor is a chaotic carpet of rubble and industrial detritus, with the skeletal remains of long-dormant machinery scattered throughout the sprawling layout. Minimal, grimy openings high on the walls allow only slivers of weak light to penetrate the pervasive gloom. The air is heavy with the scent of decay and damp.",
-      "structure": {
-        "form": "rectangular-industrial",
-        "roofType": "flat",
-        "scale": "massive",
-        "orientation": "sprawling",
-        "openings": "minimal",
-        "openingShape": "irregular",
-        "functionalType": "industrial",
-        "elevation": "ground-level",
-        "spatialLayout": "Vast, cavernous industrial spaces stretch out horizontally, marked by towering support pillars and a network of elevated walkways. The interior is a maze of forgotten machinery and debris, dimly lit by sparse, high-placed windows.",
-        "requiredElements": [
-          "concrete",
-          "rubble",
-          "corroded-metal"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "far wall",
-          "description": "A heavy, rusted metal door leading back outside to 'Rustbucket Ruins'."
-        },
-        {
-          "type": "passage",
-          "position": "left side",
-          "description": "A dark, debris-strewn passage leading further into the factory's depths."
-        },
-        {
-          "type": "stairs",
-          "position": "center-right",
-          "description": "A rickety metal staircase leading up to an elevated walkway."
-        }
-      ],
-      "dominantElements": [
-        "assembly-line-machinery: shape=industrial-complex, orientation=linear, scale=massive, style=brutalist, surfaces=corroded-metal, openings=none, interior_materials=concrete|rubble|corroded-metal, enterable=no, internal_atmosphere=dim",
-        "collapsed-gantry: shape=irregular, orientation=scattered, scale=large, style=industrial, surfaces=corroded-metal, openings=none, interior_materials=concrete|rubble|corroded-metal, enterable=no, internal_atmosphere=dim",
-        "control-booth: shape=rectangular, orientation=elevated, scale=medium, style=industrial, surfaces=concrete, openings=minimal, interior_materials=concrete|rubble|corroded-metal, enterable=yes, internal_atmosphere=dim"
-      ],
-      "uniqueIdentifiers": [
-        "faint smell of oil and decay",
-        "constant, low hum of residual power",
-        "shadows stretching long and deep",
-        "scattered puddles of stagnant water"
-      ],
-      "searchDesc": "Abandoned factory ruins, vast, desolate, rusted machinery, ochre dust.",
-      "slug": "null-of-rustbucket-ruins"
-    },
-    "niche-1767081989376-fbfixmask": {
-      "id": "niche-1767081989376-fbfixmask",
-      "type": "niche",
-      "name": "Basement with a Room with Whimsical House",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A rough concrete cellar space, dominated by a surprisingly intact, albeit quirky and brightly decorated, structure that resembles a small house built from salvaged corrugated metal, brightly painted wooden planks, and other scavenged materials.  Mismatched textiles hang as makeshift curtains, and flickering, colored lights cast an odd glow.",
-        "colorsAndLighting": "Dominated by warm earth tones and metallic hues from the cellar's raw concrete and rusted metal, contrasted sharply by vibrant, salvaged paint splashes (blues, reds, yellows) on the 'house' structure.  The lighting is a chaotic mix of harsh, ambient cellar light filtering in and the unsteady glow of colored, salvaged bulbs within the whimsical room.",
-        "atmosphere": "The air is cooler and less dusty than the basement above, carrying a faint scent of oil and something surprisingly sweet, perhaps preserved fruit.  There's a palpable sense of determined cheerfulness, a stark defiance against the surrounding desolation.",
-        "materials": "Heavily weathered concrete, rusted corrugated metal, salvaged painted wood, brittle plastics, scavenged textiles.",
-        "mood": "A defiant, salvaged joy. It evokes a sense of resourceful optimism and a stubborn refusal to succumb to the surrounding abandonment, like a defiant wildflower blooming on a battlefield.",
-        "sounds": "Dripping water, faint hum of salvaged lights, distant wind, occasional creak of metal.",
-        "spatialLayout": "A cavernous, rough-hewn concrete cellar space, with one section carved out and transformed into a small, distinct 'room' that houses the whimsical structure.",
-        "primary_surfaces": "Rough, pockmarked concrete walls of the cellar, brightly painted corrugated metal panels of the 'house'.",
-        "secondary_surfaces": "Salvaged wooden planks, worn fabric scraps, exposed wiring.",
-        "accent_features": "Mismatched, hand-painted murals on cellar walls depicting stylized flora and fauna, quirky found-object sculptures, strings of colorful, salvaged bottle caps.",
-        "dominant": "Rust-orange and sandy beige (from the cellar context).",
-        "secondary": "Vibrant, salvaged blues and reds (from the whimsical house).",
-        "accent": "Corroded green patina and dull, flickering colored lights.",
-        "ambient": "Harsh, high-contrast sunlight filtering into the cellar, juxtaposed with the unsteady, colored glow within the 'house'.",
-        "genre": "Post-Apocalyptic",
-        "architectural_tone": "Brutalist industrial decay with elements of post-apocalyptic ruin.",
-        "cultural_tone": "A relic of a failed industrial past, now reclaimed by the desert and perhaps scavenged by hardy survivors.",
-        "palette_bias": "Warm earth tones and metallic hues.",
-        "flora_base": "Sparse, hardy desert scrub and tenacious weeds.",
-        "fauna_base": "Scuttling insects, desert rodents, and opportunistic birds of prey."
-      },
-      "primaryMedia": "media-1767081989375-8rplwfpz1",
-      "description": "The air is cool and damp, smelling faintly of concrete and old earth. Exposed pipes and rough, unfinished concrete walls of the basement surround you. In the center of this stark environment sits a small, vividly colored house, its design a stark contrast to the Brutalist Industrial Decay aesthetic of the basement. Its windows are oddly shaped, and a cheerful, albeit slightly faded, paint job adorns its exterior. The contrast is jarring and creates a surreal focal point within the grimy expanse.",
-      "structure": {
-        "form": "irregular",
-        "roofType": "null",
-        "scale": "medium",
-        "orientation": "sprawling",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "residential",
-        "elevation": "underground",
-        "spatialLayout": "This is a dimly lit, unfinished basement space. Within it, a singular, brightly colored, and whimsical house structure stands out against the stark, industrial decay.",
-        "requiredElements": [
-          "basement",
-          "room",
-          "whimsical house",
-          "room with whimsical house"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "upper level, far wall",
-          "description": "leads back to the main basement ruins, dusty and dark"
-        },
-        {
-          "type": "door",
-          "position": "central, slightly ajar",
-          "description": "opens into the whimsical room"
-        }
-      ],
-      "dominantElements": [
-        "whimsical house: shape=compact, orientation=centered, scale=small, style=whimsical, surfaces=painted-wood, openings=mixed, interior_materials=painted-wood|carpet|painted-wood, enterable=yes, internal_atmosphere=cozy"
-      ],
-      "uniqueIdentifiers": [
-        "contrast between basement decay and whimsical house"
-      ],
-      "searchDesc": "A cellar with a room that is a whimsical, salvaged house.",
-      "slug": "the-whimsical-cellar"
-    },
-    "loc-1767082012415-60ouwkbnv": {
-      "id": "loc-1767082012415-60ouwkbnv",
+    "cebf59c6-db62-4e11-b50e-e4e5d2fb1996": {
+      "id": "cebf59c6-db62-4e11-b50e-e4e5d2fb1996",
       "type": "location",
-      "name": "whimsical house",
-      "spaceType": "structure",
-      "dna": {},
-      "description": "Structure: whimsical house",
-      "searchDesc": "whimsical house",
-      "slug": "whimsical-house",
-      "isPassThrough": true
-    },
-    "niche-1767082021237-0rrcdodef": {
-      "id": "niche-1767082021237-0rrcdodef",
-      "type": "niche",
-      "name": "whimsical house",
-      "spaceType": "interior",
+      "name": "The Grand Canopy Plaza",
+      "spaceType": "exterior",
       "dna": {
-        "looks": "A compact, intimate space with an eclectic and salvaged aesthetic. Walls are primarily painted wood, showing signs of repair and repurposing, with splashes of vibrant, almost defiant color against the muted backdrop of the world.  Worn carpet adds a touch of softness.  The overall impression is one of cheerful resilience.",
-        "colorsAndLighting": "The dominant colors are warm, earthy tones from the painted wood, overlaid with brighter, more whimsical hues like faded turquoise, sun-bleached orange, and dusty rose.  Soft, warm lighting emanates from a central, low-lying fixture, creating an intimate and cozy atmosphere that contrasts with the harsh exterior light.",
-        "atmosphere": "The air is surprisingly still and free of dust, carrying a faint, sweet scent of aged wood and perhaps a hint of dried desert flowers.  A gentle, almost imperceptible hum emanates from the wind-chimes, providing a subtle acoustic contrast to the silence of the outside.",
-        "materials": "The primary interior materials are salvaged and painted wood, with patches of worn, low-pile carpet.  Accents include twisted metal fragments used decoratively and in the wind-chimes.",
-        "mood": "A profound sense of defiant cheerfulness and cozy resilience, a small pocket of warmth and personality carved out of desolation.",
-        "sounds": "Soft tinkling of wind-chimes, creaking of old wood, faint rustle of carpet.",
-        "spatialLayout": "Compact, centralized, and small-scale.",
-        "primary_surfaces": "Painted wood panels, showing texture and imperfections.",
-        "secondary_surfaces": "Worn carpet with a faded, playful pattern.",
-        "accent_features": "Mismatched, brightly painted furniture, salvaged metal wind-chimes, hand-painted murals.",
-        "dominant": "Warm, sun-bleached ochre and faded terracotta from the painted wood.",
-        "secondary": "Muted desert sand beige and rust tones from the worn carpet.",
-        "accent": "Splashes of whimsical, faded turquoise and dusty rose.",
-        "ambient": "Soft, warm, and inviting.",
-        "genre": "Post-Apocalyptic",
-        "architectural_tone": "null",
-        "cultural_tone": "null",
-        "palette_bias": "Warm earth tones and metallic hues.",
-        "flora_base": "null",
-        "fauna_base": "null"
+        "looks": "A large, open urban plaza defined by its expansive glass canopy and the surrounding multi-story brick buildings. Modern elevated walkways are visible in the background, hinting at a larger metropolis.",
+        "colorsAndLighting": "Warm yellows from building uplights contrast with the cool deep blue of the twilight sky reflected in the canopy, punctuated by vibrant purple spotlights on the elephant mural. Shadows are cast by the architecture and the crowd.",
+        "atmosphere": "The air is cool and crisp with the feel of an urban evening. A lively, social energy emanates from the diverse crowd, creating a palpable buzz of conversation and movement. The canopy creates a sheltered, enclosed feeling.",
+        "materials": "The dominant materials are textured brick and reflective glass, with metallic accents on the canopy structure and modern walkways. Natural elements like wood benches and green bushes provide softer textures.",
+        "mood": "The mood is vibrant and inviting, a place of social gathering and urban spectacle. There's a sense of wonder evoked by the scale and the artistic illumination.",
+        "sounds": "Distant traffic, muffled conversations, occasional laughter, footsteps on pavement, faint ambient music.",
+        "primary_surfaces": "Textured red brick, reflective glass, polished concrete.",
+        "secondary_surfaces": "Wood (benches), metal (walkways), foliage (bushes, trees).",
+        "accent_features": "The dramatically lit elephant mural, bright red foliage.",
+        "dominant": "Deep blue (sky reflection, twilight) covering much of the canopy.",
+        "secondary": "Warm yellow (uplights) on building facades.",
+        "accent": "Vibrant purple (mural spotlights).",
+        "ambient": "Cool twilight glow.",
+        "genre": null,
+        "architectural_tone": "Modern commercial with historical brick elements.",
+        "cultural_tone": "A public gathering space for urban dwellers, a hub for social interaction and cultural display.",
+        "palette_bias": "Cool blues and purples contrasted with warm yellows and earthy reds.",
+        "flora_base": "Bushes, small trees.",
+        "fauna_base": "None"
       },
-      "primaryMedia": "media-1767082021236-68ov5d6du",
-      "description": "You are inside a small, cozy whimsical house. The walls are a cheerful painted wood, and a soft carpet cushions your feet. A small, round table sits in the center, surrounded by a plump armchair and a quaint bookshelf. A miniature circular window with intricate stained glass lets in dappled light, and the walls are adorned with playful, hand-painted murals. The overall atmosphere is one of warmth and delightful charm.",
+      "description": "A bustling urban plaza enclosed by a vast glass canopy. Old brick buildings with numerous windows line its sides, illuminated by warm uplights. A central brick building features a large, dramatically lit mural of an elephant. Modern walkways and bridges are visible beyond. EXTERIOR VIEW.",
+      "searchDesc": "Bustling urban plaza under a glass canopy, with a dramatic elephant mural and warm lighting.",
+      "slug": "the-grand-canopy-plaza",
       "structure": {
-        "form": "compact",
-        "roofType": "null",
-        "scale": "small",
-        "orientation": "centered",
-        "openings": "mixed",
-        "openingShape": "mixed",
-        "functionalType": "residential",
-        "elevation": "ground-level",
-        "spatialLayout": "This compact interior is efficiently laid out, with everything arranged around a central point. Painted wooden walls give way to a soft carpeted floor and a matching painted wood ceiling, creating a warm and inviting atmosphere.",
-        "requiredElements": [
-          "whimsical house interior"
-        ]
+        "spatialLayout": "The plaza is a large, relatively flat open space, enclosed by buildings on its sides and the overhead canopy. Depth is created by the receding walkways and bridges."
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "main wall",
-          "description": "leads back to the room containing the whimsical house"
+          "position": "central brick building, mural base",
+          "description": "Leads into the central brick building, likely a public space."
+        },
+        {
+          "type": "bridge",
+          "position": "overhead, spanning sections of the plaza",
+          "description": "Connects to other buildings and parts of the metropolis."
+        },
+        {
+          "type": "passage",
+          "position": "edges of the plaza, between buildings",
+          "description": "Opens to other urban areas and walkways."
         }
       ],
       "dominantElements": [
-        "small-round-table: shape=round, orientation=centered, scale=small, style=whimsical, surfaces=painted-wood, openings=none, interior_materials=painted-wood|carpet|painted-wood, enterable=no, internal_atmosphere=cozy",
-        "plush-armchair: shape=irregular, orientation=adjacent, scale=small, style=whimsical, surfaces=fabric, openings=none, interior_materials=painted-wood|carpet|painted-wood, enterable=no, internal_atmosphere=cozy",
-        "decorative-bookshelf: shape=rectangular, orientation=against-wall, scale=small, style=whimsical, surfaces=painted-wood, openings=minimal, interior_materials=painted-wood|carpet|painted-wood, enterable=no, internal_atmosphere=cozy"
+        {
+          "shape": "rectangular-modular",
+          "orientation": "sprawling",
+          "scale": "massive",
+          "style": "commercial",
+          "surfaces": "glass-canopy, brick-facades",
+          "openings": "large-glass (canopy), numerous-windows (buildings)",
+          "interior_materials": "stone|tile|metal",
+          "enterable": "no",
+          "internal_atmosphere": "open-air"
+        },
+        {
+          "shape": "irregular",
+          "orientation": "vertical",
+          "scale": "large",
+          "style": "artistic",
+          "surfaces": "painted-brick",
+          "openings": "none",
+          "interior_materials": "brick|plaster|paint",
+          "enterable": "no",
+          "internal_atmosphere": "decorative"
+        }
       ],
       "uniqueIdentifiers": [
-        "small circular window with stained glass",
-        "quirky, hand-painted wall murals",
-        "a collection of mismatched, brightly colored cushions"
+        "vast glass canopy",
+        "elephant mural",
+        "warm uplighting",
+        "modern walkways and bridges",
+        "lush green bushes and red foliage trees"
       ],
-      "searchDesc": "Cozy, salvaged whimsical interior with painted wood, carpet, and quirky decor.",
-      "slug": "interior-of-whimsical-house-shape-compact-orientation-centered-scale-small-style-whimsical-surfaces-painted-wood-openings-mixed-interior-materials-painted-wood-carpet-painted-wood-enterable-yes-internal-atmosphere-cozy"
+      "primaryMedia": "media-1767088834920-z01onremi"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1767080283680-3au0tf6ly",
+      "id": "loc-1767088812477-gml74skmk",
       "type": "host",
       "children": [
         {
-          "id": "48fe05ab-fba7-44db-879b-90bf208b0e58",
+          "id": "3e8932c8-66ab-45fd-a3b3-7c67fb1f7d40",
           "type": "region",
           "children": [
             {
-              "id": "8a7b95d4-3930-4272-891a-1ba1be008385",
+              "id": "cebf59c6-db62-4e11-b50e-e4e5d2fb1996",
               "type": "location",
-              "children": [
-                {
-                  "id": "niche-1767080392947-7miepi01s",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1767081989376-fbfixmask",
-                  "type": "niche",
-                  "children": [
-                    {
-                      "id": "loc-1767082012415-60ouwkbnv",
-                      "type": "location",
-                      "children": [
-                        {
-                          "id": "niche-1767082021237-0rrcdodef",
-                          "type": "niche",
-                          "children": []
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "children": []
             }
           ]
         }
@@ -374,6 +170,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1767080283680-3au0tf6ly"
+    "loc-1767088812477-gml74skmk"
   ]
 }

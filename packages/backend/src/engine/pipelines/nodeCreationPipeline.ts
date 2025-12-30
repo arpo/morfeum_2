@@ -27,6 +27,8 @@ import { deepestNodeDNAGeneration } from '../generation/prompts/locations/deepes
 import { worldTreeImagePromptContext } from '../generation/prompts/locations/worldTree';
 import { parentChainDNAGeneration } from '../generation/prompts/locations/parentChainDNA';
 import { applyMorfeumStyle } from '../generation/shared/applyMorfeumStyle';
+import { assembleImagePrompt } from '../generation/shared/imagePromptAssembler';
+import type { ImagePromptStructure } from '../generation/shared/imagePromptTypes';
 import { runInteriorFlow } from './nodeCreation/interiorFlow';
 import {
   buildHierarchyStructure,
@@ -144,7 +146,7 @@ export async function runNodeCreationPipeline(
 
     helper.startStage('image_prompt_generation', 'Crafting visual description...');
 
-    // Step 1: LLM generates the actual FLUX image description from context
+    // Step 1: LLM generates structured JSON image description from context
     const imagePromptResult = await generateText(
       apiKey,
       [{ role: 'user', content: imageContextPrompt }],
@@ -155,8 +157,52 @@ export async function runNodeCreationPipeline(
       throw new Error(imagePromptResult.error || 'Failed to generate image prompt');
     }
 
-    // Apply Morfeum visual style for consistent look
-    const imagePrompt = applyMorfeumStyle(imagePromptResult.data.text.trim());
+    // Parse the structured JSON response
+    let promptStructure: ImagePromptStructure;
+    const imagePromptRaw = imagePromptResult.data.text.trim();
+    
+    try {
+      // Try to extract JSON from response
+      let jsonStr = imagePromptRaw;
+      if (jsonStr.startsWith('```json')) {
+        jsonStr = jsonStr.replace(/^```json\s*/, '').replace(/\s*```$/, '');
+      } else if (jsonStr.startsWith('```')) {
+        jsonStr = jsonStr.replace(/^```\s*/, '').replace(/\s*```$/, '');
+      }
+      const jsonMatch = jsonStr.match(/\{[\s\S]*\}/);
+      if (jsonMatch) {
+        jsonStr = jsonMatch[0];
+      }
+      const parsed = JSON.parse(jsonStr);
+      promptStructure = {
+        background: parsed.background || '',
+        midground: parsed.midground || '',
+        foreground: parsed.foreground || '',
+        lighting: parsed.lighting || '',
+        atmosphere: parsed.atmosphere || '',
+        constraints: [],
+        negatives: [],
+        camera: parsed.camera,
+        lens: parsed.lens
+      };
+    } catch {
+      // Fallback: treat as plain text (old format) for backward compatibility
+      promptStructure = {
+        background: '',
+        midground: imagePromptRaw,
+        foreground: '',
+        lighting: '',
+        atmosphere: '',
+        constraints: [],
+        negatives: []
+      };
+    }
+
+    // Assemble into string and apply Morfeum visual style
+    const imagePrompt = applyMorfeumStyle(assembleImagePrompt(promptStructure, {
+      includeNoCreatures: true,
+      includeMorfeumStyle: false // applyMorfeumStyle adds it
+    }));
 
     helper.completeStage('image_prompt_generation', 'Visual description ready', { prompt: imagePrompt });
 
@@ -251,8 +297,8 @@ export async function runNodeCreationPipeline(
     // Use WorldTreeBuilder to create proper TreeNode structure
     const worldTree = WorldTreeBuilder.build(spawnId, hierarchyStructure);
 
-    // Assign media to deepest node
-    assignMediaToTree(worldTree, imageUrl, imagePrompt);
+    // Assign media to deepest node with structured prompt for reuse
+    assignMediaToTree(worldTree, imageUrl, imagePrompt, promptStructure);
 
     helper.completeStage('tree_building', 'World tree ready');
 
