@@ -125,6 +125,54 @@ Backend (nested) → extractCleanDNA → Store (clean)
 Store → getCascadedDNA → getMergedDNA → Backend LLM (merged)
 ```
 
+## Space Type Registry Pattern
+
+### Container Type Detection
+Location: `packages/backend/src/engine/generation/shared/spaceTypeRegistry/`
+
+**Problem**: Going inside a car generated building-like interiors. Same issue for boats, tents, and other non-building spaces.
+
+**Solution**: Centralized registry with specialized rules per container type.
+
+**Architecture**:
+```
+spaceTypeRegistry/
+├── types.ts                    # Type definitions
+├── index.ts                    # Registry + helper functions
+├── building/                   # interior, exterior, openAir
+├── vehicle/                    # carCabin, boatCabin, boatDeck
+├── natural/                    # clearing
+└── tentLike/                   # interior
+```
+
+**Container Types**:
+- `building` - Standard architectural structures
+- `vehicle-car` - Automotive vehicles (cars, trucks)
+- `vehicle-boat` - Watercraft (ships, boats, yachts)
+- `natural` - Natural formations (clearings, groves)
+- `tent-like` - Temporary fabric structures
+
+**Flow**:
+1. `structureAnalysis.ts` - LLM outputs `containerType` field
+2. `nicheDNA.ts` - Uses `getDNAGuidance(containerType, perspective)`
+3. `imagePromptGeneration.ts` - Uses `getImageConstraints(containerType, perspective)`
+
+**Key Functions**:
+```typescript
+import { 
+  getDNAGuidance,       // DNA prompt guidance for container type
+  getImageConstraints,  // FLUX constraints for container type
+  getStructureGuidance, // Structure analysis guidance
+  SPACE_TYPE_REGISTRY   // Full registry object
+} from './spaceTypeRegistry';
+```
+
+**Adding New Container Type**:
+1. Add type to `ContainerType` union in `types.ts`
+2. Create file in appropriate category folder (e.g., `vehicle/airplane.ts`)
+3. Import and add to `SPACE_TYPE_REGISTRY` in index.ts
+4. LLM prompt auto-updates via `getContainerTypeDescriptions()`
+
 ## Structure Analysis Patterns
 
 ### LLM-Based Elevation Detection

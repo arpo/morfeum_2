@@ -2,7 +2,26 @@
 
 ## 2025-12-30
 
-- [x] **Prompt Index Documentation - COMPLETED (Latest)**: Created comprehensive prompt reference at `packages/backend/src/engine/generation/prompts/PROMPT_INDEX.md`
+- [x] **Space Type Registry - COMPLETED (Latest)**: Centralized registry for handling different container types (buildings, vehicles, boats, tents)
+  - **Problem**: Going inside a car generated building-like interiors instead of car cabins. Same issue for boats, tents.
+  - **Solution**: LLM detects `containerType` during structure analysis, registry provides specialized rules/prompts
+  - **Container types**: building, vehicle-car, vehicle-boat, natural, tent-like
+  - **One file per type**: Each SpaceTypeDefinition in its own file for easy maintenance
+  - **Files created**:
+    - `spaceTypeRegistry/types.ts` - Type definitions
+    - `spaceTypeRegistry/index.ts` - Registry + helper functions
+    - `spaceTypeRegistry/building/` - interior, exterior, openAir
+    - `spaceTypeRegistry/vehicle/` - carCabin, boatCabin, boatDeck
+    - `spaceTypeRegistry/natural/` - clearing
+    - `spaceTypeRegistry/tentLike/` - interior
+  - **Files modified**:
+    - `navigation/types.ts` - Added containerType to StructureAnalysis
+    - `structureAnalysis.ts` - LLM outputs containerType
+    - `nicheDNA.ts` - Uses registry DNA guidance
+    - `imagePromptGeneration.ts` - Uses registry image constraints
+    - `PROMPT_INDEX.md` - Updated documentation
+
+- [x] **Prompt Index Documentation - COMPLETED**: Created comprehensive prompt reference at `packages/backend/src/engine/generation/prompts/PROMPT_INDEX.md`
   - Catalogs 30+ prompts organized by category (Vision, Character, Navigation, Location/DNA, Image, Chat, Enhancer)
   - Documents file locations with relative links
   - Shows pipeline flow diagrams for all major flows (World Tree, Navigation, Character, Image Drop)

@@ -67,88 +67,6 @@
         "spatialLayout": "Street layout, density, characterized by an open central plaza surrounded by buildings, with interconnected walkways."
       }
     },
-    "cebf59c6-db62-4e11-b50e-e4e5d2fb1996": {
-      "id": "cebf59c6-db62-4e11-b50e-e4e5d2fb1996",
-      "type": "location",
-      "name": "The Grand Canopy Plaza",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A large, open urban plaza defined by its expansive glass canopy and the surrounding multi-story brick buildings. Modern elevated walkways are visible in the background, hinting at a larger metropolis.",
-        "colorsAndLighting": "Warm yellows from building uplights contrast with the cool deep blue of the twilight sky reflected in the canopy, punctuated by vibrant purple spotlights on the elephant mural. Shadows are cast by the architecture and the crowd.",
-        "atmosphere": "The air is cool and crisp with the feel of an urban evening. A lively, social energy emanates from the diverse crowd, creating a palpable buzz of conversation and movement. The canopy creates a sheltered, enclosed feeling.",
-        "materials": "The dominant materials are textured brick and reflective glass, with metallic accents on the canopy structure and modern walkways. Natural elements like wood benches and green bushes provide softer textures.",
-        "mood": "The mood is vibrant and inviting, a place of social gathering and urban spectacle. There's a sense of wonder evoked by the scale and the artistic illumination.",
-        "sounds": "Distant traffic, muffled conversations, occasional laughter, footsteps on pavement, faint ambient music.",
-        "primary_surfaces": "Textured red brick, reflective glass, polished concrete.",
-        "secondary_surfaces": "Wood (benches), metal (walkways), foliage (bushes, trees).",
-        "accent_features": "The dramatically lit elephant mural, bright red foliage.",
-        "dominant": "Deep blue (sky reflection, twilight) covering much of the canopy.",
-        "secondary": "Warm yellow (uplights) on building facades.",
-        "accent": "Vibrant purple (mural spotlights).",
-        "ambient": "Cool twilight glow.",
-        "genre": null,
-        "architectural_tone": "Modern commercial with historical brick elements.",
-        "cultural_tone": "A public gathering space for urban dwellers, a hub for social interaction and cultural display.",
-        "palette_bias": "Cool blues and purples contrasted with warm yellows and earthy reds.",
-        "flora_base": "Bushes, small trees.",
-        "fauna_base": "None"
-      },
-      "description": "A bustling urban plaza enclosed by a vast glass canopy. Old brick buildings with numerous windows line its sides, illuminated by warm uplights. A central brick building features a large, dramatically lit mural of an elephant. Modern walkways and bridges are visible beyond. EXTERIOR VIEW.",
-      "searchDesc": "Bustling urban plaza under a glass canopy, with a dramatic elephant mural and warm lighting.",
-      "slug": "the-grand-canopy-plaza",
-      "structure": {
-        "spatialLayout": "The plaza is a large, relatively flat open space, enclosed by buildings on its sides and the overhead canopy. Depth is created by the receding walkways and bridges."
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "central brick building, mural base",
-          "description": "Leads into the central brick building, likely a public space."
-        },
-        {
-          "type": "bridge",
-          "position": "overhead, spanning sections of the plaza",
-          "description": "Connects to other buildings and parts of the metropolis."
-        },
-        {
-          "type": "passage",
-          "position": "edges of the plaza, between buildings",
-          "description": "Opens to other urban areas and walkways."
-        }
-      ],
-      "dominantElements": [
-        {
-          "shape": "rectangular-modular",
-          "orientation": "sprawling",
-          "scale": "massive",
-          "style": "commercial",
-          "surfaces": "glass-canopy, brick-facades",
-          "openings": "large-glass (canopy), numerous-windows (buildings)",
-          "interior_materials": "stone|tile|metal",
-          "enterable": "no",
-          "internal_atmosphere": "open-air"
-        },
-        {
-          "shape": "irregular",
-          "orientation": "vertical",
-          "scale": "large",
-          "style": "artistic",
-          "surfaces": "painted-brick",
-          "openings": "none",
-          "interior_materials": "brick|plaster|paint",
-          "enterable": "no",
-          "internal_atmosphere": "decorative"
-        }
-      ],
-      "uniqueIdentifiers": [
-        "vast glass canopy",
-        "elephant mural",
-        "warm uplighting",
-        "modern walkways and bridges",
-        "lush green bushes and red foliage trees"
-      ],
-      "primaryMedia": "media-1767088834920-z01onremi"
-    },
     "location-1767092642114-odxy3kp8c": {
       "id": "location-1767092642114-odxy3kp8c",
       "type": "location",
@@ -375,11 +293,6 @@
           "id": "3e8932c8-66ab-45fd-a3b3-7c67fb1f7d40",
           "type": "region",
           "children": [
-            {
-              "id": "cebf59c6-db62-4e11-b50e-e4e5d2fb1996",
-              "type": "location",
-              "children": []
-            },
             {
               "id": "location-1767092642114-odxy3kp8c",
               "type": "location",
