@@ -147,11 +147,12 @@ export function buildShapeConstraints(dominantElements: string[]): string {
 /**
  * Build a direct FLUX constraint for exterior views through windows/openings
  * This ensures the world DNA is reflected in what's visible outside
+ * 
+ * NOTE: This is for BUILDING windows showing the WORLD exterior.
+ * For VEHICLES inside buildings, use buildImmediateSurroundingsConstraint instead.
  */
 export function buildExteriorViewConstraint(genre: string, architecturalTone: string, paletteBias: string): string {
-  const genreUpper = genre.toUpperCase();
-  
-  // Build the constraint based on available info
+  // Build the constraint based on available info - emphasize what TO show
   let exteriorDescription = '';
   if (genre) {
     exteriorDescription += `${genre} environment`;
@@ -160,19 +161,58 @@ export function buildExteriorViewConstraint(genre: string, architecturalTone: st
     exteriorDescription += exteriorDescription ? ` with ${architecturalTone}` : architecturalTone;
   }
   
-  // Build list of things to avoid based on genre
-  let avoidList = 'green forests, lush vegetation, pastoral meadows, idyllic countryside';
-  
-  // Add genre-specific avoidance
-  if (genre.toLowerCase().includes('apocaly') || genre.toLowerCase().includes('wasteland')) {
-    avoidList = 'green forests, lush vegetation, blue sunny skies, pastoral scenes, healthy trees, green grass';
-  } else if (genre.toLowerCase().includes('urban') || genre.toLowerCase().includes('industrial')) {
-    avoidList = 'natural forests, countryside, pastoral scenes, wilderness';
+  // If we have no description, use a generic one
+  if (!exteriorDescription) {
+    exteriorDescription = 'the established world aesthetic';
   }
   
-  return `[CRITICAL EXTERIOR VIEWS: Any windows, doors, or openings showing the OUTSIDE must display: ` +
+  // Build constraint that emphasizes what TO show, rather than hardcoding what to avoid
+  // The exterior should match the world's DNA, whatever that may be
+  return `[EXTERIOR VIEWS: Any windows, doors, or openings showing the OUTSIDE should display: ` +
     `${exteriorDescription}. ` +
     `${paletteBias ? `Colors visible outside: ${paletteBias}. ` : ''}` +
-    `DO NOT show through windows: ${avoidList}. ` +
-    `The exterior MUST match the world's ${genreUpper || 'established'} aesthetic, NOT generic nature.]`;
+    `The exterior view should be CONSISTENT with the world's established aesthetic and genre.]`;
+}
+
+/**
+ * Build a constraint for immediate surroundings visible through vehicle windows
+ * This is for vehicles INSIDE buildings - shows the interior space, not world exterior
+ * 
+ * @param surroundingsName - Name of the surrounding space (e.g., "museum", "garage")
+ * @param surroundingsDescription - Description of the space
+ * @param surroundingsDNA - DNA of the surrounding space for visual details
+ */
+export function buildImmediateSurroundingsConstraint(
+  surroundingsName: string,
+  surroundingsDescription: string,
+  surroundingsDNA: Record<string, any>
+): string {
+  // Extract visual details from surroundings DNA
+  const looks = surroundingsDNA?.looks || '';
+  const materials = surroundingsDNA?.materials || surroundingsDNA?.primary_surfaces || '';
+  const lighting = surroundingsDNA?.colorsAndLighting || surroundingsDNA?.ambient || '';
+  const atmosphere = surroundingsDNA?.atmosphere || '';
+  
+  // Build a description of what should be visible through vehicle windows
+  let visibleElements: string[] = [];
+  
+  if (looks) {
+    visibleElements.push(looks);
+  }
+  if (materials) {
+    visibleElements.push(`Materials: ${materials}`);
+  }
+  if (lighting) {
+    visibleElements.push(`Lighting: ${lighting}`);
+  }
+  
+  const visualDescription = visibleElements.length > 0 
+    ? visibleElements.join('. ')
+    : surroundingsDescription || `the ${surroundingsName} interior`;
+  
+  return `[CRITICAL - VEHICLE SURROUNDINGS: This vehicle is INSIDE "${surroundingsName}". ` +
+    `Through the windows/windshield, show the INTERIOR of ${surroundingsName}, NOT an outdoor street scene. ` +
+    `Visible through windows: ${visualDescription}. ` +
+    `${atmosphere ? `Atmosphere outside vehicle: ${atmosphere}. ` : ''}` +
+    `DO NOT show outdoor streets, roads, or exterior city views - the vehicle is PARKED INDOORS.]`;
 }

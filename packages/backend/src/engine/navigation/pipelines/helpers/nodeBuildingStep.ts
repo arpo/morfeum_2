@@ -26,6 +26,17 @@ export interface ImagePromptInput {
    * Used when parent is pass-through (empty DNA) to show correct exterior through windows
    */
   surroundingsDNA?: any;
+  /**
+   * Immediate surroundings - the space this container is INSIDE OF
+   * Used for vehicles inside buildings - shows interior through windows, not world exterior
+   * Example: Car inside museum → immediateSurroundings = museum DNA/description
+   */
+  immediateSurroundings?: {
+    name: string;
+    description: string;
+    dna: Record<string, any>;
+    spaceType: 'interior' | 'exterior';
+  };
   userPrompt: string;
   nodeType: string;
   perspective: 'interior' | 'exterior' | 'open-air';
@@ -77,6 +88,7 @@ export async function generateNodeImagePrompt(
     dna,
     parentDNA,
     surroundingsDNA,
+    immediateSurroundings,
     userPrompt,
     nodeType,
     perspective,
@@ -98,6 +110,7 @@ export async function generateNodeImagePrompt(
     dna: dna || {},
     parentDNA: parentDNA || undefined,
     surroundingsDNA: surroundingsDNA || undefined,
+    immediateSurroundings: immediateSurroundings || undefined,
     userPrompt,
     nodeType: nodeType as LayerType,
     perspective: imageGenPerspective,

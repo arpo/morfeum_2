@@ -138,6 +138,73 @@ export async function runCreateLocationNodePipeline(
     decision.metadata.structureAnalysis = structureAnalysis;
 
     // ═══════════════════════════════════════════════════════════════════════════
+    // STEP 1.5: RESOLVE IMMEDIATE SURROUNDINGS FOR NESTED INTERIORS
+    // ═══════════════════════════════════════════════════════════════════════════
+    // For any interior space inside another interior (car in museum, house in basement,
+    // spaceship in cave), we need to pass the immediate interior space so windows
+    // show that interior, not the world exterior.
+    // 
+    // CRITICAL: Only apply when parent is an INTERIOR space (niche), NOT when parent
+    // is exterior (location). If parent is exterior, we're at the world boundary and
+    // windows should show the world exterior, not immediate surroundings.
+    let immediateSurroundings: {
+      name: string;
+      description: string;
+      dna: Record<string, any>;
+      spaceType: 'interior' | 'exterior';
+    } | undefined;
+    
+    // Only resolve immediate surroundings for interior perspectives
+    if (finalPerspective === 'interior') {
+      // For GO_INSIDE from niche (creates pass-through location), the pass-through's
+      // parent is the niche we came from - this is a NESTED INTERIOR case
+      if (options?.passThroughLocation) {
+        // Use the surroundingsDNA which was resolved from the niche ancestor
+        // This contains the parent interior's DNA (skipping the pass-through)
+        if (surroundingsDNA) {
+          immediateSurroundings = {
+            name: 'Interior Space',
+            description: surroundingsDNA.looks || surroundingsDNA.atmosphere || '',
+            dna: surroundingsDNA,
+            spaceType: 'interior'
+          };
+        }
+      }
+      
+      // If no pass-through, check the direct parent - but ONLY if parent is a niche (interior)
+      // If parent is a location (exterior), we're at the world boundary - no immediate surroundings
+      if (!immediateSurroundings && context.parentNode) {
+        const parentType = context.parentNode.type;
+        const isParentInterior = parentType === 'niche'; // Niches are interior spaces
+        
+        if (isParentInterior) {
+          const parentData = context.parentNode.data as Record<string, any> | undefined;
+          const isParentPassThrough = parentData?.isPassThrough;
+          
+          if (!isParentPassThrough && context.parentNode.dna) {
+            // Direct parent is interior niche with DNA - use it as immediate surroundings
+            immediateSurroundings = {
+              name: context.parentNode.name || 'Interior Space',
+              description: parentData?.description || parentData?.looks || '',
+              dna: context.parentNode.dna || {},
+              spaceType: 'interior'
+            };
+          } else if (isParentPassThrough && surroundingsDNA) {
+            // Parent is pass-through, use resolved surroundings DNA
+            immediateSurroundings = {
+              name: 'Interior Space',
+              description: surroundingsDNA.looks || surroundingsDNA.atmosphere || '',
+              dna: surroundingsDNA,
+              spaceType: 'interior'
+            };
+          }
+        }
+        // If parent is location/region/host (exterior), don't set immediateSurroundings
+        // Windows should show world exterior via the normal surroundingsDNA path
+      }
+    }
+
+    // ═══════════════════════════════════════════════════════════════════════════
     // STEP 2: IMAGE PROMPT GENERATION
     // ═══════════════════════════════════════════════════════════════════════════
     const imagePromptResult = await generateNodeImagePrompt({
@@ -145,6 +212,7 @@ export async function runCreateLocationNodePipeline(
       dna: dnaResult.dna || {},
       parentDNA: parentDNAForImagePrompt,
       surroundingsDNA, // For window views - shows world DNA, not interior concept
+      immediateSurroundings, // For vehicles inside buildings - shows interior through windows
       userPrompt,
       nodeType,
       perspective: finalPerspective,

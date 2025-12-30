@@ -2,98 +2,70 @@
 
 ## 2025-12-30
 
-### Space Type Registry - COMPLETED (Latest)
+### Immediate Surroundings for Nested Interiors - COMPLETED (Latest)
+
+Implemented a system to correctly show immediate surroundings through windows for nested interior spaces (e.g., car inside museum, house in basement, spaceship in cave).
+
+#### Problem
+When generating a car interior image inside a museum, the windshield/windows showed an **outdoor street scene** instead of the **museum interior** where the car is parked.
+
+#### Root Cause
+The existing `surroundingsDNA` concept was designed for "what's visible OUTSIDE through windows" (world exterior), but nested interiors need to show the **immediate parent interior** through windows.
+
+#### Solution
+Added `immediateSurroundings` concept that:
+1. Detects when a space is inside another interior (parent is a niche)
+2. Passes the parent interior's DNA for window views
+3. Generates specific constraints telling FLUX to show interior through windows
+
+#### Key Changes
+
+**1. `imagePromptHelpers.ts`**
+- Fixed `buildExteriorViewConstraint()` - removed hardcoded anti-nature avoidance lists
+- Added `buildImmediateSurroundingsConstraint()` function for nested interiors
+
+**2. `imagePromptGeneration.ts`**
+- Added `immediateSurroundings` field to `ImagePromptGenerationInput` interface
+- Updated `buildSystemPrompt()` to include `=== CRITICAL: NESTED INTERIOR LOCATION ===` section
+- Updated `buildConstraints()` to use immediate surroundings when parent is interior
+
+**3. `nodeBuildingStep.ts`**
+- Added `immediateSurroundings` to `ImagePromptInput` interface
+
+**4. `createNodePipeline.ts`**
+- Added **STEP 1.5: RESOLVE IMMEDIATE SURROUNDINGS FOR NESTED INTERIORS**
+- Logic to detect when parent is a niche (interior space)
+- Uses `surroundingsDNA` for immediate surroundings when pass-through exists
+- Only applies when `parentNode.type === 'niche'`
+
+#### Logic Summary
+
+| Scenario | Parent Type | Windows Show |
+|----------|-------------|--------------|
+| Car in museum | niche (interior) | Museum interior |
+| House in basement | niche (interior) | Basement |
+| Spaceship in cave | niche (interior) | Cave walls |
+| Museum from building | location (exterior) | World exterior |
+| Room at world edge | location (exterior) | World exterior |
+
+#### Key Rule
+**If parent is a niche (interior) → show parent interior through windows**
+**If parent is location/region/host (exterior) → show world exterior through windows**
+
+### Previous: Space Type Registry - COMPLETED
 
 Implemented a central registry system for handling different container types (buildings, vehicles, boats, tents, etc.) with proper rules and prompts for each.
 
-#### What Was Done
-
-**Problem:** When going inside a car, the LLM generated an interior that looked like a building/room hybrid instead of a car cabin. Same issue would occur with boats, tents, and other non-building spaces.
-
-**Solution:** Created a Space Type Registry that:
-1. Defines specialized rules/prompts/constraints for each container type
-2. Uses LLM to detect `containerType` during structure analysis
-3. Provides type-specific guidance for DNA generation and image constraints
-
-#### New File Structure
-```
-packages/backend/src/engine/generation/shared/spaceTypeRegistry/
-├── types.ts                    # Type definitions (ContainerType, SpaceTypeDefinition)
-├── index.ts                    # Registry + helper functions
-├── building/
-│   ├── interior.ts             # BUILDING_INTERIOR
-│   ├── exterior.ts             # BUILDING_EXTERIOR
-│   └── openAir.ts              # BUILDING_OPEN_AIR
-├── vehicle/
-│   ├── carCabin.ts             # VEHICLE_CAR_CABIN
-│   ├── boatCabin.ts            # VEHICLE_BOAT_CABIN
-│   └── boatDeck.ts             # VEHICLE_BOAT_DECK
-├── natural/
-│   └── clearing.ts             # NATURAL_CLEARING
-└── tentLike/
-    └── interior.ts             # TENT_INTERIOR
-```
-
-#### Container Types Supported
-| Type | Description | Perspectives |
-|------|-------------|--------------|
-| `building` | Standard architectural structures | interior, exterior, open-air |
-| `vehicle-car` | Automotive vehicles (cars, trucks) | interior (cabin) |
-| `vehicle-boat` | Watercraft (ships, boats, yachts) | interior (cabin), open-air (deck) |
-| `natural` | Natural formations (clearings, groves) | exterior |
-| `tent-like` | Temporary fabric structures | interior |
-
-#### How It Works
-1. **structureAnalysis.ts** - LLM outputs `containerType` field (e.g., "vehicle-car")
-2. **nicheDNA.ts** - Uses registry's DNA guidance based on containerType
-3. **imagePromptGeneration.ts** - Adds registry's image constraints (e.g., "[CRITICAL: VEHICLE INTERIOR - This is a CAR/TRUCK cabin, NOT a room]")
-
-#### Key Functions
-```typescript
-import { 
-  getDNAGuidance,       // Get DNA prompt guidance for a container type
-  getImageConstraints,  // Get FLUX constraints for a container type
-  getStructureGuidance, // Get structure analysis guidance
-  SPACE_TYPE_REGISTRY   // Full registry object
-} from './spaceTypeRegistry';
-```
-
-#### Files Modified
-- `navigation/types.ts` - Added `containerType` to StructureAnalysis interface
-- `structureAnalysis.ts` - LLM now outputs containerType
-- `nicheDNA.ts` - Uses registry DNA guidance
-- `imagePromptGeneration.ts` - Uses registry image constraints
-- `generation/index.ts` - Exports registry functions
-
-### Previous: Prompt Index Documentation - COMPLETED
-
-Created comprehensive prompt documentation file at `packages/backend/src/engine/generation/prompts/PROMPT_INDEX.md`.
-
-### Previous: Structured Image Prompt System - COMPLETED
-
-Implemented layer-based structured image prompts across both spawn and navigation pipelines.
-
 ## Current Focus
 
+- ✅ **COMPLETED**: Immediate surroundings for nested interiors
 - ✅ **COMPLETED**: Space Type Registry for vehicle/boat/tent interiors
 - ✅ **COMPLETED**: Structured image prompt system (both pipelines)
-- ✅ **COMPLETED**: Image prompt DNA & shape improvements
-- ✅ **COMPLETED**: GO_INSIDE hierarchy fix for pass-through locations
 
-## Files Modified (Dec 30)
+## Files Modified (Dec 30 - Immediate Surroundings)
 
-**New Files (Space Type Registry):**
-- `packages/backend/src/engine/generation/shared/spaceTypeRegistry/types.ts`
-- `packages/backend/src/engine/generation/shared/spaceTypeRegistry/index.ts`
-- `packages/backend/src/engine/generation/shared/spaceTypeRegistry/building/*.ts` (3 files)
-- `packages/backend/src/engine/generation/shared/spaceTypeRegistry/vehicle/*.ts` (3 files)
-- `packages/backend/src/engine/generation/shared/spaceTypeRegistry/natural/clearing.ts`
-- `packages/backend/src/engine/generation/shared/spaceTypeRegistry/tentLike/interior.ts`
-
-**Modified Files (Space Type Registry):**
-- `packages/backend/src/engine/navigation/types.ts`
-- `packages/backend/src/engine/generation/prompts/navigation/structureAnalysis.ts`
-- `packages/backend/src/engine/nodeCreation/prompts/dna/nicheDNA.ts`
+**Modified Files:**
+- `packages/backend/src/engine/generation/shared/imagePromptHelpers.ts`
 - `packages/backend/src/engine/generation/shared/imagePromptGeneration.ts`
-- `packages/backend/src/engine/generation/index.ts`
-- `packages/backend/src/engine/generation/prompts/PROMPT_INDEX.md`
+- `packages/backend/src/engine/navigation/pipelines/helpers/nodeBuildingStep.ts`
+- `packages/backend/src/engine/navigation/pipelines/createNodePipeline.ts`

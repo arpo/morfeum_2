@@ -67,220 +67,207 @@
         "spatialLayout": "Street layout, density, characterized by an open central plaza surrounded by buildings, with interconnected walkways."
       }
     },
-    "location-1767092642114-odxy3kp8c": {
-      "id": "location-1767092642114-odxy3kp8c",
+    "03819cb9-350b-4994-9efd-36bdd18f8e18": {
+      "id": "03819cb9-350b-4994-9efd-36bdd18f8e18",
       "type": "location",
-      "name": "World of Volvo",
+      "name": "The Grand Marque Museum",
       "spaceType": "exterior",
+      "description": "A striking modern edifice dedicated to automotive history, featuring sweeping glass facades and a sleek, metallic exterior. This museum showcases a curated collection of classic and contemporary vehicles, drawing enthusiasts from across the district.",
       "dna": {
-        "looks": "A contemporary commercial building with significant sections of historical red brick, complemented by large expanses of glass. The overall impression is one of modern design integrated into an established urban context. The exterior features clean lines and geometric forms, juxtaposed with the texture of the brick.",
-        "colorsAndLighting": "Dominated by the cool, deep blues reflected from overhead structures, with warm terracotta and earthy tones from the brick facades. Accents of vibrant, artificial colors might appear in display lighting or exhibit elements, contrasting with the natural hues. The lighting is a mix of ambient twilight from above and targeted spotlights on exhibits.",
-        "atmosphere": "Vibrant and social, with a palpable sense of urban spectacle. There's an inviting and awe-inspiring mood, encouraging exploration and conversation. The air feels alive with the hum of visitors and the echoes of automotive history.",
-        "materials": "Primarily textured brick for older architectural elements, contrasted with sleek, reflective glass and brushed metal for modern additions. Interior materials will likely echo this, with polished concrete floors, exposed structural elements, and potentially brushed metal or wood accents.",
-        "mood": "Neighborhood emotional tone, inviting, awe-inspiring, urban spectacle, social gathering.",
-        "sounds": "Distant city hum, murmuring crowds, soft ambient music, occasional distant car sounds.",
-        "spatialLayout": "Sprawling, with distinct exhibition zones and open gathering spaces. Clear pathways and sightlines guide visitors through the collection.",
-        "primary_surfaces": "Textured brick facades",
-        "secondary_surfaces": "Reflective glass canopy and walls, metallic structural elements, paved plaza grounds",
-        "accent_features": "Iconic Volvo vehicles, stylized modern displays, interplay of brick and glass architecture, vibrant exhibit lighting.",
-        "dominant": "Cool blues",
-        "secondary": "Warm terracotta",
-        "accent": "Vibrant artificial colors (e.g., reds, purples, yellows from displays)",
-        "ambient": "Cool twilight sky",
+        "looks": "A large, rectangular structure with a dominant sweeping glass facade that reflects the surrounding plaza and canopy. Polished metallic panels clad the upper sections, interspersed with sharp, geometric lines. The building appears modern and sophisticated, designed to impress.",
+        "colorsAndLighting": "The deep blue of the overhead canopy reflects intensely on the building's glass and metallic surfaces. Warm uplighting illuminates the base of the structure, contrasting with the cooler, almost ethereal glow emanating from within the museum.",
+        "atmosphere": "The air here is crisp and clean, carrying a faint scent of polished metal and wax. There's a hushed reverence within the museum, punctuated by the soft hum of climate control and the distant murmur of visitors. The atmosphere is one of curated awe and admiration.",
+        "materials": "Primary materials include vast expanses of polished glass and gleaming, brushed metallic sheeting. The base features smooth, dark concrete, providing a sturdy contrast to the lighter, reflective upper elements. Textures are predominantly smooth and cool.",
+        "mood": "Inviting and awe-inspiring, fostering a sense of wonder and appreciation for design and engineering. The museum evokes a feeling of sophisticated urban spectacle.",
+        "sounds": "Low hum, hushed voices, soft footsteps, distant traffic murmur",
+        "primary_surfaces": "Polished glass, reflective metallic panels",
+        "secondary_surfaces": "Smooth concrete base, brushed metal accents",
+        "accent_features": "Angled glass supports, illuminated chrome signage",
+        "dominant": "Deep blue (reflections)",
+        "secondary": "Silver and polished chrome (cladding and accents)",
+        "accent": "Warm yellow and orange (uplighting, interior displays)",
+        "ambient": "Cool, diffused light with strategic warm highlights",
         "genre": null,
+        "architectural_tone": "Modern commercial with striking geometric forms and extensive use of glass",
+        "cultural_tone": "Enthusiast hub, historical preservation, public spectacle",
+        "palette_bias": "Cool blues, silver, and stark white with occasional vibrant reds or yellows from vehicle paint",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "searchDesc": "A grand modern car museum with glass and metal facades, showcasing automotive history in the Central Plaza District.",
+      "slug": "the-grand-marque-museum",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center-foreground",
+          "description": "The main entrance, leading into the museum's grand foyer. Through the open doors, polished floors and glimpses of gleaming vehicles are visible."
+        },
+        {
+          "type": "passage",
+          "position": "right-midground",
+          "description": "A wide, open archway connecting to an outdoor display area, revealing more cars bathed in plaza light."
+        },
+        {
+          "type": "window",
+          "position": "left-background",
+          "description": "Large, rectangular windows offering a clear view into an exhibition hall, displaying vehicles and informational placards."
+        }
+      ],
+      "dominantElements": [
+        "building: shape=rectangular, orientation=sprawling, scale=large, style=modern-commercial, surfaces=glass-metallic, openings=large-glass, interior_materials=polished-concrete|dark-tile|high-ceiling, enterable=yes, internal_atmosphere=bright-clinical"
+      ],
+      "uniqueIdentifiers": [
+        "Sweeping glass facade with angled supports",
+        "Prominent, polished chrome signage",
+        "Outdoor display area with sculpted planters",
+        "Reflective metallic cladding on upper levels"
+      ],
+      "structure": {
+        "spatialLayout": "A predominantly rectangular footprint that expands horizontally, featuring a grand, open foyer and large, well-lit exhibition halls. The scale feels expansive and designed for spacious display."
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a885f3b/97iDFNf_HS7_eSE_pOMa7.jpg",
+      "primaryMedia": "media-1767094360520-syu3d3d67"
+    },
+    "niche-1767094706792-i6h2kzdlz": {
+      "id": "niche-1767094706792-i6h2kzdlz",
+      "type": "niche",
+      "name": "Grand Marque Museum",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Vast, brightly lit exhibition halls filled with meticulously maintained cars of all eras. Modern architectural lines are softened by exposed, aged brickwork on accent walls. Elevated walkways and viewing platforms offer different perspectives of the collection.",
+        "colorsAndLighting": "Dominated by the cool, deep blues reflecting from a massive overhead glass canopy, punctuated by the warm terracotta hues of exposed brick. Spotlights highlight the vehicles with vibrant, artificial colors, creating dynamic contrasts.",
+        "atmosphere": "A lively, social gathering space with a palpable sense of awe and urban spectacle. The air is clean and conditioned, with a low hum of excited chatter and the subtle, ambient sounds of the museum.",
+        "materials": "Polished chrome and automotive paint finishes of the cars are primary. Secondary materials include textured brick walls, smooth concrete floors, brushed metal accents, and large expanses of reflective glass.",
+        "mood": "Inviting and awe-inspiring, a place of shared fascination and urban excitement. It evokes a sense of wonder at human ingenuity and design, blended with the comfortable energy of a popular social destination.",
+        "sounds": "Polished chrome gleam, engine purrs, futuristic hums, ambient chatter, soft footsteps, distant announcements.",
+        "spatialLayout": "Expansive, multi-level halls with open sightlines. Areas are clearly defined for different eras or types of vehicles, with ample circulation space.",
+        "primary_surfaces": "Polished car bodies, smooth concrete floors, exposed brick walls.",
+        "secondary_surfaces": "Brushed metal railings, glass display cases, digital screens, ceiling grids.",
+        "accent_features": "Spotlighted concept cars, interactive timelines, large-scale vehicle schematics, stylized automotive artwork.",
+        "dominant": "Deep blue",
+        "secondary": "Warm terracotta",
+        "accent": "Vibrant artificial colors (e.g., electric green, neon pink)",
+        "ambient": "Cool twilight sky reflected overhead, with warm uplighting on brickwork.",
+        "genre": "Sci-Fi",
         "architectural_tone": "Modern commercial with historical brick elements",
         "cultural_tone": "Urban social hub",
         "palette_bias": "Cool blues and warm earth tones with pops of vibrant artificial color",
-        "flora_base": "Lush green bushes, small trees with bright red foliage",
-        "fauna_base": null
+        "flora_base": "Strategically placed minimalist planters with sleek, dark foliage.",
+        "fauna_base": "None visible"
       },
-      "primaryMedia": "media-1767092642111-3iz0v5lua",
-      "description": "The exterior of the World of Volvo, a modern museum with prominent glass panels and sections of brickwork, displaying a range of classic and new Volvo cars within. The structure is large and spreads outwards, with clear views into the bright interior.",
+      "primaryMedia": "media-1767094706791-zpf3ssd3f",
+      "description": "The interior of the Grand Marque Museum is a grand, open exhibition hall. The space is filled with a diverse collection of cars, from vintage models to modern marvels, all meticulously displayed. Bright, clinical lighting illuminates the polished concrete floors and the dark-tiled walls, creating a clean and sophisticated atmosphere. High ceilings contribute to the feeling of immense space, making the vehicles appear even more impressive.",
       "structure": {
         "form": "rectangular",
         "roofType": "flat",
         "scale": "large",
-        "orientation": "sprawling",
+        "orientation": "wide",
         "openings": "large-glass",
         "openingShape": "rectangular",
         "functionalType": "entertainment",
         "elevation": "ground-level",
-        "spatialLayout": "A modern, expansive building dedicated to showcasing Volvo cars, with large glass facades allowing views into the exhibition spaces.",
+        "spatialLayout": "The museum is a vast, open hall designed to showcase vehicles. Polished concrete floors reflect the bright, clinical lighting. High ceilings create a sense of spaciousness, with walls clad in dark tile and interspersed with large display areas.",
         "requiredElements": [
-          "museum for Volvo cars Old and new"
+          "cars"
         ]
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "front-center",
-          "description": "Leads into the main exhibition hall."
+          "position": "south wall",
+          "description": "leads to Central Plaza District"
         },
         {
           "type": "passage",
-          "position": "side-right",
-          "description": "Leads to a smaller display area or gift shop."
+          "position": "east wall",
+          "description": "leads to the gift shop"
         }
       ],
       "dominantElements": [
-        "museum: shape=rectangular, orientation=sprawling, scale=large, style=modern commercial with historical brick elements, surfaces=glass|brick|metal, openings=large-glass|open-passages, interior_materials=polished-concrete|tile|exposed-beams, enterable=yes, internal_atmosphere=bright"
+        "museum display area: shape=rectangular, orientation=sprawling, scale=large, style=modern-commercial, surfaces=glass-metallic, openings=large-glass, interior_materials=polished-concrete|dark-tile|high-ceiling, enterable=yes, internal_atmosphere=bright-clinical",
+        "classic car: shape=organic, orientation=compact, scale=small, style=vintage, surfaces=chrome-paint, openings=minimal, interior_materials=leather|carpet|padded-headliner, enterable=yes, internal_atmosphere=cozy"
       ],
       "uniqueIdentifiers": [
-        "visible collection of vintage and contemporary Volvo vehicles"
+        "sweeping glass facade (visible from interior)",
+        "polished metallic panels",
+        "sharp, geometric lines"
       ],
-      "searchDesc": "World of Volvo: A modern museum with historical brick, displaying classic and new Volvo cars.",
-      "slug": "volvo-heritage-hall"
+      "searchDesc": "Sci-fi car museum, modern brick, urban social hub, cool blues, warm earth tones.",
+      "slug": "null-of-the-grand-marque-museum"
     },
-    "niche-1767092671994-cj06kbs8c": {
-      "id": "niche-1767092671994-cj06kbs8c",
-      "type": "niche",
-      "name": "museum",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A spacious, open-plan museum interior. Historical brick walls are juxtaposed with sleek, modern metallic structures and expansive glass display cases. Overhead, a vast, cool blue canopy reminiscent of the district's sky casts a twilight glow. Interactive screens and projections add pops of vibrant artificial color. Seating areas are thoughtfully integrated into the architecture, encouraging social gathering.",
-        "colorsAndLighting": "Dominant deep blues from the overhead canopy reflection, contrasted with the warm terracotta of exposed historical brick. Accents of vibrant purple emanate from spotlights on murals and historical exhibits. Soft, diffused lighting illuminates the displays, with brighter, directional lights highlighting specific vehicles and technological marvels. Warm uplights on brick elements create a cozy contrast.",
-        "atmosphere": "The air is a blend of clean, technological freshness and the subtle, comforting scent of polished wood and vintage leather. A low, ambient hum of electronic displays and distant traffic from the urban exterior creates a sense of vibrant activity. The mood is one of intellectual curiosity and nostalgic admiration, fostering a social gathering space.",
-        "materials": "Primary materials include textured, aged brick, polished chrome and brushed steel, and large, clear glass panels for displays. Secondary materials include dark, polished wood for furniture accents and subtle concrete flooring. Salvaged metal elements are incorporated into some exhibition structures.",
-        "mood": "Inviting and awe-inspiring, with a strong sense of urban spectacle and social gathering. It evokes curiosity about technological advancement while grounding visitors in Volvo's rich heritage, creating a neighborhood emotional tone.",
-        "sounds": "Subtle hum of electronics, distant urban ambience, soft commentary on exhibits, occasional 'whoosh' of display transitions, muffled footsteps, murmurs of conversation.",
-        "spatialLayout": "An expansive, open-plan layout with distinct zones for different eras and themes. High ceilings with a dominant overhead canopy structure. Galleries are clearly defined by shifts in materials and lighting.",
-        "primary_surfaces": "Textured historical brick walls, polished concrete floor.",
-        "secondary_surfaces": "Brushed metal panels, large glass display panels, dark polished wood accents.",
-        "accent_features": "Holographic projections of future vehicles, vibrant purple spotlights on murals, interactive safety simulation pods, classic Volvo car silhouettes.",
-        "dominant": "Deep blue",
-        "secondary": "Warm terracotta",
-        "accent": "Vibrant purple",
-        "ambient": "Cool twilight sky",
-        "genre": "Sci-Fi",
-        "architectural_tone": "Modern commercial with historical brick elements",
-        "cultural_tone": "Urban social hub",
-        "palette_bias": "Cool blues and warm earth tones with pops of vibrant artificial color",
-        "flora_base": "Minimalist arrangements of hardy, urban-adapted plants, perhaps integrated into seating or display bases.",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767092671993-eildyub23",
-      "description": "You are inside a large, sprawling museum. The walls are polished concrete, the floor is tiled, and the ceiling features exposed beams. Large glass sections and open passages allow for bright illumination and a sense of spaciousness, blending modern commercial design with hints of historical brickwork.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "null",
-        "scale": "large",
-        "orientation": "sprawling",
-        "openings": "large-glass|open-passages",
-        "openingShape": "rectangular",
-        "functionalType": "entertainment",
-        "elevation": "ground-level",
-        "spatialLayout": "This large, rectangular museum space sprawls outward. Wide open passages and expansive glass walls define its modern commercial aesthetic, interwoven with historical brick elements. Polished concrete walls, tiled floors, and exposed beams create a bright, airy atmosphere.",
-        "requiredElements": [
-          "polished-concrete walls",
-          "tile floor",
-          "exposed-beams ceiling"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "open-passage",
-          "position": "north-east wall",
-          "description": "Leads to another gallery within the museum."
-        },
-        {
-          "type": "large-glass",
-          "position": "south-west wall",
-          "description": "Offers a view of the World of Volvo plaza outside."
-        },
-        {
-          "type": "open-passage",
-          "position": "central area",
-          "description": "Connects to different exhibit sections of the museum."
-        }
-      ],
-      "dominantElements": [
-        "exhibit_stand: shape=rectangular, orientation=horizontal, scale=medium, style=modern, surfaces=metal, openings=minimal, interior_materials=brushed-metal|polished-concrete|null, enterable=no, internal_atmosphere=bright",
-        "information_kiosk: shape=compact, orientation=vertical, scale=small, style=minimalist, surfaces=glass|metal, openings=large-glass, interior_materials=brushed-metal|tile|null, enterable=yes, internal_atmosphere=bright"
-      ],
-      "uniqueIdentifiers": [
-        "historical brick accents",
-        "sprawling layout",
-        "bright natural light"
-      ],
-      "searchDesc": "Volvo Museum: Sci-Fi blend of history, innovation, and urban social hub.",
-      "slug": "volvo-museum-of-innovation"
-    },
-    "loc-1767092689336-ymc685cjc": {
-      "id": "loc-1767092689336-ymc685cjc",
+    "loc-1767094728363-4886choyh": {
+      "id": "loc-1767094728363-4886choyh",
       "type": "location",
-      "name": "car",
+      "name": "a sport car",
       "spaceType": "structure",
       "dna": {},
-      "description": "Structure: car",
-      "searchDesc": "car",
-      "slug": "car",
+      "description": "Structure: a sport car",
+      "searchDesc": "a sport car",
+      "slug": "a-sport-car",
       "isPassThrough": true
     },
-    "niche-1767092699846-p21p9chpk": {
-      "id": "niche-1767092699846-p21p9chpk",
+    "niche-1767094737837-ulhsmg623": {
+      "id": "niche-1767094737837-ulhsmg623",
       "type": "niche",
-      "name": "Car Interior",
+      "name": "Sport Car",
       "spaceType": "interior",
       "dna": {
-        "looks": "The interior of a classic Volvo sedan. The seats are upholstered in a worn, dark grey fabric. The dashboard, while retaining its original shape, now features integrated, soft-glowing holographic displays showing navigational data and vehicle diagnostics in cool blue hues. Brushed aluminum trim accents the door panels and center console. The roof lining is a simple, dark fabric.",
-        "colorsAndLighting": "Dominated by the cool blues of the holographic displays and ambient interior lighting strips. The worn fabric of the seats provides a muted, deep grey base. Brushed aluminum reflects ambient light with a soft sheen. Light is subtle and primarily emanates from the displays and overhead strips.",
-        "atmosphere": "Close, intimate, and slightly hushed. A faint scent of aged upholstery mingles with the subtle aroma of ozone from the electronics. The air is still and cool.",
-        "materials": "Worn fabric (seats), brushed aluminum (trim), dark composite plastic (dashboard housing), tinted glass (windows).",
-        "mood": "Nostalgic yet forward-looking. A sense of quiet contemplation and appreciation for preserved history with an unexpected technological twist. Intimate and functional.",
-        "sounds": "Faint hum of electronics, subtle click of imagined controls, distant murmur of museum activity.",
-        "spatialLayout": "Compact and enclosed, typical of a car interior. The focus is on the driver and passenger experience.",
-        "primary_surfaces": "Worn fabric upholstery",
-        "secondary_surfaces": "Brushed aluminum trim, dark composite dashboard",
-        "accent_features": "Holographic dashboard displays, cool blue ambient lighting strips, retro steering wheel.",
-        "dominant": "Cool blues (from displays and lighting)",
-        "secondary": "Deep grey (fabric seats)",
-        "accent": "Brushed aluminum",
-        "ambient": "Soft, cool artificial light",
+        "looks": "A tightly integrated cockpit designed for driver focus. The form is sculpted and ergonomic, with a low-slung seating position. Integrated ambient lighting casts a cool, focused glow. Surfaces are a blend of advanced composites and premium textiles.",
+        "colorsAndLighting": "Dominated by deep blacks and charcoal grays, punctuated by the cool blue and silver of digital displays. Subtle red or yellow accent lighting emanates from the dashboard and console, highlighting key controls. The overall lighting is low-key and directional.",
+        "atmosphere": "Enclosed, focused, and humming with latent power. The air is clean, with a faint scent of high-performance materials like leather and carbon fiber.",
+        "materials": "Primary materials include premium leather or Alcantara for seating and trim, carbon fiber composites for structural elements and dashboard, and brushed aluminum or dark chrome for controls and accents.",
+        "mood": "Intense, focused, and aspirational. Evokes a sense of precision engineering and thrilling performance.",
+        "sounds": "Low ambient hum, soft clicking of controls, synthesized engine sound simulation.",
+        "spatialLayout": "A compact, driver-centric layout, emphasizing horizontal lines and ergonomic curves. The space feels intimate and enclosed.",
+        "primary_surfaces": "Premium leather/Alcantara, carbon fiber weave",
+        "secondary_surfaces": "Brushed aluminum, dark chrome, soft-touch plastics",
+        "accent_features": "Illuminated digital displays, anodized control knobs, stitching details on seats and steering wheel",
+        "dominant": "Deep black/Charcoal",
+        "secondary": "Cool blue/Silver (display light)",
+        "accent": "Racing red/Yellow (control highlights)",
+        "ambient": "Cool, focused, directional lighting",
         "genre": "Sci-Fi",
-        "architectural_tone": "Modern commercial with historical brick elements",
-        "cultural_tone": "Urban social hub",
-        "palette_bias": "Cool blues and warm earth tones with pops of vibrant artificial color",
-        "flora_base": "Lush green bushes, small trees with bright red foliage",
-        "fauna_base": "None visible from this scale"
+        "architectural_tone": "Modern commercial with striking geometric forms and extensive use of glass",
+        "cultural_tone": "Enthusiast hub, historical preservation, public spectacle",
+        "palette_bias": "Cool blues, silver, and stark white with occasional vibrant reds or yellows from vehicle paint",
+        "flora_base": "None",
+        "fauna_base": "None"
       },
-      "primaryMedia": "media-1767092699845-sizzp4sz0",
-      "description": "You are inside a car. The dashboard is in front of you, with a steering wheel. Comfortable car seats are arranged horizontally.",
+      "primaryMedia": "media-1767094737836-grjxt0sxd",
+      "description": "You are inside a sport car. The seats are form-fitting, and the steering wheel is within reach. The dashboard features a array of gauges and controls, all focused on the driving experience. The windows offer a limited but clear view of the surroundings.",
       "structure": {
-        "form": "rectangular",
+        "form": "organic",
         "roofType": "null",
         "scale": "small",
-        "orientation": "horizontal",
-        "openings": "large-glass",
-        "openingShape": "rectangular",
+        "orientation": "compact",
+        "openings": "minimal",
+        "openingShape": "irregular",
         "functionalType": "entertainment",
         "elevation": "ground-level",
-        "spatialLayout": "The interior of the car is compact and designed for passenger comfort, with seating arranged horizontally. The primary view is forward through the windshield.",
+        "spatialLayout": "A small, enclosed space with a driver's seat and controls. The interior is designed for functionality and a direct connection to the driving experience.",
         "requiredElements": [
-          "user-specified elements that MUST appear"
+          "driver's seat",
+          "steering wheel",
+          "dashboard"
         ]
       },
       "navigableElements": [
         {
           "type": "door",
           "position": "side",
-          "description": "Leads outside the car."
-        },
-        {
-          "type": "door",
-          "position": "side",
-          "description": "Leads outside the car."
+          "description": "Opens to the outside of the car"
         }
       ],
       "dominantElements": [
-        "car_interior: shape=rectangular, orientation=horizontal, scale=small, style=modern, surfaces=plastic|fabric|glass, openings=large-glass, interior_materials=fabric|carpet|plastic, enterable=yes, internal_atmosphere=bright"
+        "sport car: shape=organic, orientation=compact, scale=small, style=modern-performance, surfaces=painted-metal|glass, openings=minimal, interior_materials=leather|plastic|metal, enterable=yes, internal_atmosphere=cozy"
       ],
       "uniqueIdentifiers": [
-        "dashboard",
-        "steering wheel",
-        "car seats"
+        "low-slung profile",
+        "aerodynamic design",
+        "powerful engine"
       ],
-      "searchDesc": "Interior of a vintage Volvo with sci-fi upgrades, blending old-world charm with futuristic tech.",
-      "slug": "interior-of-car"
+      "searchDesc": "Inside a sleek sportscar cockpit with digital displays and racing seats.",
+      "slug": "interior-of-a-sport-car"
     }
   },
   "views": {},
@@ -294,19 +281,19 @@
           "type": "region",
           "children": [
             {
-              "id": "location-1767092642114-odxy3kp8c",
+              "id": "03819cb9-350b-4994-9efd-36bdd18f8e18",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1767092671994-cj06kbs8c",
+                  "id": "niche-1767094706792-i6h2kzdlz",
                   "type": "niche",
                   "children": [
                     {
-                      "id": "loc-1767092689336-ymc685cjc",
+                      "id": "loc-1767094728363-4886choyh",
                       "type": "location",
                       "children": [
                         {
-                          "id": "niche-1767092699846-p21p9chpk",
+                          "id": "niche-1767094737837-ulhsmg623",
                           "type": "niche",
                           "children": []
                         }

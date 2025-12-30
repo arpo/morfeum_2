@@ -22,7 +22,8 @@ import type { StructureAnalysis } from '../../navigation/types';
 import { 
   buildDominantElementsContext, 
   buildShapeConstraints, 
-  buildExteriorViewConstraint 
+  buildExteriorViewConstraint,
+  buildImmediateSurroundingsConstraint
 } from './imagePromptHelpers';
 import type { ImagePromptStructure } from './imagePromptTypes';
 import { assembleImagePrompt } from './imagePromptAssembler';
@@ -40,6 +41,17 @@ export interface ImagePromptGenerationInput {
    * Used when parent is pass-through (empty DNA) to show correct exterior through windows
    */
   surroundingsDNA?: Record<string, any>;
+  /**
+   * Immediate surroundings - the space this container is INSIDE OF
+   * Used for vehicles inside buildings - shows interior through windows, not world exterior
+   * Example: Car inside museum → immediateSurroundings = museum DNA/description
+   */
+  immediateSurroundings?: {
+    name: string;
+    description: string;
+    dna: Record<string, any>;
+    spaceType: 'interior' | 'exterior';
+  };
   /** User's original prompt/description */
   userPrompt: string;
   /** Node type being created */
@@ -244,6 +256,32 @@ ${f.placementNotes && f.placementNotes.length > 0 ? `Placement notes: ${f.placem
 `;
   }
 
+  // Build immediate surroundings context for any container inside an interior space
+  // This applies to: vehicles in museums, houses in basements, spaceships in caves, etc.
+  let immediateSurroundingsContext = '';
+  
+  if (input.immediateSurroundings && input.immediateSurroundings.spaceType === 'interior') {
+    const imm = input.immediateSurroundings;
+    immediateSurroundingsContext = `
+=== CRITICAL: NESTED INTERIOR LOCATION ===
+This space is INSIDE "${imm.name}" (an interior space).
+It is NOT exposed to the outside world.
+
+What should be visible through any windows/openings:
+- Location: ${imm.name} (${imm.spaceType})
+- Description: ${imm.description}
+${imm.dna?.looks ? `- Visual Details: ${imm.dna.looks}` : ''}
+${imm.dna?.materials ? `- Visible Materials: ${imm.dna.materials}` : ''}
+${imm.dna?.colorsAndLighting ? `- Lighting: ${imm.dna.colorsAndLighting}` : ''}
+${imm.dna?.atmosphere ? `- Atmosphere: ${imm.dna.atmosphere}` : ''}
+
+IMPORTANT: The "background" field (what's visible through windows) must show:
+- The INTERIOR of "${imm.name}", NOT the world exterior
+- NO outdoor scenes, sky, streets, or nature views
+- The surrounding interior space features (walls, ceiling, ambient elements)
+`;
+  }
+
   return `
 You are an expert at creating image prompts for FLUX image generation.
 
@@ -265,6 +303,8 @@ ${dnaContext}
 ${inheritedContext}
 
 ${surroundingsContext}
+
+${immediateSurroundingsContext}
 
 ${furnishingContext}
 
@@ -377,14 +417,27 @@ function buildConstraints(input: ImagePromptGenerationInput): string[] {
   const hasOpenings = input.structureAnalysis?.structure?.openings && 
                       input.structureAnalysis.structure.openings !== 'none';
   
-  if (input.perspective === 'interior' && surroundings && hasOpenings) {
-    const genre = surroundings.genre || '';
-    const architecturalTone = surroundings.architectural_tone || '';
-    const paletteBias = surroundings.palette_bias || '';
-    
-    if (genre || architecturalTone) {
-      const exteriorConstraint = buildExteriorViewConstraint(genre, architecturalTone, paletteBias);
-      constraints.push(exteriorConstraint);
+  if (input.perspective === 'interior' && hasOpenings) {
+    // If immediate surroundings is an interior space, show that interior through windows
+    // This applies to: vehicles in museums, houses in basements, spaceships in caves, etc.
+    if (input.immediateSurroundings && input.immediateSurroundings.spaceType === 'interior') {
+      // Nested interior - show surrounding interior space through windows
+      const immediateConstraint = buildImmediateSurroundingsConstraint(
+        input.immediateSurroundings.name,
+        input.immediateSurroundings.description,
+        input.immediateSurroundings.dna
+      );
+      constraints.push(immediateConstraint);
+    } else if (surroundings) {
+      // At world boundary - show world exterior through windows
+      const genre = surroundings.genre || '';
+      const architecturalTone = surroundings.architectural_tone || '';
+      const paletteBias = surroundings.palette_bias || '';
+      
+      if (genre || architecturalTone) {
+        const exteriorConstraint = buildExteriorViewConstraint(genre, architecturalTone, paletteBias);
+        constraints.push(exteriorConstraint);
+      }
     }
   }
   
