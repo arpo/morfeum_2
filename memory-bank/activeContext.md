@@ -2,7 +2,37 @@
 
 ## 2025-12-30
 
-### Structured Image Prompt System - COMPLETED (Latest)
+### Prompt Index Documentation - COMPLETED (Latest)
+
+Created comprehensive prompt documentation file at `packages/backend/src/engine/generation/prompts/PROMPT_INDEX.md`.
+
+#### What Was Done
+
+**Problem:** Prompts were scattered across the codebase in different files and formats, making them hard to find and understand.
+
+**Solution:** Created a centralized index document (not code changes) that:
+- Catalogs 30+ prompts organized by category
+- Documents file locations with relative links
+- Maps prompts to their pipelines
+- Shows pipeline flow diagrams
+
+#### Categories Documented
+- **Vision/Analysis**: `visionDescriptionPrompt` (image drops), `characterVisualAnalysisPrompt`
+- **Character Generation**: seed, image, profile, scene composition prompts
+- **Navigation/Intent**: intent classifier, destination analysis, structure analysis
+- **Location/DNA**: hierarchy categorization, DNA generation (host/region/location/niche)
+- **Image Generation**: world tree context builder, composition instructions
+- **Chat/Impersonation**: system messages, character voice prompts
+- **Enhancer**: furnish enhancement prompts
+
+#### Pipeline Flows Documented
+- Image Drop/Paste Flow (spawn-input-bar → vision API)
+- World Tree Pipeline (NEW_HOST, NEW_LOCATION)
+- Navigation Pipeline (GOTO, GO_INSIDE)
+- Character Pipeline (CREATE_CHARACTER)
+- Character in Scene Pipeline
+
+### Structured Image Prompt System - COMPLETED
 
 Implemented layer-based structured image prompts across both spawn and navigation pipelines.
 

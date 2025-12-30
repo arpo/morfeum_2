@@ -2,7 +2,13 @@
 
 ## 2025-12-30
 
-- [x] **Structured Image Prompt System - COMPLETED (Latest)**: Implemented layer-based structured prompts across both pipelines
+- [x] **Prompt Index Documentation - COMPLETED (Latest)**: Created comprehensive prompt reference at `packages/backend/src/engine/generation/prompts/PROMPT_INDEX.md`
+  - Catalogs 30+ prompts organized by category (Vision, Character, Navigation, Location/DNA, Image, Chat, Enhancer)
+  - Documents file locations with relative links
+  - Shows pipeline flow diagrams for all major flows (World Tree, Navigation, Character, Image Drop)
+  - Non-invasive documentation - no code changes to working systems
+
+- [x] **Structured Image Prompt System - COMPLETED**: Implemented layer-based structured prompts across both pipelines
   - **Problem**: Image prompts were unstructured strings, making it difficult to place characters in layers, modify parts, or reuse scenes
   - **Solution**: Structured JSON format with `background`, `midground`, `foreground`, `lighting`, `atmosphere` fields
   - **New files created**:

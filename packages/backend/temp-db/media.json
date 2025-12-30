@@ -85,6 +85,22 @@
         "model": "FLUX"
       },
       "entityRefs": []
+    },
+    "media-1767090406108-rnxkwa148": {
+      "id": "media-1767090406108-rnxkwa148",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a885db0/t_T3Bq26PPR3Jps2nZC1u.jpg",
+      "createdAt": "2025-12-30T10:26:46.108Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nUrban Metropolis. A vibrant and diverse city, characterized by its blend of old and new architecture, with a lively atmosphere and illuminated streets. It is a sprawling urban center that never sleeps.\n\nCinematic establishing shot. Ultra-wide, epic scale, panoramic view. High aerial angle or dramatic low angle looking up.\n\nVisual Character:\nAERIAL/SATELLITE VIEW: City skyline, geography, distant landmarks as tiny shapes. Focus on the vastness of the urban landscape, the density of buildings, and the distant glow of lights.\n\nAtmosphere:\nCity-wide air, weather patterns. A generally clear, cool evening with a slight urban haze.\n\nColors and Lighting:\nDominant: Deep indigo/black (night sky), Secondary: Golden yellow/orange (city lights), Accent: Silver/white (brightest lights, distant water)\nLight: Dark sky with scattered city glow, City-wide light and color from above, a tapestry of artificial lights glowing against the dark sky, interspersed with the occasional park or body of water.\n\nGenre/Style: Sci-Fi\nArchitectural Style: Modernist and Postmodernist\n\nProfessional photography, highly detailed, cinematic composition, sharp focus on key landmarks, atmospheric depth.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "loc-1767088812477-gml74skmk"
+      ]
     }
   }
 }
