@@ -266,7 +266,7 @@ User: "/CREATE_CHARACTER a bartender"
 
 ## Structured Image Prompts
 
-As of Dec 2024, image prompts use a **structured JSON format** with layers:
+As of Dec 2025, image prompts use a **structured JSON format** with layers:
 
 ```json
 {
