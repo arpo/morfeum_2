@@ -31,7 +31,8 @@
       "slug": "artistic-metropolis",
       "structure": {
         "spatialLayout": "Winding paths, interconnected spaces, verticality of buildings."
-      }
+      },
+      "primaryMedia": "media-1767101566530-3uxh9sqdp"
     },
     "8439ed19-c99e-4ae7-bbe2-d77291d4c7db": {
       "id": "8439ed19-c99e-4ae7-bbe2-d77291d4c7db",
@@ -99,6 +100,239 @@
         "large potted plants"
       ],
       "primaryMedia": "media-1767101463109-jdq56dhpu"
+    },
+    "location-1767101515021-r4rm9pogh": {
+      "id": "location-1767101515021-r4rm9pogh",
+      "type": "location",
+      "name": "The Cafe",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A low-lying, sprawling building with an undulating roofline, its entire facade a riot of colorful, hand-laid mosaic tiles depicting abstract urban scenes and swirling patterns. Large, irregularly shaped windows are framed with mismatched stained glass, casting kaleidoscopic light patterns.",
+        "colorsAndLighting": "A bright, energetic mix of warm jewel tones (sapphire, ruby, emerald) and cool, electric hues (cyan, magenta, lime green). Dappled sunlight streams through stained glass windows, creating dynamic light play. Interior lighting is warm and inviting, with exposed Edison bulbs and strategically placed spotlights.",
+        "atmosphere": "Bustling and cheerful, filled with the murmur of conversations, the clinking of mugs, and the occasional burst of laughter. A sense of creative energy permeates the air, which smells of coffee, baked goods, and a hint of artistic paint.",
+        "materials": "Dominantly mosaic tiles (glass, ceramic, stone), with accents of weathered wood for seating, wrought iron for structural elements, and exposed plaster walls within.",
+        "mood": "Joyous artistry, vibrant urban life, inspiring, lively, eclectic, welcoming.",
+        "sounds": "Chatter, clinking ceramics, espresso machine hiss, gentle background music, street sounds.",
+        "spatialLayout": "A central open seating area with smaller nooks and alcoves, flowing organically from the exterior shape. A long, art-covered counter dominates one wall.",
+        "primary_surfaces": "Mosaic tile facades and interior walls.",
+        "secondary_surfaces": "Rough-hewn wooden tabletops, exposed brick accent walls, stained glass window panes.",
+        "accent_features": "Hand-painted murals on interior walls, quirky found-object art installations, overflowing potted plants with lush foliage, mosaic shard detailing on furniture.",
+        "dominant": "Architecture",
+        "secondary": "Art",
+        "accent": "Nature",
+        "ambient": "Urban",
+        "genre": "Urban Art",
+        "architectural_tone": "Bohemian Urban",
+        "cultural_tone": "Artistic",
+        "palette_bias": "Warm and Cool Brights",
+        "flora_base": "Tropical Lush",
+        "fauna_base": "Absent"
+      },
+      "primaryMedia": "media-1767101515021-3yh4m8ltu",
+      "description": "An exterior view of a vibrant, Bohemian urban cafe, bathed in the warm and cool tones of a vibrant spectrum. The building's irregular form is softened by lush greenery and eclectic architectural details.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "pitched",
+        "scale": "medium",
+        "orientation": "sprawling",
+        "openings": "large-glass|arched-windows",
+        "openingShape": "mixed",
+        "functionalType": "commercial",
+        "elevation": "ground-level",
+        "spatialLayout": "A charming, bohemian-style cafe with a sprawling layout, featuring an eclectic mix of seating areas both indoors and outdoors. The exterior is adorned with vibrant murals and overflowing planters.",
+        "requiredElements": [
+          "cafe"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center of the facade",
+          "description": "Leads inside the cafe."
+        },
+        {
+          "type": "passage",
+          "position": "to the left of the entrance",
+          "description": "Leads to a small patio area."
+        }
+      ],
+      "dominantElements": [
+        "cafe: shape=irregular, orientation=sprawling, scale=medium, style=Bohemian urban mosaic, surfaces=wood|stone, openings=large-glass|arched-windows, interior_materials=wood|tile|fabric, enterable=yes, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "hand-painted signage",
+        "outdoor seating with mismatched chairs",
+        "exposed brickwork with graffiti art"
+      ],
+      "searchDesc": "Artistic mosaic cafe with bohemian urban vibes, serving vibrant urban life and joyous artistry.",
+      "slug": "the-mosaic-cafe"
+    },
+    "niche-1767101548201-6z892i40r": {
+      "id": "niche-1767101548201-6z892i40r",
+      "type": "niche",
+      "name": "The Cafe",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A chaotic yet harmonious blend of urban grit and artistic expression. Buildings are adorned with vibrant murals and graffiti, interspersed with patches of lush greenery. Sunlight dapples through colorful overhead awnings and foliage, creating dynamic light patterns.",
+        "colorsAndLighting": "A riot of warm and cool brights. Bold oranges, reds, and yellows clash playfully with deep blues, teals, and purples. Lighting is a mix of natural sunlight, warm Edison bulbs, and colorful neon signs, creating a lively and inviting glow.",
+        "atmosphere": "Airy and effervescent, filled with the buzz of conversation and the distant sounds of urban life. A palpable sense of creative freedom and joyous camaraderie.",
+        "materials": "A textured mix of weathered wood, rough plaster painted with vibrant murals, mosaic tiles in intricate patterns, and polished concrete floors. Accents of metal and recycled materials.",
+        "mood": "Joyous artistry, vibrant urban life, inspiring, lively, welcoming, and creatively charged.",
+        "sounds": "Chatter, clinking mugs, distant traffic, soft indie music, occasional laughter, espresso machine hiss.",
+        "spatialLayout": "An open, flowing space with distinct zones for seating, ordering, and art display. It feels expansive yet intimate.",
+        "primary_surfaces": "Painted plaster walls with murals, mosaic tiled bar, concrete floor.",
+        "secondary_surfaces": "Draped fabric canopy, potted plants, reclaimed wood seating.",
+        "accent_features": "Mosaic shards, graffiti art, custom tile patterns, string lights, living wall.",
+        "dominant": "Architecture",
+        "secondary": "Art",
+        "accent": "Nature",
+        "ambient": "Urban",
+        "genre": "Urban Art",
+        "architectural_tone": "Bohemian Urban",
+        "cultural_tone": "Artistic",
+        "palette_bias": "Warm and Cool Brights",
+        "flora_base": "Tropical Lush",
+        "fauna_base": "Absent"
+      },
+      "primaryMedia": "media-1767101548200-8t3u2sua0",
+      "description": "You are inside a cozy, medium-scale cafe with an irregular and sprawling layout. The atmosphere is inviting, with a bohemian urban mosaic style characterized by wood and stone surfaces, and large glass and arched windows.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "null",
+        "scale": "medium",
+        "orientation": "sprawling",
+        "openings": "large-glass|arched-windows",
+        "openingShape": "mixed",
+        "functionalType": "commercial",
+        "elevation": "ground-level",
+        "spatialLayout": "The cafe is an irregularly shaped, sprawling space designed for a medium-scale establishment. It features an abundance of natural light and a cozy atmosphere.",
+        "requiredElements": [
+          "cafe"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "mismatched vintage armchairs",
+          "worn Persian rugs",
+          "eclectic bookshelves overflowing with art books",
+          "exposed brick walls adorned with local art",
+          "mosaic tile-topped tables",
+          "potted plants",
+          "string lights",
+          "a rustic wooden counter with artisanal coffee equipment"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "door arched way to kitchen"
+        },
+        {
+          "type": "window",
+          "position": "front wall",
+          "description": "window large glass"
+        },
+        {
+          "type": "window",
+          "position": "left wall",
+          "description": "window smaller arched"
+        },
+        {
+          "type": "door",
+          "position": "back wall",
+          "description": "door to courtyard"
+        }
+      ],
+      "dominantElements": [
+        "cafe: shape=irregular, orientation=sprawling, scale=medium, style=Bohemian urban mosaic, surfaces=wood|stone, openings=large-glass|arched-windows, interior_materials=wood|tile|fabric, enterable=yes, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "Bohemian urban mosaic style",
+        "mix of wood and stone surfaces",
+        "large glass and arched windows"
+      ],
+      "searchDesc": "Bohemian urban cafe with vibrant art, eclectic seating, and a lively, joyous atmosphere.",
+      "slug": "null-of-the-cafe"
+    },
+    "niche-1767101617345-6myogdty4": {
+      "id": "niche-1767101617345-6myogdty4",
+      "type": "niche",
+      "name": "Cozy Toilette",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A small, intimate washroom with walls adorned in vibrant mosaic tiles that mimic urban murals. A plush armchair sits in one corner, and a large, ornate mosaic mirror above a pedestal sink is a focal point.",
+        "colorsAndLighting": "A rich palette of warm jewel tones (deep blues, emerald greens, ruby reds) offset by bright, cool accents (cyan, magenta). Soft, warm lighting emanates from a mosaic pendant lamp, creating a cozy glow.",
+        "atmosphere": "Intimate and tranquil, with a subtle scent of lavender and clean ceramic. A sense of creative warmth permeates the air, offering a moment of calm.",
+        "materials": "Dominantly glass and ceramic mosaic tiles on walls and accent pieces, with soft velvet upholstery for the seating, polished brass for fixtures, and a worn Persian rug.",
+        "mood": "Relaxed comfort, intimate artistry, personal retreat, quiet inspiration.",
+        "sounds": "Soft water sounds, gentle murmur, distant city hum, quiet rustle.",
+        "spatialLayout": "A small, rectangular room optimized for comfort and visual interest.",
+        "primary_surfaces": "Mosaic tile walls, velvet upholstery",
+        "secondary_surfaces": "Polished brass fixtures, painted wood accents, ceramic.",
+        "accent_features": "Hand-painted tile backsplash, framed street art, art books, potted plants, ornate mosaic mirror.",
+        "dominant": "Art",
+        "secondary": "Warm",
+        "accent": "Nature",
+        "ambient": "Warm and inviting",
+        "genre": "Urban Art",
+        "architectural_tone": "Bohemian Urban",
+        "cultural_tone": "Artistic",
+        "palette_bias": "Warm and Cool Brights",
+        "flora_base": "Potted Plants",
+        "fauna_base": "Absent"
+      },
+      "primaryMedia": "media-1767101617345-xnmq2dj7x",
+      "description": "Inside a small, inviting space with a uniquely styled toilette.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "intimate",
+        "orientation": "compact",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "civic",
+        "elevation": "ground-level",
+        "spatialLayout": "A small, self-contained space designed for comfort and privacy, adorned with eclectic decorative elements.",
+        "requiredElements": [
+          "toilette"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "vintage porcelain toilet",
+          "distressed wood vanity with ceramic sink",
+          "antique brass fixtures",
+          "framed botanical prints",
+          "woven rug with earthy tones",
+          "small potted succulents on the vanity"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door wooden   with intricate carvings"
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "window small round   with frosted glass"
+        }
+      ],
+      "dominantElements": [
+        "toilette: shape=organic, orientation=compact, scale=intimate, style=bohemian-urban, surfaces=wood|tile, openings=minimal, interior_materials=tile|wood|fabric, enterable=yes, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "warm and cool bright palette",
+        "Bohemian Urban style"
+      ],
+      "searchDesc": "Cozy washroom with urban art flair, mosaic details, plush seating, and vibrant colors.",
+      "slug": "cozy-washroom"
     }
   },
   "views": {},
@@ -115,6 +349,22 @@
               "id": "df85bf7d-92d1-43d1-8d26-fc0911e2ceff",
               "type": "location",
               "children": []
+            },
+            {
+              "id": "location-1767101515021-r4rm9pogh",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767101548201-6z892i40r",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767101617345-6myogdty4",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }
