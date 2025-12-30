@@ -147,6 +147,193 @@
         "lush green bushes and red foliage trees"
       ],
       "primaryMedia": "media-1767088834920-z01onremi"
+    },
+    "location-1767089170406-w4nzmkcbf": {
+      "id": "location-1767089170406-w4nzmkcbf",
+      "type": "location",
+      "name": "Old Factory Restaurant and Bar",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A high-ceilinged space with exposed brick walls and industrial structural elements, softened by contemporary design furnishings and a sophisticated lighting scheme. Large windows or open sections offer glimpses of the urban exterior.",
+        "colorsAndLighting": "A blend of cool blues reflecting from overhead structures or decorative elements, contrasted with warm earth tones from brick and wood. Pockets of vibrant artificial color punctuate the space through art installations or accent lighting.",
+        "atmosphere": "Vibrant and social, with the hum of conversation and background music. The air carries a scent of good food and drinks, with a sense of urban energy and historic grandeur.",
+        "materials": "Primarily exposed brick, steel girders, polished concrete, reclaimed wood, and brushed metal. Upholstered seating and design fixtures provide a contrasting tactile experience.",
+        "mood": "Inviting and awe-inspiring, evoking a sense of neighborhood pride and urban spectacle. It's a place for social gathering and experiencing the blend of history and modern design.",
+        "sounds": "Ambient chatter, clinking glasses, subtle industrial hum, curated background music.",
+        "spatialLayout": "Sprawling and open, with distinct zones for dining, bar, and lounge areas, often incorporating elevated or mezzanine levels.",
+        "primary_surfaces": "Textured brick walls of the old factory structure.",
+        "secondary_surfaces": "Polished concrete floors, exposed steel beams, dark wood paneling, brushed metal bar fronts.",
+        "accent_features": "Large-scale industrial art pieces, custom-designed light fixtures, plush velvet seating against raw backdrops, an imposing bar.",
+        "dominant": "Deep blue",
+        "secondary": "Warm terracotta",
+        "accent": "Vibrant artificial color (e.g., neon pink, electric yellow)",
+        "ambient": "Cool twilight sky glow from large windows or skylights, supplemented by warm interior lighting.",
+        "genre": null,
+        "architectural_tone": "Modern commercial with historical brick elements",
+        "cultural_tone": "Urban social hub",
+        "palette_bias": "Cool blues and warm earth tones with pops of vibrant artificial color",
+        "flora_base": "Minimal, possibly stylized industrial planters with deep green foliage.",
+        "fauna_base": null
+      },
+      "primaryMedia": "media-1767089170405-wij8gzjbd",
+      "description": "The exterior of the Old Factory Restaurant and Bar is a testament to its industrial past. Weathered red brick walls are punctuated by large, modern glass windows that reveal glimpses of the chic interior. Sections of corrugated metal cladding and repurposed industrial doors add to the rugged aesthetic. The overall impression is one of a revitalized industrial space, blending raw history with contemporary design.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass|open-passages|minimal",
+        "openingShape": "rectangular",
+        "functionalType": "commercial",
+        "elevation": "ground-level",
+        "spatialLayout": "A sprawling, converted old factory complex now houses a design restaurant and bar. Industrial elements like exposed brick and metal beams are juxtaposed with modern design features, creating a unique atmosphere. The exterior showcases large glass windows and repurposed industrial doors.",
+        "requiredElements": [
+          "industrial",
+          "design restaurant and bar",
+          "old factory location"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "polished concrete floor",
+          "exposed steel beams overhead",
+          "reclaimed wood bar with industrial stools",
+          "leather banquette seating",
+          "Edison bulb pendant lighting",
+          "large metal artwork",
+          "scattered high-top tables made from repurposed machine parts",
+          "ambient mood lighting",
+          "vintage posters of industrial machinery"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object large"
+        },
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door arching industrial way"
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "passage exposed brick way"
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "window large multi-pane"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object metal staircase descending to lower level"
+        }
+      ],
+      "dominantElements": [
+        "restaurant-bar: shape=modular, orientation=sprawling, scale=large, style=industrial, surfaces=weathered-brick-and-metal, openings=large-glass|open-passages, interior_materials=exposed-brick|concrete|metal-beams, enterable=yes, internal_atmosphere=industrial-chic"
+      ],
+      "uniqueIdentifiers": [
+        "converted factory",
+        "industrial architecture",
+        "modern design elements"
+      ],
+      "searchDesc": "Industrial design restaurant & bar in old factory. Cool blues, warm earth tones, urban spectacle.",
+      "slug": "the-foundry-lounge"
+    },
+    "niche-1767089202637-fmtya0q02": {
+      "id": "niche-1767089202637-fmtya0q02",
+      "type": "niche",
+      "name": "Old Factory Restaurant and Bar",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Interior of a converted old factory, blending rough brick textures with sleek, modern metallic surfaces and polished concrete. Overhead, the faint glow of the district's glass canopy is visible through large, grimy windows.",
+        "colorsAndLighting": "Warm, low-level amber lighting from Edison bulbs illuminates the terracotta brick. Cool, deep blue light emanates from concealed sources and reflects off metallic surfaces. Vibrant streaks of purple and electric blue define the art installations.",
+        "atmosphere": "A lively, social hum of conversation and clinking glasses. The air is warm and carries the faint scent of cooked food and perhaps a hint of industrial dust. A sense of energetic urban spectacle permeates the space.",
+        "materials": "Dominant materials include rough, textured brick, polished concrete floors and bar tops, brushed and patinated metals (steel, brass), and thick, clear or frosted glass elements. Some salvaged wood planks may be present for accent.",
+        "mood": "Inviting and awe-inspiring, a true urban social hub where patrons can feel both connected and captivated by the spectacle. It carries a sense of defiant cheerfulness amidst the industrial backdrop.",
+        "sounds": "Clinking glasses, muffled conversation, ambient industrial hum, distant city sounds, subtle electronic beats.",
+        "spatialLayout": "Open-plan with distinct zones for dining and bar. High ceilings with exposed ductwork. A mezzanine level offers a more intimate experience.",
+        "primary_surfaces": "Textured brick walls",
+        "secondary_surfaces": "Polished concrete floors and bar, brushed metal accents",
+        "accent_features": "Vibrant murals with spotlights, repurposed industrial decor, hanging Edison bulb clusters, stylized elephant mural.",
+        "dominant": "Terracotta",
+        "secondary": "Cool blues",
+        "accent": "Vibrant purple and electric blue",
+        "ambient": "Warm, low-level amber and cool, pulsing blue",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Modern commercial with historical brick elements",
+        "cultural_tone": "Urban social hub",
+        "palette_bias": "Cool blues and warm earth tones with pops of vibrant artificial color",
+        "flora_base": "None visible inside",
+        "fauna_base": "None visible inside"
+      },
+      "primaryMedia": "media-1767089202636-6sbmliuuo",
+      "description": "The interior of the Old Factory Restaurant and Bar is a spacious and high-ceilinged area. Exposed brick walls and visible metal beams underscore the industrial heritage, which is artfully contrasted with contemporary furnishings and a chic lighting scheme. Large windows or open sections provide views of the urban surroundings.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "large-glass|open-passages",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "This is a large, high-ceilinged space with industrial architecture. Modern furnishings and lighting create a sophisticated atmosphere.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "industrial pendant lights",
+          "distressed leather booth seating",
+          "polished concrete bar with copper accents",
+          "exposed brick walls",
+          "reclaimed wood tables",
+          "vintage beer tap handles",
+          "metal stools",
+          "graffiti art accents"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door large wooden double s"
+        },
+        {
+          "type": "window",
+          "position": "left wall",
+          "description": "window steel-framed"
+        },
+        {
+          "type": "archway",
+          "position": "right wall",
+          "description": "archway exposed brick"
+        },
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door service  rear wall"
+        }
+      ],
+      "dominantElements": [
+        "restaurant-bar: shape=modular, orientation=sprawling, scale=large, style=industrial-chic, surfaces=weathered-brick-and-metal, openings=large-glass|open-passages, interior_materials=exposed-brick|concrete|metal-beams, enterable=yes, internal_atmosphere=industrial-chic"
+      ],
+      "uniqueIdentifiers": [
+        "exposed brick walls",
+        "industrial structural elements",
+        "contemporary design furnishings",
+        "sophisticated lighting scheme"
+      ],
+      "searchDesc": "Industrial chic restaurant and bar with exposed brick, metal, and vibrant art.",
+      "slug": "null-of-old-factory-restaurant-and-bar"
     }
   },
   "views": {},
@@ -163,6 +350,17 @@
               "id": "cebf59c6-db62-4e11-b50e-e4e5d2fb1996",
               "type": "location",
               "children": []
+            },
+            {
+              "id": "location-1767089170406-w4nzmkcbf",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767089202637-fmtya0q02",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }

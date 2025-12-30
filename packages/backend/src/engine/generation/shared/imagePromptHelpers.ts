@@ -28,8 +28,26 @@ export const NON_RECTANGULAR_SHAPES = [
 /**
  * Parse a dominant element string to extract visual properties
  * Format: "name: shape=X, orientation=Y, scale=Z, style=W, surfaces=S, openings=O, ..."
+ * Also handles object format from older data structures
  */
-export function parseDominantElement(elementStr: string): ParsedDominantElement | null {
+export function parseDominantElement(elementStr: string | any): ParsedDominantElement | null {
+  // Handle non-string inputs (e.g., objects from older data structures)
+  if (typeof elementStr !== 'string') {
+    // If it's an object, try to extract useful info
+    if (elementStr && typeof elementStr === 'object') {
+      return {
+        name: elementStr.name || elementStr.type || String(elementStr),
+        shape: elementStr.shape,
+        orientation: elementStr.orientation,
+        scale: elementStr.scale,
+        style: elementStr.style,
+        surfaces: elementStr.surfaces,
+        openings: elementStr.openings
+      };
+    }
+    return null;
+  }
+  
   // Match "name: key=value, key=value, ..." format
   const match = elementStr.match(/^([^:]+):\s*(.+)$/);
   if (!match) {
