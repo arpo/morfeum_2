@@ -49,10 +49,10 @@ ${parentList}
 
 USER: ${originalPrompt}
 
-SCALE RULES (different view per level):
-- HOST: Aerial/satellite view. NO individual buildings. Focus: skyline, geography, distant landmarks.
-- REGION: Elevated street view. NO specific facades. Focus: street character, neighborhood atmosphere.
-- LOCATION: Ground level, specific building. Show facade, entrance, signage.
+SCALE RULES (content per level - camera handled separately):
+- HOST: Skyline silhouette, geographic features, distant landmarks. NO individual building details.
+- REGION: District character, street patterns, neighborhood architecture. NO specific facades.
+- LOCATION: Building facade, entrance details, signage, street context.
 ${locationElementRules}
 OUTPUT (pure JSON):
 {
@@ -63,7 +63,7 @@ OUTPUT (pure JSON):
     "uniqueIdentifiers": ["distinctive"],
     "searchDesc": "75-100 chars", "slug": "kebab-case",
     "dna": {
-      "looks": "GROUND LEVEL: facade, entrance, signage",
+      "looks": "Building facade, entrance details, signage, street context",
       "colorsAndLighting": "", "atmosphere": "", "materials": "",
       "mood": "", "sounds": "", "spatialLayout": "",
       "primary_surfaces": "", "secondary_surfaces": "", "accent_features": "",
@@ -76,7 +76,7 @@ OUTPUT (pure JSON):
     "name": "", "description": "2-3 sentences",
     "searchDesc": "75-100 chars", "slug": "kebab-case",
     "dna": {
-      "looks": "ELEVATED VIEW: district atmosphere, street character",
+      "looks": "District architecture, street patterns, neighborhood character",
       "colorsAndLighting": "", "atmosphere": "", "materials": "",
       "mood": "", "sounds": "", "spatialLayout": "",
       "primary_surfaces": "", "secondary_surfaces": "", "accent_features": "",
@@ -89,7 +89,7 @@ OUTPUT (pure JSON):
     "name": "", "description": "2-3 sentences",
     "searchDesc": "75-100 chars", "slug": "kebab-case",
     "dna": {
-      "looks": "AERIAL VIEW: skyline, geography (NO individual buildings)",
+      "looks": "Skyline silhouette, geographic features, vast landscapes",
       "colorsAndLighting": "", "atmosphere": "", "materials": "",
       "mood": "", "sounds": "", "spatialLayout": "",
       "primary_surfaces": "", "secondary_surfaces": "", "accent_features": "",

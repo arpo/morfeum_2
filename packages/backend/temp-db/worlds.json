@@ -1,577 +1,40 @@
 {
   "nodes": {
-    "loc-1767099773145-7xrwcuxwh": {
-      "id": "loc-1767099773145-7xrwcuxwh",
+    "loc-1767101449144-ncoxq6b1a": {
+      "id": "loc-1767101449144-ncoxq6b1a",
       "type": "host",
-      "name": "Moscow",
+      "name": "Artistic Metropolis",
       "spaceType": "exterior",
       "dna": {
-        "looks": "AERIAL VIEW: skyline, geography (NO individual buildings)",
-        "colorsAndLighting": "Bathed in warm, golden sunrise/sunset light, highlighting the city's prominent structures.",
-        "atmosphere": "Majestic, culturally rich, historically significant.",
-        "materials": "Stone, brick, metal domes, gilded spires visible from afar.",
-        "mood": "Peaceful, majestic, awe-inspiring.",
-        "sounds": "Distant urban hum, faint church bells.",
-        "primary_surfaces": "Urban rooftops, distant facades",
-        "secondary_surfaces": "Varying architectural materials",
-        "accent_features": "Golden spires, colorful domes, prominent landmarks",
-        "dominant": "Terracotta and earth tones of buildings",
-        "secondary": "Deep greens of parks, blues of sky",
-        "accent": "Gilded domes, vibrant dome colors",
-        "ambient": "Warm, soft golden light",
-        "genre": "REQUIRED",
-        "architectural_tone": "REQUIRED",
-        "cultural_tone": "REQUIRED",
-        "palette_bias": "REQUIRED",
-        "flora_base": "REQUIRED",
-        "fauna_base": "REQUIRED"
+        "looks": "Skyline silhouette, geographic features, vast landscapes",
+        "colorsAndLighting": "Bright, varied colors, dappled sunlight, strong contrasts.",
+        "atmosphere": "Lively, energetic, artistic, celebratory.",
+        "materials": "Mosaic tiles, painted plaster, natural foliage.",
+        "mood": "Joyous artistry, vibrant urban life, inspiring, lively.",
+        "sounds": "Distant city hum, echoing footsteps, faint music.",
+        "primary_surfaces": "Building facades, ground mosaics.",
+        "secondary_surfaces": "Overhead canopies, potted plants.",
+        "accent_features": "Mosaic shards, patterned designs, large potted plants.",
+        "dominant": "Architecture",
+        "secondary": "Art",
+        "accent": "Nature",
+        "ambient": "Urban",
+        "genre": "Urban Art",
+        "architectural_tone": "Bohemian Urban",
+        "cultural_tone": "Artistic",
+        "palette_bias": "Warm and Cool Brights",
+        "flora_base": "Tropical Lush",
+        "fauna_base": "Absent"
       },
-      "description": "Moscow, Russia's dynamic capital, is a city where history and modernity converge, renowned for its breathtaking onion domes, grand Kremlin, and vibrant cultural scene.",
-      "searchDesc": "Moscow skyline: iconic architecture, Kremlin, St. Basil's Cathedral, Red Square",
-      "slug": "moscow",
+      "description": "A sprawling cityscape where art bleeds into every corner. Mosaic architecture adorns buildings, while vibrant street art transforms ordinary spaces into open-air galleries. The metropolis pulses with lively urban energy.",
+      "searchDesc": "Vibrant mosaic cityscapes, colorful street art, lively urban plazas.",
+      "slug": "artistic-metropolis",
       "structure": {
-        "spatialLayout": "Sprawling urban landscape with distinct architectural clusters and green spaces."
-      },
-      "primaryMedia": "media-1767100175608-n4couv6l2"
-    },
-    "8d375d88-d09a-492d-b1f8-b9dff385ded9": {
-      "id": "8d375d88-d09a-492d-b1f8-b9dff385ded9",
-      "type": "region",
-      "name": "Red Square",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "ELEVATED VIEW: district atmosphere, street character",
-        "colorsAndLighting": "Warm golden light casting long shadows; vibrant hues of cathedral and surrounding buildings.",
-        "atmosphere": "Majestic and historically significant, with a sense of grand public space.",
-        "materials": "Cobblestone pavement, brickwork of surrounding buildings, distant hints of metal domes.",
-        "mood": "Awe-inspiring, serene, historically grand.",
-        "sounds": "Distant city hum, echoes of footsteps, faint murmurs of crowds.",
-        "primary_surfaces": "Cobblestone",
-        "secondary_surfaces": "Brick facades, painted elements",
-        "accent_features": "Ornate domes, golden spires, intricate patterns",
-        "dominant": "Warm oranges and reds",
-        "secondary": "Teal, blue, green, white",
-        "accent": "Gold",
-        "ambient": "Soft golden light",
-        "genre": null,
-        "architectural_tone": "Sacred and civic monumental",
-        "cultural_tone": "Russian historical and ceremonial",
-        "palette_bias": "Warm sunset/sunrise palette",
-        "flora_base": "Distant trees",
-        "fauna_base": "Indistinct figures"
-      },
-      "description": "Moscow's iconic Red Square is a vast, historical plaza surrounded by magnificent architecture. It serves as the central stage for many of Russia's most important events and celebrations.",
-      "searchDesc": "Red Square, Moscow: historic plaza, UNESCO World Heritage site, surrounding landmarks",
-      "slug": "red-square",
-      "structure": {
-        "spatialLayout": "Expansive, open plaza with focal points of impressive architecture."
+        "spatialLayout": "Winding paths, interconnected spaces, verticality of buildings."
       }
     },
-    "97d9d5dd-02f6-42c7-ad06-f87bf70aa08d": {
-      "id": "97d9d5dd-02f6-42c7-ad06-f87bf70aa08d",
-      "type": "location",
-      "name": "St. Basil's Cathedral",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The cathedral presents a complex, organic form with multiple towers of varying heights, each topped with distinctively shaped onion domes. Its main structure is a reddish-orange base, intricately decorated with white patterns, and crowned by vibrant, patterned domes.",
-        "colorsAndLighting": "The scene is bathed in the warm, golden light of sunrise or sunset, casting dramatic shadows and highlighting the vibrant colors of the cathedral. The sky is a canvas of fiery oranges and yellows transitioning to softer peach and blue.",
-        "atmosphere": "The atmosphere is peaceful and majestic, with a sense of historical grandeur. The air is likely still, carrying the quiet hum of a city at dawn or dusk. The cobblestone square is vast and empty, emphasizing the cathedral's imposing presence.",
-        "materials": "The cathedral's surfaces appear to be primarily stone, with decorative elements suggesting painted or tiled sections. The domes are likely metal with colorful coatings, and the spires are gilded. The ground is dark grey cobblestone.",
-        "mood": "A sense of awe and spiritual serenity pervades the scene, evoking wonder at the cathedral's beauty and historical significance.",
-        "sounds": "Distant city hum, gentle breeze, faint footfalls on cobblestone.",
-        "primary_surfaces": "Textured reddish-orange stone, vibrantly colored painted domes.",
-        "secondary_surfaces": "White decorative plasterwork, gilded spires, grey cobblestone pavement.",
-        "accent_features": "Striped blue and white dome, green and white striped dome, textured yellow and red dome patterns, golden Orthodox crosses.",
-        "dominant": "Reddish-orange facade",
-        "secondary": "Teal green trim",
-        "accent": "Vibrant dome colors (blue, white, green, yellow, red)",
-        "ambient": "Golden hour light",
-        "genre": null,
-        "architectural_tone": "Intricate sacred architecture",
-        "cultural_tone": "Russian Orthodox church, landmark",
-        "palette_bias": "Warm earth tones with vibrant jewel tones",
-        "flora_base": "Dark green trees",
-        "fauna_base": "None"
-      },
-      "description": "An iconic Russian Orthodox cathedral on Red Square, renowned for its distinctive, colorful onion domes and intricate architectural details. EXTERIOR VIEW.",
-      "searchDesc": "Iconic St. Basil's Cathedral in Moscow, bathed in golden light, with vibrant domes.",
-      "slug": "st-basil-s-cathedral",
-      "structure": {
-        "spatialLayout": "The cathedral is a sprawling, multi-towered complex on a vast, flat cobblestone square, with clear depth provided by the foreground, the main structure, and distant buildings."
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "base of central structure",
-          "description": "Leads into the cathedral interior."
-        },
-        {
-          "type": "passage",
-          "position": "between towers",
-          "description": "Allows for movement around the cathedral's exterior complex."
-        }
-      ],
-      "dominantElements": [
-        "St. Basil's Cathedral: shape=organic, orientation=centered, scale=massive, style=sacred, surfaces=stone, openings=arched-windows, interior_materials=stone|stone|stone, enterable=yes, internal_atmosphere=mystical"
-      ],
-      "uniqueIdentifiers": [
-        "Colorful onion domes",
-        "Intricate architectural details",
-        "Red Square location",
-        "Russian Orthodox iconography",
-        "Fiery sunrise/sunset lighting"
-      ],
-      "primaryMedia": "media-1767099787858-c0zlg2v2e"
-    },
-    "niche-1767099817716-p6s6qse6a": {
-      "id": "niche-1767099817716-p6s6qse6a",
-      "type": "niche",
-      "name": "St. Basil's Cathedral Interior",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "An elevated, spectral view of a district atmosphere, where the essence of St. Basil's Cathedral is present but intangible, with soft, undefined outlines and a palpable sense of grand public space.",
-        "colorsAndLighting": "Bathed in the warm, soft glow of a perpetual sunset, casting long, ethereal shadows. Hues of warm oranges, deep reds, and muted golds dominate, interspersed with spectral blues and greens.",
-        "atmosphere": "A profound sense of awe-inspiring serenity, imbued with the historical grandeur of the cathedral. The air is still, carrying faint echoes of distant ceremonies.",
-        "materials": "Composed of intangible, spectral materials that mimic the forms of cobblestone, brickwork, and ornate domes. Textures are suggested rather than physically present, like heat haze or shimmering light.",
-        "mood": "Awe-inspiring, serene, historically grand, contemplative, spiritual.",
-        "sounds": "Faint liturgical chants, distant bells, hushed reverence, spectral echoes, wind whispers.",
-        "spatialLayout": "An open, undefined space that hints at the complex and layered architecture of St. Basil's Cathedral, with elements suggesting multiple levels and interconnected chambers.",
-        "primary_surfaces": "Spectral cobblestone and ethereal brickwork.",
-        "secondary_surfaces": "Translucent representations of painted elements and metal domes.",
-        "accent_features": "Ghostly outlines of ornate domes, shimmering gold spires, and abstract patterns.",
-        "dominant": "Warm oranges and reds",
-        "secondary": "Teal, blue, green, white",
-        "accent": "Gold",
-        "ambient": "Soft golden light",
-        "genre": "REQUIRED",
-        "architectural_tone": "Sacred and civic monumental",
-        "cultural_tone": "Russian historical and ceremonial",
-        "palette_bias": "Warm sunset/sunrise palette",
-        "flora_base": "Distant trees",
-        "fauna_base": "Indistinct spectral figures"
-      },
-      "primaryMedia": "media-1767099817715-v88agozcw",
-      "description": "The interior of St. Basil's Cathedral is a captivating space, characterized by its organic forms, massive scale, and mystical atmosphere. Arched windows allow diffused light to illuminate the stone surfaces, creating a sacred ambiance.",
-      "structure": {
-        "form": "organic",
-        "roofType": "domed",
-        "scale": "massive",
-        "orientation": "centered",
-        "openings": "arched-windows",
-        "openingShape": "arched",
-        "functionalType": "religious",
-        "elevation": "ground-level",
-        "spatialLayout": "The interior is a labyrinthine network of interconnected chapels and passages, each adorned with vibrant frescoes and intricate architectural details. The stone surfaces absorb and reflect light, creating a sense of awe and wonder.",
-        "requiredElements": [
-          "stone",
-          "arched-windows",
-          "mystical"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "central iconostasis adorned with icons",
-          "tiered wooden pews",
-          "ornate candelabras with flickering candles",
-          "rich velvet prayer cushions",
-          "incense burner emitting fragrant smoke"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "front",
-          "description": "archway grand"
-        },
-        {
-          "type": "door",
-          "position": "center",
-          "description": "door ornate wooden  rear"
-        },
-        {
-          "type": "passage",
-          "position": "right",
-          "description": "passage vaulted way"
-        },
-        {
-          "type": "door",
-          "position": "left",
-          "description": "door small chapel"
-        }
-      ],
-      "dominantElements": [
-        "chapel: shape=organic, orientation=compact, scale=medium, style=sacred, surfaces=stone, openings=arched-windows, interior_materials=stone|stone|fresco, enterable=yes, internal_atmosphere=mystical"
-      ],
-      "uniqueIdentifiers": [
-        "vibrant frescoes",
-        "onion domes (visible through windows)",
-        "intricate stone carvings"
-      ],
-      "searchDesc": "Ethereal null space of St. Basil's Cathedral, awe-inspiring, serene, historically grand, sunset palette.",
-      "slug": "null-of-st-basil-s-cathedral"
-    },
-    "niche-1767099879058-14s542kxt": {
-      "id": "niche-1767099879058-14s542kxt",
-      "type": "niche",
-      "name": "Steampunk Techno Bar Rooftop",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A fusion of intricate sacred architecture and robust industrial design. Domed roofs echo the cathedral's form, but are constructed from riveted copper, brass, and stained glass illuminated from within. Gears, pipes, and clockwork mechanisms are integrated into the structure and furniture. Multiple levels and viewing platforms offer panoramic cityscapes.",
-        "colorsAndLighting": "Warm earth tones of aged brass and copper are punctuated by vibrant jewel tones from stained glass panels and internal lighting. Gas lamps and Edison bulbs cast a warm, inviting glow, with occasional flashes of electric blue from the Tesla coil. The ambient light is reminiscent of a perpetual sunset.",
-        "atmosphere": "A dynamic and buzzing atmosphere. The air is alive with the gentle hum of machinery, the hiss of steam, and the distant thrum of electronic music. It's energetic yet retains an underlying sense of awe and wonder. The feel is one of skilled craftsmanship and inventive spirit.",
-        "materials": "Primary materials are weathered brass, polished copper, dark stained wood, riveted iron, and textured, patterned glass. Reclaimed industrial elements and salvaged mechanical parts are abundant. Upholstery features rich velvets and distressed leather.",
-        "mood": "A sense of inventive wonder and communal revelry. It evokes curiosity and excitement, combined with a grounded appreciation for craftsmanship and a touch of mystical energy.",
-        "sounds": "Whirring gears, hissing steam, pulsing techno beats, clinking glasses, distant city hum.",
-        "spatialLayout": "Multi-tiered open-plan space with distinct zones for lounging, dancing, and intimate conversation. The layout encourages exploration and discovery, with hidden alcoves and elevated platforms.",
-        "primary_surfaces": "Aged brass plating, riveted copper sheeting, dark stained hardwood panels.",
-        "secondary_surfaces": "Exposed pipework, polished steel accents, velvet upholstery, stained glass panels.",
-        "accent_features": "Intricate clockwork mechanisms, Tesla coils, Victorian scientific instruments, salvaged gears and sprockets, custom-made steampunk lighting fixtures.",
-        "dominant": "Warm brass and copper tones",
-        "secondary": "Deep jewel-toned velvet and stained glass",
-        "accent": "Pulsing electric blue and golden light",
-        "ambient": "Golden hour glow with internal, dynamic lighting",
-        "genre": "REQUIRED",
-        "architectural_tone": "Intricate sacred architecture blended with industrial steampunk",
-        "cultural_tone": "Russian Orthodox church, landmark fused with Burning Man burner culture",
-        "palette_bias": "Warm earth tones with vibrant jewel tones",
-        "flora_base": "None apparent, perhaps metallic or mechanical 'plants'",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767099879058-bz7pd3ajg",
-      "description": "An open-air rooftop bar with a distinct steampunk techno vibe, catering to burners, bathed in the warm hues of a sunset.",
-      "structure": {
-        "form": "irregular",
-        "roofType": "flat",
-        "scale": "large",
-        "orientation": "sprawling",
-        "openings": "open-passages",
-        "openingShape": "mixed",
-        "functionalType": "entertainment",
-        "elevation": "rooftop",
-        "spatialLayout": "A sprawling rooftop space filled with modular, industrial-inspired structures and seating areas. Open passages connect various zones of the bar.",
-        "requiredElements": [
-          "steampunk techno bar",
-          "roof top",
-          "burners from burning man"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "copper-plated bar",
-          "plush velvet seating in jewel tones",
-          "intricate brass pipe detailing",
-          "tesla coils",
-          "glowing geometric light fixtures",
-          "holographic projections of celestial maps."
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "front",
-          "description": "archway ornate"
-        },
-        {
-          "type": "door",
-          "position": "left",
-          "description": "door gilded double s"
-        },
-        {
-          "type": "window",
-          "position": "right",
-          "description": "window crimson velvet curtains covering s"
-        }
-      ],
-      "dominantElements": [
-        "Steampunk Bar Structure: shape=organic, orientation=compact, scale=medium, style=industrial, surfaces=metallic-polished, openings=arched-windows, interior_materials=metallic|wood|tile, enterable=yes, internal_atmosphere=dim"
-      ],
-      "uniqueIdentifiers": [
-        "Steampunk aesthetic",
-        "Burner culture elements",
-        "Rooftop setting"
-      ],
-      "searchDesc": "Steampunk rooftop bar for burners, merging industrial design with cathedral grandeur on a vibrant rooftop.",
-      "slug": "steampunk-rooftop-bar"
-    },
-    "loc-1767099944535-gtl5ktjra": {
-      "id": "loc-1767099944535-gtl5ktjra",
-      "type": "location",
-      "name": "to big hall for dj, music and dance floor",
-      "spaceType": "structure",
-      "dna": {},
-      "description": "Structure: to big hall for dj, music and dance floor",
-      "searchDesc": "to big hall for dj, music and dance floor",
-      "slug": "to-big-hall-for-dj,-music-and-dance-floor",
-      "isPassThrough": true
-    },
-    "niche-1767099958096-tnovnal9g": {
-      "id": "niche-1767099958096-tnovnal9g",
-      "type": "niche",
-      "name": "Steampunk Techno Bar Rooftop DJ Hall",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "Vast, cavernous hall with soaring vaulted ceilings, retaining elements of intricate sacred architecture.  The space is dominated by a central DJ booth and a dynamic LED dance floor, with seating areas arranged in alcoves.  Modern lighting fixtures are integrated into the ornate decorative elements.",
-        "colorsAndLighting": "The foundational warm earth tones are present in the stone walls, but are dramatically contrasted by vibrant, jewel-toned LED lighting that cycles through blues, greens, purples, and reds, reflecting off the dance floor and metallic accents.  The ambient light is moody and dynamic, shifting with the music.",
-        "atmosphere": "A pulsating energy pervades the space, a blend of the awe-inspiring grandeur of the cathedral and the vibrant, infectious rhythm of the music.  The air hums with the bass and excitement of the crowd, yet still carries a faint echo of the sacred silence.",
-        "materials": "The primary materials are rough-hewn stone walls that retain the texture of the cathedral's exterior.  These are complemented by polished dark wood for the DJ booth and bar areas, mirrored surfaces on the dance floor, and brushed metal accents in the lighting rigs and decorative elements.  Gilded elements remain, catching and reflecting light.",
-        "mood": "Exhilarating, awe-inspiring, vibrant, spiritual, celebratory.",
-        "sounds": "Deep bass, pulsating electronic music, cheering crowd, echoing melodies, rhythmic beats.",
-        "spatialLayout": "A grand, open central hall with a high, vaulted ceiling. The dance floor occupies the central space, with the DJ booth positioned as a focal point. Alcoves and tiered seating are integrated into the side walls.",
-        "primary_surfaces": "Textured reddish-orange stone walls, polished dark wood, mirrored LED dance floor.",
-        "secondary_surfaces": "Brushed metal accents, gilded decorative elements, velvet upholstery in seating alcoves.",
-        "accent_features": "Integrated LED light strips outlining architectural features, stylized Orthodox crosses as light sculptures, vibrant jewel-toned frescoes illuminated with modern lighting, holographic projections.",
-        "dominant": "Reddish-orange (stone walls)",
-        "secondary": "Teal green (lighting accents and some decorative elements)",
-        "accent": "Vibrant jewel tones (blue, emerald green, deep purple, ruby red)",
-        "ambient": "Dynamic, pulsating, and moody lighting.",
-        "genre": "REQUIRED",
-        "architectural_tone": "Intricate sacred architecture, adapted and modernized.",
-        "cultural_tone": "Russian Orthodox church, landmark (reimagined as a cultural hub).",
-        "palette_bias": "Warm earth tones with vibrant jewel tones.",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767099958096-gxqp7nr9t",
-      "description": "The interior of a large, rectangular hall on the rooftop of a building, designed for music and dancing, with a distinct steampunk aesthetic.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "vaulted",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "arched-windows",
-        "openingShape": "arched",
-        "functionalType": "entertainment",
-        "elevation": "rooftop",
-        "spatialLayout": "A spacious, rectangular hall designed to accommodate a DJ booth, a dance floor, and seating areas. The interior features exposed metallic pipes and gears integrated with ornate Victorian detailing.",
-        "requiredElements": [
-          "dj booth",
-          "music",
-          "dance floor"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "intricate steampunk DJ booth with tesla coils and brass piping",
-          "massive rotating disco ball adorned with clockwork gears",
-          "hexagonal dance floor inlaid with glowing neon circuits",
-          "plush velvet seating arranged in bohemian clusters",
-          "towering industrial pipe scaffolding draped with fairy lights",
-          "ornate gilded icons of technological deities",
-          "scattered worn leather ottomans and salvaged metal furniture",
-          "large industrial fans with ornate grilles."
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "front wall",
-          "description": "door ornate brass-plated double s"
-        },
-        {
-          "type": "archway",
-          "position": "left wall",
-          "description": "archway gothic   leading to VIP lounge"
-        },
-        {
-          "type": "object",
-          "position": "right wall",
-          "description": "object spiral iron staircase  to rooftop access"
-        },
-        {
-          "type": "window",
-          "position": "back wall",
-          "description": "window large stained-glass   depicting celestial gears"
-        }
-      ],
-      "dominantElements": [
-        "Steampunk Bar Structure: shape=organic, orientation=compact, scale=medium, style=industrial, surfaces=metallic-polished, openings=arched-windows, interior_materials=metallic|wood|tile, enterable=yes, internal_atmosphere=dim"
-      ],
-      "uniqueIdentifiers": [
-        "Victorian-industrial fusion",
-        "Integrated DJ stage",
-        "Ornate metallic detailing"
-      ],
-      "searchDesc": "Grand hall for DJ, music, and dance, blending sacred architecture with modern party atmosphere.",
-      "slug": "interior-of-to-big-hall-for-dj-music-and-dance-floor"
-    },
-    "niche-1767100013888-vzlz3kg6e": {
-      "id": "niche-1767100013888-vzlz3kg6e",
-      "type": "niche",
-      "name": "The Room with a Car",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A spacious garage space transformed into a workshop cathedral. The central feature is a meticulously restored or custom-built car, heavily integrated with steampunk aesthetic elements like brass plating, exposed pipes, and intricate gearwork. The walls are a mosaic of riveted copper sheets, dark stained wood panels, and large stained glass windows depicting mechanical diagrams and stylized religious motifs. Elevated platforms and alcoves are filled with glowing scientific instruments, custom tools, and devotional shrines to engineering. The ceiling is a partial dome of hammered copper and richly colored stained glass, casting jewel-toned light.",
-        "colorsAndLighting": "Dominated by warm, aged brass and copper tones. Jewel tones of ruby, emerald, and sapphire emanate from the stained glass. Accent lighting from Edison bulbs, gas lamps, and the pulsing blue glow of Tesla coils creates an atmosphere of perpetual, magical sunset.",
-        "atmosphere": "A buzzing yet reverent atmosphere. The air is thick with the scent of fine oil, ozone, and aged metal. A low hum of unseen machinery, the occasional crackle of electricity, and the rhythmic tick-tock of intricate clockwork create a meditative soundscape, punctuated by bursts of creative energy.",
-        "materials": "Weathered brass, polished copper, dark stained hardwood, riveted iron, textured and patterned stained glass, distressed leather upholstery on built-in seating.",
-        "mood": "A profound sense of inventive wonder, dedicated craftsmanship, and spiritual devotion to the art of mechanics and the automobile. It evokes curiosity, reverence, and the thrill of creation.",
-        "sounds": "Low hum of machinery, rhythmic ticking of clockwork, occasional electrical crackle, gentle hiss of steam, soft metal clinks.",
-        "spatialLayout": "A high-ceilinged, open central space dominated by the car, with layered platforms and alcoves for work, display, and contemplation. Functional and aesthetic.",
-        "primary_surfaces": "Riveted copper sheeting, dark stained hardwood panels, aged brass plating.",
-        "secondary_surfaces": "Exposed pipework, polished steel accents, stained glass panels, distressed leather.",
-        "accent_features": "Intricate clockwork mechanisms, active Tesla coils, custom steampunk car modifications, mechanical reliquaries, devotional tools.",
-        "dominant": "Warm brass and copper tones",
-        "secondary": "Deep jewel-toned stained glass",
-        "accent": "Pulsing electric blue and golden light",
-        "ambient": "Golden hour glow with internal, dynamic lighting",
-        "genre": "REQUIRED",
-        "architectural_tone": "Intricate sacred architecture blended with industrial steampunk",
-        "cultural_tone": "Russian Orthodox church, landmark fused with Burning Man burner culture",
-        "palette_bias": "Warm earth tones with vibrant jewel tones",
-        "flora_base": "None apparent, perhaps metallic or mechanical 'plants'",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767100013887-hbqz594jo",
-      "description": "You are inside a medium-sized, rectangular room with a vaulted ceiling. The architecture is a modern interpretation of intricate sacred design, bathed in warm earth tones accented by vibrant jewel tones. A striking, futuristic car sits centrally within the space, its polished metallic surface gleaming under the ambient light. Large, arched glass openings allow glimpses of the outside, and the overall atmosphere is one of reverent display.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "vaulted",
-        "scale": "medium",
-        "orientation": "cubic",
-        "openings": "large-glass",
-        "openingShape": "arched",
-        "functionalType": "entertainment",
-        "elevation": "ground-level",
-        "spatialLayout": "A spacious, architecturally significant room designed to showcase a vehicle. The car is centrally placed, inviting closer inspection, with ample space around it for viewing and movement.",
-        "requiredElements": [
-          "room",
-          "car"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "front",
-          "description": "A heavy, riveted metal door with stained glass panels depicting gears and celestial bodies, leading to the outside."
-        },
-        {
-          "type": "passage",
-          "position": "side",
-          "description": "An archway leading to a cluttered but organized workbench area."
-        },
-        {
-          "type": "stairs",
-          "position": "rear",
-          "description": "Spiral metal stairs leading to a small loft overlooking the main space."
-        }
-      ],
-      "dominantElements": [
-        "car: shape=organic, orientation=centered, scale=medium, style=futuristic, surfaces=metallic-polished, openings=none, interior_materials=null|null|null, enterable=yes, internal_atmosphere=sterile"
-      ],
-      "uniqueIdentifiers": [
-        "Intricate sacred architecture",
-        "Warm earth tones with vibrant jewel tones"
-      ],
-      "searchDesc": "Steampunk sanctuary devoted to a car, blending sacred architecture and industrial grit.",
-      "slug": "the-garage-sanctuary"
-    },
-    "loc-1767100024463-mhz4um7fu": {
-      "id": "loc-1767100024463-mhz4um7fu",
-      "type": "location",
-      "name": "car",
-      "spaceType": "structure",
-      "dna": {},
-      "description": "Structure: car",
-      "searchDesc": "car",
-      "slug": "car",
-      "isPassThrough": true
-    },
-    "niche-1767100035820-lnmjdqzl3": {
-      "id": "niche-1767100035820-lnmjdqzl3",
-      "type": "niche",
-      "name": "futuristic_car_interior",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A compact, enclosed space with a fusion of intricate mechanical elements and luxurious, aged materials. The overall impression is that of a finely crafted, mobile jewel box. Riveted brass and copper panels line the walls, interspersed with sections of dark, polished wood. Plush, deep red velvet or distressed leather upholstery adorns the seats and some wall sections. Intricate clockwork mechanisms are integrated into the dashboard and decorative elements.",
-        "colorsAndLighting": "Dominant warm brass and copper tones are enhanced by the deep jewel tones of the upholstery. The lighting is a warm, inviting glow from Edison bulbs housed in ornate brass fixtures, with occasional flickering pulses of electric blue from the integrated Tesla coil. The interior feels perpetually bathed in a warm, golden hour light.",
-        "atmosphere": "The air is warm and slightly humid, carrying the faint scent of polished metal, aged leather, and a hint of ozone from the Tesla coil. There's a low, constant hum of machinery, punctuated by the occasional hiss of a steam valve or the gentle click of gears. The atmosphere is one of concentrated focus and inventive power, tinged with a sense of luxurious confinement.",
-        "materials": "Weathered brass plating, polished copper sheeting, dark stained hardwood panels, rich velvet or distressed leather upholstery, riveted iron accents.",
-        "mood": "A sense of inventive wonder and contained excitement. It evokes curiosity about the journey and the craftsmanship, combined with a grounded appreciation for tactile quality and a touch of powerful, contained energy.",
-        "sounds": "Hum of machinery, gentle gear clicks, faint hiss of steam, subtle electrical crackle.",
-        "spatialLayout": "A confined, often curved space, designed for two to four occupants. The layout prioritizes function with the driver's controls at the forefront, surrounded by intricate instrumentation. Seating is plush and enveloping.",
-        "primary_surfaces": "Brass plating, leather upholstery, polished wood panels.",
-        "secondary_surfaces": "Riveted copper sheeting, velvet accents, exposed pipework, glass instrument covers.",
-        "accent_features": "Intricate clockwork mechanisms on the dashboard, small Tesla coil with blue arcing, polished brass steering wheel, custom-made steampunk lighting fixtures, visible steam valves.",
-        "dominant": "Warm brass and copper tones",
-        "secondary": "Deep jewel-toned upholstery (reds, purples, emeralds)",
-        "accent": "Pulsing electric blue and golden light",
-        "ambient": "Golden hour glow with internal, dynamic lighting",
-        "genre": "REQUIRED",
-        "architectural_tone": "Intricate sacred architecture blended with industrial steampunk",
-        "cultural_tone": "Russian Orthodox church, landmark fused with Burning Man burner culture",
-        "palette_bias": "Warm earth tones with vibrant jewel tones",
-        "flora_base": "None apparent, perhaps metallic or mechanical 'plants'",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767100035819-6tsk152yp",
-      "description": "The interior of a futuristic, sterile, and medium-scale car with polished metallic surfaces.",
-      "structure": {
-        "form": "organic",
-        "roofType": null,
-        "scale": "medium",
-        "orientation": "compact",
-        "openings": "none",
-        "openingShape": "none",
-        "functionalType": null,
-        "elevation": "ground-level",
-        "spatialLayout": "The interior of the car is a compact, organic space designed for efficiency and a sterile environment.",
-        "requiredElements": [
-          "car"
-        ]
-      },
-      "navigableElements": [],
-      "dominantElements": [
-        "car: shape=organic, orientation=centered, scale=medium, style=futuristic, surfaces=metallic-polished, openings=none, interior_materials=null|null|null, enterable=yes, internal_atmosphere=sterile"
-      ],
-      "uniqueIdentifiers": [
-        "sterile atmosphere",
-        "futuristic metallic surfaces",
-        "organic form"
-      ],
-      "searchDesc": "Steampunk car interior: brass, leather, clockwork dashboard, Tesla coil lights.",
-      "slug": "interior-of-car"
-    },
-    "loc-1767100656976-oy669py35": {
-      "id": "loc-1767100656976-oy669py35",
-      "type": "host",
-      "name": "Aethelburg",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "AERIAL VIEW: vast, multi-tiered cityscape of ivory hues, adorned with gold accents, domes, and minarets. A colossal, graceful archway of white stone with intricate golden patterns dominates the upper vista, with a magnificent flying galleon suspended within its opening.",
-        "colorsAndLighting": "Bright blue sky with soft white clouds. Dominant colors are white and gold, with rich blue for the ship's hull. Warm internal light glows from city windows.",
-        "atmosphere": "Ethereal beauty, elevated civilization, celestial harmony.",
-        "materials": "White stone, polished gold, metallic blue for ship's hull, ivory-toned material for cityscape.",
-        "mood": "Awe, wonder, ethereal beauty, elevated civilization, celestial harmony.",
-        "sounds": "Distant hum of airships, faint echoes of city life.",
-        "primary_surfaces": "White stone, ivory-toned materials",
-        "secondary_surfaces": "Polished gold",
-        "accent_features": "Gold patterns, domes, minarets, flying galleon, glowing windows",
-        "dominant": "White stone and gold architecture",
-        "secondary": "Ivory cityscape",
-        "accent": "Blue flying galleon",
-        "ambient": "Soft white clouds in a bright blue sky",
-        "genre": "Fantasy",
-        "architectural_tone": "Sacred, ornate",
-        "cultural_tone": "Celestial, elevated civilization",
-        "palette_bias": "White and gold",
-        "flora_base": "None specified",
-        "fauna_base": "None specified"
-      },
-      "description": "A breathtaking, sprawling fantastical city interwoven with monumental architectural structures. The city is a testament to celestial harmony, with ivory hues and gold accents dominating its multi-tiered design.",
-      "searchDesc": "Fantastical city with grand archways and flying ships.",
-      "slug": "aethelburg",
-      "structure": {
-        "spatialLayout": "Multi-tiered cityscape with interconnected buildings, a colossal archway above, and a body of water and waterfront below."
-      }
-    },
-    "b02e2604-e676-425a-9ba8-44e96e0fb6d3": {
-      "id": "b02e2604-e676-425a-9ba8-44e96e0fb6d3",
+    "8439ed19-c99e-4ae7-bbe2-d77291d4c7db": {
+      "id": "8439ed19-c99e-4ae7-bbe2-d77291d4c7db",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -581,128 +44,75 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "f18d4e54-b15d-4328-85f4-d493bea2cbfd": {
-      "id": "f18d4e54-b15d-4328-85f4-d493bea2cbfd",
+    "df85bf7d-92d1-43d1-8d26-fc0911e2ceff": {
+      "id": "df85bf7d-92d1-43d1-8d26-fc0911e2ceff",
       "type": "location",
-      "name": "The Celestial Archway & Sky-Harbor",
+      "name": "The Mosaic Alley",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A colossal, graceful archway of white stone with intricate golden patterns dominates the upper vista. Suspended within its opening is a magnificent flying galleon, detailed with multiple masts and sails. Below, a vast, multi-tiered cityscape of ivory hues unfolds, adorned with gold accents, domes, and minarets.",
-        "colorsAndLighting": "The scene is bathed in the bright blue of a clear sky, with soft white clouds. The archway and city are primarily white and ivory, heavily accented with shimmering gold. The flying ship features a rich blue hull and golden adornments. Windows throughout the city glow with a warm internal light.",
-        "atmosphere": "The air is clear and bright, suggesting a high altitude. There is a sense of awe and grandeur. Soft white clouds drift lazily in the sky. The distant water provides a serene counterpoint to the bustling city.",
-        "materials": "The primary materials appear to be white stone and polished gold for the architectural elements. The flying ship's hull is a rich, perhaps metallic, blue with ornate gold detailing. The cityscape is built from a light, ivory-toned material, likely stone or a similar substance, with extensive gold detailing.",
-        "mood": "The mood is one of awe, wonder, and ethereal beauty, evoking a sense of elevated civilization and celestial harmony.",
-        "sounds": "Distant hum of airships, gentle wind, faint city bustle, lapping water.",
-        "primary_surfaces": "Smooth white stone, shimmering gold filigree, polished metallic blue hull.",
-        "secondary_surfaces": "Ivory-hued building material, fabric sails, glass windows.",
-        "accent_features": "Intricate golden decorative patterns on the archway, ornate superstructures on the flying ship, glowing windows.",
-        "dominant": "White and gold archway",
-        "secondary": "Blue and gold flying ship",
-        "accent": "Ivory cityscape with gold trim",
-        "ambient": "Bright, clear daylight",
+        "looks": "The alley is a narrow, winding passage framed by buildings. Its defining feature is the extensive mosaic work covering the ground and building facades. Large potted plants add organic elements to the scene.",
+        "colorsAndLighting": "The scene is bathed in bright sunlight, casting dappled shadows from an overhead foliage canopy. The dominant colors are vibrant reds, yellows, blues, and greens from the mosaic tiles and painted walls.",
+        "atmosphere": "The air is warm and filled with the brightness of the sun. A gentle breeze might rustle the leaves of the overhead foliage. The overall atmosphere is cheerful and welcoming, buzzing with urban energy.",
+        "materials": "The primary materials are intricately patterned mosaic tiles and brightly painted plaster on the building facades. Lush, broad green leaves from potted plants and the overhead canopy provide organic textures.",
+        "mood": "The alley exudes a mood of joyous artistry and vibrant urban life. It feels both lively and inspiring, a feast for the eyes.",
+        "sounds": "chatter, distant music, rustling leaves, footsteps on tile",
+        "primary_surfaces": "Brilliantly tiled mosaic surfaces, vibrant painted plaster walls",
+        "secondary_surfaces": "Lush green leaves, dappled sunlight",
+        "accent_features": "Circular patterned mosaic designs, irregularly shaped tile path",
+        "dominant": "Red and yellow on building facades",
+        "secondary": "Blue and green on ground mosaic",
+        "accent": "Teal-green on building accents",
+        "ambient": "Bright and warm",
         "genre": null,
-        "architectural_tone": "Sacred, ornate, celestial",
-        "cultural_tone": "Advanced, possibly divine civilization; hub of aerial trade and travel",
-        "palette_bias": "White, gold, blue, ivory",
-        "flora_base": "None",
+        "architectural_tone": "Bohemian urban mosaic",
+        "cultural_tone": "Artisan, pedestrian, community gathering",
+        "palette_bias": "Warm and cool vibrant spectrum",
+        "flora_base": "Potted plants, overhead canopy of leaves",
         "fauna_base": "None"
       },
-      "description": "A colossal, graceful archway or bridge, intricate with golden decorative patterns and white stone, curving majestically across the upper half of the vista. Suspended within an opening of this grand structure is a magnificent, highly detailed flying ship, resembling an ancient galleon with multiple masts and sails, its hull a rich blue and golden, adorned with ornate superstructures. Below this, a vast, multi-tiered cityscape unfurls, characterized by numerous domes, minarets, and interconnected buildings in a light, almost ivory hue, all outlined and accented with shimmering gold details. EXTERIOR VIEW.",
-      "searchDesc": "Breathtaking celestial city with archway, flying ship, and ornate ivory architecture.",
-      "slug": "the-celestial-archway-sky-harbor",
+      "description": "A vibrant and colorful narrow alleyway bathed in bright sunlight. The ground is extensively adorned with intricate mosaic work, featuring a central winding path of brightly colored, irregularly shaped tiles in shades of red, yellow, blue, and green, flanked by smaller, pebble-like mosaic tiles and circular, patterned designs. The buildings lining both sides are painted in striking reds, yellows, and teal-greens, also embellished with colorful mosaic shards and patterns. Sunlight filters through an overhead canopy of lush green foliage, casting dappled light and shadows. Large potted plants with broad green leaves are placed along the path. The alley curves gently and recedes into the distance. EXTERIOR VIEW.",
+      "searchDesc": "Sunlit mosaic alley with colorful buildings and lush foliage.",
+      "slug": "the-mosaic-alley",
       "structure": {
-        "spatialLayout": "The scene is arranged vertically, with the archway and flying ship at the highest point, cascading down to the multi-tiered cityscape. Depth is created by the expanse of the city and the receding architectural elements."
+        "spatialLayout": "A gently curving, narrow passageway with a sense of depth extending into the distance. The compact layout is enlivened by the verticality of the flanking buildings and the overhead canopy."
       },
       "navigableElements": [
         {
-          "type": "archway",
-          "position": "upper half of vista",
-          "description": "Leads into the main opening of the archway."
+          "type": "passage",
+          "position": "at the far end of the alley",
+          "description": "leads further into the city"
+        },
+        {
+          "type": "door",
+          "position": "midway down the left side",
+          "description": "opens into a building"
         }
       ],
       "dominantElements": [
-        "flying ship: shape=organic, orientation=flowing(vessel), scale=massive, style=sacred, surfaces=metallic-polished, openings=circular-portholes, interior_materials=\"wood|fabric|tile\", enterable=yes, internal_atmosphere=mystical",
-        "cityscape: shape=modular, orientation=sprawling(complex), scale=massive, style=sacred, surfaces=stone, openings=open-passages, interior_materials=\"stone|tile|fabric\", enterable=no, internal_atmosphere=bright"
+        "building_facade: shape=rectangular, orientation=vertical, scale=medium, style=art-deco, surfaces=mosaic-tile|painted-plaster, openings=arched-windows, interior_materials=tile|stone|plaster, enterable=yes, internal_atmosphere=bright",
+        "ground_mosaic: shape=irregular, orientation=horizontal, scale=large, style=rustic, surfaces=mosaic-tile, openings=none, interior_materials=tile|stone, enterable=no, internal_atmosphere=none"
       ],
       "uniqueIdentifiers": [
-        "Colossal white and gold archway",
-        "Suspended blue and gold flying galleon",
-        "Ivory cityscape with gold accents",
-        "Glowing windows",
-        "Waterfront with robed figures"
+        "intricate ground mosaic path",
+        "vividly painted building facades",
+        "overhead green foliage canopy",
+        "large potted plants"
       ],
-      "primaryMedia": "media-1767100673028-ulas0mb2c"
+      "primaryMedia": "media-1767101463109-jdq56dhpu"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1767099773145-7xrwcuxwh",
+      "id": "loc-1767101449144-ncoxq6b1a",
       "type": "host",
       "children": [
         {
-          "id": "8d375d88-d09a-492d-b1f8-b9dff385ded9",
+          "id": "8439ed19-c99e-4ae7-bbe2-d77291d4c7db",
           "type": "region",
           "children": [
             {
-              "id": "97d9d5dd-02f6-42c7-ad06-f87bf70aa08d",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1767099817716-p6s6qse6a",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1767099879058-14s542kxt",
-                  "type": "niche",
-                  "children": [
-                    {
-                      "id": "loc-1767099944535-gtl5ktjra",
-                      "type": "location",
-                      "children": [
-                        {
-                          "id": "niche-1767099958096-tnovnal9g",
-                          "type": "niche",
-                          "children": []
-                        },
-                        {
-                          "id": "niche-1767100013888-vzlz3kg6e",
-                          "type": "niche",
-                          "children": [
-                            {
-                              "id": "loc-1767100024463-mhz4um7fu",
-                              "type": "location",
-                              "children": [
-                                {
-                                  "id": "niche-1767100035820-lnmjdqzl3",
-                                  "type": "niche",
-                                  "children": []
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1767100656976-oy669py35",
-      "type": "host",
-      "children": [
-        {
-          "id": "b02e2604-e676-425a-9ba8-44e96e0fb6d3",
-          "type": "region",
-          "children": [
-            {
-              "id": "f18d4e54-b15d-4328-85f4-d493bea2cbfd",
+              "id": "df85bf7d-92d1-43d1-8d26-fc0911e2ceff",
               "type": "location",
               "children": []
             }
@@ -712,7 +122,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1767099773145-7xrwcuxwh",
-    "loc-1767100656976-oy669py35"
+    "loc-1767101449144-ncoxq6b1a"
   ]
 }

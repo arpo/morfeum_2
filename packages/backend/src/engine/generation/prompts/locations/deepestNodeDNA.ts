@@ -79,12 +79,12 @@ Be SPECIFIC (not "nice" but "weathered brass with verdigris"). architectural_ton
 function getTypeHint(nodeType: 'host' | 'region' | 'location' | 'niche'): string {
   switch (nodeType) {
     case 'host':
-      return 'VIEW: Aerial/satellite, vast panorama. MUST set genre.';
+      return 'CONTENT: Skyline, geography, vast landscapes. MUST set genre.';
     case 'region':
-      return 'VIEW: Elevated/drone, district level. No genre.';
+      return 'CONTENT: District architecture, street character. No genre.';
     case 'location':
-      return 'VIEW: Street level, building exterior. No genre.';
+      return 'CONTENT: Building facade, entrance, signage. No genre.';
     case 'niche':
-      return 'VIEW: Interior, room from entrance. No genre.';
+      return 'CONTENT: Interior space, room details. No genre.';
   }
 }
