@@ -85,7 +85,10 @@ export const COMMAND_FLAGS = {
   // Perspective flags for controlling interior/exterior scene generation
   INTERIOR: '--interior',
   EXTERIOR: '--exterior',
-  OPEN_AIR: '--open-air'
+  OPEN_AIR: '--open-air',
+  // Creature/people flags for scene population
+  POPULATE: '--populate',  // Add crowd/busy scene
+  PEOPLE: '--people'       // Allow people (no active crowd)
 } as const;
 
 export type CommandFlag = typeof COMMAND_FLAGS[keyof typeof COMMAND_FLAGS];

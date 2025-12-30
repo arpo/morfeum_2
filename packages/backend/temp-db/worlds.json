@@ -490,6 +490,213 @@
       ],
       "searchDesc": "Outdoor spa sanctuary with lush plants, mosaic art, and calming incense.",
       "slug": "the-zen-garden"
+    },
+    "location-1767106332135-qb99djjm3": {
+      "id": "location-1767106332135-qb99djjm3",
+      "type": "location",
+      "name": "Night Club Building",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A visually striking facade of a multi-story building covered in intricate, colorful mosaic tiles. Large, inviting glass doors are flanked by smaller, artfully arranged mosaic details. Neon signs in warm and cool brights cast dynamic reflections.",
+        "colorsAndLighting": "A riot of bright, saturated colors from the mosaic tiles. Warm, inviting light emanates from the entrance, interspersed with cooler, vibrant neon accents. Strong contrasts between illuminated areas and shadows.",
+        "atmosphere": "Bustling and energetic, with a palpable sense of anticipation. The air is thick with the muffled sounds of music and chatter. A feeling of creative expression and urban vibrancy.",
+        "materials": "Predominantly mosaic tiles, painted plaster, with accents of weathered metal for signage and framing. Some areas may feature exposed concrete that has been artfully decorated.",
+        "mood": "Joyous artistry, vibrant urban life, inspiring, lively, celebratory, electric.",
+        "sounds": "Thumping bass, distant laughter, chatter, street noise, occasional siren.",
+        "spatialLayout": "Rectangular facade facing a street, with an open, inviting entrance area. Alcoves or side passages may exist.",
+        "primary_surfaces": "Mosaic tiles, painted plaster",
+        "secondary_surfaces": "Glass, metal (signage), concrete",
+        "accent_features": "Mosaic shards, patterned designs, large potted plants with tropical foliage",
+        "dominant": "Architecture (mosaic tile colors)",
+        "secondary": "Art (neon light colors)",
+        "accent": "Nature (potted plants)",
+        "ambient": "Urban glow",
+        "genre": "Urban Art",
+        "architectural_tone": "Bohemian Urban",
+        "cultural_tone": "Artistic",
+        "palette_bias": "Warm and Cool Brights",
+        "flora_base": "Tropical Lush",
+        "fauna_base": "Absent"
+      },
+      "primaryMedia": "media-1767106332134-aawqud3z7",
+      "description": "An exterior view of a large, irregularly shaped nightclub building, illuminated by a warm and cool vibrant spectrum of light. The facade features a Bohemian urban mosaic style, with a mix of textures and colors. Several arched openings suggest entrances and lively activity within.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A sprawling, multi-level entertainment complex with distinct entrances and a lively facade.",
+        "requiredElements": [
+          "night club",
+          "building"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "Main entrance to Mosaic Nightclub"
+        },
+        {
+          "type": "passage",
+          "position": "left",
+          "description": "Alleyway beside the nightclub"
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "Service entrance to the nightclub"
+        }
+      ],
+      "dominantElements": [
+        "night club: shape=irregular, orientation=sprawling, scale=large, style=Bohemian urban mosaic, surfaces=concrete, openings=open-passages, interior_materials=tile|wood|fabric, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "vibrant neon signage",
+        "unique architectural facade"
+      ],
+      "searchDesc": "Vibrant mosaic nightclub entrance, urban art, warm and cool brights, joyous artistry.",
+      "slug": "mosaic-nightclub-entrance"
+    },
+    "niche-1767106365563-5yxguq6fo": {
+      "id": "niche-1767106365563-5yxguq6fo",
+      "type": "niche",
+      "name": "Night Club",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A multi-level urban structure with a dynamic facade, featuring large windows overlooking an energetic cityscape. Inside, the space is a kaleidoscope of color and light, with exposed architectural elements softened by artistic treatments.",
+        "colorsAndLighting": "A riot of warm and cool brights. The primary lighting is dynamic and multi-colored, with spotlights, strobes, and washes creating an ever-changing atmosphere. Accents of neon and phosphorescent paint glow in strategic areas. Dappled, colorful light filters through stained glass or illuminated panels.",
+        "atmosphere": "Thick with palpable energy and excitement. The air hums with the beat of music and the chatter of patrons. A sense of creative freedom and celebration pervades the space, encouraging movement and interaction.",
+        "materials": "A bold mix of raw urban materials like exposed concrete, industrial metal grating, and reclaimed wood, all enlivened by rich mosaic tile work, vibrant painted plaster, and splashes of graffiti art. Polished metal accents catch the light.",
+        "mood": "Joyous artistry, vibrant urban life, inspiring, lively, celebratory, energetic, defiant cheerfulness.",
+        "sounds": "Pulsing bass, energetic music, crowd chatter, clinking glasses, rhythmic beats.",
+        "spatialLayout": "Open-concept main floor with distinct zones for dancing, lounging, and the bar. Verticality is emphasized with elevated platforms and creative use of ceiling space for lighting and art installations. Intimate nooks are carved out amidst the larger open areas.",
+        "primary_surfaces": "Walls clad in a mix of mosaic tiles, graffiti art, and painted plaster. Exposed concrete columns and beams.",
+        "secondary_surfaces": "Polished concrete or dark wood flooring. Metal grating elements in ceilings and railings. Illuminated acrylic panels.",
+        "accent_features": "Mosaic shards integrated into surfaces, custom graffiti murals, hanging geometric light sculptures, neon signage, planters with tropical lush foliage.",
+        "dominant": "Architecture",
+        "secondary": "Art",
+        "accent": "Nature",
+        "ambient": "Urban",
+        "genre": "Urban Art",
+        "architectural_tone": "Bohemian Urban",
+        "cultural_tone": "Artistic",
+        "palette_bias": "Warm and Cool Brights",
+        "flora_base": "Tropical Lush",
+        "fauna_base": "Absent"
+      },
+      "primaryMedia": "media-1767106365562-h649iooev",
+      "description": "You are inside a large, irregularly shaped night club with a sprawling layout. The atmosphere is dim, with surfaces of concrete and interior materials of tile, wood, and fabric, contributing to a Bohemian urban mosaic style. Open passages allow for easy navigation.",
+      "structure": {
+        "form": "irregular",
+        "roofType": null,
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "The night club is an expansive and irregularly shaped space, designed for a sprawling and dynamic experience.",
+        "requiredElements": [
+          "night club"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "main entrance",
+          "description": "leads into the main club area"
+        },
+        {
+          "type": "passage",
+          "position": "side door",
+          "description": "leads to a service area or exit"
+        }
+      ],
+      "dominantElements": [
+        "night club: shape=irregular, orientation=sprawling, scale=large, style=Bohemian urban mosaic, surfaces=concrete, openings=open-passages, interior_materials=tile|wood|fabric, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "Bohemian urban mosaic style",
+        "dim internal atmosphere",
+        "mix of tile, wood, and fabric interior materials"
+      ],
+      "searchDesc": "Urban art night club with bohemian flair, vibrant and joyous.",
+      "slug": "null-of-night-club-building"
+    },
+    "niche-1767106411418-es4ydfv8o": {
+      "id": "niche-1767106411418-es4ydfv8o",
+      "type": "niche",
+      "name": "The Dance Floor",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A sprawling, open-plan dance floor with a polished concrete base. Walls are a patchwork of exposed brick, sections covered in colorful mosaic tiles, and vibrant graffiti art. Mirrored panels are strategically placed to amplify light. A central DJ booth is a dazzling spectacle of mosaic and neon.",
+        "colorsAndLighting": "A dynamic interplay of warm and cool brights. RGB LED strips integrated into the floor and ceiling pulsate with the music. Neon signs in electric blues, hot pinks, and lime greens cast sharp reflections. Spotlights create dramatic shafts of light, while ambient lighting from hanging Edison bulbs offers a warm, inviting glow.",
+        "atmosphere": "Electric and exhilarating. The air thrums with the bass of the music and the collective energy of the dancers. A sense of uninhibited joy and creative expression permeates the space. The temperature is comfortably warm from the activity.",
+        "materials": "Polished concrete, mosaic tiles (shards and full tiles), exposed brick, mirrored panels, weathered metal (grating, signage frames), industrial steel, painted plaster.",
+        "mood": "Joyous artistry, vibrant urban life, inspiring, lively, celebratory, electric, uninhibited.",
+        "sounds": "Pulsating bass, rhythmic beats, crowd cheers, echoing music, electronic melodies, percussive elements, laughter.",
+        "spatialLayout": "Open-plan with a defined central dance area, surrounded by elevated platforms and passages on the periphery. High ceilings with exposed industrial elements.",
+        "primary_surfaces": "Polished concrete, mosaic tiles",
+        "secondary_surfaces": "Exposed brick, mirrored panels, painted plaster",
+        "accent_features": "Graffiti art murals, neon signage, hanging Edison bulbs, integrated LED floor lighting, metal speaker grates.",
+        "dominant": "Mosaic tile colors (Riot of warm and cool brights)",
+        "secondary": "Neon light colors (Electric blues, hot pinks, lime greens)",
+        "accent": "Ambient light tone (Warm, inviting glow from Edison bulbs)",
+        "ambient": "Urban glow",
+        "genre": "Urban Art",
+        "architectural_tone": "Bohemian Urban",
+        "cultural_tone": "Artistic",
+        "palette_bias": "Warm and Cool Brights",
+        "flora_base": "Absent",
+        "fauna_base": "Absent"
+      },
+      "primaryMedia": "media-1767106411418-x9q5xn8g9",
+      "description": "Inside a vibrant and energetic dance hall, the air hums with the possibility of movement. Warm and cool brights flood the space, reflecting off polished surfaces and creating an exhilarating atmosphere.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A vast, open space designed for movement and performance, illuminated by dynamic lighting.",
+        "requiredElements": [
+          "dance floor"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center rear",
+          "description": "Double glass doors leading to a dimly lit corridor, GO_INSIDE"
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "A passage adorned with graffiti art, leading to a lounge area."
+        },
+        {
+          "type": "passage",
+          "position": "right wall",
+          "description": "A neon-lit passage leading to the restrooms and bar."
+        }
+      ],
+      "dominantElements": [
+        "dance hall: shape=rectangular, orientation=wide, scale=large, style=Bohemian Urban, surfaces=wood, openings=open-passages, interior_materials=fabric|tile|wood, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "dynamic lighting rig",
+        "sprung dance floor"
+      ],
+      "searchDesc": "Vibrant dance floor: mosaic, neon, urban art, bohemian, electric, joyous, lively.",
+      "slug": "the-rhythm-stage"
     }
   },
   "views": {},
@@ -528,6 +735,22 @@
                 },
                 {
                   "id": "niche-1767102051348-9cox9bnz0",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "location-1767106332135-qb99djjm3",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767106365563-5yxguq6fo",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767106411418-es4ydfv8o",
                   "type": "niche",
                   "children": []
                 }

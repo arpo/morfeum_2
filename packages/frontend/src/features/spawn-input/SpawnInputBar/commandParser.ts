@@ -9,6 +9,8 @@ export interface ParsedCommand {
     createImage: boolean;
     backgroundTask: boolean;
     perspectiveOverride: PerspectiveOverride;
+    /** Unrecognized flags to pass through to backend (e.g., --populate, --people) */
+    passthroughFlags: string[];
   };
 }
 
@@ -24,7 +26,8 @@ export function parseCommandInput(input: string): ParsedCommand {
   const flags = {
     createImage: true,
     backgroundTask: false,
-    perspectiveOverride: undefined as PerspectiveOverride
+    perspectiveOverride: undefined as PerspectiveOverride,
+    passthroughFlags: [] as string[]
   };
   
   const textParts: string[] = [];
@@ -43,7 +46,10 @@ export function parseCommandInput(input: string): ParsedCommand {
       flags.perspectiveOverride = 'exterior';
     } else if (part === COMMAND_FLAGS.OPEN_AIR || part === '-open-air') {
       flags.perspectiveOverride = 'open-air';
-    } else if (!part.startsWith('--')) {
+    } else if (part.startsWith('--')) {
+      // Collect unrecognized flags to pass through to backend
+      flags.passthroughFlags.push(part);
+    } else {
       textParts.push(part);
     }
   }

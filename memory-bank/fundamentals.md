@@ -301,4 +301,9 @@ Navigation separates understanding from action:
 - `--interior` - Force interior perspective  
 - `--open-air` - Force open-sky outdoor space
 
+**Creature Mode Flags** (for `GOTO`, `GO_INSIDE`):
+- `--populate` - Add ambient background figures (silhouettes, motion-blurred people)
+- `--people` - Same as `--populate`
+- (default) - No people (adds `[FILTER: NoLivingSubjects]`)
+
 **Prompt Enhancer**: Use `furnish:` prefix in prompt text for furnishing suggestions (e.g., `GO_INSIDE the cafe furnish: cozy reading nook`).

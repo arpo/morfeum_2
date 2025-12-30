@@ -4,13 +4,13 @@
  * Assembles ImagePromptStructure into final FLUX prompt string.
  * Handles:
  * - Layer composition (background → midground → foreground)
- * - NoCreatures filter toggle
+ * - Creature mode control (none/allow/populate)
  * - Morfeum style wrappers
  * - Camera/lens configuration
  */
 
-import type { ImagePromptStructure, AssemblePromptOptions } from './imagePromptTypes';
-import { morfeumVibes, NoCreatures, qualityPrompt } from '../prompts/shared/constants';
+import type { ImagePromptStructure, AssemblePromptOptions, CreatureMode } from './imagePromptTypes';
+import { morfeumVibes, NoCreatures, PopulateScene, qualityPrompt } from '../prompts/shared/constants';
 
 /**
  * Assemble structured image prompt into final FLUX prompt string
@@ -24,7 +24,7 @@ export function assembleImagePrompt(
   options: AssemblePromptOptions = {}
 ): string {
   const {
-    includeNoCreatures = true,
+    creatureMode = 'none',
     includeMorfeumStyle = true,
     cameraConfig
   } = options;
@@ -90,12 +90,20 @@ export function assembleImagePrompt(
     parts.push('');
   }
 
-  // Negatives (NoCreatures filter)
-  if (includeNoCreatures) {
+  // Creature mode handling
+  if (creatureMode === 'none') {
+    // NoCreatures filter - exclude all people/animals
     parts.push(NoCreatures);
     parts.push('');
-  } else if (structure.negatives && structure.negatives.length > 0) {
-    // Custom negatives without NoCreatures
+  } else if (creatureMode === 'populate') {
+    // Populate scene - add crowd directive
+    parts.push(PopulateScene);
+    parts.push('');
+  }
+  // creatureMode === 'allow' - no filter added, people can appear naturally
+  
+  // Custom negatives (if any, regardless of creature mode)
+  if (structure.negatives && structure.negatives.length > 0) {
     parts.push(`[NEG:] ${structure.negatives.join(', ')}`);
     parts.push('');
   }

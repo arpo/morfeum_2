@@ -2,7 +2,21 @@
 
 ## 2025-12-30
 
-- [x] **Prompt Token Optimization - COMPLETED (Latest)**: Optimized 11 prompt files for ~50% token reduction
+- [x] **Creature Mode System - COMPLETED (Latest)**: `--populate` and `--people` flags for image generation
+  - **Problem**: Locations always generated with `NoCreatures` filter
+  - **Solution**: CreatureMode enum (`none|allow|populate`) with frontend passthrough
+  - **Files modified**:
+    - `frontend/commandParser.ts` - `passthroughFlags` for unknown flags
+    - `frontend/navigationCommands.ts` - Pass flags to backend
+    - `backend/enhancementParser.ts` - Parse `--populate`/`--people`
+    - `backend/createNodePipeline.ts` - Extract and pass creatureMode
+    - `backend/nodeBuildingStep.ts` - Use creatureMode in prompt
+    - `backend/imageGeneration.ts` - Skip duplicate style application
+  - **Usage**: `/GOTO market --populate` for busy scenes
+
+- [x] **UI: Help Tooltip for Spawn Input - COMPLETED**: (?) button with clickable flags
+
+- [x] **Prompt Token Optimization - COMPLETED**: Optimized 11 prompt files for ~50% token reduction
   - **Goal**: Reduce API costs and response time for NEW_WORLD, GOTO, GO_INSIDE pipelines
   - **Approach**: Option A+B (conservative + aggressive) - pipe-separated values, reduced examples, condensed prose
   - **Results**: 

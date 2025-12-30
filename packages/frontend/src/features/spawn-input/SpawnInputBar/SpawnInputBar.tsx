@@ -7,7 +7,7 @@ import { KeyboardEvent, useCallback } from 'react';
 import { useNavigationLogic } from './useNavigationLogic';
 import { useImageDropLogic } from './useImageDropLogic';
 import { useStore } from '@/store';
-import { IconChevronDown, IconChevronUp, IconLoader2, IconSparkles } from '@/icons';
+import { IconChevronDown, IconChevronUp, IconInfoCircle, IconLoader2, IconSparkles } from '@/icons';
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { Button, SlashCommandInput } from '@/components/ui';
 import { NAVIGATION_COMMANDS } from '@backend/config/navigation';
@@ -135,9 +135,41 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
           </div>
           
           <div className={styles.commandContent}>
-            <p className={styles.navigationDescription}>
-              Type / to see available commands
-            </p>
+            <div className={styles.navigationDescriptionRow}>
+              <p className={styles.navigationDescription}>
+                Type / to see available commands
+              </p>
+              <div className={styles.helpButtonWrapper}>
+                <div className={styles.helpButton}>
+                  <IconInfoCircle size={16} />
+                </div>
+                <div className={styles.helpTooltip}>
+                  <div className={styles.helpTooltipTitle}>Available Flags (click to insert)</div>
+                  <ul className={styles.helpTooltipList}>
+                    <li onClick={() => navigation.handlers.setMovementInput((prev: string) => prev.trim() + ' --populate')}>
+                      <span className={styles.helpFlag}>--populate</span>
+                      <span className={styles.helpDesc}>Add crowd/busy scene with people</span>
+                    </li>
+                    <li onClick={() => navigation.handlers.setMovementInput((prev: string) => prev.trim() + ' --people')}>
+                      <span className={styles.helpFlag}>--people</span>
+                      <span className={styles.helpDesc}>Allow people without active crowd</span>
+                    </li>
+                    <li onClick={() => navigation.handlers.setMovementInput((prev: string) => prev.trim() + ' --interior')}>
+                      <span className={styles.helpFlag}>--interior</span>
+                      <span className={styles.helpDesc}>Force interior perspective</span>
+                    </li>
+                    <li onClick={() => navigation.handlers.setMovementInput((prev: string) => prev.trim() + ' --exterior')}>
+                      <span className={styles.helpFlag}>--exterior</span>
+                      <span className={styles.helpDesc}>Force exterior perspective</span>
+                    </li>
+                    <li onClick={() => navigation.handlers.setMovementInput((prev: string) => prev.trim() + ' --open-air')}>
+                      <span className={styles.helpFlag}>--open-air</span>
+                      <span className={styles.helpDesc}>Force open-sky outdoor space</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             {navigation.state.errorMessage && (
               <div className={styles.errorMessage}>
                 {navigation.state.errorMessage}

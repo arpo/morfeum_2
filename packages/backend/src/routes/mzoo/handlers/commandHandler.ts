@@ -77,12 +77,17 @@ export async function commandHandler(req: Request, res: Response): Promise<void>
     // DEBUG: Log intent spaceType
     console.log(`[PERSPECTIVE DEBUG] intent.spaceType after buildIntentFromCommand: ${intent.spaceType}`);
 
-    // Build parsedEnhancements for pipeline
-    const parsedEnhancements = (parsed.navigableElements || parsed.furnishing || parsed.breakInheritance) ? {
+    // Build parsedEnhancements for pipeline (include creatureMode for --populate/--people flags)
+    const parsedEnhancements = (parsed.navigableElements || parsed.furnishing || parsed.breakInheritance || parsed.creatureMode) ? {
       navigableElements: parsed.navigableElements,
       furnishing: parsed.furnishing,
-      breakInheritance: parsed.breakInheritance
+      breakInheritance: parsed.breakInheritance,
+      creatureMode: parsed.creatureMode
     } : undefined;
+    
+    // DEBUG: Log creatureMode extraction
+    console.log(`[CREATURE-MODE DEBUG] Parsed creatureMode: ${parsed.creatureMode}`);
+    console.log(`[CREATURE-MODE DEBUG] parsedEnhancements:`, parsedEnhancements);
 
     // For GOTO: Send response immediately, run analysis in pipeline
     // Context-aware: from niche = sibling niche, from location = sibling location

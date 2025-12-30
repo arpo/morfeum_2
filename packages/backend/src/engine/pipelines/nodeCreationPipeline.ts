@@ -200,7 +200,7 @@ export async function runNodeCreationPipeline(
 
     // Assemble into string and apply Morfeum visual style
     const imagePrompt = applyMorfeumStyle(assembleImagePrompt(promptStructure, {
-      includeNoCreatures: true,
+      creatureMode: 'none',
       includeMorfeumStyle: false // applyMorfeumStyle adds it
     }));
 

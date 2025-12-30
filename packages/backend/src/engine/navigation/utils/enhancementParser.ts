@@ -10,6 +10,7 @@
  */
 
 import type { NavigableElement, ScenePerspective } from '../types';
+import type { CreatureMode } from '../../generation/shared/imagePromptTypes';
 
 export interface ParsedEnhancements {
   /** Parsed navigable elements from command */
@@ -26,6 +27,13 @@ export interface ParsedEnhancements {
    * Use for portals, dimensional shifts, or intentionally contrasting spaces
    */
   breakInheritance?: boolean;
+  /**
+   * Creature mode for image generation (--populate, --people flags)
+   * - 'populate': Add crowd/busy scene with people
+   * - 'allow': Allow people without active crowd
+   * - 'none': No people (default)
+   */
+  creatureMode?: CreatureMode;
   /** Clean command text with enhancement sections removed */
   cleanCommand: string;
 }
@@ -61,6 +69,19 @@ export function parseEnhancements(commandText: string): ParsedEnhancements {
   if (breakMatch) {
     result.breakInheritance = true;
     result.cleanCommand = result.cleanCommand.replace(breakMatch[0], '');
+  }
+
+  // Extract and remove creature mode flags (--populate, --people)
+  const populateMatch = result.cleanCommand.match(/\s*--populate\b/i);
+  if (populateMatch) {
+    result.creatureMode = 'populate';
+    result.cleanCommand = result.cleanCommand.replace(populateMatch[0], '');
+  } else {
+    const peopleMatch = result.cleanCommand.match(/\s*--people\b/i);
+    if (peopleMatch) {
+      result.creatureMode = 'allow';
+      result.cleanCommand = result.cleanCommand.replace(peopleMatch[0], '');
+    }
   }
 
   // Extract and remove "navigable elements:" section

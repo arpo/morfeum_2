@@ -11,6 +11,7 @@
 
 import type { NavigationDecision, NavigationContext, IntentResult, CommandContext } from '../types';
 import type { ParsedEnhancements } from '../analyzers/structureAnalyzer';
+import type { CreatureMode } from '../../generation/shared/imagePromptTypes';
 import { getPipelineTypeForIntent } from '../../pipelines/shared/pipelineConfig';
 import { PipelineHelper } from '../../pipelines/shared/pipelineHelpers';
 import { runDestinationAnalysisStep } from './helpers/destinationAnalysisStep';
@@ -42,6 +43,8 @@ export interface CreateNodeOptions {
     node: any;
     parentId: string;  // The niche ID that the location was added under
   };
+  /** Creature mode for image generation (--populate, --people flags) */
+  creatureMode?: CreatureMode;
 }
 
 /**
@@ -207,6 +210,15 @@ export async function runCreateLocationNodePipeline(
     // ═══════════════════════════════════════════════════════════════════════════
     // STEP 2: IMAGE PROMPT GENERATION
     // ═══════════════════════════════════════════════════════════════════════════
+    // Extract creatureMode from commandContext or options (--populate, --people flags)
+    const creatureMode = cmdCtx?.parsedEnhancements?.creatureMode || options?.creatureMode || 'none';
+    
+    // DEBUG: Log creatureMode in pipeline
+    console.log(`[CREATURE-MODE DEBUG] In createNodePipeline:`);
+    console.log(`  cmdCtx?.parsedEnhancements?.creatureMode: ${cmdCtx?.parsedEnhancements?.creatureMode}`);
+    console.log(`  options?.creatureMode: ${options?.creatureMode}`);
+    console.log(`  Final creatureMode: ${creatureMode}`);
+    
     const imagePromptResult = await generateNodeImagePrompt({
       structureAnalysis,
       dna: dnaResult.dna || {},
@@ -218,7 +230,8 @@ export async function runCreateLocationNodePipeline(
       perspective: finalPerspective,
       context,
       apiKey,
-      helper
+      helper,
+      creatureMode  // Pass creature mode for --populate/--people flags
     });
 
     // ═══════════════════════════════════════════════════════════════════════════

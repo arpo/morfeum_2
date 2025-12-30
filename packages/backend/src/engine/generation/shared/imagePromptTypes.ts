@@ -4,9 +4,17 @@
  * Structured format for image prompts enabling:
  * - Layer-based scene composition (background → midground → foreground)
  * - Character placement in specific layers
- * - Toggleable filters (NoCreatures, etc.)
+ * - Creature mode control (none/allow/populate)
  * - Clean separation of scene elements for reuse
  */
+
+/**
+ * Creature mode for scene population
+ * - 'none': NoCreatures filter applied (default for locations)
+ * - 'allow': No filter, people can appear naturally
+ * - 'populate': Active crowd directive added
+ */
+export type CreatureMode = 'none' | 'allow' | 'populate';
 
 /**
  * Structured image prompt for scene composition
@@ -49,8 +57,13 @@ export interface ImagePromptStructure {
  * Options for assembling the final prompt string
  */
 export interface AssemblePromptOptions {
-  /** Include NoCreatures filter in negatives (default: true for locations) */
-  includeNoCreatures?: boolean;
+  /** 
+   * Creature mode for scene population
+   * - 'none' (default): NoCreatures filter applied
+   * - 'allow': No filter, people can appear
+   * - 'populate': Active crowd directive added
+   */
+  creatureMode?: CreatureMode;
   
   /** Include Morfeum style wrappers (morfeumVibes, qualityPrompt) */
   includeMorfeumStyle?: boolean;

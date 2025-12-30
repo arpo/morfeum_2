@@ -154,7 +154,7 @@ export async function runCreateCharacterPipeline(
     helper.startStage('image_generation', 'Generating character image...');
 
     // Apply Morfeum style WITHOUT NoCreatures filter (characters need people!)
-    const finalPrompt = applyMorfeumStyle(scenePrompt, { excludeCreatures: false });
+    const finalPrompt = applyMorfeumStyle(scenePrompt, { creatureMode: 'allow' });
     
     console.log('\n==================== CHARACTER SCENE PROMPT ====================');
     console.log(finalPrompt);

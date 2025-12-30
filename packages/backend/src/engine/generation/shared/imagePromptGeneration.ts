@@ -518,7 +518,7 @@ export async function generateImagePromptForNode(
   
   // Assemble into string (without Morfeum style - that's added later by applyMorfeumStyle)
   const prompt = assembleImagePrompt(structure, {
-    includeNoCreatures: false,  // Added later by imageGeneration.ts
+    creatureMode: 'allow',      // NoCreatures added later by imageGeneration.ts
     includeMorfeumStyle: false  // Added later by applyMorfeumStyle
   });
   

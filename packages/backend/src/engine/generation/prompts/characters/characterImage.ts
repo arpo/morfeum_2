@@ -3,7 +3,7 @@
  * Migrated from packages/backend/src/prompts/languages/en/characterImageGeneration.ts
  * Source: https://deepinfra.com/blog/flux1-dev-guide
  * 
- * Uses applyMorfeumStyle with excludeCreatures: false to allow people in character images.
+ * Uses applyMorfeumStyle with creatureMode: 'allow' to allow people in character images.
  */
 
 import { getFluxFilter, getDefaultFluxFilter } from '../shared';
@@ -37,5 +37,5 @@ ${setting ? "Setting: " + setting + '.' : ''}
 ${personality ? 'Their demeanor reflects: ' + personality + '.' : ''}`;
 
   // Apply Morfeum style WITHOUT NoCreatures filter (characters need people!)
-  return applyMorfeumStyle(basePrompt, { excludeCreatures: false });
+  return applyMorfeumStyle(basePrompt, { creatureMode: 'allow' });
 };

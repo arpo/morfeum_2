@@ -128,6 +128,11 @@ export async function handleNavigationCommand(
     const perspectiveFlag = `--${flags.perspectiveOverride}`;
     textWithFlags = textWithFlags ? `${textWithFlags} ${perspectiveFlag}` : perspectiveFlag;
   }
+  // Pass through unrecognized flags to backend (e.g., --populate, --people)
+  if (flags.passthroughFlags && flags.passthroughFlags.length > 0) {
+    const passthroughStr = flags.passthroughFlags.join(' ');
+    textWithFlags = textWithFlags ? `${textWithFlags} ${passthroughStr}` : passthroughStr;
+  }
   const { setIsMoving, setErrorMessage, setMovementInput } = callbacks;
   const { getNode, getSpatialNodes, setActiveEntity } = deps;
 

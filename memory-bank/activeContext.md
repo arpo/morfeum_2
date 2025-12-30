@@ -2,7 +2,49 @@
 
 ## 2025-12-30
 
-### Prompt Token Optimization - COMPLETED (Latest)
+### Creature Mode System - COMPLETED (Latest)
+
+Implemented `--populate` and `--people` flags for image generation to control whether locations show people/creatures.
+
+#### Problem
+Location images were always generated with `NoCreatures` filter, preventing populated scene generation even when user wanted to show people/activity.
+
+#### Solution
+1. **CreatureMode enum**: `'none' | 'allow' | 'populate'`
+   - `none`: Default - adds `[FILTER: NoLivingSubjects]` (no people)
+   - `allow`: Allows people but doesn't actively add them
+   - `populate`: Adds `[POPULATE:]` directive for busy scenes with ambient figures
+
+2. **Frontend flag passthrough**: Updated `commandParser.ts` to collect unrecognized `--` flags and pass them to backend
+
+3. **Backend parsing**: `enhancementParser.ts` parses `--populate` and `--people` flags
+
+4. **Duplicate style fix**: `imageGeneration.ts` now skips `applyMorfeumStyle` if style already applied (prevents conflicting `[POPULATE:]` + `[NoCreatures]`)
+
+#### Files Modified
+- `frontend/commandParser.ts` - Added `passthroughFlags` to collect unknown flags
+- `frontend/navigationCommands.ts` - Added passthrough flags to backend request
+- `backend/navigation/utils/enhancementParser.ts` - Parse `--populate`/`--people` flags
+- `backend/navigation/pipelines/createNodePipeline.ts` - Extract and pass creatureMode
+- `backend/navigation/pipelines/helpers/nodeBuildingStep.ts` - Use creatureMode in prompt
+- `backend/generation/shared/imageGeneration.ts` - Skip duplicate style application
+
+#### Usage
+```
+/GOTO market --populate   # Generates busy scene with ambient figures
+/GO_INSIDE cafe --people  # Same as --populate
+/GOTO park                # Default: no people (NoCreatures filter)
+```
+
+### UI: Help Tooltip for Spawn Input - COMPLETED
+
+Added (?) button with interactive tooltip showing available command flags.
+
+- Tooltip with all available flags and descriptions
+- Clickable flags insert directly into input field
+- Left-aligned text with proper styling
+
+### Prompt Token Optimization - COMPLETED
 
 Optimized 11 prompt files for location/navigation pipelines (NEW_WORLD, GOTO, GO_INSIDE) to reduce token usage by ~50% while maintaining output quality.
 

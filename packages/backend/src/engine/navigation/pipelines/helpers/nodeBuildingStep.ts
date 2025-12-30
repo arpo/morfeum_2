@@ -5,6 +5,7 @@
 
 import type { StructureAnalysis, NavigationContext } from '../../types';
 import type { LayerType } from '../../../hierarchyAnalysis/types';
+import type { CreatureMode } from '../../../generation/shared/imagePromptTypes';
 import { buildNode } from '../../../generation/shared/nodeBuilder';
 import { generateLocationImage } from '../../../generation/shared/imageGeneration';
 import { 
@@ -43,6 +44,13 @@ export interface ImagePromptInput {
   context: NavigationContext;
   apiKey: string;
   helper: PipelineHelper | null;
+  /**
+   * Creature mode for image generation (--populate, --people flags)
+   * - 'populate': Add crowd/busy scene with people
+   * - 'allow': Allow people without active crowd
+   * - 'none': No people (default for locations)
+   */
+  creatureMode?: CreatureMode;
 }
 
 export interface NodeBuildingInput {
@@ -94,7 +102,8 @@ export async function generateNodeImagePrompt(
     perspective,
     context,
     apiKey,
-    helper
+    helper,
+    creatureMode = 'none'  // Default to 'none' for locations (no people)
   } = input;
 
   if (helper) {
@@ -123,8 +132,12 @@ export async function generateNodeImagePrompt(
   });
 
   // Assemble into string (Morfeum style added later by imageGeneration.ts)
+  // Use the creatureMode from input (--populate, --people flags, or default 'none')
+  console.log(`[CREATURE-MODE DEBUG] In nodeBuildingStep.generateNodeImagePrompt:`);
+  console.log(`  creatureMode received: ${creatureMode}`);
+  
   const prompt = assembleImagePrompt(structure, {
-    includeNoCreatures: false,
+    creatureMode,  // Pass through the creature mode from user flags
     includeMorfeumStyle: false
   });
 

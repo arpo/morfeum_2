@@ -218,7 +218,7 @@ export interface NodeImagePromptOptions extends MorfeumStyleOptions {
  * 
  * @param node - Node to generate image prompt for
  * @param perspective - For niche nodes, interior or exterior
- * @param options - Style options (excludeCreatures defaults to true for locations)
+ * @param options - Style options (creatureMode defaults to 'none' for locations)
  * @returns Image prompt string with Morfeum style applied
  */
 export function getNodeImagePrompt(
@@ -247,8 +247,8 @@ export function getNodeImagePrompt(
       basePrompt = locationImagePrompt(node);
   }
   
-  // Apply Morfeum visual style (excludeCreatures defaults to true for locations)
+  // Apply Morfeum visual style (creatureMode defaults to 'none' for locations)
   return applyMorfeumStyle(basePrompt, { 
-    excludeCreatures: options.excludeCreatures ?? true 
+    creatureMode: options.creatureMode ?? 'none'
   });
 }

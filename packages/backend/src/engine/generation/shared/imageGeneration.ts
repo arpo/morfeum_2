@@ -38,8 +38,13 @@ export async function generateLocationImage(
   } = options || {};
 
  
-  // Apply general prompt fixes
-  const fixedPrompt = applyMorfeumStyle(imagePrompt);
+  // Check if Morfeum style has already been applied (indicated by markers like [POPULATE:], [FILTER:], or style prefix)
+  const styleAlreadyApplied = imagePrompt.includes('[POPULATE:]') || 
+                               imagePrompt.includes('[FILTER:') || 
+                               imagePrompt.includes('living-surface sheen');
+  
+  // Apply general prompt fixes only if not already applied
+  const fixedPrompt = styleAlreadyApplied ? imagePrompt : applyMorfeumStyle(imagePrompt);
   console.log('\n\n##################### ACTUAL NICHE IMAGE PROMPT  #####################');
   console.log(fixedPrompt);
   console.log('##################### ACTUAL NICHE IMAGE PROMPT END  #####################\n\n');

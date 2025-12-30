@@ -3,23 +3,26 @@
  * 
  * Wraps any image prompt with Morfeum's signature visual style:
  * - morfeumVibes: Living-surface sheen, sharp highlights, etc.
- * - NoCreatures: Filter to exclude people/animals (optional)
+ * - Creature mode control (none/allow/populate)
  * - qualityPrompt: Crisp micro-detail, refined surfaces, etc.
  * 
  * Usage:
- * - Locations: applyMorfeumStyle(prompt) // excludeCreatures defaults to true
- * - Characters: applyMorfeumStyle(prompt, { excludeCreatures: false })
+ * - Locations: applyMorfeumStyle(prompt) // creatureMode defaults to 'none'
+ * - Characters: applyMorfeumStyle(prompt, { creatureMode: 'allow' })
+ * - Crowds: applyMorfeumStyle(prompt, { creatureMode: 'populate' })
  */
 
-import { morfeumVibes, NoCreatures, qualityPrompt } from '../prompts/shared/constants';
+import { morfeumVibes, NoCreatures, PopulateScene, qualityPrompt } from '../prompts/shared/constants';
+import type { CreatureMode } from './imagePromptTypes';
 
 export interface MorfeumStyleOptions {
   /**
-   * Whether to include the NoCreatures filter.
-   * - true (default): Excludes humans, animals, creatures from the image
-   * - false: Allows living subjects (use for character images)
+   * Creature mode for scene population
+   * - 'none' (default): NoCreatures filter applied
+   * - 'allow': No filter, people can appear naturally
+   * - 'populate': Active crowd directive added
    */
-  excludeCreatures?: boolean;
+  creatureMode?: CreatureMode;
 }
 
 /**
@@ -33,7 +36,7 @@ export function applyMorfeumStyle(
   prompt: string,
   options: MorfeumStyleOptions = {}
 ): string {
-  const { excludeCreatures = true } = options;
+  const { creatureMode = 'none' } = options;
 
   const parts = [
     morfeumVibes,
@@ -42,10 +45,15 @@ export function applyMorfeumStyle(
     ''   // Empty line for readability
   ];
 
-  if (excludeCreatures) {
+  // Creature mode handling
+  if (creatureMode === 'none') {
     parts.push(NoCreatures);
     parts.push('');
+  } else if (creatureMode === 'populate') {
+    parts.push(PopulateScene);
+    parts.push('');
   }
+  // creatureMode === 'allow' - no filter added
 
   parts.push(qualityPrompt);
 
@@ -53,4 +61,4 @@ export function applyMorfeumStyle(
 }
 
 // Re-export for convenience
-export { morfeumVibes, NoCreatures, qualityPrompt };
+export { morfeumVibes, NoCreatures, PopulateScene, qualityPrompt };

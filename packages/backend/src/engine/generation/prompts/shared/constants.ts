@@ -15,6 +15,10 @@ export const NoCreatures = `
 [NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.
 `;
 
+export const PopulateScene = `
+[POPULATE:] Busy scene with ambient background figures - silhouettes, motion-blurred people, partial bodies at frame edges, anonymous crowd energy. People add atmosphere without becoming focal subjects.
+`;
+
 export const fluxInstructionsShort = `
 
 Identify the main focus or subject of the image based on the description.
@@ -24,5 +28,3 @@ The final output should be precise, detailed, and designed to yield a stunning, 
 an AI image generator.
 
 `;
-
-

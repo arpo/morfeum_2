@@ -254,6 +254,14 @@ export interface SpaceAnalysisResult {
 }
 
 /**
+ * Creature mode for image generation
+ * - 'none': No people/creatures (default for locations)
+ * - 'allow': Allow people without active crowd
+ * - 'populate': Add crowd/busy scene with people
+ */
+export type CreatureMode = 'none' | 'allow' | 'populate';
+
+/**
  * Unified command context for GOTO and GO_INSIDE commands
  * Replaces scattered boolean flags with clear semantics
  */
@@ -272,6 +280,10 @@ export interface CommandContext {
   parsedEnhancements?: {
     navigableElements?: NavigableElement[];
     furnishing?: string[];
+    /** Creature mode for image generation (--populate, --people flags) */
+    creatureMode?: CreatureMode;
+    /** Break DNA inheritance (--break flag) */
+    breakInheritance?: boolean;
   };
   /** Parent node ID where new node will be attached */
   parentNodeId: string;
