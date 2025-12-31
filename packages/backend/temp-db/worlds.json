@@ -1116,6 +1116,639 @@
       ],
       "searchDesc": "Crowded outdoor bistro with vintage furniture, plants, string lights, chalk art, rugs, stage, and artists.",
       "slug": "the-bohemian-bistro"
+    },
+    "loc-1767112081225-dlqhou1t1": {
+      "id": "loc-1767112081225-dlqhou1t1",
+      "type": "host",
+      "name": "Urban Metropolis",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Skyline silhouette, geographic features, vast landscapes, towering skyscrapers, dense urban fabric, bridges, riverfronts",
+        "colorsAndLighting": "City lights, neon glow, street lamps, illuminated landmarks, deep blue night sky",
+        "atmosphere": "Bustling, energetic, diverse, cosmopolitan, constant motion",
+        "materials": "Glass, steel, concrete, asphalt, stone",
+        "mood": "Energetic, exciting, ambitious, dynamic, overwhelming",
+        "sounds": "Constant traffic, distant sirens, crowd noise, construction, ambient city hum",
+        "primary_surfaces": "Skyscrapers, concrete roads, large plazas",
+        "secondary_surfaces": "Office buildings, residential towers, infrastructure",
+        "accent_features": "Iconic landmarks, illuminated bridges, rooftop gardens",
+        "dominant": "Modern skyscrapers",
+        "secondary": "Older historic buildings",
+        "accent": "City lights and vibrant nightlife",
+        "ambient": "Urban hum and constant activity",
+        "genre": "REQUIRED",
+        "architectural_tone": "REQUIRED",
+        "cultural_tone": "REQUIRED",
+        "palette_bias": "REQUIRED",
+        "flora_base": "REQUIRED",
+        "fauna_base": "REQUIRED"
+      },
+      "description": "A sprawling city of diverse architecture and vibrant nightlife. This metropolis is a global hub for commerce, culture, and entertainment, characterized by its towering skyscrapers and endless urban sprawl.",
+      "searchDesc": "Sprawling metropolis with diverse architecture and vibrant nightlife.",
+      "slug": "urban-metropolis",
+      "structure": {
+        "spatialLayout": "Grid-like street patterns, vast avenues, dense downtown core, sprawling suburbs"
+      }
+    },
+    "d635e34b-2107-421a-985a-945e90d1aba8": {
+      "id": "d635e34b-2107-421a-985a-945e90d1aba8",
+      "type": "region",
+      "name": "The Art District",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "District architecture, street patterns, neighborhood character, vibrant murals, repurposed industrial buildings, galleries, studios",
+        "colorsAndLighting": "Mix of warm and cool artificial lights, colorful murals, neon signs, illuminated art installations",
+        "atmosphere": "Energetic, creative, bohemian, social, bustling",
+        "materials": "Brick, concrete, steel, glass, reclaimed wood, graffiti",
+        "mood": "Lively, social, energetic, inspiring, trendy",
+        "sounds": "Distant traffic, street performers, chatter, music from venues",
+        "primary_surfaces": "Brick facades, concrete sidewalks, cobblestone streets",
+        "secondary_surfaces": "Steel fire escapes, large windows, wooden storefronts",
+        "accent_features": "Murals, sculptures, public art, unique signage",
+        "dominant": "Historic industrial architecture",
+        "secondary": "Modern artistic additions",
+        "accent": "Street art and vibrant murals",
+        "ambient": "Urban bustle, creative energy",
+        "genre": null,
+        "architectural_tone": "Historic Industrial meets Bohemian Modern",
+        "cultural_tone": "Artistic, bohemian, avant-garde",
+        "palette_bias": "Vibrant and eclectic",
+        "flora_base": "Street trees, planters with seasonal flowers",
+        "fauna_base": "Pigeons, urban wildlife"
+      },
+      "description": "A redeveloped urban area known for its creative spaces and lively atmosphere. This district pulses with artistic energy, evident in its vibrant street art and eclectic mix of historic and contemporary architecture.",
+      "searchDesc": "Art District: Redeveloped urban area with creative spaces and lively atmosphere.",
+      "slug": "the-art-district",
+      "structure": {
+        "spatialLayout": "Narrow streets, open plazas, hidden alleys, courtyards"
+      }
+    },
+    "fa0a1c36-718b-49eb-af0b-6cce144cb1ea": {
+      "id": "fa0a1c36-718b-49eb-af0b-6cce144cb1ea",
+      "type": "location",
+      "name": "The Elephant Mural Courtyard",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A dynamic urban courtyard defined by the juxtaposition of weathered, old brick buildings and sleek, modern structures with slatted facades. A massive, brightly illuminated abstract elephant mural dominates one brick facade, drawing the eye.",
+        "colorsAndLighting": "Illuminated by a cool, deep blue from the night sky reflected on the glass canopy, contrasted with warm and cool artificial lights from within the buildings and from lighting fixtures. The purple mural is a vibrant focal point.",
+        "atmosphere": "The air is alive with the buzz of conversation and distant sounds of performance. A gentle breeze might rustle the leaves of the red-foliaged trees. The temperature is pleasant for an evening gathering.",
+        "materials": "Dominant materials include weathered brick, reflective glass, and brushed metal slats. Wood is present in benches, and concrete forms the paved ground.",
+        "mood": "Lively, social, and energetic. It feels like a popular destination for evening entertainment and community gathering.",
+        "sounds": "Chatter, laughter, distant music, foot traffic, occasional performance.",
+        "primary_surfaces": "weathered brick, reflective glass",
+        "secondary_surfaces": "slatted metal, wood, concrete",
+        "accent_features": "large elephant mural, red foliage trees, glass canopy",
+        "dominant": "deep blue sky",
+        "secondary": "vibrant purple mural",
+        "accent": "warm and cool artificial lights",
+        "ambient": "dynamic artificial lighting",
+        "genre": null,
+        "architectural_tone": "historic industrial meets futuristic modern",
+        "cultural_tone": "art district gathering space, nightlife",
+        "palette_bias": "blues, purples, reds, warm neutrals",
+        "flora_base": "small trees with red foliage",
+        "fauna_base": "None"
+      },
+      "description": "A bustling urban courtyard at night, illuminated by mixed artificial lights and a grand glass canopy. Bordered by old brick buildings with windows and modern structures with slatted facades. EXTERIOR VIEW.",
+      "searchDesc": "Nighttime urban courtyard with elephant mural, glass canopy, diverse crowd, and mixed architecture.",
+      "slug": "the-elephant-mural-courtyard",
+      "structure": {
+        "spatialLayout": "An open, rectangular courtyard with a grand, spanning glass canopy overhead. Buildings border the space, creating a sense of enclosure while the canopy suggests openness."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "ground level, one of the brick buildings",
+          "description": "leads into the interior of the brick buildings"
+        },
+        {
+          "type": "passage",
+          "position": "along the edge of the courtyard",
+          "description": "leads to other parts of the Art District"
+        }
+      ],
+      "dominantElements": [
+        "brick building: shape=rectangular, orientation=vertical, scale=large, style=historic, surfaces=weathered brick, openings=arched-windows|large-glass, interior_materials=brick|wood|concrete, internal_atmosphere=dim",
+        "modern building: shape=rectangular, orientation=vertical, scale=large, style=futuristic, surfaces=glass|metallic-slatted, openings=large-glass, interior_materials=glass|metal|concrete, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Grand glass canopy",
+        "Large, brightly lit elephant mural",
+        "Vibrant red foliage trees",
+        "Mix of old brick and modern architecture"
+      ],
+      "primaryMedia": "media-1767112098518-kgosder6r"
+    },
+    "location-1767112200109-o97qw0d92": {
+      "id": "location-1767112200109-o97qw0d92",
+      "type": "location",
+      "name": "Glass Roof Area",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Open, airy space with exposed industrial architecture softened by lush greenery and artistic installations. Sunlight streams through the glass roof, creating dynamic light patterns.",
+        "colorsAndLighting": "A vibrant spectrum, with dominant earthy tones of brick and concrete, punctuated by colorful textiles, neon art pieces, and the shifting hues of natural light. Warm spotlights highlight seating areas.",
+        "atmosphere": "Buzzing with creative energy and social interaction. A gentle breeze flows through, carrying faint city sounds and the scent of plants.",
+        "materials": "Predominantly glass and steel for the structure, with interior surfaces featuring exposed brick, polished concrete, reclaimed wood accents, and plush, eclectic fabrics.",
+        "mood": "Inspiring, social, energetic, trendy, bohemian, avant-garde.",
+        "sounds": "Chatter, light music, distant city hum, rustling leaves.",
+        "spatialLayout": "Sprawling and open, with defined zones for seating and interaction, all unified under a high, transparent ceiling.",
+        "primary_surfaces": "Glass (roof), exposed brick, concrete",
+        "secondary_surfaces": "Steel framework, reclaimed wood, polished concrete flooring, fabric upholstery",
+        "accent_features": "Large-scale murals, hanging art installations, vibrant potted plants, eclectic seating arrangements, vintage industrial lighting fixtures.",
+        "dominant": "Historic industrial architecture (subtle concrete and brick tones)",
+        "secondary": "Modern artistic additions (vibrant murals, neon)",
+        "accent": "Street art and vibrant murals",
+        "ambient": "Sun-drenched with dynamic light shifts",
+        "genre": null,
+        "architectural_tone": "Historic Industrial meets Bohemian Modern",
+        "cultural_tone": "Artistic, bohemian, avant-garde",
+        "palette_bias": "Vibrant and eclectic",
+        "flora_base": "Lush green walls, large potted plants",
+        "fauna_base": "Pigeons, urban wildlife"
+      },
+      "primaryMedia": "media-1767112200107-b5p7n0sk2",
+      "description": "An expansive outdoor area sheltered by a magnificent glass roof, seamlessly integrating the historic industrial feel with sleek, futuristic modern design. The blues, purples, and reds of the stylized lighting cast an otherworldly glow, accented by warm neutral tones within the polished metallic and glass surfaces.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A sprawling area covered by a large, transparent glass roof, creating an open, airy space that blends the indoors with the outdoors. The structure is designed to evoke a sense of wonder and futurism within an industrial framework.",
+        "requiredElements": [
+          "glass roof"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "Main entrance leading into the vibrant atrium."
+        },
+        {
+          "type": "door",
+          "position": "east wall",
+          "description": "Exit to a bustling street."
+        },
+        {
+          "type": "stairs",
+          "position": "northwest corner",
+          "description": "Ascends to a mezzanine level."
+        }
+      ],
+      "dominantElements": [
+        "Glass Atrium: shape=organic, orientation=sprawling, scale=medium, style=futuristic, surfaces=glass, openings=large-glass, interior_materials=metallic|tile|glass, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "vast glass canopy",
+        "industrial-futuristic aesthetic"
+      ],
+      "searchDesc": "Glass Atrium: Industrial charm meets bohemian spirit under a stunning glass roof.",
+      "slug": "glass-atrium"
+    },
+    "niche-1767112255684-391unmsqm": {
+      "id": "niche-1767112255684-391unmsqm",
+      "type": "niche",
+      "name": "brick building",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A spacious, open-air courtyard surrounded by a weathered, historic brick building. The walls are heavily adorned with a massive, vibrant elephant mural, interspersed with smaller graffiti tags and stencils. Exposed steel beams and industrial-style lighting fixtures are visible. Seating is a mix of salvaged benches, colorful mismatched chairs, and small tables.",
+        "colorsAndLighting": "Dominated by the rich, earthy tones of the brick, punctuated by the riotous colors of the elephant mural and street art. Warm, industrial-style string lights and spotlights illuminate the space, casting dynamic shadows. Occasional neon signage from nearby businesses adds a pop of contrasting color.",
+        "atmosphere": "Lively, energetic, and creatively charged. The air buzzes with conversation and the distant sounds of the city. A sense of artistic freedom and bohemian spirit permeates the space, inviting social interaction.",
+        "materials": "Primarily weathered red brick, exposed concrete, rough-sawn reclaimed wood for seating and planters, steel for structural elements and accents, and glass in surrounding windows.",
+        "mood": "Inspiring, social, avant-garde, and trendy. A feeling of creative confluence and vibrant urban life.",
+        "sounds": "Distant city hum, chatter, laughter, occasional street musician, clinking glasses, footsteps on brick.",
+        "spatialLayout": "An open, rectangular courtyard with elements of industrial structure, creating distinct zones for seating and art display.",
+        "primary_surfaces": "Weathered red brick walls, large-scale mural, concrete flooring.",
+        "secondary_surfaces": "Exposed steel beams, reclaimed wood benches and planters, glass windows.",
+        "accent_features": "The prominent elephant mural, diverse graffiti and stencil art, salvaged industrial decor, rotating art installations, neon signage.",
+        "dominant": "Historic industrial architecture (brick and concrete)",
+        "secondary": "Modern artistic additions (murals, street art)",
+        "accent": "Street art and vibrant murals",
+        "ambient": "Urban bustle, creative energy",
+        "genre": "REQUIRED",
+        "architectural_tone": "Historic Industrial meets Bohemian Modern",
+        "cultural_tone": "Artistic, bohemian, avant-garde",
+        "palette_bias": "Vibrant and eclectic",
+        "flora_base": "Planters with seasonal flowers and hardy urban plants.",
+        "fauna_base": "Pigeons, urban wildlife."
+      },
+      "primaryMedia": "media-1767112255683-gyxfhzzps",
+      "description": "Inside the large, historic brick building, the interior is dominated by the texture of weathered brick walls and a cool concrete ceiling, with hints of wood underfoot. Dim lighting pervades the space, highlighting arched windows and large glass panes.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "vertical",
+        "openings": "arched-windows|large-glass",
+        "openingShape": "arched",
+        "functionalType": "null",
+        "elevation": "ground-level",
+        "spatialLayout": "The interior of the brick building is characterized by its imposing scale and historical style. Walls of weathered brick are complemented by wooden floors and a concrete ceiling, creating a dim and robust atmosphere.",
+        "requiredElements": [
+          "weathered brick",
+          "arched-windows",
+          "large-glass",
+          "brick",
+          "wood",
+          "concrete",
+          "dim"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "vintage industrial bar with neon art installations",
+          "mismatched leather lounge chairs",
+          "salvaged wood tables",
+          "hanging Edison bulbs",
+          "exposed pipe shelving with artisanal liquor bottles",
+          "a small stage with a retro microphone."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "object",
+          "position": "front wall",
+          "description": "object large arched entryway"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door metal-framed glass"
+        },
+        {
+          "type": "corridor",
+          "position": "right",
+          "description": "corridor exposed brick archway leading to a"
+        },
+        {
+          "type": "window",
+          "position": "center",
+          "description": "window dimly lit  upstage"
+        }
+      ],
+      "dominantElements": [
+        "historic hall: shape=rectangular, orientation=vertical, scale=large, style=historic, surfaces=weathered brick, openings=arched-windows|large-glass, interior_materials=brick|wood|concrete, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "weathered brick walls",
+        "arched window frames",
+        "exposed concrete ceiling beams"
+      ],
+      "searchDesc": "Vibrant courtyard with elephant mural, brick walls, art installations, and social seating.",
+      "slug": "null-of-the-elephant-mural-courtyard"
+    },
+    "niche-1767112366525-kr1aaflw8": {
+      "id": "niche-1767112366525-kr1aaflw8",
+      "type": "niche",
+      "name": "The Food Hall",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A grand, high-ceilinged hall with exposed industrial beams and polished concrete floors. Walls are a mix of weathered brick and sleek, dark metal panels. The space is dominated by long, communal dining tables and dynamic, flowing digital art projections. A central, glowing hearth provides warmth and a focal point.",
+        "colorsAndLighting": "Dominated by deep blues and vibrant purples emanating from the digital art, with warm, amber light from the central hearth and task lighting over tables. Accents of crimson from strategically placed LED strips.",
+        "atmosphere": "Lively and boisterous with the clatter of cutlery and communal laughter. A pleasant, slightly cool air circulation. Energy is high, driven by the communal purpose and visual stimulation.",
+        "materials": "Primarily weathered brick, brushed metal panels, polished concrete, and dark, reclaimed wood for tables. Touches of glass in the lighting fixtures and digital displays.",
+        "mood": "Exhilarating, celebratory, and convivial. A hub of social interaction and grand indulgence.",
+        "sounds": "Distant music, laughter, clinking glasses, sizzling food, murmur of conversations.",
+        "spatialLayout": "Vast, open-plan rectangular hall with high ceilings. Central area for dining, with peripheral zones for bars and viewing areas.",
+        "primary_surfaces": "weathered brick, brushed metal panels",
+        "secondary_surfaces": "polished concrete, dark wood, glass",
+        "accent_features": "Communal hearth, 'Feast Beacon' sculpture, flowing digital art displays, 'Echo Ribs' seating.",
+        "dominant": "deep blue",
+        "secondary": "vibrant purple",
+        "accent": "warm amber lighting, crimson accents",
+        "ambient": "dynamic artificial lighting with warm and cool zones",
+        "genre": "REQUIRED",
+        "architectural_tone": "historic industrial meets futuristic modern",
+        "cultural_tone": "art district gathering space, nightlife",
+        "palette_bias": "blues, purples, reds, warm neutrals",
+        "flora_base": "null",
+        "fauna_base": "null"
+      },
+      "primaryMedia": "media-1767112366524-hofwxnc4b",
+      "description": "Inside a vast, high-ceilinged hall, the air buzzes with a lively atmosphere. Exposed brick walls, reminiscent of a historic industrial space, are softened by bohemian-modern decor. Sunlight streams through large, arched openings, illuminating a vibrant tapestry of food stalls offering a diverse culinary journey. Communal tables, adorned with eclectic seating, invite patrons to gather and savor the vibrant, bohemian-modern ambiance.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "commercial",
+        "elevation": "ground-level",
+        "spatialLayout": "A sprawling, open-plan space filled with diverse food stalls and seating areas, creating a vibrant and communal dining experience.",
+        "requiredElements": [
+          "food"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "central archway",
+          "description": "Leads to the main courtyard, reflecting the exterior's contrast."
+        },
+        {
+          "type": "passage",
+          "position": "left side wall",
+          "description": "Opens into a bustling bar area."
+        },
+        {
+          "type": "passage",
+          "position": "right side wall",
+          "description": "Leads to elevated seating and viewing platforms."
+        }
+      ],
+      "dominantElements": [
+        "Food Stall: shape=modular, orientation=sprawling, scale=medium, style=industrial, surfaces=wood|metal, openings=open-passages, interior_materials=tile|wood|metal, internal_atmosphere=bright",
+        "Communal Seating: shape=rectangular, orientation=compact, scale=large, style=bohemian, surfaces=wood|metal, openings=none, interior_materials=wood|fabric|metal, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "exposed brick walls",
+        "hanging Edison bulbs",
+        "eclectic mix of seating"
+      ],
+      "searchDesc": "Vast industrial-modern hall for feasts, art, and nightlife.",
+      "slug": "the-great-hall"
+    },
+    "niche-1767112462667-u3sjfrw22": {
+      "id": "niche-1767112462667-u3sjfrw22",
+      "type": "niche",
+      "name": "Music Scene",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A high-ceilinged space with exposed structural elements, transformed by a dazzling display of integrated LED stage panels, vibrant neon geometric sculptures suspended from beams, and a unique DJ booth.",
+        "colorsAndLighting": "Dominated by deep blues and purples from the neon and LED lighting, with warm neutral tones from the seating and the polished concrete. Accents of vibrant red from embedded fiber optics and occasional flashes of light from the DJ booth.",
+        "atmosphere": "The air hums with the anticipation of music and the murmur of conversations. A pleasant, energetic buzz fills the space, warm and inviting for social gatherings. Gentle movement from shifting light patterns.",
+        "materials": "Polished concrete floors, exposed metal beams, plush velvet upholstery, brushed metal and chrome accents, integrated LED panels.",
+        "mood": "Lively, social, and energetic. A sophisticated yet edgy vibe that encourages dancing and mingling.",
+        "sounds": "Pulsating electronic beats, deep basslines, crowd chatter, clinking glasses, DJ scratching.",
+        "spatialLayout": "An open-plan main area with a central, elevated stage and a distinct DJ booth area. Seating is arranged in clusters, allowing for flow and varied social interaction.",
+        "primary_surfaces": "Polished concrete, LED panels",
+        "secondary_surfaces": "Exposed metal beams, velvet upholstery, chrome accents",
+        "accent_features": "Neon geometric light installations, vintage modular DJ booth, embedded fiber optics in floor",
+        "dominant": "Deep blues and purples",
+        "secondary": "Warm neutrals (e.g., taupe, deep grey)",
+        "accent": "Vibrant red (fiber optics)",
+        "ambient": "Dynamic and multi-layered artificial lighting",
+        "genre": "REQUIRED",
+        "architectural_tone": "historic industrial meets futuristic modern",
+        "cultural_tone": "art district gathering space, nightlife",
+        "palette_bias": "blues, purples, reds, warm neutrals",
+        "flora_base": "small trees with red foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767112462666-gp6bfofn8",
+      "description": "Inside a large, open venue with a polished concrete floor embedded with fiber optics. An elevated stage with integrated LED panels is the focal point, with a vintage modular DJ booth to one side. Scattered industrial-style seating with metal frames and velvet upholstery is arranged throughout the space. Neon geometric light installations hang from exposed beams, casting a vibrant glow.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "cubic",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "An expansive, industrial-inspired space designed for performance and audience engagement. Exposed structural elements are softened by dynamic lighting and luxurious seating.",
+        "requiredElements": [
+          "elevated stage with integrated LED panels",
+          "vintage modular DJ booth with chrome accents",
+          "scattered industrial-style seating with exposed metal and plush velvet upholstery",
+          "neon geometric light installations hanging from exposed beams",
+          "polished concrete floor with subtle embedded fiber optics",
+          "integrated LED panels",
+          "chrome accents",
+          "exposed metal and plush velvet upholstery",
+          "subtle embedded fiber optics"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "elevated stage with integrated LED panels",
+          "vintage modular DJ booth with chrome accents",
+          "scattered industrial-style seating with exposed metal and plush velvet upholstery",
+          "neon geometric light installations hanging from exposed beams",
+          "polished concrete floor with subtle embedded fiber optics. --populate"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door main entrance with oversized industrial-style s"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door smaller service"
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "window large panoramic   with cityscape view"
+        },
+        {
+          "type": "archway",
+          "position": "back",
+          "description": "archway in leading to backstage area"
+        }
+      ],
+      "dominantElements": [
+        "performance_space: shape=modular, orientation=centered, scale=large, style=futuristic|industrial, surfaces=concrete|metallic-polished, openings=open-passages, interior_materials=concrete|metallic|fabric, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "integrated LED stage panels",
+        "neon geometric light installations",
+        "fiber optic embedded floor"
+      ],
+      "searchDesc": "Industrial-chic music lounge with LED stage, neon lights, and velvet seating.",
+      "slug": "the-sonic-lounge"
+    },
+    "niche-1767115822660-zjpy9tqs8": {
+      "id": "niche-1767115822660-zjpy9tqs8",
+      "type": "niche",
+      "name": "Yoga Room",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A spacious yoga studio with a high, transparent glass roof allowing abundant natural light. Walls feature a blend of exposed, weathered brick and smooth, polished concrete. Industrial steel beams are visible, softened by warm lighting. The space is adorned with eclectic art pieces and natural wood elements.",
+        "colorsAndLighting": "The primary light source is natural sunlight filtering through the glass roof, creating dynamic patterns. Accent lighting includes warm, Edison-style bulbs suspended from exposed conduits and strategically placed, colorful LED strips highlighting artwork. Dominant colors are the warm tones of brick and wood, contrasted by the cool grey of concrete and the metallic sheen of steel.",
+        "atmosphere": "Calm and serene, yet infused with a subtle underlying energy from the surrounding urban environment. The air is fresh, occasionally carrying the scent of incense or distant city aromas. A sense of focused tranquility prevails.",
+        "materials": "Polished concrete floors, exposed brick walls, structural steel beams, reclaimed wood (for props, benches, and accent pieces), glass (roof and accent panels), industrial metal accents (lighting fixtures, ventilation).",
+        "mood": "Inspiring, serene, mindful, vibrant, bohemian, trendy.",
+        "sounds": "Soft ambient music, distant city hum, creak of wood, occasional gentle chime.",
+        "spatialLayout": "Open and airy, with a high ceiling. Defined zones for different yoga practices, with ample open space in the center. Minimal clutter.",
+        "primary_surfaces": "Exposed brick walls, polished concrete floor.",
+        "secondary_surfaces": "Steel beams and columns, reclaimed wood elements, glass panels.",
+        "accent_features": "Large-scale, vibrant abstract murals on brick sections, artistically arranged yoga props made of natural wood, hanging plants integrated with industrial elements.",
+        "dominant": "Terracotta and ochre from brick and wood.",
+        "secondary": "Cool grey from concrete and steel.",
+        "accent": "Vibrant blues, greens, and oranges from artwork and subtle lighting.",
+        "ambient": "Natural light and warm artificial light.",
+        "genre": "REQUIRED",
+        "architectural_tone": "Historic Industrial meets Bohemian Modern",
+        "cultural_tone": "Artistic, bohemian, avant-garde",
+        "palette_bias": "Vibrant and eclectic",
+        "flora_base": "Strategically placed indoor plants with sculptural forms, perhaps hanging from steel structures.",
+        "fauna_base": "Pigeons, urban wildlife"
+      },
+      "primaryMedia": "media-1767115822657-5vyw50dw5",
+      "description": "Inside a small, tranquil yoga room. The atmosphere is dim and peaceful, with soft lighting and calming textures.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "small",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A tranquil, intimate space designed for yoga practice, featuring soft lighting and natural materials to promote calm.",
+        "requiredElements": [
+          "yoga room"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "distressed leather yoga mats",
+          "reclaimed wood meditation props",
+          "hanging macrame plant holders with exotic ferns",
+          "industrial pendant lights with Edison bulbs",
+          "antique Persian rugs",
+          "scattered bohemian floor cushions",
+          "open shelving with art books and incense holders",
+          "a vintage gramophone."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door large glass s  with view of city skyline"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door antique wooden"
+        },
+        {
+          "type": "archway",
+          "position": "right",
+          "description": "archway exposed brick  leading to changing rooms"
+        },
+        {
+          "type": "window",
+          "position": "side wall",
+          "description": "window large metal-framed s s"
+        }
+      ],
+      "dominantElements": [
+        "Yoga Room: shape=organic, orientation=compact, scale=small, style=minimalist, surfaces=fabric, openings=minimal, interior_materials=wood|stone|fabric, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "soft ambient lighting",
+        "natural wood flooring",
+        "sound-dampening fabric walls"
+      ],
+      "searchDesc": "Bohemian modern yoga sanctuary under a glass roof, blending industrial grit with artistic serenity.",
+      "slug": "null-of-glass-roof-area"
+    },
+    "niche-1767119624241-ygna8zv7i": {
+      "id": "niche-1767119624241-ygna8zv7i",
+      "type": "niche",
+      "name": "The Art Studio",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, open space with very high ceilings. Walls are a mix of exposed, weathered brick and large sections of raw, unfinished concrete. The floor is polished concrete with visible paint splatters and scuff marks. Industrial-style workbenches and easels are scattered throughout. Large, multi-paned industrial windows allow ample natural light. Accents include a prominent, large-scale abstract mural on one brick wall.",
+        "colorsAndLighting": "Dominant colors are the warm neutrals of brick and concrete, contrasted with vibrant blues, purples, and reds from scattered artwork and art supplies. Lighting is a dynamic mix of cool, diffused daylight from the large windows, and the warm, energetic glow of industrial pendant lights and strategically placed spotlights highlighting artwork.",
+        "atmosphere": "The air is thick with the creative hum of ongoing projects, smelling faintly of oil paints, turpentine, and sawdust. It feels energetic and inspiring, with a sense of organized chaos. The temperature is pleasant and slightly cool, ideal for focused work.",
+        "materials": "Primary materials are weathered brick and polished concrete. Secondary materials include raw steel (for lighting fixtures, workbenches), reclaimed wood (for shelving, some easels), and large expanses of industrial glass.",
+        "mood": "Inspiring, energetic, and focused, with a strong sense of community and creative freedom. It feels like a hub for artistic production and experimentation.",
+        "sounds": "Distant city hum, occasional clatter of tools, brushstrokes on canvas, low murmur of conversation, soft ambient music.",
+        "spatialLayout": "Vast, open-plan with very high ceilings, creating a sense of expansive potential. Areas are defined by furniture and artwork rather than walls.",
+        "primary_surfaces": "weathered brick, polished concrete",
+        "secondary_surfaces": "raw steel, reclaimed wood, industrial glass",
+        "accent_features": "large abstract mural, scattered artwork, industrial pendant lighting, art supply collections",
+        "dominant": "warm neutrals (brick, concrete)",
+        "secondary": "vibrant blues, purples, reds",
+        "accent": "cool daylight, warm spotlights",
+        "ambient": "dynamic artificial lighting",
+        "genre": "REQUIRED",
+        "architectural_tone": "historic industrial meets futuristic modern",
+        "cultural_tone": "art district gathering space, nightlife",
+        "palette_bias": "blues, purples, reds, warm neutrals",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767119624240-xwe28heu3",
+      "description": "Inside a sprawling, irregularly shaped art studio, the space is characterized by a unique blend of raw, historic industrial elements and sleek, futuristic modern design. The palette of blues, purples, and reds is artfully integrated with warm neutrals, creating an atmosphere that is both inspiring and functional.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A vast, open-plan space with high ceilings and exposed structural elements. Various distinct zones are dedicated to different artistic disciplines, allowing for a dynamic flow between creative processes.",
+        "requiredElements": [
+          "art studio"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "unfinished concrete floor",
+          "large drafting tables with scattered blueprints",
+          "industrial shelving units overflowing with paints and canvases",
+          "exposed pipework with integrated LED strip lighting",
+          "vintage leather-upholstered seating area",
+          "modular modular modular sculpture installation",
+          "abstract art pieces in progress",
+          "scattered artist tools and spray cans."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door large industrial"
+        },
+        {
+          "type": "archway",
+          "position": "left wall",
+          "description": "archway exposed brick"
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "window tall metal-framed"
+        },
+        {
+          "type": "hatch",
+          "position": "floor",
+          "description": "hatch metal grate access"
+        }
+      ],
+      "dominantElements": [
+        "studio: shape=irregular, orientation=sprawling, scale=large, style=historic industrial meets futuristic modern, surfaces=concrete, openings=large-glass, interior_materials=concrete|concrete|metallic, internal_atmosphere=industrial"
+      ],
+      "uniqueIdentifiers": [
+        "exposed industrial beams",
+        "large north-facing windows",
+        "integrated digital projection screens"
+      ],
+      "searchDesc": "Open art studio with industrial charm, vibrant colors, and creative energy.",
+      "slug": "the-artist-s-loft"
     }
   },
   "views": {},
@@ -1204,9 +1837,59 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1767112081225-dlqhou1t1",
+      "type": "host",
+      "children": [
+        {
+          "id": "d635e34b-2107-421a-985a-945e90d1aba8",
+          "type": "region",
+          "children": [
+            {
+              "id": "fa0a1c36-718b-49eb-af0b-6cce144cb1ea",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767112255684-391unmsqm",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767112366525-kr1aaflw8",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767112462667-u3sjfrw22",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767119624241-ygna8zv7i",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "location-1767112200109-o97qw0d92",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767115822660-zjpy9tqs8",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1767101449144-ncoxq6b1a"
+    "loc-1767101449144-ncoxq6b1a",
+    "loc-1767112081225-dlqhou1t1"
   ]
 }
