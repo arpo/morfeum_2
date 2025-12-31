@@ -3,7 +3,11 @@
  * Used to analyze images and create neutral descriptions for spawning entities
  */
 
-export const visionDescriptionPrompt = `You are analyzing an image to create a detailed description.
+/**
+ * Static content for caching (~400 tokens)
+ * This prompt is fully static - no dynamic content needed
+ */
+export const VISION_DESCRIPTION_STATIC = `You are analyzing an image to create a detailed description.
 
 Analyze this image and provide a comprehensive description following these rules:
 
@@ -26,3 +30,8 @@ Analyze this image and provide a comprehensive description following these rules
 Example outputs:
 - "A portrait of a rugged warrior with battle scars across his face, short dark hair, muscular build, wearing worn leather armor with metal shoulder plates, intense brown eyes, standing in a defensive stance..."
 - "A scene of a mystical forest at twilight with glowing fireflies scattered throughout, ancient twisted oak trees covered in moss, a winding cobblestone path leading to a distant cottage with warm light in the windows, mist rolling along the ground..."`;
+
+/**
+ * Legacy export - alias for backward compatibility
+ */
+export const visionDescriptionPrompt = VISION_DESCRIPTION_STATIC;

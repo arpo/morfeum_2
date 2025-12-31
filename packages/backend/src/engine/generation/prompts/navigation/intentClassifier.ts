@@ -4,6 +4,32 @@
  * Only GO_INSIDE is currently implemented.
  */
 
+/**
+ * Static content for caching (~400 tokens)
+ * Contains intent definitions and output template
+ */
+export const INTENT_CLASSIFIER_STATIC = `Navigation intent classifier.
+
+INTENTS (only GO_INSIDE implemented):
+- GO_INSIDE: enter/inside/step into → buildings, vehicles, caves
+- UNKNOWN: anything else
+
+GO_INSIDE RULES:
+- Target: buildings/structures with windows/doors. Avoid water, plants, furniture.
+- SpaceType: "interior" if entering enclosed space with roof. "exterior" if open-air. "unknown" fallback.
+
+OUTPUT (JSON):
+{
+  "intent": "GO_INSIDE|UNKNOWN",
+  "target": "name or null",
+  "direction": null,
+  "newRegion": null,
+  "relocationType": null,
+  "spaceType": "interior|exterior|unknown or null",
+  "style": null,
+  "confidence": 0.0-1.0
+}`;
+
 export interface IntentClassifierRequest {
   userCommand: string;
   currentNode: {

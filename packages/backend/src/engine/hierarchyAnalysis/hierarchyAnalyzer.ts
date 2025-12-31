@@ -7,8 +7,11 @@
 import { AI_MODELS } from '../../config/constants';
 import { eventEmitter } from '../../services/eventEmitter';
 
-import { generateText } from '../../services/mzoo';
-import { hierarchyCategorization } from '../generation/prompts/locations/hierarchyCategorization';
+import { generateText, generateCachedTextWithThinking } from '../../services/mzoo';
+import { 
+  hierarchyCategorization, 
+  hierarchyCategorizationDynamic 
+} from '../generation/prompts/locations/hierarchyCategorization';
 import { parseJSON } from '../utils/parseJSON';
 import { normalizeHierarchy, wrapLocationInHost } from './hierarchyNormalizer';
 import type {
@@ -29,34 +32,58 @@ import type {
 export async function analyzeHierarchy(
   userPrompt: string, 
   apiKey: string,
-  spawnId?: string
+  spawnId?: string,
+  useCaching: boolean = true
 ): Promise<HierarchyAnalysisResult> {
   // Build prompt from centralized prompts
   const classificationPrompt = hierarchyCategorization(userPrompt);
   
-  // Call LLM (using fast model for quick categorization)
-  const messages = [
-    { role: 'system', content: classificationPrompt },
-    { role: 'user', content: userPrompt }
-  ];
+  let responseText: string;
   
-  const result = await generateText(
-    apiKey,
-    messages,
-    AI_MODELS.SEED_GENERATION // Fast model for structure analysis
-  );
-
-  if (result.error || !result.data) {
-    throw new Error(result.error || 'No hierarchy data returned from LLM');
+  if (useCaching) {
+    // Use cached text generation with thinking for complex parsing
+    try {
+      const dynamicPrompt = hierarchyCategorizationDynamic(userPrompt);
+      const cachedResult = await generateCachedTextWithThinking(
+        apiKey,
+        'morfeum-world-creation',
+        dynamicPrompt,
+        2048 // Thinking budget for complex parsing
+      );
+      responseText = cachedResult.text;
+    } catch (cacheError) {
+      // Fall back to non-cached generation
+      console.warn('[Hierarchy] Cached generation failed, using fallback:', cacheError);
+      const messages = [
+        { role: 'system', content: classificationPrompt },
+        { role: 'user', content: userPrompt }
+      ];
+      const result = await generateText(apiKey, messages, AI_MODELS.SEED_GENERATION);
+      if (result.error || !result.data) {
+        throw new Error(result.error || 'No hierarchy data returned from LLM');
+      }
+      responseText = result.data.text;
+    }
+  } else {
+    // Use non-cached generation
+    const messages = [
+      { role: 'system', content: classificationPrompt },
+      { role: 'user', content: userPrompt }
+    ];
+    const result = await generateText(apiKey, messages, AI_MODELS.SEED_GENERATION);
+    if (result.error || !result.data) {
+      throw new Error(result.error || 'No hierarchy data returned from LLM');
+    }
+    responseText = result.data.text;
   }
 
   // Parse JSON response
   let parsedHierarchy;
   try {
-    parsedHierarchy = parseJSON<HierarchyStructure>(result.data.text);
+    parsedHierarchy = parseJSON<HierarchyStructure>(responseText);
   } catch (parseError) {
     console.error('[Hierarchy] Failed to parse JSON from LLM response:');
-    console.error('Raw response:', result.data.text.substring(0, 500));
+    console.error('Raw response:', responseText.substring(0, 500));
     throw new Error(`Failed to parse JSON: ${parseError}`);
   }
   

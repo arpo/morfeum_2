@@ -2,8 +2,12 @@
  * Hierarchy Categorization Prompt - Optimized
  * Analyzes user input into 4-layer hierarchy: Host → Region → Location → Niche
  */
-export function hierarchyCategorization(userPrompt: string): string {
-  return `Spatial hierarchy analyzer. Organize input into: Host → Region → Location → Niche.
+
+/**
+ * Static content for caching (~1,800 tokens)
+ * Contains all rules, field definitions, structure, and examples
+ */
+export const HIERARCHY_CATEGORIZATION_STATIC = `Spatial hierarchy analyzer. Organize input into: Host → Region → Location → Niche.
 
 ## RULES
 
@@ -109,9 +113,18 @@ Visual fields (deepest node):
 ## OUTPUT
 
 Pure JSON only. No markdown fences. No explanations.
-Validate: Region ≠ Host name, no empty descriptions.
+Validate: Region ≠ Host name, no empty descriptions.`;
 
-## INPUT
+/**
+ * Dynamic function - builds the user input section
+ */
+export function hierarchyCategorizationDynamic(userPrompt: string): string {
+  return `## INPUT\n\n${userPrompt}`;
+}
 
-${userPrompt}`;
+/**
+ * Legacy function - combines static + dynamic for non-cached usage
+ */
+export function hierarchyCategorization(userPrompt: string): string {
+  return `${HIERARCHY_CATEGORIZATION_STATIC}\n\n${hierarchyCategorizationDynamic(userPrompt)}`;
 }

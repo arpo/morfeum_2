@@ -5,7 +5,12 @@
 
 import { blackListCharacterNames } from '../shared';
 
-export const characterSeedPrompt = (textPrompt: string) => `Generate a concise, visually focused character seed based on the description below.
+/**
+ * Static content for caching (~800 tokens)
+ * Contains all field definitions and rules
+ * Note: blackListCharacterNames is dynamic, so we include it in the static content
+ */
+export const CHARACTER_SEED_STATIC = `Generate a concise, visually focused character seed based on the description below.
 
 Return only valid JSON with these exact fields:
 {
@@ -57,7 +62,17 @@ If human include race and skin color and gender.
 If age is not specified mention don't depict as a minor.
 
 Do not include any markdown formatting, code blocks, or explanatory text.
-Return only the JSON object.
+Return only the JSON object.`;
 
-Input description:
-${textPrompt}`;
+/**
+ * Dynamic function - builds the user input section
+ */
+export function characterSeedDynamic(textPrompt: string): string {
+  return `Input description:\n${textPrompt}`;
+}
+
+/**
+ * Legacy function - combines static + dynamic for non-cached usage
+ */
+export const characterSeedPrompt = (textPrompt: string) => 
+  `${CHARACTER_SEED_STATIC}\n\n${characterSeedDynamic(textPrompt)}`;

@@ -1181,7 +1181,8 @@
       "slug": "the-art-district",
       "structure": {
         "spatialLayout": "Narrow streets, open plazas, hidden alleys, courtyards"
-      }
+      },
+      "primaryMedia": "media-1767152172174-0e9868kkp"
     },
     "fa0a1c36-718b-49eb-af0b-6cce144cb1ea": {
       "id": "fa0a1c36-718b-49eb-af0b-6cce144cb1ea",
@@ -1749,6 +1750,872 @@
       ],
       "searchDesc": "Open art studio with industrial charm, vibrant colors, and creative energy.",
       "slug": "the-artist-s-loft"
+    },
+    "loc-1767152996093-g79aebj4c": {
+      "id": "loc-1767152996093-g79aebj4c",
+      "type": "host",
+      "name": "Seville, Spain",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Skyline silhouette, geographic features, vast landscapes",
+        "colorsAndLighting": "Deep blue sky, golden artificial light, terracotta hues",
+        "atmosphere": "Vibrant, historic, passionate",
+        "materials": "Stone, terracotta, wood",
+        "mood": "Elegant festivity, serene warmth",
+        "sounds": "Flamenco music, distant bells, city hum",
+        "primary_surfaces": "Building facades, stone paving",
+        "secondary_surfaces": "Terracotta roofs, ornate details",
+        "accent_features": "Towers, spires, decorative tile work",
+        "dominant": "Iconic landmarks",
+        "secondary": "Ornate architecture",
+        "accent": "Intricate details",
+        "ambient": "Warm evening light",
+        "genre": "REQUIRED",
+        "architectural_tone": "REQUIRED",
+        "cultural_tone": "REQUIRED",
+        "palette_bias": "REQUIRED",
+        "flora_base": "REQUIRED",
+        "fauna_base": "REQUIRED"
+      },
+      "description": "A vibrant city in Andalusia, known for its rich history, stunning architecture, and lively atmosphere. Experience the passionate culture and breathtaking beauty of southern Spain.",
+      "searchDesc": "Seville, Spain: vibrant city, rich history, stunning architecture, lively atmosphere",
+      "slug": "seville-spain",
+      "structure": {
+        "spatialLayout": "Expansive cityscape, courtyards, plazas"
+      },
+      "primaryMedia": "media-1767153055628-uhjqdx9ml"
+    },
+    "c0dc6d7a-7366-4c26-bdf6-b0f857f96fe5": {
+      "id": "c0dc6d7a-7366-4c26-bdf6-b0f857f96fe5",
+      "type": "region",
+      "name": "Old Town",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "District architecture, street patterns, neighborhood character",
+        "colorsAndLighting": "Warm terracotta tones, golden artificial light",
+        "atmosphere": "Lively, historic, charming",
+        "materials": "Aged stone, terracotta tiles",
+        "mood": "Elegant festivity, serene warmth",
+        "sounds": "Distant chatter, clinking glasses, soft music",
+        "primary_surfaces": "Stone paving, building facades",
+        "secondary_surfaces": "Terracotta roofs, wooden accents",
+        "accent_features": "Arches, columns, hanging lanterns",
+        "dominant": "Andalusian architecture",
+        "secondary": "Mudejar influences",
+        "accent": "Wrought iron, ceramic tiles",
+        "ambient": "Warm glow",
+        "genre": null,
+        "architectural_tone": "Andalusian, Mudejar",
+        "cultural_tone": "Historic Spanish",
+        "palette_bias": "Warm earth tones",
+        "flora_base": "Cypress, olive trees",
+        "fauna_base": "Pigeons, songbirds"
+      },
+      "description": "The historic heart of Seville, characterized by its labyrinthine streets, ancient buildings, and lively courtyards. Immerse yourself in the rich history and authentic charm of this vibrant district.",
+      "searchDesc": "Historic Seville Old Town: labyrinthine streets, ancient buildings, lively courtyards",
+      "slug": "old-town",
+      "structure": {
+        "spatialLayout": "Labyrinthine streets, enclosed courtyards"
+      },
+      "primaryMedia": "media-1767153044413-b6h1nvwvh"
+    },
+    "1f478f08-59f1-4f31-9c38-ec9fe6198e30": {
+      "id": "1f478f08-59f1-4f31-9c38-ec9fe6198e30",
+      "type": "location",
+      "name": "Courtyard Restaurant",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The exterior presents a charming Andalusian or Mudejar architectural style. Intricately decorated arches and columns frame the entrance and windows, topped by a warm terracotta-tiled roof. The building surfaces are a blend of aged stone and warm wood.",
+        "colorsAndLighting": "Warm, golden light emanates from hanging lanterns and accent lighting, casting soft glows. The terracotta roof tiles offer a reddish-brown hue, complemented by the natural tones of stone and wood.",
+        "atmosphere": "The air feels balmy and inviting, hinting at the convivial atmosphere within. The gentle evening breeze rustles the dense foliage of surrounding trees.",
+        "materials": "Aged stone, weathered wood, and terracotta tiles form the primary external materials. Accents of wrought iron and possibly ceramic tiles are visible in the decorative elements.",
+        "mood": "Elegant festivity and serene warmth pervade the scene, promising a delightful dining experience.",
+        "sounds": "Distant murmur of conversation, gentle clinking of cutlery, soft music.",
+        "primary_surfaces": "Aged stone, terracotta tiles",
+        "secondary_surfaces": "Warm wood, wrought iron",
+        "accent_features": "Intricate tile work, decorative columns, hanging lanterns",
+        "dominant": "Terracotta",
+        "secondary": "Stone",
+        "accent": "Golden light",
+        "ambient": "Warm golden",
+        "genre": null,
+        "architectural_tone": "Andalusian/Mudejar",
+        "cultural_tone": "Spanish restaurant",
+        "palette_bias": "Warm earth tones",
+        "flora_base": "Trees",
+        "fauna_base": "None"
+      },
+      "description": "An enchanting outdoor restaurant set within a meticulously trimmed courtyard, illuminated by hanging lanterns and accent lighting. EXTERIOR VIEW.",
+      "searchDesc": "Exterior of Seville restaurant: Mudejar architecture, arches, lanterns, courtyard garden.",
+      "slug": "courtyard-restaurant",
+      "structure": {
+        "spatialLayout": "The restaurant is situated within a courtyard, suggesting an enclosed yet open-air dining space. The surrounding building forms a protective and decorative perimeter."
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "Leads into the restaurant's dining area."
+        }
+      ],
+      "dominantElements": [
+        "building: shape=irregular, orientation=sprawling, scale=medium, style=rustic, surfaces=stone|wood, openings=arched-windows, interior_materials=tile|stone|wood, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "Ornate Andalusian/Mudejar architecture",
+        "Terracotta-tiled roof",
+        "Hanging lanterns",
+        "Intricately decorated arches and columns",
+        "Trellis-covered walls"
+      ],
+      "primaryMedia": "media-1767153067416-qe6cy7krs"
+    },
+    "niche-1767153014991-lcs8zbcy1": {
+      "id": "niche-1767153014991-lcs8zbcy1",
+      "type": "niche",
+      "name": "Courtyard Restaurant Dining Area",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The interior of a lively courtyard restaurant. Small wooden and wicker tables are covered with white tablecloths, each adorned with a glowing candle. The ground is a patchwork of stone paving, reflecting the warm glow of artificial lighting. Meticulously trimmed spherical trees and taller palm trees with dense green foliage create a vibrant garden atmosphere within the enclosed courtyard.",
+        "colorsAndLighting": "Warm earth tones dominate, with the reddish-brown of terracotta elements (if any transferred indoors, otherwise implied by the palette bias). Golden hues from glowing candles and artificial lighting cast a warm, inviting ambiance. The stone paving reflects this light. The foliage of the trees provides rich green accents.",
+        "atmosphere": "Balmy and inviting, filled with the gentle hum of conversation and the clinking of cutlery. A sense of convivial festivity and serene warmth pervades the air.",
+        "materials": "Primary materials include stone paving and warm wood elements from the tables. Wicker is also present in the table construction. Ceramic tile accents might be subtly integrated.",
+        "mood": "Elegant festivity and serene warmth pervade the scene, promising a delightful dining experience.",
+        "sounds": "Murmur of conversation, clinking cutlery, soft background music, rustling leaves.",
+        "spatialLayout": "An open courtyard space, filled with many small, closely-set tables, bordered by architectural elements and lush greenery.",
+        "primary_surfaces": "Stone paving, wooden table tops",
+        "secondary_surfaces": "Wicker, white tablecloths",
+        "accent_features": "Glowing candles, meticulously trimmed spherical trees, dense palm foliage, artificial lighting fixtures",
+        "dominant": "Warm earth tones",
+        "secondary": "Stone",
+        "accent": "Golden light",
+        "ambient": "Warm golden",
+        "genre": null,
+        "architectural_tone": "Andalusian/Mudejar",
+        "cultural_tone": "Spanish restaurant",
+        "palette_bias": "Warm earth tones",
+        "flora_base": "Meticulously trimmed spherical trees, dense palm trees",
+        "fauna_base": "None"
+      },
+      "description": "The lively interior of the courtyard restaurant, filled with patrons enjoying meals at well-appointed tables. The ground is paved with stone, reflecting warm light, and lush trees create a garden-like ambiance.",
+      "primaryMedia": "media-1767153014990-rpnugaup7",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "This dining area is an open-air space within a restaurant, designed to feel like a vibrant garden with ample seating for patrons.",
+        "requiredElements": [
+          "patrons",
+          "tables",
+          "candles",
+          "dishes",
+          "drinks",
+          "trees",
+          "patrons seated at small wooden and wicker tables adorned with white tablecloths",
+          "dense green foliage create a vibrant garden atmosphere"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "leading into the courtyard",
+          "description": "the exterior of the restaurant"
+        },
+        {
+          "type": "door",
+          "position": "through a wall",
+          "description": "kitchen or service areas"
+        }
+      ],
+      "dominantElements": [
+        "building: shape=organic, orientation=sprawling, scale=medium, style=rustic, surfaces=stone|wood, openings=arched-windows, interior_materials=tile|stone|wood, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "patchwork stone paving",
+        "spherical and palm trees",
+        "lively atmosphere with patrons"
+      ],
+      "searchDesc": "Courtyard restaurant with Andalusian charm, patrons dining amidst gardens and warm light.",
+      "slug": "the-dining-area",
+      "parentId": "1f478f08-59f1-4f31-9c38-ec9fe6198e30"
+    },
+    "niche-1767153105693-jn2fs5an7": {
+      "id": "niche-1767153105693-jn2fs5an7",
+      "type": "niche",
+      "name": "The Kitchen",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The kitchen is a symphony of practical utility and rustic charm. Sturdy, well-worn wooden worktables are center stage, bearing the marks of countless culinary endeavors. Overhead, a network of wrought iron racks suspends a gleaming array of copper pots and pans, catching the light. A prominent stone hearth, with a large cast-iron cooking range, anchors one side of the room, its warmth palpable. Open shelving lines other walls, showcasing an assortment of ceramic bowls, earthenware jars, and various kitchen tools.",
+        "colorsAndLighting": "The dominant palette consists of warm earth tones: the deep, rich browns of aged wood, the creamy beiges and ochres of stone, and the warm, burnished glow of copper. Accent colors come from the vibrant hues of hand-painted ceramic tiles, which feature intricate Mudejar patterns and occasional culinary motifs. Lighting is primarily warm and inviting, emanating from strategically placed wrought iron lanterns and the soft, ambient glow from the hearth's embers.",
+        "atmosphere": "The air is thick with the comforting aromas of cooking spices and simmering dishes. A gentle warmth radiates from the hearth, creating a cozy and inviting ambiance. The sounds are a lively chorus of clattering utensils, the sizzle of food, and the murmur of conversation among the kitchen staff.",
+        "materials": "Primary materials include aged stone for the hearth and portions of the walls, and sturdy, practical wood for worktables and shelving. Secondary materials feature prominent wrought iron for hanging racks and light fixtures, and an abundance of polished copper for cookware. Accent materials include decorative ceramic tiles with intricate Mudejar patterns.",
+        "mood": "Efficient warmth and convivial productivity. There's a sense of purposeful activity, underscored by an underlying feeling of comfort and tradition.",
+        "sounds": "clatter, sizzle, chop, murmur, hum, crackle, scrape, whisk",
+        "spatialLayout": "A functional, rectangular space designed for efficient workflow, with distinct areas for preparation, cooking, and storage.",
+        "primary_surfaces": "Aged stone, weathered wood",
+        "secondary_surfaces": "Wrought iron, polished copper",
+        "accent_features": "Hand-painted Mudejar tiles, antique copper cookware, cast-iron hearth",
+        "dominant": "Warm wood tones",
+        "secondary": "Stone",
+        "accent": "Burnished copper",
+        "ambient": "Warm golden",
+        "genre": "REQUIRED",
+        "architectural_tone": "Andalusian/Mudejar",
+        "cultural_tone": "Spanish restaurant",
+        "palette_bias": "Warm earth tones",
+        "flora_base": "Trees",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767153105693-cpn1cjuef",
+      "description": "You are inside a beautifully appointed kitchen with Andalusian/Mudejar influences. The walls are adorned with warm earth-toned tiles, and the ceiling features intricate wooden beams. Arched windows allow soft light to illuminate the space, creating a cozy and inviting atmosphere.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "A medium-sized rectangular room with a vaulted ceiling, designed for culinary activities. Warm earth tones and Andalusian/Mudejar motifs define its aesthetic.",
+        "requiredElements": [
+          "kitchen"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "hammered copper pots and pans hanging",
+          "large wood-fired oven with intricate tilework",
+          "stone workbenches",
+          "open shelving with ceramic bowls and earthenware jars",
+          "rustic wooden prep tables",
+          "tiled flooring with geometric patterns",
+          "hand-painted ceramic backsplash tiles",
+          "wrought iron hanging racks",
+          "large antique wooden chopping blocks",
+          "sacks of flour and spices",
+          "brass faucet",
+          "visible spice jars with handwritten labels",
+          "a well-worn mortar and pestle",
+          "baskets of fresh produce",
+          "wooden barrels."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door ornate wooden  rear wall"
+        },
+        {
+          "type": "window",
+          "position": "front wall",
+          "description": "window arched service"
+        },
+        {
+          "type": "window",
+          "position": "left wall",
+          "description": "window small"
+        },
+        {
+          "type": "archway",
+          "position": "right wall",
+          "description": "archway tiled   leading to pantry"
+        }
+      ],
+      "dominantElements": [
+        "kitchen: shape=rectangular, orientation=compact, scale=medium, style=Andalusian/Mudejar, surfaces=stone, openings=arched-windows, interior_materials=tile|tile|wood, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "Ornate tilework",
+        "Carved wooden beams",
+        "Wrought iron accents"
+      ],
+      "searchDesc": "Warm, rustic kitchen with Mudejar tile work and copper cookware.",
+      "slug": "the-kitchen"
+    },
+    "5d183910-2b3e-46bb-bb2e-801c57bc4dbd": {
+      "id": "5d183910-2b3e-46bb-bb2e-801c57bc4dbd",
+      "type": "region",
+      "name": "Parque de María Luisa",
+      "spaceType": "exterior",
+      "description": "A grand public park that blends horticultural splendor with architectural marvels. This expansive green space offers a serene escape within the city, filled with tranquil pathways, ornate fountains, and picturesque plazas.",
+      "dna": {
+        "looks": "An expansive, meticulously landscaped public park with a formal layout, featuring grand plazas, winding paths, and abundant greenery. The scale is generous, offering open spaces for leisure and intimate corners for quiet contemplation. Architectural elements are integrated throughout.",
+        "colorsAndLighting": "Sunlight filters through leafy canopies, creating dappled patterns on the ground. The terracotta hues of surrounding structures complement the vibrant greens of the foliage, with bursts of color from flowering plants. Fountains catch the light, adding a shimmering quality.",
+        "atmosphere": "A sense of peaceful tranquility pervades this urban oasis, a stark contrast to the city's lively bustle. The air is filled with the scent of blossoms and damp earth. Gentle breezes rustle through the trees, and the sounds of water provide a constant, soothing presence.",
+        "materials": "Smooth, cool stone for pathways and plazas, elaborately decorated ceramic tiles on benches and structures, and weathered terracotta for architectural accents. Lush, well-maintained plant life forms the dominant organic material.",
+        "mood": "Serene, elegant, and refreshing.",
+        "sounds": "Water fountains, birdsong, rustling leaves, distant city hum, footsteps on gravel",
+        "primary_surfaces": "Stone pathways, manicured lawns, tiled plazas",
+        "secondary_surfaces": "Brickwork, ornate wrought iron, wooden benches",
+        "accent_features": "Colorful ceramic tile work, sculpted hedges, grand statues, wrought-iron lanterns",
+        "dominant": "Emerald green foliage",
+        "secondary": "Terracotta structures and pathways",
+        "accent": "Vibrant ceramic tiles and flowering plants",
+        "ambient": "Bright, natural daylight with dappled shadows",
+        "genre": null,
+        "architectural_tone": "Andalusian Renaissance with Moorish influences",
+        "cultural_tone": "A public space for leisure, contemplation, and social gathering, reflecting a refined appreciation for nature and art.",
+        "palette_bias": "Greens, terracottas, blues (water and sky), vibrant ceramic colors",
+        "flora_base": "Palm trees, orange trees, manicured hedges, flowering shrubs, seasonal blooms",
+        "fauna_base": "Waterfowl in ponds, numerous bird species, squirrels"
+      },
+      "searchDesc": "Seville's grand public park, featuring the Plaza de España, ornate fountains, and lush gardens.",
+      "slug": "parque-de-maria-luisa",
+      "structure": {
+        "spatialLayout": "A sprawling, interconnected network of open plazas, formal gardens, and shaded avenues. It possesses a clear, organized structure with distinct zones, offering both expansive vistas and enclosed, intimate spaces."
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a887697/34thaZHWQUHz8dRXsRtu9.jpg",
+      "primaryMedia": "media-1767154151724-ygf8rcyx1"
+    },
+    "93fd797a-263c-4a87-bf3b-745f2b869222": {
+      "id": "93fd797a-263c-4a87-bf3b-745f2b869222",
+      "type": "location",
+      "name": "Puerta del Prado",
+      "spaceType": "exterior",
+      "description": "This grand entrance to Parque de María Luisa serves as a majestic gateway, seamlessly blending the park's natural beauty with its architectural grandeur. It's a welcoming threshold, hinting at the tranquility and splendor that lies within.",
+      "dna": {
+        "looks": "A monumental stone archway, elaborately decorated with intricate carvings and colorful ceramic tile inlays. It stands as a formal threshold, suggesting a transition from the urban environment to the park's cultivated landscape. Sculpted hedges and perhaps a small fountain flank the entrance, emphasizing its grandeur.",
+        "colorsAndLighting": "The terracotta hues of the stone are complemented by vibrant blues and greens of the ceramic tiles. Sunlight catches the polished stone and the shimmering water, creating dynamic patterns of light and shadow.",
+        "atmosphere": "A sense of dignified welcome pervades this entrance. The air is filled with the faint scent of blossoms from nearby gardens, and the distant murmur of the city is softened by the park's embrace. A gentle breeze might rustle through the adjacent foliage.",
+        "materials": "Smooth, cool stone forms the primary structure of the archway, with accents of richly colored, glazed ceramic tiles. The surrounding elements are made of well-maintained, organic plant matter and possibly weathered metal for any lighting fixtures.",
+        "mood": "Elegant, welcoming, and stately.",
+        "sounds": "Distant city hum, birdsong, gentle water trickle, footsteps on stone",
+        "primary_surfaces": "Smooth, carved stone",
+        "secondary_surfaces": "Vibrant ceramic tiles",
+        "accent_features": "Intricate carvings, water feature",
+        "dominant": "Terracotta hues",
+        "secondary": "Emerald green foliage",
+        "accent": "Ceramic blues and greens",
+        "ambient": "Bright, sun-dappled",
+        "genre": null,
+        "architectural_tone": "Andalusian Renaissance with Moorish influences",
+        "cultural_tone": "A public space for leisure, contemplation, and social gathering, reflecting a refined appreciation for nature and art.",
+        "palette_bias": "Greens, terracottas, blues, vibrant ceramic colors",
+        "flora_base": "Hedges, flowering plants",
+        "fauna_base": "None"
+      },
+      "searchDesc": "Main park entrance with an ornate archway and ceramic tile details leading into Parque de María Luisa.",
+      "slug": "puerta-del-prado",
+      "navigableElements": [
+        {
+          "type": "gate",
+          "position": "center, midground",
+          "description": "Leads into the main pathways of the park"
+        },
+        {
+          "type": "passage",
+          "position": "left, midground",
+          "description": "A secondary, more secluded path into the park's greenery"
+        },
+        {
+          "type": "passage",
+          "position": "right, midground",
+          "description": "Another access point, offering views of the park's fountains"
+        }
+      ],
+      "dominantElements": [
+        "ornate gateway: shape=archway, orientation=centered, scale=large, style=renaissance, surfaces=stone, openings=open-passages, interior_materials=\"tile|stone|tile\", internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Grand stone archway",
+        "Decorative ceramic tile inlays",
+        "Flanked by lush, sculpted hedges",
+        "Incorporates a decorative water feature"
+      ],
+      "structure": {
+        "spatialLayout": "A distinct, open archway forming a clear passage, with defined flanking elements that draw the eye inwards."
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a88769b/c7FDrtv1FsxetWP2W9W3e.jpg",
+      "primaryMedia": "media-1767154197416-q0mrennaq"
+    },
+    "location-1767154363063-14c7jkvrc": {
+      "id": "location-1767154363063-14c7jkvrc",
+      "type": "location",
+      "name": "The Park",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An expansive, meticulously landscaped public park with a formal layout, featuring grand plazas, winding paths, and abundant greenery. Architectural elements are integrated throughout, blending Andalusian Renaissance with Moorish influences.",
+        "colorsAndLighting": "Sunlight filters through leafy canopies, creating dappled patterns. Terracotta hues of structures complement vibrant greens of foliage, with bursts of color from flowering plants and shimmering water features.",
+        "atmosphere": "A sense of peaceful tranquility pervades this urban oasis. The air is filled with the scent of blossoms and damp earth. Gentle breezes rustle through trees.",
+        "materials": "Smooth, cool stone for pathways and plazas, elaborately decorated ceramic tiles on benches and structures, weathered terracotta for architectural accents. Lush, well-maintained plant life.",
+        "mood": "Serene, elegant, and refreshing, with an underlying tone of refined appreciation for nature and art.",
+        "sounds": "Gentle rustling leaves, trickling water, distant birdsong, soft murmurs of polite conversation.",
+        "spatialLayout": "Generous open spaces for leisure and intimate corners for quiet contemplation, with a formal yet winding path system.",
+        "primary_surfaces": "Stone pathways, manicured lawns, tiled plazas",
+        "secondary_surfaces": "Brickwork, ornate wrought iron, wooden benches",
+        "accent_features": "Colorful ceramic tile work, sculpted hedges, grand statues, wrought-iron lanterns",
+        "dominant": "Emerald green foliage",
+        "secondary": "Terracotta structures and pathways",
+        "accent": "Vibrant ceramic tiles and flowering plants",
+        "ambient": "Bright, natural daylight with dappled shadows",
+        "genre": null,
+        "architectural_tone": "Andalusian Renaissance with Moorish influences",
+        "cultural_tone": "A public space for leisure, contemplation, and social gathering, reflecting a refined appreciation for nature and art.",
+        "palette_bias": "Greens, terracottas, blues (water and sky), vibrant ceramic colors",
+        "flora_base": "Palm trees, orange trees, manicured hedges, flowering shrubs, seasonal blooms",
+        "fauna_base": "Waterfowl in ponds, numerous bird species, squirrels"
+      },
+      "primaryMedia": "media-1767154363061-l8q5c8fxe",
+      "description": "An exterior view of a vibrant park, featuring lush greenery and architectural elements inspired by Andalusian Renaissance with Moorish influences.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "natural",
+        "elevation": "ground-level",
+        "spatialLayout": "A sprawling natural landscape with varied terrain, offering open spaces and secluded areas.",
+        "requiredElements": [
+          "park"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "center",
+          "description": "Main path leading into the heart of the gardens"
+        },
+        {
+          "type": "archway",
+          "position": "east",
+          "description": "Ornamental archway leading to a secluded alcove"
+        },
+        {
+          "type": "bridge",
+          "position": "north",
+          "description": "Stone bridge crossing a tranquil pond"
+        }
+      ],
+      "dominantElements": [
+        "The Pavilion: shape=organic, orientation=flowing, scale=medium, style=Andalusian Renaissance with Moorish influences, surfaces=stone, openings=arched-windows, interior_materials=tile|stone|wood, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "lush greenery",
+        "fountain",
+        "ornate tilework"
+      ],
+      "searchDesc": "An elegant Andalusian Renaissance garden with Moorish touches, featuring plazas, paths, water, and vibrant ceramics.",
+      "slug": "the-gardens"
+    },
+    "location-1767154451553-ait9zqqs6": {
+      "id": "location-1767154451553-ait9zqqs6",
+      "type": "location",
+      "name": "The Lush Retreat",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An intimate, secluded alcove within the larger park, characterized by dense, lush foliage, winding, shaded paths, and a central, elegantly tiled gazebo. It feels like a secret garden discovered within the formal park.",
+        "colorsAndLighting": "Deep emerald greens of foliage dominate, with accents of terracotta from pathways and the gazebo's exterior. Sunlight filters through leaves, creating dappled patterns, and is reflected in the cool blues of a small, central fountain. Vibrant blues and ochres from ceramic tile work add bursts of color.",
+        "atmosphere": "A gentle, cool breeze carries the scent of blossoms and damp earth. The air is still and tranquil, with the soft murmur of water being the predominant sound.",
+        "materials": "Smooth, cool stone for pathways and the gazebo base, intricately patterned ceramic tiles on the gazebo roof and benches, weathered terracotta accents on planters, and abundant, verdant plant life.",
+        "mood": "Serene, elegant, refreshing, and intimate.",
+        "sounds": "Murmuring water, rustling leaves, distant birdsong.",
+        "spatialLayout": "A compact, semi-enclosed space with a central focal point (gazebo) and surrounding shaded seating areas.",
+        "primary_surfaces": "Stone pathways, manicured lawns, tiled plazas",
+        "secondary_surfaces": "Terracotta planters, weathered brickwork, wrought iron accents",
+        "accent_features": "Colorful ceramic tile mosaics, sculpted hedges, a small central fountain, and hanging floral arrangements.",
+        "dominant": "Emerald green foliage",
+        "secondary": "Terracotta structures and pathways",
+        "accent": "Vibrant ceramic tiles and flowering plants",
+        "ambient": "Soft, dappled natural daylight",
+        "genre": null,
+        "architectural_tone": "Andalusian Renaissance with Moorish influences",
+        "cultural_tone": "A public space for leisure, contemplation, and social gathering, reflecting a refined appreciation for nature and art.",
+        "palette_bias": "Greens, terracottas, blues (water and sky), vibrant ceramic colors",
+        "flora_base": "Abundant flowering shrubs, trailing vines, ornamental grasses, mature shade trees, fragrant blossoms.",
+        "fauna_base": "Numerous bird species, butterflies, small garden insects."
+      },
+      "primaryMedia": "media-1767154451552-jrcl7v8zi",
+      "description": "An exterior view of a lush, relaxing natural clearing, evoking a sense of tranquility and peace.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "flowing",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "natural",
+        "elevation": "ground-level",
+        "spatialLayout": "A serene clearing embraced by verdant foliage, with gentle pathways winding through and around natural water features.",
+        "requiredElements": [
+          "lush relaxing spot"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "center",
+          "description": "A winding stone path leading into the nook from the main park."
+        },
+        {
+          "type": "passage",
+          "position": "east",
+          "description": "A vine-covered archway leading to a quiet seating area."
+        }
+      ],
+      "dominantElements": [
+        "waterfall: shape=organic, orientation=flowing, scale=medium, style=sacred, surfaces=organic-membrane, openings=open-passages, interior_materials=stone|stone|stone, internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "abundant flowering plants",
+        "sound of running water",
+        "gentle breeze"
+      ],
+      "searchDesc": "A lush, serene garden nook with Andalusian Renaissance style, offering relaxation and contemplation.",
+      "slug": "the-garden-nook"
+    },
+    "loc-1767157066688-nnrvnjtuk": {
+      "id": "loc-1767157066688-nnrvnjtuk",
+      "type": "host",
+      "name": "The Gilded City",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Skyline silhouette, vast landscapes, sweeping vistas, fantastical architecture",
+        "colorsAndLighting": "Bathed in perpetual daylight, bright and vibrant.",
+        "atmosphere": "Vibrant and artistic.",
+        "materials": "Richly detailed, ornate elements, fantastical materials.",
+        "mood": "Joyful, elegant, splendid.",
+        "sounds": "Lively city sounds, distant music, cheerful chatter.",
+        "primary_surfaces": "Ornate stone, plaster.",
+        "secondary_surfaces": "Richly detailed facades, decorative elements.",
+        "accent_features": "Spires, finials, balconies, intricate carvings.",
+        "dominant": "Magenta Pink facade",
+        "secondary": "Cream-colored architectural details",
+        "accent": "Red and pink flowers, green topiary",
+        "ambient": "Clear blue sky",
+        "genre": "Fantasy",
+        "architectural_tone": "Whimsical Victorian",
+        "cultural_tone": "Opulent",
+        "palette_bias": "Warm and vibrant",
+        "flora_base": "Lush plant life",
+        "fauna_base": "Not specified"
+      },
+      "description": "A city of fantastical architecture and vibrant artistry, bathed in perpetual daylight. Sprawling structures reach towards the sky, adorned with opulent details and bathed in the glow of an eternal sun.",
+      "searchDesc": "Fantastical architecture bathed in perpetual daylight with vibrant artistry.",
+      "slug": "the-gilded-city",
+      "structure": {
+        "spatialLayout": "Sprawling, layered, with grand scale."
+      },
+      "primaryMedia": "media-1767157170218-efela8ffj"
+    },
+    "aa235e57-1531-4717-a7b6-a1c0a87c3b77": {
+      "id": "aa235e57-1531-4717-a7b6-a1c0a87c3b77",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "7dacc865-1991-4601-b67f-fd8a9acf7d87": {
+      "id": "7dacc865-1991-4601-b67f-fd8a9acf7d87",
+      "type": "location",
+      "name": "The Magenta Palace",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive, ornate palace with multiple stories and a sprawling layout. It features numerous spires and finials crowning its roofline, with balconies on each level. Symmetrical gardens with rounded bushes and small topiaries lead to the entrance.",
+        "colorsAndLighting": "The dominant color is a vibrant magenta pink, complemented by intricate cream-colored architectural details. The flanking buildings are a cheerful bright yellow, and a striking blue door adds a pop of contrast. The scene is bathed in bright daylight under a clear blue sky.",
+        "atmosphere": "The air is bright and cheerful, with a sense of whimsical grandeur. There is a feeling of gentle warmth from the daylight. No discernible motion or weather, suggesting a perfect, still day.",
+        "materials": "The primary materials appear to be ornate stone and plaster, richly detailed. The gardens showcase lush plant life, with meticulously trimmed hedges and abundant flowering bushes.",
+        "mood": "Enchanting and opulent. The atmosphere evokes a feeling of fairy-tale splendor and joyful elegance.",
+        "sounds": "Gentle breeze, distant birdsong, faint rustling leaves.",
+        "primary_surfaces": "Vibrant magenta pink stone facade",
+        "secondary_surfaces": "Intricate cream-colored plaster details",
+        "accent_features": "Overflowing hanging flower baskets, striking blue door",
+        "dominant": "Magenta Pink facade",
+        "secondary": "Cream architectural details",
+        "accent": "Bright Yellow flanking buildings",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Whimsical Victorian",
+        "cultural_tone": "Royal residence, opulent celebration",
+        "palette_bias": "Pinks, Reds, Yellows, Creams, Blues",
+        "flora_base": "Flowering bushes, topiary trees, hanging flowers",
+        "fauna_base": "None"
+      },
+      "description": "A grand, whimsical palace-like building bathed in bright daylight under a clear blue sky. The central, ornate structure is predominantly a vibrant magenta pink, richly adorned with intricate cream-colored architectural details including delicate columns, arched windows, decorative balustrades, and numerous spires and finials that crown its roofline. Each of its multiple stories features windows, many of which are fronted by balconies overflowing with hanging baskets of lush red and pink flowers, interspersed with potted green topiary plants. A central arched entrance, subtly lit, draws the eye towards the base of the building. Flanking this magnificent centerpiece are two equally ornate buildings, painted in a cheerful bright yellow, also featuring cream-colored decorative elements, balconies, and windows; a striking blue door is visible on the left-hand side building. A symmetrical garden leads up to the main entrance, featuring a paved pathway bordered on both sides by meticulously trimmed dark green hedges. Beyond the hedges, a vibrant array of rounded flowering bushes bloom in a gradient of colors, ranging from deep reds and bright oranges to various shades of pink and purple, creating a dazzling floral display. Small, perfectly spherical topiary trees stand at the garden's edge closer to the main building, contributing to the enchanting and well-manicured atmosphere. EXTERIOR VIEW.",
+      "searchDesc": "Grand magenta palace with cream details, yellow flanking buildings, flower-filled balconies, and a vibrant garden.",
+      "slug": "the-magenta-palace",
+      "structure": {
+        "spatialLayout": "The palace is a large, multi-story structure with a central focus. The layout is symmetrical, with flanking buildings and a garden creating depth and balance."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "central arched entrance",
+          "description": "Leads inside the main palace structure."
+        },
+        {
+          "type": "door",
+          "position": "left-hand side building",
+          "description": "A striking blue door leading into the yellow flanking building."
+        }
+      ],
+      "dominantElements": [
+        "building: shape=irregular, orientation=sprawling, scale=massive, style=victorian, surfaces=stone, openings=arched-windows, interior_materials=stone|tile|fabric, internal_atmosphere=bright",
+        "building: shape=irregular, orientation=sprawling, scale=large, style=victorian, surfaces=stone, openings=arched-windows, interior_materials=stone|tile|fabric, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "vibrant magenta pink facade",
+        "intricate cream-colored architectural details",
+        "balconies with overflowing flower baskets",
+        "symmetrical garden with rounded flowering bushes",
+        "striking blue door"
+      ],
+      "primaryMedia": "media-1767157077602-k3qnz7zyi"
+    },
+    "niche-1767157102883-6jusa410d": {
+      "id": "niche-1767157102883-6jusa410d",
+      "type": "niche",
+      "name": "The Grand Vestibule",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A building that appears to have sprung from a fairytale, with a striking magenta-pink facade. Its silhouette is a delightful mix of Victorian grandeur and fantastical, whimsical elements, featuring spires, finials, and sweeping curves. Ornate cream-colored details highlight its elaborate structure.",
+        "colorsAndLighting": "Bathed in perpetual, bright daylight, the building's magenta facade glows vibrantly. Cream-colored architectural details provide a sophisticated contrast. Accents of red and pink flowers, along with verdant green from topiaries, add further splashes of color. The overall effect is one of radiant splendor.",
+        "atmosphere": "The air is filled with a palpable sense of joy and elegance. Gentle breezes rustle through the abundant flora, carrying the faint scent of blossoms. There's a feeling of cheerful festivity and refined artistry.",
+        "materials": "Primarily ornate stone and plaster, rendered in rich, vibrant colors. Secondary surfaces feature richly detailed facades with intricate carvings and decorative elements. The exterior facade is a dominant, high-gloss plaster in a striking magenta pink.",
+        "mood": "Joyful, elegant, splendid, vibrant, celebratory, artistic.",
+        "sounds": "Laughter, gentle music, rustling leaves, birdsong, distant chimes.",
+        "spatialLayout": "A multi-tiered, symmetrical yet playfully asymmetrical structure with sweeping lines and dramatic projections, creating a sense of dynamic movement and visual interest.",
+        "primary_surfaces": "Ornate stone and plaster with a high-gloss magenta pink finish.",
+        "secondary_surfaces": "Cream-colored stucco and plaster with elaborate, sculpted cornices and trim.",
+        "accent_features": "Gilded finials, wrought-iron balconies, intricate carvings of floral motifs, and cascading arrangements of red and pink flowers.",
+        "dominant": "Magenta Pink",
+        "secondary": "Cream",
+        "accent": "Red and pink flowers, green topiary",
+        "ambient": "Clear blue sky",
+        "flora_base": "Lush plant life, abundant flowers, manicured topiaries.",
+        "fauna_base": "Not specified",
+        "genre": "Fantasy",
+        "architectural_tone": "Whimsical Victorian",
+        "cultural_tone": "Opulent",
+        "palette_bias": "Warm and vibrant"
+      },
+      "primaryMedia": "media-1767157102880-9zpb8kj3s",
+      "description": "You are inside the grand, sprawling vestibule of The Magenta Palace. The interior is bathed in bright light filtering through numerous arched windows.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "vaulted",
+        "scale": "massive",
+        "orientation": "sprawling",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "civic",
+        "elevation": "ground-level",
+        "spatialLayout": "A vast, irregular expanse of stone, the vestibule sprawls outwards, its high, vaulted ceilings supported by imposing columns. Sunlight streams through numerous arched windows, illuminating the intricate tile work of the floors and the rich fabrics draped along the walls.",
+        "requiredElements": [
+          "stone walls",
+          "tile floor",
+          "fabric ceiling",
+          "bright atmosphere"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "plush velvet settees",
+          "gilded chandeliers",
+          "antique tapestry wall hangings",
+          "marble-topped console tables laden with porcelain figurines and silver candelabras"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door grand double s"
+        },
+        {
+          "type": "archway",
+          "position": "left wall",
+          "description": "archway ornate   leading to ballroom"
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "window tall arched s lining"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object spiral staircase rear wall"
+        }
+      ],
+      "dominantElements": [
+        "Grand Staircase: shape=curving, orientation=central, scale=large, style=victorian, surfaces=stone, openings=none, interior_materials=stone|stone|stone, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "intricate mosaic floor patterns",
+        "tall, fluted marble columns",
+        "series of large, stained-glass arched windows"
+      ],
+      "searchDesc": "Whimsical Victorian building, opulent, magenta pink facade, cream trim, vibrant flowers.",
+      "slug": "null-of-the-magenta-palace"
+    },
+    "niche-1767157148477-wtyes4slf": {
+      "id": "niche-1767157148477-wtyes4slf",
+      "type": "niche",
+      "name": "Upstairs",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Sumptuous chambers with soaring ceilings, adorned with ornate plasterwork, gilded accents, and large, decorative windows. Plush furnishings and richly patterned carpets are abundant.",
+        "colorsAndLighting": "Dominated by deep reds, vibrant pinks, and cheerful yellows, with accents of cream and sky blue. Lit by numerous warm, glowing chandeliers and soft ambient light from the windows.",
+        "atmosphere": "The air is filled with a sense of joyous celebration and gentle warmth. The atmosphere is light and airy, with a faint, delightful perfume of flowers and fine wines. No discernible motion or weather.",
+        "materials": "Rich silks, velvets, polished marble, intricately carved wood, and generous amounts of gold leaf.",
+        "mood": "Enchanting, opulent, and joyfully celebratory. The mood evokes a sense of fairy-tale splendor, regal elegance, and delightful merriment.",
+        "sounds": "Distant orchestra, tinkling laughter, clinking glasses, soft murmurs of conversation, rustling of fine fabrics.",
+        "spatialLayout": "Spacious and grand, with high ceilings and interconnected rooms designed for elaborate social functions and private retreats.",
+        "primary_surfaces": "Walls draped in deep crimson and sapphire velvet.",
+        "secondary_surfaces": "Intricate cream-colored plasterwork with gilded detailing.",
+        "accent_features": "Overflowing floral arrangements, shimmering gold filigree, antique tapestries, and sparkling crystal chandeliers.",
+        "dominant": "Deep Crimson Red",
+        "secondary": "Cream with Gold Accents",
+        "accent": "Bright Yellow and Sky Blue",
+        "ambient": "Warm, soft, and inviting.",
+        "genre": "Fantasy",
+        "architectural_tone": "Whimsical Victorian",
+        "cultural_tone": "Royal residence, opulent celebration",
+        "palette_bias": "Pinks, Reds, Yellows, Creams, Blues",
+        "flora_base": "Abundant floral arrangements, potted exotic plants",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767157148475-f5qa8tcus",
+      "description": "You are on an elevated landing or within a room on the upper floor of a Whimsical Victorian building. Arched windows let in warm, vibrant light, illuminating ornate wallpaper and wooden floors. The atmosphere is cozy and inviting.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "pitched",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "residential",
+        "elevation": "elevated",
+        "spatialLayout": "This is an upper floor in a Whimsical Victorian building, likely a room or landing. The space is furnished to complement the warm and vibrant palette.",
+        "requiredElements": [
+          "stairs"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "plush velvet chaise lounge",
+          "gilded antique writing desk with quill and ink",
+          "ornate grandfather clock",
+          "a collection of porcelain dolls arranged on a small side table"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center wall",
+          "description": "door ornate mahogany"
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "window tall arched   overlooking a moonlit garden"
+        },
+        {
+          "type": "object",
+          "position": "front wall",
+          "description": "object winding staircase"
+        },
+        {
+          "type": "object",
+          "position": "left wall",
+          "description": "object velvet rope barrier"
+        }
+      ],
+      "dominantElements": [
+        "room: shape=rectangular, orientation=compact, scale=medium, style=victorian, surfaces=wood, openings=arched-windows, interior_materials=ornate-wallpaper|wood-plank|moulded-plaster, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "Victorian architectural details",
+        "warm and vibrant color scheme"
+      ],
+      "searchDesc": "Opulent upper chambers of a whimsical Victorian palace, adorned with gilded details and vibrant colors.",
+      "slug": "upper-chambers"
+    },
+    "niche-1767157221255-c8agcblsr": {
+      "id": "niche-1767157221255-c8agcblsr",
+      "type": "niche",
+      "name": "Rooftop Terrace",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A sprawling open-air terrace atop the palace, featuring intricate wrought-iron gazebos, plush seating areas, and abundant flowering plants. Delicate crystal chandeliers hang overhead, casting a warm glow.",
+        "colorsAndLighting": "Bathed in the soft glow of twilight, with the dominant magenta, cream, and yellow colors from the palace walls reflecting onto the terrace. Accents of deep blue from decorative cushions. Chandeliers emit a warm, golden light.",
+        "atmosphere": "A gentle, warm breeze carries the scent of flowers. The air is filled with a sense of joyful celebration and enchanting elegance. No discernible motion beyond the gentle sway of hanging plants.",
+        "materials": "Ornate wrought-iron, plush velvet upholstery, polished marble flooring, intricately carved wood accents, abundant living flora.",
+        "mood": "Enchanting, opulent, joyful, elegant, celebratory.",
+        "sounds": "Distant laughter, faint music, gentle breeze rustling leaves, tinkling of crystal.",
+        "spatialLayout": "An expansive, multi-level open-air space with defined seating areas, a central gazebo, and pathways winding through floral arrangements.",
+        "primary_surfaces": "Polished marble flooring, ornate wrought-iron railings.",
+        "secondary_surfaces": "Plush velvet cushions and drapes, intricately carved wooden tables.",
+        "accent_features": "Delicate crystal chandeliers, overflowing hanging flower baskets, small decorative fountains.",
+        "dominant": "Magenta Pink",
+        "secondary": "Cream",
+        "accent": "Bright Yellow",
+        "ambient": "Twilight glow with warm, sparkling chandelier light.",
+        "genre": "Fantasy",
+        "architectural_tone": "Whimsical Victorian",
+        "cultural_tone": "Royal residence, opulent celebration",
+        "palette_bias": "Pinks, Reds, Yellows, Creams, Blues",
+        "flora_base": "Abundant flowering bushes, lush topiary forms, overflowing hanging flower baskets, climbing vines.",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767157221254-ncpa2me9f",
+      "description": "An open-air rooftop terrace adorned in a whimsical Victorian style, bathed in the soft glow of pinks, reds, yellows, creams, and blues.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "elevation": "rooftop",
+        "spatialLayout": "An expansive, open-air space situated atop a grand building, offering panoramic views. Decorated with whimsical Victorian elements, it serves as a charming gathering place.",
+        "requiredElements": [
+          "roof top terrace"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "stairs",
+          "position": "center",
+          "description": "grand marble stairs leading down into the palace"
+        },
+        {
+          "type": "passage",
+          "position": "rear",
+          "description": "an ornate archway leading to another section of the palace roof"
+        }
+      ],
+      "dominantElements": [
+        "Gazebo: shape=organic, orientation=centered, scale=medium, style=victorian, surfaces=wood, openings=arched-windows, interior_materials=wood|tile|fabric, internal_atmosphere=cozy",
+        "Tea Pavilion: shape=hexagonal, orientation=compact, scale=small, style=victorian, surfaces=painted-wood, openings=large-glass, interior_materials=fabric|wood|tile, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Victorian-era wrought iron railings",
+        "Flower-laden trellises",
+        "Ornate gas lamps"
+      ],
+      "searchDesc": "Opulent rooftop terrace with Victorian charm, vibrant flowers, and sparkling chandeliers.",
+      "slug": "rooftop-terrace"
     }
   },
   "views": {},
@@ -1886,10 +2753,94 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1767152996093-g79aebj4c",
+      "type": "host",
+      "children": [
+        {
+          "id": "c0dc6d7a-7366-4c26-bdf6-b0f857f96fe5",
+          "type": "region",
+          "children": [
+            {
+              "id": "1f478f08-59f1-4f31-9c38-ec9fe6198e30",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767153014991-lcs8zbcy1",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767153105693-jn2fs5an7",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "5d183910-2b3e-46bb-bb2e-801c57bc4dbd",
+          "type": "region",
+          "children": [
+            {
+              "id": "93fd797a-263c-4a87-bf3b-745f2b869222",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "location-1767154363063-14c7jkvrc",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "location-1767154451553-ait9zqqs6",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767157066688-nnrvnjtuk",
+      "type": "host",
+      "children": [
+        {
+          "id": "aa235e57-1531-4717-a7b6-a1c0a87c3b77",
+          "type": "region",
+          "children": [
+            {
+              "id": "7dacc865-1991-4601-b67f-fd8a9acf7d87",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767157102883-6jusa410d",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767157148477-wtyes4slf",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767157221255-c8agcblsr",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1767101449144-ncoxq6b1a",
-    "loc-1767112081225-dlqhou1t1"
+    "loc-1767112081225-dlqhou1t1",
+    "loc-1767152996093-g79aebj4c",
+    "loc-1767157066688-nnrvnjtuk"
   ]
 }

@@ -1,49 +1,48 @@
 # Progress
 
+## 2025-12-31
+
+- [x] **Gemini 2.5 Flash-Lite Caching - COMPLETED (Latest)**: 90% token cost reduction
+  - **Problem**: Static prompt content sent with every API call
+  - **Solution**: Gemini Explicit Caching with static/dynamic separation
+  - **Cache Groups**:
+    - `morfeum-world-creation` (~4,500 tokens)
+    - `morfeum-character-creation` (~3,800 tokens)
+    - `morfeum-navigation` (~2,800 tokens)
+    - `morfeum-chat` (~1,100 tokens)
+  - **New Files**:
+    - `prompts/cacheContent/index.ts` - Cache bundles
+    - `services/mzoo/services/cacheService.ts` - Cache management
+    - `services/mzoo/services/cachedTextGeneration.ts` - Cached generation
+  - **Modified Files**: 
+    - 9 prompt files (static exports)
+    - `httpClient.ts` (GET, DELETE, PATCH)
+    - `mzoo/index.ts` (exports)
+    - `hierarchyAnalyzer.ts` (uses caching)
+  - **Configuration**: `MZOO_CACHE_TTL` env variable (default: 14400s)
+
 ## 2025-12-30
 
-- [x] **Creature Mode System - COMPLETED (Latest)**: `--populate` and `--people` flags for image generation
+- [x] **Creature Mode System - COMPLETED**: `--populate` and `--people` flags for image generation
   - **Problem**: Locations always generated with `NoCreatures` filter
   - **Solution**: CreatureMode enum (`none|allow|populate`) with frontend passthrough
-  - **Files modified**:
-    - `frontend/commandParser.ts` - `passthroughFlags` for unknown flags
-    - `frontend/navigationCommands.ts` - Pass flags to backend
-    - `backend/enhancementParser.ts` - Parse `--populate`/`--people`
-    - `backend/createNodePipeline.ts` - Extract and pass creatureMode
-    - `backend/nodeBuildingStep.ts` - Use creatureMode in prompt
-    - `backend/imageGeneration.ts` - Skip duplicate style application
   - **Usage**: `/GOTO market --populate` for busy scenes
 
 - [x] **UI: Help Tooltip for Spawn Input - COMPLETED**: (?) button with clickable flags
 
 - [x] **Prompt Token Optimization - COMPLETED**: Optimized 11 prompt files for ~50% token reduction
-  - **Goal**: Reduce API costs and response time for NEW_WORLD, GOTO, GO_INSIDE pipelines
-  - **Approach**: Option A+B (conservative + aggressive) - pipe-separated values, reduced examples, condensed prose
   - **Results**: 
     - NEW_WORLD: 5,500 → 2,500 tokens (55% reduction)
     - GOTO: 2,000 → 1,000 tokens (50% reduction)  
     - GO_INSIDE: 2,500 → 1,200 tokens (52% reduction)
-  - **Files optimized**:
-    - `hierarchyCategorization.ts` (52%)
-    - `compositionInstructions.ts` (60%)
-    - `elementRules.ts` (50%)
-    - `dnaSchema.ts` (50%)
-    - `deepestNodeDNA.ts` (38%)
-    - `parentChainDNA.ts` (33%)
-    - `contextPromptBuilder.ts` (42%)
-    - `destinationAnalysis.ts` (44%)
-    - `structureAnalysis.ts` (50%)
-    - `intentClassifier.ts` (33%)
-  - **Note**: Character prompts skipped (planned for later rework)
 
-- [x] **Immediate Surroundings for Nested Interiors - COMPLETED**: Added system for nested interior window views
-  - Car inside museum shows museum through windows, not street
+- [x] **Immediate Surroundings for Nested Interiors - COMPLETED**: Nested interior window views
 
-- [x] **Space Type Registry - COMPLETED**: Centralized registry for container types (buildings, vehicles, boats, tents)
+- [x] **Space Type Registry - COMPLETED**: Centralized registry for container types
 
-- [x] **Prompt Index Documentation - COMPLETED**: Comprehensive prompt reference at `PROMPT_INDEX.md`
+- [x] **Prompt Index Documentation - COMPLETED**: `PROMPT_INDEX.md`
 
-- [x] **Structured Image Prompt System - COMPLETED**: Layer-based structured prompts across both pipelines
+- [x] **Structured Image Prompt System - COMPLETED**: Layer-based structured prompts
 
 ## 2025-12-29
 
@@ -58,6 +57,7 @@
 
 ### Core Application Features
 - Contextual slash commands for navigation and node creation
+- **Gemini Explicit Caching** for 90% token cost reduction
 - **Structured image prompts** with layer-based composition
 - **Optimized prompts** (~50% token reduction for location/navigation)
 - Entity system for character and location creation
@@ -70,31 +70,32 @@
 - Strict component separation (JSX, logic, styles)
 - All files under 300-line limit
 - Zustand state management with clean slices
+- **Gemini caching** via MZOO API
 - **Optimized prompts** using pipe-separated values, condensed instructions
 - **Direct FLUX constraints** for shapes and exterior views
-- **surroundingsDNA** for window/exterior context at world boundary
-- **immediateSurroundings** for window context in nested interiors
 
-### Prompt Optimization Techniques (Dec 30)
+### Token Cost Reduction Techniques
 | Technique | Description | Savings |
 |-----------|-------------|---------|
+| **Gemini Caching** | Cache static content | **90%** on cached tokens |
 | Pipe-separated values | `a\|b\|c` instead of bullets | ~30% |
 | Reduced examples | 2 instead of 4 | ~25% |
 | Condensed prose | Shorthand instead of verbose | ~20% |
 | Shared constants | Extracted common sections | ~15% |
-| Conditional fields | Only include non-empty DNA | ~10% |
+
+### Cache Group Architecture
+| Cache Group | Content | Est. Tokens |
+|-------------|---------|-------------|
+| `morfeum-world-creation` | Hierarchy, DNA, elements | ~4,500 |
+| `morfeum-character-creation` | Profiles, seeds, vision | ~3,800 |
+| `morfeum-navigation` | Structure, intent, destination | ~2,800 |
+| `morfeum-chat` | Character impersonation | ~1,100 |
 
 ### Image Generation Architecture
 | Command | Pipeline | Image Generation Path |
 |---------|----------|----------------------|
 | `/NEW_WORLD` | `nodeCreationPipeline.ts` | → `mzoo.generateImage()` |
 | `/GOTO`, `/GO_INSIDE` | `createNodePipeline.ts` | → `nodeBuildingStep.ts` |
-
-### Window View Logic
-| Scenario | Parent Type | Windows Show |
-|----------|-------------|--------------|
-| Car in museum | niche (interior) | Museum interior |
-| Room at world edge | location (exterior) | World exterior |
 
 ## What's Left to Build 🚧
 
@@ -107,6 +108,7 @@
 - User preferences
 
 ### Technical Improvements
+- Extend caching to more pipelines
 - Performance optimization
 - Testing
 - Documentation
@@ -123,6 +125,7 @@
 - All files under size limits
 - 100% TypeScript coverage, no any types
 - All builds passing
+- **Gemini caching** for 90% token savings
 - **Optimized prompts** for location/navigation pipelines
 - **Structured image prompts** for both pipelines
 - **Immediate surroundings** for nested interiors
@@ -140,5 +143,6 @@
 - Zustand slices with clear boundaries
 - Centralized icons and design tokens
 - TypeScript compilation success
+- **Gemini caching** for expensive prompts
 - **Optimized prompts** using compact formats
 - **Structured prompts** for all image generation

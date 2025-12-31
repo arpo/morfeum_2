@@ -37,6 +37,44 @@ const PERSPECTIVE_RULES = `PERSPECTIVE:
 - EXTERIOR: open outdoor (park, plaza, garden, street) → roofType=open-sky, no ceiling
 - OPEN-AIR: semi-enclosed, open sky (balcony, terrace, rooftop) → roofType=open-sky`;
 
+/**
+ * Static content for caching (~1,200 tokens)
+ * Contains scale hints, elevation rules, perspective rules, and output templates
+ */
+export const STRUCTURE_ANALYSIS_STATIC = `Analyze space structure.
+
+${SCALE_HINTS}
+${ELEVATION_RULES}
+
+${PERSPECTIVE_RULES}
+
+${NAVIGABLE_ELEMENTS_RULES}
+
+${DOMINANT_ELEMENTS_RULES}
+
+OUTPUT TEMPLATE (pure JSON):
+{
+  "name": "Space Name",
+  "perspective": "interior|exterior|open-air",
+  "containerType": "building|vehicle-car|vehicle-boat|natural|tent-like",
+  "structure": {
+    "form": "rectangular|round|cylindrical|spherical|organic|arched|gothic|irregular",
+    "roofType": "domed|flat|vaulted|pitched|arched|open-sky|null",
+    "scale": "small|medium|large",
+    "orientation": "vertical|horizontal|wide|cubic",
+    "openings": "large-glass|arched-windows|narrow-slits|open-passages|minimal|none",
+    "openingShape": "rectangular|circular|arched|mixed|irregular",
+    "functionalType": "residential|commercial|religious|industrial|civic|entertainment",
+    "elevation": "ground-level|rooftop|elevated|underground|floating|suspended",
+    "spatialLayout": "1-2 sentence description",
+    "requiredElements": ["user-specified elements"],
+    "navigableElements": [${NAVIGABLE_ELEMENTS_EXAMPLE}],
+    "dominantElements": [${DOMINANT_ELEMENTS_EXAMPLE}],
+    "uniqueIdentifiers": ["2-4 distinctive features"]
+  },
+  "description": "Brief description matching perspective"
+}`;
+
 export function structureAnalysisPrompt(input: StructureAnalysisInput): string {
   const { userPrompt, context, perspective, isGotoCommand } = input;
 

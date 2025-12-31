@@ -4,18 +4,13 @@
  * Combines seed data and visual analysis into a complete character profile
  */
 
-export const characterDeepProfilePrompt = (seedJson: string, visionJson: string, originalPrompt: string) => `You are generating a complete, nuanced character profile for Morfeum — a world where realism and imagination coexist.
+/**
+ * Static content for caching (~2,500 tokens)
+ * Contains all field definitions, guidelines, and rules
+ */
+export const CHARACTER_DEEP_PROFILE_STATIC = `You are generating a complete, nuanced character profile for Morfeum — a world where realism and imagination coexist.
 
-Original user request:
-${originalPrompt}
-
-Combine the following data:
-Seed data:
-${seedJson}
-Visual analysis:
-${visionJson}
-
-Your goal is to merge and expand this information into a coherent, vivid, and believable character.
+Your goal is to merge and expand the provided seed data and visual analysis into a coherent, vivid, and believable character.
 
 IMPORTANT: Return ONLY a valid JSON object with these exact fields:
 {
@@ -140,3 +135,27 @@ Rules & Best Practices:
 - No illegal content.  
 - Do not describe minors or anyone under 18 in a sexual context.  
 - Keep output coherent, sensory, and emotionally believable.`;
+
+/**
+ * Dynamic function - builds the user input section with seed and vision data
+ */
+export function characterDeepProfileDynamic(
+  seedJson: string,
+  visionJson: string,
+  originalPrompt: string
+): string {
+  return `Original user request:
+${originalPrompt}
+
+Combine the following data:
+Seed data:
+${seedJson}
+Visual analysis:
+${visionJson}`;
+}
+
+/**
+ * Legacy function - combines static + dynamic for non-cached usage
+ */
+export const characterDeepProfilePrompt = (seedJson: string, visionJson: string, originalPrompt: string) => 
+  `${CHARACTER_DEEP_PROFILE_STATIC}\n\n${characterDeepProfileDynamic(seedJson, visionJson, originalPrompt)}`;

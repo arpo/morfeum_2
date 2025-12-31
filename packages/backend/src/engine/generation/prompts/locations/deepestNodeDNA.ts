@@ -8,6 +8,24 @@ import {
 } from '../shared/elementRules';
 
 /**
+ * Static content for caching (~700 tokens)
+ * Contains type hints and output guidelines
+ */
+export const DEEPEST_NODE_DNA_STATIC = `Generate DNA for world node.
+
+TYPE HINTS:
+- HOST: Skyline, geography, vast landscapes. MUST set genre.
+- REGION: District architecture, street character. No genre.
+- LOCATION: Building facade, entrance, signage. No genre.
+- NICHE: Interior space, room details. No genre.
+
+${NAVIGABLE_ELEMENTS_RULES}
+
+${DOMINANT_ELEMENTS_RULES}
+
+Be SPECIFIC (not "nice" but "weathered brass with verdigris"). architectural_tone is CRITICAL. Pure JSON only.`;
+
+/**
  * Deepest Node DNA Generation - Optimized for speed
  * Generates DNA for the deepest node (used for image generation)
  */

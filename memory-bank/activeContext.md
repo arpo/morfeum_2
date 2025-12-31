@@ -1,118 +1,90 @@
 # Active Context
 
+## 2025-12-31
+
+### Gemini 2.5 Flash-Lite Caching Implementation - COMPLETED (Latest)
+
+Implemented Gemini Explicit Caching for 90% token cost reduction on static prompt content.
+
+#### Problem
+Static prompt content (rules, schemas, templates) was being sent with every API call, consuming tokens unnecessarily.
+
+#### Solution
+1. **Static/Dynamic Prompt Separation**: Refactored 9 prompt files to export static content separately from dynamic functions
+2. **Cache Content Bundles**: Created 4 cache groups bundling related static content:
+   - `morfeum-world-creation` (~4,500 tokens) - hierarchy, DNA, elements
+   - `morfeum-character-creation` (~3,800 tokens) - profiles, seeds, vision
+   - `morfeum-navigation` (~2,800 tokens) - structure, intent, destination
+   - `morfeum-chat` (~1,100 tokens) - character impersonation
+3. **Cache Service**: Manages cache lifecycle with automatic creation, expiry tracking, fallback
+4. **Cached Text Generation**: New API with thinking mode support and automatic fallback
+
+#### Files Created
+- `packages/backend/src/engine/generation/prompts/cacheContent/index.ts` - Cache bundles
+- `packages/backend/src/services/mzoo/services/cacheService.ts` - Cache management
+- `packages/backend/src/services/mzoo/services/cachedTextGeneration.ts` - Cached generation
+
+#### Files Modified
+- `packages/backend/src/services/mzoo/client/httpClient.ts` - Added GET, DELETE, PATCH methods
+- `packages/backend/src/services/mzoo/index.ts` - Added cache service exports
+- `packages/backend/src/engine/hierarchyAnalysis/hierarchyAnalyzer.ts` - Uses cached generation
+- Prompt files (9 total) - Added static exports:
+  - `locations/hierarchyCategorization.ts`
+  - `characters/characterDeepProfile.ts`
+  - `characters/characterSeed.ts`
+  - `navigation/structureAnalysis.ts`
+  - `navigation/intentClassifier.ts`
+  - `navigation/destinationAnalysis.ts`
+  - `locations/deepestNodeDNA.ts`
+  - `chat/chatCharacterImpersonation.ts`
+  - `shared/visionDescription.ts`
+
+#### Usage
+```typescript
+import { generateCachedText, generateCachedTextWithThinking } from '../services/mzoo';
+
+// Basic cached generation
+const result = await generateCachedText(apiKey, 'morfeum-world-creation', dynamicPrompt);
+
+// With thinking mode
+const result = await generateCachedTextWithThinking(apiKey, 'morfeum-character-creation', dynamicPrompt, 2048);
+```
+
+#### Configuration
+- TTL configurable via `MZOO_CACHE_TTL` env variable (default: 14400s = 4 hours)
+- Automatic fallback to non-cached generation on errors
+
 ## 2025-12-30
 
-### Creature Mode System - COMPLETED (Latest)
+### Creature Mode System - COMPLETED
 
 Implemented `--populate` and `--people` flags for image generation to control whether locations show people/creatures.
 
-#### Problem
-Location images were always generated with `NoCreatures` filter, preventing populated scene generation even when user wanted to show people/activity.
-
-#### Solution
-1. **CreatureMode enum**: `'none' | 'allow' | 'populate'`
-   - `none`: Default - adds `[FILTER: NoLivingSubjects]` (no people)
-   - `allow`: Allows people but doesn't actively add them
-   - `populate`: Adds `[POPULATE:]` directive for busy scenes with ambient figures
-
-2. **Frontend flag passthrough**: Updated `commandParser.ts` to collect unrecognized `--` flags and pass them to backend
-
-3. **Backend parsing**: `enhancementParser.ts` parses `--populate` and `--people` flags
-
-4. **Duplicate style fix**: `imageGeneration.ts` now skips `applyMorfeumStyle` if style already applied (prevents conflicting `[POPULATE:]` + `[NoCreatures]`)
-
-#### Files Modified
-- `frontend/commandParser.ts` - Added `passthroughFlags` to collect unknown flags
-- `frontend/navigationCommands.ts` - Added passthrough flags to backend request
-- `backend/navigation/utils/enhancementParser.ts` - Parse `--populate`/`--people` flags
-- `backend/navigation/pipelines/createNodePipeline.ts` - Extract and pass creatureMode
-- `backend/navigation/pipelines/helpers/nodeBuildingStep.ts` - Use creatureMode in prompt
-- `backend/generation/shared/imageGeneration.ts` - Skip duplicate style application
-
-#### Usage
-```
-/GOTO market --populate   # Generates busy scene with ambient figures
-/GO_INSIDE cafe --people  # Same as --populate
-/GOTO park                # Default: no people (NoCreatures filter)
-```
-
-### UI: Help Tooltip for Spawn Input - COMPLETED
-
-Added (?) button with interactive tooltip showing available command flags.
-
-- Tooltip with all available flags and descriptions
-- Clickable flags insert directly into input field
-- Left-aligned text with proper styling
-
 ### Prompt Token Optimization - COMPLETED
 
-Optimized 11 prompt files for location/navigation pipelines (NEW_WORLD, GOTO, GO_INSIDE) to reduce token usage by ~50% while maintaining output quality.
+Optimized 11 prompt files for ~50% token reduction on location/navigation pipelines.
 
-#### Problem
-Prompts were verbose with redundant examples, bullet lists, and repetitive instructions consuming unnecessary tokens.
-
-#### Solution
-Applied aggressive optimization techniques:
-1. **Pipe-separated values** instead of bullet lists
-2. **Reduced examples** from 4 to 2 per prompt
-3. **Condensed prose** to structured shorthand
-4. **Removed redundant sections** (negative examples, repeated rules)
-5. **Shared constants** extracted to avoid duplication
-6. **Conditional field inclusion** (only include DNA fields with values)
-
-#### Files Optimized
-
-| File | Reduction |
-|------|-----------|
-| `hierarchyCategorization.ts` | 52% |
-| `compositionInstructions.ts` | 60% |
-| `elementRules.ts` | 50% |
-| `dnaSchema.ts` | 50% |
-| `deepestNodeDNA.ts` | 38% |
-| `parentChainDNA.ts` | 33% |
-| `contextPromptBuilder.ts` | 42% |
-| `destinationAnalysis.ts` | 44% |
-| `structureAnalysis.ts` | 50% |
-| `intentClassifier.ts` | 33% |
-
-#### Estimated Per-Call Savings
-
-| Pipeline | Before | After | Savings |
-|----------|--------|-------|---------|
-| NEW_WORLD | ~5,500 tokens | ~2,500 tokens | **55%** |
-| GOTO | ~2,000 tokens | ~1,000 tokens | **50%** |
-| GO_INSIDE | ~2,500 tokens | ~1,200 tokens | **52%** |
-
-#### Notes
-- Character prompts NOT optimized (planned for later rework)
-- Uses Gemini 2.5 Flash Lite (no prompt caching)
-- Changes on temporary branch for easy revert if quality issues
-
-### Previous: Immediate Surroundings for Nested Interiors - COMPLETED
-
-Implemented system to correctly show immediate surroundings through windows for nested interior spaces (e.g., car inside museum shows museum through windows, not street).
-
-### Previous: Space Type Registry - COMPLETED
-
-Centralized registry for handling different container types (buildings, vehicles, boats, tents) with specialized rules per type.
+### Previous Work
+- Immediate surroundings for nested interiors
+- Space Type Registry
+- Structured image prompt system
 
 ## Current Focus
 
+- ✅ **COMPLETED**: Gemini Explicit Caching (90% token cost reduction)
 - ✅ **COMPLETED**: Prompt token optimization (50% reduction)
 - ✅ **COMPLETED**: Immediate surroundings for nested interiors
 - ✅ **COMPLETED**: Space Type Registry for vehicle/boat/tent interiors
-- ✅ **COMPLETED**: Structured image prompt system (both pipelines)
 
-## Files Modified (Dec 30 - Prompt Optimization)
+## Files Modified (Dec 31 - Caching)
 
-**Modified Files (prompts/):**
-- `locations/hierarchyCategorization.ts`
-- `locations/worldTree/compositionInstructions.ts`
-- `locations/worldTree/contextPromptBuilder.ts`
-- `locations/deepestNodeDNA.ts`
-- `locations/parentChainDNA.ts`
-- `shared/elementRules.ts`
-- `shared/dnaSchema.ts`
-- `navigation/structureAnalysis.ts`
-- `navigation/destinationAnalysis.ts`
-- `navigation/intentClassifier.ts`
+**New Files:**
+- `prompts/cacheContent/index.ts`
+- `services/mzoo/services/cacheService.ts`
+- `services/mzoo/services/cachedTextGeneration.ts`
+
+**Modified Files:**
+- `services/mzoo/client/httpClient.ts`
+- `services/mzoo/index.ts`
+- `hierarchyAnalysis/hierarchyAnalyzer.ts`
+- 9 prompt files (static exports added)

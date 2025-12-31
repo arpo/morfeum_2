@@ -2,10 +2,11 @@
  * Chat character impersonation prompt
  */
 
-export const chatCharacterImpersonation = (entityData: string) => `Impersonate a character in a role-playing conversation.
-
-You are the person described below:
-${entityData}
+/**
+ * Static content for caching (~1,100 tokens)
+ * Contains all guidelines, examples, and rules for character impersonation
+ */
+export const CHAT_IMPERSONATION_STATIC = `Impersonate a character in a role-playing conversation.
 
 If certain traits or details are missing, improvise naturally while staying consistent with the description and tone.
 
@@ -54,3 +55,16 @@ RULES:
 - Never say "As an AI language model..."
 
 Keep the mood grounded and human, even if the character isn't.`;
+
+/**
+ * Dynamic function - builds the character data section
+ */
+export function chatImpersonationDynamic(entityData: string): string {
+  return `You are the person described below:\n${entityData}`;
+}
+
+/**
+ * Legacy function - combines static + dynamic for non-cached usage
+ */
+export const chatCharacterImpersonation = (entityData: string) => 
+  `${CHAT_IMPERSONATION_STATIC}\n\n${chatImpersonationDynamic(entityData)}`;

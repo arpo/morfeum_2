@@ -511,6 +511,312 @@
         "model": "FLUX"
       },
       "entityRefs": []
+    },
+    "media-1767152172174-0e9868kkp": {
+      "id": "media-1767152172174-0e9868kkp",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8875d1/iLwnT6lcEBStscX3gTc07.jpg",
+      "createdAt": "2025-12-31T03:36:12.174Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nThe Art District district/region. A redeveloped urban area known for its creative spaces and lively atmosphere. This district pulses with artistic energy, evident in its vibrant street art and eclectic mix of historic and contemporary architecture.\n\nEstablishing shot. Wide shot showing district character, street-level context. Elevated angle showing neighborhood layout.\n\nVisual Character:\nDistrict architecture, street patterns, neighborhood character, vibrant murals, repurposed industrial buildings, galleries, studios\n\nAtmosphere:\nEnergetic, creative, bohemian, social, bustling\n\nColors:\nDominant: Historic industrial architecture, Secondary: Modern artistic additions\nLight: Urban bustle, creative energy\n\nArchitectural Style: Historic Industrial meets Bohemian Modern\nMaterials: Brick, concrete, steel, glass, reclaimed wood, graffiti\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "d635e34b-2107-421a-985a-945e90d1aba8"
+      ]
+    },
+    "media-1767153014990-rpnugaup7": {
+      "id": "media-1767153014990-rpnugaup7",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a887625/on1HmtJ0wnz3hAiODFq8P.jpg",
+      "createdAt": "2025-12-31T03:50:14.990Z",
+      "metadata": {
+        "prompt": "Background: An open sky of twilight hues, hinting at a warm sunset, with soft, diffused ambient light. Meticulously trimmed spherical trees and taller palm trees with dense green foliage are subtly visible against the open sky, creating a vibrant garden atmosphere at the edges of the courtyard.\n\nMidground: The lively interior of a courtyard restaurant, viewed from an exterior perspective. Patrons are seated at small, rustic wooden and wicker tables adorned with crisp white tablecloths. Each table is illuminated by a glowing candle, casting a warm, intimate light. Various dishes and drinks are artfully arranged on the tables, suggesting a convivial dining experience. The ground is a captivating patchwork of aged stone paving, artfully reflecting the warm glow of artificial lighting.\n\nForeground: The closest tables and patrons, with a clear view of the details of white tablecloths, the flickering flames of candles, and the textures of wooden and wicker table bases. A passage leading into the courtyard is implied, suggesting the exterior of the restaurant, and a subtle hint of a door through a wall could suggest access to service areas.\n\nLighting: Warm golden light emanates from the glowing candles and strategically placed artificial lighting fixtures, casting soft shadows and highlighting the textures of the stone paving and wooden tables. The light creates a balmy and inviting atmosphere, with highlights catching the foliage of the trees and the details of the dishes.\n\nAtmosphere: Elegant festivity and serene warmth pervade the scene, creating a sense of convivial merriment and peaceful ambiance. The overall mood is inviting and luxurious, with a touch of Spanish-inspired charm. The style is reminiscent of a rustic Andalusian courtyard, infused with the lively energy of a bustling restaurant.\n\n[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]\n[CRITICAL SHAPE: The \"building\" has ORGANIC shape - it MUST appear with CURVED/ROUNDED form, NOT rectangular walls or sharp corners. Show organic, flowing curves appropriate for a organic structure.]\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.",
+        "promptStructure": {
+          "background": "An open sky of twilight hues, hinting at a warm sunset, with soft, diffused ambient light. Meticulously trimmed spherical trees and taller palm trees with dense green foliage are subtly visible against the open sky, creating a vibrant garden atmosphere at the edges of the courtyard.",
+          "midground": "The lively interior of a courtyard restaurant, viewed from an exterior perspective. Patrons are seated at small, rustic wooden and wicker tables adorned with crisp white tablecloths. Each table is illuminated by a glowing candle, casting a warm, intimate light. Various dishes and drinks are artfully arranged on the tables, suggesting a convivial dining experience. The ground is a captivating patchwork of aged stone paving, artfully reflecting the warm glow of artificial lighting.",
+          "foreground": "The closest tables and patrons, with a clear view of the details of white tablecloths, the flickering flames of candles, and the textures of wooden and wicker table bases. A passage leading into the courtyard is implied, suggesting the exterior of the restaurant, and a subtle hint of a door through a wall could suggest access to service areas.",
+          "lighting": "Warm golden light emanates from the glowing candles and strategically placed artificial lighting fixtures, casting soft shadows and highlighting the textures of the stone paving and wooden tables. The light creates a balmy and inviting atmosphere, with highlights catching the foliage of the trees and the details of the dishes.",
+          "atmosphere": "Elegant festivity and serene warmth pervade the scene, creating a sense of convivial merriment and peaceful ambiance. The overall mood is inviting and luxurious, with a touch of Spanish-inspired charm. The style is reminiscent of a rustic Andalusian courtyard, infused with the lively energy of a bustling restaurant.",
+          "constraints": [
+            "[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]",
+            "[CRITICAL SHAPE: The \"building\" has ORGANIC shape - it MUST appear with CURVED/ROUNDED form, NOT rectangular walls or sharp corners. Show organic, flowing curves appropriate for a organic structure.]"
+          ],
+          "negatives": []
+        },
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1767153044413-b6h1nvwvh": {
+      "id": "media-1767153044413-b6h1nvwvh",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a887628/cZXmfU-BqC_d8-IiG4NuT.jpg",
+      "createdAt": "2025-12-31T03:50:44.413Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nOld Town district/region. The historic heart of Seville, characterized by its labyrinthine streets, ancient buildings, and lively courtyards. Immerse yourself in the rich history and authentic charm of this vibrant district.\n\nEstablishing shot. Wide shot showing district character, street-level context. Elevated angle showing neighborhood layout.\n\nVisual Character:\nDistrict architecture, street patterns, neighborhood character\n\nAtmosphere:\nLively, historic, charming\n\nColors:\nDominant: Andalusian architecture, Secondary: Mudejar influences\nLight: Warm glow\n\nArchitectural Style: Andalusian, Mudejar\nMaterials: Aged stone, terracotta tiles\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "c0dc6d7a-7366-4c26-bdf6-b0f857f96fe5"
+      ]
+    },
+    "media-1767153055628-uhjqdx9ml": {
+      "id": "media-1767153055628-uhjqdx9ml",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a887629/J4BN-izUjeSvGWAHv-D0U.jpg",
+      "createdAt": "2025-12-31T03:50:55.628Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nSeville, Spain. A vibrant city in Andalusia, known for its rich history, stunning architecture, and lively atmosphere. Experience the passionate culture and breathtaking beauty of southern Spain.\n\nCinematic establishing shot. Ultra-wide, epic scale, panoramic view. High aerial angle or dramatic low angle looking up.\n\nVisual Character:\nSkyline silhouette, geographic features, vast landscapes\n\nAtmosphere:\nVibrant, historic, passionate\n\nColors and Lighting:\nDominant: Iconic landmarks, Secondary: Ornate architecture, Accent: Intricate details\nLight: Warm evening light, Deep blue sky, golden artificial light, terracotta hues\n\nGenre/Style: REQUIRED\nArchitectural Style: REQUIRED\n\nProfessional photography, highly detailed, cinematic composition, sharp focus on key landmarks, atmospheric depth.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "loc-1767152996093-g79aebj4c"
+      ]
+    },
+    "media-1767153067416-qe6cy7krs": {
+      "id": "media-1767153067416-qe6cy7krs",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a88762a/nhq4bptOA2w0Q6OkbOLvg.jpg",
+      "createdAt": "2025-12-31T03:51:07.416Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nCourtyard Restaurant. An enchanting outdoor restaurant set within a meticulously trimmed courtyard, illuminated by hanging lanterns and accent lighting. EXTERIOR VIEW.\n\nArchitectural photography. Building exterior in focus, surrounding context visible. Ground level, straight-on or slight angle to show depth.\n\nBuilding/Site Exterior:\nThe exterior presents a charming Andalusian or Mudejar architectural style. Intricately decorated arches and columns frame the entrance and windows, topped by a warm terracotta-tiled roof. The building surfaces are a blend of aged stone and warm wood.\n\nKey Structures: building\n\nVisible Entry Points/Openings:\n- passage at center: Leads into the restaurant's dining area.\n\nMaterials and Surfaces:\nPrimary: Aged stone, terracotta tiles\nSecondary: Warm wood, wrought iron\nAccents: Intricate tile work, decorative columns, hanging lanterns\n\nColors:\nDominant: Terracotta, Secondary: Stone, Accent: Golden light\nLight: Warm golden\n\nAtmosphere: The air feels balmy and inviting, hinting at the convivial atmosphere within. The gentle evening breeze rustles the dense foliage of surrounding trees.\nMood: Elegant festivity and serene warmth pervade the scene, promising a delightful dining experience.\n\nArchitectural photography, building exterior in context, all entry points and openings clearly visible, detailed facade showing doors/gates/passages.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "1f478f08-59f1-4f31-9c38-ec9fe6198e30"
+      ]
+    },
+    "media-1767153105693-cpn1cjuef": {
+      "id": "media-1767153105693-cpn1cjuef",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a88762e/dp8O0o8WwZZi6D_749tqL.jpg",
+      "createdAt": "2025-12-31T03:51:45.693Z",
+      "metadata": {
+        "prompt": "Background: The rear wall features an ornate wooden door with intricate carvings, set within a stone archway. To the right, a tiled archway, adorned with vibrant geometric Mudejar patterns, leads into a dimly lit pantry. Open shelving lines portions of the walls, displaying an assortment of hand-painted ceramic bowls and earthenware jars.\n\nMidground: The heart of the kitchen is defined by a prominent stone hearth with a large cast-iron cooking range, radiating a palpable warmth. Sturdy, well-worn wooden worktables and large antique wooden chopping blocks occupy the central space. A network of wrought iron hanging racks suspends an array of gleaming hammered copper pots and pans overhead. Sacks of flour and spices are neatly stacked, and baskets overflow with fresh produce.\n\nForeground: A rustic wooden prep table is laden with a well-worn mortar and pestle, a brass faucet, and visible spice jars with handwritten labels. Tiled flooring with geometric Mudejar patterns stretches across the floor. Hand-painted ceramic backsplash tiles with intricate Mudejar patterns adorn the walls behind the work areas.\n\nLighting: Warm, ambient light emanates from strategically placed wrought iron lanterns and the soft glow from the hearth's embers, casting a warm golden hue that catches the polished copper and wooden surfaces. Light gently illuminates the foreground details, gradually softening towards the rear wall and the pantry entrance, creating a cozy and inviting atmosphere.\n\nAtmosphere: An atmosphere of efficient warmth and convivial productivity, infused with the comforting aromas of cooking spices and simmering dishes. The mood is one of purposeful activity underscored by tradition. The visual style is deeply rooted in Andalusian/Mudejar architecture and the vibrant, cultural tones of a Spanish restaurant, with a dominant palette of warm earth tones and accentuating burnished copper.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.",
+        "promptStructure": {
+          "background": "The rear wall features an ornate wooden door with intricate carvings, set within a stone archway. To the right, a tiled archway, adorned with vibrant geometric Mudejar patterns, leads into a dimly lit pantry. Open shelving lines portions of the walls, displaying an assortment of hand-painted ceramic bowls and earthenware jars.",
+          "midground": "The heart of the kitchen is defined by a prominent stone hearth with a large cast-iron cooking range, radiating a palpable warmth. Sturdy, well-worn wooden worktables and large antique wooden chopping blocks occupy the central space. A network of wrought iron hanging racks suspends an array of gleaming hammered copper pots and pans overhead. Sacks of flour and spices are neatly stacked, and baskets overflow with fresh produce.",
+          "foreground": "A rustic wooden prep table is laden with a well-worn mortar and pestle, a brass faucet, and visible spice jars with handwritten labels. Tiled flooring with geometric Mudejar patterns stretches across the floor. Hand-painted ceramic backsplash tiles with intricate Mudejar patterns adorn the walls behind the work areas.",
+          "lighting": "Warm, ambient light emanates from strategically placed wrought iron lanterns and the soft glow from the hearth's embers, casting a warm golden hue that catches the polished copper and wooden surfaces. Light gently illuminates the foreground details, gradually softening towards the rear wall and the pantry entrance, creating a cozy and inviting atmosphere.",
+          "atmosphere": "An atmosphere of efficient warmth and convivial productivity, infused with the comforting aromas of cooking spices and simmering dishes. The mood is one of purposeful activity underscored by tradition. The visual style is deeply rooted in Andalusian/Mudejar architecture and the vibrant, cultural tones of a Spanish restaurant, with a dominant palette of warm earth tones and accentuating burnished copper.",
+          "constraints": [],
+          "negatives": []
+        },
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1767154151724-ygf8rcyx1": {
+      "id": "media-1767154151724-ygf8rcyx1",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a887697/34thaZHWQUHz8dRXsRtu9.jpg",
+      "createdAt": "2025-12-31T04:09:11.724Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nParque de María Luisa district/region. A grand public park that blends horticultural splendor with architectural marvels. This expansive green space offers a serene escape within the city, filled with tranquil pathways, ornate fountains, and picturesque plazas.\n\nEstablishing shot. Wide shot showing district character, street-level context. Elevated angle showing neighborhood layout.\n\nVisual Character:\nAn expansive, meticulously landscaped public park with a formal layout, featuring grand plazas, winding paths, and abundant greenery. The scale is generous, offering open spaces for leisure and intimate corners for quiet contemplation. Architectural elements are integrated throughout.\n\nAtmosphere:\nA sense of peaceful tranquility pervades this urban oasis, a stark contrast to the city's lively bustle. The air is filled with the scent of blossoms and damp earth. Gentle breezes rustle through the trees, and the sounds of water provide a constant, soothing presence.\n\nColors:\nDominant: Emerald green foliage, Secondary: Terracotta structures and pathways\nLight: Bright, natural daylight with dappled shadows\n\nArchitectural Style: Andalusian Renaissance with Moorish influences\nMaterials: Smooth, cool stone for pathways and plazas, elaborately decorated ceramic tiles on benches and structures, and weathered terracotta for architectural accents. Lush, well-maintained plant life forms the dominant organic material.\n\nProfessional photography, detailed urban/landscape scene, atmospheric perspective, sense of scale.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "5d183910-2b3e-46bb-bb2e-801c57bc4dbd"
+      ]
+    },
+    "media-1767154197416-q0mrennaq": {
+      "id": "media-1767154197416-q0mrennaq",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a88769b/c7FDrtv1FsxetWP2W9W3e.jpg",
+      "createdAt": "2025-12-31T04:09:57.416Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nPuerta del Prado. This grand entrance to Parque de María Luisa serves as a majestic gateway, seamlessly blending the park's natural beauty with its architectural grandeur. It's a welcoming threshold, hinting at the tranquility and splendor that lies within.\n\nArchitectural photography. Building exterior in focus, surrounding context visible. Ground level, straight-on or slight angle to show depth.\n\nBuilding/Site Exterior:\nA monumental stone archway, elaborately decorated with intricate carvings and colorful ceramic tile inlays. It stands as a formal threshold, suggesting a transition from the urban environment to the park's cultivated landscape. Sculpted hedges and perhaps a small fountain flank the entrance, emphasizing its grandeur.\n\nKey Structures: ornate gateway\n\nVisible Entry Points/Openings:\n- gate at center, midground: Leads into the main pathways of the park\n- passage at left, midground: A secondary, more secluded path into the park's greenery\n- passage at right, midground: Another access point, offering views of the park's fountains\n\nMaterials and Surfaces:\nPrimary: Smooth, carved stone\nSecondary: Vibrant ceramic tiles\nAccents: Intricate carvings, water feature\n\nColors:\nDominant: Terracotta hues, Secondary: Emerald green foliage, Accent: Ceramic blues and greens\nLight: Bright, sun-dappled\n\nAtmosphere: A sense of dignified welcome pervades this entrance. The air is filled with the faint scent of blossoms from nearby gardens, and the distant murmur of the city is softened by the park's embrace. A gentle breeze might rustle through the adjacent foliage.\nMood: Elegant, welcoming, and stately.\n\nArchitectural photography, building exterior in context, all entry points and openings clearly visible, detailed facade showing doors/gates/passages.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "93fd797a-263c-4a87-bf3b-745f2b869222"
+      ]
+    },
+    "media-1767154363061-l8q5c8fxe": {
+      "id": "media-1767154363061-l8q5c8fxe",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8876ac/CIErBBvP8jJiL2_w2jPzS.jpg",
+      "createdAt": "2025-12-31T04:12:43.061Z",
+      "metadata": {
+        "prompt": "Background: A vast, clear azure sky with a few wispy, white clouds, suggesting bright daylight. Beyond the park's edge, hints of distant, sun-drenched Andalusian architecture can be subtly perceived, blending into the horizon.\n\nMidground: The heart of 'The Park,' a sprawling expanse of meticulously manicured emerald green lawns punctuated by winding, cool stone pathways. In the center, a medium-scale, organically shaped pavilion with gracefully curved lines, showcasing Andalusian Renaissance architecture with prominent Moorish influences. Its surfaces are crafted from smooth, weathered stone, adorned with intricate, vibrant ceramic tilework in blues, greens, and ochre. A majestic, ornate fountain at the pavilion's base actively cascades shimmering water, reflecting the sunlight. Lush, dense foliage and flowering plants with bursts of color surround the pavilion, creating a sense of serene elegance.\n\nForeground: The closest view reveals the textured detail of the cool stone pathway, leading the eye into the scene. A weathered terracotta accent, perhaps a decorative urn or a low-lying planter overflowing with colorful blooms, sits near the edge. A portion of an ornate wrought-iron bench or lantern can be seen, hinting at the park's refined design.\n\nLighting: Bright, natural daylight illuminates the scene. Sunlight filters through the leafy canopies, casting dappled shadows on the pathways and lawns. The light highlights the vibrant colors of the ceramic tiles and the cascading water of the fountain, while the greens of the foliage appear rich and deep. The background is bathed in a slightly softer, more diffused light.\n\nAtmosphere: A mood of peaceful tranquility and elegant refinement pervades the scene. The air feels fresh, filled with the subtle scent of blossoms and damp earth, enhanced by a gentle breeze rustling through the trees. The overall impression is an urban oasis, a serene and refreshing public space that seamlessly blends art, nature, and architectural beauty, reflecting a deep appreciation for culture and leisure.\n\n[NATURAL ENVIRONMENT - No man-made structures unless specified]\n[OPEN-SKY - Natural sky visible (may be filtered through tree canopy)]\n[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]\n[CRITICAL SHAPE: The \"The Pavilion\" has ORGANIC shape - it MUST appear with CURVED/ROUNDED form, NOT rectangular walls or sharp corners. Show organic, flowing curves appropriate for a organic structure.]\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.",
+        "promptStructure": {
+          "background": "A vast, clear azure sky with a few wispy, white clouds, suggesting bright daylight. Beyond the park's edge, hints of distant, sun-drenched Andalusian architecture can be subtly perceived, blending into the horizon.",
+          "midground": "The heart of 'The Park,' a sprawling expanse of meticulously manicured emerald green lawns punctuated by winding, cool stone pathways. In the center, a medium-scale, organically shaped pavilion with gracefully curved lines, showcasing Andalusian Renaissance architecture with prominent Moorish influences. Its surfaces are crafted from smooth, weathered stone, adorned with intricate, vibrant ceramic tilework in blues, greens, and ochre. A majestic, ornate fountain at the pavilion's base actively cascades shimmering water, reflecting the sunlight. Lush, dense foliage and flowering plants with bursts of color surround the pavilion, creating a sense of serene elegance.",
+          "foreground": "The closest view reveals the textured detail of the cool stone pathway, leading the eye into the scene. A weathered terracotta accent, perhaps a decorative urn or a low-lying planter overflowing with colorful blooms, sits near the edge. A portion of an ornate wrought-iron bench or lantern can be seen, hinting at the park's refined design.",
+          "lighting": "Bright, natural daylight illuminates the scene. Sunlight filters through the leafy canopies, casting dappled shadows on the pathways and lawns. The light highlights the vibrant colors of the ceramic tiles and the cascading water of the fountain, while the greens of the foliage appear rich and deep. The background is bathed in a slightly softer, more diffused light.",
+          "atmosphere": "A mood of peaceful tranquility and elegant refinement pervades the scene. The air feels fresh, filled with the subtle scent of blossoms and damp earth, enhanced by a gentle breeze rustling through the trees. The overall impression is an urban oasis, a serene and refreshing public space that seamlessly blends art, nature, and architectural beauty, reflecting a deep appreciation for culture and leisure.",
+          "constraints": [
+            "[NATURAL ENVIRONMENT - No man-made structures unless specified]",
+            "[OPEN-SKY - Natural sky visible (may be filtered through tree canopy)]",
+            "[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]",
+            "[CRITICAL SHAPE: The \"The Pavilion\" has ORGANIC shape - it MUST appear with CURVED/ROUNDED form, NOT rectangular walls or sharp corners. Show organic, flowing curves appropriate for a organic structure.]"
+          ],
+          "negatives": []
+        },
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1767154451552-jrcl7v8zi": {
+      "id": "media-1767154451552-jrcl7v8zi",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8876b4/q0AOX-lpHkqMOmcB6YV3E.jpg",
+      "createdAt": "2025-12-31T04:14:11.552Z",
+      "metadata": {
+        "prompt": "Background: A soft, hazy azure sky with scattered, wispy clouds, suggesting late afternoon.  Distant, blurred greenery of the larger park can be glimpsed through the dense foliage, hinting at the Andalusian Renaissance and Moorish-influenced architectural style of the region.\n\nMidground: The heart of 'The Lush Retreat', a serene clearing. A medium-scale, organically shaped waterfall cascades with a sacred, flowing style over organic membrane-like surfaces into a tranquil pool. Lush, abundant flowering plants spill over weathered terracotta planters and frame the scene. Winding, shaded pathways of smooth, cool stone lead towards and around the water feature and a small, central fountain. Accents of vibrant blues and ochres from intricately patterned ceramic tiles adorn subtle structures within the clearing.\n\nForeground: The closest elements reveal the intimate, secluded nature of the spot. Smooth, cool stone pathways curve gently, leading the eye into the scene. The texture of well-maintained, manicured lawns is visible. Weathered terracotta planters overflowing with vibrant flowers and sculpted hedges add detail and color. Hanging floral arrangements contribute to the sense of abundant life. The sound of running water is palpable.\n\nLighting: Soft, dappled natural daylight filters through the dense emerald green foliage, creating an ethereal, glowing effect. Sunlight highlights the vibrant colors of the ceramic tiles and flowers in the foreground and midground, while casting gentle shadows that enhance the sense of depth and tranquility. The light reflects softly off the water's surface.\n\nAtmosphere: Serene, elegant, refreshing, and intimate. The air is still and tranquil, carrying the gentle scent of blossoms and damp earth, with a soft murmur of running water as the predominant sound. A gentle, cool breeze is subtly implied. The overall mood is one of peaceful contemplation and secluded beauty, characteristic of a secret garden within a formal park. The visual style blends natural lushness with the refined artistry of Andalusian Renaissance and Moorish influences.\n\n[NATURAL ENVIRONMENT - No man-made structures unless specified]\n[OPEN-SKY - Natural sky visible (may be filtered through tree canopy)]\n[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]\n[CRITICAL SHAPE: The \"waterfall\" has ORGANIC shape - it MUST appear with CURVED/ROUNDED form, NOT rectangular walls or sharp corners. Show organic, flowing curves appropriate for a organic structure.]\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.",
+        "promptStructure": {
+          "background": "A soft, hazy azure sky with scattered, wispy clouds, suggesting late afternoon.  Distant, blurred greenery of the larger park can be glimpsed through the dense foliage, hinting at the Andalusian Renaissance and Moorish-influenced architectural style of the region.",
+          "midground": "The heart of 'The Lush Retreat', a serene clearing. A medium-scale, organically shaped waterfall cascades with a sacred, flowing style over organic membrane-like surfaces into a tranquil pool. Lush, abundant flowering plants spill over weathered terracotta planters and frame the scene. Winding, shaded pathways of smooth, cool stone lead towards and around the water feature and a small, central fountain. Accents of vibrant blues and ochres from intricately patterned ceramic tiles adorn subtle structures within the clearing.",
+          "foreground": "The closest elements reveal the intimate, secluded nature of the spot. Smooth, cool stone pathways curve gently, leading the eye into the scene. The texture of well-maintained, manicured lawns is visible. Weathered terracotta planters overflowing with vibrant flowers and sculpted hedges add detail and color. Hanging floral arrangements contribute to the sense of abundant life. The sound of running water is palpable.",
+          "lighting": "Soft, dappled natural daylight filters through the dense emerald green foliage, creating an ethereal, glowing effect. Sunlight highlights the vibrant colors of the ceramic tiles and flowers in the foreground and midground, while casting gentle shadows that enhance the sense of depth and tranquility. The light reflects softly off the water's surface.",
+          "atmosphere": "Serene, elegant, refreshing, and intimate. The air is still and tranquil, carrying the gentle scent of blossoms and damp earth, with a soft murmur of running water as the predominant sound. A gentle, cool breeze is subtly implied. The overall mood is one of peaceful contemplation and secluded beauty, characteristic of a secret garden within a formal park. The visual style blends natural lushness with the refined artistry of Andalusian Renaissance and Moorish influences.",
+          "constraints": [
+            "[NATURAL ENVIRONMENT - No man-made structures unless specified]",
+            "[OPEN-SKY - Natural sky visible (may be filtered through tree canopy)]",
+            "[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]",
+            "[CRITICAL SHAPE: The \"waterfall\" has ORGANIC shape - it MUST appear with CURVED/ROUNDED form, NOT rectangular walls or sharp corners. Show organic, flowing curves appropriate for a organic structure.]"
+          ],
+          "negatives": []
+        },
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1767157077602-k3qnz7zyi": {
+      "id": "media-1767157077602-k3qnz7zyi",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8877bb/ky7JTYz3iDAisuMSMUYV3.jpg",
+      "createdAt": "2025-12-31T04:57:57.602Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nBackground: A vast, clear, bright azure sky stretches above, devoid of clouds. In the distance, hints of other fantastical structures of the Gilded City, rendered in soft yellows and creams, peek over rolling, manicured hills.\n\nMidground: The 'Magenta Palace' stands as the magnificent centerpiece, a grand, whimsical structure of multiple stories rendered in a vibrant magenta pink stone. Its facade is adorned with incredibly intricate cream-colored plaster details, forming delicate columns, grand arched windows, and decorative balustrades that line each level. Numerous spires and finials crown its roofline, glinting in the bright daylight. Balconies on each story overflow with lush hanging baskets of deep red and vibrant pink flowers, interspersed with perfectly shaped potted green topiary trees. To the left, a cheerful bright yellow building with matching cream details and balconies features a striking, inviting blue door. To the right, an equally ornate bright yellow building mirrors its counterpart, also embellished with cream architectural flourishes, balconies, and windows. The central arched entrance to the magenta palace is subtly lit, drawing the eye.\n\nForeground: A meticulously paved pathway, bordered on both sides by precisely trimmed, dark green hedges, leads towards the palace. Beyond the hedges, the garden bursts with color, featuring a dazzling array of rounded flowering bushes blooming in a gradient from deep reds and bright oranges to various shades of pink and purple. Closer to the palace, small, perfectly spherical dark green topiary trees stand like sentinels at the garden's edge, contributing to the enchanting, well-manicured atmosphere. The ground is a classic, clean cobblestone, reflecting the ambient light.\n\nLighting: Bright, direct daylight bathes the entire scene, creating sharp contrasts and highlighting the vibrant colors. The light is even and warm, characteristic of perpetual daylight, with no harsh shadows. The subtly lit central entrance adds a touch of mystery and depth.\n\nAtmosphere: Enchanting, opulent, and radiantly cheerful. The air feels crisp and still, infused with the scent of blooming flowers. There's a sense of fairy-tale splendor and joyful elegance, a perfect, tranquil day in the Gilded City. Gentle breeze, distant birdsong, faint rustling leaves are faintly perceptible.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "promptStructure": {
+          "background": "A vast, clear, bright azure sky stretches above, devoid of clouds. In the distance, hints of other fantastical structures of the Gilded City, rendered in soft yellows and creams, peek over rolling, manicured hills.",
+          "midground": "The 'Magenta Palace' stands as the magnificent centerpiece, a grand, whimsical structure of multiple stories rendered in a vibrant magenta pink stone. Its facade is adorned with incredibly intricate cream-colored plaster details, forming delicate columns, grand arched windows, and decorative balustrades that line each level. Numerous spires and finials crown its roofline, glinting in the bright daylight. Balconies on each story overflow with lush hanging baskets of deep red and vibrant pink flowers, interspersed with perfectly shaped potted green topiary trees. To the left, a cheerful bright yellow building with matching cream details and balconies features a striking, inviting blue door. To the right, an equally ornate bright yellow building mirrors its counterpart, also embellished with cream architectural flourishes, balconies, and windows. The central arched entrance to the magenta palace is subtly lit, drawing the eye.",
+          "foreground": "A meticulously paved pathway, bordered on both sides by precisely trimmed, dark green hedges, leads towards the palace. Beyond the hedges, the garden bursts with color, featuring a dazzling array of rounded flowering bushes blooming in a gradient from deep reds and bright oranges to various shades of pink and purple. Closer to the palace, small, perfectly spherical dark green topiary trees stand like sentinels at the garden's edge, contributing to the enchanting, well-manicured atmosphere. The ground is a classic, clean cobblestone, reflecting the ambient light.",
+          "lighting": "Bright, direct daylight bathes the entire scene, creating sharp contrasts and highlighting the vibrant colors. The light is even and warm, characteristic of perpetual daylight, with no harsh shadows. The subtly lit central entrance adds a touch of mystery and depth.",
+          "atmosphere": "Enchanting, opulent, and radiantly cheerful. The air feels crisp and still, infused with the scent of blooming flowers. There's a sense of fairy-tale splendor and joyful elegance, a perfect, tranquil day in the Gilded City. Gentle breeze, distant birdsong, faint rustling leaves are faintly perceptible.",
+          "constraints": [],
+          "negatives": []
+        },
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "7dacc865-1991-4601-b67f-fd8a9acf7d87"
+      ]
+    },
+    "media-1767157102880-9zpb8kj3s": {
+      "id": "media-1767157102880-9zpb8kj3s",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8877be/qw5jgidfnz-172feO7-cB.jpg",
+      "createdAt": "2025-12-31T04:58:22.880Z",
+      "metadata": {
+        "prompt": "Background: The rear wall of the Grand Vestibule features a majestic, curving Victorian-style spiral staircase crafted from polished stone. Beyond this, glimpses of opulent, warmly lit rooms with ornate detailing are visible through an arched doorway leading to a ballroom. Tall, fluted marble columns recede into the distance, supporting the vaulted ceiling.\n\nMidground: The heart of the Grand Vestibule, characterized by a vast, irregular expanse of intricately tiled mosaic flooring in warm, vibrant colors. Towering, fluted marble columns rise upwards, disappearing into the high, vaulted ceiling. Numerous large, stained-glass arched windows line the right wall, casting colorful, bright daylight into the space. An ornate archway on the left wall beckons towards a ballroom. A grand double door marks the front wall.\n\nForeground: Close-up details of the intricate mosaic tile floor patterns, rich with warm jewel tones. Plush velvet settees in deep ruby and emerald hues are arranged elegantly. Gilded chandeliers sparkle overhead. Antique tapestry wall hangings depicting scenes of refined artistry adorn the visible sections of the stone walls. Marble-topped console tables are laden with delicate porcelain figurines and gleaming silver candelabras.\n\nLighting: Bright, perpetual daylight streams in through the large, stained-glass arched windows, illuminating the entire vestibule with a vibrant glow. The light casts colorful patterns across the tile floor and highlights the opulence of the furnishings and architectural details. The gilded chandeliers provide a warm, ambient shimmer. The spiral staircase in the background is softly lit, emphasizing its curving form.\n\nAtmosphere: A palpable sense of joyful festivity, refined elegance, and cheerful splendor permeates the air. The space feels open, grand, and artistically inspired, with a whimsical Victorian architectural tone and an opulent cultural tone. The atmosphere is bright, radiant, and celebratory, with a warm and vibrant color palette bias.\n\n[EXTERIOR VIEWS: Any windows, doors, or openings showing the OUTSIDE should display: Fantasy environment with Whimsical Victorian. Colors visible outside: Warm and vibrant. The exterior view should be CONSISTENT with the world's established aesthetic and genre.]\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.",
+        "promptStructure": {
+          "background": "The rear wall of the Grand Vestibule features a majestic, curving Victorian-style spiral staircase crafted from polished stone. Beyond this, glimpses of opulent, warmly lit rooms with ornate detailing are visible through an arched doorway leading to a ballroom. Tall, fluted marble columns recede into the distance, supporting the vaulted ceiling.",
+          "midground": "The heart of the Grand Vestibule, characterized by a vast, irregular expanse of intricately tiled mosaic flooring in warm, vibrant colors. Towering, fluted marble columns rise upwards, disappearing into the high, vaulted ceiling. Numerous large, stained-glass arched windows line the right wall, casting colorful, bright daylight into the space. An ornate archway on the left wall beckons towards a ballroom. A grand double door marks the front wall.",
+          "foreground": "Close-up details of the intricate mosaic tile floor patterns, rich with warm jewel tones. Plush velvet settees in deep ruby and emerald hues are arranged elegantly. Gilded chandeliers sparkle overhead. Antique tapestry wall hangings depicting scenes of refined artistry adorn the visible sections of the stone walls. Marble-topped console tables are laden with delicate porcelain figurines and gleaming silver candelabras.",
+          "lighting": "Bright, perpetual daylight streams in through the large, stained-glass arched windows, illuminating the entire vestibule with a vibrant glow. The light casts colorful patterns across the tile floor and highlights the opulence of the furnishings and architectural details. The gilded chandeliers provide a warm, ambient shimmer. The spiral staircase in the background is softly lit, emphasizing its curving form.",
+          "atmosphere": "A palpable sense of joyful festivity, refined elegance, and cheerful splendor permeates the air. The space feels open, grand, and artistically inspired, with a whimsical Victorian architectural tone and an opulent cultural tone. The atmosphere is bright, radiant, and celebratory, with a warm and vibrant color palette bias.",
+          "constraints": [
+            "[EXTERIOR VIEWS: Any windows, doors, or openings showing the OUTSIDE should display: Fantasy environment with Whimsical Victorian. Colors visible outside: Warm and vibrant. The exterior view should be CONSISTENT with the world's established aesthetic and genre.]"
+          ],
+          "negatives": []
+        },
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1767157148475-f5qa8tcus": {
+      "id": "media-1767157148475-f5qa8tcus",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8877c2/DXsZXdRC7ABhqfrBfKOd5.jpg",
+      "createdAt": "2025-12-31T04:59:08.475Z",
+      "metadata": {
+        "prompt": "Background: The distant view from a tall, Whimsical Victorian building, looking down upon a sprawling, moonlit garden with meticulously trimmed hedges and abundant flowering bushes, hinting at the 'Magenta Palace' grounds. The foundation and base of the structure are not visible, emphasizing the extreme elevation.\n\nMidground: An opulent, rectangular upstairs room or landing within the 'Magenta Palace', designed in a Whimsical Victorian style. Soaring ceilings are adorned with ornate cream-colored plasterwork and gilded accents. Walls are draped in deep crimson and sapphire velvet. A door with ornate mahogany at the center wall. A tall arched window on the right wall offers a view of the moonlit garden.  A winding staircase is a prominent object at the front wall, leading further up.\n\nForeground: A plush velvet chaise lounge is positioned to invite relaxation. To the left, a velvet rope barrier subtly delineates space. On a small side table sits a collection of porcelain dolls. A gilded antique writing desk with a quill and inkwell rests near the chaise. An ornate grandfather clock stands sentinel.\n\nLighting: Warm, soft, and inviting ambient light emanates from numerous sparkling crystal chandeliers and soft light spilling from the arched window. The light gently illuminates the velvet drapes and gilded accents, casting a warm glow on the foreground furnishings while allowing the distant garden view to maintain its moonlit character.\n\nAtmosphere: Enchanting, opulent, and joyfully celebratory. The air is filled with a sense of joyous celebration and gentle warmth, with a faint, delightful perfume of flowers and fine wines. The mood evokes fairy-tale splendor, regal elegance, and delightful merriment. Whimsical Victorian architectural tone, Royal residence cultural tone.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.",
+        "promptStructure": {
+          "background": "The distant view from a tall, Whimsical Victorian building, looking down upon a sprawling, moonlit garden with meticulously trimmed hedges and abundant flowering bushes, hinting at the 'Magenta Palace' grounds. The foundation and base of the structure are not visible, emphasizing the extreme elevation.",
+          "midground": "An opulent, rectangular upstairs room or landing within the 'Magenta Palace', designed in a Whimsical Victorian style. Soaring ceilings are adorned with ornate cream-colored plasterwork and gilded accents. Walls are draped in deep crimson and sapphire velvet. A door with ornate mahogany at the center wall. A tall arched window on the right wall offers a view of the moonlit garden.  A winding staircase is a prominent object at the front wall, leading further up.",
+          "foreground": "A plush velvet chaise lounge is positioned to invite relaxation. To the left, a velvet rope barrier subtly delineates space. On a small side table sits a collection of porcelain dolls. A gilded antique writing desk with a quill and inkwell rests near the chaise. An ornate grandfather clock stands sentinel.",
+          "lighting": "Warm, soft, and inviting ambient light emanates from numerous sparkling crystal chandeliers and soft light spilling from the arched window. The light gently illuminates the velvet drapes and gilded accents, casting a warm glow on the foreground furnishings while allowing the distant garden view to maintain its moonlit character.",
+          "atmosphere": "Enchanting, opulent, and joyfully celebratory. The air is filled with a sense of joyous celebration and gentle warmth, with a faint, delightful perfume of flowers and fine wines. The mood evokes fairy-tale splendor, regal elegance, and delightful merriment. Whimsical Victorian architectural tone, Royal residence cultural tone.",
+          "constraints": [],
+          "negatives": []
+        },
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1767157170218-efela8ffj": {
+      "id": "media-1767157170218-efela8ffj",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8877c4/aiOWu6t0g8vPi0u-B0I0F.jpg",
+      "createdAt": "2025-12-31T04:59:30.218Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nThe Gilded City. A city of fantastical architecture and vibrant artistry, bathed in perpetual daylight. Sprawling structures reach towards the sky, adorned with opulent details and bathed in the glow of an eternal sun.\n\nCinematic establishing shot. Ultra-wide, epic scale, panoramic view. High aerial angle or dramatic low angle looking up.\n\nVisual Character:\nSkyline silhouette, vast landscapes, sweeping vistas, fantastical architecture\n\nAtmosphere:\nVibrant and artistic.\n\nColors and Lighting:\nDominant: Magenta Pink facade, Secondary: Cream-colored architectural details, Accent: Red and pink flowers, green topiary\nLight: Clear blue sky, Bathed in perpetual daylight, bright and vibrant.\n\nGenre/Style: Fantasy\nArchitectural Style: Whimsical Victorian\n\nProfessional photography, highly detailed, cinematic composition, sharp focus on key landmarks, atmospheric depth.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "loc-1767157066688-nnrvnjtuk"
+      ]
+    },
+    "media-1767157221254-ncpa2me9f": {
+      "id": "media-1767157221254-ncpa2me9f",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8877c9/Fyi92wsxYf4pv-7xezcfw.jpg",
+      "createdAt": "2025-12-31T05:00:21.254Z",
+      "metadata": {
+        "prompt": "Background: A vast twilight sky, transitioning from deep blues to warm magenta hues. Wisps of soft clouds are subtly illuminated by the fading light. Below, the distant cityscape of The Magenta Palace, rendered in a whimsical Victorian architectural style, recedes into a soft, hazy glow, hinting at its grand scale.\n\nMidground: An expansive, multi-level open-air rooftop terrace of the Magenta Palace. An ornate, organic-shaped Victorian gazebo with intricate wood detailing stands prominently, serving as a focal point. A hexagonal Victorian tea pavilion, painted wood, is nestled nearby. Elegant, flower-laden trellises climb the palace walls, with abundant flowering bushes and meticulously trimmed hedges. Victorian-era wrought iron railings with floral motifs line the edges of the terrace, overlooking the city below. Small decorative fountains add gentle movement and sound. Delicate crystal chandeliers are suspended overhead, casting a warm, golden light.\n\nForeground: Plush velvet seating areas in deep blue hues are arranged invitingly. Intricately carved wooden tables are placed strategically. Polished marble flooring reflects the ambient light. Overflowing hanging flower baskets with vibrant blooms add bursts of color. The closest wrought iron railings show fine details, and the texture of the velvet upholstery is palpable.\n\nLighting: Soft twilight glow illuminates the entire scene. Warm, sparkling chandelier light casts a golden hue across the midground and foreground, highlighting textures and details, especially on the polished marble flooring and ornate ironwork. The distant background elements are bathed in cooler, softer light as they fade into shadow.\n\nAtmosphere: Enchanting, opulent, joyful, elegant, and celebratory. A gentle, warm breeze is suggested by the subtle sway of hanging plants. The air is filled with the scent of flowers. The overall mood is one of whimsical Victorian grandeur and royal residence splendor. The style is a highly detailed, photorealistic rendering with a romantic and luxurious feel.\n\n[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]\n[CRITICAL SHAPE: The \"Gazebo\" has ORGANIC shape - it MUST appear with CURVED/ROUNDED form, NOT rectangular walls or sharp corners. Show organic, flowing curves appropriate for a organic structure.]\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.",
+        "promptStructure": {
+          "background": "A vast twilight sky, transitioning from deep blues to warm magenta hues. Wisps of soft clouds are subtly illuminated by the fading light. Below, the distant cityscape of The Magenta Palace, rendered in a whimsical Victorian architectural style, recedes into a soft, hazy glow, hinting at its grand scale.",
+          "midground": "An expansive, multi-level open-air rooftop terrace of the Magenta Palace. An ornate, organic-shaped Victorian gazebo with intricate wood detailing stands prominently, serving as a focal point. A hexagonal Victorian tea pavilion, painted wood, is nestled nearby. Elegant, flower-laden trellises climb the palace walls, with abundant flowering bushes and meticulously trimmed hedges. Victorian-era wrought iron railings with floral motifs line the edges of the terrace, overlooking the city below. Small decorative fountains add gentle movement and sound. Delicate crystal chandeliers are suspended overhead, casting a warm, golden light.",
+          "foreground": "Plush velvet seating areas in deep blue hues are arranged invitingly. Intricately carved wooden tables are placed strategically. Polished marble flooring reflects the ambient light. Overflowing hanging flower baskets with vibrant blooms add bursts of color. The closest wrought iron railings show fine details, and the texture of the velvet upholstery is palpable.",
+          "lighting": "Soft twilight glow illuminates the entire scene. Warm, sparkling chandelier light casts a golden hue across the midground and foreground, highlighting textures and details, especially on the polished marble flooring and ornate ironwork. The distant background elements are bathed in cooler, softer light as they fade into shadow.",
+          "atmosphere": "Enchanting, opulent, joyful, elegant, and celebratory. A gentle, warm breeze is suggested by the subtle sway of hanging plants. The air is filled with the scent of flowers. The overall mood is one of whimsical Victorian grandeur and royal residence splendor. The style is a highly detailed, photorealistic rendering with a romantic and luxurious feel.",
+          "constraints": [
+            "[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]",
+            "[CRITICAL SHAPE: The \"Gazebo\" has ORGANIC shape - it MUST appear with CURVED/ROUNDED form, NOT rectangular walls or sharp corners. Show organic, flowing curves appropriate for a organic structure.]"
+          ],
+          "negatives": []
+        },
+        "model": "FLUX"
+      },
+      "entityRefs": []
+    },
+    "media-1767157266658-mh3fd455d": {
+      "id": "media-1767157266658-mh3fd455d",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a8877ce/s9HeMrUEiAYZd5mDJKExF_9934f88fb9b4494f8021862683eefcb4.png",
+      "createdAt": "2025-12-31T05:01:06.658Z",
+      "metadata": {
+        "parentMedia": "media-1767157221254-ncpa2me9f",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "niche-1767157221255-c8agcblsr"
+      ],
+      "parentMedia": "media-1767157221254-ncpa2me9f"
     }
   }
 }

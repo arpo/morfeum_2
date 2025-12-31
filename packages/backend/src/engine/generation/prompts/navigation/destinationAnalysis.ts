@@ -6,6 +6,35 @@
 import type { NavigationContext, ScenePerspective } from '../../../navigation/types';
 import { mergeDNA } from '../../../hierarchyAnalysis/dnaMerge';
 
+/**
+ * Static content for caching (~600 tokens)
+ * Contains task definition, rules, and output template
+ */
+export const DESTINATION_ANALYSIS_STATIC = `Analyze destination within location.
+
+TASK: Determine:
+1. Name: Concise space name ("The Kitchen", "Wine Cellar")
+2. Perspective: INTERIOR (enclosed, roof) | EXTERIOR (open outdoor) | OPEN-AIR (semi-enclosed, open sky)
+3. SpaceType: room|outdoor|hallway|cellar|attic|balcony|garden|courtyard
+4. IsEnclosed: true (walls+ceiling) | false
+5. AtmosphereHint: Brief atmosphere blending request with parent style
+6. SynthesizedDescription: Rich description combining user request + inherited DNA
+
+RULES:
+- New space must BELONG to parent (same style, era, materials)
+- Honor user's specific requests, blend with inherited DNA
+- Kitchen in Victorian mansion = Victorian; in medieval castle = medieval
+
+OUTPUT (pure JSON):
+{
+  "name": "space name",
+  "perspective": "interior|exterior|open-air",
+  "spaceType": "type",
+  "isEnclosed": boolean,
+  "atmosphereHint": "brief description",
+  "synthesizedDescription": "rich description"
+}`;
+
 interface DestinationAnalysisInput {
   userPrompt: string;
   context: NavigationContext;
