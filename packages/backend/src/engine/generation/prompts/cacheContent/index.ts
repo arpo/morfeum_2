@@ -24,13 +24,21 @@ import { getContainerTypeDescriptions } from '../../shared/spaceTypeRegistry';
 
 import { DEEPEST_NODE_DNA_STATIC } from '../locations/deepestNodeDNA';
 import { CHAT_IMPERSONATION_STATIC } from '../chat/chatCharacterImpersonation';
+import { PARSE_HIERARCHY_STATIC } from '../../../nodeCreation/detection/parsePromptToHierarchy';
 
 /**
- * Cache Group 1: World Creation (~4,500 tokens)
- * Used for: NEW_WORLD command, hierarchy categorization, DNA generation
+ * Cache Group 1: World Creation (~6,500 tokens)
+ * Used for: NEW_WORLD command, hierarchy parsing, DNA generation
+ * Note: This is a LARGE cache bundle - the parseHierarchy prompt alone is ~3,000 tokens
  */
 export const CACHE_WORLD_CREATION = `
 === MORFEUM WORLD CREATION SYSTEM ===
+
+=== PARSE PROMPT TO HIERARCHY ===
+
+${PARSE_HIERARCHY_STATIC}
+
+=== HIERARCHY CATEGORIZATION (LEGACY) ===
 
 ${HIERARCHY_CATEGORIZATION_STATIC}
 

@@ -38,15 +38,24 @@ export async function ensureCache(
   apiKey: string,
   groupId: CacheGroupId
 ): Promise<string> {
+  console.log(`[CacheService] ensureCache called for group: ${groupId}`);
+  
   // Check in-memory store first
   const cached = cacheIdStore.get(groupId);
   if (cached && cached.expiresAt > new Date()) {
+    console.log(`[CacheService] ✅ IN-MEMORY HIT for ${groupId}, cacheId: ${cached.cacheId}`);
     return cached.cacheId;
+  }
+  
+  if (cached) {
+    console.log(`[CacheService] In-memory cache expired for ${groupId}`);
   }
 
   // Check if cache exists on server
+  console.log(`[CacheService] Checking server for existing cache: ${groupId}`);
   const existing = await findCacheByDisplayName(apiKey, groupId);
   if (existing) {
+    console.log(`[CacheService] ✅ SERVER HIT for ${groupId}, cacheId: ${existing.cacheId}`);
     cacheIdStore.set(groupId, {
       cacheId: existing.cacheId,
       expiresAt: new Date(existing.expiresAt)
@@ -55,7 +64,10 @@ export async function ensureCache(
   }
 
   // Create new cache
+  console.log(`[CacheService] Creating NEW cache for ${groupId}...`);
   const content = CACHE_GROUPS[groupId];
+  console.log(`[CacheService] Static content size: ${content.length} chars (~${Math.ceil(content.length / 4)} tokens)`);
+  
   const response = await mzooPost<any, any>(
     `${CACHE_ENDPOINT}/cache`,
     apiKey,
@@ -67,7 +79,10 @@ export async function ensureCache(
     }
   );
 
+  console.log(`[CacheService] Create cache response:`, JSON.stringify(response, null, 2));
+
   if (response.data?.cacheId) {
+    console.log(`[CacheService] ✅ CACHE CREATED for ${groupId}, cacheId: ${response.data.cacheId}`);
     cacheIdStore.set(groupId, {
       cacheId: response.data.cacheId,
       expiresAt: new Date(response.data.expiresAt)
@@ -75,6 +90,7 @@ export async function ensureCache(
     return response.data.cacheId;
   }
 
+  console.error(`[CacheService] ❌ FAILED to create cache for ${groupId}:`, response.error);
   throw new Error(`Failed to create cache for ${groupId}: ${response.error || 'Unknown error'}`);
 }
 
@@ -89,12 +105,22 @@ async function findCacheByDisplayName(
   displayName: string
 ): Promise<CacheInfo | null> {
   try {
+    console.log(`[CacheService] Fetching cache list from MZOO...`);
     const response = await mzooGet<{ caches: CacheInfo[] }>(
       `${CACHE_ENDPOINT}/caches`,
       apiKey
     );
-    return response.data?.caches?.find(c => c.displayName === displayName) || null;
-  } catch {
+    console.log(`[CacheService] List caches response:`, JSON.stringify(response, null, 2));
+    
+    const found = response.data?.caches?.find(c => c.displayName === displayName) || null;
+    if (found) {
+      console.log(`[CacheService] Found cache on server: ${displayName}`);
+    } else {
+      console.log(`[CacheService] Cache not found on server: ${displayName}`);
+    }
+    return found;
+  } catch (error) {
+    console.error(`[CacheService] ❌ Error listing caches:`, error);
     return null;
   }
 }

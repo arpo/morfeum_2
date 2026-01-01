@@ -49,11 +49,17 @@ export async function generateCachedText(
   dynamicPrompt: string,
   thinkingConfig?: ThinkingConfig
 ): Promise<CachedTextResponse> {
+  console.log(`[CachedTextGen] Starting cached generation for group: ${cacheGroup}`);
+  console.log(`[CachedTextGen] Dynamic prompt length: ${dynamicPrompt.length} chars`);
+  
   try {
     // Ensure cache exists
+    console.log(`[CachedTextGen] Ensuring cache exists...`);
     const cacheId = await ensureCache(apiKey, cacheGroup);
+    console.log(`[CachedTextGen] Got cacheId: ${cacheId}`);
 
     // Make cached generation request
+    console.log(`[CachedTextGen] Calling MZOO cached-text endpoint...`);
     const response = await mzooPost<any, CachedTextResponse>(
       `${CACHE_ENDPOINT}/cached-text`,
       apiKey,
@@ -65,23 +71,35 @@ export async function generateCachedText(
       }
     );
 
+    console.log(`[CachedTextGen] Response received:`, JSON.stringify({
+      hasData: !!response.data,
+      hasError: !!response.error,
+      error: response.error,
+      cacheHit: response.data?.cacheHit,
+      usage: response.data?.usage
+    }, null, 2));
+
     if (response.error) {
+      console.error(`[CachedTextGen] ❌ API returned error: ${response.error}`);
       // If cache-related error, fall back to non-cached generation
       if (response.error.includes('CACHE_NOT_FOUND') || 
           response.error.includes('CACHE_EXPIRED')) {
+        console.log(`[CachedTextGen] Cache-related error, falling back...`);
         return fallbackToNonCached(apiKey, cacheGroup, dynamicPrompt);
       }
       throw new Error(response.error);
     }
 
     if (!response.data) {
+      console.error(`[CachedTextGen] ❌ No data in response`);
       throw new Error('No data returned from cached text generation');
     }
 
+    console.log(`[CachedTextGen] ✅ SUCCESS - cacheHit: ${response.data.cacheHit}, cachedTokens: ${response.data.usage?.cachedTokens || 0}`);
     return response.data;
   } catch (error) {
     // Fall back to non-cached generation on any error
-    console.error('[CachedTextGeneration] Cache failed, falling back to non-cached:', error);
+    console.error('[CachedTextGen] ❌ Exception caught, falling back to non-cached:', error);
     return fallbackToNonCached(apiKey, cacheGroup, dynamicPrompt);
   }
 }
@@ -116,11 +134,15 @@ async function fallbackToNonCached(
   cacheGroup: CacheGroupId,
   dynamicPrompt: string
 ): Promise<CachedTextResponse> {
+  console.log(`[CachedTextGen] ⚠️ FALLBACK: Using non-cached generation for ${cacheGroup}`);
+  
   // Import cache groups to get the static content
   const { CACHE_GROUPS } = await import('../../../engine/generation/prompts/cacheContent');
   
   const staticContent = CACHE_GROUPS[cacheGroup];
   const fullPrompt = `${staticContent}\n\n${dynamicPrompt}`;
+  
+  console.log(`[CachedTextGen] Fallback prompt size: ${fullPrompt.length} chars (~${Math.ceil(fullPrompt.length / 4)} tokens)`);
   
   const messages = [
     { role: 'user', content: fullPrompt }
@@ -129,8 +151,11 @@ async function fallbackToNonCached(
   const result = await generateText(apiKey, messages);
   
   if (result.error || !result.data) {
+    console.error(`[CachedTextGen] ❌ Fallback also failed:`, result.error);
     throw new Error(result.error || 'Failed to generate text');
   }
+  
+  console.log(`[CachedTextGen] ⚠️ Fallback completed (NO CACHING USED)`);
   
   return {
     text: result.data.text,

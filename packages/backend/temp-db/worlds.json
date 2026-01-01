@@ -2616,6 +2616,457 @@
       ],
       "searchDesc": "Opulent rooftop terrace with Victorian charm, vibrant flowers, and sparkling chandeliers.",
       "slug": "rooftop-terrace"
+    },
+    "loc-1767174057510-y42kjtujp": {
+      "id": "loc-1767174057510-y42kjtujp",
+      "type": "host",
+      "name": "Metropolis",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast city skyline, impressive architectural scale, clear or overcast sky",
+        "colorsAndLighting": "Bright daylight, diverse building colors, illuminated windows",
+        "atmosphere": "Bustling, energetic, sophisticated",
+        "materials": "Diverse building materials, reflective surfaces, metallic accents",
+        "mood": "Luxurious, exciting, aspirational",
+        "sounds": "Distant city hum, faint traffic, distant voices",
+        "primary_surfaces": "Sky, distant building facades, large open spaces",
+        "secondary_surfaces": "Interconnecting streets, public squares",
+        "accent_features": "Towering skyscrapers, illuminated landmarks",
+        "dominant": "Buildings",
+        "secondary": "Sky",
+        "accent": "Distant lights, architectural details",
+        "ambient": "City sounds, natural light",
+        "genre": "URBAN_FANTASY",
+        "architectural_tone": "OPULENT",
+        "cultural_tone": "SOCIALITE",
+        "palette_bias": "HIGH_CONTRAST",
+        "flora_base": "NATURAL",
+        "fauna_base": "URBAN"
+      },
+      "description": "A grand, unnamed city known for its opulent architecture and vibrant social scene. Its skyline is a testament to ambitious design, with buildings that reach for the heavens.",
+      "searchDesc": "Opulent city skyline, grand architecture, vibrant social scene",
+      "slug": "metropolis",
+      "structure": {
+        "spatialLayout": "Expansive, dense urban fabric, varied building heights"
+      },
+      "primaryMedia": "media-1767174139020-wo8layyby"
+    },
+    "bcd827b1-0d0a-4eac-922a-5f5744a133ab": {
+      "id": "bcd827b1-0d0a-4eac-922a-5f5744a133ab",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "8e6d8470-48b1-42b7-96a9-bf45ed442c26": {
+      "id": "8e6d8470-48b1-42b7-96a9-bf45ed442c26",
+      "type": "location",
+      "name": "The Grand Azure Lounge",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The exterior is a grand, art-deco structure with a polished, pale blue stone facade. Large, arched openings are a prominent feature, framed by intricate gold filigree and detailed pillars that echo the interior's grandeur. The building is of a substantial, large scale, designed to impress.",
+        "colorsAndLighting": "The facade utilizes a palette of pale blue stone and shimmering gold accents. Ample natural light reflects off the polished surfaces, giving the building a bright and inviting glow during the day.",
+        "atmosphere": "The air around the lounge feels sophisticated and vibrant, hinting at the lively social scene within. The immediate environment is likely well-maintained and elegant, complementing the building's design. No harsh weather impacts the pristine facade.",
+        "materials": "The primary material is polished, pale blue stone, complemented by extensively used metallic gold for ornate detailing and trim. Subtle geometric patterns are incorporated into exterior tiling, reinforcing the art-deco style.",
+        "mood": "The exterior conveys a mood of luxurious exclusivity and sophisticated celebration, inviting patrons into a world of refined indulgence.",
+        "sounds": "Distant muffled chatter, faint clinking of glasses, gentle ambient music.",
+        "primary_surfaces": "Polished pale blue stone, gleaming gold filigree",
+        "secondary_surfaces": "Subtly geometric patterned tiles, clear large glass panels",
+        "accent_features": "Ornate pillars with intricate gold detailing, large azure potted ferns",
+        "dominant": "Pale blue stone facade",
+        "secondary": "Gold filigree accents",
+        "accent": "Azure foliage flanking entrance",
+        "ambient": "Bright daytime light",
+        "genre": null,
+        "architectural_tone": "Elegant art-deco",
+        "cultural_tone": "Luxury social gathering",
+        "palette_bias": "Blues and Golds",
+        "flora_base": "Large potted azure ferns",
+        "fauna_base": "None"
+      },
+      "description": "An opulent and brightly lit lounge or bar with elaborate architectural details and vibrant furnishings. EXTERIOR VIEW.",
+      "searchDesc": "Opulent art-deco exterior with grand arched entrance and gold detailing.",
+      "slug": "the-grand-azure-lounge",
+      "structure": {
+        "spatialLayout": "The building is primarily rectangular, with a compact but imposing presence. The grand arched entrance is the central focal point, creating a sense of depth and invitation."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center of facade",
+          "description": "Leads into The Grand Azure Lounge interior."
+        }
+      ],
+      "dominantElements": [
+        "The Grand Azure Lounge building: shape=rectangular, orientation=compact, scale=large, style=art-deco, surfaces=polished-stone|metallic-gold, openings=large-glass, interior_materials=teal-and-gold-tile|marble|velvet, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Ornate gold filigree detailing",
+        "Large, arched entryway",
+        "Polished, pale blue stone facade",
+        "Subtle geometric patterned exterior tiling",
+        "Large potted azure ferns flanking the entrance"
+      ],
+      "primaryMedia": "media-1767174119904-wa9dgmpos"
+    },
+    "niche-1767174199932-6tiw3r1bd": {
+      "id": "niche-1767174199932-6tiw3r1bd",
+      "type": "niche",
+      "name": "The Grand Azure Lounge building",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Vast, cavernous interior with an impossibly high, vaulted ceiling. The architecture is grand and ostentatious, with sweeping curves and sharp, geometric accents.  The overall impression is one of immense scale and luxurious depth.",
+        "colorsAndLighting": "Dominated by deep, saturated blues and striking contrasts of black and metallic gold.  Spotlighting is dramatic, with beams of azure light that pulse and shift, casting sharp shadows.  Illuminated accents gleam throughout.",
+        "atmosphere": "Electrically charged and intensely exciting, with a palpable sense of sophisticated energy. The air is cool and tinged with exotic, intoxicating scents. Movement is a graceful flow of elegantly dressed patrons.",
+        "materials": "Polished obsidian, rich velvets in sapphire hues, polished brass and gold plating, shimmering azure glass, and rough-hewn, dark marble.  Reflective surfaces are abundant, creating a dazzling interplay of light and shadow.",
+        "mood": "Luxurious, exciting, aspirational, exclusive, mysterious, and utterly captivating.",
+        "sounds": "Muffled, sophisticated chatter, the clinking of crystal, a deep, resonant ambient hum, occasional bursts of ethereal music.",
+        "spatialLayout": "An expansive, open central area with defined, yet fluid, zones for seating and mingling.  Verticality is emphasized by soaring ceilings and multi-level access points.",
+        "primary_surfaces": "Ceiling, floors, grand walls.",
+        "secondary_surfaces": "Seating, bar surfaces, decorative panels.",
+        "accent_features": "Azure glass inlays, pulsating light installations, holographic projections, intricately detailed metallic fixtures.",
+        "dominant": "Deep Sapphire Blue",
+        "secondary": "Obsidian Black",
+        "accent": "Gleaming Gold",
+        "ambient": "Dramatic, shifting azure and gold spotlights.",
+        "genre": "URBAN_FANTASY",
+        "architectural_tone": "OPULENT",
+        "cultural_tone": "SOCIALITE",
+        "palette_bias": "HIGH_CONTRAST",
+        "flora_base": "ARTIFICIAL",
+        "fauna_base": "URBAN"
+      },
+      "primaryMedia": "media-1767174199930-5mfipab5g",
+      "description": "The interior of The Grand Azure Lounge building, characterized by its bright and opulent art-deco style. Polished stone and metallic gold surfaces gleam under the light, complemented by walls of teal and gold tile. Marble floors lead to plush velvet seating areas, creating a luxurious and inviting atmosphere.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "null",
+        "scale": "large",
+        "orientation": "compact",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "This large, rectangular building is designed in a compact orientation, suggesting an efficient use of space within its art-deco shell. Large glass openings allow for a bright interior atmosphere.",
+        "requiredElements": [
+          "art-deco",
+          "bright",
+          "polished-stone",
+          "metallic-gold",
+          "teal-and-gold-tile",
+          "marble",
+          "velvet"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "plush velvet lounge seating in sapphire blue and emerald green",
+          "polished marble tabletops with metallic gold inlay",
+          "a gleaming brass bar with ornate detailing",
+          "crystal decanters and glassware on display",
+          "a small stage area with a vintage microphone",
+          "opulent teal and gold patterned carpet",
+          "strategically placed palm trees in art-deco planters",
+          "gilded sconces casting warm light."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door grand double s"
+        },
+        {
+          "type": "archway",
+          "position": "left wall",
+          "description": "archway ornate   leading to a bar area"
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "door smaller way  for staff access"
+        },
+        {
+          "type": "window",
+          "position": "center",
+          "description": "window large arched s facing the street"
+        }
+      ],
+      "dominantElements": [
+        "The Grand Azure Lounge building: shape=rectangular, orientation=compact, scale=large, style=art-deco, surfaces=polished-stone|metallic-gold, openings=large-glass, interior_materials=teal-and-gold-tile|marble|velvet, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Art-deco architecture",
+        "Polished stone and metallic gold surfaces",
+        "Teal and gold tiling",
+        "Luxurious velvet accents"
+      ],
+      "searchDesc": "Opulent urban fantasy lounge, high contrast, socialite heaven, azure and gold.",
+      "slug": "null-of-the-grand-azure-lounge"
+    },
+    "loc-1767176832741-5jiz5wgeq": {
+      "id": "loc-1767176832741-5jiz5wgeq",
+      "type": "host",
+      "name": "The Iron Crown Kingdom",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Dominant castles and keeps on hilltops, fortified city walls, vast plains interrupted by forests and rivers.",
+        "colorsAndLighting": "Earthy tones, greys of stone, deep blues and greens of forests and rivers, often stark daylight or firelight.",
+        "atmosphere": "A sense of constant vigilance, potential conflict, and historical weight.",
+        "materials": "Rough-hewn stone, dark timber, wrought iron, weathered leather.",
+        "mood": "Authoritative, martial, enduring, and occasionally oppressive.",
+        "sounds": "Distant trumpet calls, clang of steel, cheers of crowds, crackling hearth fires.",
+        "primary_surfaces": "Stone",
+        "secondary_surfaces": "Wood",
+        "accent_features": "Ironwork, banners, battlements",
+        "dominant": "Castles",
+        "secondary": "Fortifications",
+        "accent": "Steel",
+        "ambient": "Medieval",
+        "genre": "REQUIRED",
+        "architectural_tone": "REQUIRED",
+        "cultural_tone": "REQUIRED",
+        "palette_bias": "REQUIRED",
+        "flora_base": "REQUIRED",
+        "fauna_base": "REQUIRED"
+      },
+      "description": "A sprawling medieval kingdom forged in conflict and enduring through resilience. Its lands are dotted with formidable fortresses and ancient castles, testaments to a rich and often brutal history. The people are known for their martial prowess and deep-rooted traditions.",
+      "searchDesc": "Medieval castles, fortified cities, ancient lore, knights and warring factions.",
+      "slug": "the-iron-crown-kingdom",
+      "structure": {
+        "spatialLayout": "Hierarchical, with castles and keeps as central nodes, surrounded by towns and villages."
+      }
+    },
+    "fe97ac95-6333-4135-8596-b95e69749efa": {
+      "id": "fe97ac95-6333-4135-8596-b95e69749efa",
+      "type": "region",
+      "name": "The Jagged Peaks",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Dominant, sharp peaks; deep, shadowed ravines; sparse, hardy vegetation clinging to slopes.",
+        "colorsAndLighting": "Muted greys and browns of rock, deep greens of ancient forests, dramatic chiaroscuro from steep shadows.",
+        "atmosphere": "Chilly, thin air, often filled with mist or swirling winds.",
+        "materials": "Rough, unyielding stone; ancient, gnarled wood; tough, wind-battered flora.",
+        "mood": "Isolated, wild, enduring, and somber.",
+        "sounds": "Howling winds, distant screeches of birds of prey, the trickle of icy streams.",
+        "primary_surfaces": "Stone",
+        "secondary_surfaces": "Gnarled wood",
+        "accent_features": "Frost, lichen, windswept scrub.",
+        "dominant": "Stone",
+        "secondary": "Shadows",
+        "accent": "Wind",
+        "ambient": "Cold",
+        "genre": null,
+        "architectural_tone": "Fortified, stark",
+        "cultural_tone": "Resilient, isolated",
+        "palette_bias": "Cool greys, deep greens, earthy browns",
+        "flora_base": "Coniferous trees, hardy mountain shrubs, mosses, lichens",
+        "fauna_base": "Mountain goats, wolves, eagles, ravens"
+      },
+      "description": "A harsh and unforgiving land where towering, jagged mountain ranges scrape the sky. Deep, shadowed valleys conceal ancient forests and windswept plateaus. Life here is a constant struggle against the elements.",
+      "searchDesc": "Jagged mountains, shadowed valleys, ancient forests, windswept plateaus.",
+      "slug": "the-jagged-peaks",
+      "structure": {
+        "spatialLayout": "Verticality is key, with structures clinging to cliffsides or nestled in valleys."
+      }
+    },
+    "6e4d8b42-c5de-49af-8167-4263ed48fc53": {
+      "id": "6e4d8b42-c5de-49af-8167-4263ed48fc53",
+      "type": "location",
+      "name": "Dragonstone Keep",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive, irregularly shaped stone keep dominates the landscape. Its imposing walls are crowned with sharp battlements, giving it a predatory silhouette. The structure appears ancient and formidable.",
+        "colorsAndLighting": "Dominated by dark, brooding greys and earth tones of the stone. Lighting is dim and shadowy, with meager light filtering through narrow slits and archways.",
+        "atmosphere": "The air is cold and carries the scent of damp stone and wind. A perpetual chill seems to emanate from the keep, even on a clear day. The wind howls around the battlements.",
+        "materials": "Primarily constructed from rough-hewn, weathered grey stone. Textures are coarse and uneven, showing signs of centuries of exposure. Minimal wood or metal accents, all heavily aged.",
+        "mood": "A sense of oppressive power and ancient solitude pervades Dragonstone Keep. It inspires awe and intimidation.",
+        "sounds": "Wind whistling, distant bird cries, creaking stone, echoing footsteps.",
+        "primary_surfaces": "Massive, rough-hewn grey stone",
+        "secondary_surfaces": "Weathered wood, dark iron",
+        "accent_features": "Jagged battlements, narrow slit windows",
+        "dominant": "Dark grey stone",
+        "secondary": "Shadows",
+        "accent": "Black iron on the gate",
+        "ambient": "Dim and shadowy",
+        "genre": null,
+        "architectural_tone": "Brutalist medieval fortress",
+        "cultural_tone": "The seat of a powerful, possibly reclusive, ruling family.",
+        "palette_bias": "Cool greys and deep earth tones",
+        "flora_base": "None",
+        "fauna_base": "Ravens"
+      },
+      "description": "An imposing medieval castle with high stone walls and battlements, overlooking the surrounding landscape.",
+      "searchDesc": "Massive, ancient stone castle with battlements overlooking a rugged landscape. Fortified keep.",
+      "slug": "dragonstone-keep",
+      "structure": {
+        "spatialLayout": "A sprawling, irregular complex built upon a strategic elevated position. The keep itself is a large, central structure with multiple interconnected defensive layers."
+      },
+      "navigableElements": [
+        {
+          "type": "gate",
+          "position": "front",
+          "description": "The main gate of the keep."
+        },
+        {
+          "type": "passage",
+          "position": "side",
+          "description": "A smaller, less guarded passage."
+        }
+      ],
+      "dominantElements": [
+        "keep: shape=irregular, orientation=sprawling, scale=massive, style=rustic, surfaces=stone, openings=narrow-slits, interior_materials=\"stone|stone|stone\", internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "imposing stone battlements",
+        "overlooks rugged landscape",
+        "ancient, weathered stone facade",
+        "fortified entrance gate"
+      ],
+      "primaryMedia": "media-1767176852632-er5yjj8g6"
+    },
+    "niche-1767176875700-w6km8x00t": {
+      "id": "niche-1767176875700-w6km8x00t",
+      "type": "niche",
+      "name": "keep",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Dominant, sharp peaks are echoed in the rough, chiseled stonework. Deep, shadowed ravines manifest as dark recesses and alcoves. Sparse, hardy vegetation is suggested by hardy mosses and lichens clinging to surfaces.",
+        "colorsAndLighting": "Muted greys and browns of unpolished stone dominate. Deep, shadowed ravines are represented by the stark chiaroscuro from flickering torchlight, creating pockets of intense darkness and pools of weak illumination.",
+        "atmosphere": "Chilly, thin air. The stillness is broken by the faint whistling of wind and the occasional drip of moisture.",
+        "materials": "Rough, unyielding stone is the primary material. Ancient, gnarled wood is used for structural beams and furniture, showing signs of age and wear. Tough, wind-battered flora is suggested by mosses and lichens.",
+        "mood": "Isolated, wild, enduring, and somber. A sense of grim determination and unwavering strength permeates the space.",
+        "sounds": "Distant wind, stone groaning, crackling fire, muffled footsteps, dripping water.",
+        "spatialLayout": "A large, cavernous main chamber with high ceilings and thick, imposing walls. Recesses and alcoves create a sense of depth and hidden spaces.",
+        "primary_surfaces": "Stone",
+        "secondary_surfaces": "Gnarled wood",
+        "accent_features": "Frost, lichen, windswept scrub (represented by rough textures and sparse growths)",
+        "dominant": "Stone",
+        "secondary": "Shadows",
+        "accent": "Wind",
+        "ambient": "Cold",
+        "genre": "REQUIRED",
+        "architectural_tone": "Fortified, stark",
+        "cultural_tone": "Resilient, isolated",
+        "palette_bias": "Cool greys, deep greens, earthy browns",
+        "flora_base": "Coniferous trees, hardy mountain shrubs, mosses, lichens",
+        "fauna_base": "Mountain goats, wolves, eagles, ravens"
+      },
+      "primaryMedia": "media-1767176875696-xr7nxykmb",
+      "description": "The interior of the keep is a dimly lit, sprawling space with massive stone walls, floors, and ceilings. Narrow slits serve as openings, and the overall atmosphere is one of rustic, ancient strength.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "vaulted",
+        "scale": "massive",
+        "orientation": "sprawling",
+        "openings": "narrow-slits",
+        "openingShape": "irregular",
+        "functionalType": "civic",
+        "elevation": "ground-level",
+        "spatialLayout": "The interior of the keep is a vast, sprawling network of interconnected stone chambers and corridors, illuminated by the faint glow of torches and moonlight filtering through narrow slits. The massive scale and rugged construction evoke a sense of ancient, enduring strength.",
+        "requiredElements": [
+          "keep"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "leads outside to the outer bailey"
+        },
+        {
+          "type": "passage",
+          "position": "left",
+          "description": "leads deeper into the keep's labyrinthine passages"
+        },
+        {
+          "type": "stairs",
+          "position": "right",
+          "description": "ascends to the upper levels of the keep"
+        }
+      ],
+      "dominantElements": [
+        "guard room: shape=rectangular, orientation=compact, scale=medium, style=rustic, surfaces=stone, openings=minimal, interior_materials=\"stone|stone|stone\", internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "ancient stone construction",
+        "dim torchlight",
+        "narrow defensive slits",
+        "sprawling interconnected chambers"
+      ],
+      "searchDesc": "The stark, fortified heart of Dragonstone Keep, echoing resilience and isolation.",
+      "slug": "null-of-dragonstone-keep"
+    },
+    "niche-1767176941258-m7is0yz62": {
+      "id": "niche-1767176941258-m7is0yz62",
+      "type": "niche",
+      "name": "The Dungeon",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A small, cramped cell with uneven, rough-hewn stone walls that sweat with dampness. The ceiling is low and oppressive. A single, barred window high on one wall offers no view, only a sliver of dim light.",
+        "colorsAndLighting": "Dominated by dark, oppressive greys and deep, muddy earth tones. Lighting is extremely dim, barely illuminating the immediate surroundings, creating deep shadows. The light is a sickly, pale grey.",
+        "atmosphere": "The air is thick with the smell of damp earth, mildew, and decay. A constant, bone-chilling cold permeates the space, carrying the sound of incessant dripping water and faint, mournful echoes.",
+        "materials": "Primarily rough, unworked grey stone, heavily stained with moisture. Aged, corroded iron for restraints and grates. Coarse, decaying straw for bedding.",
+        "mood": "A profound sense of despair, confinement, and hopelessness. The oppressive power of the fortress is felt keenly here, amplified by ancient solitude and neglect.",
+        "sounds": "dripping water, distant groans, scraping chains, wind howling faintly, stone groaning, echoing footsteps",
+        "spatialLayout": "A small, rectangular cell with low ceilings and thick, solid walls.",
+        "primary_surfaces": "damp, rough-hewn grey stone",
+        "secondary_surfaces": "corroded iron, decaying straw",
+        "accent_features": "chains bolted to the wall, rusted iron grate, scratched markings on stone",
+        "dominant": "dark grey stone",
+        "secondary": "deep shadows",
+        "accent": "rusted iron",
+        "ambient": "extremely dim and shadowy",
+        "genre": "REQUIRED",
+        "architectural_tone": "brutalist medieval fortress",
+        "cultural_tone": "seat of a powerful, possibly reclusive, ruling family",
+        "palette_bias": "cool greys and deep earth tones",
+        "flora_base": "None",
+        "fauna_base": "Ravens"
+      },
+      "primaryMedia": "media-1767176941256-schwunoum",
+      "description": "You are in a dimly lit, underground dungeon. The air is cool and damp, with the faint scent of earth and old stone. Narrow stone corridors stretch out before you, punctuated by the occasional barred cell door. Flickering torchlight casts dancing shadows on the rough-hewn stone walls, hinting at a sprawling and ancient complex.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "vaulted",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "narrow-slits",
+        "openingShape": "arched",
+        "functionalType": "civic",
+        "elevation": "underground",
+        "spatialLayout": "A labyrinthine network of stone corridors and chambers, carved deep into the earth. Torches cast flickering shadows, obscuring the true depth and dangers within.",
+        "requiredElements": [
+          "dungeon"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "recessed in the far wall",
+          "description": "a heavy, iron-banded wooden door, leading to a dark passage"
+        },
+        {
+          "type": "passage",
+          "position": "a dark opening to the side",
+          "description": "a narrow, winding passage descending further into the earth"
+        }
+      ],
+      "dominantElements": [
+        "dungeon_cell: shape=irregular, orientation=compact, scale=intimate, style=fortified, surfaces=stone, openings=minimal, interior_materials=stone|stone|stone, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "subterranean",
+        "fortified architecture"
+      ],
+      "searchDesc": "A brutalist medieval dungeon cell, cold, damp, and filled with ancient solitude.",
+      "slug": "the-dungeon"
     }
   },
   "views": {},
@@ -2835,12 +3286,65 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1767174057510-y42kjtujp",
+      "type": "host",
+      "children": [
+        {
+          "id": "bcd827b1-0d0a-4eac-922a-5f5744a133ab",
+          "type": "region",
+          "children": [
+            {
+              "id": "8e6d8470-48b1-42b7-96a9-bf45ed442c26",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767174199932-6tiw3r1bd",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767176832741-5jiz5wgeq",
+      "type": "host",
+      "children": [
+        {
+          "id": "fe97ac95-6333-4135-8596-b95e69749efa",
+          "type": "region",
+          "children": [
+            {
+              "id": "6e4d8b42-c5de-49af-8167-4263ed48fc53",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767176875700-w6km8x00t",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767176941258-m7is0yz62",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1767101449144-ncoxq6b1a",
     "loc-1767112081225-dlqhou1t1",
     "loc-1767152996093-g79aebj4c",
-    "loc-1767157066688-nnrvnjtuk"
+    "loc-1767157066688-nnrvnjtuk",
+    "loc-1767174057510-y42kjtujp",
+    "loc-1767176832741-5jiz5wgeq"
   ]
 }

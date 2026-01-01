@@ -11,21 +11,16 @@
  * - "Inside a Victorian pub" → Host/Region/Location/Niche (INTERIOR)
  */
 
-import { generateText } from '../../../services/mzoo';
+import { generateText, generateCachedText } from '../../../services/mzoo';
 import { AI_MODELS } from '../../../config/constants';
 import { parseJSON } from '../../utils/parseJSON';
 import type { HierarchySpec } from '../types';
 
 /**
- * Prompt for hierarchy classification
- * Creates a SINGLE branch with appropriate depth
- * 
- * IMPORTANT: 
- * - Niches should be RARE - only when user explicitly requests interior
- * - Regions should be PASS-THROUGH unless user explicitly names a district/area
+ * Static content for caching (~3,000 tokens)
+ * Contains all rules, examples, and format specifications
  */
-function buildClassificationPrompt(userPrompt: string): string {
-  return `You are a world-building assistant. Analyze the user's location description and create a SINGLE-BRANCH hierarchy.
+export const PARSE_HIERARCHY_STATIC = `You are a world-building assistant. Analyze the user's location description and create a SINGLE-BRANCH hierarchy.
 
 ## Hierarchy Levels (from broadest to most specific):
 1. **host** - A city, world, or major setting (e.g., "London", "Steampunk Metropolis")
@@ -149,8 +144,20 @@ Output: { "host": { "name": "Countryside", "description": "Pastoral farmland" },
 Input: "Inside a pub in London"
 Output: { "host": { "name": "London", "description": "The historic capital of England" }, "region": { "name": "Camden", "description": "An eclectic district of markets and music venues" }, "regionIsPassThrough": false, "location": { "name": "The Roundhouse Tavern", "description": "A classic London pub" }, "niche": { "name": "The Main Bar", "description": "A warm interior with brass fittings and wooden beams" }, "depth": 4, "isInterior": true }
 
-Now analyze this prompt:
-"${userPrompt}"`;
+Now analyze this prompt:`;
+
+/**
+ * Dynamic function - adds the user prompt
+ */
+export function parseHierarchyDynamic(userPrompt: string): string {
+  return `"${userPrompt}"`;
+}
+
+/**
+ * Legacy function - builds the full classification prompt for non-cached usage
+ */
+function buildClassificationPrompt(userPrompt: string): string {
+  return `${PARSE_HIERARCHY_STATIC}\n${parseHierarchyDynamic(userPrompt)}`;
 }
 
 export interface ParsedHierarchy {
@@ -167,31 +174,66 @@ export interface ParsedHierarchy {
  * 
  * @param prompt - User's location description
  * @param apiKey - API key for LLM
+ * @param useCaching - Whether to use cached generation (default: true)
  * @returns Parsed hierarchy specification
  */
 export async function parsePromptToHierarchy(
   prompt: string,
-  apiKey: string
+  apiKey: string,
+  useCaching: boolean = true
 ): Promise<ParsedHierarchy> {
-  const classificationPrompt = buildClassificationPrompt(prompt);
+  console.log(`[ParseHierarchy] ===== parsePromptToHierarchy START =====`);
+  console.log(`[ParseHierarchy] useCaching: ${useCaching}`);
+  console.log(`[ParseHierarchy] prompt: "${prompt.substring(0, 100)}${prompt.length > 100 ? '...' : ''}"`);
   
-  const messages = [
-    { role: 'user', content: classificationPrompt }
-  ];
+  let responseText: string;
   
-  const result = await generateText(
-    apiKey,
-    messages,
-    AI_MODELS.SEED_GENERATION // Fast model for structure analysis
-  );
-
-  if (result.error || !result.data) {
-    throw new Error(result.error || 'Failed to parse prompt into hierarchy');
+  if (useCaching) {
+    console.log(`[ParseHierarchy] 🔄 Attempting CACHED generation...`);
+    try {
+      const dynamicPrompt = parseHierarchyDynamic(prompt);
+      console.log(`[ParseHierarchy] Dynamic prompt: ${dynamicPrompt}`);
+      
+      const cachedResult = await generateCachedText(
+        apiKey,
+        'morfeum-world-creation',
+        dynamicPrompt
+        // No thinking mode - faster responses
+      );
+      
+      console.log(`[ParseHierarchy] ✅ Cached generation completed, cacheHit: ${cachedResult.cacheHit}`);
+      console.log(`[ParseHierarchy] Usage: cachedTokens=${cachedResult.usage?.cachedTokens || 0}, promptTokens=${cachedResult.usage?.promptTokens || 0}`);
+      
+      responseText = cachedResult.text;
+    } catch (cacheError) {
+      console.warn('[ParseHierarchy] ❌ Cached generation failed, using FALLBACK:', cacheError);
+      // Fall back to non-cached generation
+      const classificationPrompt = buildClassificationPrompt(prompt);
+      const messages = [{ role: 'user', content: classificationPrompt }];
+      const result = await generateText(apiKey, messages, AI_MODELS.SEED_GENERATION);
+      
+      if (result.error || !result.data) {
+        throw new Error(result.error || 'Failed to parse prompt into hierarchy');
+      }
+      responseText = result.data.text;
+    }
+  } else {
+    console.log(`[ParseHierarchy] ⏭️ Caching DISABLED, using standard generation`);
+    const classificationPrompt = buildClassificationPrompt(prompt);
+    const messages = [{ role: 'user', content: classificationPrompt }];
+    const result = await generateText(apiKey, messages, AI_MODELS.SEED_GENERATION);
+    
+    if (result.error || !result.data) {
+      throw new Error(result.error || 'Failed to parse prompt into hierarchy');
+    }
+    responseText = result.data.text;
   }
 
-  const parsed = parseJSON<any>(result.data.text);
+  const parsed = parseJSON<any>(responseText);
   
   if (!parsed || !parsed.host) {
+    console.error('[ParseHierarchy] Invalid hierarchy response - missing host');
+    console.error('[ParseHierarchy] Raw response:', responseText.substring(0, 500));
     throw new Error('Invalid hierarchy response - missing host');
   }
 
@@ -213,6 +255,8 @@ export async function parsePromptToHierarchy(
   if (parsed.niche) {
     spec.niche = `${parsed.niche.name}: ${parsed.niche.description}`;
   }
+
+  console.log(`[ParseHierarchy] ===== parsePromptToHierarchy COMPLETE =====`);
 
   return {
     spec,

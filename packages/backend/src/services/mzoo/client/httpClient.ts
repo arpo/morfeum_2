@@ -34,7 +34,7 @@ export async function mzooPost<TRequest, TResponse>(
     const data = await response.json();
     return {
       status: HTTP_STATUS.OK,
-      data: data.data
+      data: data.data ?? data
     };
   } catch (error) {
     return {

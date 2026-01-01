@@ -35,25 +35,36 @@ export async function analyzeHierarchy(
   spawnId?: string,
   useCaching: boolean = true
 ): Promise<HierarchyAnalysisResult> {
+  console.log(`[Hierarchy] ===== analyzeHierarchy START =====`);
+  console.log(`[Hierarchy] useCaching: ${useCaching}`);
+  console.log(`[Hierarchy] userPrompt: "${userPrompt.substring(0, 100)}${userPrompt.length > 100 ? '...' : ''}"`);
+  
   // Build prompt from centralized prompts
   const classificationPrompt = hierarchyCategorization(userPrompt);
   
   let responseText: string;
   
   if (useCaching) {
+    console.log(`[Hierarchy] 🔄 Attempting CACHED generation...`);
     // Use cached text generation with thinking for complex parsing
     try {
       const dynamicPrompt = hierarchyCategorizationDynamic(userPrompt);
+      console.log(`[Hierarchy] Dynamic prompt length: ${dynamicPrompt.length} chars`);
+      
       const cachedResult = await generateCachedTextWithThinking(
         apiKey,
         'morfeum-world-creation',
         dynamicPrompt,
         2048 // Thinking budget for complex parsing
       );
+      
+      console.log(`[Hierarchy] ✅ Cached generation completed, cacheHit: ${cachedResult.cacheHit}`);
+      console.log(`[Hierarchy] Usage: cachedTokens=${cachedResult.usage?.cachedTokens || 0}, promptTokens=${cachedResult.usage?.promptTokens || 0}`);
+      
       responseText = cachedResult.text;
     } catch (cacheError) {
       // Fall back to non-cached generation
-      console.warn('[Hierarchy] Cached generation failed, using fallback:', cacheError);
+      console.warn('[Hierarchy] ❌ Cached generation failed, using FALLBACK:', cacheError);
       const messages = [
         { role: 'system', content: classificationPrompt },
         { role: 'user', content: userPrompt }
@@ -65,6 +76,7 @@ export async function analyzeHierarchy(
       responseText = result.data.text;
     }
   } else {
+    console.log(`[Hierarchy] ⏭️ Caching DISABLED, using standard generation`);
     // Use non-cached generation
     const messages = [
       { role: 'system', content: classificationPrompt },
