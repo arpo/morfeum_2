@@ -1640,265 +1640,516 @@
       "searchDesc": "A lush, serene garden nook with Andalusian Renaissance style, offering relaxation and contemplation.",
       "slug": "the-garden-nook"
     },
-    "loc-1767294678253-7ihi6q0jy": {
-      "id": "loc-1767294678253-7ihi6q0jy",
+    "loc-1767295449666-biatufiam": {
+      "id": "loc-1767295449666-biatufiam",
       "type": "host",
-      "name": "Candy Land",
+      "name": "Buenos Aires",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Vast, expansive sweet panorama. Three-tiered chocolate fountain at the center. Majestic, candy-adorned tree. Misty background with distant candy-like structures.",
-        "colorsAndLighting": "Soft, ethereal glow, warm light source casting enchanting glow. Dark brown chocolate, golden accents.",
-        "atmosphere": "Fantastical, enchanting, and dreamlike.",
-        "materials": "Hyper-realistic polished dark chocolate, gleaming gold accents, all types of candies, marshmallows or gumballs.",
-        "mood": "Indulgent, luxurious, awe-inspiring, celebratory.",
-        "sounds": "Distant gentle music, soft ambient sweet-themed sounds.",
-        "primary_surfaces": "Chocolate structures",
-        "secondary_surfaces": "Candy-covered landscapes",
-        "accent_features": "Golden decorations, ornate tree decorations, misty background structures.",
-        "dominant": "Chocolate structures and candy landscapes",
-        "secondary": "Golden accents",
-        "accent": "Misty background structures",
-        "ambient": "Ethereal glow and warm light",
-        "genre": "Fantasy",
-        "architectural_tone": "Monumental, ornate, surreal",
-        "cultural_tone": "Mythological, celebratory",
-        "palette_bias": "Rich dark browns and opulent golds",
-        "flora_base": "Candy flora",
-        "fauna_base": "Imaginary sweet creatures"
+        "looks": "Urban sprawl with a mix of architectural styles, including European influences, visible in distant cityscapes and wider geographic features.",
+        "colorsAndLighting": "Varied urban lighting, with the potential for both bright daylight and atmospheric evening conditions, influenced by the continental climate.",
+        "atmosphere": "Energetic, cosmopolitan, cultural, lively, historic.",
+        "materials": "Concrete, brick, stone, glass (general urban materials).",
+        "mood": "Passionate, sophisticated, energetic, historic.",
+        "sounds": "City traffic, distant sirens, murmurs of crowds, music (implied diverse genres).",
+        "primary_surfaces": "Buildings (various facades), paved streets, open spaces.",
+        "secondary_surfaces": "Distant landmarks, parks, riverfronts.",
+        "accent_features": "Iconic architecture, public art, green spaces.",
+        "dominant": "Architecture",
+        "secondary": "Urban infrastructure",
+        "accent": "Cultural landmarks",
+        "ambient": "Urban hum",
+        "genre": "Urban",
+        "architectural_tone": "European influence, eclectic, grand, historic.",
+        "cultural_tone": "Passionate, artistic, European-infused, lively.",
+        "palette_bias": "Varied, with a tendency towards earthy tones and historic building materials, but also modern vibrancy.",
+        "flora_base": "City parks, street trees, occasional gardens.",
+        "fauna_base": "Urban wildlife, pigeons, domestic animals in parks."
       },
-      "description": "A whimsical world where everything is made of sweets and confections. A fantastical, sugary landscape bathed in a soft, ethereal glow.",
-      "searchDesc": "Whimsical world of sweets and confections. Fantastical, sugary landscape.",
-      "slug": "candy-land",
+      "description": "Buenos Aires is the vibrant capital of Argentina, a sprawling metropolis known for its rich European-inspired architecture and passionate arts scene. The city pulses with culture, from its iconic tango to its dynamic street life.",
+      "searchDesc": "Vibrant capital of Argentina with rich culture, European architecture, and a passionate arts scene.",
+      "slug": "buenos-aires",
       "structure": {
-        "spatialLayout": "Central focal point (fountain), grand scale, expansive and detailed landscape."
+        "spatialLayout": "Urban grid patterns, expansive avenues, distinct neighborhoods, potentially waterfront areas (port city)."
       }
     },
-    "ec4f3fa7-7ae2-4507-b07f-e4f1659d8c0a": {
-      "id": "ec4f3fa7-7ae2-4507-b07f-e4f1659d8c0a",
+    "1ad69cac-96ed-409a-97c2-f999a4789779": {
+      "id": "1ad69cac-96ed-409a-97c2-f999a4789779",
       "type": "region",
-      "name": "The Confectionery Hills",
+      "name": "La Boca",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Rolling hills covered in various candies, terraced slopes with candy clusters, abundant striped lollipops and swirled candies.",
-        "colorsAndLighting": "Vibrant, textured colors of candies; soft, ethereal glow at twilight or dawn.",
-        "atmosphere": "Whimsical, fantastical, and sugary.",
-        "materials": "Candies (pebble-like clusters, striped lollipops, swirled candies, chocolate pieces, spherical candies), frosting or white chocolate for paths.",
-        "mood": "Joyful, playful, and sweet.",
-        "sounds": "Gentle rustling of candy wrappers, soft chirping.",
-        "primary_surfaces": "Candy-covered hillsides",
-        "secondary_surfaces": "Frosting or white chocolate paths",
-        "accent_features": "Striped lollipops, swirled candies, large hills of spherical candies.",
-        "dominant": "Candy-covered hills",
-        "secondary": "Frosting paths",
-        "accent": "Lollipops and swirled candies",
-        "ambient": "Ethereal glow",
+        "looks": "Colorful, artistic buildings with corrugated metal facades, vibrant street art, mosaic tile pathways, and a lively, folk-art inspired aesthetic.",
+        "colorsAndLighting": "Bold, primary colors and purple on buildings; bright, varied colors on pathways; overcast sky suggesting bright daylight.",
+        "atmosphere": "Festive, culturally rich, bustling commerce, lively, welcoming, vibrant.",
+        "materials": "Weathered corrugated metal, vibrant ceramic tiles, painted wood stalls, wrought-iron railings.",
+        "mood": "Cheerful festivity, cultural richness, lively commerce, welcoming, vibrant.",
+        "sounds": "Bustling market sounds, chatter, distant music (implied tango), foot traffic.",
+        "primary_surfaces": "Corrugated metal building facades, ceramic tile ground.",
+        "secondary_surfaces": "Painted wood stalls, low walls, wrought-iron railings.",
+        "accent_features": "Whimsical folk art murals, decorative light strings, potted plants.",
+        "dominant": "Color",
+        "secondary": "Texture",
+        "accent": "Folk art",
+        "ambient": "Market bustle",
         "genre": null,
-        "architectural_tone": "Naturalistic, organic",
-        "cultural_tone": "Playful, celebratory",
-        "palette_bias": "Vibrant candy colors",
-        "flora_base": "Candy plants",
-        "fauna_base": "Sugary insects"
+        "architectural_tone": "Rustic, bohemian, colorful, patchwork.",
+        "cultural_tone": "Vibrant, artistic, working-class, folk-inspired.",
+        "palette_bias": "High saturation, primary colors, purple, blue, red, yellow, orange.",
+        "flora_base": "Trees, potted plants",
+        "fauna_base": "Cartoonish figures, horse (in mural)"
       },
-      "description": "Rolling hills adorned with an abundant harvest of various sweets. Lush, candy-covered terrain creates a visually delightful and edible landscape.",
-      "searchDesc": "Candy-covered rolling hills with sweet harvests. A whimsical, edible landscape.",
-      "slug": "the-confectionery-hills",
+      "description": "La Boca is a historic port neighborhood in Buenos Aires, Argentina, renowned for its vividly painted houses and vibrant street art. It's a district alive with the spirit of tango and a rich tapestry of cultural expression.",
+      "searchDesc": "Colorful, artistic, historic port neighborhood in Buenos Aires with tango and street art.",
+      "slug": "la-boca",
       "structure": {
-        "spatialLayout": "Winding paths through terraced hills, abundant scattered sweets."
-      }
+        "spatialLayout": "Narrow streets lined with colorful buildings, outdoor market stalls, pedestrian areas."
+      },
+      "primaryMedia": "media-1767295633718-ipmww1dek"
     },
-    "aff8e427-966f-447d-aa6d-17a85ec395c1": {
-      "id": "aff8e427-966f-447d-aa6d-17a85ec395c1",
+    "f64d706d-3ba8-4f37-b2d7-398b2f1c8b24": {
+      "id": "f64d706d-3ba8-4f37-b2d7-398b2f1c8b24",
       "type": "location",
-      "name": "The Grand Chocolate Fountain",
+      "name": "Caminito Street Market",
       "spaceType": "exterior",
       "dna": {
-        "looks": "The exterior of the Grand Chocolate Fountain is a colossal, three-tiered structure primarily formed from a dark, highly polished chocolate material that mimics the appearance of highly reflective metallic surfaces. The tiers are sculpted in an organic, flowing manner, with the 'chocolate' cascading down each level to form part of the external visual. Ornate golden decorations are sparingly applied to accentuate key points, such as the rim of each tier and the very top of the fountain.",
-        "colorsAndLighting": "The dominant color is a deep, rich, dark brown, reflecting light to create a lustrous, almost black sheen. Accents of gleaming gold provide sharp contrasts. The lighting is soft and ethereal, likely from an unseen source, making the polished surfaces appear to glow from within, casting gentle highlights and deep, inviting shadows.",
-        "atmosphere": "The air around the fountain is thick with the sweet, heavy aroma of warm chocolate. A faint, pleasant warmth emanates from the structure, suggesting the continuous flow of liquid chocolate. The gentle, almost imperceptible hum of the fountain's internal workings can be felt, creating a serene and indulgent atmosphere.",
-        "materials": "The primary material is a hyper-realistic, polished dark chocolate that behaves like a super-smooth, dark metallic surface. Accents are made of gleaming, polished gold. The 'cascading' chocolate effect gives the impression of a fluid, semi-solid external layer.",
-        "mood": "Indulgent, luxurious, and awe-inspiring. The sheer scale and opulent material suggest a place of ultimate sweetness and celebration.",
-        "sounds": "gentle bubbling, soft chocolate flow, distant sweet hum",
-        "primary_surfaces": "Polished dark chocolate with a high-gloss sheen",
-        "secondary_surfaces": "Gleaming polished gold accents",
-        "accent_features": "Ornate golden decorative elements on tier rims and apex",
-        "dominant": "Dark brown with high gloss",
-        "secondary": "Gold accents on edges and top",
-        "accent": "Gold on ornamental details",
-        "ambient": "Soft, warm glow",
+        "looks": "The scene is dominated by a multi-story building clad in a patchwork of corrugated metal, painted in bold, irregular squares of primary colors and purple. The ground is a dynamic mosaic of brightly colored square tiles. Whimsical folk art adorns a low wall.",
+        "colorsAndLighting": "Bold and saturated colors define the architecture and ground, illuminated by bright daylight filtering through an overcast sky. Decorative lights with various colored bulbs add to the festive glow.",
+        "atmosphere": "The air is alive with the energy of a bustling market, filled with the movement of people browsing and interacting. The overcast sky suggests a diffused, bright daylight, creating a cheerful and lively ambiance.",
+        "materials": "Primary materials include weathered corrugated metal for the buildings, and vibrant ceramic tiles for the pathways. Painted wood forms the vendors' stalls, and intricate black wrought-iron is used for balcony railings.",
+        "mood": "The overall mood is one of cheerful festivity, cultural richness, and lively commerce, exuding a welcoming and vibrant energy.",
+        "sounds": "Chatter, music, footsteps, vendors calling out",
+        "primary_surfaces": "Weathered corrugated metal, brightly colored ceramic tiles",
+        "secondary_surfaces": "Painted wood, wrought iron, ceramic mural elements",
+        "accent_features": "Wrought-iron balconies, decorative string lights, folk art mural",
+        "dominant": "Red and Blue on building facade and pathway",
+        "secondary": "Yellow and Purple on building facade",
+        "accent": "Orange on pathway, white and black on mural",
+        "ambient": "Bright diffused daylight",
         "genre": null,
-        "architectural_tone": "Sacred confectionery monument",
-        "cultural_tone": "A central hub for a candy-themed world",
-        "palette_bias": "Browns and Golds",
-        "flora_base": "None",
-        "fauna_base": "None"
+        "architectural_tone": "Rustic patchwork corrugated metal",
+        "cultural_tone": "Bustling South American market, folk art",
+        "palette_bias": "Primary colors, secondary colors",
+        "flora_base": "Green trees, potted plants",
+        "fauna_base": "Cartoonish figures on mural (implied)"
       },
-      "description": "A magnificent three-tiered chocolate fountain at the heart of a candy-laden landscape.",
-      "searchDesc": "Massive chocolate fountain structure with ornate golden details and flowing chocolate exterior.",
-      "slug": "the-grand-chocolate-fountain",
+      "description": "A bustling outdoor market area on a visually stunning street, filled with color and life.",
+      "searchDesc": "Vibrant Caminito Street Market, La Boca, Buenos Aires - colorful buildings, tiled paths, outdoor stalls, folk art.",
+      "slug": "caminito-street-market",
       "structure": {
-        "spatialLayout": "The structure is centered and imposing, with a clear vertical emphasis due to its tiered design. Its base is broad, anchoring it firmly, while each tier tapers slightly, creating a monumental presence that commands the surrounding landscape."
+        "spatialLayout": "The market is laid out along a central pathway lined with stalls, flanked by colorful, modular buildings. The space feels open yet dense with activity."
       },
       "navigableElements": [
         {
-          "type": "passage",
-          "position": "base of the fountain",
-          "description": "Leading into the Chocolate Basin"
+          "type": "door",
+          "position": "center of building facade",
+          "description": "Leads inside the colorful market building."
+        },
+        {
+          "type": "path",
+          "position": "ground level",
+          "description": "The main pedestrian walkway through the market."
         }
       ],
       "dominantElements": [
-        "<structure>: shape=organic, orientation=centered, scale=massive, style=sacred, surfaces=metallic-polished, openings=open-passages, interior_materials=tile|tile|tile, internal_atmosphere=bright"
+        "building: shape=modular, orientation=sprawling, scale=large, style=rustic, surfaces=metallic-weathered, openings=open-passages, interior_materials=tile|tile|wood, internal_atmosphere=bright",
+        "stalls: shape=rectangular, orientation=linear, scale=medium, style=rustic, surfaces=wood-painted, openings=open-passages, interior_materials=fabric|fabric|fabric, internal_atmosphere=cozy"
       ],
       "uniqueIdentifiers": [
-        "Three-tiered cascading chocolate",
-        "Gleaming polished chocolate exterior",
-        "Ornate golden decorative elements",
-        "Flowing chocolate as liquid facade"
+        "Patchwork corrugated metal building facade",
+        "Mosaic tiled ground pathway",
+        "Wrought-iron balconies",
+        "Whimsical folk-art mural",
+        "Strings of decorative colored lights"
       ],
-      "primaryMedia": "media-1767294719881-toh32mfrx"
+      "primaryMedia": "media-1767295466742-rfutmnvc1"
     },
-    "niche-1767294867732-aegleel6i": {
-      "id": "niche-1767294867732-aegleel6i",
+    "location-1767295490413-7f1y8511k": {
+      "id": "location-1767295490413-7f1y8511k",
+      "type": "location",
+      "name": "The Cafe",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A patchwork of rustic, bohemian elements, featuring vibrant street art-inspired murals and a warm, inviting interior.",
+        "colorsAndLighting": "High saturation primary colors (red, blue, yellow, orange) and purple dominate, with bright, cheerful ambient lighting and strings of decorative lights.",
+        "atmosphere": "Festive and lively, with a sense of cultural richness and bustling commerce, creating a welcoming and vibrant mood.",
+        "materials": "Weathered corrugated metal, vibrant ceramic tiles, painted wood, and wrought iron are prominent.",
+        "mood": "Cheerful festivity, cultural richness, lively commerce, welcoming, vibrant.",
+        "sounds": "Chatter, clinking mugs, soft folk music, espresso machine hum.",
+        "spatialLayout": "An organic and compact layout that feels cozy and intimate.",
+        "primary_surfaces": "Corrugated metal and ceramic tiles.",
+        "secondary_surfaces": "Painted wood and wrought iron.",
+        "accent_features": "Whimsical folk art murals, decorative string lights, potted plants with colorful blooms.",
+        "dominant": "Color",
+        "secondary": "Texture",
+        "accent": "Folk art",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Rustic, bohemian, colorful, patchwork.",
+        "cultural_tone": "Vibrant, artistic, working-class, folk-inspired.",
+        "palette_bias": "High saturation, primary colors, purple, blue, red, yellow, orange.",
+        "flora_base": "Potted plants with colorful blooms.",
+        "fauna_base": "Cartoonish figures in murals."
+      },
+      "primaryMedia": "media-1767295490412-jkjtzno2u",
+      "description": "You are standing outside a medium-sized cafe with a rustic charm. Its exterior is a patchwork of corrugated metal, painted in vibrant primary and secondary colors. Large glass windows dominate the front, offering a glimpse of the interior.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "commercial",
+        "elevation": "ground-level",
+        "spatialLayout": "A medium-sized commercial building with large glass openings, suggesting a welcoming storefront. The overall orientation is cubic and sits at ground level.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front",
+          "description": "the main entrance to the cafe"
+        }
+      ],
+      "dominantElements": [
+        "The Cafe: shape=rectangular, orientation=compact, scale=medium, style=rustic, surfaces=corrugated-metal, openings=large-glass, interior_materials=wood|tile|concrete, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "patchwork corrugated metal exterior",
+        "primary and secondary color palette",
+        "large glass storefront"
+      ],
+      "searchDesc": "Vibrant bohemian cafe with folk art murals, colorful tiles, and a welcoming atmosphere.",
+      "slug": "el-corazon-cafe"
+    },
+    "niche-1767295607558-cmu8xohip": {
+      "id": "niche-1767295607558-cmu8xohip",
       "type": "niche",
-      "name": "The Grand Chocolate Fountain",
+      "name": "The Cafe",
       "spaceType": "interior",
       "dna": {
-        "looks": "Gentle alcove with soft, yielding surfaces and a central focal point of a grand, flowing chocolate fountain. The surroundings are rolling hills of assorted candies, from pebble-like clusters to larger spherical candies, interspersed with vibrant lollipop trees and gumdrop bushes. Paths are made of frosting or white chocolate.",
-        "colorsAndLighting": "Vibrant, saturated candy colors dominate, with hues of rich chocolate brown, bubblegum pink, lemon yellow, and blueberry blue. The lighting is soft and ethereal, with a warm, inviting glow, particularly noticeable around the chocolate fountain, casting gentle shadows and highlights.",
-        "atmosphere": "A sweet, warm, and slightly humid air, perfumed with cocoa and sugar. A gentle, almost imperceptible shimmer seems to emanate from the candy surfaces.",
-        "materials": "A blend of smooth, semi-solid chocolate for the fountain, textured candy clusters for the hills, smooth frosting for pathways, and hard candy for accent features like lollipops and gumdrops.",
-        "mood": "Joyful, playful, and overwhelmingly sweet, with a sense of wonder and delight.",
-        "sounds": "Gentle bubbling of chocolate, soft sugary tinkling, faint joyful music.",
-        "spatialLayout": "An open, yet enclosed alcove that feels both grand due to the fountain's presence and intimate due to its placement within the hills.",
-        "primary_surfaces": "Candy-covered hillsides, flowing chocolate fountain",
-        "secondary_surfaces": "Frosting or white chocolate paths",
-        "accent_features": "Striped lollipops, swirled candies, large hills of spherical candies, gumdrop bushes",
-        "dominant": "Rich chocolate brown",
-        "secondary": "Creamy white chocolate",
-        "accent": "Vibrant candy colors (pink, yellow, blue)",
-        "ambient": "Soft, ethereal glow",
-        "genre": "Fantasy",
-        "architectural_tone": "Naturalistic, organic",
-        "cultural_tone": "Playful, celebratory",
-        "palette_bias": "Vibrant candy colors",
-        "flora_base": "Candy plants",
-        "fauna_base": "Sugary insects"
+        "looks": "A cozy, intimate space with a bohemian, patchwork aesthetic. Walls are adorned with vibrant, hand-painted folk art murals. Furniture is a delightful mix of upcycled pieces, upholstered in brightly colored, mismatched fabrics. Strings of colorful fairy lights are draped overhead, casting a warm glow.",
+        "colorsAndLighting": "High saturation primary colors (red, blue, yellow, orange) and deep purples dominate. Lighting is warm and inviting, a mix of ambient light from the fairy lights and brighter, more focused task lighting over tables.",
+        "atmosphere": "Warm, inviting, and lively. The air is filled with the gentle hum of conversation and the distant sounds of urban commerce. There's a sense of cheerful festivity and a welcoming creative energy.",
+        "materials": "A blend of worn, painted wood, colorful ceramic tiles (integrated into tables and accents), and exposed sections of corrugated metal from the parent facade. Upholstered fabrics are varied and textured.",
+        "mood": "Cheerful festivity, artistic expression, welcoming, vibrant, cozy.",
+        "sounds": "Soft chatter, clinking mugs, distant street sounds, folk music, laughter.",
+        "spatialLayout": "An intimate, somewhat asymmetrical layout designed for comfortable seating and browsing.",
+        "primary_surfaces": "Painted wood walls and floors, colorful ceramic tile tabletops.",
+        "secondary_surfaces": "Upholstered seating, exposed corrugated metal sections, wrought-iron accents.",
+        "accent_features": "Hand-painted folk art murals, strings of colorful lights, small potted plants, whimsical ceramic decorations.",
+        "dominant": "Color",
+        "secondary": "Texture",
+        "accent": "Folk art",
+        "ambient": "Bright daylight filtered through colorful light strings",
+        "genre": "Urban",
+        "architectural_tone": "Rustic, bohemian, colorful, patchwork",
+        "cultural_tone": "Vibrant, artistic, working-class, folk-inspired",
+        "palette_bias": "High saturation, primary colors, purple, blue, red, yellow, orange",
+        "flora_base": "Potted plants",
+        "fauna_base": "Cartoonish figures (in murals)"
       },
-      "primaryMedia": "media-1767294867731-7rhd9d6is",
-      "description": "You are inside the Grand Chocolate Fountain, a vast and awe-inspiring space dedicated to the art of chocolate. The air is thick with the sweet scent, and a massive, organically shaped fountain of molten chocolate is the centerpiece, flowing in mesmerizing cascades.",
+      "primaryMedia": "media-1767295607557-l0vqk4kon",
+      "description": "You step inside The Cafe, a cozy, medium-sized establishment with a rustic charm. The space is rectangular and compact, dominated by a large glass facade that lets in ample natural light. The interior is finished with a blend of wood, tile, and concrete, creating a warm and inviting atmosphere.",
       "structure": {
-        "form": "organic",
-        "roofType": "domed",
-        "scale": "massive",
-        "orientation": "centered",
-        "openings": "open-passages",
-        "openingShape": "irregular",
-        "functionalType": "entertainment",
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "compact",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "commercial",
         "elevation": "ground-level",
-        "spatialLayout": "A vast, cavernous space dominated by the flowing chocolate fountain. Passages lead off into different areas. The atmosphere is warm and inviting.",
+        "spatialLayout": "A medium-sized rectangular cafe with a compact layout, featuring large glass windows. The interior materials suggest a rustic style with wood, tile, and concrete elements.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front",
+          "description": "leading outside"
+        }
+      ],
+      "dominantElements": [
+        "cafe counter: shape=rectangular, orientation=horizontal, scale=small, style=rustic, surfaces=wood, openings=none, interior_materials=wood|tile|concrete, internal_atmosphere=cozy",
+        "seating area: shape=organic, orientation=compact, scale=medium, style=rustic, surfaces=wood, openings=none, interior_materials=wood|tile|concrete, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "large glass facade",
+        "rustic interior decor",
+        "cozy atmosphere"
+      ],
+      "searchDesc": "A cozy, artistic nook within a vibrant urban cafe, filled with color and folk art.",
+      "slug": "null-of-the-cafe"
+    },
+    "loc-1767295714361-wdsqtbsfj": {
+      "id": "loc-1767295714361-wdsqtbsfj",
+      "type": "host",
+      "name": "Göteborg",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Harbor skyline, coastal outlines, distant bridges, diverse building silhouettes",
+        "colorsAndLighting": "Natural light reflecting off water, varied urban color palettes, clear or overcast skies",
+        "atmosphere": "Maritime, urban, lively, Scandinavian",
+        "materials": "Brick, concrete, glass, historical stone",
+        "mood": "Dynamic, historic, modern, welcoming",
+        "sounds": "Ship horns, ferry engines, city traffic, ocean waves",
+        "primary_surfaces": "City skyline, harbor structures, natural coastlines",
+        "secondary_surfaces": "Distant building facades, bridges",
+        "accent_features": "Landmarks, prominent bridges, large open spaces",
+        "dominant": "Urban",
+        "secondary": "Maritime",
+        "accent": "Modern",
+        "ambient": "Coastal city",
+        "genre": "REQUIRED",
+        "architectural_tone": "REQUIRED",
+        "cultural_tone": "REQUIRED",
+        "palette_bias": "REQUIRED",
+        "flora_base": "REQUIRED",
+        "fauna_base": "REQUIRED"
+      },
+      "description": "Göteborg, Sweden's second-largest city, is a bustling port metropolis characterized by its diverse architectural tapestry and lively maritime atmosphere. From historic canals to modern design, the city offers a rich visual experience.",
+      "searchDesc": "Göteborg: Lively port city with diverse architecture and maritime heritage.",
+      "slug": "goteborg",
+      "structure": {
+        "spatialLayout": "Grid-like city center, waterfront districts, distinct neighborhoods"
+      }
+    },
+    "e9dd693a-793d-4e93-a024-d6461b0b4c4d": {
+      "id": "e9dd693a-793d-4e93-a024-d6461b0b4c4d",
+      "type": "region",
+      "name": "Ringön",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Industrial warehouses, repurposed factories, graffiti-adorned walls, waterfront views, cobblestone streets",
+        "colorsAndLighting": "Gritty textures, splashes of vibrant graffiti, overcast industrial skies",
+        "atmosphere": "Creative, industrial, maritime, urban",
+        "materials": "Corrugated metal, brick, concrete, weathered wood",
+        "mood": "Edgy, artistic, repurposed, historic",
+        "sounds": "Distant ship horns, seagulls, industrial hum, muffled music from studios",
+        "primary_surfaces": "Weathered metal walls, brick facades",
+        "secondary_surfaces": "Concrete floors, exposed beams",
+        "accent_features": "Large murals, industrial signage, maritime relics",
+        "dominant": "Industrial",
+        "secondary": "Artistic",
+        "accent": "Maritime",
+        "ambient": "Urban industrial",
+        "genre": null,
+        "architectural_tone": "Industrial functionalism, repurposed",
+        "cultural_tone": "Creative, bohemian, working-class heritage",
+        "palette_bias": "Muted industrial tones with vibrant artistic accents",
+        "flora_base": "Hardy urban plants, coastal grasses",
+        "fauna_base": "Seagulls, pigeons, urban wildlife"
+      },
+      "description": "Ringön is a dynamic industrial island district in Göteborg, buzzing with creative energy and a rich maritime past. Its streets are alive with vibrant street art, reflecting a unique blend of old industrial charm and modern artistic expression.",
+      "searchDesc": "Ringön: Industrial island district with street art and maritime heritage in Göteborg.",
+      "slug": "ringon",
+      "structure": {
+        "spatialLayout": "Loosely defined blocks, winding alleys, open waterfront areas"
+      }
+    },
+    "d99cb62f-1644-4cc0-80bf-70887c93f5ba": {
+      "id": "d99cb62f-1644-4cc0-80bf-70887c93f5ba",
+      "type": "location",
+      "name": "The Shipyard Warehouse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive, rectangular structure with a sprawling horizontal orientation. Its facade is dominated by weathered corrugated metal and large, high, arched window openings. Visible structural beams and industrial fixtures are integrated into its design.",
+        "colorsAndLighting": "Muted tones of rust, grey, and deep blues dominate. Lighting is a mix of natural light filtering through large windows and industrial spotlights creating dramatic shadows.",
+        "atmosphere": "The air carries a faint scent of salt and old metal, with a cool, cavernous feel. There's a low hum of activity, punctuated by echoes of past maritime operations.",
+        "materials": "The primary materials are weathered corrugated metal and rough concrete, showing signs of age and industrial use. Interior elements include exposed wooden beams and raw metal.",
+        "mood": "A sense of functional history and creative rebirth. It's a space that feels both imposing and welcoming, a testament to transformation.",
+        "sounds": "Echoes, machinery hum, distant gulls, creative chatter, industrial clangs.",
+        "primary_surfaces": "Weathered corrugated metal, rough concrete.",
+        "secondary_surfaces": "Exposed wooden beams, raw metal fixtures.",
+        "accent_features": "Graffiti art, large industrial cranes (non-functional), salvaged maritime equipment.",
+        "dominant": "Grey concrete",
+        "secondary": "Rust metal",
+        "accent": "Vibrant graffiti colors",
+        "ambient": "Industrial grey light",
+        "genre": null,
+        "architectural_tone": "Industrial functionalism",
+        "cultural_tone": "Maritime industrial repurposed for arts and events",
+        "palette_bias": "Cool neutrals with earthy accents",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A large, functional warehouse on Ringön, once used for maritime operations, now repurposed for creative studios and event spaces.",
+      "searchDesc": "Massive industrial warehouse on Ringön, Göteborg, repurposed for creative studios and events.",
+      "slug": "the-shipyard-warehouse",
+      "structure": {
+        "spatialLayout": "A vast, open rectangular space with a high ceiling, designed for large-scale operations. Depth is suggested by rows of support columns and the dim recesses."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center of the main facade",
+          "description": "Leads into the main atrium of the warehouse."
+        },
+        {
+          "type": "passage",
+          "position": "side of the building",
+          "description": "Offers access to a more industrial or storage-oriented section."
+        }
+      ],
+      "dominantElements": [
+        "warehouse: shape=rectangular, orientation=sprawling, scale=massive, style=industrial, surfaces=weathered-metal|concrete, openings=large-glass|open-passages, interior_materials=concrete|wood|metal, internal_atmosphere=industrial"
+      ],
+      "uniqueIdentifiers": [
+        "Large, corrugated metal facade",
+        "High, arched window openings",
+        "Visible structural beams and industrial fixtures",
+        "Graffiti art adorning exterior walls",
+        "Sound of distant ship horns"
+      ],
+      "primaryMedia": "media-1767295730213-ypfk1pb6l"
+    },
+    "location-1767295835119-1w1pur4g4": {
+      "id": "location-1767295835119-1w1pur4g4",
+      "type": "location",
+      "name": "KoKoKaka Art Studio",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A vast, cavernous space with high ceilings, exposed industrial elements, and walls adorned with a mix of professional murals and spontaneous graffiti. Large windows allow ample natural light, interspersed with the warm glow of industrial lamps. Piles of art supplies, half-finished projects, and salvaged materials create a dynamic, lived-in atmosphere.",
+        "colorsAndLighting": "Dominant muted industrial tones (grays, browns, deep blues) are punctuated by vibrant splashes of artistic color from murals, canvases, and scattered paint splatters. Lighting is a mix of raw, overhead industrial fixtures and warmer, localized task lighting, creating dramatic contrasts.",
+        "atmosphere": "A palpable sense of creative energy, industrial heritage, and bohemian spirit. The air is thick with the scent of art materials and the hum of creative activity. It feels open, slightly chaotic, yet organized by artistic intent.",
+        "materials": "Primarily weathered corrugated metal, exposed brick, raw concrete, and rough-hewn wood. Touches of polished metal and salvaged industrial components add contrast.",
+        "mood": "Edgy, artistic, repurposed, historic, inspiring, and slightly gritty.",
+        "sounds": "Dripping paint, distant machinery hum, muffled music, creative chatter, scraping tools.",
+        "spatialLayout": "Open-plan, high-ceilinged warehouse with distinct work zones defined by furniture and art installations.",
+        "primary_surfaces": "Weathered metal walls, exposed brick facades",
+        "secondary_surfaces": "Concrete floors, exposed steel beams, rough wooden platforms",
+        "accent_features": "Large-scale murals, custom-made industrial lighting fixtures, found-object sculptures, salvaged signage",
+        "dominant": "Industrial",
+        "secondary": "Artistic",
+        "accent": "Maritime",
+        "ambient": "Urban industrial",
+        "genre": null,
+        "architectural_tone": "Industrial functionalism, repurposed",
+        "cultural_tone": "Creative, bohemian, working-class heritage",
+        "palette_bias": "Muted industrial tones with vibrant artistic accents",
+        "flora_base": "Hardy urban plants",
+        "fauna_base": "Seagulls"
+      },
+      "primaryMedia": "media-1767295835118-l65mb5hdo",
+      "description": "The exterior of the KoKoKaka Art Studio, situated within a large industrial warehouse. The space is defined by its functional, industrial aesthetic, featuring raw concrete and ample glass, with large open passages for access.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "rectangular",
+        "functionalType": "commercial",
+        "elevation": "ground-level",
+        "spatialLayout": "An expansive, open studio space designed for artistic creation, located within a larger industrial building. The area is characterized by large, accessible workspaces and clear sightlines.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "main entrance",
+          "description": "Opens into the main studio area."
+        }
+      ],
+      "dominantElements": [
+        "KoKoKaka Art Studio: shape=rectangular, orientation=sprawling, scale=large, style=industrial, surfaces=concrete|glass, openings=open-passages, interior_materials=concrete|wood|glass, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Industrial warehouse setting",
+        "Large open studio layout",
+        "Artistic functionalism style"
+      ],
+      "searchDesc": "KoKoKaka art studio: Repurposed warehouse, industrial chic, bohemian creative hub.",
+      "slug": "art-studio-called"
+    },
+    "niche-1767295860987-b4s3udkoo": {
+      "id": "niche-1767295860987-b4s3udkoo",
+      "type": "niche",
+      "name": "KoKoKaka Art Studio",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Vast, open industrial floor with unfinished walls, exposed structural elements, and a sense of utilitarian raw beauty. Potential for artistic transformation is palpable.",
+        "colorsAndLighting": "Dominated by muted greys and browns of concrete and brick, punctuated by the dull sheen of rusted metal. Sparse, functional lighting casts stark shadows, with occasional pockets of brighter, focused light from work lamps.",
+        "atmosphere": "Cool, with a faint metallic tang in the air. A sense of quiet potential and utilitarian resilience. The space feels vast and adaptable, awaiting its next creative imprint.",
+        "materials": "Primary materials are raw concrete, exposed brick, and weathered structural steel. Secondary materials include rough wooden palettes and salvaged metal sheeting.",
+        "mood": "Raw, adaptable, expectant, functional, with an underlying artistic potential. It's a canvas awaiting expression.",
+        "sounds": "Distant urban hum, occasional creak of metal, echo of footsteps, faint whir of unseen machinery.",
+        "spatialLayout": "An open, rectangular loft-like space with high ceilings and minimal internal divisions. The primary focus is on creating a large, unobstructed work area.",
+        "primary_surfaces": "Concrete floor, exposed brick walls",
+        "secondary_surfaces": "Rusted metal beams, unfinished drywall patches, wooden crates",
+        "accent_features": "Remnants of old murals, industrial light fixtures, repurposed tool racks",
+        "dominant": "Industrial",
+        "secondary": "Artistic",
+        "accent": "None (inherits from general world)",
+        "ambient": "Urban industrial",
+        "genre": "REQUIRED",
+        "architectural_tone": "Industrial functionalism, repurposed",
+        "cultural_tone": "Creative, bohemian, working-class heritage",
+        "palette_bias": "Muted industrial tones with vibrant artistic accents",
+        "flora_base": "null",
+        "fauna_base": "null"
+      },
+      "primaryMedia": "media-1767295860984-laojjfnf6",
+      "description": "You are now inside the KoKoKaka Art Studio. It's a large, open space with a sprawling, industrial design featuring concrete and glass surfaces. The atmosphere is bright, with open passages allowing movement throughout the studio.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "rectangular",
+        "functionalType": "commercial",
+        "elevation": "ground-level",
+        "spatialLayout": "A large, open studio space with industrial elements and ample natural light. The sprawling layout suggests areas for different artistic activities.",
         "requiredElements": []
       },
       "furnishingDetails": {
         "userSpecified": [
-          "central cascading chocolate fountain",
-          "polished candy-stone altar",
-          "surrounding tiered seating carved from nougat",
-          "glowing caramel stained-glass windows depicting candy legends",
-          "divine wafer-reliefs on walls"
+          "large easels with canvases",
+          "paint splattered work tables",
+          "industrial shelving units with art supplies",
+          "exposed light bulbs hanging from ceiling",
+          "stacks of wood",
+          "metal sculpture bases",
+          "concrete planters with greenery"
         ],
         "suggested": [],
         "placementNotes": []
       },
       "navigableElements": [
         {
-          "type": "archway",
-          "position": "front wall",
-          "description": "archway grand"
-        },
-        {
-          "type": "passage",
-          "position": "left wall",
-          "description": "passage ornate"
-        },
-        {
-          "type": "passage",
-          "position": "right wall",
-          "description": "passage shimmering waterfall"
-        },
-        {
-          "type": "opening",
-          "position": "back wall",
-          "description": "opening observe s"
-        }
-      ],
-      "dominantElements": [
-        "Viewing Platform: shape=organic, orientation=flowing, scale=large, style=sacred, surfaces=stone, openings=minimal, interior_materials=stone|stone|null, internal_atmosphere=bright"
-      ],
-      "uniqueIdentifiers": [
-        "Massive central chocolate fountain",
-        "Warm, rich aroma of chocolate",
-        "Glistening, polished stone surfaces"
-      ],
-      "searchDesc": "Whimsical candy alcove near a grand chocolate fountain, with vibrant colors and sweet scents.",
-      "slug": "null-of-the-grand-chocolate-fountain"
-    },
-    "niche-1767294892410-c4oahlhqs": {
-      "id": "niche-1767294892410-c4oahlhqs",
-      "type": "niche",
-      "name": "The Bathroom",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The washroom interior is a testament to sacred confectionery architecture. Walls are paneled with highly polished dark chocolate that gleams like obsidian, reflecting the soft, ethereal light. Ornate gold accents, reminiscent of gilded pastry designs, adorn the edges of mirrors and stall doorways. The centerpiece is a grand vanity sculpted from solid, dark chocolate, shaped like a miniature, cascading fountain, with golden spouts for taps. Lavatories are sleek, porcelain-white fixtures, subtly framed by swirling caramel-colored marble. Chandeliers are clusters of sparkling, oversized gummy gems that cast colorful, diffused light.",
-        "colorsAndLighting": "Dominated by deep, lustrous browns from the polished chocolate walls and fixtures, contrasted with shimmering gold detailing on architectural elements and accents. Soft, warm, ambient lighting emanates from the gummy-gem chandeliers and hidden sources, creating a gentle glow that highlights the reflective surfaces. Subtle, golden spotlights illuminate the vanity and key decorative features.",
-        "atmosphere": "The air is thick with a rich, comforting aroma of warm, dark chocolate, subtly undercut by hints of vanilla and caramel. A faint, pleasant warmth pervades the space, suggesting the continuous, gentle flow of sweet essences. The atmosphere is one of profound indulgence, luxury, and serene awe, as if stepping into a sacred shrine dedicated to sweetness.",
-        "materials": "The primary material is a hyper-realistic, polished dark chocolate, functioning as a sophisticated interior finish. Gleaming polished gold is used for decorative accents and intricate detailing. Swirling caramel-colored marble forms secondary surfaces and flooring. Large, clear gummy-gems are used for lighting fixtures, and white porcelain for the sanitary ware.",
-        "mood": "Indulgent, luxurious, awe-inspiring, serene, celebratory, and deeply comforting.",
-        "sounds": "Soft chimes, gentle hum of water, faint whispers of sweet melodies.",
-        "spatialLayout": "A spacious, rectangular room with a high, vaulted ceiling, creating a sense of grandeur. The vanity is centrally positioned, with stalls discreetly arranged along the perimeter.",
-        "primary_surfaces": "Polished dark chocolate panels with a high-gloss sheen.",
-        "secondary_surfaces": "Gleaming polished gold accents, caramel-colored marble.",
-        "accent_features": "Ornate golden decorative elements on mirror frames and stall entrances, sculpted chocolate fountain vanity, gummy-gem chandeliers.",
-        "dominant": "Dark brown (chocolate)",
-        "secondary": "Gold",
-        "accent": "Caramel (marble), clear/colored (gummy gems)",
-        "ambient": "Soft, warm glow with subtle jewel tones from the chandeliers.",
-        "genre": "Fantasy",
-        "architectural_tone": "Sacred confectionery monument",
-        "cultural_tone": "A central hub for a candy-themed world",
-        "palette_bias": "Browns and Golds",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767294892408-22p1dclxg",
-      "description": "You are in a small, enclosed bathroom. The air is clean and slightly sterile. A single, flat ceiling emits a bright light, illuminating the predominantly tiled surfaces. There is a door leading out.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "small",
-        "orientation": "cubic",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "residential",
-        "elevation": "ground-level",
-        "spatialLayout": "A small, enclosed room primarily designed for personal hygiene. Typically contains sanitary fixtures and plumbing.",
-        "requiredElements": []
-      },
-      "navigableElements": [
-        {
           "type": "door",
-          "position": "entrance",
-          "description": "leads to hallway"
+          "position": "front wall",
+          "description": "door large glass garage"
+        },
+        {
+          "type": "archway",
+          "position": "left",
+          "description": "archway concrete"
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "passage open"
+        },
+        {
+          "type": "stairs",
+          "position": "right wall",
+          "description": "stairs metal  leading up"
         }
       ],
       "dominantElements": [
-        "Bathroom Fixtures: shape=organic, orientation=compact, scale=small, style=minimalist, surfaces=porcelain, openings=minimal, interior_materials=tile|tile|tile, internal_atmosphere=sterile"
+        "KoKoKaka Art Studio: shape=rectangular, orientation=sprawling, scale=large, style=industrial, surfaces=concrete|glass, openings=open-passages, interior_materials=concrete|wood|glass, internal_atmosphere=bright"
       ],
       "uniqueIdentifiers": [
-        "Porcelain sanitary fixtures",
-        "Tiled surfaces",
-        "Plumbing connections"
+        "Industrial design",
+        "Open-plan layout",
+        "Ample natural light"
       ],
-      "searchDesc": "Opulent confectionery washroom with chocolate, gold, and sweet-themed decor.",
-      "slug": "the-confectionery-washroom"
+      "searchDesc": "Raw, adaptable art studio space with industrial roots and creative potential.",
+      "slug": "null-of-kokokaka-art-studio"
     }
   },
   "views": {},
@@ -2038,24 +2289,52 @@
       ]
     },
     {
-      "id": "loc-1767294678253-7ihi6q0jy",
+      "id": "loc-1767295449666-biatufiam",
       "type": "host",
       "children": [
         {
-          "id": "ec4f3fa7-7ae2-4507-b07f-e4f1659d8c0a",
+          "id": "1ad69cac-96ed-409a-97c2-f999a4789779",
           "type": "region",
           "children": [
             {
-              "id": "aff8e427-966f-447d-aa6d-17a85ec395c1",
+              "id": "f64d706d-3ba8-4f37-b2d7-398b2f1c8b24",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "location-1767295490413-7f1y8511k",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1767294867732-aegleel6i",
+                  "id": "niche-1767295607558-cmu8xohip",
                   "type": "niche",
                   "children": []
-                },
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767295714361-wdsqtbsfj",
+      "type": "host",
+      "children": [
+        {
+          "id": "e9dd693a-793d-4e93-a024-d6461b0b4c4d",
+          "type": "region",
+          "children": [
+            {
+              "id": "d99cb62f-1644-4cc0-80bf-70887c93f5ba",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "location-1767295835119-1w1pur4g4",
+              "type": "location",
+              "children": [
                 {
-                  "id": "niche-1767294892410-c4oahlhqs",
+                  "id": "niche-1767295860987-b4s3udkoo",
                   "type": "niche",
                   "children": []
                 }
@@ -2069,6 +2348,7 @@
   "pinnedIds": [
     "loc-1767101449144-ncoxq6b1a",
     "loc-1767152996093-g79aebj4c",
-    "loc-1767294678253-7ihi6q0jy"
+    "loc-1767295449666-biatufiam",
+    "loc-1767295714361-wdsqtbsfj"
   ]
 }

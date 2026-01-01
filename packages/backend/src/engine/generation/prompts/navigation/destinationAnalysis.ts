@@ -41,7 +41,39 @@ interface DestinationAnalysisInput {
 }
 
 /**
+ * Dynamic content for cached generation
+ * Builds only the context-specific portion of the prompt
+ */
+export function destinationAnalysisDynamic(input: DestinationAnalysisInput): string {
+  const { userPrompt, context } = input;
+  
+  const mergedDNA = (context.parentNode?.dna && context.currentNode.dna)
+    ? mergeDNA(context.parentNode.dna as any, context.currentNode.dna as any)
+    : (context.currentNode.dna || {}) as any;
+
+  // Build DNA context - only non-empty fields
+  const dnaLines: string[] = [];
+  if (mergedDNA.genre) dnaLines.push(`Genre: ${mergedDNA.genre}`);
+  if (mergedDNA.architectural_tone) dnaLines.push(`Style: ${mergedDNA.architectural_tone}`);
+  if (mergedDNA.cultural_tone) dnaLines.push(`Cultural: ${mergedDNA.cultural_tone}`);
+  if (mergedDNA.mood) dnaLines.push(`Mood: ${mergedDNA.mood}`);
+  if (mergedDNA.materials) dnaLines.push(`Materials: ${mergedDNA.materials}`);
+  if (mergedDNA.palette_bias) dnaLines.push(`Palette: ${mergedDNA.palette_bias}`);
+  if (mergedDNA.atmosphere) dnaLines.push(`Atmosphere: ${mergedDNA.atmosphere}`);
+
+  return `CURRENT: "${context.currentNode.name}" (${context.currentNode.type})
+${context.currentNode.data?.description ? `Desc: ${context.currentNode.data.description}` : ''}
+PARENT: "${context.parentNode?.name || 'Unknown'}" (${context.parentNode?.type || 'unknown'})
+
+INHERITED STYLE:
+${dnaLines.join('\n')}
+
+DESTINATION: "${userPrompt}"`;
+}
+
+/**
  * Generate prompt for LLM to analyze destination and synthesize with context
+ * Legacy function - combines static + dynamic for non-cached usage
  */
 export function destinationAnalysisPrompt(input: DestinationAnalysisInput): string {
   const { userPrompt, context } = input;

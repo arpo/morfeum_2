@@ -2,11 +2,12 @@
  * Destination Analyzer
  * LLM-powered analysis of GOTO command destinations
  * Synthesizes user's destination prompt with parent location context
+ * 
+ * Uses Gemini Explicit Caching for 90% cost reduction on static prompt content.
  */
 
-import * as mzooService from '../../../services/mzoo.service';
-import { AI_MODELS } from '../../../config';
-import { destinationAnalysisPrompt } from '../../generation/prompts/navigation';
+import { generateCachedText, generateText } from '../../../services/mzoo';
+import { destinationAnalysisPrompt, destinationAnalysisDynamic } from '../../generation/prompts/navigation';
 import type { NavigationContext, DestinationAnalysis, ScenePerspective } from '../types';
 
 /**
@@ -28,24 +29,49 @@ export async function analyzeDestination(
     context
   });
 
-  // Call LLM for destination analysis
-  const response = await mzooService.generateText(
-    apiKey,
-    [{ role: 'user', content: prompt }],
-    AI_MODELS.NAVIGATOR
-  );
+  // Build dynamic prompt for cached generation
+  const dynamicPrompt = destinationAnalysisDynamic({
+    userPrompt,
+    context
+  });
 
-  // Handle errors
-  if (response.error || !response.data) {
-    console.error('[DestinationAnalyzer] LLM call failed:', response.error);
-    // Return fallback with user's input as-is
+  // Use cached generation for destination analysis
+  let responseText: string;
+  try {
+    const cachedResult = await generateCachedText(
+      apiKey,
+      'morfeum-navigation',
+      dynamicPrompt
+    );
+    
+    console.log(`[DestinationAnalyzer] Cached generation: cacheHit=${cachedResult.cacheHit}, cachedTokens=${cachedResult.usage?.cachedTokens || 0}`);
+    responseText = cachedResult.text;
+  } catch (cacheError) {
+    console.warn('[DestinationAnalyzer] Cached generation failed, using fallback:', cacheError);
+    // Fallback to non-cached generation using full prompt
+    const response = await generateText(
+      apiKey,
+      [{ role: 'user', content: prompt }],
+      'gemini-2.0-flash'
+    );
+    
+    if (response.error || !response.data) {
+      console.error('[DestinationAnalyzer] LLM call failed:', response.error);
+      return createFallbackAnalysis(userPrompt);
+    }
+    
+    responseText = typeof response.data === 'string' 
+      ? response.data 
+      : (response.data.text || JSON.stringify(response.data));
+  }
+
+  // Handle empty response
+  if (!responseText) {
+    console.error('[DestinationAnalyzer] Empty response from LLM');
     return createFallbackAnalysis(userPrompt);
   }
 
-  // Extract text from response
-  const text = typeof response.data === 'string' 
-    ? response.data 
-    : (response.data.text || JSON.stringify(response.data));
+  const text = responseText;
 
   // Clean up response (remove markdown code fences if present)
   let cleaned = text.trim();
