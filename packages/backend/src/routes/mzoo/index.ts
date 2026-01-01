@@ -10,6 +10,7 @@ import { aiRouter } from './ai';
 import { navigationRouter } from './navigation';
 import locationsRouter from './locations';
 import hierarchyRouter from './hierarchy';
+import { cacheRouter } from './cache';
 
 const router = Router();
 
@@ -21,6 +22,7 @@ router.use('/prompts', promptsRouter);
 router.use('/navigation', navigationRouter);
 router.use('/locations', locationsRouter);
 router.use('/hierarchy', hierarchyRouter);
+router.use('/cache', cacheRouter);
 router.use('/', aiRouter);
 
 export { router as mzooRouter };

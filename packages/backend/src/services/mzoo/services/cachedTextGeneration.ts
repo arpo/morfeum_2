@@ -1,6 +1,8 @@
 /**
  * MZOO Cached Text Generation Service
  * Generates text using Gemini Explicit Caching for 90% token cost reduction
+ * 
+ * Set DISABLE_CACHING=true environment variable to bypass caching during development
  */
 
 import { mzooPost } from '../client/httpClient';
@@ -9,6 +11,13 @@ import { generateText } from './textGeneration';
 import type { CacheGroupId } from '../../../engine/generation/prompts/cacheContent';
 
 const CACHE_ENDPOINT = 'https://www.mzoo.app/api/v1/ai/gemini';
+
+/**
+ * Check if caching is disabled via environment variable
+ */
+const isCachingDisabled = (): boolean => {
+  return process.env.DISABLE_CACHING === 'true';
+};
 
 /**
  * Thinking mode configuration
@@ -51,6 +60,12 @@ export async function generateCachedText(
 ): Promise<CachedTextResponse> {
   console.log(`[CachedTextGen] Starting cached generation for group: ${cacheGroup}`);
   console.log(`[CachedTextGen] Dynamic prompt length: ${dynamicPrompt.length} chars`);
+  
+  // Check if caching is disabled via environment variable
+  if (isCachingDisabled()) {
+    console.log(`[CachedTextGen] ⚠️ CACHING DISABLED via DISABLE_CACHING env variable`);
+    return fallbackToNonCached(apiKey, cacheGroup, dynamicPrompt);
+  }
   
   try {
     // Ensure cache exists
