@@ -1,6 +1,8 @@
 /**
  * Character Generation Pipeline
  * New engine implementation using migrated prompts
+ * 
+ * Uses Gemini Explicit Caching for 90% cost reduction on static prompt content.
  */
 
 import { parseJSON } from '../utils/parseJSON';
@@ -9,44 +11,62 @@ import type { EntitySeed, VisualAnalysis, DeepProfile } from '../types';
 import { getPrompt } from '../generation/prompts';
 
 // Import new prompt templates
-import { characterSeedPrompt } from '../generation/prompts/characters/characterSeed';
+import { characterSeedPrompt, characterSeedDynamic } from '../generation/prompts/characters/characterSeed';
 import { characterImagePrompt } from '../generation/prompts/characters/characterImage';
 import { characterVisualAnalysisPrompt } from '../generation/prompts/characters/characterVisualAnalysis';
-import { characterDeepProfilePrompt } from '../generation/prompts/characters/characterDeepProfile';
+import { characterDeepProfilePrompt, characterDeepProfileDynamic } from '../generation/prompts/characters/characterDeepProfile';
 
 // Import shared utilities
 import { generateImage } from './shared/imageGeneration';
 import { analyzeImageWithPrompt } from './shared/visualAnalysis';
 import { PipelineHelper } from './shared/pipelineHelpers';
 import { saveAndPinEntity, buildCharacterEntity } from './shared/entityPersistence';
-import * as mzooService from '../../services/mzoo';
+import { generateCachedText, generateText } from '../../services/mzoo';
 
 /**
  * Generate character seed
+ * Uses cached generation for 90% cost reduction
  */
 export async function generateCharacterSeed(
   userPrompt: string,
   apiKey: string,
   signal?: AbortSignal
 ): Promise<EntitySeed> {
-  const prompt = characterSeedPrompt(userPrompt);
+  const dynamicPrompt = characterSeedDynamic(userPrompt);
   
-  const messages = [
-    { role: 'system', content: prompt },
-    { role: 'user', content: userPrompt }
-  ];
+  let responseText: string;
+  
+  try {
+    const cachedResult = await generateCachedText(
+      apiKey,
+      'morfeum-character-creation',
+      dynamicPrompt
+    );
+    
+    console.log(`[CharacterPipeline] Seed generation - cacheHit=${cachedResult.cacheHit}, cachedTokens=${cachedResult.usage?.cachedTokens || 0}`);
+    responseText = cachedResult.text;
+  } catch (cacheError) {
+    console.warn('[CharacterPipeline] Cached seed generation failed, using fallback:', cacheError);
+    // Fallback to non-cached generation
+    const prompt = characterSeedPrompt(userPrompt);
+    const messages = [
+      { role: 'system', content: prompt },
+      { role: 'user', content: userPrompt }
+    ];
 
-  const result = await mzooService.generateText(
-    apiKey,
-    messages,
-    AI_MODELS.SEED_GENERATION
-  );
+    const result = await generateText(
+      apiKey,
+      messages,
+      AI_MODELS.SEED_GENERATION
+    );
 
-  if (result.error || !result.data) {
-    throw new Error(result.error || 'No seed data returned');
+    if (result.error || !result.data) {
+      throw new Error(result.error || 'No seed data returned');
+    }
+    responseText = result.data.text;
   }
 
-  const seed = parseJSON<EntitySeed>(result.data.text);
+  const seed = parseJSON<EntitySeed>(responseText);
   seed.originalPrompt = userPrompt;
   
   return seed;
@@ -105,6 +125,7 @@ export async function analyzeCharacterImage(
 
 /**
  * Enrich character profile
+ * Uses cached generation for 90% cost reduction
  */
 export async function enrichCharacterProfile(
   seed: EntitySeed,
@@ -116,28 +137,41 @@ export async function enrichCharacterProfile(
   const visionJson = JSON.stringify(visualAnalysis, null, 2);
   const originalPrompt = seed.originalPrompt || 'No specific request provided';
 
-  const enrichmentPrompt = characterDeepProfilePrompt(
-    seedJson,
-    visionJson,
-    originalPrompt
-  );
+  const dynamicPrompt = characterDeepProfileDynamic(seedJson, visionJson, originalPrompt);
+  
+  let responseText: string;
+  
+  try {
+    const cachedResult = await generateCachedText(
+      apiKey,
+      'morfeum-character-creation',
+      dynamicPrompt
+    );
+    
+    console.log(`[CharacterPipeline] Profile enrichment - cacheHit=${cachedResult.cacheHit}, cachedTokens=${cachedResult.usage?.cachedTokens || 0}`);
+    responseText = cachedResult.text;
+  } catch (cacheError) {
+    console.warn('[CharacterPipeline] Cached profile enrichment failed, using fallback:', cacheError);
+    // Fallback to non-cached generation
+    const enrichmentPrompt = characterDeepProfilePrompt(seedJson, visionJson, originalPrompt);
+    const messages = [
+      { role: 'system', content: enrichmentPrompt },
+      { role: 'user', content: 'Generate the complete character profile based on the provided data.' }
+    ];
 
-  const messages = [
-    { role: 'system', content: enrichmentPrompt },
-    { role: 'user', content: 'Generate the complete character profile based on the provided data.' }
-  ];
+    const result = await generateText(
+      apiKey,
+      messages,
+      AI_MODELS.PROFILE_ENRICHMENT
+    );
 
-  const result = await mzooService.generateText(
-    apiKey,
-    messages,
-    AI_MODELS.PROFILE_ENRICHMENT
-  );
-
-  if (result.error || !result.data) {
-    throw new Error(result.error || 'No profile data returned');
+    if (result.error || !result.data) {
+      throw new Error(result.error || 'No profile data returned');
+    }
+    responseText = result.data.text;
   }
 
-  const profile = parseJSON<DeepProfile>(result.data.text);
+  const profile = parseJSON<DeepProfile>(responseText);
   return profile;
 }
 

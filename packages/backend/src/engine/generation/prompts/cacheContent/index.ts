@@ -83,8 +83,9 @@ ${VISION_DESCRIPTION_STATIC}
 `;
 
 /**
- * Cache Group 3: Navigation (~2,800 tokens)
+ * Cache Group 3: Navigation (~3,200 tokens)
  * Used for: GOTO, GO_INSIDE commands, structure analysis
+ * IMPORTANT: Must be ≥2,048 tokens for Gemini caching to work
  */
 export const CACHE_NAVIGATION = `
 === MORFEUM NAVIGATION SYSTEM ===
@@ -102,6 +103,70 @@ ${DESTINATION_ANALYSIS_STATIC}
 === CONTAINER TYPES ===
 
 ${getContainerTypeDescriptions()}
+
+=== ELEMENT RULES FOR NAVIGATION ===
+
+${DOMINANT_ELEMENTS_RULES}
+
+${NAVIGABLE_ELEMENTS_RULES}
+
+=== NAVIGATION COMMAND REFERENCE ===
+
+GOTO Command:
+- Creates a NEW location node as sibling or child
+- User specifies destination by name or description
+- System analyzes destination and determines perspective (interior/exterior/open-air)
+- Examples: "goto the castle", "goto a cozy cafe", "goto the garden"
+
+GO_INSIDE Command:
+- Enters an EXISTING dominant element from current location
+- Creates interior niche within the element
+- Must target an enterable structure (building, vehicle, container)
+- Examples: "go inside the tower", "enter the car", "step into the tent"
+
+PERSPECTIVE RULES:
+- INTERIOR: Enclosed space with roof/ceiling (rooms, cabins, caves)
+  - roofType: domed, flat, vaulted, pitched, arched
+  - openings: windows, doors, passages
+  
+- EXTERIOR: Open outdoor space (parks, plazas, streets, building facades)
+  - roofType: open-sky
+  - Shows outside view of structures
+  
+- OPEN-AIR: Semi-enclosed with open sky (balconies, terraces, rooftops, decks)
+  - roofType: open-sky
+  - May have partial walls/railings
+
+SCALE HIERARCHY:
+- small: 2-4 meters (closet, bathroom, car interior)
+- medium: 4-10 meters (room, office, small shop)
+- large: 10-30+ meters (hall, warehouse, plaza)
+
+ELEVATION TYPES:
+- ground-level: Default street/floor level
+- rooftop: On top of building
+- elevated: Upper floors, towers, penthouses
+- underground: Basements, cellars, crypts
+- floating: Airborne, suspended in air
+- suspended: Hanging from structure
+
+FORM TYPES:
+- rectangular: Standard box shape
+- round: Circular floor plan
+- cylindrical: Vertical cylinder (tower)
+- spherical: Dome or ball
+- organic: Irregular natural shape
+- arched: Gothic or curved
+- irregular: Non-standard shape
+
+FUNCTIONAL TYPES:
+- residential: Homes, apartments, bedrooms
+- commercial: Shops, restaurants, offices
+- religious: Churches, temples, shrines
+- industrial: Factories, warehouses, workshops
+- civic: Museums, libraries, stations
+- entertainment: Bars, theaters, arenas
+- natural: Outdoor natural spaces
 `;
 
 /**

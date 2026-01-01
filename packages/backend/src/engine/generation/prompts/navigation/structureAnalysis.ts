@@ -75,6 +75,85 @@ OUTPUT TEMPLATE (pure JSON):
   "description": "Brief description matching perspective"
 }`;
 
+/**
+ * Dynamic content for cached generation
+ * Builds only the context-specific portion of the prompt
+ */
+export function structureAnalysisDynamic(input: StructureAnalysisInput): string {
+  const { userPrompt, context, perspective, isGotoCommand } = input;
+
+  const currentDna = context.currentNode.dna as any;
+  const currentNodeData = context.currentNode.data as any;
+  const parentStructure = currentNodeData?.structure || currentDna?.structure;
+  
+  const perspectiveHint = perspective 
+    ? `PERSPECTIVE OVERRIDE: ${perspective.toUpperCase()}`
+    : '';
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GOTO COMMAND - Create NEW location from destination
+  // ═══════════════════════════════════════════════════════════════════════════
+  if (isGotoCommand) {
+    return `COMMAND: GOTO (create new destination)
+
+USER INPUT: "${userPrompt}"
+${perspectiveHint}
+
+STYLE CONTEXT:
+- Architectural tone: "${currentDna?.architectural_tone || currentDna?.genre || 'default'}"
+- Palette: "${currentDna?.palette_bias || 'from destination'}"
+
+TASK: Create new location structure from user's destination description.
+Extract name from input (e.g., "to the park" → "The Park").
+Return pure JSON matching the output template.`;
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GO_INSIDE COMMAND - Enter existing space
+  // ═══════════════════════════════════════════════════════════════════════════
+  const dominantElements = currentNodeData?.dominantElements || [];
+  const targetElementInfo = findTargetElementInfo(userPrompt, dominantElements);
+  
+  let contextSection: string;
+  let structureHints: string;
+  
+  if (targetElementInfo) {
+    // Entering a specific dominant element
+    contextSection = `ENTERING: "${targetElementInfo.name}" inside "${context.currentNode.name}"
+TARGET ELEMENT: ${targetElementInfo.fullDescription}
+- Shape: ${targetElementInfo.shape || 'from element'}
+- Scale: ${targetElementInfo.scale || 'element size'}
+- Atmosphere: ${targetElementInfo.internalAtmosphere || 'element style'}`;
+    
+    structureHints = `Creating INTERIOR of "${targetElementInfo.name}", NOT another "${context.currentNode.name}".
+dominantElements should be OBJECTS/FURNITURE inside (NOT "${targetElementInfo.name}").`;
+  } else {
+    // Generic space entry
+    contextSection = `CURRENT LOCATION: "${context.currentNode.name}" (${context.currentNode.type})
+${context.parentNode ? `PARENT: "${context.parentNode.name}" (${context.parentNode.type})` : ''}
+- Description: "${context.currentNode.data?.description || 'none'}"
+- Cultural tone: "${currentDna?.cultural_tone || 'none'}"
+- Existing elements: ${JSON.stringify(dominantElements.slice(0, 3))}
+- Parent form: ${parentStructure?.form || 'determine'}
+- Parent scale: ${parentStructure?.scale || 'determine'}`;
+    
+    structureHints = `Match parent structure (form, scale, orientation).
+Scale must be ≤ parent scale.`;
+  }
+
+  return `COMMAND: GO_INSIDE (enter space)
+
+USER INPUT: "${userPrompt}"
+${perspectiveHint}
+
+${contextSection}
+
+${structureHints}
+
+TASK: Analyze structure of the space being entered.
+Return pure JSON matching the output template.`;
+}
+
 export function structureAnalysisPrompt(input: StructureAnalysisInput): string {
   const { userPrompt, context, perspective, isGotoCommand } = input;
 

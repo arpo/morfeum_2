@@ -1117,640 +1117,6 @@
       "searchDesc": "Crowded outdoor bistro with vintage furniture, plants, string lights, chalk art, rugs, stage, and artists.",
       "slug": "the-bohemian-bistro"
     },
-    "loc-1767112081225-dlqhou1t1": {
-      "id": "loc-1767112081225-dlqhou1t1",
-      "type": "host",
-      "name": "Urban Metropolis",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Skyline silhouette, geographic features, vast landscapes, towering skyscrapers, dense urban fabric, bridges, riverfronts",
-        "colorsAndLighting": "City lights, neon glow, street lamps, illuminated landmarks, deep blue night sky",
-        "atmosphere": "Bustling, energetic, diverse, cosmopolitan, constant motion",
-        "materials": "Glass, steel, concrete, asphalt, stone",
-        "mood": "Energetic, exciting, ambitious, dynamic, overwhelming",
-        "sounds": "Constant traffic, distant sirens, crowd noise, construction, ambient city hum",
-        "primary_surfaces": "Skyscrapers, concrete roads, large plazas",
-        "secondary_surfaces": "Office buildings, residential towers, infrastructure",
-        "accent_features": "Iconic landmarks, illuminated bridges, rooftop gardens",
-        "dominant": "Modern skyscrapers",
-        "secondary": "Older historic buildings",
-        "accent": "City lights and vibrant nightlife",
-        "ambient": "Urban hum and constant activity",
-        "genre": "REQUIRED",
-        "architectural_tone": "REQUIRED",
-        "cultural_tone": "REQUIRED",
-        "palette_bias": "REQUIRED",
-        "flora_base": "REQUIRED",
-        "fauna_base": "REQUIRED"
-      },
-      "description": "A sprawling city of diverse architecture and vibrant nightlife. This metropolis is a global hub for commerce, culture, and entertainment, characterized by its towering skyscrapers and endless urban sprawl.",
-      "searchDesc": "Sprawling metropolis with diverse architecture and vibrant nightlife.",
-      "slug": "urban-metropolis",
-      "structure": {
-        "spatialLayout": "Grid-like street patterns, vast avenues, dense downtown core, sprawling suburbs"
-      }
-    },
-    "d635e34b-2107-421a-985a-945e90d1aba8": {
-      "id": "d635e34b-2107-421a-985a-945e90d1aba8",
-      "type": "region",
-      "name": "The Art District",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "District architecture, street patterns, neighborhood character, vibrant murals, repurposed industrial buildings, galleries, studios",
-        "colorsAndLighting": "Mix of warm and cool artificial lights, colorful murals, neon signs, illuminated art installations",
-        "atmosphere": "Energetic, creative, bohemian, social, bustling",
-        "materials": "Brick, concrete, steel, glass, reclaimed wood, graffiti",
-        "mood": "Lively, social, energetic, inspiring, trendy",
-        "sounds": "Distant traffic, street performers, chatter, music from venues",
-        "primary_surfaces": "Brick facades, concrete sidewalks, cobblestone streets",
-        "secondary_surfaces": "Steel fire escapes, large windows, wooden storefronts",
-        "accent_features": "Murals, sculptures, public art, unique signage",
-        "dominant": "Historic industrial architecture",
-        "secondary": "Modern artistic additions",
-        "accent": "Street art and vibrant murals",
-        "ambient": "Urban bustle, creative energy",
-        "genre": null,
-        "architectural_tone": "Historic Industrial meets Bohemian Modern",
-        "cultural_tone": "Artistic, bohemian, avant-garde",
-        "palette_bias": "Vibrant and eclectic",
-        "flora_base": "Street trees, planters with seasonal flowers",
-        "fauna_base": "Pigeons, urban wildlife"
-      },
-      "description": "A redeveloped urban area known for its creative spaces and lively atmosphere. This district pulses with artistic energy, evident in its vibrant street art and eclectic mix of historic and contemporary architecture.",
-      "searchDesc": "Art District: Redeveloped urban area with creative spaces and lively atmosphere.",
-      "slug": "the-art-district",
-      "structure": {
-        "spatialLayout": "Narrow streets, open plazas, hidden alleys, courtyards"
-      },
-      "primaryMedia": "media-1767152172174-0e9868kkp"
-    },
-    "fa0a1c36-718b-49eb-af0b-6cce144cb1ea": {
-      "id": "fa0a1c36-718b-49eb-af0b-6cce144cb1ea",
-      "type": "location",
-      "name": "The Elephant Mural Courtyard",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A dynamic urban courtyard defined by the juxtaposition of weathered, old brick buildings and sleek, modern structures with slatted facades. A massive, brightly illuminated abstract elephant mural dominates one brick facade, drawing the eye.",
-        "colorsAndLighting": "Illuminated by a cool, deep blue from the night sky reflected on the glass canopy, contrasted with warm and cool artificial lights from within the buildings and from lighting fixtures. The purple mural is a vibrant focal point.",
-        "atmosphere": "The air is alive with the buzz of conversation and distant sounds of performance. A gentle breeze might rustle the leaves of the red-foliaged trees. The temperature is pleasant for an evening gathering.",
-        "materials": "Dominant materials include weathered brick, reflective glass, and brushed metal slats. Wood is present in benches, and concrete forms the paved ground.",
-        "mood": "Lively, social, and energetic. It feels like a popular destination for evening entertainment and community gathering.",
-        "sounds": "Chatter, laughter, distant music, foot traffic, occasional performance.",
-        "primary_surfaces": "weathered brick, reflective glass",
-        "secondary_surfaces": "slatted metal, wood, concrete",
-        "accent_features": "large elephant mural, red foliage trees, glass canopy",
-        "dominant": "deep blue sky",
-        "secondary": "vibrant purple mural",
-        "accent": "warm and cool artificial lights",
-        "ambient": "dynamic artificial lighting",
-        "genre": null,
-        "architectural_tone": "historic industrial meets futuristic modern",
-        "cultural_tone": "art district gathering space, nightlife",
-        "palette_bias": "blues, purples, reds, warm neutrals",
-        "flora_base": "small trees with red foliage",
-        "fauna_base": "None"
-      },
-      "description": "A bustling urban courtyard at night, illuminated by mixed artificial lights and a grand glass canopy. Bordered by old brick buildings with windows and modern structures with slatted facades. EXTERIOR VIEW.",
-      "searchDesc": "Nighttime urban courtyard with elephant mural, glass canopy, diverse crowd, and mixed architecture.",
-      "slug": "the-elephant-mural-courtyard",
-      "structure": {
-        "spatialLayout": "An open, rectangular courtyard with a grand, spanning glass canopy overhead. Buildings border the space, creating a sense of enclosure while the canopy suggests openness."
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "ground level, one of the brick buildings",
-          "description": "leads into the interior of the brick buildings"
-        },
-        {
-          "type": "passage",
-          "position": "along the edge of the courtyard",
-          "description": "leads to other parts of the Art District"
-        }
-      ],
-      "dominantElements": [
-        "brick building: shape=rectangular, orientation=vertical, scale=large, style=historic, surfaces=weathered brick, openings=arched-windows|large-glass, interior_materials=brick|wood|concrete, internal_atmosphere=dim",
-        "modern building: shape=rectangular, orientation=vertical, scale=large, style=futuristic, surfaces=glass|metallic-slatted, openings=large-glass, interior_materials=glass|metal|concrete, internal_atmosphere=bright"
-      ],
-      "uniqueIdentifiers": [
-        "Grand glass canopy",
-        "Large, brightly lit elephant mural",
-        "Vibrant red foliage trees",
-        "Mix of old brick and modern architecture"
-      ],
-      "primaryMedia": "media-1767112098518-kgosder6r"
-    },
-    "location-1767112200109-o97qw0d92": {
-      "id": "location-1767112200109-o97qw0d92",
-      "type": "location",
-      "name": "Glass Roof Area",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Open, airy space with exposed industrial architecture softened by lush greenery and artistic installations. Sunlight streams through the glass roof, creating dynamic light patterns.",
-        "colorsAndLighting": "A vibrant spectrum, with dominant earthy tones of brick and concrete, punctuated by colorful textiles, neon art pieces, and the shifting hues of natural light. Warm spotlights highlight seating areas.",
-        "atmosphere": "Buzzing with creative energy and social interaction. A gentle breeze flows through, carrying faint city sounds and the scent of plants.",
-        "materials": "Predominantly glass and steel for the structure, with interior surfaces featuring exposed brick, polished concrete, reclaimed wood accents, and plush, eclectic fabrics.",
-        "mood": "Inspiring, social, energetic, trendy, bohemian, avant-garde.",
-        "sounds": "Chatter, light music, distant city hum, rustling leaves.",
-        "spatialLayout": "Sprawling and open, with defined zones for seating and interaction, all unified under a high, transparent ceiling.",
-        "primary_surfaces": "Glass (roof), exposed brick, concrete",
-        "secondary_surfaces": "Steel framework, reclaimed wood, polished concrete flooring, fabric upholstery",
-        "accent_features": "Large-scale murals, hanging art installations, vibrant potted plants, eclectic seating arrangements, vintage industrial lighting fixtures.",
-        "dominant": "Historic industrial architecture (subtle concrete and brick tones)",
-        "secondary": "Modern artistic additions (vibrant murals, neon)",
-        "accent": "Street art and vibrant murals",
-        "ambient": "Sun-drenched with dynamic light shifts",
-        "genre": null,
-        "architectural_tone": "Historic Industrial meets Bohemian Modern",
-        "cultural_tone": "Artistic, bohemian, avant-garde",
-        "palette_bias": "Vibrant and eclectic",
-        "flora_base": "Lush green walls, large potted plants",
-        "fauna_base": "Pigeons, urban wildlife"
-      },
-      "primaryMedia": "media-1767112200107-b5p7n0sk2",
-      "description": "An expansive outdoor area sheltered by a magnificent glass roof, seamlessly integrating the historic industrial feel with sleek, futuristic modern design. The blues, purples, and reds of the stylized lighting cast an otherworldly glow, accented by warm neutral tones within the polished metallic and glass surfaces.",
-      "structure": {
-        "form": "irregular",
-        "roofType": "domed",
-        "scale": "medium",
-        "orientation": "wide",
-        "openings": "large-glass",
-        "openingShape": "rectangular",
-        "functionalType": "entertainment",
-        "elevation": "ground-level",
-        "spatialLayout": "A sprawling area covered by a large, transparent glass roof, creating an open, airy space that blends the indoors with the outdoors. The structure is designed to evoke a sense of wonder and futurism within an industrial framework.",
-        "requiredElements": [
-          "glass roof"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "center",
-          "description": "Main entrance leading into the vibrant atrium."
-        },
-        {
-          "type": "door",
-          "position": "east wall",
-          "description": "Exit to a bustling street."
-        },
-        {
-          "type": "stairs",
-          "position": "northwest corner",
-          "description": "Ascends to a mezzanine level."
-        }
-      ],
-      "dominantElements": [
-        "Glass Atrium: shape=organic, orientation=sprawling, scale=medium, style=futuristic, surfaces=glass, openings=large-glass, interior_materials=metallic|tile|glass, internal_atmosphere=bright"
-      ],
-      "uniqueIdentifiers": [
-        "vast glass canopy",
-        "industrial-futuristic aesthetic"
-      ],
-      "searchDesc": "Glass Atrium: Industrial charm meets bohemian spirit under a stunning glass roof.",
-      "slug": "glass-atrium"
-    },
-    "niche-1767112255684-391unmsqm": {
-      "id": "niche-1767112255684-391unmsqm",
-      "type": "niche",
-      "name": "brick building",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A spacious, open-air courtyard surrounded by a weathered, historic brick building. The walls are heavily adorned with a massive, vibrant elephant mural, interspersed with smaller graffiti tags and stencils. Exposed steel beams and industrial-style lighting fixtures are visible. Seating is a mix of salvaged benches, colorful mismatched chairs, and small tables.",
-        "colorsAndLighting": "Dominated by the rich, earthy tones of the brick, punctuated by the riotous colors of the elephant mural and street art. Warm, industrial-style string lights and spotlights illuminate the space, casting dynamic shadows. Occasional neon signage from nearby businesses adds a pop of contrasting color.",
-        "atmosphere": "Lively, energetic, and creatively charged. The air buzzes with conversation and the distant sounds of the city. A sense of artistic freedom and bohemian spirit permeates the space, inviting social interaction.",
-        "materials": "Primarily weathered red brick, exposed concrete, rough-sawn reclaimed wood for seating and planters, steel for structural elements and accents, and glass in surrounding windows.",
-        "mood": "Inspiring, social, avant-garde, and trendy. A feeling of creative confluence and vibrant urban life.",
-        "sounds": "Distant city hum, chatter, laughter, occasional street musician, clinking glasses, footsteps on brick.",
-        "spatialLayout": "An open, rectangular courtyard with elements of industrial structure, creating distinct zones for seating and art display.",
-        "primary_surfaces": "Weathered red brick walls, large-scale mural, concrete flooring.",
-        "secondary_surfaces": "Exposed steel beams, reclaimed wood benches and planters, glass windows.",
-        "accent_features": "The prominent elephant mural, diverse graffiti and stencil art, salvaged industrial decor, rotating art installations, neon signage.",
-        "dominant": "Historic industrial architecture (brick and concrete)",
-        "secondary": "Modern artistic additions (murals, street art)",
-        "accent": "Street art and vibrant murals",
-        "ambient": "Urban bustle, creative energy",
-        "genre": "REQUIRED",
-        "architectural_tone": "Historic Industrial meets Bohemian Modern",
-        "cultural_tone": "Artistic, bohemian, avant-garde",
-        "palette_bias": "Vibrant and eclectic",
-        "flora_base": "Planters with seasonal flowers and hardy urban plants.",
-        "fauna_base": "Pigeons, urban wildlife."
-      },
-      "primaryMedia": "media-1767112255683-gyxfhzzps",
-      "description": "Inside the large, historic brick building, the interior is dominated by the texture of weathered brick walls and a cool concrete ceiling, with hints of wood underfoot. Dim lighting pervades the space, highlighting arched windows and large glass panes.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "null",
-        "scale": "large",
-        "orientation": "vertical",
-        "openings": "arched-windows|large-glass",
-        "openingShape": "arched",
-        "functionalType": "null",
-        "elevation": "ground-level",
-        "spatialLayout": "The interior of the brick building is characterized by its imposing scale and historical style. Walls of weathered brick are complemented by wooden floors and a concrete ceiling, creating a dim and robust atmosphere.",
-        "requiredElements": [
-          "weathered brick",
-          "arched-windows",
-          "large-glass",
-          "brick",
-          "wood",
-          "concrete",
-          "dim"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "vintage industrial bar with neon art installations",
-          "mismatched leather lounge chairs",
-          "salvaged wood tables",
-          "hanging Edison bulbs",
-          "exposed pipe shelving with artisanal liquor bottles",
-          "a small stage with a retro microphone."
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "object",
-          "position": "front wall",
-          "description": "object large arched entryway"
-        },
-        {
-          "type": "door",
-          "position": "left wall",
-          "description": "door metal-framed glass"
-        },
-        {
-          "type": "corridor",
-          "position": "right",
-          "description": "corridor exposed brick archway leading to a"
-        },
-        {
-          "type": "window",
-          "position": "center",
-          "description": "window dimly lit  upstage"
-        }
-      ],
-      "dominantElements": [
-        "historic hall: shape=rectangular, orientation=vertical, scale=large, style=historic, surfaces=weathered brick, openings=arched-windows|large-glass, interior_materials=brick|wood|concrete, internal_atmosphere=dim"
-      ],
-      "uniqueIdentifiers": [
-        "weathered brick walls",
-        "arched window frames",
-        "exposed concrete ceiling beams"
-      ],
-      "searchDesc": "Vibrant courtyard with elephant mural, brick walls, art installations, and social seating.",
-      "slug": "null-of-the-elephant-mural-courtyard"
-    },
-    "niche-1767112366525-kr1aaflw8": {
-      "id": "niche-1767112366525-kr1aaflw8",
-      "type": "niche",
-      "name": "The Food Hall",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A grand, high-ceilinged hall with exposed industrial beams and polished concrete floors. Walls are a mix of weathered brick and sleek, dark metal panels. The space is dominated by long, communal dining tables and dynamic, flowing digital art projections. A central, glowing hearth provides warmth and a focal point.",
-        "colorsAndLighting": "Dominated by deep blues and vibrant purples emanating from the digital art, with warm, amber light from the central hearth and task lighting over tables. Accents of crimson from strategically placed LED strips.",
-        "atmosphere": "Lively and boisterous with the clatter of cutlery and communal laughter. A pleasant, slightly cool air circulation. Energy is high, driven by the communal purpose and visual stimulation.",
-        "materials": "Primarily weathered brick, brushed metal panels, polished concrete, and dark, reclaimed wood for tables. Touches of glass in the lighting fixtures and digital displays.",
-        "mood": "Exhilarating, celebratory, and convivial. A hub of social interaction and grand indulgence.",
-        "sounds": "Distant music, laughter, clinking glasses, sizzling food, murmur of conversations.",
-        "spatialLayout": "Vast, open-plan rectangular hall with high ceilings. Central area for dining, with peripheral zones for bars and viewing areas.",
-        "primary_surfaces": "weathered brick, brushed metal panels",
-        "secondary_surfaces": "polished concrete, dark wood, glass",
-        "accent_features": "Communal hearth, 'Feast Beacon' sculpture, flowing digital art displays, 'Echo Ribs' seating.",
-        "dominant": "deep blue",
-        "secondary": "vibrant purple",
-        "accent": "warm amber lighting, crimson accents",
-        "ambient": "dynamic artificial lighting with warm and cool zones",
-        "genre": "REQUIRED",
-        "architectural_tone": "historic industrial meets futuristic modern",
-        "cultural_tone": "art district gathering space, nightlife",
-        "palette_bias": "blues, purples, reds, warm neutrals",
-        "flora_base": "null",
-        "fauna_base": "null"
-      },
-      "primaryMedia": "media-1767112366524-hofwxnc4b",
-      "description": "Inside a vast, high-ceilinged hall, the air buzzes with a lively atmosphere. Exposed brick walls, reminiscent of a historic industrial space, are softened by bohemian-modern decor. Sunlight streams through large, arched openings, illuminating a vibrant tapestry of food stalls offering a diverse culinary journey. Communal tables, adorned with eclectic seating, invite patrons to gather and savor the vibrant, bohemian-modern ambiance.",
-      "structure": {
-        "form": "irregular",
-        "roofType": "vaulted",
-        "scale": "large",
-        "orientation": "wide",
-        "openings": "open-passages",
-        "openingShape": "arched",
-        "functionalType": "commercial",
-        "elevation": "ground-level",
-        "spatialLayout": "A sprawling, open-plan space filled with diverse food stalls and seating areas, creating a vibrant and communal dining experience.",
-        "requiredElements": [
-          "food"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "central archway",
-          "description": "Leads to the main courtyard, reflecting the exterior's contrast."
-        },
-        {
-          "type": "passage",
-          "position": "left side wall",
-          "description": "Opens into a bustling bar area."
-        },
-        {
-          "type": "passage",
-          "position": "right side wall",
-          "description": "Leads to elevated seating and viewing platforms."
-        }
-      ],
-      "dominantElements": [
-        "Food Stall: shape=modular, orientation=sprawling, scale=medium, style=industrial, surfaces=wood|metal, openings=open-passages, interior_materials=tile|wood|metal, internal_atmosphere=bright",
-        "Communal Seating: shape=rectangular, orientation=compact, scale=large, style=bohemian, surfaces=wood|metal, openings=none, interior_materials=wood|fabric|metal, internal_atmosphere=cozy"
-      ],
-      "uniqueIdentifiers": [
-        "exposed brick walls",
-        "hanging Edison bulbs",
-        "eclectic mix of seating"
-      ],
-      "searchDesc": "Vast industrial-modern hall for feasts, art, and nightlife.",
-      "slug": "the-great-hall"
-    },
-    "niche-1767112462667-u3sjfrw22": {
-      "id": "niche-1767112462667-u3sjfrw22",
-      "type": "niche",
-      "name": "Music Scene",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A high-ceilinged space with exposed structural elements, transformed by a dazzling display of integrated LED stage panels, vibrant neon geometric sculptures suspended from beams, and a unique DJ booth.",
-        "colorsAndLighting": "Dominated by deep blues and purples from the neon and LED lighting, with warm neutral tones from the seating and the polished concrete. Accents of vibrant red from embedded fiber optics and occasional flashes of light from the DJ booth.",
-        "atmosphere": "The air hums with the anticipation of music and the murmur of conversations. A pleasant, energetic buzz fills the space, warm and inviting for social gatherings. Gentle movement from shifting light patterns.",
-        "materials": "Polished concrete floors, exposed metal beams, plush velvet upholstery, brushed metal and chrome accents, integrated LED panels.",
-        "mood": "Lively, social, and energetic. A sophisticated yet edgy vibe that encourages dancing and mingling.",
-        "sounds": "Pulsating electronic beats, deep basslines, crowd chatter, clinking glasses, DJ scratching.",
-        "spatialLayout": "An open-plan main area with a central, elevated stage and a distinct DJ booth area. Seating is arranged in clusters, allowing for flow and varied social interaction.",
-        "primary_surfaces": "Polished concrete, LED panels",
-        "secondary_surfaces": "Exposed metal beams, velvet upholstery, chrome accents",
-        "accent_features": "Neon geometric light installations, vintage modular DJ booth, embedded fiber optics in floor",
-        "dominant": "Deep blues and purples",
-        "secondary": "Warm neutrals (e.g., taupe, deep grey)",
-        "accent": "Vibrant red (fiber optics)",
-        "ambient": "Dynamic and multi-layered artificial lighting",
-        "genre": "REQUIRED",
-        "architectural_tone": "historic industrial meets futuristic modern",
-        "cultural_tone": "art district gathering space, nightlife",
-        "palette_bias": "blues, purples, reds, warm neutrals",
-        "flora_base": "small trees with red foliage",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767112462666-gp6bfofn8",
-      "description": "Inside a large, open venue with a polished concrete floor embedded with fiber optics. An elevated stage with integrated LED panels is the focal point, with a vintage modular DJ booth to one side. Scattered industrial-style seating with metal frames and velvet upholstery is arranged throughout the space. Neon geometric light installations hang from exposed beams, casting a vibrant glow.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "null",
-        "scale": "large",
-        "orientation": "cubic",
-        "openings": "open-passages",
-        "openingShape": "arched",
-        "functionalType": "entertainment",
-        "elevation": "ground-level",
-        "spatialLayout": "An expansive, industrial-inspired space designed for performance and audience engagement. Exposed structural elements are softened by dynamic lighting and luxurious seating.",
-        "requiredElements": [
-          "elevated stage with integrated LED panels",
-          "vintage modular DJ booth with chrome accents",
-          "scattered industrial-style seating with exposed metal and plush velvet upholstery",
-          "neon geometric light installations hanging from exposed beams",
-          "polished concrete floor with subtle embedded fiber optics",
-          "integrated LED panels",
-          "chrome accents",
-          "exposed metal and plush velvet upholstery",
-          "subtle embedded fiber optics"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "elevated stage with integrated LED panels",
-          "vintage modular DJ booth with chrome accents",
-          "scattered industrial-style seating with exposed metal and plush velvet upholstery",
-          "neon geometric light installations hanging from exposed beams",
-          "polished concrete floor with subtle embedded fiber optics. --populate"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "front wall",
-          "description": "door main entrance with oversized industrial-style s"
-        },
-        {
-          "type": "door",
-          "position": "left wall",
-          "description": "door smaller service"
-        },
-        {
-          "type": "window",
-          "position": "right wall",
-          "description": "window large panoramic   with cityscape view"
-        },
-        {
-          "type": "archway",
-          "position": "back",
-          "description": "archway in leading to backstage area"
-        }
-      ],
-      "dominantElements": [
-        "performance_space: shape=modular, orientation=centered, scale=large, style=futuristic|industrial, surfaces=concrete|metallic-polished, openings=open-passages, interior_materials=concrete|metallic|fabric, internal_atmosphere=dim"
-      ],
-      "uniqueIdentifiers": [
-        "integrated LED stage panels",
-        "neon geometric light installations",
-        "fiber optic embedded floor"
-      ],
-      "searchDesc": "Industrial-chic music lounge with LED stage, neon lights, and velvet seating.",
-      "slug": "the-sonic-lounge"
-    },
-    "niche-1767115822660-zjpy9tqs8": {
-      "id": "niche-1767115822660-zjpy9tqs8",
-      "type": "niche",
-      "name": "Yoga Room",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A spacious yoga studio with a high, transparent glass roof allowing abundant natural light. Walls feature a blend of exposed, weathered brick and smooth, polished concrete. Industrial steel beams are visible, softened by warm lighting. The space is adorned with eclectic art pieces and natural wood elements.",
-        "colorsAndLighting": "The primary light source is natural sunlight filtering through the glass roof, creating dynamic patterns. Accent lighting includes warm, Edison-style bulbs suspended from exposed conduits and strategically placed, colorful LED strips highlighting artwork. Dominant colors are the warm tones of brick and wood, contrasted by the cool grey of concrete and the metallic sheen of steel.",
-        "atmosphere": "Calm and serene, yet infused with a subtle underlying energy from the surrounding urban environment. The air is fresh, occasionally carrying the scent of incense or distant city aromas. A sense of focused tranquility prevails.",
-        "materials": "Polished concrete floors, exposed brick walls, structural steel beams, reclaimed wood (for props, benches, and accent pieces), glass (roof and accent panels), industrial metal accents (lighting fixtures, ventilation).",
-        "mood": "Inspiring, serene, mindful, vibrant, bohemian, trendy.",
-        "sounds": "Soft ambient music, distant city hum, creak of wood, occasional gentle chime.",
-        "spatialLayout": "Open and airy, with a high ceiling. Defined zones for different yoga practices, with ample open space in the center. Minimal clutter.",
-        "primary_surfaces": "Exposed brick walls, polished concrete floor.",
-        "secondary_surfaces": "Steel beams and columns, reclaimed wood elements, glass panels.",
-        "accent_features": "Large-scale, vibrant abstract murals on brick sections, artistically arranged yoga props made of natural wood, hanging plants integrated with industrial elements.",
-        "dominant": "Terracotta and ochre from brick and wood.",
-        "secondary": "Cool grey from concrete and steel.",
-        "accent": "Vibrant blues, greens, and oranges from artwork and subtle lighting.",
-        "ambient": "Natural light and warm artificial light.",
-        "genre": "REQUIRED",
-        "architectural_tone": "Historic Industrial meets Bohemian Modern",
-        "cultural_tone": "Artistic, bohemian, avant-garde",
-        "palette_bias": "Vibrant and eclectic",
-        "flora_base": "Strategically placed indoor plants with sculptural forms, perhaps hanging from steel structures.",
-        "fauna_base": "Pigeons, urban wildlife"
-      },
-      "primaryMedia": "media-1767115822657-5vyw50dw5",
-      "description": "Inside a small, tranquil yoga room. The atmosphere is dim and peaceful, with soft lighting and calming textures.",
-      "structure": {
-        "form": "organic",
-        "roofType": "null",
-        "scale": "small",
-        "orientation": "cubic",
-        "openings": "minimal",
-        "openingShape": "rectangular",
-        "functionalType": "entertainment",
-        "elevation": "ground-level",
-        "spatialLayout": "A tranquil, intimate space designed for yoga practice, featuring soft lighting and natural materials to promote calm.",
-        "requiredElements": [
-          "yoga room"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "distressed leather yoga mats",
-          "reclaimed wood meditation props",
-          "hanging macrame plant holders with exotic ferns",
-          "industrial pendant lights with Edison bulbs",
-          "antique Persian rugs",
-          "scattered bohemian floor cushions",
-          "open shelving with art books and incense holders",
-          "a vintage gramophone."
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "front wall",
-          "description": "door large glass s  with view of city skyline"
-        },
-        {
-          "type": "door",
-          "position": "left wall",
-          "description": "door antique wooden"
-        },
-        {
-          "type": "archway",
-          "position": "right",
-          "description": "archway exposed brick  leading to changing rooms"
-        },
-        {
-          "type": "window",
-          "position": "side wall",
-          "description": "window large metal-framed s s"
-        }
-      ],
-      "dominantElements": [
-        "Yoga Room: shape=organic, orientation=compact, scale=small, style=minimalist, surfaces=fabric, openings=minimal, interior_materials=wood|stone|fabric, internal_atmosphere=dim"
-      ],
-      "uniqueIdentifiers": [
-        "soft ambient lighting",
-        "natural wood flooring",
-        "sound-dampening fabric walls"
-      ],
-      "searchDesc": "Bohemian modern yoga sanctuary under a glass roof, blending industrial grit with artistic serenity.",
-      "slug": "null-of-glass-roof-area"
-    },
-    "niche-1767119624241-ygna8zv7i": {
-      "id": "niche-1767119624241-ygna8zv7i",
-      "type": "niche",
-      "name": "The Art Studio",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A vast, open space with very high ceilings. Walls are a mix of exposed, weathered brick and large sections of raw, unfinished concrete. The floor is polished concrete with visible paint splatters and scuff marks. Industrial-style workbenches and easels are scattered throughout. Large, multi-paned industrial windows allow ample natural light. Accents include a prominent, large-scale abstract mural on one brick wall.",
-        "colorsAndLighting": "Dominant colors are the warm neutrals of brick and concrete, contrasted with vibrant blues, purples, and reds from scattered artwork and art supplies. Lighting is a dynamic mix of cool, diffused daylight from the large windows, and the warm, energetic glow of industrial pendant lights and strategically placed spotlights highlighting artwork.",
-        "atmosphere": "The air is thick with the creative hum of ongoing projects, smelling faintly of oil paints, turpentine, and sawdust. It feels energetic and inspiring, with a sense of organized chaos. The temperature is pleasant and slightly cool, ideal for focused work.",
-        "materials": "Primary materials are weathered brick and polished concrete. Secondary materials include raw steel (for lighting fixtures, workbenches), reclaimed wood (for shelving, some easels), and large expanses of industrial glass.",
-        "mood": "Inspiring, energetic, and focused, with a strong sense of community and creative freedom. It feels like a hub for artistic production and experimentation.",
-        "sounds": "Distant city hum, occasional clatter of tools, brushstrokes on canvas, low murmur of conversation, soft ambient music.",
-        "spatialLayout": "Vast, open-plan with very high ceilings, creating a sense of expansive potential. Areas are defined by furniture and artwork rather than walls.",
-        "primary_surfaces": "weathered brick, polished concrete",
-        "secondary_surfaces": "raw steel, reclaimed wood, industrial glass",
-        "accent_features": "large abstract mural, scattered artwork, industrial pendant lighting, art supply collections",
-        "dominant": "warm neutrals (brick, concrete)",
-        "secondary": "vibrant blues, purples, reds",
-        "accent": "cool daylight, warm spotlights",
-        "ambient": "dynamic artificial lighting",
-        "genre": "REQUIRED",
-        "architectural_tone": "historic industrial meets futuristic modern",
-        "cultural_tone": "art district gathering space, nightlife",
-        "palette_bias": "blues, purples, reds, warm neutrals",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767119624240-xwe28heu3",
-      "description": "Inside a sprawling, irregularly shaped art studio, the space is characterized by a unique blend of raw, historic industrial elements and sleek, futuristic modern design. The palette of blues, purples, and reds is artfully integrated with warm neutrals, creating an atmosphere that is both inspiring and functional.",
-      "structure": {
-        "form": "irregular",
-        "roofType": "null",
-        "scale": "large",
-        "orientation": "sprawling",
-        "openings": "large-glass",
-        "openingShape": "rectangular",
-        "functionalType": "entertainment",
-        "elevation": "ground-level",
-        "spatialLayout": "A vast, open-plan space with high ceilings and exposed structural elements. Various distinct zones are dedicated to different artistic disciplines, allowing for a dynamic flow between creative processes.",
-        "requiredElements": [
-          "art studio"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "unfinished concrete floor",
-          "large drafting tables with scattered blueprints",
-          "industrial shelving units overflowing with paints and canvases",
-          "exposed pipework with integrated LED strip lighting",
-          "vintage leather-upholstered seating area",
-          "modular modular modular sculpture installation",
-          "abstract art pieces in progress",
-          "scattered artist tools and spray cans."
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "front wall",
-          "description": "door large industrial"
-        },
-        {
-          "type": "archway",
-          "position": "left wall",
-          "description": "archway exposed brick"
-        },
-        {
-          "type": "window",
-          "position": "right wall",
-          "description": "window tall metal-framed"
-        },
-        {
-          "type": "hatch",
-          "position": "floor",
-          "description": "hatch metal grate access"
-        }
-      ],
-      "dominantElements": [
-        "studio: shape=irregular, orientation=sprawling, scale=large, style=historic industrial meets futuristic modern, surfaces=concrete, openings=large-glass, interior_materials=concrete|concrete|metallic, internal_atmosphere=industrial"
-      ],
-      "uniqueIdentifiers": [
-        "exposed industrial beams",
-        "large north-facing windows",
-        "integrated digital projection screens"
-      ],
-      "searchDesc": "Open art studio with industrial charm, vibrant colors, and creative energy.",
-      "slug": "the-artist-s-loft"
-    },
     "loc-1767152996093-g79aebj4c": {
       "id": "loc-1767152996093-g79aebj4c",
       "type": "host",
@@ -2274,799 +1640,265 @@
       "searchDesc": "A lush, serene garden nook with Andalusian Renaissance style, offering relaxation and contemplation.",
       "slug": "the-garden-nook"
     },
-    "loc-1767157066688-nnrvnjtuk": {
-      "id": "loc-1767157066688-nnrvnjtuk",
+    "loc-1767294678253-7ihi6q0jy": {
+      "id": "loc-1767294678253-7ihi6q0jy",
       "type": "host",
-      "name": "The Gilded City",
+      "name": "Candy Land",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Skyline silhouette, vast landscapes, sweeping vistas, fantastical architecture",
-        "colorsAndLighting": "Bathed in perpetual daylight, bright and vibrant.",
-        "atmosphere": "Vibrant and artistic.",
-        "materials": "Richly detailed, ornate elements, fantastical materials.",
-        "mood": "Joyful, elegant, splendid.",
-        "sounds": "Lively city sounds, distant music, cheerful chatter.",
-        "primary_surfaces": "Ornate stone, plaster.",
-        "secondary_surfaces": "Richly detailed facades, decorative elements.",
-        "accent_features": "Spires, finials, balconies, intricate carvings.",
-        "dominant": "Magenta Pink facade",
-        "secondary": "Cream-colored architectural details",
-        "accent": "Red and pink flowers, green topiary",
-        "ambient": "Clear blue sky",
+        "looks": "Vast, expansive sweet panorama. Three-tiered chocolate fountain at the center. Majestic, candy-adorned tree. Misty background with distant candy-like structures.",
+        "colorsAndLighting": "Soft, ethereal glow, warm light source casting enchanting glow. Dark brown chocolate, golden accents.",
+        "atmosphere": "Fantastical, enchanting, and dreamlike.",
+        "materials": "Hyper-realistic polished dark chocolate, gleaming gold accents, all types of candies, marshmallows or gumballs.",
+        "mood": "Indulgent, luxurious, awe-inspiring, celebratory.",
+        "sounds": "Distant gentle music, soft ambient sweet-themed sounds.",
+        "primary_surfaces": "Chocolate structures",
+        "secondary_surfaces": "Candy-covered landscapes",
+        "accent_features": "Golden decorations, ornate tree decorations, misty background structures.",
+        "dominant": "Chocolate structures and candy landscapes",
+        "secondary": "Golden accents",
+        "accent": "Misty background structures",
+        "ambient": "Ethereal glow and warm light",
         "genre": "Fantasy",
-        "architectural_tone": "Whimsical Victorian",
-        "cultural_tone": "Opulent",
-        "palette_bias": "Warm and vibrant",
-        "flora_base": "Lush plant life",
-        "fauna_base": "Not specified"
+        "architectural_tone": "Monumental, ornate, surreal",
+        "cultural_tone": "Mythological, celebratory",
+        "palette_bias": "Rich dark browns and opulent golds",
+        "flora_base": "Candy flora",
+        "fauna_base": "Imaginary sweet creatures"
       },
-      "description": "A city of fantastical architecture and vibrant artistry, bathed in perpetual daylight. Sprawling structures reach towards the sky, adorned with opulent details and bathed in the glow of an eternal sun.",
-      "searchDesc": "Fantastical architecture bathed in perpetual daylight with vibrant artistry.",
-      "slug": "the-gilded-city",
+      "description": "A whimsical world where everything is made of sweets and confections. A fantastical, sugary landscape bathed in a soft, ethereal glow.",
+      "searchDesc": "Whimsical world of sweets and confections. Fantastical, sugary landscape.",
+      "slug": "candy-land",
       "structure": {
-        "spatialLayout": "Sprawling, layered, with grand scale."
-      },
-      "primaryMedia": "media-1767157170218-efela8ffj"
+        "spatialLayout": "Central focal point (fountain), grand scale, expansive and detailed landscape."
+      }
     },
-    "aa235e57-1531-4717-a7b6-a1c0a87c3b77": {
-      "id": "aa235e57-1531-4717-a7b6-a1c0a87c3b77",
+    "ec4f3fa7-7ae2-4507-b07f-e4f1659d8c0a": {
+      "id": "ec4f3fa7-7ae2-4507-b07f-e4f1659d8c0a",
       "type": "region",
-      "name": "Region",
-      "spaceType": "exterior",
-      "dna": {},
-      "description": "",
-      "searchDesc": "",
-      "slug": "region",
-      "isPassThrough": true
-    },
-    "7dacc865-1991-4601-b67f-fd8a9acf7d87": {
-      "id": "7dacc865-1991-4601-b67f-fd8a9acf7d87",
-      "type": "location",
-      "name": "The Magenta Palace",
+      "name": "The Confectionery Hills",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A massive, ornate palace with multiple stories and a sprawling layout. It features numerous spires and finials crowning its roofline, with balconies on each level. Symmetrical gardens with rounded bushes and small topiaries lead to the entrance.",
-        "colorsAndLighting": "The dominant color is a vibrant magenta pink, complemented by intricate cream-colored architectural details. The flanking buildings are a cheerful bright yellow, and a striking blue door adds a pop of contrast. The scene is bathed in bright daylight under a clear blue sky.",
-        "atmosphere": "The air is bright and cheerful, with a sense of whimsical grandeur. There is a feeling of gentle warmth from the daylight. No discernible motion or weather, suggesting a perfect, still day.",
-        "materials": "The primary materials appear to be ornate stone and plaster, richly detailed. The gardens showcase lush plant life, with meticulously trimmed hedges and abundant flowering bushes.",
-        "mood": "Enchanting and opulent. The atmosphere evokes a feeling of fairy-tale splendor and joyful elegance.",
-        "sounds": "Gentle breeze, distant birdsong, faint rustling leaves.",
-        "primary_surfaces": "Vibrant magenta pink stone facade",
-        "secondary_surfaces": "Intricate cream-colored plaster details",
-        "accent_features": "Overflowing hanging flower baskets, striking blue door",
-        "dominant": "Magenta Pink facade",
-        "secondary": "Cream architectural details",
-        "accent": "Bright Yellow flanking buildings",
-        "ambient": "Bright daylight",
+        "looks": "Rolling hills covered in various candies, terraced slopes with candy clusters, abundant striped lollipops and swirled candies.",
+        "colorsAndLighting": "Vibrant, textured colors of candies; soft, ethereal glow at twilight or dawn.",
+        "atmosphere": "Whimsical, fantastical, and sugary.",
+        "materials": "Candies (pebble-like clusters, striped lollipops, swirled candies, chocolate pieces, spherical candies), frosting or white chocolate for paths.",
+        "mood": "Joyful, playful, and sweet.",
+        "sounds": "Gentle rustling of candy wrappers, soft chirping.",
+        "primary_surfaces": "Candy-covered hillsides",
+        "secondary_surfaces": "Frosting or white chocolate paths",
+        "accent_features": "Striped lollipops, swirled candies, large hills of spherical candies.",
+        "dominant": "Candy-covered hills",
+        "secondary": "Frosting paths",
+        "accent": "Lollipops and swirled candies",
+        "ambient": "Ethereal glow",
         "genre": null,
-        "architectural_tone": "Whimsical Victorian",
-        "cultural_tone": "Royal residence, opulent celebration",
-        "palette_bias": "Pinks, Reds, Yellows, Creams, Blues",
-        "flora_base": "Flowering bushes, topiary trees, hanging flowers",
-        "fauna_base": "None"
+        "architectural_tone": "Naturalistic, organic",
+        "cultural_tone": "Playful, celebratory",
+        "palette_bias": "Vibrant candy colors",
+        "flora_base": "Candy plants",
+        "fauna_base": "Sugary insects"
       },
-      "description": "A grand, whimsical palace-like building bathed in bright daylight under a clear blue sky. The central, ornate structure is predominantly a vibrant magenta pink, richly adorned with intricate cream-colored architectural details including delicate columns, arched windows, decorative balustrades, and numerous spires and finials that crown its roofline. Each of its multiple stories features windows, many of which are fronted by balconies overflowing with hanging baskets of lush red and pink flowers, interspersed with potted green topiary plants. A central arched entrance, subtly lit, draws the eye towards the base of the building. Flanking this magnificent centerpiece are two equally ornate buildings, painted in a cheerful bright yellow, also featuring cream-colored decorative elements, balconies, and windows; a striking blue door is visible on the left-hand side building. A symmetrical garden leads up to the main entrance, featuring a paved pathway bordered on both sides by meticulously trimmed dark green hedges. Beyond the hedges, a vibrant array of rounded flowering bushes bloom in a gradient of colors, ranging from deep reds and bright oranges to various shades of pink and purple, creating a dazzling floral display. Small, perfectly spherical topiary trees stand at the garden's edge closer to the main building, contributing to the enchanting and well-manicured atmosphere. EXTERIOR VIEW.",
-      "searchDesc": "Grand magenta palace with cream details, yellow flanking buildings, flower-filled balconies, and a vibrant garden.",
-      "slug": "the-magenta-palace",
+      "description": "Rolling hills adorned with an abundant harvest of various sweets. Lush, candy-covered terrain creates a visually delightful and edible landscape.",
+      "searchDesc": "Candy-covered rolling hills with sweet harvests. A whimsical, edible landscape.",
+      "slug": "the-confectionery-hills",
       "structure": {
-        "spatialLayout": "The palace is a large, multi-story structure with a central focus. The layout is symmetrical, with flanking buildings and a garden creating depth and balance."
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "central arched entrance",
-          "description": "Leads inside the main palace structure."
-        },
-        {
-          "type": "door",
-          "position": "left-hand side building",
-          "description": "A striking blue door leading into the yellow flanking building."
-        }
-      ],
-      "dominantElements": [
-        "building: shape=irregular, orientation=sprawling, scale=massive, style=victorian, surfaces=stone, openings=arched-windows, interior_materials=stone|tile|fabric, internal_atmosphere=bright",
-        "building: shape=irregular, orientation=sprawling, scale=large, style=victorian, surfaces=stone, openings=arched-windows, interior_materials=stone|tile|fabric, internal_atmosphere=bright"
-      ],
-      "uniqueIdentifiers": [
-        "vibrant magenta pink facade",
-        "intricate cream-colored architectural details",
-        "balconies with overflowing flower baskets",
-        "symmetrical garden with rounded flowering bushes",
-        "striking blue door"
-      ],
-      "primaryMedia": "media-1767157077602-k3qnz7zyi"
+        "spatialLayout": "Winding paths through terraced hills, abundant scattered sweets."
+      }
     },
-    "niche-1767157102883-6jusa410d": {
-      "id": "niche-1767157102883-6jusa410d",
-      "type": "niche",
-      "name": "The Grand Vestibule",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A building that appears to have sprung from a fairytale, with a striking magenta-pink facade. Its silhouette is a delightful mix of Victorian grandeur and fantastical, whimsical elements, featuring spires, finials, and sweeping curves. Ornate cream-colored details highlight its elaborate structure.",
-        "colorsAndLighting": "Bathed in perpetual, bright daylight, the building's magenta facade glows vibrantly. Cream-colored architectural details provide a sophisticated contrast. Accents of red and pink flowers, along with verdant green from topiaries, add further splashes of color. The overall effect is one of radiant splendor.",
-        "atmosphere": "The air is filled with a palpable sense of joy and elegance. Gentle breezes rustle through the abundant flora, carrying the faint scent of blossoms. There's a feeling of cheerful festivity and refined artistry.",
-        "materials": "Primarily ornate stone and plaster, rendered in rich, vibrant colors. Secondary surfaces feature richly detailed facades with intricate carvings and decorative elements. The exterior facade is a dominant, high-gloss plaster in a striking magenta pink.",
-        "mood": "Joyful, elegant, splendid, vibrant, celebratory, artistic.",
-        "sounds": "Laughter, gentle music, rustling leaves, birdsong, distant chimes.",
-        "spatialLayout": "A multi-tiered, symmetrical yet playfully asymmetrical structure with sweeping lines and dramatic projections, creating a sense of dynamic movement and visual interest.",
-        "primary_surfaces": "Ornate stone and plaster with a high-gloss magenta pink finish.",
-        "secondary_surfaces": "Cream-colored stucco and plaster with elaborate, sculpted cornices and trim.",
-        "accent_features": "Gilded finials, wrought-iron balconies, intricate carvings of floral motifs, and cascading arrangements of red and pink flowers.",
-        "dominant": "Magenta Pink",
-        "secondary": "Cream",
-        "accent": "Red and pink flowers, green topiary",
-        "ambient": "Clear blue sky",
-        "flora_base": "Lush plant life, abundant flowers, manicured topiaries.",
-        "fauna_base": "Not specified",
-        "genre": "Fantasy",
-        "architectural_tone": "Whimsical Victorian",
-        "cultural_tone": "Opulent",
-        "palette_bias": "Warm and vibrant"
-      },
-      "primaryMedia": "media-1767157102880-9zpb8kj3s",
-      "description": "You are inside the grand, sprawling vestibule of The Magenta Palace. The interior is bathed in bright light filtering through numerous arched windows.",
-      "structure": {
-        "form": "irregular",
-        "roofType": "vaulted",
-        "scale": "massive",
-        "orientation": "sprawling",
-        "openings": "arched-windows",
-        "openingShape": "arched",
-        "functionalType": "civic",
-        "elevation": "ground-level",
-        "spatialLayout": "A vast, irregular expanse of stone, the vestibule sprawls outwards, its high, vaulted ceilings supported by imposing columns. Sunlight streams through numerous arched windows, illuminating the intricate tile work of the floors and the rich fabrics draped along the walls.",
-        "requiredElements": [
-          "stone walls",
-          "tile floor",
-          "fabric ceiling",
-          "bright atmosphere"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "plush velvet settees",
-          "gilded chandeliers",
-          "antique tapestry wall hangings",
-          "marble-topped console tables laden with porcelain figurines and silver candelabras"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "front wall",
-          "description": "door grand double s"
-        },
-        {
-          "type": "archway",
-          "position": "left wall",
-          "description": "archway ornate   leading to ballroom"
-        },
-        {
-          "type": "window",
-          "position": "right wall",
-          "description": "window tall arched s lining"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object spiral staircase rear wall"
-        }
-      ],
-      "dominantElements": [
-        "Grand Staircase: shape=curving, orientation=central, scale=large, style=victorian, surfaces=stone, openings=none, interior_materials=stone|stone|stone, internal_atmosphere=bright"
-      ],
-      "uniqueIdentifiers": [
-        "intricate mosaic floor patterns",
-        "tall, fluted marble columns",
-        "series of large, stained-glass arched windows"
-      ],
-      "searchDesc": "Whimsical Victorian building, opulent, magenta pink facade, cream trim, vibrant flowers.",
-      "slug": "null-of-the-magenta-palace"
-    },
-    "niche-1767157148477-wtyes4slf": {
-      "id": "niche-1767157148477-wtyes4slf",
-      "type": "niche",
-      "name": "Upstairs",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "Sumptuous chambers with soaring ceilings, adorned with ornate plasterwork, gilded accents, and large, decorative windows. Plush furnishings and richly patterned carpets are abundant.",
-        "colorsAndLighting": "Dominated by deep reds, vibrant pinks, and cheerful yellows, with accents of cream and sky blue. Lit by numerous warm, glowing chandeliers and soft ambient light from the windows.",
-        "atmosphere": "The air is filled with a sense of joyous celebration and gentle warmth. The atmosphere is light and airy, with a faint, delightful perfume of flowers and fine wines. No discernible motion or weather.",
-        "materials": "Rich silks, velvets, polished marble, intricately carved wood, and generous amounts of gold leaf.",
-        "mood": "Enchanting, opulent, and joyfully celebratory. The mood evokes a sense of fairy-tale splendor, regal elegance, and delightful merriment.",
-        "sounds": "Distant orchestra, tinkling laughter, clinking glasses, soft murmurs of conversation, rustling of fine fabrics.",
-        "spatialLayout": "Spacious and grand, with high ceilings and interconnected rooms designed for elaborate social functions and private retreats.",
-        "primary_surfaces": "Walls draped in deep crimson and sapphire velvet.",
-        "secondary_surfaces": "Intricate cream-colored plasterwork with gilded detailing.",
-        "accent_features": "Overflowing floral arrangements, shimmering gold filigree, antique tapestries, and sparkling crystal chandeliers.",
-        "dominant": "Deep Crimson Red",
-        "secondary": "Cream with Gold Accents",
-        "accent": "Bright Yellow and Sky Blue",
-        "ambient": "Warm, soft, and inviting.",
-        "genre": "Fantasy",
-        "architectural_tone": "Whimsical Victorian",
-        "cultural_tone": "Royal residence, opulent celebration",
-        "palette_bias": "Pinks, Reds, Yellows, Creams, Blues",
-        "flora_base": "Abundant floral arrangements, potted exotic plants",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767157148475-f5qa8tcus",
-      "description": "You are on an elevated landing or within a room on the upper floor of a Whimsical Victorian building. Arched windows let in warm, vibrant light, illuminating ornate wallpaper and wooden floors. The atmosphere is cozy and inviting.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "pitched",
-        "scale": "medium",
-        "orientation": "cubic",
-        "openings": "arched-windows",
-        "openingShape": "arched",
-        "functionalType": "residential",
-        "elevation": "elevated",
-        "spatialLayout": "This is an upper floor in a Whimsical Victorian building, likely a room or landing. The space is furnished to complement the warm and vibrant palette.",
-        "requiredElements": [
-          "stairs"
-        ]
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "plush velvet chaise lounge",
-          "gilded antique writing desk with quill and ink",
-          "ornate grandfather clock",
-          "a collection of porcelain dolls arranged on a small side table"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "center wall",
-          "description": "door ornate mahogany"
-        },
-        {
-          "type": "window",
-          "position": "right wall",
-          "description": "window tall arched   overlooking a moonlit garden"
-        },
-        {
-          "type": "object",
-          "position": "front wall",
-          "description": "object winding staircase"
-        },
-        {
-          "type": "object",
-          "position": "left wall",
-          "description": "object velvet rope barrier"
-        }
-      ],
-      "dominantElements": [
-        "room: shape=rectangular, orientation=compact, scale=medium, style=victorian, surfaces=wood, openings=arched-windows, interior_materials=ornate-wallpaper|wood-plank|moulded-plaster, internal_atmosphere=cozy"
-      ],
-      "uniqueIdentifiers": [
-        "Victorian architectural details",
-        "warm and vibrant color scheme"
-      ],
-      "searchDesc": "Opulent upper chambers of a whimsical Victorian palace, adorned with gilded details and vibrant colors.",
-      "slug": "upper-chambers"
-    },
-    "niche-1767157221255-c8agcblsr": {
-      "id": "niche-1767157221255-c8agcblsr",
-      "type": "niche",
-      "name": "Rooftop Terrace",
+    "aff8e427-966f-447d-aa6d-17a85ec395c1": {
+      "id": "aff8e427-966f-447d-aa6d-17a85ec395c1",
+      "type": "location",
+      "name": "The Grand Chocolate Fountain",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A sprawling open-air terrace atop the palace, featuring intricate wrought-iron gazebos, plush seating areas, and abundant flowering plants. Delicate crystal chandeliers hang overhead, casting a warm glow.",
-        "colorsAndLighting": "Bathed in the soft glow of twilight, with the dominant magenta, cream, and yellow colors from the palace walls reflecting onto the terrace. Accents of deep blue from decorative cushions. Chandeliers emit a warm, golden light.",
-        "atmosphere": "A gentle, warm breeze carries the scent of flowers. The air is filled with a sense of joyful celebration and enchanting elegance. No discernible motion beyond the gentle sway of hanging plants.",
-        "materials": "Ornate wrought-iron, plush velvet upholstery, polished marble flooring, intricately carved wood accents, abundant living flora.",
-        "mood": "Enchanting, opulent, joyful, elegant, celebratory.",
-        "sounds": "Distant laughter, faint music, gentle breeze rustling leaves, tinkling of crystal.",
-        "spatialLayout": "An expansive, multi-level open-air space with defined seating areas, a central gazebo, and pathways winding through floral arrangements.",
-        "primary_surfaces": "Polished marble flooring, ornate wrought-iron railings.",
-        "secondary_surfaces": "Plush velvet cushions and drapes, intricately carved wooden tables.",
-        "accent_features": "Delicate crystal chandeliers, overflowing hanging flower baskets, small decorative fountains.",
-        "dominant": "Magenta Pink",
-        "secondary": "Cream",
-        "accent": "Bright Yellow",
-        "ambient": "Twilight glow with warm, sparkling chandelier light.",
-        "genre": "Fantasy",
-        "architectural_tone": "Whimsical Victorian",
-        "cultural_tone": "Royal residence, opulent celebration",
-        "palette_bias": "Pinks, Reds, Yellows, Creams, Blues",
-        "flora_base": "Abundant flowering bushes, lush topiary forms, overflowing hanging flower baskets, climbing vines.",
+        "looks": "The exterior of the Grand Chocolate Fountain is a colossal, three-tiered structure primarily formed from a dark, highly polished chocolate material that mimics the appearance of highly reflective metallic surfaces. The tiers are sculpted in an organic, flowing manner, with the 'chocolate' cascading down each level to form part of the external visual. Ornate golden decorations are sparingly applied to accentuate key points, such as the rim of each tier and the very top of the fountain.",
+        "colorsAndLighting": "The dominant color is a deep, rich, dark brown, reflecting light to create a lustrous, almost black sheen. Accents of gleaming gold provide sharp contrasts. The lighting is soft and ethereal, likely from an unseen source, making the polished surfaces appear to glow from within, casting gentle highlights and deep, inviting shadows.",
+        "atmosphere": "The air around the fountain is thick with the sweet, heavy aroma of warm chocolate. A faint, pleasant warmth emanates from the structure, suggesting the continuous flow of liquid chocolate. The gentle, almost imperceptible hum of the fountain's internal workings can be felt, creating a serene and indulgent atmosphere.",
+        "materials": "The primary material is a hyper-realistic, polished dark chocolate that behaves like a super-smooth, dark metallic surface. Accents are made of gleaming, polished gold. The 'cascading' chocolate effect gives the impression of a fluid, semi-solid external layer.",
+        "mood": "Indulgent, luxurious, and awe-inspiring. The sheer scale and opulent material suggest a place of ultimate sweetness and celebration.",
+        "sounds": "gentle bubbling, soft chocolate flow, distant sweet hum",
+        "primary_surfaces": "Polished dark chocolate with a high-gloss sheen",
+        "secondary_surfaces": "Gleaming polished gold accents",
+        "accent_features": "Ornate golden decorative elements on tier rims and apex",
+        "dominant": "Dark brown with high gloss",
+        "secondary": "Gold accents on edges and top",
+        "accent": "Gold on ornamental details",
+        "ambient": "Soft, warm glow",
+        "genre": null,
+        "architectural_tone": "Sacred confectionery monument",
+        "cultural_tone": "A central hub for a candy-themed world",
+        "palette_bias": "Browns and Golds",
+        "flora_base": "None",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1767157221254-ncpa2me9f",
-      "description": "An open-air rooftop terrace adorned in a whimsical Victorian style, bathed in the soft glow of pinks, reds, yellows, creams, and blues.",
+      "description": "A magnificent three-tiered chocolate fountain at the heart of a candy-laden landscape.",
+      "searchDesc": "Massive chocolate fountain structure with ornate golden details and flowing chocolate exterior.",
+      "slug": "the-grand-chocolate-fountain",
       "structure": {
-        "form": "rectangular",
-        "roofType": "open-sky",
-        "scale": "medium",
-        "orientation": "wide",
+        "spatialLayout": "The structure is centered and imposing, with a clear vertical emphasis due to its tiered design. Its base is broad, anchoring it firmly, while each tier tapers slightly, creating a monumental presence that commands the surrounding landscape."
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "base of the fountain",
+          "description": "Leading into the Chocolate Basin"
+        }
+      ],
+      "dominantElements": [
+        "<structure>: shape=organic, orientation=centered, scale=massive, style=sacred, surfaces=metallic-polished, openings=open-passages, interior_materials=tile|tile|tile, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Three-tiered cascading chocolate",
+        "Gleaming polished chocolate exterior",
+        "Ornate golden decorative elements",
+        "Flowing chocolate as liquid facade"
+      ],
+      "primaryMedia": "media-1767294719881-toh32mfrx"
+    },
+    "niche-1767294867732-aegleel6i": {
+      "id": "niche-1767294867732-aegleel6i",
+      "type": "niche",
+      "name": "The Grand Chocolate Fountain",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Gentle alcove with soft, yielding surfaces and a central focal point of a grand, flowing chocolate fountain. The surroundings are rolling hills of assorted candies, from pebble-like clusters to larger spherical candies, interspersed with vibrant lollipop trees and gumdrop bushes. Paths are made of frosting or white chocolate.",
+        "colorsAndLighting": "Vibrant, saturated candy colors dominate, with hues of rich chocolate brown, bubblegum pink, lemon yellow, and blueberry blue. The lighting is soft and ethereal, with a warm, inviting glow, particularly noticeable around the chocolate fountain, casting gentle shadows and highlights.",
+        "atmosphere": "A sweet, warm, and slightly humid air, perfumed with cocoa and sugar. A gentle, almost imperceptible shimmer seems to emanate from the candy surfaces.",
+        "materials": "A blend of smooth, semi-solid chocolate for the fountain, textured candy clusters for the hills, smooth frosting for pathways, and hard candy for accent features like lollipops and gumdrops.",
+        "mood": "Joyful, playful, and overwhelmingly sweet, with a sense of wonder and delight.",
+        "sounds": "Gentle bubbling of chocolate, soft sugary tinkling, faint joyful music.",
+        "spatialLayout": "An open, yet enclosed alcove that feels both grand due to the fountain's presence and intimate due to its placement within the hills.",
+        "primary_surfaces": "Candy-covered hillsides, flowing chocolate fountain",
+        "secondary_surfaces": "Frosting or white chocolate paths",
+        "accent_features": "Striped lollipops, swirled candies, large hills of spherical candies, gumdrop bushes",
+        "dominant": "Rich chocolate brown",
+        "secondary": "Creamy white chocolate",
+        "accent": "Vibrant candy colors (pink, yellow, blue)",
+        "ambient": "Soft, ethereal glow",
+        "genre": "Fantasy",
+        "architectural_tone": "Naturalistic, organic",
+        "cultural_tone": "Playful, celebratory",
+        "palette_bias": "Vibrant candy colors",
+        "flora_base": "Candy plants",
+        "fauna_base": "Sugary insects"
+      },
+      "primaryMedia": "media-1767294867731-7rhd9d6is",
+      "description": "You are inside the Grand Chocolate Fountain, a vast and awe-inspiring space dedicated to the art of chocolate. The air is thick with the sweet scent, and a massive, organically shaped fountain of molten chocolate is the centerpiece, flowing in mesmerizing cascades.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "massive",
+        "orientation": "centered",
         "openings": "open-passages",
-        "openingShape": "arched",
-        "functionalType": "entertainment",
-        "elevation": "rooftop",
-        "spatialLayout": "An expansive, open-air space situated atop a grand building, offering panoramic views. Decorated with whimsical Victorian elements, it serves as a charming gathering place.",
-        "requiredElements": [
-          "roof top terrace"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "stairs",
-          "position": "center",
-          "description": "grand marble stairs leading down into the palace"
-        },
-        {
-          "type": "passage",
-          "position": "rear",
-          "description": "an ornate archway leading to another section of the palace roof"
-        }
-      ],
-      "dominantElements": [
-        "Gazebo: shape=organic, orientation=centered, scale=medium, style=victorian, surfaces=wood, openings=arched-windows, interior_materials=wood|tile|fabric, internal_atmosphere=cozy",
-        "Tea Pavilion: shape=hexagonal, orientation=compact, scale=small, style=victorian, surfaces=painted-wood, openings=large-glass, interior_materials=fabric|wood|tile, internal_atmosphere=bright"
-      ],
-      "uniqueIdentifiers": [
-        "Victorian-era wrought iron railings",
-        "Flower-laden trellises",
-        "Ornate gas lamps"
-      ],
-      "searchDesc": "Opulent rooftop terrace with Victorian charm, vibrant flowers, and sparkling chandeliers.",
-      "slug": "rooftop-terrace"
-    },
-    "loc-1767174057510-y42kjtujp": {
-      "id": "loc-1767174057510-y42kjtujp",
-      "type": "host",
-      "name": "Metropolis",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Vast city skyline, impressive architectural scale, clear or overcast sky",
-        "colorsAndLighting": "Bright daylight, diverse building colors, illuminated windows",
-        "atmosphere": "Bustling, energetic, sophisticated",
-        "materials": "Diverse building materials, reflective surfaces, metallic accents",
-        "mood": "Luxurious, exciting, aspirational",
-        "sounds": "Distant city hum, faint traffic, distant voices",
-        "primary_surfaces": "Sky, distant building facades, large open spaces",
-        "secondary_surfaces": "Interconnecting streets, public squares",
-        "accent_features": "Towering skyscrapers, illuminated landmarks",
-        "dominant": "Buildings",
-        "secondary": "Sky",
-        "accent": "Distant lights, architectural details",
-        "ambient": "City sounds, natural light",
-        "genre": "URBAN_FANTASY",
-        "architectural_tone": "OPULENT",
-        "cultural_tone": "SOCIALITE",
-        "palette_bias": "HIGH_CONTRAST",
-        "flora_base": "NATURAL",
-        "fauna_base": "URBAN"
-      },
-      "description": "A grand, unnamed city known for its opulent architecture and vibrant social scene. Its skyline is a testament to ambitious design, with buildings that reach for the heavens.",
-      "searchDesc": "Opulent city skyline, grand architecture, vibrant social scene",
-      "slug": "metropolis",
-      "structure": {
-        "spatialLayout": "Expansive, dense urban fabric, varied building heights"
-      },
-      "primaryMedia": "media-1767174139020-wo8layyby"
-    },
-    "bcd827b1-0d0a-4eac-922a-5f5744a133ab": {
-      "id": "bcd827b1-0d0a-4eac-922a-5f5744a133ab",
-      "type": "region",
-      "name": "Region",
-      "spaceType": "exterior",
-      "dna": {},
-      "description": "",
-      "searchDesc": "",
-      "slug": "region",
-      "isPassThrough": true
-    },
-    "8e6d8470-48b1-42b7-96a9-bf45ed442c26": {
-      "id": "8e6d8470-48b1-42b7-96a9-bf45ed442c26",
-      "type": "location",
-      "name": "The Grand Azure Lounge",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The exterior is a grand, art-deco structure with a polished, pale blue stone facade. Large, arched openings are a prominent feature, framed by intricate gold filigree and detailed pillars that echo the interior's grandeur. The building is of a substantial, large scale, designed to impress.",
-        "colorsAndLighting": "The facade utilizes a palette of pale blue stone and shimmering gold accents. Ample natural light reflects off the polished surfaces, giving the building a bright and inviting glow during the day.",
-        "atmosphere": "The air around the lounge feels sophisticated and vibrant, hinting at the lively social scene within. The immediate environment is likely well-maintained and elegant, complementing the building's design. No harsh weather impacts the pristine facade.",
-        "materials": "The primary material is polished, pale blue stone, complemented by extensively used metallic gold for ornate detailing and trim. Subtle geometric patterns are incorporated into exterior tiling, reinforcing the art-deco style.",
-        "mood": "The exterior conveys a mood of luxurious exclusivity and sophisticated celebration, inviting patrons into a world of refined indulgence.",
-        "sounds": "Distant muffled chatter, faint clinking of glasses, gentle ambient music.",
-        "primary_surfaces": "Polished pale blue stone, gleaming gold filigree",
-        "secondary_surfaces": "Subtly geometric patterned tiles, clear large glass panels",
-        "accent_features": "Ornate pillars with intricate gold detailing, large azure potted ferns",
-        "dominant": "Pale blue stone facade",
-        "secondary": "Gold filigree accents",
-        "accent": "Azure foliage flanking entrance",
-        "ambient": "Bright daytime light",
-        "genre": null,
-        "architectural_tone": "Elegant art-deco",
-        "cultural_tone": "Luxury social gathering",
-        "palette_bias": "Blues and Golds",
-        "flora_base": "Large potted azure ferns",
-        "fauna_base": "None"
-      },
-      "description": "An opulent and brightly lit lounge or bar with elaborate architectural details and vibrant furnishings. EXTERIOR VIEW.",
-      "searchDesc": "Opulent art-deco exterior with grand arched entrance and gold detailing.",
-      "slug": "the-grand-azure-lounge",
-      "structure": {
-        "spatialLayout": "The building is primarily rectangular, with a compact but imposing presence. The grand arched entrance is the central focal point, creating a sense of depth and invitation."
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "center of facade",
-          "description": "Leads into The Grand Azure Lounge interior."
-        }
-      ],
-      "dominantElements": [
-        "The Grand Azure Lounge building: shape=rectangular, orientation=compact, scale=large, style=art-deco, surfaces=polished-stone|metallic-gold, openings=large-glass, interior_materials=teal-and-gold-tile|marble|velvet, internal_atmosphere=bright"
-      ],
-      "uniqueIdentifiers": [
-        "Ornate gold filigree detailing",
-        "Large, arched entryway",
-        "Polished, pale blue stone facade",
-        "Subtle geometric patterned exterior tiling",
-        "Large potted azure ferns flanking the entrance"
-      ],
-      "primaryMedia": "media-1767174119904-wa9dgmpos"
-    },
-    "niche-1767174199932-6tiw3r1bd": {
-      "id": "niche-1767174199932-6tiw3r1bd",
-      "type": "niche",
-      "name": "The Grand Azure Lounge building",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "Vast, cavernous interior with an impossibly high, vaulted ceiling. The architecture is grand and ostentatious, with sweeping curves and sharp, geometric accents.  The overall impression is one of immense scale and luxurious depth.",
-        "colorsAndLighting": "Dominated by deep, saturated blues and striking contrasts of black and metallic gold.  Spotlighting is dramatic, with beams of azure light that pulse and shift, casting sharp shadows.  Illuminated accents gleam throughout.",
-        "atmosphere": "Electrically charged and intensely exciting, with a palpable sense of sophisticated energy. The air is cool and tinged with exotic, intoxicating scents. Movement is a graceful flow of elegantly dressed patrons.",
-        "materials": "Polished obsidian, rich velvets in sapphire hues, polished brass and gold plating, shimmering azure glass, and rough-hewn, dark marble.  Reflective surfaces are abundant, creating a dazzling interplay of light and shadow.",
-        "mood": "Luxurious, exciting, aspirational, exclusive, mysterious, and utterly captivating.",
-        "sounds": "Muffled, sophisticated chatter, the clinking of crystal, a deep, resonant ambient hum, occasional bursts of ethereal music.",
-        "spatialLayout": "An expansive, open central area with defined, yet fluid, zones for seating and mingling.  Verticality is emphasized by soaring ceilings and multi-level access points.",
-        "primary_surfaces": "Ceiling, floors, grand walls.",
-        "secondary_surfaces": "Seating, bar surfaces, decorative panels.",
-        "accent_features": "Azure glass inlays, pulsating light installations, holographic projections, intricately detailed metallic fixtures.",
-        "dominant": "Deep Sapphire Blue",
-        "secondary": "Obsidian Black",
-        "accent": "Gleaming Gold",
-        "ambient": "Dramatic, shifting azure and gold spotlights.",
-        "genre": "URBAN_FANTASY",
-        "architectural_tone": "OPULENT",
-        "cultural_tone": "SOCIALITE",
-        "palette_bias": "HIGH_CONTRAST",
-        "flora_base": "ARTIFICIAL",
-        "fauna_base": "URBAN"
-      },
-      "primaryMedia": "media-1767174199930-5mfipab5g",
-      "description": "The interior of The Grand Azure Lounge building, characterized by its bright and opulent art-deco style. Polished stone and metallic gold surfaces gleam under the light, complemented by walls of teal and gold tile. Marble floors lead to plush velvet seating areas, creating a luxurious and inviting atmosphere.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "null",
-        "scale": "large",
-        "orientation": "compact",
-        "openings": "large-glass",
-        "openingShape": "rectangular",
+        "openingShape": "irregular",
         "functionalType": "entertainment",
         "elevation": "ground-level",
-        "spatialLayout": "This large, rectangular building is designed in a compact orientation, suggesting an efficient use of space within its art-deco shell. Large glass openings allow for a bright interior atmosphere.",
-        "requiredElements": [
-          "art-deco",
-          "bright",
-          "polished-stone",
-          "metallic-gold",
-          "teal-and-gold-tile",
-          "marble",
-          "velvet"
-        ]
+        "spatialLayout": "A vast, cavernous space dominated by the flowing chocolate fountain. Passages lead off into different areas. The atmosphere is warm and inviting.",
+        "requiredElements": []
       },
       "furnishingDetails": {
         "userSpecified": [
-          "plush velvet lounge seating in sapphire blue and emerald green",
-          "polished marble tabletops with metallic gold inlay",
-          "a gleaming brass bar with ornate detailing",
-          "crystal decanters and glassware on display",
-          "a small stage area with a vintage microphone",
-          "opulent teal and gold patterned carpet",
-          "strategically placed palm trees in art-deco planters",
-          "gilded sconces casting warm light."
+          "central cascading chocolate fountain",
+          "polished candy-stone altar",
+          "surrounding tiered seating carved from nougat",
+          "glowing caramel stained-glass windows depicting candy legends",
+          "divine wafer-reliefs on walls"
         ],
         "suggested": [],
         "placementNotes": []
       },
       "navigableElements": [
         {
-          "type": "door",
-          "position": "front wall",
-          "description": "door grand double s"
-        },
-        {
           "type": "archway",
+          "position": "front wall",
+          "description": "archway grand"
+        },
+        {
+          "type": "passage",
           "position": "left wall",
-          "description": "archway ornate   leading to a bar area"
+          "description": "passage ornate"
         },
         {
-          "type": "door",
+          "type": "passage",
           "position": "right wall",
-          "description": "door smaller way  for staff access"
+          "description": "passage shimmering waterfall"
         },
         {
-          "type": "window",
-          "position": "center",
-          "description": "window large arched s facing the street"
+          "type": "opening",
+          "position": "back wall",
+          "description": "opening observe s"
         }
       ],
       "dominantElements": [
-        "The Grand Azure Lounge building: shape=rectangular, orientation=compact, scale=large, style=art-deco, surfaces=polished-stone|metallic-gold, openings=large-glass, interior_materials=teal-and-gold-tile|marble|velvet, internal_atmosphere=bright"
+        "Viewing Platform: shape=organic, orientation=flowing, scale=large, style=sacred, surfaces=stone, openings=minimal, interior_materials=stone|stone|null, internal_atmosphere=bright"
       ],
       "uniqueIdentifiers": [
-        "Art-deco architecture",
-        "Polished stone and metallic gold surfaces",
-        "Teal and gold tiling",
-        "Luxurious velvet accents"
+        "Massive central chocolate fountain",
+        "Warm, rich aroma of chocolate",
+        "Glistening, polished stone surfaces"
       ],
-      "searchDesc": "Opulent urban fantasy lounge, high contrast, socialite heaven, azure and gold.",
-      "slug": "null-of-the-grand-azure-lounge"
+      "searchDesc": "Whimsical candy alcove near a grand chocolate fountain, with vibrant colors and sweet scents.",
+      "slug": "null-of-the-grand-chocolate-fountain"
     },
-    "loc-1767176832741-5jiz5wgeq": {
-      "id": "loc-1767176832741-5jiz5wgeq",
-      "type": "host",
-      "name": "The Iron Crown Kingdom",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Dominant castles and keeps on hilltops, fortified city walls, vast plains interrupted by forests and rivers.",
-        "colorsAndLighting": "Earthy tones, greys of stone, deep blues and greens of forests and rivers, often stark daylight or firelight.",
-        "atmosphere": "A sense of constant vigilance, potential conflict, and historical weight.",
-        "materials": "Rough-hewn stone, dark timber, wrought iron, weathered leather.",
-        "mood": "Authoritative, martial, enduring, and occasionally oppressive.",
-        "sounds": "Distant trumpet calls, clang of steel, cheers of crowds, crackling hearth fires.",
-        "primary_surfaces": "Stone",
-        "secondary_surfaces": "Wood",
-        "accent_features": "Ironwork, banners, battlements",
-        "dominant": "Castles",
-        "secondary": "Fortifications",
-        "accent": "Steel",
-        "ambient": "Medieval",
-        "genre": "REQUIRED",
-        "architectural_tone": "REQUIRED",
-        "cultural_tone": "REQUIRED",
-        "palette_bias": "REQUIRED",
-        "flora_base": "REQUIRED",
-        "fauna_base": "REQUIRED"
-      },
-      "description": "A sprawling medieval kingdom forged in conflict and enduring through resilience. Its lands are dotted with formidable fortresses and ancient castles, testaments to a rich and often brutal history. The people are known for their martial prowess and deep-rooted traditions.",
-      "searchDesc": "Medieval castles, fortified cities, ancient lore, knights and warring factions.",
-      "slug": "the-iron-crown-kingdom",
-      "structure": {
-        "spatialLayout": "Hierarchical, with castles and keeps as central nodes, surrounded by towns and villages."
-      }
-    },
-    "fe97ac95-6333-4135-8596-b95e69749efa": {
-      "id": "fe97ac95-6333-4135-8596-b95e69749efa",
-      "type": "region",
-      "name": "The Jagged Peaks",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Dominant, sharp peaks; deep, shadowed ravines; sparse, hardy vegetation clinging to slopes.",
-        "colorsAndLighting": "Muted greys and browns of rock, deep greens of ancient forests, dramatic chiaroscuro from steep shadows.",
-        "atmosphere": "Chilly, thin air, often filled with mist or swirling winds.",
-        "materials": "Rough, unyielding stone; ancient, gnarled wood; tough, wind-battered flora.",
-        "mood": "Isolated, wild, enduring, and somber.",
-        "sounds": "Howling winds, distant screeches of birds of prey, the trickle of icy streams.",
-        "primary_surfaces": "Stone",
-        "secondary_surfaces": "Gnarled wood",
-        "accent_features": "Frost, lichen, windswept scrub.",
-        "dominant": "Stone",
-        "secondary": "Shadows",
-        "accent": "Wind",
-        "ambient": "Cold",
-        "genre": null,
-        "architectural_tone": "Fortified, stark",
-        "cultural_tone": "Resilient, isolated",
-        "palette_bias": "Cool greys, deep greens, earthy browns",
-        "flora_base": "Coniferous trees, hardy mountain shrubs, mosses, lichens",
-        "fauna_base": "Mountain goats, wolves, eagles, ravens"
-      },
-      "description": "A harsh and unforgiving land where towering, jagged mountain ranges scrape the sky. Deep, shadowed valleys conceal ancient forests and windswept plateaus. Life here is a constant struggle against the elements.",
-      "searchDesc": "Jagged mountains, shadowed valleys, ancient forests, windswept plateaus.",
-      "slug": "the-jagged-peaks",
-      "structure": {
-        "spatialLayout": "Verticality is key, with structures clinging to cliffsides or nestled in valleys."
-      }
-    },
-    "6e4d8b42-c5de-49af-8167-4263ed48fc53": {
-      "id": "6e4d8b42-c5de-49af-8167-4263ed48fc53",
-      "type": "location",
-      "name": "Dragonstone Keep",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "A massive, irregularly shaped stone keep dominates the landscape. Its imposing walls are crowned with sharp battlements, giving it a predatory silhouette. The structure appears ancient and formidable.",
-        "colorsAndLighting": "Dominated by dark, brooding greys and earth tones of the stone. Lighting is dim and shadowy, with meager light filtering through narrow slits and archways.",
-        "atmosphere": "The air is cold and carries the scent of damp stone and wind. A perpetual chill seems to emanate from the keep, even on a clear day. The wind howls around the battlements.",
-        "materials": "Primarily constructed from rough-hewn, weathered grey stone. Textures are coarse and uneven, showing signs of centuries of exposure. Minimal wood or metal accents, all heavily aged.",
-        "mood": "A sense of oppressive power and ancient solitude pervades Dragonstone Keep. It inspires awe and intimidation.",
-        "sounds": "Wind whistling, distant bird cries, creaking stone, echoing footsteps.",
-        "primary_surfaces": "Massive, rough-hewn grey stone",
-        "secondary_surfaces": "Weathered wood, dark iron",
-        "accent_features": "Jagged battlements, narrow slit windows",
-        "dominant": "Dark grey stone",
-        "secondary": "Shadows",
-        "accent": "Black iron on the gate",
-        "ambient": "Dim and shadowy",
-        "genre": null,
-        "architectural_tone": "Brutalist medieval fortress",
-        "cultural_tone": "The seat of a powerful, possibly reclusive, ruling family.",
-        "palette_bias": "Cool greys and deep earth tones",
-        "flora_base": "None",
-        "fauna_base": "Ravens"
-      },
-      "description": "An imposing medieval castle with high stone walls and battlements, overlooking the surrounding landscape.",
-      "searchDesc": "Massive, ancient stone castle with battlements overlooking a rugged landscape. Fortified keep.",
-      "slug": "dragonstone-keep",
-      "structure": {
-        "spatialLayout": "A sprawling, irregular complex built upon a strategic elevated position. The keep itself is a large, central structure with multiple interconnected defensive layers."
-      },
-      "navigableElements": [
-        {
-          "type": "gate",
-          "position": "front",
-          "description": "The main gate of the keep."
-        },
-        {
-          "type": "passage",
-          "position": "side",
-          "description": "A smaller, less guarded passage."
-        }
-      ],
-      "dominantElements": [
-        "keep: shape=irregular, orientation=sprawling, scale=massive, style=rustic, surfaces=stone, openings=narrow-slits, interior_materials=\"stone|stone|stone\", internal_atmosphere=dim"
-      ],
-      "uniqueIdentifiers": [
-        "imposing stone battlements",
-        "overlooks rugged landscape",
-        "ancient, weathered stone facade",
-        "fortified entrance gate"
-      ],
-      "primaryMedia": "media-1767176852632-er5yjj8g6"
-    },
-    "niche-1767176875700-w6km8x00t": {
-      "id": "niche-1767176875700-w6km8x00t",
+    "niche-1767294892410-c4oahlhqs": {
+      "id": "niche-1767294892410-c4oahlhqs",
       "type": "niche",
-      "name": "keep",
+      "name": "The Bathroom",
       "spaceType": "interior",
       "dna": {
-        "looks": "Dominant, sharp peaks are echoed in the rough, chiseled stonework. Deep, shadowed ravines manifest as dark recesses and alcoves. Sparse, hardy vegetation is suggested by hardy mosses and lichens clinging to surfaces.",
-        "colorsAndLighting": "Muted greys and browns of unpolished stone dominate. Deep, shadowed ravines are represented by the stark chiaroscuro from flickering torchlight, creating pockets of intense darkness and pools of weak illumination.",
-        "atmosphere": "Chilly, thin air. The stillness is broken by the faint whistling of wind and the occasional drip of moisture.",
-        "materials": "Rough, unyielding stone is the primary material. Ancient, gnarled wood is used for structural beams and furniture, showing signs of age and wear. Tough, wind-battered flora is suggested by mosses and lichens.",
-        "mood": "Isolated, wild, enduring, and somber. A sense of grim determination and unwavering strength permeates the space.",
-        "sounds": "Distant wind, stone groaning, crackling fire, muffled footsteps, dripping water.",
-        "spatialLayout": "A large, cavernous main chamber with high ceilings and thick, imposing walls. Recesses and alcoves create a sense of depth and hidden spaces.",
-        "primary_surfaces": "Stone",
-        "secondary_surfaces": "Gnarled wood",
-        "accent_features": "Frost, lichen, windswept scrub (represented by rough textures and sparse growths)",
-        "dominant": "Stone",
-        "secondary": "Shadows",
-        "accent": "Wind",
-        "ambient": "Cold",
-        "genre": "REQUIRED",
-        "architectural_tone": "Fortified, stark",
-        "cultural_tone": "Resilient, isolated",
-        "palette_bias": "Cool greys, deep greens, earthy browns",
-        "flora_base": "Coniferous trees, hardy mountain shrubs, mosses, lichens",
-        "fauna_base": "Mountain goats, wolves, eagles, ravens"
-      },
-      "primaryMedia": "media-1767176875696-xr7nxykmb",
-      "description": "The interior of the keep is a dimly lit, sprawling space with massive stone walls, floors, and ceilings. Narrow slits serve as openings, and the overall atmosphere is one of rustic, ancient strength.",
-      "structure": {
-        "form": "irregular",
-        "roofType": "vaulted",
-        "scale": "massive",
-        "orientation": "sprawling",
-        "openings": "narrow-slits",
-        "openingShape": "irregular",
-        "functionalType": "civic",
-        "elevation": "ground-level",
-        "spatialLayout": "The interior of the keep is a vast, sprawling network of interconnected stone chambers and corridors, illuminated by the faint glow of torches and moonlight filtering through narrow slits. The massive scale and rugged construction evoke a sense of ancient, enduring strength.",
-        "requiredElements": [
-          "keep"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "center",
-          "description": "leads outside to the outer bailey"
-        },
-        {
-          "type": "passage",
-          "position": "left",
-          "description": "leads deeper into the keep's labyrinthine passages"
-        },
-        {
-          "type": "stairs",
-          "position": "right",
-          "description": "ascends to the upper levels of the keep"
-        }
-      ],
-      "dominantElements": [
-        "guard room: shape=rectangular, orientation=compact, scale=medium, style=rustic, surfaces=stone, openings=minimal, interior_materials=\"stone|stone|stone\", internal_atmosphere=dim"
-      ],
-      "uniqueIdentifiers": [
-        "ancient stone construction",
-        "dim torchlight",
-        "narrow defensive slits",
-        "sprawling interconnected chambers"
-      ],
-      "searchDesc": "The stark, fortified heart of Dragonstone Keep, echoing resilience and isolation.",
-      "slug": "null-of-dragonstone-keep"
-    },
-    "niche-1767176941258-m7is0yz62": {
-      "id": "niche-1767176941258-m7is0yz62",
-      "type": "niche",
-      "name": "The Dungeon",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "A small, cramped cell with uneven, rough-hewn stone walls that sweat with dampness. The ceiling is low and oppressive. A single, barred window high on one wall offers no view, only a sliver of dim light.",
-        "colorsAndLighting": "Dominated by dark, oppressive greys and deep, muddy earth tones. Lighting is extremely dim, barely illuminating the immediate surroundings, creating deep shadows. The light is a sickly, pale grey.",
-        "atmosphere": "The air is thick with the smell of damp earth, mildew, and decay. A constant, bone-chilling cold permeates the space, carrying the sound of incessant dripping water and faint, mournful echoes.",
-        "materials": "Primarily rough, unworked grey stone, heavily stained with moisture. Aged, corroded iron for restraints and grates. Coarse, decaying straw for bedding.",
-        "mood": "A profound sense of despair, confinement, and hopelessness. The oppressive power of the fortress is felt keenly here, amplified by ancient solitude and neglect.",
-        "sounds": "dripping water, distant groans, scraping chains, wind howling faintly, stone groaning, echoing footsteps",
-        "spatialLayout": "A small, rectangular cell with low ceilings and thick, solid walls.",
-        "primary_surfaces": "damp, rough-hewn grey stone",
-        "secondary_surfaces": "corroded iron, decaying straw",
-        "accent_features": "chains bolted to the wall, rusted iron grate, scratched markings on stone",
-        "dominant": "dark grey stone",
-        "secondary": "deep shadows",
-        "accent": "rusted iron",
-        "ambient": "extremely dim and shadowy",
-        "genre": "REQUIRED",
-        "architectural_tone": "brutalist medieval fortress",
-        "cultural_tone": "seat of a powerful, possibly reclusive, ruling family",
-        "palette_bias": "cool greys and deep earth tones",
+        "looks": "The washroom interior is a testament to sacred confectionery architecture. Walls are paneled with highly polished dark chocolate that gleams like obsidian, reflecting the soft, ethereal light. Ornate gold accents, reminiscent of gilded pastry designs, adorn the edges of mirrors and stall doorways. The centerpiece is a grand vanity sculpted from solid, dark chocolate, shaped like a miniature, cascading fountain, with golden spouts for taps. Lavatories are sleek, porcelain-white fixtures, subtly framed by swirling caramel-colored marble. Chandeliers are clusters of sparkling, oversized gummy gems that cast colorful, diffused light.",
+        "colorsAndLighting": "Dominated by deep, lustrous browns from the polished chocolate walls and fixtures, contrasted with shimmering gold detailing on architectural elements and accents. Soft, warm, ambient lighting emanates from the gummy-gem chandeliers and hidden sources, creating a gentle glow that highlights the reflective surfaces. Subtle, golden spotlights illuminate the vanity and key decorative features.",
+        "atmosphere": "The air is thick with a rich, comforting aroma of warm, dark chocolate, subtly undercut by hints of vanilla and caramel. A faint, pleasant warmth pervades the space, suggesting the continuous, gentle flow of sweet essences. The atmosphere is one of profound indulgence, luxury, and serene awe, as if stepping into a sacred shrine dedicated to sweetness.",
+        "materials": "The primary material is a hyper-realistic, polished dark chocolate, functioning as a sophisticated interior finish. Gleaming polished gold is used for decorative accents and intricate detailing. Swirling caramel-colored marble forms secondary surfaces and flooring. Large, clear gummy-gems are used for lighting fixtures, and white porcelain for the sanitary ware.",
+        "mood": "Indulgent, luxurious, awe-inspiring, serene, celebratory, and deeply comforting.",
+        "sounds": "Soft chimes, gentle hum of water, faint whispers of sweet melodies.",
+        "spatialLayout": "A spacious, rectangular room with a high, vaulted ceiling, creating a sense of grandeur. The vanity is centrally positioned, with stalls discreetly arranged along the perimeter.",
+        "primary_surfaces": "Polished dark chocolate panels with a high-gloss sheen.",
+        "secondary_surfaces": "Gleaming polished gold accents, caramel-colored marble.",
+        "accent_features": "Ornate golden decorative elements on mirror frames and stall entrances, sculpted chocolate fountain vanity, gummy-gem chandeliers.",
+        "dominant": "Dark brown (chocolate)",
+        "secondary": "Gold",
+        "accent": "Caramel (marble), clear/colored (gummy gems)",
+        "ambient": "Soft, warm glow with subtle jewel tones from the chandeliers.",
+        "genre": "Fantasy",
+        "architectural_tone": "Sacred confectionery monument",
+        "cultural_tone": "A central hub for a candy-themed world",
+        "palette_bias": "Browns and Golds",
         "flora_base": "None",
-        "fauna_base": "Ravens"
+        "fauna_base": "None"
       },
-      "primaryMedia": "media-1767176941256-schwunoum",
-      "description": "You are in a dimly lit, underground dungeon. The air is cool and damp, with the faint scent of earth and old stone. Narrow stone corridors stretch out before you, punctuated by the occasional barred cell door. Flickering torchlight casts dancing shadows on the rough-hewn stone walls, hinting at a sprawling and ancient complex.",
+      "primaryMedia": "media-1767294892408-22p1dclxg",
+      "description": "You are in a small, enclosed bathroom. The air is clean and slightly sterile. A single, flat ceiling emits a bright light, illuminating the predominantly tiled surfaces. There is a door leading out.",
       "structure": {
-        "form": "irregular",
-        "roofType": "vaulted",
-        "scale": "medium",
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "small",
         "orientation": "cubic",
-        "openings": "narrow-slits",
-        "openingShape": "arched",
-        "functionalType": "civic",
-        "elevation": "underground",
-        "spatialLayout": "A labyrinthine network of stone corridors and chambers, carved deep into the earth. Torches cast flickering shadows, obscuring the true depth and dangers within.",
-        "requiredElements": [
-          "dungeon"
-        ]
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "A small, enclosed room primarily designed for personal hygiene. Typically contains sanitary fixtures and plumbing.",
+        "requiredElements": []
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "recessed in the far wall",
-          "description": "a heavy, iron-banded wooden door, leading to a dark passage"
-        },
-        {
-          "type": "passage",
-          "position": "a dark opening to the side",
-          "description": "a narrow, winding passage descending further into the earth"
+          "position": "entrance",
+          "description": "leads to hallway"
         }
       ],
       "dominantElements": [
-        "dungeon_cell: shape=irregular, orientation=compact, scale=intimate, style=fortified, surfaces=stone, openings=minimal, interior_materials=stone|stone|stone, internal_atmosphere=dim"
+        "Bathroom Fixtures: shape=organic, orientation=compact, scale=small, style=minimalist, surfaces=porcelain, openings=minimal, interior_materials=tile|tile|tile, internal_atmosphere=sterile"
       ],
       "uniqueIdentifiers": [
-        "subterranean",
-        "fortified architecture"
+        "Porcelain sanitary fixtures",
+        "Tiled surfaces",
+        "Plumbing connections"
       ],
-      "searchDesc": "A brutalist medieval dungeon cell, cold, damp, and filled with ancient solitude.",
-      "slug": "the-dungeon"
+      "searchDesc": "Opulent confectionery washroom with chocolate, gold, and sweet-themed decor.",
+      "slug": "the-confectionery-washroom"
     }
   },
   "views": {},
@@ -3157,55 +1989,6 @@
       ]
     },
     {
-      "id": "loc-1767112081225-dlqhou1t1",
-      "type": "host",
-      "children": [
-        {
-          "id": "d635e34b-2107-421a-985a-945e90d1aba8",
-          "type": "region",
-          "children": [
-            {
-              "id": "fa0a1c36-718b-49eb-af0b-6cce144cb1ea",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1767112255684-391unmsqm",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1767112366525-kr1aaflw8",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1767112462667-u3sjfrw22",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1767119624241-ygna8zv7i",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "id": "location-1767112200109-o97qw0d92",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1767115822660-zjpy9tqs8",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "loc-1767152996093-g79aebj4c",
       "type": "host",
       "children": [
@@ -3255,80 +2038,24 @@
       ]
     },
     {
-      "id": "loc-1767157066688-nnrvnjtuk",
+      "id": "loc-1767294678253-7ihi6q0jy",
       "type": "host",
       "children": [
         {
-          "id": "aa235e57-1531-4717-a7b6-a1c0a87c3b77",
+          "id": "ec4f3fa7-7ae2-4507-b07f-e4f1659d8c0a",
           "type": "region",
           "children": [
             {
-              "id": "7dacc865-1991-4601-b67f-fd8a9acf7d87",
+              "id": "aff8e427-966f-447d-aa6d-17a85ec395c1",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1767157102883-6jusa410d",
+                  "id": "niche-1767294867732-aegleel6i",
                   "type": "niche",
                   "children": []
                 },
                 {
-                  "id": "niche-1767157148477-wtyes4slf",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1767157221255-c8agcblsr",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1767174057510-y42kjtujp",
-      "type": "host",
-      "children": [
-        {
-          "id": "bcd827b1-0d0a-4eac-922a-5f5744a133ab",
-          "type": "region",
-          "children": [
-            {
-              "id": "8e6d8470-48b1-42b7-96a9-bf45ed442c26",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1767174199932-6tiw3r1bd",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1767176832741-5jiz5wgeq",
-      "type": "host",
-      "children": [
-        {
-          "id": "fe97ac95-6333-4135-8596-b95e69749efa",
-          "type": "region",
-          "children": [
-            {
-              "id": "6e4d8b42-c5de-49af-8167-4263ed48fc53",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1767176875700-w6km8x00t",
-                  "type": "niche",
-                  "children": []
-                },
-                {
-                  "id": "niche-1767176941258-m7is0yz62",
+                  "id": "niche-1767294892410-c4oahlhqs",
                   "type": "niche",
                   "children": []
                 }
@@ -3341,10 +2068,7 @@
   ],
   "pinnedIds": [
     "loc-1767101449144-ncoxq6b1a",
-    "loc-1767112081225-dlqhou1t1",
     "loc-1767152996093-g79aebj4c",
-    "loc-1767157066688-nnrvnjtuk",
-    "loc-1767174057510-y42kjtujp",
-    "loc-1767176832741-5jiz5wgeq"
+    "loc-1767294678253-7ihi6q0jy"
   ]
 }

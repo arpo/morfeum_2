@@ -5,11 +5,12 @@
  * 
  * NOTE: navigableElements and furnishing are NO LONGER generated here.
  * They are now user-controlled via the prompt enhancer feature.
+ * 
+ * Uses Gemini Explicit Caching for 90% cost reduction on static prompt content.
  */
 
-import * as mzooService from '../../../services/mzoo.service';
-import { AI_MODELS } from '../../../config';
-import { structureAnalysisPrompt } from '../../generation/prompts/navigation/structureAnalysis';
+import { generateCachedText, generateText } from '../../../services/mzoo';
+import { structureAnalysisPrompt, structureAnalysisDynamic } from '../../generation/prompts/navigation/structureAnalysis';
 import { extractRequiredElements } from '../../generation/prompts/navigation/elementAnalysis';
 import type { NavigationContext, StructureAnalysis, Structure, NavigableElement, ScenePerspective } from '../types';
 
@@ -58,27 +59,52 @@ export async function analyzeStructure(
     console.log(`[StructureAnalyzer] Using GOTO-specific prompt (destination: "${userPrompt}")`);
   }
 
-  // Call LLM for structure analysis
-  const response = await mzooService.generateText(
-    apiKey,
-    [{ role: 'user', content: prompt }],
-    AI_MODELS.NAVIGATOR
-  );
+  // Build dynamic prompt for cached generation
+  const dynamicPrompt = structureAnalysisDynamic({
+    userPrompt,
+    context,
+    perspective,
+    isGotoCommand: options?.isGotoCommand
+  });
 
-  // Handle errors
-  if (response.error || !response.data) {
-    console.error('[StructureAnalyzer] LLM call failed:', response.error);
-    // Fallback to interior if no perspective provided
+  // Use cached generation for structure analysis
+  let responseText: string;
+  try {
+    const cachedResult = await generateCachedText(
+      apiKey,
+      'morfeum-navigation',
+      dynamicPrompt
+    );
+    
+    console.log(`[StructureAnalyzer] Cached generation: cacheHit=${cachedResult.cacheHit}, cachedTokens=${cachedResult.usage?.cachedTokens || 0}`);
+    responseText = cachedResult.text;
+  } catch (cacheError) {
+    console.warn('[StructureAnalyzer] Cached generation failed, using fallback:', cacheError);
+    // Fallback to non-cached generation using full prompt
+    const response = await generateText(
+      apiKey,
+      [{ role: 'user', content: prompt }],
+      'gemini-2.0-flash'
+    );
+    
+    if (response.error || !response.data) {
+      console.error('[StructureAnalyzer] LLM call failed:', response.error);
+      return createFallbackAnalysis(userPrompt, perspective || 'interior', context, parsedEnhancements);
+    }
+    
+    responseText = typeof response.data === 'string' 
+      ? response.data 
+      : (response.data.text || JSON.stringify(response.data));
+  }
+
+  // Handle empty response
+  if (!responseText) {
+    console.error('[StructureAnalyzer] Empty response from LLM');
     return createFallbackAnalysis(userPrompt, perspective || 'interior', context, parsedEnhancements);
   }
 
-  // Extract text from response
-  const text = typeof response.data === 'string' 
-    ? response.data 
-    : (response.data.text || JSON.stringify(response.data));
-
   // Clean up response (remove markdown code fences if present)
-  let cleaned = text.trim();
+  let cleaned = responseText.trim();
   if (cleaned.startsWith('```json')) {
     cleaned = cleaned.replace(/^```json\n?/, '').replace(/\n?```$/, '');
   } else if (cleaned.startsWith('```')) {
