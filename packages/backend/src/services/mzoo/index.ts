@@ -7,6 +7,7 @@
 export { generateText } from './services/textGeneration';
 export { analyzeImage } from './services/visionAnalysis';
 export { generateImage } from './services/imageGeneration';
+export { editImage } from './services/imageEdit';
 export { generateDepthMap } from './services/depthMapGeneration';
 
 // Export cached text generation services
@@ -35,4 +36,4 @@ export type { CacheGroupId } from '../../engine/generation/prompts/cacheContent'
 export * from './types';
 
 // Export configuration (optional, for advanced users)
-export { ENDPOINTS, DEFAULT_MODELS, DEFAULT_IMAGE_SETTINGS } from './config/endpoints';
+export { ENDPOINTS, DEFAULT_MODELS, DEFAULT_IMAGE_SETTINGS, DEFAULT_IMAGE_EDIT_SETTINGS } from './config/endpoints';

@@ -1,5 +1,25 @@
 # Progress
 
+## 2026-01-02 - Image Edit Feature
+
+- [x] **/EDIT_IMAGE Slash Command - COMPLETED**
+  - **What**: FAL Flux 2 Turbo Edit API integration with `/EDIT_IMAGE` command
+  - **Files Created**:
+    - `services/mzoo/services/imageEdit.ts` - editImage() function
+    - `routes/mzoo/handlers/editImageHandler.ts` - Route handler
+    - `features/spawn-input/SpawnInputBar/editCommands.ts` - Frontend command handler
+  - **Files Modified**:
+    - `services/mzoo/config/endpoints.ts` - IMAGE_EDIT endpoint
+    - `services/mzoo/types.ts` - ImageEditRequest/Response types
+    - `services/mzoo/index.ts` - Exports
+    - `config/navigation.ts` - EDIT_IMAGE command config
+    - `features/spawn-input/SpawnInputBar/commandParser.ts` - isEditCommand()
+    - `features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - Command routing
+    - `routes/mzoo/navigation.ts` - Route registration
+    - `engine/pipelines/shared/pipelineConfig.ts` - edit pipeline (6000ms)
+  - **Usage**: `/EDIT_IMAGE change to winter`
+  - **Duration**: ~6 seconds per edit
+
 ## 2026-01-01 (Evening Update)
 
 - [x] **Extended Caching to Navigation Pipeline - COMPLETED**

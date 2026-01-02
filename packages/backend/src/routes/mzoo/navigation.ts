@@ -14,6 +14,7 @@ import { commandHandler } from './handlers/commandHandler';
 import { eventsHandler } from './handlers/eventsHandler';
 import { createNodeHandler } from './handlers/createNodeHandler';
 import { createImageHandler } from './handlers/createImageHandler';
+import { editImageHandler } from './handlers/editImageHandler';
 import { enhancePromptHandler } from './handlers/enhancePromptHandler';
 
 const router = Router();
@@ -49,6 +50,7 @@ router.post('/command', asyncHandler(commandHandler));
 router.get('/events/:navigationId', asyncHandler(eventsHandler));
 router.post('/create-node', asyncHandler(createNodeHandler));
 router.post('/create-image', asyncHandler(createImageHandler));
+router.post('/edit-image', asyncHandler(editImageHandler));
 router.post('/enhance-prompt', asyncHandler(enhancePromptHandler));
 
 export { router as navigationRouter };

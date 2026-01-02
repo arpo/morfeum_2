@@ -1,9 +1,10 @@
 import { useCallback, useState } from 'react';
 import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locations';
-import { parseCommandInput, isCreationCommand, isMediaCommand, isNavigationCommand } from './commandParser';
+import { parseCommandInput, isCreationCommand, isMediaCommand, isEditCommand, isNavigationCommand } from './commandParser';
 import { handleCreationCommand } from './creationCommands';
 import { handleMediaCommand } from './mediaCommands';
+import { handleEditCommand } from './editCommands';
 import { handleNavigationCommand } from './navigationCommands';
 
 /** Commands that support enhancement (navigable elements, furnishing) */
@@ -120,6 +121,11 @@ export function useNavigationLogic() {
 
     if (isMediaCommand(command)) {
       await handleMediaCommand(parsedCommand, currentNode, callbacks);
+      return;
+    }
+
+    if (isEditCommand(command)) {
+      await handleEditCommand(parsedCommand, currentNode, callbacks);
       return;
     }
 

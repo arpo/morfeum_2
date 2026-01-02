@@ -82,3 +82,27 @@ export interface DepthMapResponse {
     timestamp: string;
   };
 }
+
+export interface ImageEditRequest {
+  prompt: string;
+  inputImage?: string;
+  num_images?: number;
+  image_size?: 'square_hd' | 'square' | 'portrait_4_3' | 'portrait_16_9' | 'landscape_4_3' | 'landscape_16_9';
+  guidance_scale?: number;
+  output_format?: 'jpeg' | 'png';
+  enable_safety_checker?: boolean;
+}
+
+export interface ImageEditResponse {
+  images: Array<{
+    url: string;
+    width: number;
+    height: number;
+  }>;
+  metadata: {
+    prompt: string;
+    image_size: string;
+    guidance_scale: number;
+    input_image_provided: boolean;
+  };
+}

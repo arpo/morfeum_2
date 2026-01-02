@@ -57,6 +57,12 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
     description: 'Generate image for current node',
     category: 'media'
   },
+  EDIT_IMAGE: { 
+    requiresNodeType: ['host', 'region', 'location', 'niche'], 
+    blockedOnPassThrough: true,
+    description: 'Edit current image with a prompt (e.g., change to winter)',
+    category: 'media'
+  },
   
   // Character creation commands
   CREATE_CHARACTER_REAL: {

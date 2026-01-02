@@ -93,6 +93,11 @@ export const PIPELINE_STEPS = {
   // VIEW command - generate image for existing node (save happens silently)
   view: [
     { id: 'generate', name: 'Generating Image', duration: 2500 }
+  ],
+  
+  // EDIT_IMAGE command - edit existing image with text prompt
+  edit: [
+    { id: 'edit', name: 'Editing Image', duration: 6000 }
   ]
 } as const;
 

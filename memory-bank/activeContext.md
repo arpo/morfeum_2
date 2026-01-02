@@ -1,5 +1,48 @@
 # Active Context
 
+## 2026-01-02 - Image Edit API & Slash Command
+
+### /EDIT_IMAGE Slash Command - COMPLETED
+
+Implemented FAL Flux 2 Turbo Edit API integration with a new `/EDIT_IMAGE` slash command.
+
+#### What Was Built
+
+**Backend - MZOO Service Layer:**
+- `services/mzoo/config/endpoints.ts` - Added `IMAGE_EDIT` endpoint and `DEFAULT_IMAGE_EDIT_SETTINGS`
+- `services/mzoo/types.ts` - Added `ImageEditRequest` and `ImageEditResponse` interfaces
+- `services/mzoo/services/imageEdit.ts` - New `editImage()` function
+- `services/mzoo/index.ts` - Exported new function and settings
+
+**Backend - Route Handler:**
+- `routes/mzoo/handlers/editImageHandler.ts` - New POST `/api/mzoo/navigation/edit-image` handler
+- `routes/mzoo/navigation.ts` - Registered the route
+
+**Frontend - Slash Command:**
+- `config/navigation.ts` - Added `EDIT_IMAGE` to slash commands (media category)
+- `features/spawn-input/SpawnInputBar/commandParser.ts` - Added `isEditCommand()` check
+- `features/spawn-input/SpawnInputBar/editCommands.ts` - New command handler
+- `features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - Wired up command routing
+
+**Pipeline Configuration:**
+- `engine/pipelines/shared/pipelineConfig.ts` - Added `edit` pipeline (6000ms duration)
+
+#### Usage
+```
+/EDIT_IMAGE change to winter
+/EDIT_IMAGE make it look like a sunset
+/EDIT_IMAGE add snow to the scene
+```
+
+The command reads the current node's image, sends it to FAL Flux 2 Turbo Edit with the prompt, and replaces `primaryMedia` with the edited result.
+
+#### API Details
+- **Endpoint**: `POST https://www.mzoo.app/api/v1/ai/fal-flux-2-turbo-edit/edit`
+- **Duration**: ~6 seconds per edit
+- **Response**: Returns edited image URL with metadata
+
+---
+
 ## 2026-01-01 (Evening) - Extended Navigation Caching
 
 ### Extended Caching to Navigation Pipeline - COMPLETED

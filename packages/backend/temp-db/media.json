@@ -1177,6 +1177,56 @@
         "model": "FLUX"
       },
       "entityRefs": []
+    },
+    "media-1767357042139-xaut5vb15": {
+      "id": "media-1767357042139-xaut5vb15",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a88c5d8/-MO29n8W0XjsKuYjiudj3.jpg",
+      "createdAt": "2026-01-02T12:30:42.139Z",
+      "metadata": {
+        "prompt": "make it winter",
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1024,
+        "height": 576,
+        "aspectRatio": "landscape_16_9",
+        "editedFrom": "media-1767298183923-rax141vik"
+      },
+      "entityRefs": [
+        "niche-1767298183925-js2mgnrsl"
+      ],
+      "parentMedia": "media-1767298183923-rax141vik"
+    },
+    "media-1767357252382-c423xxn9r": {
+      "id": "media-1767357252382-c423xxn9r",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a88c5ed/w_O5dnJ_0Nzv_4GeU-y1g_dad695d1257147ba8e5cfeb449093bfb.png",
+      "createdAt": "2026-01-02T12:34:12.382Z",
+      "metadata": {
+        "parentMedia": "media-1767357042139-xaut5vb15",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "niche-1767298183925-js2mgnrsl"
+      ],
+      "parentMedia": "media-1767357042139-xaut5vb15"
+    },
+    "media-1767357320290-kb1y7l029": {
+      "id": "media-1767357320290-kb1y7l029",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a88c5f3/hmJFk5WwEYjWwFvTLcYwR.jpg",
+      "createdAt": "2026-01-02T12:35:20.290Z",
+      "metadata": {
+        "prompt": "turn to night",
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1024,
+        "height": 576,
+        "aspectRatio": "landscape_16_9",
+        "editedFrom": "media-1767357042139-xaut5vb15"
+      },
+      "entityRefs": [
+        "niche-1767298183925-js2mgnrsl"
+      ],
+      "parentMedia": "media-1767357042139-xaut5vb15"
     }
   }
 }

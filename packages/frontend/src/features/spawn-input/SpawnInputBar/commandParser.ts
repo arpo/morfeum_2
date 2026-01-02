@@ -76,6 +76,14 @@ export function isMediaCommand(command: string): boolean {
 }
 
 /**
+ * Check if command is an edit command
+ * Edit commands modify existing images (EDIT_IMAGE)
+ */
+export function isEditCommand(command: string): boolean {
+  return command === 'EDIT_IMAGE';
+}
+
+/**
  * Check if command is a navigation command
  * Navigation commands navigate within the world tree (GO_INSIDE, GOTO)
  */
