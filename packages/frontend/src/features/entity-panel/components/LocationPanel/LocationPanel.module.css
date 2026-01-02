@@ -4,6 +4,43 @@
 @import '../shared/EntityPanelShared.module.css';
 @import '../shared/ChatShared.module.css';
 
+/* Re-export shared container styles */
+.container {
+  composes: container from '../shared/EntityPanelShared.module.css';
+}
+
+.imageContainer {
+  composes: imageContainer from '../shared/EntityPanelShared.module.css';
+}
+
+.imageSkeleton {
+  composes: imageSkeleton from '../shared/EntityPanelShared.module.css';
+}
+
+.skeletonBreathing {
+  composes: skeletonBreathing from '../shared/EntityPanelShared.module.css';
+}
+
+.imageButtons {
+  composes: imageButtons from '../shared/EntityPanelShared.module.css';
+}
+
+.imageButton {
+  composes: imageButton from '../shared/EntityPanelShared.module.css';
+}
+
+.fullscreenOverlay {
+  composes: fullscreenOverlay from '../shared/EntityPanelShared.module.css';
+}
+
+.fullscreenCloseButton {
+  composes: fullscreenCloseButton from '../shared/EntityPanelShared.module.css';
+}
+
+.fullscreenImage {
+  composes: fullscreenImage from '../shared/EntityPanelShared.module.css';
+}
+
 /* Location-specific overrides */
 .locationInfo {
   composes: entityInfo from '../shared/EntityPanelShared.module.css';

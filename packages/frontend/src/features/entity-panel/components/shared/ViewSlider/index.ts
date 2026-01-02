@@ -1,0 +1,1 @@
+export { ViewSlider } from './ViewSlider';

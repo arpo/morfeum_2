@@ -139,6 +139,14 @@ export function clearMediaItem(mediaId: string): void {
 }
 
 /**
+ * Clear cache for a specific entity
+ * Used when new media is added to an entity (e.g., after /EDIT_IMAGE)
+ */
+export function clearEntityMediaCache(entityId: string): void {
+  entityMediaCache.delete(entityId);
+}
+
+/**
  * Preload media for multiple entities
  * Useful for batch loading when displaying lists
  */

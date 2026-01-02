@@ -129,6 +129,14 @@ export class WorldViewRenderer {
     this.particleSystem.createMesh(this.scene);
   }
 
+  // Crossfade state
+  private crossfadeMesh: THREE.Mesh | null = null;
+  private crossfadeMaterial: THREE.ShaderMaterial | null = null;
+  private crossfadeProgress: number = 1;
+  private crossfadeDuration: number = 0;
+  private crossfadeStartTime: number = 0;
+  private isCrossfading: boolean = false;
+
   async load(imageUrl: string, depthUrl?: string | null): Promise<void> {
     const textureLoader = new THREE.TextureLoader();
     const imageTexture = await textureLoader.loadAsync(imageUrl);
@@ -141,6 +149,105 @@ export class WorldViewRenderer {
     } else {
       this.createFlatMesh(imageTexture);
     }
+  }
+
+  /**
+   * Crossfade to a new image with smooth transition
+   * @param imageUrl - New image URL
+   * @param depthUrl - Optional depth map URL
+   * @param duration - Transition duration in seconds (default 1.5s)
+   */
+  async crossfadeTo(imageUrl: string, depthUrl?: string | null, duration: number = 1.5): Promise<void> {
+    if (!this.mesh || !this.material) {
+      // No existing image, just load normally
+      return this.load(imageUrl, depthUrl);
+    }
+
+    // Load new texture
+    const textureLoader = new THREE.TextureLoader();
+    const newTexture = await textureLoader.loadAsync(imageUrl);
+    
+    const newAspectRatio = newTexture.image.width / newTexture.image.height;
+
+    // Store old mesh as crossfade source
+    this.crossfadeMesh = this.mesh;
+    this.crossfadeMaterial = this.material;
+    this.crossfadeMaterial.transparent = true;
+    this.crossfadeMaterial.needsUpdate = true;
+    
+    // Create new mesh (don't cleanup old one yet - we need it for crossfade)
+    this.mesh = null;
+    this.material = null;
+    this.imageAspectRatio = newAspectRatio;
+    this.updateScissorDimensions();
+
+    if (depthUrl) {
+      await this.createMeshWithDepth(newTexture, depthUrl);
+    } else {
+      this.createFlatMesh(newTexture);
+    }
+
+    // Set up new mesh for fade in - start at 0 opacity
+    if (this.material) {
+      (this.material as THREE.ShaderMaterial).transparent = true;
+      (this.material as THREE.ShaderMaterial).uniforms.opacity.value = 0;
+      (this.material as THREE.ShaderMaterial).needsUpdate = true;
+    }
+
+    // Start crossfade
+    this.isCrossfading = true;
+    this.crossfadeProgress = 0;
+    this.crossfadeDuration = duration;
+    this.crossfadeStartTime = performance.now();
+  }
+
+  /**
+   * Update crossfade animation (called in animation loop)
+   */
+  private updateCrossfade(deltaTime: number): void {
+    if (!this.isCrossfading) return;
+
+    const elapsed = (performance.now() - this.crossfadeStartTime) / 1000;
+    this.crossfadeProgress = Math.min(elapsed / this.crossfadeDuration, 1);
+    
+    // Smooth easing (ease-in-out)
+    const eased = this.crossfadeProgress < 0.5
+      ? 2 * this.crossfadeProgress * this.crossfadeProgress
+      : 1 - Math.pow(-2 * this.crossfadeProgress + 2, 2) / 2;
+
+    // Update opacities - directly modify the value, not replace the uniform object
+    if (this.crossfadeMaterial?.uniforms?.opacity) {
+      this.crossfadeMaterial.uniforms.opacity.value = 1 - eased;
+    }
+    if (this.material?.uniforms?.opacity) {
+      this.material.uniforms.opacity.value = eased;
+    }
+
+    // Cleanup when done
+    if (this.crossfadeProgress >= 1) {
+      this.cleanupCrossfade();
+    }
+  }
+
+  /**
+   * Cleanup crossfade resources
+   */
+  private cleanupCrossfade(): void {
+    if (this.crossfadeMesh) {
+      this.scene.remove(this.crossfadeMesh);
+      this.crossfadeMesh.geometry.dispose();
+      this.crossfadeMesh = null;
+    }
+    if (this.crossfadeMaterial) {
+      this.crossfadeMaterial.dispose();
+      this.crossfadeMaterial = null;
+    }
+    if (this.material) {
+      this.material.transparent = false;
+      this.material.uniforms.opacity.value = 1;
+      this.material.needsUpdate = true;
+    }
+    this.isCrossfading = false;
   }
 
   private createFlatMesh(imageTexture: THREE.Texture): void {
@@ -231,6 +338,9 @@ export class WorldViewRenderer {
       if (this.postProcessor) {
         this.postProcessor.update(deltaTime);
       }
+
+      // Update crossfade animation
+      this.updateCrossfade(deltaTime);
 
       // Update scene effects (wind gusts, lightning)
       this.sceneState = updateSceneEffects(

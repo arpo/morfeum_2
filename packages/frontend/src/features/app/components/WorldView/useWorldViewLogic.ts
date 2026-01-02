@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { useStore } from '@/store';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useLocationsStore } from '@/store/slices/locations';
-import { getDepthMapForMedia, clearMediaCache } from '@/services/mediaService';
+import { getDepthMapForMedia, clearMediaCache, getEntityMedia, clearEntityMediaCache } from '@/services/mediaService';
 import { WorldViewRenderer } from './WorldViewRenderer';
 
 interface DisplayImage {
@@ -10,6 +10,13 @@ interface DisplayImage {
   depthSrc: string | null;
   alt: string;
   mediaId: string | null;
+}
+
+interface MediaView {
+  id: string;
+  url: string;
+  createdAt: string;
+  type: string;
 }
 
 export function useWorldViewLogic() {
@@ -28,9 +35,110 @@ export function useWorldViewLogic() {
   
   const [isLoading, setIsLoading] = useState(true);
   const [hasImage, setHasImage] = useState(false);
+  
+  // Multi-view state
+  const [views, setViews] = useState<MediaView[]>([]);
+  const [currentViewIndex, setCurrentViewIndex] = useState(-1);
 
   // Get active entity session
   const activeEntitySession = activeEntity ? entities.get(activeEntity) : null;
+  const isLocation = activeEntitySession?.entityType === 'location';
+
+  // Fetch views for location entities
+  const fetchViews = useCallback(async () => {
+    if (!activeEntity || !isLocation) {
+      setViews([]);
+      setCurrentViewIndex(-1);
+      return;
+    }
+
+    try {
+      // Store previous count to detect new views
+      const previousViewCount = views.length;
+      
+      clearEntityMediaCache(activeEntity);
+      const allMedia = await getEntityMedia(activeEntity);
+      const imageViews = allMedia.filter(m => m.type === 'image') as MediaView[];
+      
+      // Sort by createdAt (oldest first)
+      const sortedViews = [...imageViews].sort((a, b) => 
+        new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+      );
+      
+      setViews(sortedViews);
+      
+      // If new views were added, crossfade to the newest one
+      if (sortedViews.length > previousViewCount && sortedViews.length > 0) {
+        const newIndex = sortedViews.length - 1;
+        const newestView = sortedViews[newIndex];
+        
+        setCurrentViewIndex(newIndex);
+        
+        // Crossfade to new view
+        if (rendererRef.current && newestView) {
+          const depthMap = await getDepthMapForMedia(newestView.id);
+          await rendererRef.current.crossfadeTo(newestView.url, depthMap?.url || null, 1.5);
+        }
+      } else if (sortedViews.length > 0 && currentViewIndex < 0) {
+        // Initial load - default to newest view without crossfade
+        setCurrentViewIndex(sortedViews.length - 1);
+      }
+    } catch (error) {
+      setViews([]);
+      setCurrentViewIndex(-1);
+    }
+  }, [activeEntity, isLocation, views.length, currentViewIndex]);
+
+  // Fetch views when active entity changes
+  useEffect(() => {
+    fetchViews();
+  }, [fetchViews]);
+
+  // Navigate to previous view (older)
+  const goToPreviousView = useCallback(async () => {
+    if (currentViewIndex <= 0 || views.length === 0) return;
+    
+    const newIndex = currentViewIndex - 1;
+    const view = views[newIndex];
+    
+    setCurrentViewIndex(newIndex);
+    
+    // Crossfade to new view
+    if (rendererRef.current && view) {
+      const depthMap = await getDepthMapForMedia(view.id);
+      await rendererRef.current.crossfadeTo(view.url, depthMap?.url || null, 1.5);
+    }
+  }, [currentViewIndex, views]);
+
+  // Navigate to next view (newer)
+  const goToNextView = useCallback(async () => {
+    if (currentViewIndex >= views.length - 1 || views.length === 0) return;
+    
+    const newIndex = currentViewIndex + 1;
+    const view = views[newIndex];
+    
+    setCurrentViewIndex(newIndex);
+    
+    // Crossfade to new view
+    if (rendererRef.current && view) {
+      const depthMap = await getDepthMapForMedia(view.id);
+      await rendererRef.current.crossfadeTo(view.url, depthMap?.url || null, 1.5);
+    }
+  }, [currentViewIndex, views]);
+
+  // Navigate to specific view
+  const goToView = useCallback(async (index: number) => {
+    if (index < 0 || index >= views.length) return;
+    
+    const view = views[index];
+    setCurrentViewIndex(index);
+    
+    // Crossfade to new view
+    if (rendererRef.current && view) {
+      const depthMap = await getDepthMapForMedia(view.id);
+      await rendererRef.current.crossfadeTo(view.url, depthMap?.url || null, 1.5);
+    }
+  }, [views]);
   
   // Get primaryMedia from character or location store
   const getPrimaryMediaId = useCallback((): string | null => {
@@ -203,11 +311,64 @@ export function useWorldViewLogic() {
     };
   }, []);
 
+  // Handle keyboard navigation for views
+  useEffect(() => {
+    if (!isLocation || views.length <= 1) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Skip if user is in an input field
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable) {
+        return;
+      }
+      
+      if (e.key === 'ArrowLeft') {
+        goToPreviousView();
+      } else if (e.key === 'ArrowRight') {
+        goToNextView();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isLocation, views.length, goToPreviousView, goToNextView]);
+
+  // Listen for new image generation events to refresh views
+  useEffect(() => {
+    if (!activeEntity || !isLocation) return;
+
+    const handleImageGenerated = (event: Event) => {
+      const customEvent = event as CustomEvent<{ entityId?: string }>;
+      // Refresh views if the event is for our entity or no specific entity
+      if (!customEvent.detail?.entityId || customEvent.detail.entityId === activeEntity) {
+        fetchViews();
+      }
+    };
+
+    // Listen for various image generation completion events
+    window.addEventListener('imageGenerated', handleImageGenerated);
+    window.addEventListener('spawnComplete', handleImageGenerated);
+    window.addEventListener('editImageComplete', handleImageGenerated);
+    
+    return () => {
+      window.removeEventListener('imageGenerated', handleImageGenerated);
+      window.removeEventListener('spawnComplete', handleImageGenerated);
+      window.removeEventListener('editImageComplete', handleImageGenerated);
+    };
+  }, [activeEntity, isLocation, fetchViews]);
+
   return {
     initRenderer,
     checkForDepthMap,
     isLoading,
     hasImage,
-    rendererRef
+    rendererRef,
+    // Multi-view navigation
+    views,
+    currentViewIndex,
+    goToPreviousView,
+    goToNextView,
+    goToView,
+    refreshViews: fetchViews
   };
 }

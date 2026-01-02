@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { useWorldViewLogic } from './useWorldViewLogic';
 import { WORLD_VIEW_3D_CONFIG } from '@/config';
+import { IconChevronLeft, IconChevronRight } from '@/icons';
 import styles from './WorldView.module.css';
 
 // Target aspect ratio (16:9)
@@ -8,8 +9,22 @@ const TARGET_ASPECT_RATIO = 16 / 9;
 
 export function WorldView() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { initRenderer, isLoading, hasImage } = useWorldViewLogic();
+  const { 
+    initRenderer, 
+    isLoading, 
+    hasImage,
+    views,
+    currentViewIndex,
+    goToPreviousView,
+    goToNextView,
+    goToView
+  } = useWorldViewLogic();
   const [letterboxHeight, setLetterboxHeight] = useState(0);
+  
+  // Show navigation controls only when we have multiple views
+  const showNavigation = views.length > 1;
+  const canGoPrevious = currentViewIndex > 0;
+  const canGoNext = currentViewIndex < views.length - 1;
   
   const letterboxEnabled = WORLD_VIEW_3D_CONFIG.LETTERBOX.ENABLED;
   const extraHeight = WORLD_VIEW_3D_CONFIG.LETTERBOX.EXTRA_HEIGHT;
@@ -70,6 +85,43 @@ export function WorldView() {
             className={styles.letterboxBottom} 
             style={{ height: `${letterboxHeight}px` }}
           />
+        </>
+      )}
+
+      {/* View navigation controls */}
+      {showNavigation && (
+        <>
+          {/* Arrow buttons */}
+          {canGoPrevious && (
+            <button 
+              className={`${styles.arrowButton} ${styles.arrowLeft}`}
+              onClick={goToPreviousView}
+              title="Previous view (older)"
+            >
+              <IconChevronLeft size={32} />
+            </button>
+          )}
+          {canGoNext && (
+            <button 
+              className={`${styles.arrowButton} ${styles.arrowRight}`}
+              onClick={goToNextView}
+              title="Next view (newer)"
+            >
+              <IconChevronRight size={32} />
+            </button>
+          )}
+
+          {/* Dot indicators */}
+          <div className={styles.viewDots}>
+            {views.map((view, index) => (
+              <button
+                key={view.id}
+                className={`${styles.viewDot} ${index === currentViewIndex ? styles.viewDotActive : ''}`}
+                onClick={() => goToView(index)}
+                title={`View ${index + 1} of ${views.length}`}
+              />
+            ))}
+          </div>
         </>
       )}
     </div>

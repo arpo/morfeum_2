@@ -1,0 +1,256 @@
+{
+  "nodes": {
+    "loc-1767366285247-p4bo4r6dk": {
+      "id": "loc-1767366285247-p4bo4r6dk",
+      "type": "host",
+      "name": "Alien Frontier",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast, open landscape with rolling green hills leading to a calm blue ocean bordered by rugged mountains. A brilliant blue sky with a colossal pale blue planet and a smaller moon.",
+        "colorsAndLighting": "Vibrant greens, calm blues, rugged greys, brilliant blue sky, clear bright daylight.",
+        "atmosphere": "Sense of exploration on a grand, possibly alien, scale.",
+        "materials": "Natural rock, earth, water.",
+        "mood": "Wonder, exploration, vastness, tranquility.",
+        "sounds": "Wind, gentle waves, distant flying craft.",
+        "primary_surfaces": "Rolling hills, ocean surface, mountain ranges.",
+        "secondary_surfaces": "Sky, distant celestial bodies.",
+        "accent_features": "Scattered rocks and small white flowers in foreground.",
+        "dominant": "Vast landscape",
+        "secondary": "Ocean and mountains",
+        "accent": "Celestial bodies",
+        "ambient": "Distant flying craft",
+        "genre": "SCIENCE FICTION",
+        "architectural_tone": "Organic integration, naturalistic",
+        "cultural_tone": "Frontier, exploratory, advanced civilization",
+        "palette_bias": "Natural blues and greens, earthy tones",
+        "flora_base": "Grasses, small wildflowers",
+        "fauna_base": "Small flying craft"
+      },
+      "description": "A distant world where advanced alien civilizations integrate with natural landscapes. The vastness of the planet is characterized by rolling hills, rugged mountains, and open oceans under a brilliant sky. This environment serves as a canvas for immense technological wonders.",
+      "searchDesc": "Distant world, rolling hills, rugged mountains, ocean, alien technology integration.",
+      "slug": "alien-frontier",
+      "structure": {
+        "spatialLayout": "Expansive, open vistas with dominant geographic features."
+      }
+    },
+    "0508e706-60ac-4ddf-878c-70364c7e12f5": {
+      "id": "0508e706-60ac-4ddf-878c-70364c7e12f5",
+      "type": "region",
+      "name": "The Great Landing",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Sprawling complex of interconnected domes, prominent antennas, and smaller docked vessels fused with a rugged mountainside.",
+        "colorsAndLighting": "Medium grey spacecraft surfaces, weathered stone, clear bright daylight.",
+        "atmosphere": "Sense of wonder and awe, grandeur of alien technology.",
+        "materials": "Primarily polished metallic surfaces, accented by rugged, weathered stone.",
+        "mood": "Wonder, awe, exploration, grand scale.",
+        "sounds": "Distant hum of machinery, wind.",
+        "primary_surfaces": "Metallic spacecraft hull, rocky cliff face.",
+        "secondary_surfaces": "Domes, antennas, docked vessels.",
+        "accent_features": "Signs of wear from interstellar travel.",
+        "dominant": "Colossal spacecraft structure",
+        "secondary": "Mountain face",
+        "accent": "Docked vessels",
+        "ambient": "Distant landscape elements",
+        "genre": null,
+        "architectural_tone": "Futuristic industrial",
+        "cultural_tone": "Alien, exploratory",
+        "palette_bias": "Grey, stone tones",
+        "flora_base": "Minimal, sparse mountain vegetation",
+        "fauna_base": "None observed"
+      },
+      "description": "A colossal alien spacecraft is intricately integrated into a vast mountain face. The surrounding landscape showcases the immense scale of this extraterrestrial construction, emphasizing its fusion with the rugged terrain. Docked vessels and complex structures descend the cliff, hinting at extensive operations.",
+      "searchDesc": "Alien spacecraft fused with mountain, domes, antennas, docked vessels.",
+      "slug": "the-great-landing",
+      "structure": {
+        "spatialLayout": "Vertical integration into a cliff face, sprawling horizontally."
+      },
+      "primaryMedia": "media-1767368132897-wvw9pjxr8"
+    },
+    "be16d9d7-d841-490f-ac78-26a5a94fc031": {
+      "id": "be16d9d7-d841-490f-ac78-26a5a94fc031",
+      "type": "location",
+      "name": "The Starfall Dock",
+      "spaceType": "exterior",
+      "description": "This alien space harbour is carved directly into the mountainside, a testament to advanced extraterrestrial engineering. Domes and metallic protrusions jut out from the weathered stone, seamlessly blending with the natural environment.",
+      "dna": {
+        "looks": "A colossal, sprawling complex of interconnected domes and angular metallic structures seamlessly integrated into a sheer mountainside. Antennas and sensor arrays protrude at odd angles, hinting at continuous operations. Smaller docked vessels cling to the exterior like barnacles.",
+        "colorsAndLighting": "The primary colors are medium grey spacecraft surfaces contrasted with the weathered stone of the mountain. Clear, bright daylight illuminates the scene, creating sharp contrasts and a sense of immense scale.",
+        "atmosphere": "The air is crisp and cool, carrying the distant hum of unseen machinery. The wind whistles around the metallic structures, a constant reminder of the exposed position of the harbour. There is a profound sense of awe inspired by the sheer size and alien nature of the construction.",
+        "materials": "Predominantly polished metallic surfaces that reflect the sky, juxtaposed with rough, weathered stone. Some sections may feature organic, membrane-like textures, hinting at bio-integrated technology.",
+        "mood": "Wonder and awe permeate the location, evoking a sense of exploration and the grand scale of extraterrestrial endeavors.",
+        "sounds": "Distant hum of machinery, wind, occasional metallic creaks.",
+        "primary_surfaces": "Polished metallic hulls, weathered stone mountain face",
+        "secondary_surfaces": "Reinforced plating, integrated conduits, exposed crystalline structures",
+        "accent_features": "Glow from internal docking bays, asymmetrical antenna arrays, docking clamps",
+        "dominant": "Medium grey metallic",
+        "secondary": "Weathered stone",
+        "accent": "Subtle internal blue or orange glow",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Futuristic industrial",
+        "cultural_tone": "Alien, exploratory",
+        "palette_bias": "Grey, stone tones",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "searchDesc": "Alien space harbour with domes and metallic surfaces fused with a mountain.",
+      "slug": "the-starfall-dock",
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center, midground",
+          "description": "A wide, arcing entrance that leads into the main docking bay."
+        },
+        {
+          "type": "stairs",
+          "position": "left, background",
+          "description": "A series of spiraling external ramps leading to higher docking platforms."
+        },
+        {
+          "type": "door",
+          "position": "right, foreground",
+          "description": "A smaller, reinforced doorway suggesting an access point to internal ship maintenance or crew quarters."
+        }
+      ],
+      "dominantElements": [
+        "main_docking_bay: shape=domed, orientation=sprawling, scale=massive, style=futuristic, surfaces=metallic-polished, openings=large-glass, interior_materials=metallic|metallic|metallic, internal_atmosphere=industrial"
+      ],
+      "uniqueIdentifiers": [
+        "Fusion of alien metallic structures with rugged mountain rock",
+        "Prominent, asymmetrical docking arms extending from the main structure",
+        "Intermittent glow emanating from internal docking bays",
+        "A network of interconnected conduits and pipes along the exterior"
+      ],
+      "structure": {
+        "spatialLayout": "A complex, multi-tiered layout that follows the contours of the mountain. The primary structure is a series of massive, interconnected domes and irregular extensions, creating a sprawling, horizontally oriented presence."
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a88ca31/KwkD7zBCAlCG7Xabp30bH.jpg",
+      "primaryMedia": "media-1767368174330-0aig71dgc"
+    },
+    "niche-1767368207912-gy7d8o43w": {
+      "id": "niche-1767368207912-gy7d8o43w",
+      "type": "niche",
+      "name": "Main Docking Bay",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An immense, cavernous space, part natural geode and part alien industrial complex. Vast, polished metallic docking clamps are embedded into a sheer, dark, and rugged mountainside. Glowing energy conduits snake along the rock face and across the metallic structures. Piles of colossal, weathered cargo containers are stacked haphazardly. The ceiling is lost in shadow, hinting at immense scale.",
+        "colorsAndLighting": "Dominated by deep greys and the muted tones of weathered stone. Accents of pulsating, cool blue and eerie green emanate from the energy conduits and status indicators on the machinery. Bright, focused spotlights cut through the gloom, illuminating docking areas.",
+        "atmosphere": "A constant, low-frequency hum of alien technology permeates the air, accompanied by the occasional clang of metal and distant, echoing mechanical groans. The air is cool and carries a faint, metallic tang. A sense of immense, dormant power and vast emptiness prevails.",
+        "materials": "Primary: Polished, dark metallic alloys and rough, unyielding stone. Secondary: Grating, cabling, and weathered, monolithic cargo containers.",
+        "mood": "Wonder, awe, exploration, grand scale, with an undercurrent of alien mystery and immense power.",
+        "sounds": "Humming machinery, echoes, distant groans, metallic clangs, faint energy crackles.",
+        "spatialLayout": "A sprawling, cavernous space with a high ceiling, defined by the interplay of the natural rock and the massive, industrial docking infrastructure. Open areas for spacecraft maneuverability and dense stacks of cargo.",
+        "primary_surfaces": "Sheer, weathered rock face, colossal metallic docking clamps",
+        "secondary_surfaces": "Grating walkways, exposed cabling, monolithic cargo containers, glowing energy conduits",
+        "accent_features": "Scorched marks from atmospheric entry, subtle alien glyphs etched into metal panels, scattered tool caches.",
+        "dominant": "Grey",
+        "secondary": "Stone tones",
+        "accent": "Pulsating blues and greens",
+        "ambient": "Cool, stark, and functional",
+        "genre": "SCIENCE FICTION",
+        "architectural_tone": "Futuristic industrial",
+        "cultural_tone": "Alien, exploratory",
+        "palette_bias": "Grey, stone tones",
+        "flora_base": "Minimal, sparse mountain vegetation",
+        "fauna_base": "None observed"
+      },
+      "primaryMedia": "media-1767368207911-mo2cvs2qm",
+      "description": "You are now inside the Main Docking Bay, a massive, futuristic, and industrial domed structure with polished metallic surfaces and large glass openings.",
+      "structure": {
+        "form": "domed",
+        "roofType": "domed",
+        "scale": "massive",
+        "orientation": "sprawling",
+        "openings": "large-glass",
+        "openingShape": "mixed",
+        "functionalType": "industrial",
+        "elevation": "ground-level",
+        "spatialLayout": "A vast, domed industrial space designed for docking large vehicles or ships. The sprawling orientation suggests it can accommodate multiple entry/exit points or expansive operations.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "massive cargo lifts",
+          "automated loading cranes",
+          "industrial workbenches",
+          "spill containment trays",
+          "holographic schematic displays",
+          "fuel dispensers",
+          "sealed storage containers",
+          "robotic maintenance arms",
+          "warning hazard lights"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door large hangar s rear wall"
+        },
+        {
+          "type": "hatch",
+          "position": "floor",
+          "description": "hatch maintenance access"
+        },
+        {
+          "type": "corridor",
+          "position": "left wall",
+          "description": "corridor connecting"
+        },
+        {
+          "type": "object",
+          "position": "right wall",
+          "description": "object observation gallery"
+        }
+      ],
+      "dominantElements": [
+        "main_docking_bay: shape=domed, orientation=sprawling, scale=massive, style=futuristic, surfaces=metallic-polished, openings=large-glass, interior_materials=metallic|metallic|metallic, internal_atmosphere=industrial"
+      ],
+      "uniqueIdentifiers": [
+        "Futuristic metallic surfaces",
+        "Massive domed ceiling",
+        "Industrial atmosphere"
+      ],
+      "searchDesc": "Vast, alien docking bay within a mountain, featuring colossal spacecraft clamps and glowing energy conduits.",
+      "slug": "null-of-the-starfall-dock"
+    }
+  },
+  "views": {},
+  "worldTrees": [
+    {
+      "id": "loc-1767366285247-p4bo4r6dk",
+      "type": "host",
+      "children": [
+        {
+          "id": "0508e706-60ac-4ddf-878c-70364c7e12f5",
+          "type": "region",
+          "children": [
+            {
+              "id": "be16d9d7-d841-490f-ac78-26a5a94fc031",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinnedIds": [
+    "loc-1767366285247-p4bo4r6dk"
+  ]
+}                "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinnedIds": [
+    "loc-1767366285247-p4bo4r6dk"
+  ]
+}

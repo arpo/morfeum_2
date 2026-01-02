@@ -12,6 +12,7 @@ export interface ShaderUniforms {
   focus: { value: number };
   meshDepth: { value: number };
   sensitivity: { value: number };
+  opacity: { value: number };
 }
 
 /**
@@ -27,7 +28,8 @@ export function createShaderUniforms(
     mouseDelta: { value: new THREE.Vector2(0, 0) },
     focus: { value: focus },
     meshDepth: { value: meshDepth },
-    sensitivity: { value: 0.5 }
+    sensitivity: { value: 0.5 },
+    opacity: { value: 1.0 }
   };
 }
 
@@ -80,10 +82,12 @@ export function getVertexShader(): string {
 export function getFragmentShader(): string {
   return `
     uniform sampler2D map;
+    uniform float opacity;
     varying vec2 vUv;
 
     void main() {
-      gl_FragColor = texture2D(map, vUv);
+      vec4 texColor = texture2D(map, vUv);
+      gl_FragColor = vec4(texColor.rgb, texColor.a * opacity);
     }
   `;
 }

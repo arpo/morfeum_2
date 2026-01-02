@@ -21,6 +21,7 @@ export {
   IconCopy,
   IconChevronDown,
   IconChevronUp,
+  IconChevronLeft,
   IconChevronRight,
   IconSquare,
   IconSquareCheckFilled,

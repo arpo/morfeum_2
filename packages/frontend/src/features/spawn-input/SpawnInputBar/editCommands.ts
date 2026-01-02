@@ -1,6 +1,7 @@
 import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locations';
 import { createEntitySession } from '@/utils/entity/sessionManager';
+import { clearEntityMediaCache } from '@/services/mediaService';
 import { ParsedCommand } from './commandParser';
 
 interface EditResult {
@@ -118,6 +119,9 @@ async function updateNodeWithEditedImage(
 ): Promise<void> {
   const { imageUrl, mediaId } = completedData;
   
+  // Clear entity media cache so ViewSlider fetches fresh data
+  clearEntityMediaCache(node.id);
+  
   // Update node with new edited image
   const updateNode = useLocationsStore.getState().updateNode;
   updateNode(node.id, { primaryMedia: mediaId });
@@ -133,4 +137,9 @@ async function updateNodeWithEditedImage(
     primaryMedia: mediaId,
     imageUrl
   });
+  
+  // Dispatch event to notify WorldView to refresh views
+  window.dispatchEvent(new CustomEvent('editImageComplete', { 
+    detail: { entityId: node.id, mediaId } 
+  }));
 }
