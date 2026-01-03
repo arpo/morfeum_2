@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback } from 'react';
+import React, { useMemo, useCallback, useState, useEffect } from 'react';
 import { useLocationsStore } from '@/store/slices/locations';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useStore } from '@/store';
@@ -6,7 +6,7 @@ import { Tabs, TreeView, TreeItem } from '@/components/ui';
 import { IconWorld, IconMapPin, IconInfoCircle } from '@/icons';
 import { findNodeInTree } from '@/utils/treeUtils';
 import { useEntityImages } from '@/hooks';
-import { getPrimaryMediaUrl } from '@/services/mediaService';
+import { getPrimaryMediaUrl, getEntityMedia } from '@/services/mediaService';
 
 export const EntityExplorer: React.FC = () => {
   // Data Stores - Locations
@@ -17,6 +17,10 @@ export const EntityExplorer: React.FC = () => {
   // Data Stores - Characters
   const characterMap = useCharactersStore(state => state.characters);
   const characterPinnedIds = useCharactersStore(state => state.pinnedIds);
+  
+  // Track view counts and current indices for all entities
+  const [viewInfo, setViewInfo] = useState<Map<string, { current: number; total: number }>>(new Map());
+  const [, forceUpdate] = useState(0);
   
   // Helper to recursively collect all tree nodes
   const collectAllTreeNodes = (trees: any[], nodes: Record<string, any>): any[] => {
@@ -40,6 +44,50 @@ export const EntityExplorer: React.FC = () => {
   // Preload all images using the new media system
   const imageMap = useEntityImages(allEntities);
   
+  // Fetch view counts for all entities
+  useEffect(() => {
+    const fetchViewCounts = async () => {
+      const newViewInfo = new Map<string, { current: number; total: number }>();
+      
+      for (const entity of allEntities) {
+        try {
+          const media = await getEntityMedia(entity.id);
+          const imageCount = media.filter(m => m.type === 'image').length;
+          
+          if (imageCount > 1) {
+            // Default to showing last (newest) view
+            newViewInfo.set(entity.id, { current: imageCount, total: imageCount });
+          }
+        } catch (error) {
+          // Ignore errors
+        }
+      }
+      
+      setViewInfo(newViewInfo);
+    };
+    
+    fetchViewCounts();
+  }, [allEntities]);
+  
+  // Listen for view index changes
+  useEffect(() => {
+    const handleViewIndexChanged = (event: Event) => {
+      const customEvent = event as CustomEvent<{ entityId: string; currentIndex: number; totalViews: number }>;
+      const { entityId, currentIndex, totalViews } = customEvent.detail;
+      
+      setViewInfo(prev => {
+        const newMap = new Map(prev);
+        newMap.set(entityId, { current: currentIndex + 1, total: totalViews }); // +1 for 1-based display
+        return newMap;
+      });
+      
+      forceUpdate(v => v + 1);
+    };
+    
+    window.addEventListener('viewIndexChanged', handleViewIndexChanged);
+    return () => window.removeEventListener('viewIndexChanged', handleViewIndexChanged);
+  }, []);
+  
   // Resolve pinned locations to their tree structures (if available) or flat nodes
   const locationTreeData = useMemo(() => {
     if (!worldTrees || worldTrees.length === 0) return [];
@@ -49,12 +97,16 @@ export const EntityExplorer: React.FC = () => {
       // Look up full node data from nodes map using the ID from the tree
       const fullNode = locationNodes[treeNode.id];
       // Fallback to treeNode properties if fullNode is missing (safety)
-      const label = fullNode?.name || 'Unknown Location';
+      const baseName = fullNode?.name || 'Unknown Location';
       const type = fullNode?.type || treeNode.type;
       // Check if this is a pass-through region
       const isPassThrough = fullNode?.isPassThrough || false;
       // Get image from preloaded imageMap
       const image = imageMap.get(treeNode.id) || undefined;
+      
+      // Add view counter if entity has multiple views
+      const info = viewInfo.get(treeNode.id);
+      const label = info ? `${baseName} (${info.current}/${info.total})` : baseName;
 
       return {
         id: treeNode.id,
@@ -89,28 +141,38 @@ export const EntityExplorer: React.FC = () => {
         const node = locationNodes[id];
         if (!node) return null;
 
+        // Add view counter if entity has multiple views
+        const info = viewInfo.get(node.id);
+        const label = info ? `${node.name} (${info.current}/${info.total})` : node.name;
+        
         return {
           id: node.id,
-          label: node.name,
+          label: label,
           icon: node.type === 'host' ? <IconWorld size={16} /> : <IconMapPin size={16} />,
           image: imageMap.get(node.id) || undefined,
           children: undefined // No children known
         };
       })
       .filter(Boolean) as TreeItem[];
-  }, [worldTrees, locationNodes, locationPinnedIds, imageMap]);
+  }, [worldTrees, locationNodes, locationPinnedIds, imageMap, viewInfo]);
 
   const characterTreeData = useMemo(() => {
     return characterPinnedIds
       .map(id => characterMap[id])
       .filter(Boolean)
-      .map(char => ({
-        id: char.id,
-        label: char.name,
-        icon: <IconInfoCircle size={16} />,
-        image: imageMap.get(char.id) || undefined,
-      }));
-  }, [characterMap, characterPinnedIds, imageMap]);
+      .map(char => {
+        // Add view counter if character has multiple views
+        const info = viewInfo.get(char.id);
+        const label = info ? `${char.name} (${info.current}/${info.total})` : char.name;
+        
+        return {
+          id: char.id,
+          label: label,
+          icon: <IconInfoCircle size={16} />,
+          image: imageMap.get(char.id) || undefined,
+        };
+      });
+  }, [characterMap, characterPinnedIds, imageMap, viewInfo]);
   
   // Delete action
   const deleteNodeWithChildren = useLocationsStore(state => state.deleteNodeWithChildren);

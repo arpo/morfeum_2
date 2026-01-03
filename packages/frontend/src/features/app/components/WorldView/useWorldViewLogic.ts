@@ -94,37 +94,49 @@ export function useWorldViewLogic() {
     fetchViews();
   }, [fetchViews]);
 
-  // Navigate to previous view (older)
+  // Navigate to previous view (older) - wraps to last view if at first
   const goToPreviousView = useCallback(async () => {
-    if (currentViewIndex <= 0 || views.length === 0) return;
+    if (views.length === 0) return;
     
-    const newIndex = currentViewIndex - 1;
+    // Wrap around: if at first view (0), go to last view
+    const newIndex = currentViewIndex <= 0 ? views.length - 1 : currentViewIndex - 1;
     const view = views[newIndex];
     
     setCurrentViewIndex(newIndex);
+    
+    // Dispatch event for view index change
+    window.dispatchEvent(new CustomEvent('viewIndexChanged', {
+      detail: { entityId: activeEntity, currentIndex: newIndex, totalViews: views.length }
+    }));
     
     // Crossfade to new view
     if (rendererRef.current && view) {
       const depthMap = await getDepthMapForMedia(view.id);
       await rendererRef.current.crossfadeTo(view.url, depthMap?.url || null, 1.5);
     }
-  }, [currentViewIndex, views]);
+  }, [currentViewIndex, views, activeEntity]);
 
-  // Navigate to next view (newer)
+  // Navigate to next view (newer) - wraps to first view if at last
   const goToNextView = useCallback(async () => {
-    if (currentViewIndex >= views.length - 1 || views.length === 0) return;
+    if (views.length === 0) return;
     
-    const newIndex = currentViewIndex + 1;
+    // Wrap around: if at last view, go to first view (0)
+    const newIndex = currentViewIndex >= views.length - 1 ? 0 : currentViewIndex + 1;
     const view = views[newIndex];
     
     setCurrentViewIndex(newIndex);
+    
+    // Dispatch event for view index change
+    window.dispatchEvent(new CustomEvent('viewIndexChanged', {
+      detail: { entityId: activeEntity, currentIndex: newIndex, totalViews: views.length }
+    }));
     
     // Crossfade to new view
     if (rendererRef.current && view) {
       const depthMap = await getDepthMapForMedia(view.id);
       await rendererRef.current.crossfadeTo(view.url, depthMap?.url || null, 1.5);
     }
-  }, [currentViewIndex, views]);
+  }, [currentViewIndex, views, activeEntity]);
 
   // Navigate to specific view
   const goToView = useCallback(async (index: number) => {
@@ -133,12 +145,17 @@ export function useWorldViewLogic() {
     const view = views[index];
     setCurrentViewIndex(index);
     
+    // Dispatch event for view index change
+    window.dispatchEvent(new CustomEvent('viewIndexChanged', {
+      detail: { entityId: activeEntity, currentIndex: index, totalViews: views.length }
+    }));
+    
     // Crossfade to new view
     if (rendererRef.current && view) {
       const depthMap = await getDepthMapForMedia(view.id);
       await rendererRef.current.crossfadeTo(view.url, depthMap?.url || null, 1.5);
     }
-  }, [views]);
+  }, [views, activeEntity]);
   
   // Get primaryMedia from character or location store
   const getPrimaryMediaId = useCallback((): string | null => {

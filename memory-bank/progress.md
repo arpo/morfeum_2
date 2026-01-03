@@ -1,5 +1,26 @@
 # Progress
 
+## 2026-01-03 - Multi-View System
+
+- [x] **Circular Navigation for Multi-View - COMPLETED**
+  - **What**: Infinite scrolling through multiple views of an entity
+  - **Behavior**: 
+    - Left arrow at first view → wraps to last view
+    - Right arrow at last view → wraps to first view
+  - **Files Modified**:
+    - `features/app/components/WorldView/useWorldViewLogic.ts`
+
+- [x] **View Counter in Entity Explorer - COMPLETED**
+  - **What**: Live counter showing current view index (e.g., "Node Name (2/3)")
+  - **Features**:
+    - Fetches view counts for all entities on mount
+    - Shows counter only for entities with 2+ views
+    - Updates in real-time when navigating
+    - 1-based numbering for user-friendliness
+  - **Files Modified**:
+    - `features/app/components/WorldView/useWorldViewLogic.ts` - Event dispatch
+    - `features/app/components/EntityExplorer/EntityExplorer.tsx` - View counting + display
+
 ## 2026-01-02 - Image Edit Feature
 
 - [x] **/EDIT_IMAGE Slash Command - COMPLETED**

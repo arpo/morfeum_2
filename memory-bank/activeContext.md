@@ -135,11 +135,75 @@ The actual file used by `/NEW_WORLD` was `parsePromptToHierarchy.ts` (not `hiera
 
 ---
 
+## 2026-01-03 - Multi-View System Enhancements
+
+### Circular Navigation & View Counter - COMPLETED
+
+Enhanced the multi-view image system with infinite scrolling and live view counter in Entity Explorer.
+
+#### Circular/Infinite Navigation
+
+**Problem**: When viewing multiple images of an entity, navigation stopped at first/last view.
+
+**Solution**: Implemented wrap-around navigation:
+- Pressing ← at first view (1) wraps to last view (e.g., 3)
+- Pressing → at last view (3) wraps to first view (1)
+- Creates infinite carousel experience
+
+**Files Modified:**
+- `features/app/components/WorldView/useWorldViewLogic.ts`
+  - Updated `goToPreviousView()` to wrap from index 0 to last
+  - Updated `goToNextView()` to wrap from last to index 0
+
+#### View Counter in Entity Explorer
+
+**Problem**: Users couldn't see which view they were on or how many views existed.
+
+**Solution**: Added live counter display in tree view (e.g., "The Chroma Tower (2/3)").
+
+**Implementation:**
+1. **Event System**: Added `viewIndexChanged` CustomEvent dispatched on navigation
+   - Includes `entityId`, `currentIndex`, `totalViews`
+   - Dispatched from all navigation functions
+
+2. **View Count Fetching**: EntityExplorer fetches view counts for all entities on mount
+   - Uses `getEntityMedia()` to count images per entity
+   - Only entities with 2+ images show counter
+   - Stored in Map<entityId, {current, total}>
+
+3. **Live Updates**: EntityExplorer subscribes to `viewIndexChanged` events
+   - Updates counter in real-time as user navigates
+   - Re-renders tree labels automatically
+
+4. **Label Formatting**: Modified all label generation functions
+   - Single view: "Node Name"
+   - Multiple views: "Node Name (2/3)"
+   - 1-based numbering (user-friendly)
+
+**Files Modified:**
+- `features/app/components/WorldView/useWorldViewLogic.ts`
+  - Added event dispatch to `goToPreviousView()`, `goToNextView()`, `goToView()`
+- `features/app/components/EntityExplorer/EntityExplorer.tsx`
+  - Added view count state and fetching logic
+  - Added event listener for view changes
+  - Updated label generation in all mapNode functions
+  - Memoization dependencies updated
+
+**How It Works:**
+- Fetch phase: Gets image counts for all entities (on mount)
+- Navigation phase: Events update current index for active entity
+- Render phase: Labels show "(current/total)" when total > 1
+- Works for all entity types (locations, characters, niches, regions, hosts)
+
+---
+
 ## Current Focus
 
 - ✅ **COMPLETED**: Gemini Explicit Caching (90% token cost reduction)
 - ✅ **COMPLETED**: Extended caching to Navigation pipeline (14% faster GOTO)
 - ✅ **COMPLETED**: Fixed navigation cache size (1,344 → 2,446 tokens)
+- ✅ **COMPLETED**: Multi-view circular navigation
+- ✅ **COMPLETED**: View counter in Entity Explorer tree
 - ⏳ **PENDING**: Test character spawn caching
 
 ## Files Modified (Jan 1 - All Caching Work)
