@@ -42,11 +42,11 @@ export function useWorldViewLogic() {
 
   // Get active entity session
   const activeEntitySession = activeEntity ? entities.get(activeEntity) : null;
-  const isLocation = activeEntitySession?.entityType === 'location';
+  const canShowViews = !!activeEntitySession;
 
-  // Fetch views for location entities
+  // Fetch views for all entity types
   const fetchViews = useCallback(async () => {
-    if (!activeEntity || !isLocation) {
+    if (!activeEntity || !canShowViews) {
       setViews([]);
       setCurrentViewIndex(-1);
       return;
@@ -87,7 +87,7 @@ export function useWorldViewLogic() {
       setViews([]);
       setCurrentViewIndex(-1);
     }
-  }, [activeEntity, isLocation, views.length, currentViewIndex]);
+  }, [activeEntity, canShowViews, views.length, currentViewIndex]);
 
   // Fetch views when active entity changes
   useEffect(() => {
@@ -313,7 +313,7 @@ export function useWorldViewLogic() {
 
   // Handle keyboard navigation for views
   useEffect(() => {
-    if (!isLocation || views.length <= 1) return;
+    if (!canShowViews || views.length <= 1) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip if user is in an input field
@@ -331,11 +331,11 @@ export function useWorldViewLogic() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isLocation, views.length, goToPreviousView, goToNextView]);
+  }, [canShowViews, views.length, goToPreviousView, goToNextView]);
 
   // Listen for new image generation events to refresh views
   useEffect(() => {
-    if (!activeEntity || !isLocation) return;
+    if (!activeEntity || !canShowViews) return;
 
     const handleImageGenerated = (event: Event) => {
       const customEvent = event as CustomEvent<{ entityId?: string }>;
@@ -355,7 +355,7 @@ export function useWorldViewLogic() {
       window.removeEventListener('spawnComplete', handleImageGenerated);
       window.removeEventListener('editImageComplete', handleImageGenerated);
     };
-  }, [activeEntity, isLocation, fetchViews]);
+  }, [activeEntity, canShowViews, fetchViews]);
 
   return {
     initRenderer,

@@ -1,6 +1,225 @@
 {
-  "nodes": {},
+  "nodes": {
+    "loc-1767368831050-q464ej8ap": {
+      "id": "loc-1767368831050-q464ej8ap",
+      "type": "host",
+      "name": "Metropolitan Arts District",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Skyline silhouette, vast urban landscapes",
+        "colorsAndLighting": "Bright daylight, clear blue skies",
+        "atmosphere": "Dynamic, sophisticated urban ambiance",
+        "materials": "Likely a mix of modern construction materials typical of a large city",
+        "mood": "Sophisticated, dynamic, attention-commanding",
+        "sounds": "Distant city hum, traffic, general urban sounds",
+        "primary_surfaces": "Vast expanses of urban development",
+        "secondary_surfaces": "Distant architectural forms, infrastructural elements",
+        "accent_features": "Distant landmarks, city lights (if applicable)",
+        "dominant": "Urban grays, distant blues of the sky",
+        "secondary": "Varying hues of urban development",
+        "accent": null,
+        "ambient": "Open sky, distant natural elements (if any)",
+        "genre": "Urban",
+        "architectural_tone": "Eclectic, contemporary, modern",
+        "cultural_tone": "Arts-focused, metropolitan, sophisticated",
+        "palette_bias": "Varied, reflecting urban diversity",
+        "flora_base": "Limited, urban landscaping",
+        "fauna_base": "Urban wildlife (birds, etc.)"
+      },
+      "description": "A vibrant urban area known for its eclectic architecture and public art. This district pulsates with creative energy, offering a dynamic backdrop for artistic expression.",
+      "searchDesc": "Vibrant urban district with eclectic architecture and a thriving public art scene.",
+      "slug": "metropolitan-arts-district",
+      "structure": {
+        "spatialLayout": "Large scale, urban sprawl, prominent landmarks"
+      }
+    },
+    "7837709a-b354-4d1d-bb91-26ff90057670": {
+      "id": "7837709a-b354-4d1d-bb91-26ff90057670",
+      "type": "region",
+      "name": "The Mural Quarter",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "District architecture, street patterns, neighborhood character",
+        "colorsAndLighting": "Bright daylight, clear blue skies, vibrant murals with diverse colors",
+        "atmosphere": "Energetic and artistic outdoor atmosphere",
+        "materials": "Painted concrete or stucco facades, metal or wood frames, concrete steps, landscaped beds",
+        "mood": "Energetic, inspiring, artistic vibrancy",
+        "sounds": "Urban ambiance, distant city hum, occasional street noise",
+        "primary_surfaces": "Bold, flat yellow walls, large-scale murals",
+        "secondary_surfaces": "Dark frames, concrete steps, white panels",
+        "accent_features": "Palm frond, reflective windows, lush foliage",
+        "dominant": "Yellow",
+        "secondary": "Teal, purple, orange, green, red, black, white",
+        "accent": "Black organic shapes, cubist-like figures",
+        "ambient": "Green plants and grasses, well-maintained lawn",
+        "genre": null,
+        "architectural_tone": "Contemporary, modern",
+        "cultural_tone": "Artistic, urban",
+        "palette_bias": "High saturation, diverse",
+        "flora_base": "Green plants and grasses, palm frond",
+        "fauna_base": null
+      },
+      "description": "A lively district where buildings serve as canvases for large-scale public art. Streets are alive with color and creativity, fostering a vibrant urban environment.",
+      "searchDesc": "Vibrant urban district filled with large-scale public art and colorful building facades.",
+      "slug": "the-mural-quarter",
+      "structure": {
+        "spatialLayout": "Multi-story buildings, street-level entrances, landscaped areas"
+      }
+    },
+    "c0a5023b-ecba-4ead-9b68-07f77b2ef84c": {
+      "id": "c0a5023b-ecba-4ead-9b68-07f77b2ef84c",
+      "type": "location",
+      "name": "The Chroma Tower",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A towering, rectangular contemporary building with a bold, flat yellow facade. Numerous windows and balcony openings are framed in dark material, offering a stark contrast to the vibrant, large-scale murals that cover significant portions of its exterior. Abstract and stylized designs dominate the upper levels.",
+        "colorsAndLighting": "Bathed in bright daylight under a clear blue sky, the building's yellow walls reflect the sunlight. The murals feature a rich palette of teal, purple, orange, green, red, black, and white. Shadows are cast by the building's form and the overhanging palm frond.",
+        "atmosphere": "The air is warm and filled with the energy of a sunny day. A gentle breeze rustles the leaves of the surrounding foliage. The atmosphere is lively and artistic, buzzing with the visual stimulation of the murals.",
+        "materials": "The primary surfaces are bold, flat yellow walls, likely painted concrete or stucco. Dark frames around openings are likely metal or painted wood. The murals are painted directly onto the facade. The base features concrete steps and meticulously landscaped beds with various green plants and grasses.",
+        "mood": "Energetic and inspiring, the Chroma Tower evokes a sense of artistic vibrancy and modern sophistication. It is a dynamic landmark that commands attention.",
+        "sounds": "Distant city hum, birds chirping, rustling leaves, faint chatter.",
+        "primary_surfaces": "Bold, flat yellow walls",
+        "secondary_surfaces": "Dark metallic window frames, painted mural surfaces",
+        "accent_features": "Vibrant abstract murals, overhanging palm frond, black front door, tall white panel",
+        "dominant": "Yellow across large wall sections",
+        "secondary": "Teal, purple, orange, green, red within murals",
+        "accent": "Black outlines, white panel",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Futuristic contemporary with bold mural art",
+        "cultural_tone": "Artistic hub, modern urban landmark",
+        "palette_bias": "Primary colors with strong contrasts",
+        "flora_base": "Lush green plants and grasses, palm frond",
+        "fauna_base": "None"
+      },
+      "description": "A striking multi-story contemporary building adorned with vibrant, large-scale murals.",
+      "searchDesc": "Vibrant mural-covered tower with yellow facade, dark frames, and lush gardens in the Mural Quarter.",
+      "slug": "the-chroma-tower",
+      "structure": {
+        "spatialLayout": "A single, tall, rectangular structure with a significant vertical presence. The facade is largely flat with recessed window and balcony openings. The base is softened by a sprawling, meticulously landscaped garden."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "ground level, center",
+          "description": "Leads into the main lobby of the tower."
+        },
+        {
+          "type": "stairs",
+          "position": "ground level, left of entrance",
+          "description": "Ascend to upper levels or access garden paths."
+        }
+      ],
+      "dominantElements": [
+        "The Chroma Tower: shape=rectangular, orientation=vertical(tower), scale=towering, style=futuristic, surfaces=concrete, openings=large-glass, interior_materials=glass|concrete|tile, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Multi-story contemporary structure",
+        "Vibrant, large-scale exterior murals",
+        "Bold yellow facade with dark frames",
+        "Meticulously landscaped garden base",
+        "Prominent palm frond overhang"
+      ],
+      "primaryMedia": "media-1767374999210-wyjr2rlpc"
+    },
+    "niche-1767375268170-w443p8daw": {
+      "id": "niche-1767375268170-w443p8daw",
+      "type": "niche",
+      "name": "The Chroma Tower",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A space that feels like the 'bones' of a contemporary, artistically infused skyscraper. Exposed concrete structures are softened by vibrant, large-scale murals and dynamic light. The environment is clean but industrial, with a sense of ongoing creative energy.",
+        "colorsAndLighting": "Dominated by the stark contrast of raw concrete against bold, high-saturation colors (yellow, teal, purple, orange, green, red). Geometric light installations cast dynamic, shifting patterns across surfaces. Bright, clean daylight struggles to penetrate in some areas, creating pools of vibrant artificial light.",
+        "atmosphere": "Energetic and inspiring, with a palpable sense of artistic vibrancy. The air is crisp and clean, with a faint metallic tang. There's a constant, low-level hum of activity and a subtle breeze that seems to emanate from the light installations.",
+        "materials": "Primary: Raw concrete, polished metal grating. Secondary: Painted metal panels, thick glass, brushed aluminum. Accent: Vibrant acrylic paints, LED lighting.",
+        "mood": "Inspiring, energetic, artistic, modern, slightly industrial, awe-inspiring.",
+        "sounds": "Hum of machinery, distant urban music, ambient electronic tones, echoing footsteps, occasional splash of water.",
+        "spatialLayout": "Open, vertical, with intersecting planes. Pillars create a sense of structured openness, guiding the eye upwards. Interspersed with areas of more defined, functional spaces.",
+        "primary_surfaces": "Polished concrete floors and exposed concrete pillars, adorned with large-scale, abstract murals in high saturation colors.",
+        "secondary_surfaces": "Brushed aluminum accent panels, dark metal grating for walkways, clear tempered glass partitions.",
+        "accent_features": "Dynamic LED light sculptures, strategically placed large potted plants with broad leaves, minimalist cubist-like figures integrated into murals.",
+        "dominant": "Yellow",
+        "secondary": "Teal, purple, orange, green, red, black, white",
+        "accent": "Black organic shapes integrated into murals, neon accents on stairs.",
+        "ambient": "Bright, clean light with dynamic color shifts.",
+        "genre": "Urban",
+        "architectural_tone": "Contemporary, modern, industrial-chic",
+        "cultural_tone": "Artistic, urban, avant-garde",
+        "palette_bias": "High saturation, diverse",
+        "flora_base": "Lush green plants and grasses in large, modern planters",
+        "fauna_base": "Urban wildlife (implied, not visible)"
+      },
+      "primaryMedia": "media-1767375780438-5yzf6zkaq",
+      "description": "You are inside the grand, brightly lit lobby of The Chroma Tower. Sleek, polished surfaces reflect the light, and floor-to-ceiling windows offer stunning views of the city below.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "towering",
+        "orientation": "vertical",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "commercial",
+        "elevation": "elevated",
+        "spatialLayout": "A towering skyscraper with a sleek, futuristic design, featuring expansive glass windows that offer panoramic views. The interior is characterized by clean lines and a bright, modern aesthetic.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "ground floor lobby",
+          "description": "main entrance to the tower"
+        },
+        {
+          "type": "stairs",
+          "position": "central atrium",
+          "description": "leading to upper levels"
+        },
+        {
+          "type": "elevator",
+          "position": "lobby",
+          "description": "access to all floors"
+        }
+      ],
+      "dominantElements": [
+        "Reception Desk: shape=rectangular, orientation=compact(pod), scale=small, style=futuristic, surfaces=metallic-polished, openings=minimal, interior_materials=glass|concrete|tile, internal_atmosphere=bright",
+        "Elevator Bank: shape=rectangular, orientation=horizontal, scale=medium, style=futuristic, surfaces=metallic-polished, openings=large-glass, interior_materials=glass|concrete|tile, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "futuristic architecture",
+        "expansive glass facade",
+        "panoramic city views"
+      ],
+      "searchDesc": "Vibrant urban null space in Chroma Tower, blending raw concrete with high-saturation art and light.",
+      "slug": "null-of-the-chroma-tower"
+    }
+  },
   "views": {},
-  "worldTrees": [],
-  "pinnedIds": []
+  "worldTrees": [
+    {
+      "id": "loc-1767368831050-q464ej8ap",
+      "type": "host",
+      "children": [
+        {
+          "id": "7837709a-b354-4d1d-bb91-26ff90057670",
+          "type": "region",
+          "children": [
+            {
+              "id": "c0a5023b-ecba-4ead-9b68-07f77b2ef84c",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767375268170-w443p8daw",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinnedIds": [
+    "loc-1767368831050-q464ej8ap"
+  ]
 }

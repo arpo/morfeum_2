@@ -1,5 +1,104 @@
 {
   "media": {
-   
+    "media-1767368855772-rij4t22bo": {
+      "id": "media-1767368855772-rij4t22bo",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a88ca74/v-lNCkGYCKzR4kadkKpGL.jpg",
+      "createdAt": "2026-01-02T15:47:35.772Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nBackground: A clear, bright blue sky dominates the upper background. In the distance, the blurred silhouettes of other contemporary buildings in the Metropolitan Arts District can be seen, hinting at the urban sprawl.\n\nMidground: The 'Chroma Tower', a vibrant, multi-story contemporary building, stands as the central focus, positioned slightly off-center. Its facade is characterized by bold, flat yellow walls, dramatically contrasted by dark, metallic frames surrounding numerous windows and balcony openings. Large, dynamic murals adorn significant sections of the exterior, featuring a rich palette of teal, purple, orange, green, red, black, and white. The upper levels showcase abstract and stylized designs, including swirling black organic shapes on a vivid purple background and fragmented, cubist-like figures with bold outlines. A prominent palm frond gracefully hangs over the upper right side of the building, partially obscuring some of the artwork. At ground level, a striking black front door is flanked by a tall, narrow white panel, with reflective windows displaying the lush green foliage of surrounding trees and bushes.\n\nForeground: Meticulously landscaped garden beds, filled with a variety of lush green plants and grasses, line the base of the building, creating a vibrant border. A well-maintained, bright green lawn stretches across the immediate foreground, catching the sunlight and contributing to the energetic outdoor atmosphere.\n\nLighting: Bright, direct daylight illuminates the entire scene from a high angle, casting sharp, defined shadows. The yellow walls of the building reflect the intense sunlight, while the dark frames and mural elements create strong contrasts. The reflective windows at the base show the dappled light filtering through the surrounding trees.\n\nAtmosphere: The atmosphere is energetic, artistic, and filled with the warmth of a sunny day. The air feels alive with visual stimulation from the bold murals and contemporary architecture. A sense of modern sophistication and vibrant urban culture pervades the scene.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "promptStructure": {
+          "background": "A clear, bright blue sky dominates the upper background. In the distance, the blurred silhouettes of other contemporary buildings in the Metropolitan Arts District can be seen, hinting at the urban sprawl.",
+          "midground": "The 'Chroma Tower', a vibrant, multi-story contemporary building, stands as the central focus, positioned slightly off-center. Its facade is characterized by bold, flat yellow walls, dramatically contrasted by dark, metallic frames surrounding numerous windows and balcony openings. Large, dynamic murals adorn significant sections of the exterior, featuring a rich palette of teal, purple, orange, green, red, black, and white. The upper levels showcase abstract and stylized designs, including swirling black organic shapes on a vivid purple background and fragmented, cubist-like figures with bold outlines. A prominent palm frond gracefully hangs over the upper right side of the building, partially obscuring some of the artwork. At ground level, a striking black front door is flanked by a tall, narrow white panel, with reflective windows displaying the lush green foliage of surrounding trees and bushes.",
+          "foreground": "Meticulously landscaped garden beds, filled with a variety of lush green plants and grasses, line the base of the building, creating a vibrant border. A well-maintained, bright green lawn stretches across the immediate foreground, catching the sunlight and contributing to the energetic outdoor atmosphere.",
+          "lighting": "Bright, direct daylight illuminates the entire scene from a high angle, casting sharp, defined shadows. The yellow walls of the building reflect the intense sunlight, while the dark frames and mural elements create strong contrasts. The reflective windows at the base show the dappled light filtering through the surrounding trees.",
+          "atmosphere": "The atmosphere is energetic, artistic, and filled with the warmth of a sunny day. The air feels alive with visual stimulation from the bold murals and contemporary architecture. A sense of modern sophistication and vibrant urban culture pervades the scene.",
+          "constraints": [],
+          "negatives": []
+        },
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "c0a5023b-ecba-4ead-9b68-07f77b2ef84c"
+      ]
+    },
+    "media-1767368888767-hphzxfze3": {
+      "id": "media-1767368888767-hphzxfze3",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a88ca78/srdIFM7QjIeGRx-20WrpC.jpg",
+      "createdAt": "2026-01-02T15:48:08.767Z",
+      "metadata": {
+        "prompt": "make it dusk, orange sky",
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1024,
+        "height": 576,
+        "aspectRatio": "landscape_16_9",
+        "editedFrom": "media-1767368855772-rij4t22bo"
+      },
+      "entityRefs": [
+        "c0a5023b-ecba-4ead-9b68-07f77b2ef84c"
+      ],
+      "parentMedia": "media-1767368855772-rij4t22bo"
+    },
+    "media-1767374999210-wyjr2rlpc": {
+      "id": "media-1767374999210-wyjr2rlpc",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a88ccdb/ZgDdeU_HadkjIpRKUK3bc.jpg",
+      "createdAt": "2026-01-02T17:29:59.210Z",
+      "metadata": {
+        "prompt": "make it a winter night with winter light decoratins",
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1024,
+        "height": 576,
+        "aspectRatio": "landscape_16_9",
+        "editedFrom": "media-1767368888767-hphzxfze3"
+      },
+      "entityRefs": [
+        "c0a5023b-ecba-4ead-9b68-07f77b2ef84c"
+      ],
+      "parentMedia": "media-1767368888767-hphzxfze3"
+    },
+    "media-1767375268168-lat3gahg7": {
+      "id": "media-1767375268168-lat3gahg7",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a88ccf6/qBchCJX7aWDNklaRM8_SR.jpg",
+      "createdAt": "2026-01-02T17:34:28.168Z",
+      "metadata": {
+        "prompt": "Background: Expansive panoramic city view from an extreme elevation, showcasing a sprawling urban landscape under a bright, clear sky. The distant architecture reflects a contemporary, modern style with a diverse, high-saturation color palette. The overall urban environment appears energetic and artistically vibrant, with visible elements of painted concrete and metal structures.\n\nMidground: The interior of 'The Chroma Tower', a towering, sleek, futuristic skyscraper. The space is characterized by clean lines and a bright, modern aesthetic. Expansive, rectangular glass facades dominate, offering unobstructed views of the city below. Exposed concrete pillars, adorned with large-scale, abstract murals in high saturation colors (yellow, teal, purple, orange, green, red), create intersecting planes and guide the eye upwards. A polished concrete floor reflects the vibrant light. A rectangular, compact, futuristic reception desk with polished metallic surfaces and a horizontal, medium-scale futuristic elevator bank with polished metallic surfaces are centrally positioned. Geometric light installations cast dynamic, shifting patterns across the concrete and mural surfaces. Large potted plants with broad leaves add touches of organic form. Minimalist cubist-like figures are integrated into the murals.\n\nForeground: Polished concrete flooring with subtle metallic grating accents leading towards the reception desk and elevator bank. A hint of a brushed aluminum accent panel or a thick glass partition subtly frames the immediate view, emphasizing the depth of the space. The edge of the elevated floor might be visible, showcasing a clean, modern finish.\n\nLighting: Bright, clean daylight streams in through the expansive glass facade, illuminating the midground and casting sharp, defined shadows from the pillars and furniture. Geometric LED light sculptures integrated into the architecture emit dynamic, shifting colored light (high saturation, diverse palette) that dances across the concrete murals and polished metal surfaces. Neon accents on any visible stair structures add vibrant, artificial illumination. The background city view is bathed in clear daylight, subtly fading in saturation and detail with distance.\n\nAtmosphere: An inspiring, energetic, and artistic atmosphere pervades 'The Chroma Tower'. The space feels like the 'bones' of a contemporary, artistically infused skyscraper, with a clean but industrial aesthetic and a sense of ongoing creative energy. The air is crisp and clean, with a faint metallic tang. A palpable sense of artistic vibrancy, modernism, and avant-garde urban culture is present. The mood is awe-inspiring and modern.\n\n[EXTERIOR VIEWS: Any windows, doors, or openings showing the OUTSIDE should display: Urban environment with Contemporary, modern. Colors visible outside: High saturation, diverse. The exterior view should be CONSISTENT with the world's established aesthetic and genre.]\n\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE:\n[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.",
+        "promptStructure": {
+          "background": "Expansive panoramic city view from an extreme elevation, showcasing a sprawling urban landscape under a bright, clear sky. The distant architecture reflects a contemporary, modern style with a diverse, high-saturation color palette. The overall urban environment appears energetic and artistically vibrant, with visible elements of painted concrete and metal structures.",
+          "midground": "The interior of 'The Chroma Tower', a towering, sleek, futuristic skyscraper. The space is characterized by clean lines and a bright, modern aesthetic. Expansive, rectangular glass facades dominate, offering unobstructed views of the city below. Exposed concrete pillars, adorned with large-scale, abstract murals in high saturation colors (yellow, teal, purple, orange, green, red), create intersecting planes and guide the eye upwards. A polished concrete floor reflects the vibrant light. A rectangular, compact, futuristic reception desk with polished metallic surfaces and a horizontal, medium-scale futuristic elevator bank with polished metallic surfaces are centrally positioned. Geometric light installations cast dynamic, shifting patterns across the concrete and mural surfaces. Large potted plants with broad leaves add touches of organic form. Minimalist cubist-like figures are integrated into the murals.",
+          "foreground": "Polished concrete flooring with subtle metallic grating accents leading towards the reception desk and elevator bank. A hint of a brushed aluminum accent panel or a thick glass partition subtly frames the immediate view, emphasizing the depth of the space. The edge of the elevated floor might be visible, showcasing a clean, modern finish.",
+          "lighting": "Bright, clean daylight streams in through the expansive glass facade, illuminating the midground and casting sharp, defined shadows from the pillars and furniture. Geometric LED light sculptures integrated into the architecture emit dynamic, shifting colored light (high saturation, diverse palette) that dances across the concrete murals and polished metal surfaces. Neon accents on any visible stair structures add vibrant, artificial illumination. The background city view is bathed in clear daylight, subtly fading in saturation and detail with distance.",
+          "atmosphere": "An inspiring, energetic, and artistic atmosphere pervades 'The Chroma Tower'. The space feels like the 'bones' of a contemporary, artistically infused skyscraper, with a clean but industrial aesthetic and a sense of ongoing creative energy. The air is crisp and clean, with a faint metallic tang. A palpable sense of artistic vibrancy, modernism, and avant-garde urban culture is present. The mood is awe-inspiring and modern.",
+          "constraints": [
+            "[EXTERIOR VIEWS: Any windows, doors, or openings showing the OUTSIDE should display: Urban environment with Contemporary, modern. Colors visible outside: High saturation, diverse. The exterior view should be CONSISTENT with the world's established aesthetic and genre.]"
+          ],
+          "negatives": []
+        },
+        "model": "FLUX"
+      },
+      "entityRefs": [
+        "niche-1767375268170-w443p8daw"
+      ]
+    },
+    "media-1767375780438-5yzf6zkaq": {
+      "id": "media-1767375780438-5yzf6zkaq",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a88cd2a/PP3WJzv9FYfC0LDpP0yT3.jpg",
+      "createdAt": "2026-01-02T17:43:00.438Z",
+      "metadata": {
+        "prompt": "add a lot of people and make ot night with a city sky line",
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1024,
+        "height": 576,
+        "aspectRatio": "landscape_16_9",
+        "editedFrom": "media-1767375268168-lat3gahg7"
+      },
+      "entityRefs": [
+        "niche-1767375268170-w443p8daw"
+      ],
+      "parentMedia": "media-1767375268168-lat3gahg7"
+    }
   }
 }
