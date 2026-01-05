@@ -18,7 +18,8 @@ CATEGORY 1: SAME_MATERIAL (Shell IS the interior - use identical materials)
 Applies to: futuristic, sci-fi, tech, cyberpunk, spacecraft, spaceship, 
            organic, bio, biomech, alien, crystalline, crystal, 
            cave, carved, rock, stone, bunker, military, fortress,
-           ice, snow, frozen, submarine, underwater, vault
+           ice, snow, frozen, submarine, underwater, vault,
+           austere, monastic, hermitage, abbey, monastery, priory
 
 Rule: The structure's shell IS the interior. Materials must match exterior.
 - Metallic hull outside → polished metallic panels inside
@@ -26,6 +27,7 @@ Rule: The structure's shell IS the interior. Materials must match exterior.
 - Crystal formations outside → same faceted crystal inside
 - Carved rock outside → same carved stone chambers inside
 - Ice walls outside → same ice/snow interior
+- Brick monastery outside → brick walls inside (honest construction)
 
 ═══════════════════════════════════════════════════════════════════════════════════
 CATEGORY 2: FINISHED_INTERIOR (Exterior is protective shell, interior is finished)
@@ -111,7 +113,9 @@ export function getTransitionCategory(architecturalTone: string | null | undefin
     'futuristic', 'sci-fi', 'tech', 'cyberpunk', 'spacecraft', 'spaceship',
     'organic', 'bio', 'biomech', 'alien', 'crystalline', 'crystal',
     'cave', 'carved', 'rock', 'stone', 'bunker', 'military', 'fortress',
-    'ice', 'snow', 'frozen', 'submarine', 'underwater', 'vault'
+    'ice', 'snow', 'frozen', 'submarine', 'underwater', 'vault',
+    // Monastic/sacred buildings have honest construction - interior matches exterior
+    'austere', 'monastic', 'hermitage', 'abbey', 'monastery', 'priory'
   ];
   if (sameMaterial.some(s => tone.includes(s))) return 'SAME_MATERIAL';
   

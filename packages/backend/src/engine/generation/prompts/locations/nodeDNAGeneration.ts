@@ -193,16 +193,6 @@ If EXTERIOR (outdoor area):
 
 If OPEN-AIR (terrace/balcony/rooftop):
 - Describe floor surface, railings/edges, open sky above, views beyond
-- Example: \\\"stone terrace with metallic railings, open sky above, panoramic views of the desert below\\\"
-- Blend structure and environment - partially enclosed, sky visible
-
-GOTHIC/HORROR GENRES - STILL NEED PHYSICAL DESCRIPTIONS:
-Even for haunting, eerie, or atmospheric spaces - describe REAL architectural elements:
-✅ CORRECT: \\\"Grand entrance hall with crumbling plaster walls, rotting wood paneling, a dusty marble staircase, cobwebbed chandeliers, faded portraits\\\"
-❌ WRONG: \\\"Phantom outline\\\", \\\"oppressive emptiness\\\", \\\"spectral imprint\\\", \\\"ghostly wood trim\\\", \\\"lingering essence\\\"
-
-Gothic decay = PHYSICAL decay:
-- Crumbling stone, rotting wood, dusty surfaces, peeling wallpaper, rusted metal
-- NOT \\\"phantoms\\\", \\\"essences\\\", \\\"spectral\\\", \\\"ghostly\\\", \\\"intangible void\\\"
-The haunting atmosphere comes from the PHYSICAL decay, not abstract poetry.`;
+- Example: \"stone terrace with metallic railings, open sky above, panoramic views of the desert below\"
+- Blend structure and environment - partially enclosed, sky visible`;
 }

@@ -1,193 +1,234 @@
 {
   "nodes": {
-    "loc-1767618410744-41d2ez401": {
-      "id": "loc-1767618410744-41d2ez401",
+    "loc-1767623864349-a2kmi92nv": {
+      "id": "loc-1767623864349-a2kmi92nv",
       "type": "host",
-      "name": "Misty Haunted Realm",
+      "name": "Nepal",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Vast, mist-shrouded landscapes with ancient, gnarled forests and undefined horizons.",
-        "colorsAndLighting": "Muted grays and deep greens, diffused and dim lighting due to perpetual mist.",
-        "atmosphere": "Eerie, melancholic, and perpetually damp, filled with a sense of unseen presences.",
-        "materials": "Damp earth, ancient gnarled wood, clinging spectral moss, undefined stone.",
-        "mood": "Melancholy, eerie, foreboding, ancient.",
-        "sounds": "Whispering winds, distant spectral murmurs, rustling leaves, dripping water.",
-        "primary_surfaces": "Mist, ancient trees, damp ground.",
-        "secondary_surfaces": "Spectral moss, gnarled roots.",
-        "accent_features": "Faint, undefined spectral lights.",
-        "dominant": "Mist",
-        "secondary": "Ancient Forests",
-        "accent": "Spectral Moss",
-        "ambient": "Eerie Silence",
-        "genre": "Fantasy",
-        "architectural_tone": "None (naturalistic/supernatural)",
-        "cultural_tone": "Ancient/Lost",
-        "palette_bias": "Cool",
-        "flora_base": "Ancient Forests",
-        "fauna_base": "Spectral"
+        "looks": "Towering peaks, deep valleys, vast mountain landscapes, clear skies",
+        "colorsAndLighting": "Vibrant blues of the sky, earthy tones of mountains, dynamic natural light",
+        "atmosphere": "Majestic, awe-inspiring, spiritual",
+        "materials": "Rock, earth, snow",
+        "mood": "Profound awe, spiritual reverence",
+        "sounds": "Wind, distant animal calls, echoes",
+        "primary_surfaces": "Mountain slopes",
+        "secondary_surfaces": "Sky",
+        "accent_features": "Distant snow-capped peaks",
+        "dominant": "Mountains",
+        "secondary": "Sky",
+        "accent": "Snow",
+        "ambient": "Crisp mountain air",
+        "genre": "REQUIRED",
+        "architectural_tone": "REQUIRED",
+        "cultural_tone": "REQUIRED",
+        "palette_bias": "REQUIRED",
+        "flora_base": "REQUIRED",
+        "fauna_base": "REQUIRED"
       },
-      "description": "A realm perpetually shrouded in mist, where ancient forests whisper secrets and spectral energies linger.  The air is thick with the scent of damp earth and decay, and the very ground seems to hum with an unseen presence.",
-      "searchDesc": "Misty haunted realm, ancient forests, spectral energies, damp earth, eerie atmosphere",
-      "slug": "misty-haunted-realm",
+      "description": "A mountainous South Asian nation nestled in the Himalayas, known for its deep spiritual heritage and stunning natural beauty. Nepal offers a rich tapestry of diverse cultures and breathtaking landscapes.",
+      "searchDesc": "Nepal: Himalayan nation, spiritual heritage, stunning natural beauty",
+      "slug": "nepal",
       "structure": {
-        "spatialLayout": "Vast, sprawling, with obscured paths and a sense of being lost."
+        "spatialLayout": "Geographic features dictate settlement"
       }
     },
-    "db13dd36-4c46-448c-a8e5-0d229628ed54": {
-      "id": "db13dd36-4c46-448c-a8e5-0d229628ed54",
+    "9128dd9f-9e20-4039-9e99-c4c42ef89818": {
+      "id": "9128dd9f-9e20-4039-9e99-c4c42ef89818",
       "type": "region",
-      "name": "Region",
-      "spaceType": "exterior",
-      "dna": {},
-      "description": "",
-      "searchDesc": "",
-      "slug": "region",
-      "isPassThrough": true
-    },
-    "99779274-d4fc-4ba8-a015-d600df8aaf7f": {
-      "id": "99779274-d4fc-4ba8-a015-d600df8aaf7f",
-      "type": "location",
-      "name": "Whispering Ruins",
+      "name": "Solukhumbu",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A sprawling, massive complex of irregular stone structures, characterized by crumbling battlements and shattered stonework. Overgrown with spectral moss, it evokes a sense of immense age and decay.",
-        "colorsAndLighting": "Dominated by muted grays and deep greens of moss and shadows.  Dim, ethereal light filters through the mist, casting long, dancing shadows.",
-        "atmosphere": "The air is cool and damp, thick with a spectral mist that clings to everything. A palpable sense of stillness pervades, broken only by the faintest whispers of wind through the ruins.",
-        "materials": "Primarily ancient, weathered stone with patches of damp, clinging moss. Cobwebs drape across surfaces, and the floor is littered with debris.",
-        "mood": "Melancholy and eerie, evoking a sense of lost grandeur and lingering spectral presence.",
-        "sounds": "Whispering wind, distant echoes, creaking stone, rustling moss, faint spectral moans",
-        "primary_surfaces": "Weathered stone, spectral moss",
-        "secondary_surfaces": "Damp earth, clinging cobwebs",
-        "accent_features": "Crumbling gargoyles, shattered stained glass fragments, overgrown archways",
-        "dominant": "Graystone",
-        "secondary": "Deep green",
-        "accent": "Ethereal white",
-        "ambient": "Dim",
+        "looks": "Rustic mountain architecture, prayer flags adorning exteriors, stone buildings integrated with terrain, elevated positions",
+        "colorsAndLighting": "Muted earth tones of stone, weathered wood, vibrant but faded prayer flags, crisp natural light",
+        "atmosphere": "Serene spirituality, profound awe, inspired by majestic natural setting",
+        "materials": "Rough-hewn stone, weathered wood, vibrant faded fabric",
+        "mood": "Serene spirituality, profound awe",
+        "sounds": "Distant chanting, wind whistling, prayer flags flapping",
+        "primary_surfaces": "Stone walls",
+        "secondary_surfaces": "Weathered wood elements",
+        "accent_features": "Prayer flags",
+        "dominant": "Stone",
+        "secondary": "Wood",
+        "accent": "Fabric",
+        "ambient": "Mountain air",
         "genre": null,
-        "architectural_tone": "Decaying medieval fortress",
-        "cultural_tone": "Remnants of a forgotten noble house",
-        "palette_bias": "Grays, Greens, Blues",
-        "flora_base": "Spectral moss, overgrown vines",
-        "fauna_base": "None"
+        "architectural_tone": "Rustic sacred mountain architecture",
+        "cultural_tone": "Spiritual, traditional",
+        "palette_bias": "Earth tones, muted vibrancy",
+        "flora_base": "Hardy mountain vegetation",
+        "fauna_base": "High-altitude birds"
       },
-      "description": "The skeletal remains of a once-great stone castle, its battlements crumbling and overgrown. EXTERIOR VIEW.",
-      "searchDesc": "Crumbling stone castle ruins in a misty, haunted realm. Overgrown with moss and shrouded in mist.",
-      "slug": "whispering-ruins",
+      "description": "A high-altitude district within Nepal, home to towering peaks and remote spiritual sites. Solukhumbu is characterized by its crisp mountain air and the serene presence of monasteries nestled within the dramatic landscape.",
+      "searchDesc": "Solukhumbu, Nepal: Remote spiritual sites, towering peaks, crisp mountain air",
+      "slug": "solukhumbu",
       "structure": {
-        "spatialLayout": "A sprawling, irregular layout of interconnected chambers and courtyards, with a sense of depth created by broken walls and shadowed passages."
-      },
-      "navigableElements": [
-        {
-          "type": "gate",
-          "position": "center",
-          "description": "Leads into the main courtyard."
-        },
-        {
-          "type": "passage",
-          "position": "left wall",
-          "description": "A shadowy alcove that seems to lead deeper into the ruins."
-        }
-      ],
-      "dominantElements": [
-        "castle_ruins: shape=irregular, orientation=sprawling, scale=massive, style=rustic, surfaces=stone, openings=narrow-slits, interior_materials=stone|earth|cobwebs, internal_atmosphere=dim"
-      ],
-      "uniqueIdentifiers": [
-        "crumbling battlements",
-        "overgrown moss",
-        "spectral mist",
-        "shattered stonework",
-        "haunting echoes"
-      ],
-      "primaryMedia": "media-1767618430928-sae5ehcaz"
+        "spatialLayout": "Sprawling complex, central prayer hall, adapted to mountainous terrain"
+      }
     },
-    "niche-1767618717546-bwc452tyy": {
-      "id": "niche-1767618717546-bwc452tyy",
-      "type": "niche",
-      "name": "Castle Ruins",
-      "spaceType": "interior",
+    "48e6005a-5a59-43ad-a0c4-9dbe7caf84d4": {
+      "id": "48e6005a-5a59-43ad-a0c4-9dbe7caf84d4",
+      "type": "location",
+      "name": "Tengboche Monastery",
+      "spaceType": "exterior",
       "dna": {
-        "looks": "Vast, irregular stone structures that have succumbed to time. Battlements are fractured, and walls lean precariously. Overgrown with spectral moss, the ruins suggest immense age and decay.",
-        "colorsAndLighting": "Dominated by muted grays of ancient stone and the deep, somber greens of persistent moss. Dim, ethereal light filters through the pervasive mist, casting elongated, dancing shadows.",
-        "atmosphere": "The air is perpetually cool and damp, thick with a spectral mist that clings to every surface. A profound stillness permeates the space, disturbed only by the faintest, mournful whispers of wind weaving through the hollows.",
-        "materials": "Primarily ancient, weathered stone, heavily textured and worn. Damp, clinging spectral moss covers large swathes, softening sharp edges. Cobwebs are prevalent, draping across surfaces, and the ground is littered with fallen stone and debris.",
-        "mood": "Melancholy and eerie, a palpable sense of lost grandeur and lingering spectral presence.",
-        "sounds": "Whispering wind, creaking stone, distant echoes, faint rustling.",
-        "spatialLayout": "A sprawling, fragmented complex of interconnected courtyards and chambers, many collapsed. The layout is irregular and organic, following the natural terrain and defensive needs of a forgotten age.",
-        "primary_surfaces": "Weathered, crumbling stone and spectral moss",
-        "secondary_surfaces": "Damp earth, clinging cobwebs",
-        "accent_features": "Crumbling gargoyles, shattered stained glass fragments, overgrown archways, remnants of heraldic carvings",
-        "dominant": "Graystone covering walls and floors",
-        "secondary": "Deep green moss clinging to northern faces and archways",
-        "accent": "Ethereal white mist clinging low to the ground",
-        "ambient": "Dim",
-        "genre": "Fantasy",
-        "architectural_tone": "Decaying medieval fortress",
-        "cultural_tone": "Remnants of a forgotten noble house",
-        "palette_bias": "Grays, Greens, Blues",
-        "flora_base": "Spectral moss, overgrown vines",
-        "fauna_base": "None"
+        "looks": "The monastery is a sprawling complex of stone buildings with a central prayer hall. Its architecture is rustic and adapted to the mountainous terrain, with prayer flags adorning its exterior. The scale is imposing due to its elevated position.",
+        "colorsAndLighting": "Muted earth tones of stone are punctuated by the bright, varied colors of prayer flags. Natural sunlight illuminates the exterior, creating stark contrasts with the shadowed recesses of the structure.",
+        "atmosphere": "The air is thin and crisp, carrying the scent of mountain pine and perhaps incense. A sense of profound peace pervades the location, with a constant, gentle breeze animating the prayer flags.",
+        "materials": "The primary materials are rough-hewn stone, weathered wood for structural elements and decorative carvings, and vibrant, faded fabric for prayer flags. Textures are rugged and ancient.",
+        "mood": "The mood is one of serene spirituality and profound awe, inspired by the majestic natural setting and the sacred purpose of the monastery.",
+        "sounds": "Wind, distant chanting, flapping prayer flags, birdsong, silence.",
+        "primary_surfaces": "Weathered stone walls, rough-hewn wood beams.",
+        "secondary_surfaces": "Faded fabric prayer flags, intricate carvings.",
+        "accent_features": "Vibrant prayer flags, ornate mandalas, ancient statues.",
+        "dominant": "Grey stone buildings",
+        "secondary": "Multi-colored prayer flags",
+        "accent": "Gilded Buddha statue",
+        "ambient": "Bright natural light",
+        "genre": null,
+        "architectural_tone": "Rustic sacred mountain architecture",
+        "cultural_tone": "Tibetan Buddhist pilgrimage site",
+        "palette_bias": "Earthy tones, bright accents",
+        "flora_base": "Sparse mountain vegetation",
+        "fauna_base": "Birds"
       },
-      "primaryMedia": "media-1767618717545-qc4kvxjv3",
-      "description": "You step into the vast, echoing interior of the castle ruins. Crumbling stone walls rise around you, punctuated by narrow slits that offer glimpses of the overgrown grounds outside. The air is thick with dust and the scent of damp earth, and cobwebs hang like tattered curtains. It feels ancient and forgotten.",
+      "description": "An isolated Buddhist monastery perched precariously on a mountain ridge, adorned with vibrant prayer flags and ancient stone statues, offering panoramic views of the Himalayas. EXTERIOR VIEW.",
+      "searchDesc": "Isolated Buddhist monastery in Nepal, with prayer flags, statues, and Himalayan views.",
+      "slug": "tengboche-monastery",
       "structure": {
-        "form": "irregular",
-        "roofType": "null",
-        "scale": "massive",
-        "orientation": "sprawling",
-        "openings": "narrow-slits",
-        "openingShape": "irregular",
-        "functionalType": "civic",
-        "elevation": "ground-level",
-        "spatialLayout": "Vast, crumbling stone halls and chambers, open to the sky in many places. Ancient stonework is prevalent, with areas of exposed earth and thick cobwebs.",
-        "requiredElements": []
+        "spatialLayout": "The monastery is built across a ridge, with its main structures clustered together. Its layout is organic, following the contours of the mountain, creating a sense of depth and elevation."
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "exterior wall",
-          "description": "main entrance to the castle ruins"
+          "position": "center of facade",
+          "description": "Leads into the main prayer hall."
         },
         {
-          "type": "passage",
-          "position": "interior chamber",
-          "description": "leads to another section of the ruins"
-        },
-        {
-          "type": "stairs",
-          "position": "interior chamber",
-          "description": "leads to an upper, collapsed level"
+          "type": "path",
+          "position": "descending from monastery",
+          "description": "Leads down the mountainside."
         }
       ],
       "dominantElements": [
-        "crumbling_wall: shape=irregular, orientation=sprawling, scale=large, style=rustic, surfaces=stone, openings=none, interior_materials=stone|earth|cobwebs, internal_atmosphere=dim",
-        "archway: shape=arched, orientation=vertical, scale=medium, style=rustic, surfaces=stone, openings=open-passages, interior_materials=stone|cobwebs|dust, internal_atmosphere=dim"
+        "monastery: shape=irregular, orientation=sprawling, scale=large, style=sacred, surfaces=stone, openings=arched-windows, interior_materials=stone|wood|fabric, internal_atmosphere=mystical"
       ],
       "uniqueIdentifiers": [
-        "ancient stonework",
-        "fallen masonry",
-        "overgrown vegetation",
-        "faint ethereal whispers"
+        "Prayer flags fluttering",
+        "Ancient stone statues",
+        "Panoramic Himalayan views",
+        "Isolated mountain setting",
+        "Buddhist iconography"
       ],
-      "searchDesc": "Melancholy medieval castle ruins, draped in spectral moss, filled with mist and eerie whispers.",
-      "slug": "null-of-whispering-ruins"
+      "primaryMedia": "media-1767623897360-trvkmemw2"
+    },
+    "niche-1767623923875-xfnoqs5qe": {
+      "id": "niche-1767623923875-xfnoqs5qe",
+      "type": "niche",
+      "name": "The Monastery",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An expansive open-air courtyard surrounded by the robust, unadorned stone structures of the monastery. The scale is immense, emphasizing the vastness of the surrounding Himalayas. Intricately carved wooden lintels and pillars mark entrances to internal spaces.",
+        "colorsAndLighting": "Muted grey and brown stone walls form the primary palette, contrasted by the vibrant, yet faded, hues of countless prayer flags. Bright, high-altitude sunlight casts sharp shadows, illuminating the textures of the ancient stonework.",
+        "atmosphere": "The air is exceptionally thin, crisp, and cool, carrying the faint scent of juniper incense and distant pine. A constant, gentle breeze rustles the prayer flags, creating a soothing, dynamic visual and auditory element.",
+        "materials": "Rough-hewn, massive stone blocks form the primary building material, with visible mortar lines. Weathered, dark wood is used for structural beams, window frames, and decorative carvings. Faded, colorful fabric prayer flags flutter from lines strung across the courtyard.",
+        "mood": "A profound sense of peaceful contemplation and awe, amplified by the sheer natural grandeur and the sacred purpose of the monastic complex.",
+        "sounds": "Rustling prayer flags, distant wind, faint chanting, chirping birds",
+        "spatialLayout": "A roughly rectangular open courtyard, seemingly carved into the mountainside, providing a central gathering and transition space between different sections of the monastery.",
+        "primary_surfaces": "Rough-hewn stone walls, weathered wood beams",
+        "secondary_surfaces": "Faded fabric prayer flags, worn wooden prayer wheels",
+        "accent_features": "Vibrant, sun-bleached prayer flags, ornate mandalas painted on walls, ancient stupas",
+        "dominant": "Grey stone walls",
+        "secondary": "Multi-colored prayer flags fluttering",
+        "accent": "Gilded bronze stupa",
+        "ambient": "Bright natural light",
+        "genre": "REQUIRED",
+        "architectural_tone": "Rustic sacred mountain architecture",
+        "cultural_tone": "Tibetan Buddhist pilgrimage site",
+        "palette_bias": "Earthy tones, bright accents",
+        "flora_base": "Sparse mountain vegetation",
+        "fauna_base": "Birds"
+      },
+      "primaryMedia": "media-1767623923874-4h938gbr0",
+      "description": "You stand within the mystical interior of the monastery, a labyrinth of stone and wood filled with the scent of incense and an ethereal quiet.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "religious",
+        "elevation": "ground-level",
+        "spatialLayout": "A sprawling, irregular complex of interconnected stone chambers and halls, filled with a serene, mystical ambiance, designed for sacred rituals and communal living.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "ornate thangka paintings",
+          "large prayer wheels",
+          "scattered meditation cushions",
+          "brass butter lamps",
+          "incense burners",
+          "wooden prayer benches",
+          "stone statues of deities",
+          "stacks of sacred texts"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door grand wooden"
+        },
+        {
+          "type": "archway",
+          "position": "left wall",
+          "description": "archway stone"
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "window stained-glass"
+        },
+        {
+          "type": "passage",
+          "position": "back wall",
+          "description": "passage narrow"
+        }
+      ],
+      "dominantElements": [
+        "prayer_hall: shape=rectangular, orientation=horizontal, scale=large, style=sacred, surfaces=stone, openings=arched-windows, interior_materials=stone|wood|fabric, internal_atmosphere=sacred",
+        "monk's_cell: shape=compact, orientation=vertical, scale=small, style=sacred, surfaces=stone, openings=minimal, interior_materials=stone|wood|wood, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "incense-filled air",
+        "ancient murals on walls",
+        "echoes of chanting",
+        "ornate tapestries"
+      ],
+      "searchDesc": "Open courtyard of Tengboche Monastery with stone walls, prayer flags, and mountain views.",
+      "slug": "null-of-tengboche-monastery"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1767618410744-41d2ez401",
+      "id": "loc-1767623864349-a2kmi92nv",
       "type": "host",
       "children": [
         {
-          "id": "db13dd36-4c46-448c-a8e5-0d229628ed54",
+          "id": "9128dd9f-9e20-4039-9e99-c4c42ef89818",
           "type": "region",
           "children": [
             {
-              "id": "99779274-d4fc-4ba8-a015-d600df8aaf7f",
+              "id": "48e6005a-5a59-43ad-a0c4-9dbe7caf84d4",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1767618717546-bwc452tyy",
+                  "id": "niche-1767623923875-xfnoqs5qe",
                   "type": "niche",
                   "children": []
                 }
@@ -199,6 +240,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1767618410744-41d2ez401"
+    "loc-1767623864349-a2kmi92nv"
   ]
 }

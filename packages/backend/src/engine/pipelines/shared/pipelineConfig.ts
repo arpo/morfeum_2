@@ -15,11 +15,11 @@ export interface PipelineStep {
  */
 export const PIPELINE_STEPS = {
   worldTree: [
-    { id: 'hierarchy_classification', name: 'Analyzing Structure', duration: 6000 },
-    { id: 'deepest_dna_generation', name: 'Creating DNA', duration: 5000 },
+    { id: 'hierarchy_classification', name: 'Analyzing Structure', duration: 7500 },
+    { id: 'deepest_dna_generation', name: 'Creating DNA', duration: 6000 },
     { id: 'image_prompt_generation', name: 'Composing Scene', duration: 5500 },
     { id: 'image_generation', name: 'Generating Image', duration: 2200 },
-    { id: 'parent_dna_generation', name: 'Building World', duration: 1500 },
+    { id: 'parent_dna_generation', name: 'Building World', duration: 200 },
     { id: 'tree_building', name: 'Building Tree', duration: 100 },
     { id: 'media_assignment', name: 'Finalizing', duration: 500 }
   ],
