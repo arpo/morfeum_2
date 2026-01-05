@@ -49,7 +49,8 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 
 | Prompt | File | Purpose | Used By |
 |--------|------|---------|---------|
-| `hierarchyCategorization` | [locations/hierarchyCategorization.ts](./locations/hierarchyCategorization.ts) | Parse user prompt into 4-layer hierarchy | World Tree Pipeline |
+| `parsePromptToHierarchy` | [../../nodeCreation/detection/parsePromptToHierarchy.ts](../../nodeCreation/detection/parsePromptToHierarchy.ts) | Parse user prompt into hierarchy (host/region/location/niche) | Node Creation Pipeline (NEW_WORLD) |
+| `hierarchyCategorization` | [locations/hierarchyCategorization.ts](./locations/hierarchyCategorization.ts) | Parse user prompt into 4-layer hierarchy (LEGACY - fallback only) | Legacy World Tree Pipeline |
 | `nodeDNAGeneration` | [locations/nodeDNAGeneration.ts](./locations/nodeDNAGeneration.ts) | Generate DNA for a specific node | Node creation |
 | `deepestNodeDNAGeneration` | [locations/deepestNodeDNA.ts](./locations/deepestNodeDNA.ts) | Generate DNA for deepest node in hierarchy | World Tree Pipeline |
 | `parentChainDNAGeneration` | [locations/parentChainDNA.ts](./locations/parentChainDNA.ts) | Generate DNA for parent chain (host, region, location) | World Tree Pipeline |
@@ -123,28 +124,28 @@ Text description returned to spawn-input-bar
 
 ---
 
-### World Tree Pipeline (NEW_HOST, NEW_LOCATION)
+### Node Creation Pipeline (NEW_WORLD command)
 ```
-User prompt: "A steampunk factory in Victorian London"
+User prompt: "A haunted house" or "A steampunk factory in Victorian London"
     ↓
 ┌─────────────────────────────────────────┐
-│ Step 1: hierarchyCategorization         │
+│ Step 1: parsePromptToHierarchy          │
 │ Parse into: Host → Region → Location    │
+│ (Niche ONLY if explicitly requested)    │
 └─────────────────────────────────────────┘
     ↓
 ┌─────────────────────────────────────────┐
-│ Step 2: deepestNodeDNAGeneration        │
-│ Generate DNA for deepest node (factory) │
+│ Step 2: DNA Generation                  │
+│ Generate DNA for each node in hierarchy │
 └─────────────────────────────────────────┘
     ↓
 ┌─────────────────────────────────────────┐
-│ Step 3: worldTreeImagePromptContext     │
-│ Build structured JSON image description │
+│ Step 3: Image Prompt Generation         │
+│ Build image prompt from DNA             │
 └─────────────────────────────────────────┘
-    ↓ (parallel)
+    ↓
 ┌─────────────────────────────────────────┐
 │ Step 4: Image Generation (FLUX)         │
-│ + parentChainDNAGeneration (parallel)   │
 └─────────────────────────────────────────┘
     ↓
 ┌─────────────────────────────────────────┐
@@ -153,12 +154,16 @@ User prompt: "A steampunk factory in Victorian London"
 └─────────────────────────────────────────┘
 ```
 
+**Key Rules (parsePromptToHierarchy):**
+- Default depth: host/region/location (EXTERIOR)
+- Niche (interior) ONLY when user says: "inside", "interior", "within", "enter"
+- Atmospheric adjectives (haunted, cozy, warm) → EXTERIOR, not interior
+
 **Files involved:**
 - `pipelines/nodeCreationPipeline.ts` - Main orchestrator
-- `locations/hierarchyCategorization.ts` - Step 1
-- `locations/deepestNodeDNA.ts` - Step 2
-- `locations/worldTree/contextPromptBuilder.ts` - Step 3
-- `locations/parentChainDNA.ts` - Step 4b
+- `nodeCreation/detection/parsePromptToHierarchy.ts` - Step 1 (PRIMARY)
+- `nodeCreation/prompts/dna/` - Step 2
+- `generation/shared/imagePromptGeneration.ts` - Step 3
 
 ---
 

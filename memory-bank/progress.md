@@ -34,6 +34,23 @@
   
   **Results**: Oracle's Spire ✅ metallic interior, Blackwood Manor ✅ physical decay
 
+- [x] **NEW_WORLD Niche Over-Generation Fix - COMPLETED**
+  - **Problem**: `/NEW_WORLD a haunted house` incorrectly created interior niche
+  - **Root Cause**: Conflicting prompts in cache bundle (auto-niche rule)
+  - **Solution**: 
+    1. Removed `HIERARCHY_CATEGORIZATION_STATIC` from cache bundle
+    2. Added "ATMOSPHERE ≠ INTERIOR" rule to `parsePromptToHierarchy.ts`
+    3. Added haunted house/asylum examples showing correct EXTERIOR default
+    4. Reduced cache bundle size by ~1,800 tokens (from ~6,500 to ~4,700)
+  
+  **Files Modified**:
+  - `generation/prompts/cacheContent/index.ts` - Removed conflicting prompt
+  - `nodeCreation/detection/parsePromptToHierarchy.ts` - Added rules/examples
+  - Frontend component - Removed debug-only hierarchy analysis call
+  - `generation/prompts/PROMPT_INDEX.md` - Updated documentation
+  
+  **Results**: `/NEW_WORLD a haunted house` now correctly shows EXTERIOR view
+
 - [x] **SeedVR Image Upscale Database Update Fix - COMPLETED**
   - **What**: Fixed critical bug in upscale feature where images weren't being saved to database
   - **Bug**: API returns `data.images[0].url` (array) but code looked for `data.image.url` (singular)

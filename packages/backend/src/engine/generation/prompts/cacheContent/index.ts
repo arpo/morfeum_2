@@ -6,11 +6,6 @@
 
 import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS, DNA_GUIDELINES } from '../shared/dnaSchema';
 import { DOMINANT_ELEMENTS_RULES, NAVIGABLE_ELEMENTS_RULES } from '../shared/elementRules';
-import { 
-  HOST_COMPOSITION_INSTRUCTIONS, 
-  REGION_COMPOSITION_INSTRUCTIONS, 
-  EXTERIOR_COMPOSITION_INSTRUCTIONS 
-} from '../locations/worldTree/compositionInstructions';
 
 import { CHARACTER_DEEP_PROFILE_STATIC } from '../characters/characterDeepProfile';
 import { CHARACTER_SEED_STATIC } from '../characters/characterSeed';

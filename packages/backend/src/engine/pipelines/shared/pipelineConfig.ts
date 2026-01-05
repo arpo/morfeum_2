@@ -15,24 +15,25 @@ export interface PipelineStep {
  */
 export const PIPELINE_STEPS = {
   worldTree: [
-    { id: 'hierarchy_classification', name: 'Analyzing Structure', duration: 2000 },
-    { id: 'deepest_dna_generation', name: 'Creating DNA', duration: 6000 },
-    { id: 'image_generation', name: 'Generating Image', duration: 2500 },
-    { id: 'parent_dna_generation', name: 'Building World', duration: 9000 },
-    { id: 'tree_building', name: 'Building Tree', duration: 500 },
+    { id: 'hierarchy_classification', name: 'Analyzing Structure', duration: 6000 },
+    { id: 'deepest_dna_generation', name: 'Creating DNA', duration: 5000 },
+    { id: 'image_prompt_generation', name: 'Composing Scene', duration: 5500 },
+    { id: 'image_generation', name: 'Generating Image', duration: 2200 },
+    { id: 'parent_dna_generation', name: 'Building World', duration: 1500 },
+    { id: 'tree_building', name: 'Building Tree', duration: 100 },
     { id: 'media_assignment', name: 'Finalizing', duration: 500 }
   ],
   
   // Interior spawn pipeline: creates exterior hierarchy first, then GO_INSIDE for niche
   // Used when hierarchy_classification detects niche/interior intent
   worldTreeInterior: [
-    { id: 'hierarchy_classification', name: 'Analyzing Structure', duration: 2000 },
-    { id: 'location_dna_generation', name: 'Creating Location DNA', duration: 6000 },
-    { id: 'parent_dna_generation', name: 'Building World', duration: 9000 },
-    { id: 'tree_building', name: 'Building Tree', duration: 500 },
+    { id: 'hierarchy_classification', name: 'Analyzing Structure', duration: 6000 },
+    { id: 'location_dna_generation', name: 'Creating Location DNA', duration: 5000 },
+    { id: 'parent_dna_generation', name: 'Building World', duration: 1500 },
+    { id: 'tree_building', name: 'Building Tree', duration: 100 },
     { id: 'space_analysis', name: 'Analyzing Interior', duration: 3000 },
-    { id: 'image_prompt', name: 'Composing Scene', duration: 1000 },
-    { id: 'image_generation', name: 'Generating Image', duration: 2000 },
+    { id: 'image_prompt', name: 'Composing Scene', duration: 5500 },
+    { id: 'image_generation', name: 'Generating Image', duration: 2200 },
     { id: 'node_building', name: 'Creating Interior', duration: 1000 }
   ],
   

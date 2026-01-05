@@ -1,164 +1,40 @@
 {
   "nodes": {
-    "loc-1767443643257-l2e8q5ypg": {
-      "id": "loc-1767443643257-l2e8q5ypg",
+    "loc-1767618410744-41d2ez401": {
+      "id": "loc-1767618410744-41d2ez401",
       "type": "host",
-      "name": "Planet Xylar",
+      "name": "Misty Haunted Realm",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Skyline silhouette of gravity-defying rock formations, vast surreal landscapes, unusual atmospheric phenomena",
-        "colorsAndLighting": "Bioluminescent flora, vibrant and saturated alien skies, soft, diffused light from a distant, unusual star.",
-        "atmosphere": "Alien, ethereal, dreamlike, breathable with a strange scent.",
-        "materials": "Unknown crystalline compounds, alien organic matter, exotic metals.",
-        "mood": "Mysterious, wondrous, alien, and serene.",
-        "sounds": "Subtle alien hums, soft chimes from flora, distant ethereal calls.",
-        "primary_surfaces": "Smooth, iridescent, unknown compounds.",
-        "secondary_surfaces": "Porous, crystalline rock-like structures.",
-        "accent_features": "Bioluminescent plant structures, floating rock fragments.",
-        "dominant": "Alien flora",
-        "secondary": "Crystalline structures",
-        "accent": "Bioluminescence",
-        "ambient": "Ethereal hum",
-        "genre": "REQUIRED",
-        "architectural_tone": "REQUIRED",
-        "cultural_tone": "REQUIRED",
-        "palette_bias": "REQUIRED",
-        "flora_base": "REQUIRED",
-        "fauna_base": "REQUIRED"
+        "looks": "Vast, mist-shrouded landscapes with ancient, gnarled forests and undefined horizons.",
+        "colorsAndLighting": "Muted grays and deep greens, diffused and dim lighting due to perpetual mist.",
+        "atmosphere": "Eerie, melancholic, and perpetually damp, filled with a sense of unseen presences.",
+        "materials": "Damp earth, ancient gnarled wood, clinging spectral moss, undefined stone.",
+        "mood": "Melancholy, eerie, foreboding, ancient.",
+        "sounds": "Whispering winds, distant spectral murmurs, rustling leaves, dripping water.",
+        "primary_surfaces": "Mist, ancient trees, damp ground.",
+        "secondary_surfaces": "Spectral moss, gnarled roots.",
+        "accent_features": "Faint, undefined spectral lights.",
+        "dominant": "Mist",
+        "secondary": "Ancient Forests",
+        "accent": "Spectral Moss",
+        "ambient": "Eerie Silence",
+        "genre": "Fantasy",
+        "architectural_tone": "None (naturalistic/supernatural)",
+        "cultural_tone": "Ancient/Lost",
+        "palette_bias": "Cool",
+        "flora_base": "Ancient Forests",
+        "fauna_base": "Spectral"
       },
-      "description": "A world of surreal landscapes and vibrant, alien flora, heavily inspired by the works of Moebius. Gravity-defying rock formations pierce an atmosphere tinged with unusual colors, supporting bizarre and beautiful plant life.",
-      "searchDesc": "Planet Xylar: Surreal alien world, Moebius-inspired, vibrant flora",
-      "slug": "planet-xylar",
+      "description": "A realm perpetually shrouded in mist, where ancient forests whisper secrets and spectral energies linger.  The air is thick with the scent of damp earth and decay, and the very ground seems to hum with an unseen presence.",
+      "searchDesc": "Misty haunted realm, ancient forests, spectral energies, damp earth, eerie atmosphere",
+      "slug": "misty-haunted-realm",
       "structure": {
-        "spatialLayout": "Organic, flowing, with an emphasis on verticality and improbable structures."
-      },
-      "primaryMedia": "media-1767474748311-n11zmtlkb",
-      "updatedAt": 1767597132214
-    },
-    "6d0341a5-5945-48dc-a3db-7f1f6e944169": {
-      "id": "6d0341a5-5945-48dc-a3db-7f1f6e944169",
-      "type": "region",
-      "name": "The Crimson Dunes",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Organic rock formations, wind-sculpted dunes, flowing street patterns",
-        "colorsAndLighting": "Warm ochre and red hues under a harsh, alien sun. Dramatic shadows cast by rock formations.",
-        "atmosphere": "Dry, windswept, vast, and ancient.",
-        "materials": "Eroded sandstone, compressed sand, crystalline rock outcroppings.",
-        "mood": "Enduring, stark, majestic, and solitary.",
-        "sounds": "Whispering wind, the sifting of sand, distant echoes.",
-        "primary_surfaces": "Rough, textured sandstone.",
-        "secondary_surfaces": "Smooth, wind-polished rock faces, compacted sand.",
-        "accent_features": "Naturally occurring crystal veins, wind-carved arches.",
-        "dominant": "Sand",
-        "secondary": "Rock",
-        "accent": "Crystal",
-        "ambient": "Wind",
-        "genre": null,
-        "architectural_tone": "Sculpted by nature",
-        "cultural_tone": "Nomadic, resilient",
-        "palette_bias": "Ochre, deep reds, burnt sienna",
-        "flora_base": "Sparse, hardy desert succulents",
-        "fauna_base": "Burrowing desert creatures"
-      },
-      "description": "Vast expanses of ochre sand, punctuated by towering, organically shaped rock formations that resemble colossal sculptures. The wind carves intricate patterns into the dunes, creating a constantly shifting, alien topography.",
-      "searchDesc": "Crimson Dunes: Alien desert, sculpted rock formations, shifting sands",
-      "slug": "the-crimson-dunes",
-      "structure": {
-        "spatialLayout": "Open, sprawling, with natural pathways dictated by rock formations."
-      },
-      "primaryMedia": "media-1767474897692-aa0vo3pub"
-    },
-    "022ba666-f38f-402e-a173-802a54626717": {
-      "id": "022ba666-f38f-402e-a173-802a54626717",
-      "type": "location",
-      "name": "The Oracle's Spire",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The Spire is a tall, slender, organic spiral that appears to have grown from the desert. Its exterior is entirely clad in large, iridescent panels that catch and refract light.",
-        "colorsAndLighting": "Dominated by the vibrant, shifting colors of the iridescent panels, reflecting the intense sunlight of Planet Xylar. Interior lighting is soft and diffused, creating a mystical glow.",
-        "atmosphere": "The air inside the spire is cool and still, a stark contrast to the desert heat outside. A faint, resonant hum can be felt, as if the structure itself is alive. There is a sense of otherworldly calm.",
-        "materials": "The primary surfaces are highly polished, iridescent metallic panels that shift in color. Interior materials include polished metallic surfaces, possibly with smooth, cool tile flooring and glass elements.",
-        "mood": "Mystical, awe-inspiring, and serene. The Spire evokes a sense of ancient wisdom and otherworldly presence.",
-        "sounds": "Low hum, faint resonance, wind whispers outside.",
-        "primary_surfaces": "Shimmering iridescent metallic panels",
-        "secondary_surfaces": "Polished metal, smooth tile",
-        "accent_features": "Fluid, organic spiral form",
-        "dominant": "Iridescent blues and greens across the facade",
-        "secondary": "Cool metallic silver interiors",
-        "accent": "Warm amber light accents",
-        "ambient": "Soft, diffused mystical light",
-        "genre": null,
-        "architectural_tone": "Organic futuristic",
-        "cultural_tone": "Sacred observatory or oracle site",
-        "palette_bias": "Iridescent jewel tones",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A slender, spiraling structure that emerges organically from the desert floor, its surface adorned with shimmering, iridescent panels.",
-      "searchDesc": "Spiraling iridescent tower in Crimson Dunes, Planet Xylar. Mystical interior.",
-      "slug": "the-oracle-s-spire",
-      "structure": {
-        "spatialLayout": "A tall, spiraling structure with a central core, designed for vertical ascent. The interior spaces are likely open and flowing, following the organic external shape."
-      },
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "base of the spire",
-          "description": "Leads into the Spire's entrance hall."
-        },
-        {
-          "type": "stairs",
-          "position": "interior of the spire",
-          "description": "Ascends through the spire's core."
-        }
-      ],
-      "dominantElements": [
-        "The Oracle's Spire: shape=organic, orientation=vertical(tower), scale=towering, style=futuristic, surfaces=metallic-polished, openings=large-glass, interior_materials=metallic|tile|glass, internal_atmosphere=mystical"
-      ],
-      "uniqueIdentifiers": [
-        "Organic spiral form",
-        "Iridescent shimmering panels",
-        "Seamless integration with desert floor",
-        "Hypnotic light reflection"
-      ],
-      "primaryMedia": "media-1767443670513-hnsxfmcni"
-    },
-    "loc-1767608028001-jem8h272q": {
-      "id": "loc-1767608028001-jem8h272q",
-      "type": "host",
-      "name": "Gothic Countryside",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Vast, rolling hills, gnarled ancient trees, scattered ruins, distant, brooding sky.",
-        "colorsAndLighting": "Muted, desaturated earth tones with deep shadows, low, diffused light.",
-        "atmosphere": "Mysterious, desolate, ancient, foreboding.",
-        "materials": "Earth, crumbling stone, weathered wood, thick mist.",
-        "mood": "Melancholy, haunting, ancient dread.",
-        "sounds": "Distant wind, rustling leaves, faint animal cries, eerie silence.",
-        "primary_surfaces": "Earthy terrain, rocky outcrops, ancient tree bark.",
-        "secondary_surfaces": "Moss-covered stones, decaying wood, mist.",
-        "accent_features": "Crumbling ruins, twisted branches, distant, undefined structures.",
-        "dominant": "Earth and Stone",
-        "secondary": "Decaying Wood and Mist",
-        "accent": "Ancient Ruins",
-        "ambient": "Desolate Wind",
-        "genre": "Gothic",
-        "architectural_tone": "Ruined",
-        "cultural_tone": "Ancient",
-        "palette_bias": "Desaturated Earth Tones",
-        "flora_base": "Gnarled Trees",
-        "fauna_base": "Elusive Wildlife"
-      },
-      "description": "A desolate and melancholic landscape where ancient secrets lie hidden, often shrouded in mist and shadow. Vast, rolling hills are punctuated by gnarled, ancient trees and scattered, crumbling ruins, all under a perpetually overcast sky.",
-      "searchDesc": "Desolate, mist-shrouded countryside with ancient secrets, ruins, and gnarled trees.",
-      "slug": "gothic-countryside",
-      "structure": {
-        "spatialLayout": "Expansive, open vistas with hidden, shadowed pockets."
+        "spatialLayout": "Vast, sprawling, with obscured paths and a sense of being lost."
       }
     },
-    "2335768c-cf9c-420e-93d1-df547268d3ff": {
-      "id": "2335768c-cf9c-420e-93d1-df547268d3ff",
+    "db13dd36-4c46-448c-a8e5-0d229628ed54": {
+      "id": "db13dd36-4c46-448c-a8e5-0d229628ed54",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -168,666 +44,150 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "709301d2-1ee6-48a4-bc82-35602e55faf6": {
-      "id": "709301d2-1ee6-48a4-bc82-35602e55faf6",
+    "99779274-d4fc-4ba8-a015-d600df8aaf7f": {
+      "id": "99779274-d4fc-4ba8-a015-d600df8aaf7f",
       "type": "location",
-      "name": "Blackwood Manor",
+      "name": "Whispering Ruins",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A massive, irregularly shaped Victorian manor, its architecture characterized by decaying stone and a sprawling, weathered silhouette. Shadowed, arched windows create a sense of constant, unseen observation.",
-        "colorsAndLighting": "Muted earth tones dominate, with deep grays and mossy greens of aged stone. Light is scarce, filtering through grimy windows and casting long, oppressive shadows that cling to the structure.",
-        "atmosphere": "The air is thick with the scent of damp earth and decay. A palpable sense of age and neglect permeates the manor, creating an atmosphere of foreboding stillness.",
-        "materials": "The primary materials are rough, weathered stone, heavily aged and crumbling in places. Accents of dark, rotting wood can be seen around windows and doors, further emphasizing the decay.",
-        "mood": "A deep sense of melancholy and haunting presence pervades the manor, evoking feelings of unease and forgotten secrets.",
-        "sounds": "Distant rustling leaves, creaking wood, wind whistling through gaps.",
-        "primary_surfaces": "Moss-covered, crumbling stone.",
-        "secondary_surfaces": "Rotting wood, grimy glass.",
-        "accent_features": "Shadowed, arched windows, skeletal tree branches.",
-        "dominant": "Dark grey stone",
-        "secondary": "Mossy green",
-        "accent": "Black shadows",
-        "ambient": "Dim, twilight",
+        "looks": "A sprawling, massive complex of irregular stone structures, characterized by crumbling battlements and shattered stonework. Overgrown with spectral moss, it evokes a sense of immense age and decay.",
+        "colorsAndLighting": "Dominated by muted grays and deep greens of moss and shadows.  Dim, ethereal light filters through the mist, casting long, dancing shadows.",
+        "atmosphere": "The air is cool and damp, thick with a spectral mist that clings to everything. A palpable sense of stillness pervades, broken only by the faintest whispers of wind through the ruins.",
+        "materials": "Primarily ancient, weathered stone with patches of damp, clinging moss. Cobwebs drape across surfaces, and the floor is littered with debris.",
+        "mood": "Melancholy and eerie, evoking a sense of lost grandeur and lingering spectral presence.",
+        "sounds": "Whispering wind, distant echoes, creaking stone, rustling moss, faint spectral moans",
+        "primary_surfaces": "Weathered stone, spectral moss",
+        "secondary_surfaces": "Damp earth, clinging cobwebs",
+        "accent_features": "Crumbling gargoyles, shattered stained glass fragments, overgrown archways",
+        "dominant": "Graystone",
+        "secondary": "Deep green",
+        "accent": "Ethereal white",
+        "ambient": "Dim",
         "genre": null,
-        "architectural_tone": "Decaying Victorian Gothic",
-        "cultural_tone": "Ruined aristocratic estate",
-        "palette_bias": "Desaturated earth tones",
-        "flora_base": "Overgrown vines and weeds",
+        "architectural_tone": "Decaying medieval fortress",
+        "cultural_tone": "Remnants of a forgotten noble house",
+        "palette_bias": "Grays, Greens, Blues",
+        "flora_base": "Spectral moss, overgrown vines",
         "fauna_base": "None"
       },
-      "description": "An imposing, decaying mansion with overgrown gardens, crumbling stone, and shadowed, watchful windows. EXTERIOR VIEW.",
-      "searchDesc": "Imposing, decaying Victorian manor with crumbling stone and shadowed, watchful windows. Overgrown gardens.",
-      "slug": "blackwood-manor",
+      "description": "The skeletal remains of a once-great stone castle, its battlements crumbling and overgrown. EXTERIOR VIEW.",
+      "searchDesc": "Crumbling stone castle ruins in a misty, haunted realm. Overgrown with moss and shrouded in mist.",
+      "slug": "whispering-ruins",
       "structure": {
-        "spatialLayout": "The manor is a large, sprawling structure with a complex, irregular layout, suggesting many interconnected rooms and hidden passages, creating a feeling of depth and mystery."
+        "spatialLayout": "A sprawling, irregular layout of interconnected chambers and courtyards, with a sense of depth created by broken walls and shadowed passages."
       },
       "navigableElements": [
         {
-          "type": "door",
-          "position": "center of facade",
-          "description": "Leads into the manor's main hall."
+          "type": "gate",
+          "position": "center",
+          "description": "Leads into the main courtyard."
         },
         {
-          "type": "path",
-          "position": "foreground",
-          "description": "Winds through the overgrown gardens towards the manor."
+          "type": "passage",
+          "position": "left wall",
+          "description": "A shadowy alcove that seems to lead deeper into the ruins."
         }
       ],
       "dominantElements": [
-        "Blackwood Manor: shape=irregular, orientation=sprawling, scale=massive, style=victorian, surfaces=stone, openings=arched-windows, interior_materials=wood|stone|plaster, internal_atmosphere=dim"
+        "castle_ruins: shape=irregular, orientation=sprawling, scale=massive, style=rustic, surfaces=stone, openings=narrow-slits, interior_materials=stone|earth|cobwebs, internal_atmosphere=dim"
       ],
       "uniqueIdentifiers": [
-        "Overgrown gardens",
-        "Crumbling stone facade",
-        "Shadowed, watchful windows",
-        "Decaying grandeur"
+        "crumbling battlements",
+        "overgrown moss",
+        "spectral mist",
+        "shattered stonework",
+        "haunting echoes"
       ],
-      "primaryMedia": "media-1767608053283-zjod42f4n"
+      "primaryMedia": "media-1767618430928-sae5ehcaz"
     },
-    "niche-1767608528231-xe4zbf27k": {
-      "id": "niche-1767608528231-xe4zbf27k",
+    "niche-1767618717546-bwc452tyy": {
+      "id": "niche-1767618717546-bwc452tyy",
       "type": "niche",
-      "name": "Blackwood Manor",
+      "name": "Castle Ruins",
       "spaceType": "interior",
       "dna": {
-        "looks": "The space presents as an unformed architectural void, hinting at the grand scale and irregular silhouette of Blackwood Manor. Arched outlines and shadowed contours suggest windows and passageways yet to solidify.",
-        "colorsAndLighting": "Dominant colors are muted earth tones, primarily deep grays and mossy greens, blending into pervasive, oppressive shadows. Light is scarce and diffuse, as if perpetually filtered through grimy, unseen glass.",
-        "atmosphere": "The air is thick with the imagined scent of damp earth and decay. A palpable sense of age and neglect permeates the unformed space, creating an atmosphere of foreboding stillness and unease.",
-        "materials": "The primary perceived material is rough, weathered stone, aged and crumbling, interspersed with suggestions of dark, rotting wood. Textures are hinted at rather than fully formed, emphasizing the nascent nature of the space.",
-        "mood": "A deep sense of melancholy and a haunting presence pervades the unformed manor, evoking feelings of unease and forgotten secrets.",
-        "sounds": "Faint creaks, distant whispers, rustling of unseen decay",
-        "spatialLayout": "The spatial layout is suggestive of a massive, irregularly shaped Victorian manor, with implied depth and sprawling, shadowed expanses. The form is yet to be fully defined.",
-        "primary_surfaces": "Unformed, crumbling stone surfaces, suggestive of decay.",
-        "secondary_surfaces": "Hinted-at rotting wood and grimy glass textures.",
-        "accent_features": "Shadowed, undefined arched openings and the spectral outline of skeletal branches.",
-        "dominant": "Dark grey stone hues, undefined.",
-        "secondary": "Mossy green tones, suggestive.",
-        "accent": "Black shadow masses, pervasive.",
-        "ambient": "Dim, twilight.",
-        "genre": "Gothic",
-        "architectural_tone": "null",
-        "cultural_tone": "null",
-        "palette_bias": "null",
-        "flora_base": "null",
+        "looks": "Vast, irregular stone structures that have succumbed to time. Battlements are fractured, and walls lean precariously. Overgrown with spectral moss, the ruins suggest immense age and decay.",
+        "colorsAndLighting": "Dominated by muted grays of ancient stone and the deep, somber greens of persistent moss. Dim, ethereal light filters through the pervasive mist, casting elongated, dancing shadows.",
+        "atmosphere": "The air is perpetually cool and damp, thick with a spectral mist that clings to every surface. A profound stillness permeates the space, disturbed only by the faintest, mournful whispers of wind weaving through the hollows.",
+        "materials": "Primarily ancient, weathered stone, heavily textured and worn. Damp, clinging spectral moss covers large swathes, softening sharp edges. Cobwebs are prevalent, draping across surfaces, and the ground is littered with fallen stone and debris.",
+        "mood": "Melancholy and eerie, a palpable sense of lost grandeur and lingering spectral presence.",
+        "sounds": "Whispering wind, creaking stone, distant echoes, faint rustling.",
+        "spatialLayout": "A sprawling, fragmented complex of interconnected courtyards and chambers, many collapsed. The layout is irregular and organic, following the natural terrain and defensive needs of a forgotten age.",
+        "primary_surfaces": "Weathered, crumbling stone and spectral moss",
+        "secondary_surfaces": "Damp earth, clinging cobwebs",
+        "accent_features": "Crumbling gargoyles, shattered stained glass fragments, overgrown archways, remnants of heraldic carvings",
+        "dominant": "Graystone covering walls and floors",
+        "secondary": "Deep green moss clinging to northern faces and archways",
+        "accent": "Ethereal white mist clinging low to the ground",
+        "ambient": "Dim",
+        "genre": "Fantasy",
+        "architectural_tone": "Decaying medieval fortress",
+        "cultural_tone": "Remnants of a forgotten noble house",
+        "palette_bias": "Grays, Greens, Blues",
+        "flora_base": "Spectral moss, overgrown vines",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1767608528229-2mccgkjhw",
-      "description": "You step into the vast, dimly lit interior of Blackwood Manor, where oppressive shadows cling to ornate gothic arches and dust motes dance in the faint light filtering through tall, arched windows. The air is heavy with the scent of aged wood and forgotten secrets, as faded Victorian grandeur surrounds you.",
+      "primaryMedia": "media-1767618717545-qc4kvxjv3",
+      "description": "You step into the vast, echoing interior of the castle ruins. Crumbling stone walls rise around you, punctuated by narrow slits that offer glimpses of the overgrown grounds outside. The air is thick with dust and the scent of damp earth, and cobwebs hang like tattered curtains. It feels ancient and forgotten.",
       "structure": {
-        "form": "gothic",
-        "roofType": "vaulted",
+        "form": "irregular",
+        "roofType": "null",
         "scale": "massive",
         "orientation": "sprawling",
-        "openings": "arched-windows",
-        "openingShape": "arched",
-        "functionalType": "residential",
-        "elevation": "ground-level",
-        "spatialLayout": "A labyrinthine arrangement of grand halls, winding corridors, and numerous rooms across multiple floors, characterized by a sense of faded opulence and sprawling complexity.",
-        "requiredElements": []
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "dust-covered velvet armchairs",
-          "rococo-style grandfather clock",
-          "crumbling tapestry depicting a hunting scene",
-          "heavy damask curtains partially drawn",
-          "carved wooden side table with an oil lamp and a stack of aged books",
-          "ebony writing desk with quill and inkwell",
-          "ornate candelabra with partially burned candles"
-        ],
-        "suggested": [],
-        "placementNotes": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "front wall",
-          "description": "door grand oak double s"
-        },
-        {
-          "type": "object",
-          "position": "center",
-          "description": "object ornate iron-railed staircase"
-        },
-        {
-          "type": "archway",
-          "position": "left wall",
-          "description": "archway shadowed"
-        },
-        {
-          "type": "window",
-          "position": "center",
-          "description": "window tall arched  rear wall"
-        },
-        {
-          "type": "door",
-          "position": "right wall",
-          "description": "door dark mahogany"
-        }
-      ],
-      "dominantElements": [],
-      "uniqueIdentifiers": [
-        "ornate gothic architecture",
-        "fading Victorian grandeur",
-        "pervasive sense of antiquity",
-        "shadowy corners",
-        "creaking floorboards"
-      ],
-      "searchDesc": "The undefined core of Blackwood Manor, radiating gothic decay and melancholy.",
-      "slug": "null-of-blackwood-manor"
-    },
-    "niche-1767608832277-inxlb85gx": {
-      "id": "niche-1767608832277-inxlb85gx",
-      "type": "niche",
-      "name": "A Big Hall",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "This is a monumental hall with a vast, domed ceiling that stretches upwards, lost in ethereal light. The walls are a continuous expanse of large, interlocking iridescent metallic panels, curving gently inwards.",
-        "colorsAndLighting": "The iridescent panels reflect and refract light in a mesmerizing dance of jewel tones, primarily blues, greens, and purples. A soft, diffused light emanates from an unseen source high above, bathing the space in a mystical glow.",
-        "atmosphere": "The air within this grand hall is cool, still, and carries a faint, resonant hum, suggesting the living nature of the Spire. A profound sense of calm and ancient wisdom pervades the atmosphere.",
-        "materials": "The primary surfaces are exceptionally smooth, highly polished iridescent metallic panels that shift color with the slightest change in perspective. The floor is a seamless expanse of cool, dark, polished tile.",
-        "mood": "Mystical, awe-inspiring, and serene, evoking a sense of ancient wisdom and otherworldly presence.",
-        "sounds": "Faint resonant hum, hushed silence.",
-        "spatialLayout": "A massive, cylindrical chamber with an immense volume defined by its extreme height and sweeping, unbroken walls, creating a feeling of boundless, sacred space.",
-        "primary_surfaces": "Highly polished, shifting iridescent metallic panels",
-        "secondary_surfaces": "Seamless dark polished tile floor",
-        "accent_features": "The gentle, organic inward curve of the walls, the subtle spiral of the ascending staircase",
-        "dominant": "Iridescent blues and greens across the vast wall panels",
-        "secondary": "Cool metallic silver tones in the floor and structural elements",
-        "accent": "Warm amber light accents subtly highlighting structural lines",
-        "ambient": "Soft, diffused mystical light",
-        "genre": "REQUIRED",
-        "architectural_tone": "Organic futuristic",
-        "cultural_tone": "Sacred observatory or oracle site",
-        "palette_bias": "Iridescent jewel tones",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767608832276-rbejd47vz",
-      "description": "a big hall with high ceilings",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "medium",
-        "orientation": "cubic",
-        "openings": "minimal",
-        "functionalType": "residential",
-        "spatialLayout": "A medium interior space.",
-        "requiredElements": [
-          "high ceilings"
-        ]
-      },
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "center of far wall",
-          "description": "A shimmering, iridescent archway leading deeper into the Spire."
-        },
-        {
-          "type": "stairs",
-          "position": "along the left wall",
-          "description": "A wide, spiraling staircase of polished metal ascending into the upper reaches."
-        }
-      ],
-      "dominantElements": [
-        "A Big Hall"
-      ],
-      "uniqueIdentifiers": [
-        "high ceilings"
-      ],
-      "searchDesc": "Vast hall with high ceilings, iridescent walls, and mystical light.",
-      "slug": "null-of-the-oracle-s-spire"
-    },
-    "loc-1767609586139-tbzqhupea": {
-      "id": "loc-1767609586139-tbzqhupea",
-      "type": "host",
-      "name": "Neo-Veridia",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The cityscape is characterized by immense, monolithic skyscrapers of polished chrome and dark, reinforced glass.  Verticality is extreme, with sky-bridges and elevated transit systems creating a multi-layered urban fabric.  The sheer scale is overwhelming, with structures disappearing into the smog-choked atmosphere above.",
-        "colorsAndLighting": "A vibrant, electric palette dominates, with dominant neon blues, purples, and hot pinks clashing against the dark metallic surfaces.  Light sources are primarily artificial: harsh, flickering neon signs, the cold glow of digital displays, and the distant, diffused light of searchlights.  Deep, impenetrable shadows are cast by the colossal structures, creating stark contrasts.",
-        "atmosphere": "The air is thick with the hum of unseen machinery, the distant roar of grav-vehicles, and the faint scent of ozone and recycled air.  A perpetual artificial twilight reigns, with temperatures regulated to a constant, slightly humid chill.  Occasional data streams manifest as shimmering visual glitches in the air.",
-        "materials": "Polished chrome, reinforced glass, dark composite alloys, and synthetic polymers are the prevalent materials.  Textures range from slick and reflective to pitted and corroded, with the constant presence of wear and tear from heavy industrial use and exposure to pollutants.",
-        "mood": "A sense of overwhelming, awe-inspiring technological advancement coupled with an undercurrent of gritty, dystopian unease.",
-        "sounds": "Hum of machinery, distant traffic, holographic ads, ventilation systems, synthesized announcements.",
-        "primary_surfaces": "Reflective chrome skyscrapers, dark composite plating, reinforced glass facades.",
-        "secondary_surfaces": "Polymer walkways, holographic projection surfaces, ventilation grates.",
-        "accent_features": "Massive holographic advertisements, neon signage, elevated transit tubes, external data conduits.",
-        "dominant": "Deep blue + skyscraper exteriors",
-        "secondary": "Metallic silver + sky-bridges",
-        "accent": "Neon pink + signage",
-        "ambient": "Artificial twilight",
-        "genre": "cyberpunk",
-        "architectural_tone": "Brutalist megastructure meets high-tech corporate",
-        "cultural_tone": "Corporate elites, transient populace, AI systems",
-        "palette_bias": "Blues, purples, silvers, blacks, neon accents",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A sprawling urban expanse defined by towering, neon-drenched skyscrapers and advanced technology, where corporate power reigns.",
-      "searchDesc": "Cyberpunk megacity with neon-lit skyscrapers, vast landscapes, and corporate power.",
-      "slug": "neo-veridia",
-      "structure": {
-        "spatialLayout": "The city is a complex, three-dimensional labyrinth, with distinct vertical zones.  The lower levels are a dense, often grimy, network of service tunnels and old infrastructure, while the upper echelons host gleaming corporate headquarters."
-      },
-      "primaryMedia": "media-1767609618479-a6vr1dfrd"
-    },
-    "niche-1767609666203-4vq0sykfm": {
-      "id": "niche-1767609666203-4vq0sykfm",
-      "type": "niche",
-      "name": "Glass and Chrome Tower",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "An impossibly tall, slender tower of interlocking geometric modules. The exterior is dominated by vast, seamless panes of darkened, reinforced glass and polished chrome cladding. Integrated into the facade are enormous, dynamic holographic advertisement panels and faint, pulsing data conduits.",
-        "colorsAndLighting": "The structure is a canvas for the city's electric palette, with deep blues and purples dominating the glass surfaces and reflecting the neon signage. Stark, white internal lighting contrasts with the ambient twilight, casting long, sharp shadows.",
-        "atmosphere": "The air is a constant, cool temperature, carrying the faint hum of unseen internal systems. A perpetual, artificial twilight pervades, broken only by the aggressive glare of neon and holographic displays.",
-        "materials": "The tower is constructed from polished chrome, dark composite alloys, and reinforced glass. Surfaces are slick and reflective, often showing the grime and minor imperfections of heavy industrial exposure, contrasting with pristine, high-tech interiors.",
-        "mood": "A sense of overwhelming, awe-inspiring technological advancement coupled with an undercurrent of corporate coldness and indifferent scale.",
-        "sounds": "Distant hum, faint data chimes, occasional grav-vehicle whoosh, muffled corporate announcements.",
-        "spatialLayout": "A singular, immensely tall vertical structure with a central core. Internal spaces are designed with stark, clean lines, emphasizing the vast height and the transparency of the building's facade.",
-        "primary_surfaces": "Polished chrome cladding, dark reinforced glass facades.",
-        "secondary_surfaces": "Composite alloy structural elements, illuminated polymer panels.",
-        "accent_features": "Massive holographic advertisements, pulsing external data conduits, elevated transit tube connectors.",
-        "dominant": "Deep blue reflecting city lights on glass surfaces",
-        "secondary": "Metallic silver chrome cladding",
-        "accent": "Neon pink and electric blue from signage and data flows",
-        "ambient": "Artificial twilight",
-        "genre": "cyberpunk",
-        "architectural_tone": "Brutalist megastructure meets high-tech corporate",
-        "cultural_tone": "Corporate elites, transient populace, AI systems",
-        "palette_bias": "Blues, purples, silvers, blacks, neon accents",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767609666202-yjwcekpnr",
-      "description": "A colossal, futuristic tower piercing the sky, its entire surface a mosaic of reflective glass and polished chrome, shimmering with an austere, high-tech elegance under the open sky.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "open-sky",
-        "scale": "large",
-        "orientation": "vertical",
-        "openings": "large-glass",
-        "openingShape": "rectangular",
-        "functionalType": "commercial",
-        "elevation": "elevated",
-        "spatialLayout": "A sleek, towering structure dominating the skyline, clad in reflective glass and gleaming chrome panels, projecting an aura of advanced technology and corporate power.",
-        "requiredElements": null
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "ground-level at base",
-          "description": "leads into the main lobby"
-        }
-      ],
-      "dominantElements": [
-        "Glass and Chrome Tower: shape=rectangular, orientation=vertical, scale=towering, style=futuristic, surfaces=glass|metallic-polished, openings=large-glass, interior_materials=metallic|concrete|glass, internal_atmosphere=sterile"
-      ],
-      "uniqueIdentifiers": [
-        "reflective glass facade",
-        "gleaming chrome panels",
-        "imposing verticality",
-        "sleek modern design"
-      ],
-      "searchDesc": "A towering glass and chrome skyscraper in a cyberpunk city, bathed in neon light.",
-      "slug": "neo-veridia"
-    },
-    "loc-1767609671542-fvel493sj": {
-      "id": "loc-1767609671542-fvel493sj",
-      "type": "location",
-      "name": "Glass and Chrome Tower",
-      "spaceType": "structure",
-      "dna": {},
-      "description": "Structure: Glass and Chrome Tower",
-      "searchDesc": "Glass and Chrome Tower",
-      "slug": "glass-and-chrome-tower",
-      "isPassThrough": true
-    },
-    "niche-1767609693437-jqnjhqy7z": {
-      "id": "niche-1767609693437-jqnjhqy7z",
-      "type": "niche",
-      "name": "Glass and Chrome Tower",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "This is an impossibly tall, rectangular chamber within a towering structure. The layout is clean and geometric, emphasizing verticality and vastness. Seamless panes of darkened glass form the primary walls, reflecting the polished metallic surfaces of the floor and ceiling.",
-        "colorsAndLighting": "The space is dominated by cool, stark white internal lighting that casts sharp, defined shadows. The reflective surfaces of polished chrome and glass amplify the cool tones, with faint neon accents from integrated displays.",
-        "atmosphere": "The air is unnaturally still and cool, maintained at a constant, sterile temperature. There is a low, pervasive hum of unseen internal systems. A perpetual, artificial twilight permeates the interior, broken only by the crisp illumination.",
-        "materials": "The primary materials are highly polished chrome and reinforced glass, creating slick, reflective surfaces. Sections of smooth, dark concrete are visible in structural elements and floor transitions, maintaining a sense of industrial solidity within the high-tech shell.",
-        "mood": "A feeling of extreme efficiency, cold precision, and overwhelming scale. The sterile environment evokes a sense of detachment and corporate control.",
-        "sounds": "low hum, distant echoes, soft electronic tones",
-        "spatialLayout": "A long, rectangular hall that stretches upwards, creating a sense of immense height and depth. The sharp angles and reflective surfaces enhance the feeling of a precisely engineered space.",
-        "primary_surfaces": "Polished chrome floor, reinforced glass walls",
-        "secondary_surfaces": "Smooth concrete structural elements",
-        "accent_features": "Integrated holographic information displays, recessed strip lighting",
-        "dominant": "Metallic silver throughout",
-        "secondary": "Deep blue and purple from glass reflections",
-        "accent": "Neon pink and electric blue from displays",
-        "ambient": "Artificial twilight",
-        "genre": "cyberpunk",
-        "architectural_tone": "Brutalist megastructure meets high-tech corporate",
-        "cultural_tone": "Corporate elites, transient populace, AI systems",
-        "palette_bias": "Blues, purples, silvers, blacks, neon accents",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767609693436-ftd9i7a9n",
-      "description": "You are inside the dazzling Glass and Chrome Tower. The vast interior is a fusion of polished metal, gleaming glass, and clean lines, creating a bright and expansive atmosphere. Sunlight streams through immense windows, offering panoramic views of the city below. The space hums with a controlled, futuristic energy, reflecting its advanced design.",
-      "structure": {
-        "form": "rectangular",
-        "roofType": "flat",
-        "scale": "large",
-        "orientation": "vertical",
-        "openings": "large-glass|open-passages",
-        "openingShape": "rectangular",
-        "functionalType": "commercial",
-        "elevation": "ground-level",
-        "spatialLayout": "A vast, multi-story lobby with soaring ceilings, expansive glass walls, and a central open space designed for visitor flow and interaction.",
-        "requiredElements": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "at ground level",
-          "description": "leading to the exterior street level"
-        },
-        {
-          "type": "passage",
-          "position": "along the back wall",
-          "description": "leading to security checkpoints and further into the tower's core"
-        },
-        {
-          "type": "stairs",
-          "position": "to the side",
-          "description": "ascending to upper levels or mezzanine floors"
-        }
-      ],
-      "dominantElements": [
-        "Security Booth: shape=rectangular, orientation=compact, scale=small, style=futuristic, surfaces=glass|metallic-polished, openings=minimal, interior_materials=metallic|synthetic|glass, internal_atmosphere=sterile",
-        "Information Kiosk: shape=modular, orientation=compact, scale=small, style=futuristic, surfaces=metallic-polished|glass, openings=minimal, interior_materials=metallic|synthetic|glass, internal_atmosphere=sterile",
-        "Conference Pod: shape=cylindrical, orientation=compact, scale=small, style=futuristic, surfaces=glass|metallic-polished, openings=minimal, interior_materials=metallic|fabric|glass, internal_atmosphere=cozy"
-      ],
-      "uniqueIdentifiers": [
-        "Panoramic city views through vast windows",
-        "Sleek metallic accents and polished surfaces",
-        "Integrated high-tech displays",
-        "Open, multi-level design"
-      ],
-      "searchDesc": "Sterile interior of a towering futuristic glass and chrome building.",
-      "slug": "interior-of-glass-and-chrome-tower-shape-rectangular-orientation-vertical-scale-towering-style-futuristic-surfaces-glass-metallic-polished-openings-large-glass-interior-materials-metallic-concrete-glass-internal-atmosphere-sterile"
-    },
-    "loc-1767609807438-cas3yj4rx": {
-      "id": "loc-1767609807438-cas3yj4rx",
-      "type": "host",
-      "name": "The Verdant Canopy",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Vast, interconnected forest canopy, immense tree structures, flowing organic shapes, natural light filtering through leaves, distant mountain ranges or celestial bodies visible above.",
-        "colorsAndLighting": "Dominant greens and browns, dappled sunlight, soft natural illumination, occasional bursts of vibrant floral colors.",
-        "atmosphere": "Serene, ancient, magical, alive, boundless, connected.",
-        "materials": "Living wood, dense foliage, interwoven vines, moss, bark.",
-        "mood": "Peaceful, wondrous, sanctuary, deeply connected to nature.",
-        "sounds": "Rustling leaves, gentle wind, distant birdsong, creaking ancient wood, faint water trickles.",
-        "primary_surfaces": "Living wood bark, thick moss carpets, dense leaf canopies.",
-        "secondary_surfaces": "Interwoven vines, smooth polished wood, hanging roots.",
-        "accent_features": "Bioluminescent flora, flowering branches, naturally formed archways.",
-        "dominant": "Massive ancient trees",
-        "secondary": "Living wood structures, dense foliage",
-        "accent": "Vibrant flowers, bioluminescent elements",
-        "ambient": "Dappled sunlight, gentle breezes, forest sounds",
-        "genre": "Fantasy",
-        "architectural_tone": "Organic",
-        "cultural_tone": "Harmonious",
-        "palette_bias": "Earthy",
-        "flora_base": "Giant Trees",
-        "fauna_base": "Arboreal"
-      },
-      "description": "A breathtaking world where colossal, ancient trees form the very foundation of civilization. Structures are not built, but grown, seamlessly integrated into the living wood and verdant foliage.",
-      "searchDesc": "Living treehouse world with organic architecture, ancient trees, and natural integration.",
-      "slug": "the-verdant-canopy",
-      "structure": {
-        "spatialLayout": "Verticality and interconnectedness, flowing organic pathways, layered canopy levels."
-      }
-    },
-    "5ed5f87d-7112-4c9e-88ef-b19d044e8d0d": {
-      "id": "5ed5f87d-7112-4c9e-88ef-b19d044e8d0d",
-      "type": "region",
-      "name": "Region",
-      "spaceType": "exterior",
-      "dna": {},
-      "description": "",
-      "searchDesc": "",
-      "slug": "region",
-      "isPassThrough": true
-    },
-    "0c8c6c78-1127-4ae3-b9c4-c363e0ed28de": {
-      "id": "0c8c6c78-1127-4ae3-b9c4-c363e0ed28de",
-      "type": "location",
-      "name": "The Sun-Dappled Haven",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The dwelling is a sprawling, organic structure integrated directly into the massive branches of an ancient tree. Its layout is asymmetrical and flowing, conforming to the natural contours of the wood, with varying tiers and platforms.",
-        "colorsAndLighting": "The interior is bathed in a dappled, golden light filtering through the leaves and organic walls. Verdant greens of moss and vines dominate, with warm woody browns of the living structure.",
-        "atmosphere": "The air is fresh and carries the scent of damp earth and living wood. A gentle breeze rustles through the leaves overhead, creating a sense of calm and seclusion. The temperature is mild and pleasant.",
-        "materials": "The primary materials are living wood, thick moss, and interwoven vines, giving the surfaces a soft, yielding texture. Some areas may feature polished wood or smooth, worn bark.",
-        "mood": "The mood is serene, peaceful, and deeply connected to nature, evoking a sense of sanctuary and wonder.",
-        "sounds": "Rustling leaves, gentle breezes, distant bird calls, soft creaking of wood.",
-        "primary_surfaces": "Living wood, thick moss",
-        "secondary_surfaces": "Interwoven vines, smooth bark",
-        "accent_features": "Sunlight filtering through canopy, bioluminescent fungi at night",
-        "dominant": "Verdant green and deep wood brown",
-        "secondary": "Dappled gold and earthy tones",
-        "accent": "Subtle pops of fungal glow",
-        "ambient": "Warm, dappled sunlight",
-        "genre": null,
-        "architectural_tone": "Organic living architecture",
-        "cultural_tone": null,
-        "palette_bias": "Earthy greens and browns",
-        "flora_base": "Ancient tree, mosses, vines, epiphytes",
-        "fauna_base": "Birds, squirrels, insects"
-      },
-      "description": "A multi-tiered dwelling nestled high within the colossal branches of an ancient tree, its walls woven from living wood and draped with vibrant mosses. EXTERIOR VIEW.",
-      "searchDesc": "A living treehouse dwelling with organic architecture, mossy walls, and sun-dappled interiors.",
-      "slug": "the-sun-dappled-haven",
-      "structure": {
-        "spatialLayout": "The dwelling occupies multiple levels and areas, interconnected by natural passages and organic structures, creating a sense of depth and exploration within the tree."
-      },
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "center",
-          "description": "The main entrance, a wide opening leading into the heart of the treehouse."
-        },
-        {
-          "type": "stairs",
-          "position": "right",
-          "description": "A winding staircase of root and vine leading to upper levels."
-        },
-        {
-          "type": "bridge",
-          "position": "left",
-          "description": "A suspended bridge connecting to another large branch."
-        }
-      ],
-      "dominantElements": [
-        "treehouse: shape=organic, orientation=sprawling, scale=large, style=rustic, surfaces=organic-membrane|wood, openings=open-passages, interior_materials=wood|moss|vines, internal_atmosphere=cozy"
-      ],
-      "uniqueIdentifiers": [
-        "Living wood walls",
-        "Draped mosses and vines",
-        "Sun-dappled interior",
-        "High canopy location",
-        "Integrated branch structures"
-      ],
-      "primaryMedia": "media-1767609826292-1phn901wt"
-    },
-    "niche-1767609918531-2uai306x0": {
-      "id": "niche-1767609918531-2uai306x0",
-      "type": "niche",
-      "name": "The Tree House Interior",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The structure is an organic extension of the ancient tree, with walls and floors seamlessly merging with living wood. Various asymmetrical platforms and alcoves are carved into the massive branches, creating a multi-tiered and flowing living space. Smooth, worn bark sections are integrated into the design, providing natural seating and surfaces.",
-        "colorsAndLighting": "The interior is awash in warm, dappled golden light that filters through the dense canopy and translucent, leaf-veined wall sections. Verdant greens of moss and clinging vines dominate, interspersed with the rich, earthy browns of the living wood structure. At night, soft, ethereal light emanates from clusters of bioluminescent fungi.",
-        "atmosphere": "The air is fresh and carries the subtle, grounding scent of damp earth and living wood. A gentle, natural breeze rustles through the leaves overhead, creating a constant, soothing whisper. The temperature is consistently mild and pleasant, fostering a deep sense of calm and seclusion.",
-        "materials": "The primary materials are living wood, forming the very structure of the dwelling, and thick, velvety moss that carpets many surfaces. Interwoven vines create natural railings and decorative screens. Polished sections of bark and smooth, naturally formed woody textures add tactile variety.",
-        "mood": "The mood is one of profound serenity, peacefulness, and an intimate connection with the natural world, evoking a profound sense of sanctuary and wonder.",
-        "sounds": "Rustling leaves, gentle breeze, distant birdsong, soft creaking wood.",
-        "spatialLayout": "The layout is a fluid, multi-level arrangement of platforms and alcoves that embrace the natural contours of the colossal tree. There are no rigid walls or sharp corners, promoting a sense of continuous, flowing space that feels both enclosed and open to the forest.",
-        "primary_surfaces": "living wood, thick moss",
-        "secondary_surfaces": "interwoven vines, smooth worn bark",
-        "accent_features": "Sunlight filtering through canopy, bioluminescent fungi at night, epiphytic plants",
-        "dominant": "Verdant green and deep wood brown",
-        "secondary": "Dappled gold and earthy tones",
-        "accent": "Subtle pops of fungal glow",
-        "ambient": "Warm, dappled sunlight",
-        "genre": "Fantasy",
-        "architectural_tone": "Organic living architecture",
-        "cultural_tone": "Harmonious",
-        "palette_bias": "Earthy greens and browns",
-        "flora_base": "Ancient tree, mosses, vines, epiphytes",
-        "fauna_base": "Birds, squirrels, insects"
-      },
-      "primaryMedia": "media-1767609918529-bq1pr4ckd",
-      "description": "You step into the rustic, organic interior of the large treehouse. It's a sprawling, multi-level space where living wood and natural elements blend seamlessly, creating a cozy and enchanting dwelling with soft, ambient lighting.",
-      "structure": {
-        "form": "organic",
-        "roofType": "domed",
-        "scale": "large",
-        "orientation": "sprawling",
-        "openings": "open-passages",
+        "openings": "narrow-slits",
         "openingShape": "irregular",
-        "functionalType": "residential",
-        "elevation": "elevated",
-        "spatialLayout": "A multi-level, interconnected space built around the central tree trunk, with various platforms, nooks, and a living tree integrated into the structure.",
+        "functionalType": "civic",
+        "elevation": "ground-level",
+        "spatialLayout": "Vast, crumbling stone halls and chambers, open to the sky in many places. Ancient stonework is prevalent, with areas of exposed earth and thick cobwebs.",
         "requiredElements": []
-      },
-      "furnishingDetails": {
-        "userSpecified": [
-          "natural wood seating carved from branches",
-          "low woven rug made of dried grasses",
-          "hanging lanterns crafted from gourds",
-          "shelves stocked with smooth river stones and dried flowers"
-        ],
-        "suggested": [],
-        "placementNotes": []
       },
       "navigableElements": [
         {
-          "type": "ladder",
-          "position": "front wall",
-          "description": "ladder woven rope  entrance"
+          "type": "door",
+          "position": "exterior wall",
+          "description": "main entrance to the castle ruins"
         },
         {
-          "type": "opening",
-          "position": "right wall",
-          "description": "opening circular   with vine overhang"
+          "type": "passage",
+          "position": "interior chamber",
+          "description": "leads to another section of the ruins"
         },
         {
-          "type": "window",
-          "position": "left wall",
-          "description": "window large   overlooking canopy"
-        },
-        {
-          "type": "hatch",
-          "position": "ceiling",
-          "description": "hatch wooden   access"
+          "type": "stairs",
+          "position": "interior chamber",
+          "description": "leads to an upper, collapsed level"
         }
       ],
-      "dominantElements": [],
-      "uniqueIdentifiers": [
-        "integrated living tree trunk",
-        "moss-covered floors",
-        "woven branch walls",
-        "soft glowing lanterns"
+      "dominantElements": [
+        "crumbling_wall: shape=irregular, orientation=sprawling, scale=large, style=rustic, surfaces=stone, openings=none, interior_materials=stone|earth|cobwebs, internal_atmosphere=dim",
+        "archway: shape=arched, orientation=vertical, scale=medium, style=rustic, surfaces=stone, openings=open-passages, interior_materials=stone|cobwebs|dust, internal_atmosphere=dim"
       ],
-      "searchDesc": "Treehouse sanctuary with living wood, moss, and dappled sunlight.",
-      "slug": "null-of-the-sun-dappled-haven"
+      "uniqueIdentifiers": [
+        "ancient stonework",
+        "fallen masonry",
+        "overgrown vegetation",
+        "faint ethereal whispers"
+      ],
+      "searchDesc": "Melancholy medieval castle ruins, draped in spectral moss, filled with mist and eerie whispers.",
+      "slug": "null-of-whispering-ruins"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1767443643257-l2e8q5ypg",
+      "id": "loc-1767618410744-41d2ez401",
       "type": "host",
       "children": [
         {
-          "id": "6d0341a5-5945-48dc-a3db-7f1f6e944169",
+          "id": "db13dd36-4c46-448c-a8e5-0d229628ed54",
           "type": "region",
           "children": [
             {
-              "id": "022ba666-f38f-402e-a173-802a54626717",
+              "id": "99779274-d4fc-4ba8-a015-d600df8aaf7f",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1767608832277-inxlb85gx",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1767608028001-jem8h272q",
-      "type": "host",
-      "children": [
-        {
-          "id": "2335768c-cf9c-420e-93d1-df547268d3ff",
-          "type": "region",
-          "children": [
-            {
-              "id": "709301d2-1ee6-48a4-bc82-35602e55faf6",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1767608528231-xe4zbf27k",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1767609586139-tbzqhupea",
-      "type": "host",
-      "children": [
-        {
-          "id": "niche-1767609666203-4vq0sykfm",
-          "type": "niche",
-          "children": [
-            {
-              "id": "loc-1767609671542-fvel493sj",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1767609693437-jqnjhqy7z",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "loc-1767609807438-cas3yj4rx",
-      "type": "host",
-      "children": [
-        {
-          "id": "5ed5f87d-7112-4c9e-88ef-b19d044e8d0d",
-          "type": "region",
-          "children": [
-            {
-              "id": "0c8c6c78-1127-4ae3-b9c4-c363e0ed28de",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1767609918531-2uai306x0",
+                  "id": "niche-1767618717546-bwc452tyy",
                   "type": "niche",
                   "children": []
                 }
@@ -839,9 +199,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1767443643257-l2e8q5ypg",
-    "loc-1767608028001-jem8h272q",
-    "loc-1767609586139-tbzqhupea",
-    "loc-1767609807438-cas3yj4rx"
+    "loc-1767618410744-41d2ez401"
   ]
 }

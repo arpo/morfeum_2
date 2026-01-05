@@ -40,30 +40,7 @@ export function useEntityGeneratorLogic(): EntityGeneratorLogicReturn {
     if (!textPrompt.trim()) return;
 
     try {
-      // If location type, first analyze hierarchy
-      if (entityType === 'location') {
-        console.log('[EntityGenerator] Analyzing location hierarchy for:', textPrompt.trim());
-        
-        const hierarchyResponse = await fetch('/api/mzoo/hierarchy/analyze', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            userPrompt: textPrompt.trim()
-          })
-        });
-
-        if (hierarchyResponse.ok) {
-          const hierarchyResult = await hierarchyResponse.json();
-          console.log('[EntityGenerator] Hierarchy Analysis Result:', JSON.stringify(hierarchyResult, null, 2));
-        } else {
-          console.error('[EntityGenerator] Hierarchy analysis failed:', hierarchyResponse.status);
-        }
-      }
-
       // Start spawn via server-side manager
-      console.log('[EntityGenerator] Starting spawn with prompt:', textPrompt.trim(), 'type:', entityType);
       await startSpawn(textPrompt.trim(), entityType);
       
       // Clear the input after starting spawn

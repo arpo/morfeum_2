@@ -312,6 +312,59 @@ Fixed critical issue where GO_INSIDE transitions produced incorrect interior ima
 
 ---
 
+## 2026-01-05 (Afternoon) - NEW_WORLD Command Niche Over-Generation Fix
+
+### NEW_WORLD Prompt Improvements - COMPLETED
+
+Fixed an issue where the `/NEW_WORLD` command was creating niches (interiors) too often when not explicitly requested by the user.
+
+#### The Problem
+
+- `/NEW_WORLD a haunted house` → incorrectly created an interior niche
+- The system should default to host/region/location hierarchy (EXTERIOR view)
+- Niches (interiors) should ONLY be created when explicitly requested with "inside", "interior", etc.
+
+#### Root Cause
+
+A conflict between two prompt systems:
+- `parsePromptToHierarchy.ts` had strict anti-niche rules (correct)
+- `hierarchyCategorization.ts` had an AUTO-NICHE rule (incorrect)
+- Both were included in the same cache bundle, causing conflicting instructions
+
+#### Solution
+
+1. **Removed conflicting prompt from cache**
+   - Removed `HIERARCHY_CATEGORIZATION_STATIC` from `morfeum-world-creation` cache bundle
+   - Reduced cache bundle by ~1,800 tokens (from ~6,500 to ~4,700)
+
+2. **Strengthened anti-niche rules**
+   - Added "ATMOSPHERE ≠ INTERIOR" rule explicitly stating that atmospheric adjectives do not imply interior
+   - Added examples: "haunted house", "spooky mansion", "creepy cabin" → EXTERIOR
+   - Clarified that the user must explicitly say "inside", "interior", "within", "enter"
+
+3. **Added haunted house examples**
+   - Added clear example showing a haunted house should be EXTERIOR by default
+   - Added spooky abandoned asylum example for clarity
+
+4. **Cleanup and documentation**
+   - Removed unused imports in `cacheContent/index.ts`
+   - Removed debug-only hierarchy analysis call from frontend
+   - Updated `PROMPT_INDEX.md` with current pipeline details
+
+#### Files Modified
+
+- `packages/backend/src/engine/generation/prompts/cacheContent/index.ts` - Removed conflicting prompt
+- `packages/backend/src/engine/nodeCreation/detection/parsePromptToHierarchy.ts` - Added rules and examples
+- `packages/frontend/src/features/entity-generation/components/EntityGenerator/useEntityGeneratorLogic.ts` - Removed debug call
+- `packages/backend/src/engine/generation/prompts/PROMPT_INDEX.md` - Updated documentation
+
+#### Result
+
+`/NEW_WORLD a haunted house` now correctly:
+- Creates host/region/location (depth 3)
+- Shows EXTERIOR of the haunted house
+- Does NOT create a niche (interior) unless explicitly requested
+
 ## Current Focus
 
 - ✅ **COMPLETED**: Gemini Explicit Caching (90% token cost reduction)
@@ -320,6 +373,7 @@ Fixed critical issue where GO_INSIDE transitions produced incorrect interior ima
 - ✅ **COMPLETED**: View counter in Entity Explorer tree
 - ✅ **COMPLETED**: SeedVR Image Upscale integration
 - ✅ **COMPLETED**: Interior/Exterior transition system with special case support
+- ✅ **COMPLETED**: NEW_WORLD niche over-generation fix
 - ⏳ **PENDING**: Test character spawn caching
 
 ## Files Modified (Jan 1 - All Caching Work)
