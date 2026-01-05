@@ -64,15 +64,13 @@ export function resolveNavigationParentDNA(
   if (command === 'GO_INSIDE') {
     const currentNodeId = context.currentNode.id;
     
-    // Use pass-through skipping DNA resolution for proper ancestry inheritance
-    // This ensures we get DNA from meaningful ancestors, not empty pass-through nodes
-    // Example: whimsical house interior → pass-through location → Basement
-    // The interior should inherit from Basement's Mad Max DNA, not from empty pass-through
-    const resolvedParentDNA = resolveAncestryDNASkippingPassThrough(
-      currentNodeId,
-      worldsData.nodes,
-      worldsData.worldTrees
-    ) || getResolvedNodeDNA(
+    // CRITICAL: Use getResolvedNodeDNA to get the CURRENT NODE's DNA merged with ancestry
+    // This ensures that when entering "The Oracle's Spire" (location), we use the LOCATION's
+    // DNA (e.g., "Organic futuristic", "Iridescent jewel tones"), not just the region's DNA.
+    // 
+    // Previously used resolveAncestryDNASkippingPassThrough which only got ANCESTOR DNA,
+    // completely ignoring the current node's own DNA characteristics.
+    const resolvedParentDNA = getResolvedNodeDNA(
       currentNodeId,
       worldsData.nodes,
       worldsData.worldTrees

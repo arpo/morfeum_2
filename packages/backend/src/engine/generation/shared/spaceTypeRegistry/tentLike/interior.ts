@@ -32,5 +32,10 @@ TENT/PAVILION INTERIOR:
     '[MATERIALS: Canvas, fabric, rope, poles - NOT brick, concrete, glass]'
   ],
   typicalMaterials: ['canvas', 'fabric', 'rope', 'wooden poles', 'metal poles', 'rugs', 'cushions'],
-  excludeElements: ['brick walls', 'glass windows', 'permanent fixtures', 'plumbing fixtures']
+  excludeElements: ['brick walls', 'glass windows', 'permanent fixtures', 'plumbing fixtures'],
+  imageLayerGuidance: {
+    backgroundPriority: 'interior-dominant',
+    backgroundDescription: 'Far fabric walls, tent ceiling, support poles creating depth. The enclosed fabric interior dominates, with light diffusing through translucent canvas.',
+    windowTreatment: 'Tent flaps or openings may show glimpses of exterior. Light filters through fabric walls creating soft ambient glow. Openings are secondary to the fabric enclosure.'
+  }
 };

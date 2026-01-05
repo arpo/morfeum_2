@@ -34,5 +34,10 @@ BOAT/SHIP DECK:
     '[DO NOT SHOW: Building architecture, land-based elements, non-marine fixtures]'
   ],
   typicalMaterials: ['teak decking', 'rope', 'stainless steel railings', 'canvas', 'nautical hardware', 'non-slip surfaces'],
-  excludeElements: ['building architecture', 'land plants', 'building railings', 'concrete', 'asphalt']
+  excludeElements: ['building architecture', 'land plants', 'building railings', 'concrete', 'asphalt'],
+  imageLayerGuidance: {
+    backgroundPriority: 'exterior-dominant',
+    backgroundDescription: 'Ocean horizon, sky, water surrounding the vessel. The maritime environment dominates the background with expansive views of sea and sky.',
+    windowTreatment: 'No windows - this is an open deck. Railings frame the ocean view but do not obstruct it.'
+  }
 };

@@ -36,5 +36,10 @@ BOAT/SHIP CABIN:
     '[DO NOT SHOW: Building materials, rectangular windows, non-marine fixtures]'
   ],
   typicalMaterials: ['teak wood', 'brass', 'stainless steel', 'marine fabric', 'fiberglass', 'rope', 'canvas'],
-  excludeElements: ['brick', 'plaster', 'rectangular windows', 'wood floors (non-marine)', 'building fixtures']
+  excludeElements: ['brick', 'plaster', 'rectangular windows', 'wood floors (non-marine)', 'building fixtures'],
+  imageLayerGuidance: {
+    backgroundPriority: 'interior-dominant',
+    backgroundDescription: 'Far cabin walls following hull curve, nautical fixtures, built-in storage and furniture. The enclosed marine interior dominates the background.',
+    windowTreatment: 'Portholes (circular/oval openings) show glimpses of water or sky. They are small accent elements, NOT the main visual focus.'
+  }
 };

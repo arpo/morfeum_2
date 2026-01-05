@@ -13,11 +13,11 @@
  */
 
 // Re-export types
-export type { ContainerType, SpacePerspective, SpaceTypeDefinition } from './types';
+export type { ContainerType, SpacePerspective, SpaceTypeDefinition, ImageLayerGuidance, BackgroundPriority } from './types';
 export { ALL_CONTAINER_TYPES } from './types';
 
 // Import type definitions
-import type { ContainerType, SpacePerspective, SpaceTypeDefinition } from './types';
+import type { ContainerType, SpacePerspective, SpaceTypeDefinition, ImageLayerGuidance } from './types';
 
 // Import individual space types
 import { BUILDING_INTERIOR } from './building/interior';
@@ -124,4 +124,49 @@ export function getContainerTypeDescriptions(): string {
 - vehicle-boat: Watercraft (ships, boats, yachts, submarines, any vessel on/in water)
 - natural: Natural outdoor formations (forest clearings, groves, meadows, beaches - no structures)
 - tent-like: Temporary/fabric structures (tents, yurts, pavilions, canopies, marquees)`;
+}
+
+/**
+ * Get image layer guidance for a container type and perspective
+ * This determines how to compose the background/midground/foreground layers
+ */
+export function getImageLayerGuidance(
+  containerType: ContainerType,
+  perspective: SpacePerspective
+): ImageLayerGuidance | undefined {
+  const definition = getSpaceTypeDefinition(containerType, perspective);
+  return definition?.imageLayerGuidance;
+}
+
+/**
+ * Get default image layer guidance based on perspective alone
+ * Used as fallback when no specific space type guidance exists
+ */
+export function getDefaultImageLayerGuidance(perspective: SpacePerspective): ImageLayerGuidance {
+  switch (perspective) {
+    case 'interior':
+      return {
+        backgroundPriority: 'interior-dominant',
+        backgroundDescription: 'Far interior walls, ceiling architecture, structural depth of the enclosed space.',
+        windowTreatment: 'Windows are openings in walls showing glimpses of exterior. They should NOT dominate the composition.'
+      };
+    case 'exterior':
+      return {
+        backgroundPriority: 'exterior-dominant',
+        backgroundDescription: 'Sky, horizon, distant landscape, and environmental features dominate the background.',
+        windowTreatment: 'No windows - this is an outdoor space.'
+      };
+    case 'open-air':
+      return {
+        backgroundPriority: 'exterior-dominant',
+        backgroundDescription: 'Open sky, surrounding environment, horizon dominate the background. Structure frames the view.',
+        windowTreatment: 'No windows - open-air space. Railings or architectural elements frame views.'
+      };
+    default:
+      return {
+        backgroundPriority: 'balanced',
+        backgroundDescription: 'Balanced mix of interior and exterior elements.',
+        windowTreatment: 'Windows show exterior view while interior frames the scene.'
+      };
+  }
 }

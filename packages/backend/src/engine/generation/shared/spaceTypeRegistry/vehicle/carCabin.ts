@@ -34,5 +34,10 @@ VEHICLE CABIN (Car/Truck/Van):
     '[DO NOT SHOW: Building materials (wood floors, brick walls, plaster ceilings)]'
   ],
   typicalMaterials: ['leather', 'fabric upholstery', 'plastic trim', 'brushed metal', 'glass', 'rubber', 'carpet'],
-  excludeElements: ['wood floors', 'brick', 'stone walls', 'plaster', 'chandelier', 'fireplace', 'building fixtures']
+  excludeElements: ['wood floors', 'brick', 'stone walls', 'plaster', 'chandelier', 'fireplace', 'building fixtures'],
+  imageLayerGuidance: {
+    backgroundPriority: 'balanced',
+    backgroundDescription: 'Windshield view showing exterior environment (road, surroundings) balanced with interior cabin depth. Dashboard and windshield frame the exterior view.',
+    windowTreatment: 'Large windshield and windows show significant exterior view. The exterior is visible but framed by the vehicle interior (dashboard, A-pillars, seats).'
+  }
 };

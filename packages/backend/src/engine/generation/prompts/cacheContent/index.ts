@@ -25,6 +25,7 @@ import { getContainerTypeDescriptions } from '../../shared/spaceTypeRegistry';
 import { DEEPEST_NODE_DNA_STATIC } from '../locations/deepestNodeDNA';
 import { CHAT_IMPERSONATION_STATIC } from '../chat/chatCharacterImpersonation';
 import { PARSE_HIERARCHY_STATIC } from '../../../nodeCreation/detection/parsePromptToHierarchy';
+import { INTERIOR_TRANSITION_RULES } from '../shared/interiorTransitionRules';
 
 /**
  * Cache Group 1: World Creation (~6,500 tokens)
@@ -149,6 +150,8 @@ ELEVATION TYPES:
 - underground: Basements, cellars, crypts
 - floating: Airborne, suspended in air
 - suspended: Hanging from structure
+
+${INTERIOR_TRANSITION_RULES}
 
 FORM TYPES:
 - rectangular: Standard box shape

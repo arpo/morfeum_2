@@ -24,5 +24,10 @@ INTERIOR BUILDING SPACE:
 - Consider functional type (residential, commercial, industrial, etc.)`,
   imageConstraints: [],
   typicalMaterials: ['wood', 'stone', 'plaster', 'concrete', 'brick', 'metal', 'glass'],
-  excludeElements: []
+  excludeElements: [],
+  imageLayerGuidance: {
+    backgroundPriority: 'interior-dominant',
+    backgroundDescription: 'Far interior walls, ceiling architecture, structural depth of the enclosed space. The interior surfaces and materials should dominate the background, creating depth within the room.',
+    windowTreatment: 'Windows are openings IN the interior walls showing glimpses of exterior beyond. They should NOT dominate the composition - the interior materials and architecture are the main visual focus.'
+  }
 };

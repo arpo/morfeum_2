@@ -27,5 +27,10 @@ EXTERIOR OUTDOOR SPACE:
     '[CRITICAL: OPEN-SKY - The sky is directly visible above. Show natural sky, clouds, weather.]'
   ],
   typicalMaterials: ['ground', 'grass', 'stone paths', 'natural elements'],
-  excludeElements: ['ceiling', 'roof', 'enclosed walls']
+  excludeElements: ['ceiling', 'roof', 'enclosed walls'],
+  imageLayerGuidance: {
+    backgroundPriority: 'exterior-dominant',
+    backgroundDescription: 'Sky, horizon, distant landscape, and environmental features dominate the background. Buildings or structures may be visible in the distance.',
+    windowTreatment: 'No windows - this is an outdoor space. Structures in view are seen from the outside.'
+  }
 };

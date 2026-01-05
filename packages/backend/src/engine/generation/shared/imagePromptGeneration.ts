@@ -27,7 +27,8 @@ import {
 } from './imagePromptHelpers';
 import type { ImagePromptStructure } from './imagePromptTypes';
 import { assembleImagePrompt } from './imagePromptAssembler';
-import { getImageConstraints, type ContainerType, type SpacePerspective } from './spaceTypeRegistry';
+import { getImageConstraints, getImageLayerGuidance, getDefaultImageLayerGuidance, type ContainerType, type SpacePerspective, type ImageLayerGuidance } from './spaceTypeRegistry';
+import { getTransitionCategory } from '../prompts/shared/interiorTransitionRules';
 
 export interface ImagePromptGenerationInput {
   /** Structure analysis result (form, scale, navigableElements, etc.) */
@@ -75,6 +76,82 @@ export interface ImagePromptGenerationInput {
  * Build the system prompt - passes all pre-analyzed data to the LLM
  * No hardcoded rules - the LLM creates the image prompt from the data
  */
+/**
+ * Build layer composition guidance based on space type
+ * This tells the LLM how to compose background/midground/foreground
+ */
+function buildLayerCompositionGuidance(
+  containerType: ContainerType | undefined,
+  perspective: SpacePerspective
+): string {
+  // Get space-type-specific guidance or fall back to default based on perspective
+  const layerGuidance: ImageLayerGuidance = containerType 
+    ? (getImageLayerGuidance(containerType, perspective) || getDefaultImageLayerGuidance(perspective))
+    : getDefaultImageLayerGuidance(perspective);
+  
+  const priorityLabel = {
+    'interior-dominant': 'INTERIOR-DOMINANT (interior materials/walls fill the background)',
+    'exterior-dominant': 'EXTERIOR-DOMINANT (sky/surroundings dominate the background)',
+    'balanced': 'BALANCED (equal interior and exterior presence)'
+  }[layerGuidance.backgroundPriority];
+  
+  return `
+**LAYER COMPOSITION: ${priorityLabel}**
+
+BACKGROUND LAYER:
+${layerGuidance.backgroundDescription}
+
+${layerGuidance.windowTreatment ? `WINDOW/OPENING TREATMENT:\n${layerGuidance.windowTreatment}` : ''}
+`;
+}
+
+/**
+ * Build material priority rule based on architectural style transition category
+ */
+function buildMaterialPriorityRule(architecturalTone: string | undefined, dna: Record<string, any>): string {
+  const category = getTransitionCategory(architecturalTone);
+  
+  switch (category) {
+    case 'SAME_MATERIAL':
+      return `For this ${architecturalTone || 'futuristic'} style interior:
+- Interior surfaces MUST match the exterior materials (the shell IS the interior)
+- USE the parent's materials, primary_surfaces, and palette_bias for consistency
+- If parent has metallic/iridescent exterior → interior is polished metallic/iridescent
+- If parent has organic/crystal exterior → interior is the same organic/crystal material
+- DO NOT introduce new material families that contradict the parent`;
+      
+    case 'EXPOSED_MATERIAL':
+      return `For this ${architecturalTone || 'industrial'} style interior:
+- Interior celebrates RAW, EXPOSED structure
+- Show the structural materials: exposed brick, concrete, metal beams, pipes, ductwork
+- Parent materials should be VISIBLE and HONEST, not concealed
+- Industrial/utilitarian aesthetic - embrace the raw structure`;
+      
+    case 'NATURAL_INTEGRATION':
+      return `For this ${architecturalTone || 'organic'} style interior:
+- Interior continues the natural integration from the exterior
+- Natural materials visible: wood with bark, stone with formations, earth
+- Cozy but connected to the surrounding natural environment
+- Blend building and nature seamlessly`;
+      
+    case 'FANTASY_SPECIFIC':
+      return `For this ${architecturalTone || 'fantasy'} style interior:
+- Interior reflects the cultural/magical nature of the space
+- Use genre-appropriate materials: stone+tapestries, elven arches, dwarven metal
+- Mood and atmosphere must match the fantasy genre
+- Colors should harmonize with the exterior palette`;
+      
+    case 'FINISHED_INTERIOR':
+    default:
+      return `For this ${architecturalTone || 'residential'} style interior:
+- Exterior is a protective shell; interior gets FINISHED surfaces
+- USE typical interior finishes: wallpaper, plaster, wood trim, painted walls
+- IGNORE landscape/environment references in inherited fields (rocks, sand, terrain)
+- Colors should HARMONIZE with exterior palette (not match exactly)
+- Interior walls are finished building materials, NOT exterior cladding`;
+  }
+}
+
 function buildSystemPrompt(input: ImagePromptGenerationInput): string {
   const { structureAnalysis, dna, parentDNA, userPrompt, nodeType, perspective, parentChain } = input;
 
@@ -313,11 +390,13 @@ ${fluxInstructionsShort}
 YOUR TASK:
 Create a structured image prompt for FLUX with SEPARATE sections for each layer.
 
+${buildLayerCompositionGuidance(structureAnalysis?.containerType as ContainerType | undefined, perspective as SpacePerspective)}
+
 **OUTPUT FORMAT - STRUCTURED JSON:**
 Return a JSON object with these fields:
 
 {
-  "background": "Distant elements: sky, horizon, mountains, environmental context at the far back of the scene",
+  "background": "${perspective === 'interior' ? 'Far interior walls, ceiling architecture, structural depth. Windows (if any) show glimpses of exterior but do NOT dominate.' : 'Distant elements: sky, horizon, environmental context at the far back of the scene'}",
   "midground": "Central focus: main structures, primary subject matter, the main scene elements",
   "foreground": "Closest elements: objects, furniture, details, items near the viewer",
   "lighting": "Light direction, quality, and how it affects each layer",
@@ -331,12 +410,8 @@ Return a JSON object with these fields:
 4. Create an ASYMMETRIC, visually interesting composition
 5. Match the architectural_tone and cultural_tone
 
-**CRITICAL FOR INTERIORS - MATERIAL PRIORITY:**
-For INTERIOR spaces, the scene-specific DNA fields take PRIORITY over inherited/cascading fields:
-- USE: "looks", "materials", "primary_surfaces" from this node's DNA (these describe BUILDING materials)
-- IGNORE: landscape/environment references in inherited fields (rock formations, sand, terrain, vegetation)
-- The parent's "architectural_tone" and "materials_base" may reference the EXTERIOR landscape - do NOT use landscape materials for interior walls
-- Interior walls are made of BUILDING materials (composites, metals, polished surfaces), NOT surrounding landscape (rocks, sand)
+**CRITICAL FOR INTERIORS - MATERIAL CONSISTENCY:**
+${buildMaterialPriorityRule(parentDNA?.architectural_tone, dna)}
 
 **LIGHTING DIRECTION:**
 Include how light affects each layer (e.g., "warm sunset light catching the foreground details while the background fades into cool shadow").

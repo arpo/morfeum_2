@@ -83,6 +83,7 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 | `generalPromptFix` | [shared/generalPromptFix.ts](./shared/generalPromptFix.ts) | Fix common prompt issues | Image prompts |
 | `dnaSchema` | [shared/dnaSchema.ts](./shared/dnaSchema.ts) | DNA field definitions | DNA generation |
 | `elementRules` | [shared/elementRules.ts](./shared/elementRules.ts) | Rules for dominant elements | Structure analysis |
+| `interiorTransitionRules` | [shared/interiorTransitionRules.ts](./shared/interiorTransitionRules.ts) | Exterior→Interior material transition rules | DNA generation, Image prompts |
 
 ### Chat & Impersonation
 
@@ -263,87 +264,3 @@ User: "/CREATE_CHARACTER a bartender"
 - `characters/composeCharacterScenePrompt.ts` - Step 2
 
 ---
-
-## Structured Image Prompts
-
-As of Dec 2025, image prompts use a **structured JSON format** with layers:
-
-```json
-{
-  "background": "Distant elements: sky, horizon, mountains...",
-  "midground": "Central focus: main structures, primary subject...",
-  "foreground": "Closest elements: objects, furniture, details...",
-  "lighting": "Light direction, quality, layer effects...",
-  "atmosphere": "Mood, tone, atmospheric effects..."
-}
-```
-
-**Assembler:** `generation/shared/imagePromptAssembler.ts`
-**Types:** `generation/shared/imagePromptTypes.ts`
-
----
-
-## Sample Prompts
-
-For testing and examples, see:
-- `samples/sampleCharacterPrompts.ts` - Character prompt examples
-- `samples/sampleLocationPrompts.ts` - Location prompt examples
-
----
-
-## Space Type Registry
-
-As of Dec 2025, the system uses a **Space Type Registry** to handle different container types (buildings, vehicles, boats, tents, etc.).
-
-### File Location
-`generation/shared/spaceTypeRegistry.ts`
-
-### Container Types
-
-| Type | Description | Perspectives |
-|------|-------------|--------------|
-| `building` | Standard architectural structures | interior, exterior, open-air |
-| `vehicle-car` | Automotive vehicles (cars, trucks) | interior (cabin) |
-| `vehicle-boat` | Watercraft (ships, boats, yachts) | interior (cabin), open-air (deck) |
-| `natural` | Natural formations (clearings, groves) | exterior |
-| `tent-like` | Temporary fabric structures | interior |
-
-### How It Works
-
-1. **LLM determines** `containerType` during structure analysis (structureAnalysis.ts)
-2. **Registry provides** specialized guidance for DNA generation and image constraints
-3. **Pipelines use** registry functions to get type-specific prompts
-
-### Key Functions
-
-```typescript
-import { 
-  getDNAGuidance,       // Get DNA prompt guidance for a container type
-  getImageConstraints,  // Get FLUX constraints for a container type
-  getStructureGuidance, // Get structure analysis guidance
-  SPACE_TYPE_REGISTRY   // Full registry object
-} from '../shared/spaceTypeRegistry';
-```
-
-### Adding New Container Types
-
-1. Add type to `ContainerType` union in `spaceTypeRegistry.ts`
-2. Add entry to `SPACE_TYPE_REGISTRY` with all fields
-3. The LLM prompt in `structureAnalysis.ts` auto-updates via `getContainerTypeDescriptions()`
-
----
-
-## Adding New Prompts
-
-1. **Create prompt file** in appropriate category folder
-2. **Export from index** - Add to category's `index.ts`
-3. **Update this index** - Add entry to relevant table
-4. **Document pipeline usage** - Note which pipeline uses it
-
-### Prompt Best Practices
-
-- Keep prompts as **template functions** that accept parameters
-- Use **TypeScript string templates** for variable interpolation
-- Document **input parameters** and **expected output format**
-- Include **examples** in the prompt when helpful for LLM
-- Export from category `index.ts` for clean imports

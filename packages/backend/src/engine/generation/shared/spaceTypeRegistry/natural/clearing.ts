@@ -29,5 +29,10 @@ NATURAL OUTDOOR SPACE:
     '[OPEN-SKY - Natural sky visible (may be filtered through tree canopy)]'
   ],
   typicalMaterials: ['earth', 'grass', 'leaves', 'rocks', 'sand', 'bark', 'moss'],
-  excludeElements: ['buildings', 'paved surfaces', 'man-made structures']
+  excludeElements: ['buildings', 'paved surfaces', 'man-made structures'],
+  imageLayerGuidance: {
+    backgroundPriority: 'exterior-dominant',
+    backgroundDescription: 'Natural horizon, sky, distant landscape features (mountains, forest edge, ocean). The natural environment and sky dominate the background.',
+    windowTreatment: 'No windows - this is an outdoor natural space. Tree canopy may frame the sky but does not obstruct it.'
+  }
 };

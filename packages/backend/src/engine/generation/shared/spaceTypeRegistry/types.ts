@@ -3,6 +3,21 @@
  */
 
 /**
+ * Image layer guidance - how to compose background/midground/foreground
+ * based on the perspective and space type
+ */
+export type BackgroundPriority = 'interior-dominant' | 'exterior-dominant' | 'balanced';
+
+export interface ImageLayerGuidance {
+  /** What should dominate the background layer */
+  backgroundPriority: BackgroundPriority;
+  /** Description of what the background should contain */
+  backgroundDescription: string;
+  /** How windows/openings should be rendered (optional) */
+  windowTreatment?: string;
+}
+
+/**
  * Container types - what kind of enclosure/space the user is entering
  */
 export type ContainerType = 
@@ -57,6 +72,9 @@ export interface SpaceTypeDefinition {
   
   /** Elements that should NOT appear */
   excludeElements: string[];
+  
+  /** How to compose image layers (background/midground/foreground) */
+  imageLayerGuidance?: ImageLayerGuidance;
 }
 
 /**

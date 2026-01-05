@@ -28,5 +28,10 @@ OPEN-AIR BUILDING SPACE:
     '[CRITICAL: OPEN-SKY - No solid roof/ceiling. The sky is directly visible above. May have partial cover (pergola, awning) but sky shows through.]'
   ],
   typicalMaterials: ['architectural railings', 'outdoor flooring', 'weather-resistant materials'],
-  excludeElements: ['solid ceiling', 'fully enclosed walls']
+  excludeElements: ['solid ceiling', 'fully enclosed walls'],
+  imageLayerGuidance: {
+    backgroundPriority: 'exterior-dominant',
+    backgroundDescription: 'Open sky, surrounding cityscape/landscape, horizon, and environmental context dominate the background. The structure merely frames this expansive view.',
+    windowTreatment: 'No windows - this is an open-air space. Railings, pillars, or architectural elements frame views of the surrounding environment.'
+  }
 };
