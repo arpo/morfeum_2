@@ -271,15 +271,55 @@ The actual file used by `/NEW_WORLD` was `parsePromptToHierarchy.ts` (not `hiera
 
 ---
 
+## 2026-01-05 (Later) - Interior/Exterior Transition Improvements
+
+### Exterior→Interior Image Generation Fix - COMPLETED
+
+Fixed critical issue where GO_INSIDE transitions produced incorrect interior images (desert colors instead of metallic tower interior, abstract ghost descriptions instead of physical decay).
+
+#### Three Systems Implemented
+
+**1. Image Layer Guidance** - Controls background composition
+- Added `imageLayerGuidance` to all space types in `spaceTypeRegistry/`
+- `interior-dominant`: Interior walls fill background, windows show glimpses
+- `exterior-dominant`: Sky/surroundings dominate (terraces, boat decks)
+- `balanced`: Both visible (car cabin with windshield)
+
+**2. DNA Schema Integration** - Proper field guidance
+- Integrated `DNA_SCENE_FIELDS` and `DNA_CASCADING_FIELDS` into templates
+- LLM now gets precise format: "2-4 sentences: forms, layout, scale, features"
+- Prevents vague descriptions like "visual description"
+
+**3. Gothic/Horror Special Rules** - Physical decay descriptions
+- Added genre-specific rules preventing abstract "ghost poetry"
+- ✅ "crumbling plaster walls, rotting wood paneling, dusty marble staircase"
+- ❌ "phantom outline", "oppressive emptiness", "spectral imprint"
+
+#### Files Modified
+- `generation/shared/spaceTypeRegistry/types.ts` - Added imageLayerGuidance interface
+- `generation/shared/spaceTypeRegistry/building/*.ts` - Added layer guidance
+- `generation/shared/spaceTypeRegistry/vehicle/*.ts` - Added layer guidance
+- `generation/shared/imagePromptGeneration.ts` - Integrated layer guidance
+- `generation/prompts/locations/nodeDNAGeneration.ts` - Schema integration + Gothic rules
+- `generation/prompts/shared/dnaSchema.ts` - (Already existed, now properly used)
+
+#### Documentation Created
+- `docs/adding-transition-special-cases.md` - How to add new transition rules
+
+#### Results
+- Oracle's Spire interior: ✅ Metallic walls in background, desert glimpse through windows
+- Blackwood Manor interior: ✅ Physical decay descriptions, no abstract ghost terms
+
+---
+
 ## Current Focus
 
 - ✅ **COMPLETED**: Gemini Explicit Caching (90% token cost reduction)
 - ✅ **COMPLETED**: Extended caching to Navigation pipeline (14% faster GOTO)
-- ✅ **COMPLETED**: Fixed navigation cache size (1,344 → 2,446 tokens)
 - ✅ **COMPLETED**: Multi-view circular navigation
 - ✅ **COMPLETED**: View counter in Entity Explorer tree
-- ✅ **COMPLETED**: SeedVR Image Upscale integration with UI button
-- ✅ **COMPLETED**: Fixed SeedVR Image Upscale database update bug
+- ✅ **COMPLETED**: SeedVR Image Upscale integration
+- ✅ **COMPLETED**: Interior/Exterior transition system with special case support
 - ⏳ **PENDING**: Test character spawn caching
 
 ## Files Modified (Jan 1 - All Caching Work)

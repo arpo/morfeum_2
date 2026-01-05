@@ -1,6 +1,38 @@
 # Progress
 
-## 2026-01-05 - Bug Fixes
+## 2026-01-05 - Interior/Exterior Transition System + Bug Fixes
+
+- [x] **Interior/Exterior Transition Improvements - COMPLETED**
+  - **Problem**: GO_INSIDE transitions produced wrong images (desert colors in metallic tower, abstract "ghost poetry" in Gothic manor)
+  - **Root Cause**: Image composition system put exterior as entire background instead of interior-dominant
+  - **Solution**: Three-part system for transition control
+  
+  **1. Image Layer Guidance System**
+  - Added `imageLayerGuidance` field to `SpaceTypeDefinition`
+  - Three priorities: `interior-dominant`, `exterior-dominant`, `balanced`
+  - Applied to all space types in `spaceTypeRegistry/`
+  
+  **2. DNA Schema Integration**
+  - Integrated `DNA_SCENE_FIELDS` descriptions into generation templates
+  - LLM gets precise format: "2-4 sentences: forms, layout, scale"
+  - Prevents vague outputs like "visual description"
+  
+  **3. Gothic/Horror Special Rules**
+  - Added genre-specific concrete description rules
+  - Prevents abstract terms: "phantom outline", "oppressive emptiness"
+  - Requires physical decay: "crumbling plaster", "rotting wood"
+  
+  **Files Modified**:
+  - `generation/shared/spaceTypeRegistry/types.ts`
+  - `generation/shared/spaceTypeRegistry/building/*.ts` (all)
+  - `generation/shared/spaceTypeRegistry/vehicle/*.ts` (all)
+  - `generation/shared/imagePromptGeneration.ts`
+  - `generation/prompts/locations/nodeDNAGeneration.ts`
+  
+  **Documentation Created**:
+  - `docs/adding-transition-special-cases.md`
+  
+  **Results**: Oracle's Spire ✅ metallic interior, Blackwood Manor ✅ physical decay
 
 - [x] **SeedVR Image Upscale Database Update Fix - COMPLETED**
   - **What**: Fixed critical bug in upscale feature where images weren't being saved to database

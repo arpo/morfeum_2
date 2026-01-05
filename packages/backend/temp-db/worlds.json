@@ -124,81 +124,6 @@
       ],
       "primaryMedia": "media-1767443670513-hnsxfmcni"
     },
-    "niche-1767607945143-nq3i7rpjh": {
-      "id": "niche-1767607945143-nq3i7rpjh",
-      "type": "niche",
-      "name": "The Oracle's Spire",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "The interior is a tall, slender, spiraling chamber that mirrors the Spire's external form. Walls are composed of seamless, highly polished iridescent metallic panels, creating a fluid and unbroken surface. The scale is grand, emphasizing verticality.",
-        "colorsAndLighting": "Dominated by the iridescent shimmer of the walls, reflecting jewel tones of blues, greens, and purples. Ambient light is soft and diffused, glowing from unseen sources, creating a mystical, awe-inspiring atmosphere without harsh shadows.",
-        "atmosphere": "The air inside the Spire is cool, still, and remarkably pure, providing a stark contrast to the external desert environment. A faint, resonant hum can be felt, suggesting the structure is alive or imbued with ancient energy.",
-        "materials": "The primary surfaces are highly polished, iridescent metallic panels, indistinguishable from the exterior cladding. Secondary surfaces are smooth, cool metallic and polished tile flooring. Glass elements are minimal, primarily serving structural or subtle reflective purposes.",
-        "mood": "Mystical and profoundly serene, evoking a sense of ancient wisdom and otherworldly presence. The space inspires contemplation and awe.",
-        "sounds": "faint resonant hum, soft ambient resonance, hushed stillness",
-        "spatialLayout": "A singular, unbroken spiraling chamber that ascends continuously. The layout emphasizes verticality and fluid movement, with no sharp angles or distinct rooms.",
-        "primary_surfaces": "Highly polished, iridescent metallic panels that shift in color",
-        "secondary_surfaces": "Smooth, cool metallic tile flooring",
-        "accent_features": "Fluid, organic spiral form of the entire chamber",
-        "dominant": "Iridescent blues and greens across the interior walls",
-        "secondary": "Cool metallic silver tones in the flooring and subtle structural elements",
-        "accent": "Warm amber light accents emanating from the core, barely perceptible",
-        "ambient": "Soft, diffused mystical light",
-        "genre": "REQUIRED",
-        "architectural_tone": "Organic futuristic",
-        "cultural_tone": "Sacred observatory or oracle site",
-        "palette_bias": "Iridescent jewel tones",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "primaryMedia": "media-1767607945141-aua9pfu45",
-      "description": "The interior of The Oracle's Spire is a grand, vertically oriented chamber with organic forms and a high domed ceiling, offering panoramic views through large, irregular glass panels. Gleaming metallic surfaces and a mystical, ethereal atmosphere define this futuristic space.",
-      "structure": {
-        "form": "organic",
-        "roofType": "domed",
-        "scale": "large",
-        "orientation": "vertical",
-        "openings": "large-glass",
-        "openingShape": "irregular",
-        "functionalType": "religious",
-        "elevation": "elevated",
-        "spatialLayout": "A grand, central, multi-level chamber characterized by soaring verticality and expansive views through its transparent, organic-shaped walls, culminating in a high domed ceiling.",
-        "requiredElements": []
-      },
-      "navigableElements": [
-        {
-          "type": "passage",
-          "position": "at the base of the chamber",
-          "description": "leading to lower spire levels"
-        },
-        {
-          "type": "stairs",
-          "position": "spiraling upwards",
-          "description": "to an observation platform"
-        }
-      ],
-      "dominantElements": [
-        {
-          "name": "Oracle Chamber Pod",
-          "shape": "spherical",
-          "orientation": "centered(dome)",
-          "scale": "medium",
-          "style": "futuristic",
-          "surfaces": "glass",
-          "openings": "minimal",
-          "interior_materials": "metallic|fabric|glass",
-          "internal_atmosphere": "mystical"
-        }
-      ],
-      "uniqueIdentifiers": [
-        "Gleaming metallic surfaces",
-        "Panoramic glass views",
-        "Ethereal glow",
-        "Arcane futuristic symbols"
-      ],
-      "searchDesc": "Iridescent interior of the Oracle's Spire, a sacred observatory.",
-      "slug": "null-of-the-oracle-s-spire"
-    },
     "loc-1767608028001-jem8h272q": {
       "id": "loc-1767608028001-jem8h272q",
       "type": "host",
@@ -298,96 +223,159 @@
       ],
       "primaryMedia": "media-1767608053283-zjod42f4n"
     },
-    "niche-1767608089847-yk8exmo92": {
-      "id": "niche-1767608089847-yk8exmo92",
+    "niche-1767608528231-xe4zbf27k": {
+      "id": "niche-1767608528231-xe4zbf27k",
       "type": "niche",
       "name": "Blackwood Manor",
       "spaceType": "interior",
       "dna": {
-        "looks": "This space manifests as a vast, intangible void within the heart of Blackwood Manor. It is a silhouette of what once was, a negative impression where grandeur and despair intertwine. The scale feels immense, yet impossibly empty, as if all physical substance has been leached away.",
-        "colorsAndLighting": "Desaturated earth tones bleed into a perpetual twilight. Faint, spectral light occasionally illuminates motes of dust dancing in unseen currents, casting long, oppressive shadows that are more sensed than seen. The dominant color is a pervasive, oppressive gloom.",
-        "atmosphere": "The air is heavy with the scent of damp earth and forgotten memories. A palpable sense of age and neglect creates an atmosphere of profound melancholy and haunting stillness. Phantom chills drift through the space, carrying whispers of the past.",
-        "materials": "The primary 'material' is an oppressive emptiness, rendered tangible by the lingering essence of crumbling stone and rotting wood. Dust motes, spectral light, and the imprint of decay are the only physical manifestations present.",
-        "mood": "A deep sense of melancholy and haunting presence pervades this space, evoking feelings of unease and forgotten secrets.",
-        "sounds": "Whispers, echoes, phantom footsteps, rustling, distant sighs",
-        "spatialLayout": "An immense, hollowed-out chamber that feels both vast and claustrophobic. Its shape is defined by the phantom outline of former architecture, creating a sense of depth that is both alluring and terrifying.",
-        "primary_surfaces": "phantom stone walls",
-        "secondary_surfaces": "ghostly wood trim",
-        "accent_features": "spectral light motes, shadowy doorways",
-        "dominant": "dark grey gloom",
-        "secondary": "mossy green shadows",
-        "accent": "black shadow imprints",
-        "ambient": "Dim, twilight",
+        "looks": "The space presents as an unformed architectural void, hinting at the grand scale and irregular silhouette of Blackwood Manor. Arched outlines and shadowed contours suggest windows and passageways yet to solidify.",
+        "colorsAndLighting": "Dominant colors are muted earth tones, primarily deep grays and mossy greens, blending into pervasive, oppressive shadows. Light is scarce and diffuse, as if perpetually filtered through grimy, unseen glass.",
+        "atmosphere": "The air is thick with the imagined scent of damp earth and decay. A palpable sense of age and neglect permeates the unformed space, creating an atmosphere of foreboding stillness and unease.",
+        "materials": "The primary perceived material is rough, weathered stone, aged and crumbling, interspersed with suggestions of dark, rotting wood. Textures are hinted at rather than fully formed, emphasizing the nascent nature of the space.",
+        "mood": "A deep sense of melancholy and a haunting presence pervades the unformed manor, evoking feelings of unease and forgotten secrets.",
+        "sounds": "Faint creaks, distant whispers, rustling of unseen decay",
+        "spatialLayout": "The spatial layout is suggestive of a massive, irregularly shaped Victorian manor, with implied depth and sprawling, shadowed expanses. The form is yet to be fully defined.",
+        "primary_surfaces": "Unformed, crumbling stone surfaces, suggestive of decay.",
+        "secondary_surfaces": "Hinted-at rotting wood and grimy glass textures.",
+        "accent_features": "Shadowed, undefined arched openings and the spectral outline of skeletal branches.",
+        "dominant": "Dark grey stone hues, undefined.",
+        "secondary": "Mossy green tones, suggestive.",
+        "accent": "Black shadow masses, pervasive.",
+        "ambient": "Dim, twilight.",
         "genre": "Gothic",
-        "architectural_tone": "Decaying Victorian Gothic",
-        "cultural_tone": "Ruined aristocratic estate",
-        "palette_bias": "Desaturated earth tones",
-        "flora_base": "Overgrown vines and weeds",
+        "architectural_tone": "null",
+        "cultural_tone": "null",
+        "palette_bias": "null",
+        "flora_base": "null",
         "fauna_base": "None"
       },
-      "primaryMedia": "media-1767608089845-jixvpt1sq",
-      "description": "The grand, dimly lit interior of Blackwood Manor, characterized by its ornate Victorian Gothic architecture, rich wood paneling, and sprawling, labyrinthine layout suggesting a long and mysterious history.",
+      "primaryMedia": "media-1767608528229-2mccgkjhw",
+      "description": "You step into the vast, dimly lit interior of Blackwood Manor, where oppressive shadows cling to ornate gothic arches and dust motes dance in the faint light filtering through tall, arched windows. The air is heavy with the scent of aged wood and forgotten secrets, as faded Victorian grandeur surrounds you.",
       "structure": {
-        "form": "irregular",
-        "roofType": "pitched",
+        "form": "gothic",
+        "roofType": "vaulted",
         "scale": "massive",
         "orientation": "sprawling",
         "openings": "arched-windows",
         "openingShape": "arched",
         "functionalType": "residential",
         "elevation": "ground-level",
-        "spatialLayout": "A labyrinthine layout of grand, dimly lit halls, numerous parlors, libraries, and winding corridors, characteristic of a sprawling Victorian estate with a sense of faded grandeur.",
+        "spatialLayout": "A labyrinthine arrangement of grand halls, winding corridors, and numerous rooms across multiple floors, characterized by a sense of faded opulence and sprawling complexity.",
         "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "dust-covered velvet armchairs",
+          "rococo-style grandfather clock",
+          "crumbling tapestry depicting a hunting scene",
+          "heavy damask curtains partially drawn",
+          "carved wooden side table with an oil lamp and a stack of aged books",
+          "ebony writing desk with quill and inkwell",
+          "ornate candelabra with partially burned candles"
+        ],
+        "suggested": [],
+        "placementNotes": []
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "main entrance",
-          "description": "The main oak entrance door leading outside"
+          "position": "front wall",
+          "description": "door grand oak double s"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object ornate iron-railed staircase"
+        },
+        {
+          "type": "archway",
+          "position": "left wall",
+          "description": "archway shadowed"
+        },
+        {
+          "type": "window",
+          "position": "center",
+          "description": "window tall arched  rear wall"
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "door dark mahogany"
+        }
+      ],
+      "dominantElements": [],
+      "uniqueIdentifiers": [
+        "ornate gothic architecture",
+        "fading Victorian grandeur",
+        "pervasive sense of antiquity",
+        "shadowy corners",
+        "creaking floorboards"
+      ],
+      "searchDesc": "The undefined core of Blackwood Manor, radiating gothic decay and melancholy.",
+      "slug": "null-of-blackwood-manor"
+    },
+    "niche-1767608832277-inxlb85gx": {
+      "id": "niche-1767608832277-inxlb85gx",
+      "type": "niche",
+      "name": "A Big Hall",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This is a monumental hall with a vast, domed ceiling that stretches upwards, lost in ethereal light. The walls are a continuous expanse of large, interlocking iridescent metallic panels, curving gently inwards.",
+        "colorsAndLighting": "The iridescent panels reflect and refract light in a mesmerizing dance of jewel tones, primarily blues, greens, and purples. A soft, diffused light emanates from an unseen source high above, bathing the space in a mystical glow.",
+        "atmosphere": "The air within this grand hall is cool, still, and carries a faint, resonant hum, suggesting the living nature of the Spire. A profound sense of calm and ancient wisdom pervades the atmosphere.",
+        "materials": "The primary surfaces are exceptionally smooth, highly polished iridescent metallic panels that shift color with the slightest change in perspective. The floor is a seamless expanse of cool, dark, polished tile.",
+        "mood": "Mystical, awe-inspiring, and serene, evoking a sense of ancient wisdom and otherworldly presence.",
+        "sounds": "Faint resonant hum, hushed silence.",
+        "spatialLayout": "A massive, cylindrical chamber with an immense volume defined by its extreme height and sweeping, unbroken walls, creating a feeling of boundless, sacred space.",
+        "primary_surfaces": "Highly polished, shifting iridescent metallic panels",
+        "secondary_surfaces": "Seamless dark polished tile floor",
+        "accent_features": "The gentle, organic inward curve of the walls, the subtle spiral of the ascending staircase",
+        "dominant": "Iridescent blues and greens across the vast wall panels",
+        "secondary": "Cool metallic silver tones in the floor and structural elements",
+        "accent": "Warm amber light accents subtly highlighting structural lines",
+        "ambient": "Soft, diffused mystical light",
+        "genre": "REQUIRED",
+        "architectural_tone": "Organic futuristic",
+        "cultural_tone": "Sacred observatory or oracle site",
+        "palette_bias": "Iridescent jewel tones",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767608832276-rbejd47vz",
+      "description": "a big hall with high ceilings",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "functionalType": "residential",
+        "spatialLayout": "A medium interior space.",
+        "requiredElements": [
+          "high ceilings"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center of far wall",
+          "description": "A shimmering, iridescent archway leading deeper into the Spire."
         },
         {
           "type": "stairs",
-          "position": "central hall",
-          "description": "A grand marble staircase ascending to upper floors"
-        },
-        {
-          "type": "passage",
-          "position": "various",
-          "description": "Archways and corridors leading to other parts of the manor"
+          "position": "along the left wall",
+          "description": "A wide, spiraling staircase of polished metal ascending into the upper reaches."
         }
       ],
       "dominantElements": [
-        {
-          "name": "The Crypt",
-          "shape": "vaulted",
-          "orientation": "compact",
-          "scale": "medium",
-          "style": "gothic",
-          "surfaces": "stone",
-          "openings": "passage",
-          "interior_materials": "stone|earth|stone",
-          "internal_atmosphere": "dim"
-        },
-        {
-          "name": "The Grand Conservatory",
-          "shape": "domed",
-          "orientation": "centered",
-          "scale": "large",
-          "style": "victorian",
-          "surfaces": "glass",
-          "openings": "large-glass",
-          "interior_materials": "iron|tile|glass",
-          "internal_atmosphere": "bright"
-        }
+        "A Big Hall"
       ],
       "uniqueIdentifiers": [
-        "ornate gothic Revival architecture",
-        "grand marble staircase",
-        "tapestry-lined halls",
-        "fading aristocratic grandeur"
+        "high ceilings"
       ],
-      "searchDesc": "A melancholic, echoing space within Blackwood Manor, defined by absence and spectral presence.",
-      "slug": "null-of-blackwood-manor"
+      "searchDesc": "Vast hall with high ceilings, iridescent walls, and mystical light.",
+      "slug": "null-of-the-oracle-s-spire"
     }
   },
   "views": {},
@@ -405,7 +393,7 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1767607945143-nq3i7rpjh",
+                  "id": "niche-1767608832277-inxlb85gx",
                   "type": "niche",
                   "children": []
                 }
@@ -428,7 +416,7 @@
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1767608089847-yk8exmo92",
+                  "id": "niche-1767608528231-xe4zbf27k",
                   "type": "niche",
                   "children": []
                 }
