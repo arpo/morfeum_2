@@ -4,7 +4,6 @@
  * Each bundle must be ≥2,048 tokens for caching to be effective
  */
 
-import { HIERARCHY_CATEGORIZATION_STATIC } from '../locations/hierarchyCategorization';
 import { DNA_SCENE_FIELDS, DNA_CASCADING_FIELDS, DNA_GUIDELINES } from '../shared/dnaSchema';
 import { DOMINANT_ELEMENTS_RULES, NAVIGABLE_ELEMENTS_RULES } from '../shared/elementRules';
 import { 
@@ -38,10 +37,6 @@ export const CACHE_WORLD_CREATION = `
 === PARSE PROMPT TO HIERARCHY ===
 
 ${PARSE_HIERARCHY_STATIC}
-
-=== HIERARCHY CATEGORIZATION (LEGACY) ===
-
-${HIERARCHY_CATEGORIZATION_STATIC}
 
 === DNA SCHEMA ===
 

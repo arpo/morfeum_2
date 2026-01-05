@@ -68,6 +68,13 @@ Pass-through regions are for GENERIC/UNDEFINED places where no specific known lo
 - DO NOT create a niche when describing what's visible through windows
 - ONLY create niche when user explicitly wants to BE INSIDE the space
 
+## ⚠️ ATMOSPHERE ≠ INTERIOR (CRITICAL):
+- "haunted house", "spooky mansion", "creepy cabin" → EXTERIOR (haunting atmosphere visible from outside)
+- "cozy cottage", "warm pub", "inviting cafe" → EXTERIOR (warmth/coziness visible from outside)
+- "abandoned factory", "derelict warehouse" → EXTERIOR (decay visible from outside)
+- Interior-feeling adjectives (cozy, warm, dark, eerie) describe the BUILDING, not a request to go inside
+- The user must use explicit interior words: "inside", "interior", "within", "enter", "in the room"
+
 ## Depth Detection:
 - City/world only → stop at HOST (depth 1)
 - District/area EXPLICITLY mentioned → stop at REGION (depth 2)
@@ -98,6 +105,12 @@ Output: { "host": { "name": "Victorian Era", "description": "The Victorian perio
 
 Input: "A cozy cottage with a roaring fireplace"
 Output: { "host": { "name": "Countryside", "description": "Rolling hills and pastoral landscapes" }, "region": { "name": "Region", "description": "" }, "regionIsPassThrough": true, "location": { "name": "Rose Cottage", "description": "A cozy stone cottage with climbing roses and smoke curling from the chimney. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
+
+Input: "A haunted house"
+Output: { "host": { "name": "Gothic Countryside", "description": "Mist-shrouded hills and ancient forests" }, "region": { "name": "Region", "description": "" }, "regionIsPassThrough": true, "location": { "name": "Ravenmoor Manor", "description": "A decrepit Victorian mansion with broken windows, overgrown grounds, and an eerie presence. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
+
+Input: "A spooky abandoned asylum"
+Output: { "host": { "name": "Industrial Wasteland", "description": "Decaying urban sprawl with forgotten institutions" }, "region": { "name": "Region", "description": "" }, "regionIsPassThrough": true, "location": { "name": "Blackwood Asylum", "description": "An imposing abandoned asylum with shattered windows and overgrown grounds. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }
 
 Input: "An alien building on an alien planet"
 Output: { "host": { "name": "Xyloth Prime", "description": "A distant alien world with bizarre geometry and otherworldly physics" }, "region": { "name": "Region", "description": "" }, "regionIsPassThrough": true, "location": { "name": "The Resonance Spire", "description": "A towering alien structure with non-Euclidean architecture. EXTERIOR VIEW." }, "depth": 3, "isInterior": false }

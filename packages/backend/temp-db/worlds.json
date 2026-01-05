@@ -376,6 +376,371 @@
       ],
       "searchDesc": "Vast hall with high ceilings, iridescent walls, and mystical light.",
       "slug": "null-of-the-oracle-s-spire"
+    },
+    "loc-1767609586139-tbzqhupea": {
+      "id": "loc-1767609586139-tbzqhupea",
+      "type": "host",
+      "name": "Neo-Veridia",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The cityscape is characterized by immense, monolithic skyscrapers of polished chrome and dark, reinforced glass.  Verticality is extreme, with sky-bridges and elevated transit systems creating a multi-layered urban fabric.  The sheer scale is overwhelming, with structures disappearing into the smog-choked atmosphere above.",
+        "colorsAndLighting": "A vibrant, electric palette dominates, with dominant neon blues, purples, and hot pinks clashing against the dark metallic surfaces.  Light sources are primarily artificial: harsh, flickering neon signs, the cold glow of digital displays, and the distant, diffused light of searchlights.  Deep, impenetrable shadows are cast by the colossal structures, creating stark contrasts.",
+        "atmosphere": "The air is thick with the hum of unseen machinery, the distant roar of grav-vehicles, and the faint scent of ozone and recycled air.  A perpetual artificial twilight reigns, with temperatures regulated to a constant, slightly humid chill.  Occasional data streams manifest as shimmering visual glitches in the air.",
+        "materials": "Polished chrome, reinforced glass, dark composite alloys, and synthetic polymers are the prevalent materials.  Textures range from slick and reflective to pitted and corroded, with the constant presence of wear and tear from heavy industrial use and exposure to pollutants.",
+        "mood": "A sense of overwhelming, awe-inspiring technological advancement coupled with an undercurrent of gritty, dystopian unease.",
+        "sounds": "Hum of machinery, distant traffic, holographic ads, ventilation systems, synthesized announcements.",
+        "primary_surfaces": "Reflective chrome skyscrapers, dark composite plating, reinforced glass facades.",
+        "secondary_surfaces": "Polymer walkways, holographic projection surfaces, ventilation grates.",
+        "accent_features": "Massive holographic advertisements, neon signage, elevated transit tubes, external data conduits.",
+        "dominant": "Deep blue + skyscraper exteriors",
+        "secondary": "Metallic silver + sky-bridges",
+        "accent": "Neon pink + signage",
+        "ambient": "Artificial twilight",
+        "genre": "cyberpunk",
+        "architectural_tone": "Brutalist megastructure meets high-tech corporate",
+        "cultural_tone": "Corporate elites, transient populace, AI systems",
+        "palette_bias": "Blues, purples, silvers, blacks, neon accents",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A sprawling urban expanse defined by towering, neon-drenched skyscrapers and advanced technology, where corporate power reigns.",
+      "searchDesc": "Cyberpunk megacity with neon-lit skyscrapers, vast landscapes, and corporate power.",
+      "slug": "neo-veridia",
+      "structure": {
+        "spatialLayout": "The city is a complex, three-dimensional labyrinth, with distinct vertical zones.  The lower levels are a dense, often grimy, network of service tunnels and old infrastructure, while the upper echelons host gleaming corporate headquarters."
+      },
+      "primaryMedia": "media-1767609618479-a6vr1dfrd"
+    },
+    "niche-1767609666203-4vq0sykfm": {
+      "id": "niche-1767609666203-4vq0sykfm",
+      "type": "niche",
+      "name": "Glass and Chrome Tower",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An impossibly tall, slender tower of interlocking geometric modules. The exterior is dominated by vast, seamless panes of darkened, reinforced glass and polished chrome cladding. Integrated into the facade are enormous, dynamic holographic advertisement panels and faint, pulsing data conduits.",
+        "colorsAndLighting": "The structure is a canvas for the city's electric palette, with deep blues and purples dominating the glass surfaces and reflecting the neon signage. Stark, white internal lighting contrasts with the ambient twilight, casting long, sharp shadows.",
+        "atmosphere": "The air is a constant, cool temperature, carrying the faint hum of unseen internal systems. A perpetual, artificial twilight pervades, broken only by the aggressive glare of neon and holographic displays.",
+        "materials": "The tower is constructed from polished chrome, dark composite alloys, and reinforced glass. Surfaces are slick and reflective, often showing the grime and minor imperfections of heavy industrial exposure, contrasting with pristine, high-tech interiors.",
+        "mood": "A sense of overwhelming, awe-inspiring technological advancement coupled with an undercurrent of corporate coldness and indifferent scale.",
+        "sounds": "Distant hum, faint data chimes, occasional grav-vehicle whoosh, muffled corporate announcements.",
+        "spatialLayout": "A singular, immensely tall vertical structure with a central core. Internal spaces are designed with stark, clean lines, emphasizing the vast height and the transparency of the building's facade.",
+        "primary_surfaces": "Polished chrome cladding, dark reinforced glass facades.",
+        "secondary_surfaces": "Composite alloy structural elements, illuminated polymer panels.",
+        "accent_features": "Massive holographic advertisements, pulsing external data conduits, elevated transit tube connectors.",
+        "dominant": "Deep blue reflecting city lights on glass surfaces",
+        "secondary": "Metallic silver chrome cladding",
+        "accent": "Neon pink and electric blue from signage and data flows",
+        "ambient": "Artificial twilight",
+        "genre": "cyberpunk",
+        "architectural_tone": "Brutalist megastructure meets high-tech corporate",
+        "cultural_tone": "Corporate elites, transient populace, AI systems",
+        "palette_bias": "Blues, purples, silvers, blacks, neon accents",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767609666202-yjwcekpnr",
+      "description": "A colossal, futuristic tower piercing the sky, its entire surface a mosaic of reflective glass and polished chrome, shimmering with an austere, high-tech elegance under the open sky.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "vertical",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "commercial",
+        "elevation": "elevated",
+        "spatialLayout": "A sleek, towering structure dominating the skyline, clad in reflective glass and gleaming chrome panels, projecting an aura of advanced technology and corporate power.",
+        "requiredElements": null
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "ground-level at base",
+          "description": "leads into the main lobby"
+        }
+      ],
+      "dominantElements": [
+        "Glass and Chrome Tower: shape=rectangular, orientation=vertical, scale=towering, style=futuristic, surfaces=glass|metallic-polished, openings=large-glass, interior_materials=metallic|concrete|glass, internal_atmosphere=sterile"
+      ],
+      "uniqueIdentifiers": [
+        "reflective glass facade",
+        "gleaming chrome panels",
+        "imposing verticality",
+        "sleek modern design"
+      ],
+      "searchDesc": "A towering glass and chrome skyscraper in a cyberpunk city, bathed in neon light.",
+      "slug": "neo-veridia"
+    },
+    "loc-1767609671542-fvel493sj": {
+      "id": "loc-1767609671542-fvel493sj",
+      "type": "location",
+      "name": "Glass and Chrome Tower",
+      "spaceType": "structure",
+      "dna": {},
+      "description": "Structure: Glass and Chrome Tower",
+      "searchDesc": "Glass and Chrome Tower",
+      "slug": "glass-and-chrome-tower",
+      "isPassThrough": true
+    },
+    "niche-1767609693437-jqnjhqy7z": {
+      "id": "niche-1767609693437-jqnjhqy7z",
+      "type": "niche",
+      "name": "Glass and Chrome Tower",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This is an impossibly tall, rectangular chamber within a towering structure. The layout is clean and geometric, emphasizing verticality and vastness. Seamless panes of darkened glass form the primary walls, reflecting the polished metallic surfaces of the floor and ceiling.",
+        "colorsAndLighting": "The space is dominated by cool, stark white internal lighting that casts sharp, defined shadows. The reflective surfaces of polished chrome and glass amplify the cool tones, with faint neon accents from integrated displays.",
+        "atmosphere": "The air is unnaturally still and cool, maintained at a constant, sterile temperature. There is a low, pervasive hum of unseen internal systems. A perpetual, artificial twilight permeates the interior, broken only by the crisp illumination.",
+        "materials": "The primary materials are highly polished chrome and reinforced glass, creating slick, reflective surfaces. Sections of smooth, dark concrete are visible in structural elements and floor transitions, maintaining a sense of industrial solidity within the high-tech shell.",
+        "mood": "A feeling of extreme efficiency, cold precision, and overwhelming scale. The sterile environment evokes a sense of detachment and corporate control.",
+        "sounds": "low hum, distant echoes, soft electronic tones",
+        "spatialLayout": "A long, rectangular hall that stretches upwards, creating a sense of immense height and depth. The sharp angles and reflective surfaces enhance the feeling of a precisely engineered space.",
+        "primary_surfaces": "Polished chrome floor, reinforced glass walls",
+        "secondary_surfaces": "Smooth concrete structural elements",
+        "accent_features": "Integrated holographic information displays, recessed strip lighting",
+        "dominant": "Metallic silver throughout",
+        "secondary": "Deep blue and purple from glass reflections",
+        "accent": "Neon pink and electric blue from displays",
+        "ambient": "Artificial twilight",
+        "genre": "cyberpunk",
+        "architectural_tone": "Brutalist megastructure meets high-tech corporate",
+        "cultural_tone": "Corporate elites, transient populace, AI systems",
+        "palette_bias": "Blues, purples, silvers, blacks, neon accents",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767609693436-ftd9i7a9n",
+      "description": "You are inside the dazzling Glass and Chrome Tower. The vast interior is a fusion of polished metal, gleaming glass, and clean lines, creating a bright and expansive atmosphere. Sunlight streams through immense windows, offering panoramic views of the city below. The space hums with a controlled, futuristic energy, reflecting its advanced design.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "vertical",
+        "openings": "large-glass|open-passages",
+        "openingShape": "rectangular",
+        "functionalType": "commercial",
+        "elevation": "ground-level",
+        "spatialLayout": "A vast, multi-story lobby with soaring ceilings, expansive glass walls, and a central open space designed for visitor flow and interaction.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "at ground level",
+          "description": "leading to the exterior street level"
+        },
+        {
+          "type": "passage",
+          "position": "along the back wall",
+          "description": "leading to security checkpoints and further into the tower's core"
+        },
+        {
+          "type": "stairs",
+          "position": "to the side",
+          "description": "ascending to upper levels or mezzanine floors"
+        }
+      ],
+      "dominantElements": [
+        "Security Booth: shape=rectangular, orientation=compact, scale=small, style=futuristic, surfaces=glass|metallic-polished, openings=minimal, interior_materials=metallic|synthetic|glass, internal_atmosphere=sterile",
+        "Information Kiosk: shape=modular, orientation=compact, scale=small, style=futuristic, surfaces=metallic-polished|glass, openings=minimal, interior_materials=metallic|synthetic|glass, internal_atmosphere=sterile",
+        "Conference Pod: shape=cylindrical, orientation=compact, scale=small, style=futuristic, surfaces=glass|metallic-polished, openings=minimal, interior_materials=metallic|fabric|glass, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "Panoramic city views through vast windows",
+        "Sleek metallic accents and polished surfaces",
+        "Integrated high-tech displays",
+        "Open, multi-level design"
+      ],
+      "searchDesc": "Sterile interior of a towering futuristic glass and chrome building.",
+      "slug": "interior-of-glass-and-chrome-tower-shape-rectangular-orientation-vertical-scale-towering-style-futuristic-surfaces-glass-metallic-polished-openings-large-glass-interior-materials-metallic-concrete-glass-internal-atmosphere-sterile"
+    },
+    "loc-1767609807438-cas3yj4rx": {
+      "id": "loc-1767609807438-cas3yj4rx",
+      "type": "host",
+      "name": "The Verdant Canopy",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast, interconnected forest canopy, immense tree structures, flowing organic shapes, natural light filtering through leaves, distant mountain ranges or celestial bodies visible above.",
+        "colorsAndLighting": "Dominant greens and browns, dappled sunlight, soft natural illumination, occasional bursts of vibrant floral colors.",
+        "atmosphere": "Serene, ancient, magical, alive, boundless, connected.",
+        "materials": "Living wood, dense foliage, interwoven vines, moss, bark.",
+        "mood": "Peaceful, wondrous, sanctuary, deeply connected to nature.",
+        "sounds": "Rustling leaves, gentle wind, distant birdsong, creaking ancient wood, faint water trickles.",
+        "primary_surfaces": "Living wood bark, thick moss carpets, dense leaf canopies.",
+        "secondary_surfaces": "Interwoven vines, smooth polished wood, hanging roots.",
+        "accent_features": "Bioluminescent flora, flowering branches, naturally formed archways.",
+        "dominant": "Massive ancient trees",
+        "secondary": "Living wood structures, dense foliage",
+        "accent": "Vibrant flowers, bioluminescent elements",
+        "ambient": "Dappled sunlight, gentle breezes, forest sounds",
+        "genre": "Fantasy",
+        "architectural_tone": "Organic",
+        "cultural_tone": "Harmonious",
+        "palette_bias": "Earthy",
+        "flora_base": "Giant Trees",
+        "fauna_base": "Arboreal"
+      },
+      "description": "A breathtaking world where colossal, ancient trees form the very foundation of civilization. Structures are not built, but grown, seamlessly integrated into the living wood and verdant foliage.",
+      "searchDesc": "Living treehouse world with organic architecture, ancient trees, and natural integration.",
+      "slug": "the-verdant-canopy",
+      "structure": {
+        "spatialLayout": "Verticality and interconnectedness, flowing organic pathways, layered canopy levels."
+      }
+    },
+    "5ed5f87d-7112-4c9e-88ef-b19d044e8d0d": {
+      "id": "5ed5f87d-7112-4c9e-88ef-b19d044e8d0d",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "0c8c6c78-1127-4ae3-b9c4-c363e0ed28de": {
+      "id": "0c8c6c78-1127-4ae3-b9c4-c363e0ed28de",
+      "type": "location",
+      "name": "The Sun-Dappled Haven",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The dwelling is a sprawling, organic structure integrated directly into the massive branches of an ancient tree. Its layout is asymmetrical and flowing, conforming to the natural contours of the wood, with varying tiers and platforms.",
+        "colorsAndLighting": "The interior is bathed in a dappled, golden light filtering through the leaves and organic walls. Verdant greens of moss and vines dominate, with warm woody browns of the living structure.",
+        "atmosphere": "The air is fresh and carries the scent of damp earth and living wood. A gentle breeze rustles through the leaves overhead, creating a sense of calm and seclusion. The temperature is mild and pleasant.",
+        "materials": "The primary materials are living wood, thick moss, and interwoven vines, giving the surfaces a soft, yielding texture. Some areas may feature polished wood or smooth, worn bark.",
+        "mood": "The mood is serene, peaceful, and deeply connected to nature, evoking a sense of sanctuary and wonder.",
+        "sounds": "Rustling leaves, gentle breezes, distant bird calls, soft creaking of wood.",
+        "primary_surfaces": "Living wood, thick moss",
+        "secondary_surfaces": "Interwoven vines, smooth bark",
+        "accent_features": "Sunlight filtering through canopy, bioluminescent fungi at night",
+        "dominant": "Verdant green and deep wood brown",
+        "secondary": "Dappled gold and earthy tones",
+        "accent": "Subtle pops of fungal glow",
+        "ambient": "Warm, dappled sunlight",
+        "genre": null,
+        "architectural_tone": "Organic living architecture",
+        "cultural_tone": null,
+        "palette_bias": "Earthy greens and browns",
+        "flora_base": "Ancient tree, mosses, vines, epiphytes",
+        "fauna_base": "Birds, squirrels, insects"
+      },
+      "description": "A multi-tiered dwelling nestled high within the colossal branches of an ancient tree, its walls woven from living wood and draped with vibrant mosses. EXTERIOR VIEW.",
+      "searchDesc": "A living treehouse dwelling with organic architecture, mossy walls, and sun-dappled interiors.",
+      "slug": "the-sun-dappled-haven",
+      "structure": {
+        "spatialLayout": "The dwelling occupies multiple levels and areas, interconnected by natural passages and organic structures, creating a sense of depth and exploration within the tree."
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "The main entrance, a wide opening leading into the heart of the treehouse."
+        },
+        {
+          "type": "stairs",
+          "position": "right",
+          "description": "A winding staircase of root and vine leading to upper levels."
+        },
+        {
+          "type": "bridge",
+          "position": "left",
+          "description": "A suspended bridge connecting to another large branch."
+        }
+      ],
+      "dominantElements": [
+        "treehouse: shape=organic, orientation=sprawling, scale=large, style=rustic, surfaces=organic-membrane|wood, openings=open-passages, interior_materials=wood|moss|vines, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "Living wood walls",
+        "Draped mosses and vines",
+        "Sun-dappled interior",
+        "High canopy location",
+        "Integrated branch structures"
+      ],
+      "primaryMedia": "media-1767609826292-1phn901wt"
+    },
+    "niche-1767609918531-2uai306x0": {
+      "id": "niche-1767609918531-2uai306x0",
+      "type": "niche",
+      "name": "The Tree House Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The structure is an organic extension of the ancient tree, with walls and floors seamlessly merging with living wood. Various asymmetrical platforms and alcoves are carved into the massive branches, creating a multi-tiered and flowing living space. Smooth, worn bark sections are integrated into the design, providing natural seating and surfaces.",
+        "colorsAndLighting": "The interior is awash in warm, dappled golden light that filters through the dense canopy and translucent, leaf-veined wall sections. Verdant greens of moss and clinging vines dominate, interspersed with the rich, earthy browns of the living wood structure. At night, soft, ethereal light emanates from clusters of bioluminescent fungi.",
+        "atmosphere": "The air is fresh and carries the subtle, grounding scent of damp earth and living wood. A gentle, natural breeze rustles through the leaves overhead, creating a constant, soothing whisper. The temperature is consistently mild and pleasant, fostering a deep sense of calm and seclusion.",
+        "materials": "The primary materials are living wood, forming the very structure of the dwelling, and thick, velvety moss that carpets many surfaces. Interwoven vines create natural railings and decorative screens. Polished sections of bark and smooth, naturally formed woody textures add tactile variety.",
+        "mood": "The mood is one of profound serenity, peacefulness, and an intimate connection with the natural world, evoking a profound sense of sanctuary and wonder.",
+        "sounds": "Rustling leaves, gentle breeze, distant birdsong, soft creaking wood.",
+        "spatialLayout": "The layout is a fluid, multi-level arrangement of platforms and alcoves that embrace the natural contours of the colossal tree. There are no rigid walls or sharp corners, promoting a sense of continuous, flowing space that feels both enclosed and open to the forest.",
+        "primary_surfaces": "living wood, thick moss",
+        "secondary_surfaces": "interwoven vines, smooth worn bark",
+        "accent_features": "Sunlight filtering through canopy, bioluminescent fungi at night, epiphytic plants",
+        "dominant": "Verdant green and deep wood brown",
+        "secondary": "Dappled gold and earthy tones",
+        "accent": "Subtle pops of fungal glow",
+        "ambient": "Warm, dappled sunlight",
+        "genre": "Fantasy",
+        "architectural_tone": "Organic living architecture",
+        "cultural_tone": "Harmonious",
+        "palette_bias": "Earthy greens and browns",
+        "flora_base": "Ancient tree, mosses, vines, epiphytes",
+        "fauna_base": "Birds, squirrels, insects"
+      },
+      "primaryMedia": "media-1767609918529-bq1pr4ckd",
+      "description": "You step into the rustic, organic interior of the large treehouse. It's a sprawling, multi-level space where living wood and natural elements blend seamlessly, creating a cozy and enchanting dwelling with soft, ambient lighting.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "residential",
+        "elevation": "elevated",
+        "spatialLayout": "A multi-level, interconnected space built around the central tree trunk, with various platforms, nooks, and a living tree integrated into the structure.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "natural wood seating carved from branches",
+          "low woven rug made of dried grasses",
+          "hanging lanterns crafted from gourds",
+          "shelves stocked with smooth river stones and dried flowers"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "ladder",
+          "position": "front wall",
+          "description": "ladder woven rope  entrance"
+        },
+        {
+          "type": "opening",
+          "position": "right wall",
+          "description": "opening circular   with vine overhang"
+        },
+        {
+          "type": "window",
+          "position": "left wall",
+          "description": "window large   overlooking canopy"
+        },
+        {
+          "type": "hatch",
+          "position": "ceiling",
+          "description": "hatch wooden   access"
+        }
+      ],
+      "dominantElements": [],
+      "uniqueIdentifiers": [
+        "integrated living tree trunk",
+        "moss-covered floors",
+        "woven branch walls",
+        "soft glowing lanterns"
+      ],
+      "searchDesc": "Treehouse sanctuary with living wood, moss, and dappled sunlight.",
+      "slug": "null-of-the-sun-dappled-haven"
     }
   },
   "views": {},
@@ -425,10 +790,58 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1767609586139-tbzqhupea",
+      "type": "host",
+      "children": [
+        {
+          "id": "niche-1767609666203-4vq0sykfm",
+          "type": "niche",
+          "children": [
+            {
+              "id": "loc-1767609671542-fvel493sj",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767609693437-jqnjhqy7z",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767609807438-cas3yj4rx",
+      "type": "host",
+      "children": [
+        {
+          "id": "5ed5f87d-7112-4c9e-88ef-b19d044e8d0d",
+          "type": "region",
+          "children": [
+            {
+              "id": "0c8c6c78-1127-4ae3-b9c4-c363e0ed28de",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767609918531-2uai306x0",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "loc-1767443643257-l2e8q5ypg",
-    "loc-1767608028001-jem8h272q"
+    "loc-1767608028001-jem8h272q",
+    "loc-1767609586139-tbzqhupea",
+    "loc-1767609807438-cas3yj4rx"
   ]
 }
