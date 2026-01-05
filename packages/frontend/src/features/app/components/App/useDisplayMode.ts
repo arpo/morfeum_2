@@ -8,6 +8,7 @@ import { useStore } from '@/store';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useLocationsStore } from '@/store/slices/locations';
 import { useDepthMapLogic } from '@/features/app/components/TopButtonRow/useDepthMapLogic';
+import { useImageUpscale } from '@/features/app/components/TopButtonRow/useImageUpscale';
 import { getDepthMapForMedia, clearMediaCache } from '@/services/mediaService';
 import type { DisplayMode } from '@/features/app/components/TopButtonRow/TopButtonRow';
 
@@ -28,6 +29,7 @@ export function useDisplayMode() {
   const isCharacter = activeEntitySession?.entityType === 'character';
   
   const { generateDepthMap, isGenerating: depthMapGenerating } = useDepthMapLogic();
+  const { upscaleImage, isUpscaling } = useImageUpscale();
 
   // Get primary media ID for current entity
   const getPrimaryMediaId = useCallback(() => {
@@ -59,6 +61,27 @@ export function useDisplayMode() {
     localStorage.setItem('displayMode', 'full');
     window.dispatchEvent(new CustomEvent('displayModeChanged', { detail: { mode: 'full' } }));
   }, [activeEntity, getPrimaryMediaId, generateDepthMap]);
+
+  const handleUpscaleImage = useCallback(async () => {
+    console.log('🔘 [Button] Upscale button clicked!', { activeEntity });
+    
+    if (!activeEntity) {
+      console.warn('🔘 [Button] No active entity, aborting upscale');
+      return;
+    }
+    
+    const primaryMediaId = getPrimaryMediaId();
+    if (!primaryMediaId) {
+      console.warn('No primary media found for entity:', activeEntity);
+      return;
+    }
+    
+    const entityType = isCharacter ? 'character' : 'location';
+    await upscaleImage(activeEntity, primaryMediaId, entityType);
+    
+    // Trigger image refresh
+    window.dispatchEvent(new CustomEvent('imageUpscaled'));
+  }, [activeEntity, getPrimaryMediaId, isCharacter, upscaleImage]);
 
   const handleDisplayModeChange = useCallback((mode: DisplayMode) => {
     setDisplayMode(mode);
@@ -110,7 +133,9 @@ export function useDisplayMode() {
     hasDepthMap,
     depthMapGenerating,
     depthMapDisabled,
+    isUpscaling,
     handleGenerateDepthMap,
+    handleUpscaleImage,
     handleDisplayModeChange,
   };
 }

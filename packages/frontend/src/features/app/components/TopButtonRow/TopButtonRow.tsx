@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui';
-import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere, IconExternalLink, IconCamera, IconCheck, IconBookmark } from '@/icons';
+import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere, IconExternalLink, IconCamera, IconCheck, IconBookmark, IconMaximize } from '@/icons';
 import styles from './TopButtonRow.module.css';
 
 export type DisplayMode = '2d' | 'full' | 'hsbs';
@@ -16,6 +16,7 @@ interface TopButtonRowProps {
   onOpenChat: () => void;
   onOpenSavedEntities: () => void;
   onGenerateDepthMap: () => void;
+  onUpscaleImage: () => void;
   onDisplayModeChange: (mode: DisplayMode) => void;
   onSaveTrainingData: () => void;
   isCharacter: boolean;
@@ -23,6 +24,7 @@ interface TopButtonRowProps {
   chatDisabled: boolean;
   depthMapDisabled: boolean;
   depthMapGenerating: boolean;
+  isUpscaling: boolean;
   displayMode: DisplayMode;
   hasDepthMap: boolean;
   trainingSaving: boolean;
@@ -35,6 +37,7 @@ export function TopButtonRow({
   onOpenChat,
   onOpenSavedEntities,
   onGenerateDepthMap,
+  onUpscaleImage,
   onDisplayModeChange,
   onSaveTrainingData,
   isCharacter,
@@ -42,6 +45,7 @@ export function TopButtonRow({
   chatDisabled,
   depthMapDisabled,
   depthMapGenerating,
+  isUpscaling,
   displayMode,
   hasDepthMap,
   trainingSaving,
@@ -107,6 +111,20 @@ export function TopButtonRow({
           )}
         </Button>
       )}
+
+      {/* Upscale image button */}
+      <Button
+        onClick={onUpscaleImage}
+        className={styles.button}
+        disabled={depthMapDisabled || isUpscaling}
+        aria-label="Upscale image (4x)"
+      >
+        {isUpscaling ? (
+          <IconLoader2 size={20} className={styles.spinner} />
+        ) : (
+          <IconMaximize size={20} />
+        )}
+      </Button>
 
       {/* Show display mode button only when depth map exists */}
       {hasDepthMap && (

@@ -1,6 +1,33 @@
 # Progress
 
+## 2026-01-05 - Bug Fixes
+
+- [x] **SeedVR Image Upscale Database Update Fix - COMPLETED**
+  - **What**: Fixed critical bug in upscale feature where images weren't being saved to database
+  - **Bug**: API returns `data.images[0].url` (array) but code looked for `data.image.url` (singular)
+  - **Fix**: Changed property path to `upscaleResult.data?.images?.[0]?.url`
+  - **Files Modified**:
+    - `features/app/components/TopButtonRow/useImageUpscale.ts`
+
 ## 2026-01-03 - Multi-View System
+
+- [x] **SeedVR Image Upscale Button - COMPLETED**
+  - **What**: SeedVR 4x image upscaling with UI button in top button row
+  - **Files Created**:
+    - `services/mzoo/services/imageUpscale.ts` - upscaleImage() function
+    - `routes/mzoo/handlers/upscaleImageHandler.ts` - Route handler
+    - `features/app/components/TopButtonRow/useImageUpscale.ts` - Frontend hook
+  - **Files Modified**:
+    - `services/mzoo/config/endpoints.ts` - IMAGE_UPSCALE endpoint
+    - `services/mzoo/types.ts` - Request/Response interfaces
+    - `services/mzoo/index.ts` - Exports
+    - `routes/mzoo/navigation.ts` - Route registration
+    - `features/app/components/App/useDisplayMode.ts` - Handler
+    - `features/app/components/App/useAppLogic.ts` - Props
+    - `features/app/components/App/App.tsx` - Props
+    - `features/app/components/TopButtonRow/TopButtonRow.tsx` - Button UI
+  - **Duration**: ~8-10 seconds per upscale
+  - **Results**: 4x upscaled image (1080p → 4K)
 
 - [x] **Circular Navigation for Multi-View - COMPLETED**
   - **What**: Infinite scrolling through multiple views of an entity
@@ -121,6 +148,8 @@
 - 3D World View with depth rendering and stereo support
 - Navigation system with AI-powered spatial navigation
 - **Immediate surroundings** for nested interiors
+- **Image editing** via `/EDIT_IMAGE` slash command
+- **Image upscaling** via UI button (4x resolution improvement)
 
 ### Technical Architecture
 - Strict component separation (JSX, logic, styles)

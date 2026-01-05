@@ -366,11 +366,13 @@ export function useWorldViewLogic() {
     window.addEventListener('imageGenerated', handleImageGenerated);
     window.addEventListener('spawnComplete', handleImageGenerated);
     window.addEventListener('editImageComplete', handleImageGenerated);
+    window.addEventListener('imageUpscaled', handleImageGenerated);
     
     return () => {
       window.removeEventListener('imageGenerated', handleImageGenerated);
       window.removeEventListener('spawnComplete', handleImageGenerated);
       window.removeEventListener('editImageComplete', handleImageGenerated);
+      window.removeEventListener('imageUpscaled', handleImageGenerated);
     };
   }, [activeEntity, canShowViews, fetchViews]);
 

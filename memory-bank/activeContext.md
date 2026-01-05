@@ -1,5 +1,141 @@
 # Active Context
 
+## 2026-01-05 - SeedVR Image Upscale Bug Fix
+
+### Image Upscale Database Update Fix - COMPLETED
+
+Fixed a critical bug in the SeedVR Image Upscale feature where upscaled images weren't being saved to the database.
+
+#### The Bug
+The API response structure from SeedVR had `data.images[0].url` (array of images), but our frontend code was looking for `data.image.url` (singular object).
+
+```typescript
+// BEFORE (wrong - image singular):
+const upscaledUrl = upscaleResult.data?.image?.url;
+
+// AFTER (correct - images array):
+const upscaledUrl = upscaleResult.data?.images?.[0]?.url;
+```
+
+This prevented the URL extraction, which made the function return early with an error, and the database never got updated with the new upscaled image URL.
+
+#### Files Fixed
+- `features/app/components/TopButtonRow/useImageUpscale.ts` - Fixed property path
+
+---
+
+## 2026-01-03 - Image Upscale API & Multi-View System
+
+### SeedVR Image Upscale Integration - COMPLETED
+
+Added SeedVR 4x image upscaling with UI button in top button row.
+
+#### What Was Built
+
+**Backend - MZOO Service Layer:**
+- `services/mzoo/config/endpoints.ts` - Added `IMAGE_UPSCALE` endpoint and `DEFAULT_IMAGE_UPSCALE_SETTINGS`
+- `services/mzoo/types.ts` - Added `ImageUpscaleRequest` and `ImageUpscaleResponse` interfaces
+- `services/mzoo/services/imageUpscale.ts` - New `upscaleImage()` function
+- `services/mzoo/index.ts` - Exported new function and settings
+
+**Backend - Route Handler:**
+- `routes/mzoo/handlers/upscaleImageHandler.ts` - New POST `/api/mzoo/navigation/upscale-image` handler
+- `routes/mzoo/navigation.ts` - Registered the route
+
+**Frontend - Upscale Hook:**
+- `features/app/components/TopButtonRow/useImageUpscale.ts` - New hook for upscale logic
+  - Fetches current entity's primary media
+  - Calls MZOO upscale API
+  - Updates media database with upscaled image
+  - Triggers store updates for UI refresh
+
+**Frontend - UI Integration:**
+- `features/app/components/App/useDisplayMode.ts` - Added `handleUpscaleImage` handler and `isUpscaling` state
+- `features/app/components/App/useAppLogic.ts` - Exposed upscale handler to App component
+- `features/app/components/App/App.tsx` - Passed upscale props to TopButtonRow
+- `features/app/components/TopButtonRow/TopButtonRow.tsx` - Added upscale button with IconMaximize icon
+
+#### Button Behavior
+
+**Location**: Top button row, right after "Generate depth map" button
+
+**States**:
+- Normal: Shows IconMaximize (expand icon)
+- Upscaling: Shows loading spinner
+- Disabled: When no entity/image is active
+
+**Functionality**:
+1. Click button → Starts 4x upscale with SeedVR
+2. Shows loading spinner (~8-10 seconds)
+3. Replaces current image with upscaled version
+4. UI automatically refreshes
+
+#### API Details
+- **Endpoint**: `POST https://www.mzoo.app/api/v1/ai/seedvr-upscale-image/upscale`
+- **Settings**: 4x factor, 0.1 noise scale, JPG format
+- **Duration**: ~8-10 seconds per upscale
+- **Response**: Returns upscaled image URL with metadata (width, height)
+
+### Multi-View System Enhancements - COMPLETED
+
+Enhanced the multi-view image system with infinite scrolling and live view counter in Entity Explorer.
+
+#### Circular/Infinite Navigation
+
+**Problem**: When viewing multiple images of an entity, navigation stopped at first/last view.
+
+**Solution**: Implemented wrap-around navigation:
+- Pressing ← at first view (1) wraps to last view (e.g., 3)
+- Pressing → at last view (3) wraps to first view (1)
+- Creates infinite carousel experience
+
+**Files Modified:**
+- `features/app/components/WorldView/useWorldViewLogic.ts`
+  - Updated `goToPreviousView()` to wrap from index 0 to last
+  - Updated `goToNextView()` to wrap from last to index 0
+
+#### View Counter in Entity Explorer
+
+**Problem**: Users couldn't see which view they were on or how many views existed.
+
+**Solution**: Added live counter display in tree view (e.g., "The Chroma Tower (2/3)").
+
+**Implementation:**
+1. **Event System**: Added `viewIndexChanged` CustomEvent dispatched on navigation
+   - Includes `entityId`, `currentIndex`, `totalViews`
+   - Dispatched from all navigation functions
+
+2. **View Count Fetching**: EntityExplorer fetches view counts for all entities on mount
+   - Uses `getEntityMedia()` to count images per entity
+   - Only entities with 2+ images show counter
+   - Stored in Map<entityId, {current, total}>
+
+3. **Live Updates**: EntityExplorer subscribes to `viewIndexChanged` events
+   - Updates counter in real-time as user navigates
+   - Re-renders tree labels automatically
+
+4. **Label Formatting**: Modified all label generation functions
+   - Single view: "Node Name"
+   - Multiple views: "Node Name (2/3)"
+   - 1-based numbering (user-friendly)
+
+**Files Modified:**
+- `features/app/components/WorldView/useWorldViewLogic.ts`
+  - Added event dispatch to `goToPreviousView()`, `goToNextView()`, `goToView()`
+- `features/app/components/EntityExplorer/EntityExplorer.tsx`
+  - Added view count state and fetching logic
+  - Added event listener for view changes
+  - Updated label generation in all mapNode functions
+  - Memoization dependencies updated
+
+**How It Works:**
+- Fetch phase: Gets image counts for all entities (on mount)
+- Navigation phase: Events update current index for active entity
+- Render phase: Labels show "(current/total)" when total > 1
+- Works for all entity types (locations, characters, niches, regions, hosts)
+
+---
+
 ## 2026-01-02 - Image Edit API & Slash Command
 
 ### /EDIT_IMAGE Slash Command - COMPLETED
@@ -135,68 +271,6 @@ The actual file used by `/NEW_WORLD` was `parsePromptToHierarchy.ts` (not `hiera
 
 ---
 
-## 2026-01-03 - Multi-View System Enhancements
-
-### Circular Navigation & View Counter - COMPLETED
-
-Enhanced the multi-view image system with infinite scrolling and live view counter in Entity Explorer.
-
-#### Circular/Infinite Navigation
-
-**Problem**: When viewing multiple images of an entity, navigation stopped at first/last view.
-
-**Solution**: Implemented wrap-around navigation:
-- Pressing ← at first view (1) wraps to last view (e.g., 3)
-- Pressing → at last view (3) wraps to first view (1)
-- Creates infinite carousel experience
-
-**Files Modified:**
-- `features/app/components/WorldView/useWorldViewLogic.ts`
-  - Updated `goToPreviousView()` to wrap from index 0 to last
-  - Updated `goToNextView()` to wrap from last to index 0
-
-#### View Counter in Entity Explorer
-
-**Problem**: Users couldn't see which view they were on or how many views existed.
-
-**Solution**: Added live counter display in tree view (e.g., "The Chroma Tower (2/3)").
-
-**Implementation:**
-1. **Event System**: Added `viewIndexChanged` CustomEvent dispatched on navigation
-   - Includes `entityId`, `currentIndex`, `totalViews`
-   - Dispatched from all navigation functions
-
-2. **View Count Fetching**: EntityExplorer fetches view counts for all entities on mount
-   - Uses `getEntityMedia()` to count images per entity
-   - Only entities with 2+ images show counter
-   - Stored in Map<entityId, {current, total}>
-
-3. **Live Updates**: EntityExplorer subscribes to `viewIndexChanged` events
-   - Updates counter in real-time as user navigates
-   - Re-renders tree labels automatically
-
-4. **Label Formatting**: Modified all label generation functions
-   - Single view: "Node Name"
-   - Multiple views: "Node Name (2/3)"
-   - 1-based numbering (user-friendly)
-
-**Files Modified:**
-- `features/app/components/WorldView/useWorldViewLogic.ts`
-  - Added event dispatch to `goToPreviousView()`, `goToNextView()`, `goToView()`
-- `features/app/components/EntityExplorer/EntityExplorer.tsx`
-  - Added view count state and fetching logic
-  - Added event listener for view changes
-  - Updated label generation in all mapNode functions
-  - Memoization dependencies updated
-
-**How It Works:**
-- Fetch phase: Gets image counts for all entities (on mount)
-- Navigation phase: Events update current index for active entity
-- Render phase: Labels show "(current/total)" when total > 1
-- Works for all entity types (locations, characters, niches, regions, hosts)
-
----
-
 ## Current Focus
 
 - ✅ **COMPLETED**: Gemini Explicit Caching (90% token cost reduction)
@@ -204,6 +278,8 @@ Enhanced the multi-view image system with infinite scrolling and live view count
 - ✅ **COMPLETED**: Fixed navigation cache size (1,344 → 2,446 tokens)
 - ✅ **COMPLETED**: Multi-view circular navigation
 - ✅ **COMPLETED**: View counter in Entity Explorer tree
+- ✅ **COMPLETED**: SeedVR Image Upscale integration with UI button
+- ✅ **COMPLETED**: Fixed SeedVR Image Upscale database update bug
 - ⏳ **PENDING**: Test character spawn caching
 
 ## Files Modified (Jan 1 - All Caching Work)

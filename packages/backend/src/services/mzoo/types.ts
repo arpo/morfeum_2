@@ -106,3 +106,27 @@ export interface ImageEditResponse {
     input_image_provided: boolean;
   };
 }
+
+export interface ImageUpscaleRequest {
+  inputImage: string;
+  upscale_mode?: 'factor' | 'resolution';
+  upscale_factor?: 2 | 4;
+  target_resolution?: '1080p' | '2k' | '4k';
+  noise_scale?: number;
+  output_format?: 'jpg' | 'png';
+}
+
+export interface ImageUpscaleResponse {
+  image: {
+    url: string;
+    width: number;
+    height: number;
+  };
+  metadata: {
+    upscale_mode: string;
+    upscale_factor: number;
+    target_resolution: string;
+    noise_scale: number;
+    output_format: string;
+  };
+}

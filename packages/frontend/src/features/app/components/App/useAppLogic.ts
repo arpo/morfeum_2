@@ -31,7 +31,9 @@ export function useAppLogic() {
     hasDepthMap,
     depthMapGenerating,
     depthMapDisabled,
+    isUpscaling,
     handleGenerateDepthMap,
+    handleUpscaleImage,
     handleDisplayModeChange,
   } = useDisplayMode();
   
@@ -91,6 +93,7 @@ export function useAppLogic() {
     hasDepthMap,
     depthMapGenerating,
     depthMapDisabled,
+    isUpscaling,
     trainingSaving,
     trainingSaved,
     
@@ -109,6 +112,7 @@ export function useAppLogic() {
     handleCloseInfo,
     handleOpenChat,
     handleGenerateDepthMap,
+    handleUpscaleImage,
     handleDisplayModeChange,
     handleSaveTrainingData,
     toggleEntityExplorerPanel,
