@@ -1,8 +1,37 @@
 # Progress
 
-## 2026-01-05 - Interior/Exterior Transition System + Bug Fixes
+## 2026-01-05 - Interior/Exterior Transition Refinements
 
-- [x] **Interior/Exterior Transition Improvements - COMPLETED**
+- [x] **Monastic Styles Added to SAME_MATERIAL Category - COMPLETED**
+  - **Problem**: Brick monasteries generated "carved from rock" interiors instead of brick interiors
+  - **Root Cause**: "austere sacred" architectural tone matched FANTASY_SPECIFIC (via "sacred"), not SAME_MATERIAL
+  - **Solution**: Added monastic styles to SAME_MATERIAL category in `interiorTransitionRules.ts`
+  - **Styles Added**: `austere`, `monastic`, `hermitage`, `abbey`, `monastery`, `priory`
+  - **Files Modified**:
+    - `generation/prompts/shared/interiorTransitionRules.ts` - Added styles to array + documentation
+
+- [x] **Reverted Hardcoded Prompt Rules - COMPLETED**
+  - **Problem**: Hardcoded building vs cave rules added to generic prompts (wrong approach)
+  - **Solution**: Removed all hardcoded rules, use transition rules system instead
+  - **Reverted from `imagePromptGeneration.ts`**:
+    - "BUILDING INTERIOR vs CAVE INTERIOR" section
+    - "HOW TO TELL THE DIFFERENCE" section
+    - "MATERIAL TERMINOLOGY IN BUILDINGS" section
+  - **Reverted from `nodeDNAGeneration.ts`**:
+    - "PARENT BUILDING → INTERIOR BUILDING" section
+    - "ARCHITECTURAL STYLE PRESERVATION" section
+    - "GOTHIC/HORROR GENRES" section
+  - **Files Modified**:
+    - `generation/shared/imagePromptGeneration.ts` - Removed hardcoded rules
+    - `generation/prompts/locations/nodeDNAGeneration.ts` - Removed hardcoded rules
+
+- [x] **Key Architectural Principle Established**
+  - DNA system works correctly - parent DNA IS passed with all fields
+  - When interior generation is wrong, fix is in `interiorTransitionRules.ts`
+  - Do NOT add hardcoded rules to generic prompts
+  - Follow pattern in `docs/adding-transition-special-cases.md`
+
+- [x] **Interior/Exterior Transition Improvements - COMPLETED** (earlier today)
   - **Problem**: GO_INSIDE transitions produced wrong images (desert colors in metallic tower, abstract "ghost poetry" in Gothic manor)
   - **Root Cause**: Image composition system put exterior as entire background instead of interior-dominant
   - **Solution**: Three-part system for transition control
@@ -17,10 +46,7 @@
   - LLM gets precise format: "2-4 sentences: forms, layout, scale"
   - Prevents vague outputs like "visual description"
   
-  **3. Gothic/Horror Special Rules**
-  - Added genre-specific concrete description rules
-  - Prevents abstract terms: "phantom outline", "oppressive emptiness"
-  - Requires physical decay: "crumbling plaster", "rotting wood"
+  **3. Gothic/Horror Special Rules** (later reverted - see above)
   
   **Files Modified**:
   - `generation/shared/spaceTypeRegistry/types.ts`
@@ -62,122 +88,63 @@
 
 - [x] **SeedVR Image Upscale Button - COMPLETED**
   - **What**: SeedVR 4x image upscaling with UI button in top button row
-  - **Files Created**:
-    - `services/mzoo/services/imageUpscale.ts` - upscaleImage() function
-    - `routes/mzoo/handlers/upscaleImageHandler.ts` - Route handler
-    - `features/app/components/TopButtonRow/useImageUpscale.ts` - Frontend hook
-  - **Files Modified**:
-    - `services/mzoo/config/endpoints.ts` - IMAGE_UPSCALE endpoint
-    - `services/mzoo/types.ts` - Request/Response interfaces
-    - `services/mzoo/index.ts` - Exports
-    - `routes/mzoo/navigation.ts` - Route registration
-    - `features/app/components/App/useDisplayMode.ts` - Handler
-    - `features/app/components/App/useAppLogic.ts` - Props
-    - `features/app/components/App/App.tsx` - Props
-    - `features/app/components/TopButtonRow/TopButtonRow.tsx` - Button UI
   - **Duration**: ~8-10 seconds per upscale
   - **Results**: 4x upscaled image (1080p → 4K)
 
 - [x] **Circular Navigation for Multi-View - COMPLETED**
   - **What**: Infinite scrolling through multiple views of an entity
-  - **Behavior**: 
-    - Left arrow at first view → wraps to last view
-    - Right arrow at last view → wraps to first view
-  - **Files Modified**:
-    - `features/app/components/WorldView/useWorldViewLogic.ts`
 
 - [x] **View Counter in Entity Explorer - COMPLETED**
   - **What**: Live counter showing current view index (e.g., "Node Name (2/3)")
-  - **Features**:
-    - Fetches view counts for all entities on mount
-    - Shows counter only for entities with 2+ views
-    - Updates in real-time when navigating
-    - 1-based numbering for user-friendliness
-  - **Files Modified**:
-    - `features/app/components/WorldView/useWorldViewLogic.ts` - Event dispatch
-    - `features/app/components/EntityExplorer/EntityExplorer.tsx` - View counting + display
 
 ## 2026-01-02 - Image Edit Feature
 
 - [x] **/EDIT_IMAGE Slash Command - COMPLETED**
   - **What**: FAL Flux 2 Turbo Edit API integration with `/EDIT_IMAGE` command
-  - **Files Created**:
-    - `services/mzoo/services/imageEdit.ts` - editImage() function
-    - `routes/mzoo/handlers/editImageHandler.ts` - Route handler
-    - `features/spawn-input/SpawnInputBar/editCommands.ts` - Frontend command handler
-  - **Files Modified**:
-    - `services/mzoo/config/endpoints.ts` - IMAGE_EDIT endpoint
-    - `services/mzoo/types.ts` - ImageEditRequest/Response types
-    - `services/mzoo/index.ts` - Exports
-    - `config/navigation.ts` - EDIT_IMAGE command config
-    - `features/spawn-input/SpawnInputBar/commandParser.ts` - isEditCommand()
-    - `features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - Command routing
-    - `routes/mzoo/navigation.ts` - Route registration
-    - `engine/pipelines/shared/pipelineConfig.ts` - edit pipeline (6000ms)
   - **Usage**: `/EDIT_IMAGE change to winter`
   - **Duration**: ~6 seconds per edit
 
 ## 2026-01-01 (Evening Update)
 
 - [x] **Extended Caching to Navigation Pipeline - COMPLETED**
-  - **Problem**: Only World Creation was using caching; Navigation (GOTO/GO_INSIDE) was not
-  - **Solution**: Extended caching to Structure Analysis + Destination Analysis
-  - **Results**:
-    - GOTO pipeline: 11.56s → **9.91s** (14% faster)
-    - Both analyzers now use cached generation
-    - 93-96% tokens cached per call
-  - **Navigation Cache Fix**:
-    - Original bundle was only ~1,344 tokens (below 2,048 minimum)
-    - Expanded with element rules + navigation reference → 2,446 tokens
-  - **Files Modified**:
-    - `navigation/analyzers/structureAnalyzer.ts` - Uses `generateCachedText`
-    - `navigation/analyzers/destinationAnalyzer.ts` - Uses `generateCachedText`
-    - `prompts/navigation/destinationAnalysis.ts` - Added dynamic function
-    - `prompts/cacheContent/index.ts` - Expanded navigation bundle
-    - `pipelines/characterPipeline.ts` - Uses cached generation (ready, untested)
+  - GOTO pipeline: 11.56s → **9.91s** (14% faster)
+  - Both analyzers now use cached generation
+  - 93-96% tokens cached per call
 
 ## 2026-01-01 (Earlier)
 
 - [x] **Gemini 2.5 Flash-Lite Caching - COMPLETED + OPTIMIZED**: 90% cost + 70% performance improvement
-  - **Final Results**:
-    - 99.9% tokens cached (5366/5372)
-    - 70% faster hierarchy (23.31s → 7.00s)  
-    - 42% faster total pipeline (34.33s → 19.89s)
-  - **Critical Discovery**: `/NEW_WORLD` uses `parsePromptToHierarchy.ts`
-  - **Bugs Fixed**:
-    - MZOO list caches: async iterable iteration
-    - httpClient fallback: `data.data ?? data` pattern
-    - Thinking mode: disabled for performance
-
-## 2025-12-30
-
-- [x] **Creature Mode System - COMPLETED**: `--populate` and `--people` flags
-- [x] **UI: Help Tooltip for Spawn Input - COMPLETED**
-- [x] **Prompt Token Optimization - COMPLETED**: ~50% token reduction
-- [x] **Immediate Surroundings for Nested Interiors - COMPLETED**
-- [x] **Space Type Registry - COMPLETED**
-- [x] **Prompt Index Documentation - COMPLETED**
-- [x] **Structured Image Prompt System - COMPLETED**
+  - 99.9% tokens cached (5366/5372)
+  - 70% faster hierarchy (23.31s → 7.00s)
+  - 42% faster total pipeline (34.33s → 19.89s)
 
 ## What Works ✅
+
+### Interior Transition Rules System
+
+**How to fix interior generation issues:**
+1. Check which category the architectural tone falls into (via `getTransitionCategory()`)
+2. Add the style to the appropriate category in `interiorTransitionRules.ts`
+3. Do NOT add hardcoded rules to generic prompts
+
+**Categories:**
+- `SAME_MATERIAL` - Interior matches exterior (futuristic, organic, monastic, etc.)
+- `FINISHED_INTERIOR` - Interior gets finishes (traditional, residential)
+- `EXPOSED_MATERIAL` - Interior shows raw structure (industrial, brutalist)
+- `NATURAL_INTEGRATION` - Built into nature (treehouse, cliffside)
+- `FANTASY_SPECIFIC` - Cultural/magical (elven, dwarven, temple)
 
 ### Gemini Caching Architecture
 
 **Cache Bundles Active:**
 | Cache Bundle | Tokens | Status | Used By |
 |--------------|--------|--------|---------|
-| `morfeum-world-creation` | 5,366 | ✅ Working | NEW_WORLD, hierarchy |
+| `morfeum-world-creation` | ~4,700 | ✅ Working | NEW_WORLD, hierarchy |
 | `morfeum-navigation` | 2,446 | ✅ Working | GOTO, GO_INSIDE |
 | `morfeum-character-creation` | ~3,800 | ✅ Ready | Character spawn |
 | `morfeum-chat` | ~1,100 | ⏳ Skipped | Below 2,048 minimum |
 
-**Components Using Caching:**
-- `parsePromptToHierarchy.ts` → `morfeum-world-creation`
-- `structureAnalyzer.ts` → `morfeum-navigation`
-- `destinationAnalyzer.ts` → `morfeum-navigation`
-- `characterPipeline.ts` → `morfeum-character-creation` (untested)
-
-### Performance Metrics (Jan 1, 2026)
+### Performance Metrics (Jan 1-5, 2026)
 
 | Pipeline | Before | After | Improvement |
 |----------|--------|-------|-------------|
@@ -196,30 +163,17 @@
 - World tree system with hierarchical location structures
 - 3D World View with depth rendering and stereo support
 - Navigation system with AI-powered spatial navigation
-- **Immediate surroundings** for nested interiors
+- **Interior transition rules** for proper exterior→interior material handling
 - **Image editing** via `/EDIT_IMAGE` slash command
 - **Image upscaling** via UI button (4x resolution improvement)
 
-### Technical Architecture
-- Strict component separation (JSX, logic, styles)
-- All files under 300-line limit
-- Zustand state management with clean slices
-- **Gemini caching** via MZOO API with IN-MEMORY optimization
-- **Optimized prompts** using pipe-separated values
-
-### Token Cost & Performance Optimization
-| Technique | Description | Savings |
-|-----------|-------------|---------|
-| **Gemini Caching** | Cache static content | **90%** cost + **70%** speed |
-| **Navigation Caching** | Extended to GOTO/GO_INSIDE | **14%** faster GOTO |
-| **Thinking Mode Disabled** | Remove reasoning overhead | **70%** faster |
-| Pipe-separated values | `a\|b\|c` instead of bullets | ~30% tokens |
-| Reduced examples | 2 instead of 4 | ~25% tokens |
-
 ## What's Left to Build 🚧
 
-### Caching Extensions
+### Testing
+- [ ] Test brick monastery interior with new SAME_MATERIAL rules
 - [ ] Test character spawn caching
+
+### Caching Extensions
 - [ ] Consider DNA generation caching (currently too dynamic)
 - [ ] Consider image prompt caching
 
@@ -230,23 +184,14 @@
 - Advanced navigation
 - Media management
 
-### Technical Improvements
-- Performance optimization
-- Testing
-- Documentation
-- Accessibility
-
 ## Current Status 📊
 
 - All files under size limits
 - 100% TypeScript coverage
 - All builds passing
-- **Gemini caching** active for:
-  - World Creation (99.9% cached, 70% faster)
-  - Navigation (94% cached, 14% faster)
-  - Character (ready, untested)
-- **Optimized prompts** for all pipelines
-- **Structured image prompts** for both pipelines
+- **Gemini caching** active for World Creation, Navigation, Character
+- **Interior transition rules** properly categorizing architectural styles
+- **Generic prompts kept clean** - no hardcoded style-specific rules
 
 ## Known Issues 🐛
 
@@ -260,9 +205,7 @@
 - File size: 50-300 lines
 - Separation: markup (.tsx), logic (.ts), styles (.module.css)
 - Zustand slices with clear boundaries
-- **Gemini caching** pattern:
-  ```typescript
-  const result = await generateCachedText(apiKey, 'cache-group-id', dynamicPrompt);
-  ```
-- **Optimized prompts** using compact formats
+- **Transition rules** for style-specific interior generation behavior
+- **Generic prompts** should not contain hardcoded style rules
+- **Gemini caching** pattern for LLM calls
 - **Structured prompts** for all image generation

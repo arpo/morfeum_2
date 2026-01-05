@@ -211,6 +211,1554 @@
       ],
       "searchDesc": "Open courtyard of Tengboche Monastery with stone walls, prayer flags, and mountain views.",
       "slug": "null-of-tengboche-monastery"
+    },
+    "loc-1767623985499-ujusq256r": {
+      "id": "loc-1767623985499-ujusq256r",
+      "type": "host",
+      "name": "Post-Apocalyptic Wasteland",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast arid plains, scattered ruins, eroded mountains, dust clouds, cracked earth, distant skeletal structures, oppressive sky",
+        "colorsAndLighting": "Harsh, bleached sunlight, deep shadows, dusty atmosphere, muted earth tones, occasional dramatic sky colors",
+        "atmosphere": "Dry, dusty, suffocating, desolate, echoing, melancholic",
+        "materials": "Cracked earth, crumbling concrete, rusted metal, weathered stone, sand drifts",
+        "mood": "Abandonment, desolation, melancholy, survival, lost history",
+        "sounds": "Wind whistling through ruins, distant creaking metal, crunching debris underfoot, silence",
+        "primary_surfaces": "Earth, sand, rock",
+        "secondary_surfaces": "Rusted metal, crumbling concrete, weathered wood",
+        "accent_features": "Scattered debris, skeletal remains of structures, wind-worn statues",
+        "dominant": "Earth Tones",
+        "secondary": "Rust and Decay",
+        "accent": "Bleached White",
+        "ambient": "Dust",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "Ruined",
+        "cultural_tone": "Forgotten",
+        "palette_bias": "Earthy",
+        "flora_base": "Scant and Dead",
+        "fauna_base": "None Visible"
+      },
+      "description": "A vast, desolate landscape scarred by an unknown catastrophe. Remnants of a former world slowly decay under a harsh, unforgiving sky, hinting at a lost civilization.",
+      "searchDesc": "Desolate wasteland, ruined civilization, harsh sky, decay",
+      "slug": "post-apocalyptic-wasteland",
+      "structure": {
+        "spatialLayout": "Expansive and open, punctuated by scattered, decaying structures and natural geological formations"
+      }
+    },
+    "220abf5f-8ab2-4f9a-8b7a-4c533f321f2c": {
+      "id": "220abf5f-8ab2-4f9a-8b7a-4c533f321f2c",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "2bfdca79-e6da-484b-8b69-8bb5e81b19bc": {
+      "id": "2bfdca79-e6da-484b-8b69-8bb5e81b19bc",
+      "type": "location",
+      "name": "The Rust Bucket",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The vehicle is a heavily rusted, mid-20th-century sedan, its form distorted by corrosion and the embrace of the sand. The scale is that of a standard car, but its posture suggests a permanent, settled state. It appears to be a single, decaying entity.",
+        "colorsAndLighting": "Dominant colors are muted oranges, deep browns, and sandy beige. The harsh desert sun casts stark shadows, highlighting the textures of decay and the surrounding barrenness.",
+        "atmosphere": "The air is thick with dust and the scent of decay. A dry, scorching heat radiates from the sand. There is no perceptible motion other than the slow crawl of sand grains.",
+        "materials": "The primary material is heavily corroded metal, showing layers of rust and pitting. Weathered fabric and brittle plastic are visible within the interior.",
+        "mood": "A profound sense of abandonment and a somber reflection on lost times pervade the scene. It evokes a feeling of melancholy and the relentless passage of time.",
+        "sounds": "Whispering wind, creaking metal, faint skittering of unseen creatures",
+        "primary_surfaces": "orange-brown rusted metal",
+        "secondary_surfaces": "pale sandy texture, brittle faded fabric",
+        "accent_features": "shattered glass fragments, exposed internal mechanisms",
+        "dominant": "orange-brown on the vehicle",
+        "secondary": "sandy beige on the ground",
+        "accent": "pale grey on shattered glass",
+        "ambient": "harsh, bright daylight",
+        "genre": null,
+        "architectural_tone": "weathered industrial relic",
+        "cultural_tone": null,
+        "palette_bias": "earth tones",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A heavily rusted, abandoned car, half-buried in the sand, a solitary relic in the vast desert. EXTERIOR VIEW.",
+      "searchDesc": "A rusted, abandoned car in a post-apocalyptic desert, a solitary relic.",
+      "slug": "the-rust-bucket",
+      "structure": {
+        "spatialLayout": "The car lies horizontally, partially embedded in the landscape. Its shape is irregular due to the decay and sand accumulation. The depth is dictated by the car's original dimensions and the surrounding dunes."
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "front",
+          "description": "The driver's side door hangs ajar, revealing a dark interior."
+        }
+      ],
+      "dominantElements": [
+        "car: shape=organic, orientation=horizontal, scale=medium, style=rustic, surfaces=weathered, openings=minimal, interior_materials=\"fabric|plastic|metal\", internal_atmosphere=cramped"
+      ],
+      "uniqueIdentifiers": [
+        "severely rusted chassis",
+        "tattered upholstery visible through window",
+        "sand piled high around the base",
+        "shattered windshield",
+        "one wheel half-buried"
+      ],
+      "primaryMedia": "media-1767624012110-j6glewhri"
+    },
+    "niche-1767624035494-8p6cuc57b": {
+      "id": "niche-1767624035494-8p6cuc57b",
+      "type": "niche",
+      "name": "The Car Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior of a classic sedan, its metal frame extensively corroded and its once-plush seats ripped and faded. Shattered glass glints amidst the decay, and exposed wiring hangs loosely like metallic vines.",
+        "colorsAndLighting": "Muted oranges and deep browns of rust dominate, contrasted by the pale, dusty grey of the shattered glass and the faded, brittle tones of the upholstery. Harsh daylight streams through the broken windows, casting sharp, elongated shadows.",
+        "atmosphere": "The air is thick with the scent of old metal and baked dust, a dry stillness pervading the enclosed space. The heat from the outside is palpable, intensifying the feeling of decay and abandonment. Only the slow settling of dust particles hints at any movement.",
+        "materials": "Heavily corroded metal forms the primary structure, its surface a testament to years of exposure. Brittle, faded fabric clings precariously to the seats, and fragments of cracked plastic are scattered throughout. Exposed internal mechanisms reveal a skeletal form.",
+        "mood": "A profound sense of abandonment and a somber reflection on lost times pervade the scene. It evokes a feeling of melancholy and the relentless passage of time.",
+        "sounds": "Creaking metal, settling dust, distant wind, phantom engine hum",
+        "spatialLayout": "The confined, rectangular space of a car interior, with the dashboard and seats defining the main functional areas. Depth is limited by the vehicle's dimensions.",
+        "primary_surfaces": "orange-brown rusted metal with pitting",
+        "secondary_surfaces": "pale, brittle faded fabric, cracked grey plastic",
+        "accent_features": "shattered glass fragments, exposed internal wiring",
+        "dominant": "orange-brown on the vehicle's frame and dashboard",
+        "secondary": "sandy beige on the floor mats and dust accumulation",
+        "accent": "pale grey on shattered glass fragments",
+        "ambient": "harsh, bright daylight",
+        "genre": "Post-Apocalyptic",
+        "architectural_tone": "weathered industrial relic",
+        "cultural_tone": "Forgotten",
+        "palette_bias": "earth tones",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767624035493-bd2txv3kq",
+      "description": "The cramped and rustic interior of a car, with worn fabric and metal fittings, a functional dashboard, and a pervasive smell of old upholstery and oil.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "small",
+        "orientation": "horizontal",
+        "openings": "narrow-slits",
+        "openingShape": "rectangular",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "A compact, intimate space with worn seats, a functional dashboard, and minimal light filtering through the windows, characteristic of a rustic vehicle.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "driver's side",
+          "description": "exits to the outside"
+        },
+        {
+          "type": "door",
+          "position": "passenger's side",
+          "description": "exits to the outside"
+        }
+      ],
+      "dominantElements": [],
+      "uniqueIdentifiers": [
+        "worn seats",
+        "rust-tinged dashboard",
+        "steering wheel",
+        "grime-coated windows"
+      ],
+      "searchDesc": "Decaying 1950s car interior, rusted metal, cracked vinyl, desert dust.",
+      "slug": "null-of-the-rust-bucket"
+    },
+    "loc-1767624082496-5n7hl13w2": {
+      "id": "loc-1767624082496-5n7hl13w2",
+      "type": "host",
+      "name": "Pirate Seas",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast ocean expanse, distant mountainous islands, scattered small rocky outcrops, dramatic cloud formations.",
+        "colorsAndLighting": "Deep blues and grays of the ocean, highlighted by the muted gold of a setting sun breaking through clouds, or the stark white of foam on waves.",
+        "atmosphere": "Salty air, humid, with a sense of immense scale and constant movement of the waves.",
+        "materials": "Ocean water, rock, scattered driftwood, occasional tattered sails on distant ships.",
+        "mood": "Adventurous, mysterious, perilous, with an underlying sense of isolation.",
+        "sounds": "Crashing waves, distant seabird calls, creaking of unseen ships, howling wind.",
+        "primary_surfaces": "Ocean water",
+        "secondary_surfaces": "Rocky shorelines, sandy beaches",
+        "accent_features": "Distant island silhouettes, rogue waves, scattered debris",
+        "dominant": "Ocean",
+        "secondary": "Islands",
+        "accent": "Sky",
+        "ambient": "Wind and sea spray",
+        "genre": "Pirate Fantasy",
+        "architectural_tone": "Naturalistic",
+        "cultural_tone": "Maritime",
+        "palette_bias": "Cool",
+        "flora_base": "Seaweed",
+        "fauna_base": "Seabirds"
+      },
+      "description": "Vast, treacherous oceans stretch to the horizon, dotted with hidden coves and uncharted islands. The air is thick with the salt spray and the cries of unseen seabirds, promising adventure and danger.",
+      "searchDesc": "Vast ocean, hidden coves, uncharted islands, pirate adventure",
+      "slug": "pirate-seas",
+      "structure": {
+        "spatialLayout": "Expansive and open, with the horizon line constantly shifting due to waves and weather."
+      }
+    },
+    "b2ef7799-63ca-44ba-a89d-717eb9eeaa25": {
+      "id": "b2ef7799-63ca-44ba-a89d-717eb9eeaa25",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "86695873-9c08-4abc-9da1-1961a948a01f": {
+      "id": "86695873-9c08-4abc-9da1-1961a948a01f",
+      "type": "location",
+      "name": "The Sea Serpent",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive, organic galleon with a flowing orientation, scaled to be colossal. Its style is rustic, with surfaces primarily of weathered wood. Arched windows punctuate its form.",
+        "colorsAndLighting": "Dominated by muted blues and greys of the sea and sky, with deep browns and greens of weathered wood and barnacles. Lighting is dim, with shafts of light piercing through clouds.",
+        "atmosphere": "The air is heavy with salt spray and the smell of brine. A perpetual dampness permeates the vessel, and the constant motion of the choppy waves creates a sense of unease.",
+        "materials": "The primary materials are ancient, weathered wood, encrusted with a thick layer of barnacles and seaweed. Ropes and canvas are frayed and tattered.",
+        "mood": "Melancholy and foreboding, hinting at a long and perilous history. A sense of lost grandeur and enduring resilience.",
+        "sounds": "Creaking timbers, crashing waves, seabird cries, groaning rigging, distant thunder.",
+        "primary_surfaces": "Weathered, barnacle-encrusted wood",
+        "secondary_surfaces": "Tattered canvas sails, frayed ropes",
+        "accent_features": "Ornate, sea serpent-shaped figurehead; verdigris-covered brass fittings",
+        "dominant": "Deep sea blue and grey",
+        "secondary": "Muted browns and greens of wood and algae",
+        "accent": "Verdigris green on brass, hints of rust",
+        "ambient": "Dim, overcast light",
+        "genre": null,
+        "architectural_tone": "Weathered, seafaring galleon",
+        "cultural_tone": "Pirate vessel, aged and battle-worn",
+        "palette_bias": "Cool colors (blues, greys, greens)",
+        "flora_base": "None",
+        "fauna_base": "Barnacles, seaweed"
+      },
+      "description": "A massive, weathered galleon with tattered sails and barnacle-encrusted hull, riding the choppy waves. EXTERIOR VIEW.",
+      "searchDesc": "A massive, barnacle-encrusted galleon with tattered sails on choppy Pirate Seas.",
+      "slug": "the-sea-serpent",
+      "structure": {
+        "spatialLayout": "A sprawling, organic form that follows the contours of a traditional galleon, designed for movement on water. Its dimensions are massive, with considerable depth."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "mid-ship, starboard side",
+          "description": "Leads into the main deck and below."
+        },
+        {
+          "type": "passage",
+          "position": "stern, port side",
+          "description": "An open passage leading to the captain's quarters."
+        }
+      ],
+      "dominantElements": [
+        "galleon: shape=organic, orientation=flowing(vessel), scale=massive, style=rustic, surfaces=wood, openings=arched-windows, interior_materials=wood|wood|wood, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "Barnacle-encrusted hull",
+        "Tattered, spectral sails",
+        "Ancient, weathered wood",
+        "Choppy, grey waves",
+        "Sea serpent figurehead"
+      ],
+      "primaryMedia": "media-1767624103583-aywkfu1p1"
+    },
+    "niche-1767624139411-260e70h89": {
+      "id": "niche-1767624139411-260e70h89",
+      "type": "niche",
+      "name": "Captain's Cabin",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The captain's cabin is a circular chamber, its curved wooden walls echoing the ship's hull.  Heavy, sea-worn timbers form the structure, punctuated by a single, arched window offering glimpses of the turbulent sea. The space is cramped yet possesses an undeniable sense of authority.",
+        "colorsAndLighting": "Dominated by deep, muted blues and greys, with accents of dark, weathered wood and tarnished brass.  Dim, flickering lantern light casts long, dancing shadows, occasionally pierced by shafts of pale, natural light filtering through the salt-grimed window.",
+        "atmosphere": "The air is thick with the perpetual dampness of the sea, carrying the pungent aroma of brine, tar, and aged oak. The cabin feels heavy with the history of storms weathered and battles fought, a space that reflects the ceaseless motion of the ocean outside.",
+        "materials": "The primary surfaces are of ancient, dark wood, worn smooth by countless hands and etched with the patina of time.  Tattered remnants of sailcloth serve as tapestries, and thick, coiled ropes lie discarded in corners. Tarnished brass fittings gleam dully under the dim light.",
+        "mood": "Melancholy and foreboding, yet imbued with a deep resilience.  A sense of isolation and the vastness of the sea pervades, tempered by the captain's command over their domain.",
+        "sounds": "Creaking timbers, distant waves, wind, muffled shouts, creak of ropes",
+        "spatialLayout": "A compact, circular room designed for command and solitary reflection.  The layout emphasizes the central navigation table and the captain's chair, with limited space for movement, fostering an intimate, yet imposing, atmosphere.",
+        "primary_surfaces": "Weathered, dark oak timbers",
+        "secondary_surfaces": "Tattered canvas, frayed ropes, salt-encrusted glass",
+        "accent_features": "Ornate, sea serpent-carved captain's chair; verdigris-kissed brass instruments; nautical maps stained with saltwater",
+        "dominant": "Deep sea blue and grey of the walls and ambient light",
+        "secondary": "Muted browns and greens of weathered wood",
+        "accent": "Tarnished brass and verdigris green",
+        "ambient": "Dim, overcast with flickering lantern light",
+        "genre": "Pirate Fantasy",
+        "architectural_tone": "Weathered, seafaring galleon interior",
+        "cultural_tone": "Captain's command center, aged and battle-worn",
+        "palette_bias": "Cool colors",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767624139410-c5w9ec0ew",
+      "description": "You step into the Captain's Cabin, a medium-sized, rectangular room with a flat wooden ceiling. Circular portholes punctuate the walls, offering glimpses of the sea. The interior is primarily wood, creating a dim and rustic atmosphere consistent with the aged pirate vessel. A sturdy wooden door leads out to the quarterdeck.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "horizontal",
+        "openings": "circular-portholes",
+        "openingShape": "circular",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "A compact, private space likely featuring a sleeping bunk, desk, and storage. It serves as the captain's personal quarters aboard the vessel.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "aft bulkhead",
+          "description": "leads to the quarterdeck"
+        }
+      ],
+      "dominantElements": [
+        "Captain's Cabin: shape=rectangular, orientation=compact(pod), scale=medium, style=rustic, surfaces=wood, openings=circular-portholes, interior_materials=wood|wood|wood, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "circular portholes",
+        "aged wood paneling",
+        "ship's helm proximity"
+      ],
+      "searchDesc": "Captain's cabin, weathered wood, sea charts, melancholic grandeur.",
+      "slug": "null-of-the-sea-serpent"
+    },
+    "loc-1767624169971-p0bh7bniq": {
+      "id": "loc-1767624169971-p0bh7bniq",
+      "type": "host",
+      "name": "Industrial Metropolis",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Skyline silhouette, geographic features, vast landscapes",
+        "colorsAndLighting": "Dominated by smog-filtered light, artificial glow from industrial areas.",
+        "atmosphere": "Thick with industrial pollution, a sense of constant activity.",
+        "materials": "Steel, concrete, brick, pervasive grime.",
+        "mood": "Overwhelming, relentless, a symbol of human industry.",
+        "sounds": "Distant cacophony of urban and industrial sounds.",
+        "primary_surfaces": "Industrial building silhouettes, polluted sky.",
+        "secondary_surfaces": "Distant geographic features, hazy horizons.",
+        "accent_features": "Towering smokestacks, distinctive industrial landmarks.",
+        "dominant": "Industrial skyline",
+        "secondary": "Polluted atmosphere",
+        "accent": "Smokestacks",
+        "ambient": "Urban hum",
+        "genre": "Industrial",
+        "architectural_tone": "Massive, imposing",
+        "cultural_tone": "Pragmatic, industrious",
+        "palette_bias": "Dark, desaturated, smoky hues",
+        "flora_base": "Minimal, struggling urban flora",
+        "fauna_base": "Resilient urban wildlife, pests"
+      },
+      "description": "A vast urban expanse dominated by towering factories, perpetual smog, and bustling working-class districts. The skyline is a jagged silhouette of industrial structures and utilitarian buildings.",
+      "searchDesc": "Sprawling city with factories, smog, and working-class districts.",
+      "slug": "industrial-metropolis",
+      "structure": {
+        "spatialLayout": "Vast, sprawling, with clear industrial zones."
+      }
+    },
+    "f84c7b9d-3607-4012-be0d-b8e21f8e8d1a": {
+      "id": "f84c7b9d-3607-4012-be0d-b8e21f8e8d1a",
+      "type": "region",
+      "name": "The Foundry District",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "District architecture, street patterns, neighborhood character",
+        "colorsAndLighting": "Dull, muted industrial tones with pockets of artificial light.",
+        "atmosphere": "Heavy with industrial smog and the distant hum of machinery.",
+        "materials": "Brick, steel, concrete, visible pipes and ducts.",
+        "mood": "Functional, industrious, with a hint of grit.",
+        "sounds": "Distant clanging, grinding machinery, truck traffic.",
+        "primary_surfaces": "Soot-stained brick, corrugated metal siding.",
+        "secondary_surfaces": "Cracked concrete, exposed pipes.",
+        "accent_features": "Tall smokestacks, large loading docks.",
+        "dominant": "Industrial architecture",
+        "secondary": "Functional design",
+        "accent": "Smokestacks",
+        "ambient": "Industrial hum",
+        "genre": null,
+        "architectural_tone": "Utilitarian",
+        "cultural_tone": "Working-class",
+        "palette_bias": "Grays, browns, muted industrial colors",
+        "flora_base": "Hardy weeds, sparse urban vegetation",
+        "fauna_base": "Pest animals, urban birds"
+      },
+      "description": "An industrial area defined by its massive factories, towering smokestacks, and utilitarian architecture. The streets are wide, built for the movement of goods, and often covered in a layer of industrial dust.",
+      "searchDesc": "Industrial district with large factories, smokestacks, and utilitarian architecture.",
+      "slug": "the-foundry-district",
+      "structure": {
+        "spatialLayout": "Grid-like streets with large, blocky industrial buildings."
+      }
+    },
+    "2d3cf6f9-6112-47b9-84a2-755992753e3b": {
+      "id": "2d3cf6f9-6112-47b9-84a2-755992753e3b",
+      "type": "location",
+      "name": "The Ironclad Works",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The Ironclad Works is a sprawling, irregularly shaped structure defined by its immense scale. Exposed steel beams form a skeletal framework against the sky, supporting massive, soot-stained brick walls. Huge, gaping openings punctuate the facade, revealing the vast interior.",
+        "colorsAndLighting": "Dominant colors are muted grays, blacks, and deep browns from the brick and steel, stained with the residue of industry. Light filters weakly through grime-covered windows and the open bays, casting long, deep shadows.",
+        "atmosphere": "The air is thick with the lingering scent of metal and oil, a tangible residue of past production. A palpable chill emanates from the vast, unheated interior. The sheer scale creates a sense of oppressive emptiness.",
+        "materials": "The primary materials are weathered steel beams, rough, soot-covered brick, and cracked concrete floors and walls. Grime and rust are prevalent, indicating long disuse.",
+        "mood": "A sense of forgotten power and industrial decay permeates the location, evoking feelings of awe and melancholy.",
+        "sounds": "Distant drips, creaking metal, wind whistling through openings, echoing emptiness.",
+        "primary_surfaces": "Soot-stained brick, weathered steel",
+        "secondary_surfaces": "Cracked concrete, grimy glass",
+        "accent_features": "Exposed structural steel crossbeams, immense open loading bay entrances",
+        "dominant": "Dark gray steel and brick",
+        "secondary": "Brown soot stains",
+        "accent": "Faint, diffused light",
+        "ambient": "Dim, overcast industrial light",
+        "genre": null,
+        "architectural_tone": "Brutalist industrial with weathered surfaces",
+        "cultural_tone": "Mass production, industrial labor, economic decline",
+        "palette_bias": "Monochromatic industrial tones",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A massive factory with exposed steel beams crisscrossing its exterior, soot-stained brick walls, and immense, cavernous openings where loading bays would be. EXTERIOR VIEW.",
+      "searchDesc": "Massive industrial factory, exposed steel beams, soot brick, cavernous openings, industrial district.",
+      "slug": "the-ironclad-works",
+      "structure": {
+        "spatialLayout": "The factory is a vast, horizontally oriented complex with a sprawling footprint. Its interior is cavernous and deep, with multiple levels suggested by internal structures."
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "Leads into the main factory floor."
+        },
+        {
+          "type": "door",
+          "position": "left",
+          "description": "A heavy service door, possibly leading to administrative offices."
+        },
+        {
+          "type": "stairs",
+          "position": "right",
+          "description": "Ascends to elevated walkways or upper levels."
+        }
+      ],
+      "dominantElements": [
+        "factory building: shape=irregular, orientation=sprawling, scale=massive, style=industrial, surfaces=weathered, openings=open-passages, interior_materials=concrete|concrete|concrete, internal_atmosphere=industrial"
+      ],
+      "uniqueIdentifiers": [
+        "exposed steel beams",
+        "soot-stained brick",
+        "cavernous loading bays",
+        "industrial machinery remnants"
+      ],
+      "primaryMedia": "media-1767624188692-by3a24zsf"
+    },
+    "niche-1767624210713-hts0kn4pe": {
+      "id": "niche-1767624210713-hts0kn4pe",
+      "type": "niche",
+      "name": "Factory Building",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a cavernous, open space defined by its immense scale. Towering walls of soot-stained brick rise to meet a skeletal network of rusted steel beams and decaying gantries overhead. The skeletal remains of colossal, inert machinery dot the landscape, hulking silhouettes against the dim light.",
+        "colorsAndLighting": "Dominant colors are the muted grays of weathered steel and the deep browns of soot-covered brick. Weak, diffused light filters in through grime-covered windows and immense, gaping openings, casting long, deep shadows across the vast floor.",
+        "atmosphere": "The air hangs heavy with the ghost of industry – a faint, metallic tang and the dry scent of rust. A palpable chill emanates from the sheer volume of unheated space. The overwhelming sense is one of forgotten power and immense, quiet decay.",
+        "materials": "The primary materials are rough, soot-stained brick, cracked and uneven concrete, and heavily weathered, rusted steel beams and structural elements. Grime and dust are pervasive.",
+        "mood": "A profound sense of melancholy and awe permeates the space, a monument to lost industrial might.",
+        "sounds": "Distant drips, settling dust, creaking metal, faint wind drafts",
+        "spatialLayout": "A single, massive, rectilinear hall with high ceilings, punctuated by the skeletal forms of dormant machinery. The sheer verticality and open expanse create a feeling of oppressive emptiness.",
+        "primary_surfaces": "Soot-stained brick walls, cracked concrete floor",
+        "secondary_surfaces": "Weathered steel beams, rusted metal machinery components",
+        "accent_features": "Immense, open loading bay entrances, decaying control panels on machinery",
+        "dominant": "Dark gray steel and brick",
+        "secondary": "Brown soot stains on walls",
+        "accent": "Faint, diffused light through grime",
+        "ambient": "Dim, overcast industrial light",
+        "genre": "Industrial",
+        "architectural_tone": "Brutalist industrial with weathered surfaces",
+        "cultural_tone": "Mass production, industrial labor, economic decline",
+        "palette_bias": "Monochromatic industrial tones",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767624210712-wzte5up2s",
+      "description": "Inside the vast, irregular interior of the factory building, with exposed concrete walls and utilitarian lighting casting shadows across the industrial machinery.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "flat",
+        "scale": "massive",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "industrial",
+        "elevation": "ground-level",
+        "spatialLayout": "A sprawling, irregular industrial space with a flat roof. Large, open passages dominate the structure, suggesting easy movement of goods and machinery. The interior is likely to be vast and utilitarian.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "main entrance",
+          "description": "leading outside to the factory grounds"
+        },
+        {
+          "type": "passage",
+          "position": "central",
+          "description": "leading deeper into the factory complex"
+        },
+        {
+          "type": "stairs",
+          "position": "side",
+          "description": "leading to an upper level catwalk or control room"
+        }
+      ],
+      "dominantElements": [
+        "large industrial furnace: shape=irregular, orientation=compact, scale=large, style=industrial, surfaces=weathered, openings=minimal, interior_materials=brick|concrete|metal, internal_atmosphere=industrial",
+        "assembly line: shape=rectangular, orientation=horizontal, scale=large, style=industrial, surfaces=metallic-polished, openings=none, interior_materials=concrete|metal|null, internal_atmosphere=industrial",
+        "control room: shape=rectangular, orientation=compact, scale=small, style=industrial, surfaces=metallic-polished, openings=large-glass, interior_materials=metal|tile|metal, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "exposed concrete walls",
+        "high ceilings",
+        "industrial machinery presence",
+        "utilitarian lighting"
+      ],
+      "searchDesc": "Vast, empty factory interior of The Ironclad Works, industrial decay, colossal machinery.",
+      "slug": "null-of-the-ironclad-works"
+    },
+    "loc-1767624225357-osszgt5x4": {
+      "id": "loc-1767624225357-osszgt5x4",
+      "type": "host",
+      "name": "High Fantasy Kingdom",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Skyline silhouette, geographic features, vast landscapes, distant shimmering spires, rolling hills, ancient forests, winding rivers",
+        "colorsAndLighting": "Golden hour sunlight, ethereal twilight, moonlit nights, soft glows from distant magical sources",
+        "atmosphere": "Mystical, enchanting, grand, awe-inspiring",
+        "materials": "Ancient stone, weathered wood, lush vegetation, hints of shimmering magical energy",
+        "mood": "Serene, epic, hopeful, wondrous",
+        "sounds": "Distant orchestral music, gentle wind, faint calls of mythical creatures, murmuring rivers",
+        "primary_surfaces": "Mountain ranges, deep forests, broad plains",
+        "secondary_surfaces": "River valleys, rocky outcrops, clearings",
+        "accent_features": "Distant glowing structures, waterfalls, ancient ruins peeking through vegetation",
+        "dominant": "Nature",
+        "secondary": "Mythical Structures",
+        "accent": "Magical Energy",
+        "ambient": "Peaceful",
+        "genre": "High Fantasy",
+        "architectural_tone": "Ancient, Grand, Ethereal",
+        "cultural_tone": "Noble, Mystical, Majestic",
+        "palette_bias": "Blues, Violets, Greens, Golds",
+        "flora_base": "Ancient Forests",
+        "fauna_base": "Mythical Creatures"
+      },
+      "description": "A realm steeped in ancient magic, where noble quests unfold amidst diverse and breathtaking landscapes. Towering spires and mystical forests define its horizons, hinting at the wonders within.",
+      "searchDesc": "High fantasy kingdom skyline with ancient magic, noble quests, and diverse landscapes.",
+      "slug": "high-fantasy-kingdom",
+      "structure": {
+        "spatialLayout": "Expansive vistas, dramatic natural formations, hints of grand civilization in the distance"
+      }
+    },
+    "4a72cbc5-70e9-42e3-99f0-4f58ab953306": {
+      "id": "4a72cbc5-70e9-42e3-99f0-4f58ab953306",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "c3c4f1e1-b544-4065-a127-5a5918ff8fe9": {
+      "id": "c3c4f1e1-b544-4065-a127-5a5918ff8fe9",
+      "type": "location",
+      "name": "Elven Crystal Spire",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A towering, impossibly tall spire with an organic, flowing silhouette. Its structure is composed entirely of colossal, interconnected crystal facets that catch and refract light. The spire appears to have grown from the ground rather than being built.",
+        "colorsAndLighting": "Dominated by shimmering blues, violets, and greens, with internal veins of pure white light pulsing throughout. The crystal refracts ambient light, creating dazzling spectral displays and casting soft, colorful shadows.",
+        "atmosphere": "The air within and around the spire feels charged with latent energy, cool and crisp. A gentle, almost imperceptible hum emanates from the crystal. No discernible weather effects as the structure seems to exist in its own ethereal plane.",
+        "materials": "Primarily comprised of polished, translucent crystal with a glassy sheen. Veins of pure light and possibly condensed elemental energy form internal structures. Textures are impossibly smooth and flawless.",
+        "mood": "Serene, awe-inspiring, and profoundly magical. It evokes a sense of ancient wisdom and otherworldly beauty.",
+        "sounds": "Low hum, faint chimes, soft resonance, crackling energy, ethereal whispers",
+        "primary_surfaces": "Iridescent, polished crystal facets",
+        "secondary_surfaces": "Luminescent energy veins",
+        "accent_features": "Internal light pulses, spectral refractions",
+        "dominant": "Shimmering blue and violet across the spire",
+        "secondary": "Green hues refracting and swirling",
+        "accent": "Pulsating white light veins",
+        "ambient": "Ethereal, multicolored glow",
+        "genre": null,
+        "architectural_tone": "Organic crystalline",
+        "cultural_tone": "Elven sacred sanctuary",
+        "palette_bias": "Cool jewel tones",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A breathtakingly tall spire crafted from luminous, iridescent crystal, seemingly grown rather than built.",
+      "searchDesc": "Massive, iridescent crystal spire with pulsating internal light, a sacred elven structure.",
+      "slug": "elven-crystal-spire",
+      "structure": {
+        "spatialLayout": "A single, impossibly tall, cylindrical-like form with tapering sections and spiraling, organic protrusions. The interior likely consists of vast, open chambers and winding crystalline pathways."
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "base",
+          "description": "An arching, open passage at the base leading into the spire's interior."
+        }
+      ],
+      "dominantElements": [
+        "elven_crystal_spire: shape=organic, orientation=vertical(tower), scale=massive, style=sacred, surfaces=glass|stone, openings=large-glass, interior_materials=\"glass|crystal|light|luminescent\", internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "Iridescent crystal construction",
+        "Pulsating internal luminescence",
+        "Towering, organic growth form",
+        "Ethereal glow emanating from within"
+      ],
+      "primaryMedia": "media-1767624243761-cn19uu0bv"
+    },
+    "niche-1767624264762-75crpe38k": {
+      "id": "niche-1767624264762-75crpe38k",
+      "type": "niche",
+      "name": "elven_crystal_spire",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a vast, cavernous space shaped by the natural growth of colossal crystal formations. Smooth, impossibly tall facets of translucent crystal form the walls, floor, and ceiling, creating a continuous, organic shell. Veins of pure, internal light traverse these crystalline structures.",
+        "colorsAndLighting": "Dominated by the cool jewel tones of shimmering blues and violets, with green hues refracting and swirling through the crystal. The primary light source is the pulsating white light within the embedded veins, casting a soft, multicolored glow and creating ethereal spectral displays.",
+        "atmosphere": "The air is cool, crisp, and charged with a palpable, latent magical energy. A gentle, almost imperceptible hum emanates from the crystal itself. There is a profound sense of stillness and ancient wisdom, as if time itself flows differently within this sacred space.",
+        "materials": "The interior is composed entirely of polished, translucent crystal with a flawless, glassy sheen. Embedded within are veins of pure light and condensed elemental energy, forming integral structural and decorative elements.",
+        "mood": "Serene, awe-inspiring, and profoundly magical. It evokes a sense of ancient wisdom and otherworldly beauty, offering a sanctuary of profound peace.",
+        "sounds": "Gentle hum, resonant crystalline tones, faint shimmer, magical energy pulses",
+        "spatialLayout": "A grand, cathedral-like chamber that ascends vertically, with sweeping curves and organic, flowing lines. The scale is immense, creating a sense of vastness and deep verticality within the crystalline structure.",
+        "primary_surfaces": "Iridescent, polished crystal facets",
+        "secondary_surfaces": "Luminescent energy veins",
+        "accent_features": "Internal light pulses, spectral refractions, swirling light patterns",
+        "dominant": "Shimmering blue and violet across the crystal facets",
+        "secondary": "Green hues refracting and swirling through the crystal",
+        "accent": "Pulsating white light veins embedded within the crystal",
+        "ambient": "Ethereal, multicolored glow",
+        "genre": "High Fantasy",
+        "architectural_tone": "Organic crystalline",
+        "cultural_tone": "Elven sacred sanctuary",
+        "palette_bias": "Cool jewel tones",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767624264761-mou5zlgzn",
+      "description": "You are inside the Elven Crystal Spire, a massive, organically shaped tower that ascends vertically. The interior is a spectacle of interwoven crystal and living wood, with large, arched glass openings allowing ethereal light to filter through, creating a mystical atmosphere. The surfaces of the spire itself are made of glass, stone, and luminescent materials, with a domed roof overhead.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "massive",
+        "orientation": "vertical(tower)",
+        "openings": "large-glass",
+        "openingShape": "arched",
+        "functionalType": "religious",
+        "elevation": "elevated",
+        "spatialLayout": "This towering structure is an organic spire composed of interwoven crystal and living wood, reaching skyward. Its interior is a breathtaking vertical space, bathed in ethereal light filtering through translucent walls and a domed canopy.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "crystalline pedestals with floating orbs of light",
+          "intricately carved crystal seating",
+          "hanging luminescent flora",
+          "ethereal energy currents flowing through the space"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front wall",
+          "description": "archway grand"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object shimmering crystal bridge to upper level"
+        },
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door translucent  to meditation chamber"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object glowing portal to astral plane"
+        }
+      ],
+      "dominantElements": [
+        "elven_crystal_spire: shape=organic, orientation=vertical(tower), scale=massive, style=sacred, surfaces=glass|stone, openings=large-glass, interior_materials=\"glass|crystal|light|luminescent\", internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "interwoven crystal and living wood",
+        "ethereal light filtering through translucent walls",
+        "luminescent interior surfaces"
+      ],
+      "searchDesc": "Interior of Elven Crystal Spire, crystalline, luminescent, serene, awe-inspiring, cool jewel tones.",
+      "slug": "null-of-elven-crystal-spire"
+    },
+    "loc-1767624280738-ih1f4br4m": {
+      "id": "loc-1767624280738-ih1f4br4m",
+      "type": "host",
+      "name": "Modern Metropolis",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast cityscape, towering skyscrapers, geometric forms, sprawling urban textures.",
+        "colorsAndLighting": "Bright daylight reflecting off glass, neon lights at night, stark shadows.",
+        "atmosphere": "Energetic, dynamic, ambitious.",
+        "materials": "Glass, steel, concrete, polished metal.",
+        "mood": "Awe-inspiring scale, technological advancement, bustling activity.",
+        "sounds": "Traffic hum, distant sirens, construction noises, wind whistling between buildings.",
+        "primary_surfaces": "Glass and concrete facades",
+        "secondary_surfaces": "Steel beams, metal cladding",
+        "accent_features": "Illuminated signage, public art installations, sleek rooftop elements",
+        "dominant": "Skyscrapers",
+        "secondary": "Urban infrastructure",
+        "accent": "Architectural lighting",
+        "ambient": "City bustle",
+        "genre": "Urban",
+        "architectural_tone": "Modernist, Brutalist, High-tech",
+        "cultural_tone": "Global, ambitious, fast-paced",
+        "palette_bias": "Cool blues, greys, metallic silvers, stark whites",
+        "flora_base": "Urban greenery, potted plants",
+        "fauna_base": "Urban birds, rodents"
+      },
+      "description": "A sprawling urban center of glass, steel, and concrete, defined by clean lines and towering structures. This metropolis is a hub of innovation and a testament to modern architectural achievement.",
+      "searchDesc": "Modern Metropolis: Towering glass and steel skyscrapers, clean lines, urban energy.",
+      "slug": "modern-metropolis",
+      "structure": {
+        "spatialLayout": "Dense grid, large open plazas, elevated walkways."
+      }
+    },
+    "76b6d158-58ce-490f-829f-7ddd733ddfbe": {
+      "id": "76b6d158-58ce-490f-829f-7ddd733ddfbe",
+      "type": "region",
+      "name": "Cultural District",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Grand civic buildings, well-maintained public spaces, artistic installations, tree-lined avenues.",
+        "colorsAndLighting": "Soft, inviting evening lights, warm interior glows from galleries.",
+        "atmosphere": "Sophisticated, inspiring, culturally rich.",
+        "materials": "Stone facades, wrought iron details, polished marble interiors.",
+        "mood": "Intellectual curiosity, aesthetic appreciation, refined.",
+        "sounds": "Distant classical music, hushed conversations, occasional applause.",
+        "primary_surfaces": "Stone and brick facades",
+        "secondary_surfaces": "Decorative metalwork, manicured landscaping",
+        "accent_features": "Sculptures, grand entrances, illuminated marquees",
+        "dominant": "Civic architecture",
+        "secondary": "Public art",
+        "accent": "Museum entrances",
+        "ambient": "Soft city hum",
+        "genre": null,
+        "architectural_tone": "Neoclassical, Beaux-Arts, modern civic",
+        "cultural_tone": "Artistic, intellectual, sophisticated",
+        "palette_bias": "Warm stone tones, deep reds, gold accents",
+        "flora_base": "Formal gardens, mature trees",
+        "fauna_base": "Pigeons, city birds"
+      },
+      "description": "A sophisticated area dedicated to the arts, featuring galleries, theaters, and iconic museums. This district is characterized by its grand architecture and vibrant artistic atmosphere.",
+      "searchDesc": "Cultural District: Art galleries, theaters, museums, grand architecture.",
+      "slug": "cultural-district",
+      "structure": {
+        "spatialLayout": "Ordered street grids with plazas and focal points."
+      }
+    },
+    "c382877e-ea58-492a-90a7-008409961088": {
+      "id": "c382877e-ea58-492a-90a7-008409961088",
+      "type": "location",
+      "name": "The Apex Museum of Modern Art",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive, rectangular building with a clean, minimalist aesthetic. Its facade is primarily composed of smooth, unadorned concrete, dramatically contrasted by expansive, floor-to-ceiling glass sections. The overall form is sprawling, emphasizing horizontal lines and a sense of openness.",
+        "colorsAndLighting": "The primary color palette is dominated by cool grays of concrete and the reflective tones of glass. Natural light floods the interior through the large glass entrances and walls, creating a bright and airy atmosphere. Artificial lighting is sleek and integrated, designed to highlight artwork without casting harsh shadows.",
+        "atmosphere": "The air inside feels crisp and clean, with a slight coolness that is common in large, modern public spaces. There's a sense of calm and contemplation, encouraged by the uncluttered design and the subdued ambient sounds. The overall atmosphere is one of sophisticated austerity.",
+        "materials": "Key materials include polished concrete, large panes of clear glass, and perhaps brushed aluminum for framing and accents. The textures are smooth and cool to the touch, emphasizing the modern and refined nature of the building.",
+        "mood": "The mood is one of intellectual engagement and aesthetic appreciation. It evokes a sense of awe through its scale and design, while simultaneously feeling accessible and inviting.",
+        "sounds": "Subdued footsteps, hushed conversations, distant murmurs, occasional chimes.",
+        "primary_surfaces": "Smooth, cool concrete; highly reflective, clear glass.",
+        "secondary_surfaces": "Brushed aluminum accents, polished stone floors.",
+        "accent_features": "The massive glass entrances, integrated architectural lighting, sharp geometric lines.",
+        "dominant": "Cool grey concrete expanse",
+        "secondary": "Reflective glass panels on facade",
+        "accent": "Brushed aluminum framing",
+        "ambient": "Bright natural and integrated artificial light",
+        "genre": null,
+        "architectural_tone": "Minimalist contemporary",
+        "cultural_tone": "Modern art appreciation, public cultural institution",
+        "palette_bias": "Grays, whites, cool blues",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A striking contemporary art museum with a minimalist facade and vast glass entrances. EXTERIOR VIEW.",
+      "searchDesc": "Striking contemporary art museum with minimalist facade and vast glass entrances in Modern Metropolis's Cultural District.",
+      "slug": "the-apex-museum-of-modern-art",
+      "structure": {
+        "spatialLayout": "The museum is a large, sprawling rectangular complex, designed to maximize exhibition space. Its layout is open and interconnected, with wide corridors and vast galleries, creating a sense of depth and flow."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front",
+          "description": "Leads inside the museum's main hall."
+        }
+      ],
+      "dominantElements": [
+        "museum: shape=rectangular, orientation=sprawling, scale=massive, style=minimalist, surfaces=glass|concrete, openings=large-glass, interior_materials=stone|concrete|glass, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Minimalist concrete facade",
+        "Vast glass curtain walls",
+        "Sleek, modern signage",
+        "Imposing scale"
+      ],
+      "primaryMedia": "media-1767624304067-6u1f568nv"
+    },
+    "niche-1767624416832-j5laspsfg": {
+      "id": "niche-1767624416832-j5laspsfg",
+      "type": "niche",
+      "name": "Grand Hall",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An immense, rectilinear hall with towering, smooth white walls and a polished concrete floor. The ceiling is a vast, uncluttered plane with seamlessly integrated lighting. Precisely positioned, a diverse collection of meticulously maintained cars are exhibited as sculptural pieces, creating unexpected focal points within the grand space.",
+        "colorsAndLighting": "The space is dominated by a palette of cool grays and crisp whites, with the metallic gleam of the vehicles adding subtle chromatic variations. Natural light streams in from the expansive glass walls, augmented by soft, even artificial lighting that highlights the forms and details of the exhibited cars without harsh shadows.",
+        "atmosphere": "The air is cool and still, carrying a faint, clean scent. The sheer volume of the space creates a sense of hushed reverence, interspersed with the low murmur of visitors appreciating the unusual exhibition. The atmosphere encourages contemplation and a unique form of aesthetic engagement.",
+        "materials": "The primary materials are smooth, high-gloss polished concrete underfoot and matte white plaster on the walls and ceiling. The cars themselves are presented with their inherent materials – polished chrome, painted steel, and fine upholstery – becoming integral to the architectural experience.",
+        "mood": "Intellectual curiosity meets aesthetic delight, with a sense of surprising discovery as the familiar form of a car is elevated to the status of art.",
+        "sounds": "Hushed footsteps, low murmurs, distant ambient music, the occasional soft click of a camera.",
+        "spatialLayout": "A vast, open rectangular volume with immense verticality, designed to accommodate the scale of both the architecture and the exhibited vehicles.",
+        "primary_surfaces": "High-gloss polished concrete floor, matte white plastered walls and ceiling",
+        "secondary_surfaces": "Expansive clear glass curtain walls, polished chrome and painted steel of the exhibited cars",
+        "accent_features": "The diverse forms and colors of the parked automobiles, integrated architectural lighting fixtures",
+        "dominant": "Cool grey polished concrete expanse",
+        "secondary": "Crisp white walls and ceiling",
+        "accent": "Metallic sheen and painted finishes of the cars",
+        "ambient": "Bright natural and soft, even artificial light",
+        "genre": "Urban",
+        "architectural_tone": "Minimalist contemporary",
+        "cultural_tone": "Modern art appreciation, public cultural institution",
+        "palette_bias": "Grays, whites, cool blues, metallic accents",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767624416829-37prebu48",
+      "description": "You enter a massive, sprawling grand hall with a flat roof, characterized by its minimalist style and expansive glass and concrete surfaces. The interior is bright, with stone, concrete, and glass materials, designed for entertainment purposes.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "massive",
+        "orientation": "sprawling",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A vast, open hall designed for large-scale exhibitions, featuring high ceilings and ample space for displays. The architecture emphasizes openness and light.",
+        "requiredElements": [
+          "parked cars in exhibition"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "main entrance",
+          "description": "leads outside to the Cultural District"
+        },
+        {
+          "type": "passage",
+          "position": "side wall",
+          "description": "leads to exhibition wings"
+        }
+      ],
+      "dominantElements": [
+        "Grand Hall: shape=rectangular, orientation=sprawling, scale=massive, style=minimalist, surfaces=glass|concrete, openings=large-glass, interior_materials=stone|concrete|glass, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "vast exhibition space",
+        "minimalist design",
+        "large glass facade"
+      ],
+      "searchDesc": "Grand exhibition hall with cars displayed like sculptures in a minimalist museum.",
+      "slug": "null-of-the-apex-museum-of-modern-art"
+    },
+    "loc-1767624433666-yzs7hiaz6": {
+      "id": "loc-1767624433666-yzs7hiaz6",
+      "type": "location",
+      "name": "Grand Hall",
+      "spaceType": "structure",
+      "dna": {},
+      "description": "Structure: Grand Hall",
+      "searchDesc": "Grand Hall",
+      "slug": "grand-hall",
+      "isPassThrough": true
+    },
+    "niche-1767624447377-8kzsdzwth": {
+      "id": "niche-1767624447377-8kzsdzwth",
+      "type": "niche",
+      "name": "Grand Hall",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This massive, rectangular hall is a testament to minimalist contemporary design. Sprawling and open, its primary visual impact comes from the towering glass curtain walls that blur the lines between interior and exterior, juxtaposed with vast, unbroken planes of concrete and subtle stone accents.",
+        "colorsAndLighting": "The space is awash in bright, even light, a blend of natural illumination streaming through the expansive glass and sophisticated, integrated artificial lighting. The palette is dominated by cool grays of concrete and stone, contrasted with the crispness of white architectural elements and the metallic sheen of displayed objects.",
+        "atmosphere": "The air is cool, still, and carries a faint, sterile scent. The immense scale creates a sense of hushed reverence and quiet contemplation, punctuated by the distant, soft murmurs of visitors. It fosters intellectual curiosity and an appreciation for refined aesthetics.",
+        "materials": "Polished concrete forms the primary flooring, reflecting the bright light. Walls are a combination of large-format stone panels and smooth, matte plaster. The extensive use of glass in the curtain walls and internal partitions adds a sense of transparency and lightness.",
+        "mood": "A sophisticated and intellectually stimulating environment, encouraging quiet observation and aesthetic appreciation of form and light.",
+        "sounds": "Soft echoes, hushed footsteps, distant murmurs, gentle hum of climate control.",
+        "spatialLayout": "A vast, rectangular space characterized by its sprawling orientation. The sheer scale and uncluttered nature create a sense of depth and an uninterrupted visual flow across its expanse.",
+        "primary_surfaces": "Expansive polished concrete floor, smooth matte plaster walls, large-format stone panels",
+        "secondary_surfaces": "Floor-to-ceiling clear glass curtain walls, integrated ceiling lighting panels",
+        "accent_features": "Artistic sculptural installations, subtle metallic detailing on furniture or fixtures, strategically placed planters with architectural greenery",
+        "dominant": "Cool grey of the polished concrete floor",
+        "secondary": "Crisp white of the plaster walls and ceiling",
+        "accent": "Metallic accents on sculptures and fixtures, natural tones of stone",
+        "ambient": "Bright, even, and cool",
+        "genre": "Urban",
+        "architectural_tone": "Minimalist contemporary",
+        "cultural_tone": "Modern art appreciation, public cultural institution",
+        "palette_bias": "Grays, whites, cool blues, metallic accents",
+        "flora_base": "Strategically placed architectural plants",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767624447376-cdr2xioau",
+      "description": "You are inside the Grand Hall. Sunlight streams through massive glass panels, illuminating the vast, open space. The minimalist design features polished concrete floors and walls, with exposed structural elements adding to the industrial aesthetic. The atmosphere is bright and airy.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "civic",
+        "elevation": "ground-level",
+        "spatialLayout": "A vast, open hall with clean lines and abundant natural light. Minimalist design emphasizes scale and material.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "main entrance",
+          "description": "leads outside to the plaza"
+        },
+        {
+          "type": "passage",
+          "position": "far end",
+          "description": "leads to other civic areas"
+        }
+      ],
+      "dominantElements": [
+        "Information Desk: shape=rectangular, orientation=compact, scale=small, style=minimalist, surfaces=concrete, openings=minimal, interior_materials=concrete|concrete|concrete, internal_atmosphere=bright",
+        "Seating Area: shape=irregular, orientation=sprawling, scale=medium, style=minimalist, surfaces=concrete, openings=none, interior_materials=concrete|concrete|concrete, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "expansive floor-to-ceiling glass walls",
+        "polished concrete flooring",
+        "exposed structural elements",
+        "minimalist art installations"
+      ],
+      "searchDesc": "Massive minimalist grand hall with glass walls, concrete floors, and art.",
+      "slug": "interior-of-grand-hall-shape-rectangular-orientation-sprawling-scale-massive-style-minimalist-surfaces-glass-concrete-openings-large-glass-interior-materials-stone-concrete-glass-internal-atmosphere-bright"
+    },
+    "loc-1767624462102-8um2c3fi9": {
+      "id": "loc-1767624462102-8um2c3fi9",
+      "type": "location",
+      "name": "car",
+      "spaceType": "structure",
+      "dna": {},
+      "description": "Structure: car",
+      "searchDesc": "car",
+      "slug": "car",
+      "isPassThrough": true
+    },
+    "niche-1767624473915-n1eebhy0y": {
+      "id": "niche-1767624473915-n1eebhy0y",
+      "type": "niche",
+      "name": "Car",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior presents as a refined, contained environment. The forms are sleek and ergonomic, with smooth, flowing lines dominating the dashboard and seating. The scale feels intimate yet expansive due to the large glass surfaces.",
+        "colorsAndLighting": "A cool palette of charcoal grays, muted blues, and off-whites is accented by the subtle gleam of brushed aluminum and chrome. Soft, diffused interior lighting emanates from integrated LED strips, casting a gentle glow without harsh shadows.",
+        "atmosphere": "The air within is still and climate-controlled, carrying a faint, clean scent of fine leather and electronics. There is a sense of focused quietude, encouraging detailed observation of the craftsmanship.",
+        "materials": "Luxurious, tactile materials like supple, matte leather, brushed aluminum, and dark, polished wood veneers define the surfaces. The touch surfaces feel smooth and cool to the touch.",
+        "mood": "Sophisticated and contemplative, with an undercurrent of quiet luxury and advanced engineering.",
+        "sounds": "Hushed silence, faint electronic hum, soft fabric rustle",
+        "spatialLayout": "The cockpit is an enclosed, contoured space designed for focused interaction. The layout emphasizes the driver's position with all elements strategically placed within reach.",
+        "primary_surfaces": "Supple, matte leather upholstery; brushed aluminum dashboard panels",
+        "secondary_surfaces": "Dark, polished wood trim; tinted glass windshield",
+        "accent_features": "Integrated LED ambient lighting, geometric stitching, minimalist digital displays",
+        "dominant": "Charcoal gray leather expanse",
+        "secondary": "Muted blue stitching and accents",
+        "accent": "Brushed aluminum and chrome details",
+        "ambient": "Soft, diffused, cool-toned",
+        "genre": "Urban",
+        "architectural_tone": "Minimalist contemporary",
+        "cultural_tone": "Modern art appreciation, public cultural institution",
+        "palette_bias": "Grays, whites, cool blues, metallic accents",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767624473913-blg2vbwk8",
+      "description": "Inside the car, a compact space with seating for the driver and passengers.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "small",
+        "orientation": "horizontal",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "transportation",
+        "elevation": "ground-level",
+        "spatialLayout": "A compact interior designed for seating passengers and the driver, with controls and a dashboard at the front. The focus is on functionality and efficient use of space.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "polished concrete floor",
+          "stark white walls",
+          "suspended spotlights",
+          "a single futuristic concept car",
+          "interactive digital information kiosks",
+          "brushed metal stanchions",
+          "low bench seating integrated into walls"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door large glass s"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door concealed service"
+        },
+        {
+          "type": "archway",
+          "position": "right",
+          "description": "archway wide  leading to gallery"
+        },
+        {
+          "type": "window",
+          "position": "center",
+          "description": "window minimalist display  rear wall"
+        }
+      ],
+      "dominantElements": [
+        "car interior: shape=rectangular, orientation=horizontal, scale=small, style=modern, surfaces=fabric|plastic|leather, openings=minimal, interior_materials=fabric|plastic|leather, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "steering wheel",
+        "dashboard",
+        "seats"
+      ],
+      "searchDesc": "Inside a luxury car, artfully displayed in a modern hall.",
+      "slug": "interior-of-car"
+    },
+    "loc-1767624506524-s12xugr72": {
+      "id": "loc-1767624506524-s12xugr72",
+      "type": "host",
+      "name": "The Craggy Peaks",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Skyline silhouette, geographic features, vast landscapes, rugged terrain, imposing peaks, deep valleys, sheer cliffs",
+        "colorsAndLighting": "Harsh, natural sunlight, deep shadows, muted earth tones, occasional snow caps",
+        "atmosphere": "Wild, untamed, majestic, awe-inspiring, isolated",
+        "materials": "Bare rock, scree, granite, weathered stone, sparse vegetation",
+        "mood": "Grandeur, solitude, challenge, ancient power",
+        "sounds": "Wind whistling, distant rockfalls, echo of emptiness, occasional wildlife calls",
+        "primary_surfaces": "Stone cliffs, rocky slopes",
+        "secondary_surfaces": "Boulder fields, gravel paths",
+        "accent_features": "Sharp peaks, deep ravines, ancient rock formations",
+        "dominant": "Mountain range",
+        "secondary": "Geological formations",
+        "accent": "Harsh sunlight and shadow",
+        "ambient": "Wind",
+        "genre": "Fantasy",
+        "architectural_tone": "Natural",
+        "cultural_tone": "Primal",
+        "palette_bias": "Earthy",
+        "flora_base": "Alpine",
+        "fauna_base": "Mountain"
+      },
+      "description": "A formidable mountain range characterized by its jagged, imposing peaks and deep, hidden valleys. Ancient geological formations and dramatic cliffs define its rugged landscape.",
+      "searchDesc": "Rugged mountain range, jagged peaks, hidden valleys, ancient formations",
+      "slug": "the-craggy-peaks",
+      "structure": {
+        "spatialLayout": "Vast, open, vertical, cavernous"
+      }
+    },
+    "3cdfecae-7d3a-422c-803a-8be617cec445": {
+      "id": "3cdfecae-7d3a-422c-803a-8be617cec445",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "fb8d09bc-7dfe-44f0-9f95-00c1676d2563": {
+      "id": "fb8d09bc-7dfe-44f0-9f95-00c1676d2563",
+      "type": "location",
+      "name": "The Grotto Hearth",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "An organic, irregularly shaped dwelling seamlessly carved into the mountain's natural stone. The scale is medium, appearing compact and grounded within its rocky environment. The facade is rough-hewn stone, suggesting a deliberate integration with the mountain's natural form.",
+        "colorsAndLighting": "Dominant earthy tones of brown and grey from the stone. A warm, flickering light emanates from within, casting soft shadows on the exterior. Subtle hints of ochre and orange from the hearth's glow.",
+        "atmosphere": "The air around the grotto is still and quiet, carrying a faint scent of woodsmoke and damp earth. The temperature is noticeably warmer near the entrance, suggesting the comfort of a fire within. There is no discernible wind or weather affecting this sheltered spot.",
+        "materials": "The primary material is rough, unpolished stone, showing natural variations in texture and color. Some areas may exhibit a smooth, fire-polished finish near the hearth opening. The condition is weathered but well-maintained, indicating long-term habitation.",
+        "mood": "The Grotto Hearth evokes a strong sense of cozy security and ancient comfort. It feels like a safe haven, a place of warmth and respite from the harsh mountain environment.",
+        "sounds": "Distant wind, crackling fire, muted voices, dripping water.",
+        "primary_surfaces": "Rough, unworked mountain stone",
+        "secondary_surfaces": "Smoothed, fire-polished stone around the hearth",
+        "accent_features": "Subtle smoke plume",
+        "dominant": "Earthy brown and grey",
+        "secondary": "Warm ochre and orange glow",
+        "accent": "Faint white smoke",
+        "ambient": "Warm, flickering interior light",
+        "genre": null,
+        "architectural_tone": "Ancient rustic stone dwelling",
+        "cultural_tone": "Dwelling of mountain folk or hermits, focused on hearth and home",
+        "palette_bias": "Earth tones",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A carved cave home seamlessly integrated into the sheer rock face of the mountain. EXTERIOR VIEW.",
+      "searchDesc": "Carved cave home in a mountain, rustic, cozy, and integrated into the rock face.",
+      "slug": "the-grotto-hearth",
+      "structure": {
+        "spatialLayout": "The dwelling's shape is organic and flows with the natural contours of the cave. The internal space appears to be of a moderate depth, with the hearth as the central focal point."
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "Leads into the main living area."
+        }
+      ],
+      "dominantElements": [
+        "Cave Dwelling: shape=organic, orientation=compact, scale=medium, style=rustic, surfaces=stone, openings=minimal, interior_materials=\"stone|stone|stone\", internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "Carved stone entrance",
+        "Subtle smoke plume",
+        "Integrated mountain home",
+        "Warm interior glow"
+      ],
+      "primaryMedia": "media-1767624526704-qmk7bqy1y"
+    },
+    "niche-1767624546883-u92g8kmpr": {
+      "id": "niche-1767624546883-u92g8kmpr",
+      "type": "niche",
+      "name": "Cave Dwelling",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An organic, irregularly shaped chamber carved directly into the mountain. The scale is medium, feeling compact and grounded. The surfaces are predominantly rough, unworked stone, with smoother, fire-polished areas around the hearth.",
+        "colorsAndLighting": "Dominant earthy tones of brown and grey from the stone. A warm, flickering light emanates from the hearth, casting soft, dancing shadows across the interior surfaces. Subtle hints of ochre and orange from the fire's glow.",
+        "atmosphere": "The air within the grotto is still, warm, and still. It carries a faint, comforting scent of aged woodsmoke and damp earth. The temperature is noticeably warmer than the outside, creating a palpable sense of cozy security.",
+        "materials": "The interior is entirely composed of rough, unpolished mountain stone, showcasing natural textures and variations. The area immediately surrounding the hearth features smoothed, fire-polished stone, worn smooth by centuries of use. The condition is weathered but exceptionally well-maintained.",
+        "mood": "Evokes a strong sense of cozy security and ancient comfort. It feels like an unassailable safe haven, a place of profound warmth and respite.",
+        "sounds": "Flickering fire, settling stones, soft crackle, faint echoes",
+        "spatialLayout": "A single, organically shaped chamber with gently sloping walls and ceiling, forming a cohesive, cave-like space. The hearth is centrally located, anchoring the room.",
+        "primary_surfaces": "Rough, unworked mountain stone",
+        "secondary_surfaces": "Smoothed, fire-polished stone around the hearth",
+        "accent_features": "A constant, warm glow emanating from the hearth",
+        "dominant": "Earthy brown and grey stone",
+        "secondary": "Warm ochre and orange glow from hearth",
+        "accent": "Subtle woodsmoke scent",
+        "ambient": "Warm, flickering interior light",
+        "genre": "Fantasy",
+        "architectural_tone": "Ancient rustic stone dwelling",
+        "cultural_tone": "Dwelling of mountain folk or hermits, focused on hearth and home",
+        "palette_bias": "Earth tones",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767624546881-xuo3k995f",
+      "description": "You step into a surprisingly cozy cave dwelling. The walls are the raw, unworked stone of the earth, forming an organic, rounded space. A small, inviting fireplace crackles in the center, casting a dim, warm glow.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "compact",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "A cozy, organically shaped living space carved directly into the earth, with natural rock formations forming its walls and ceiling. It feels sheltered and secluded.",
+        "requiredElements": []
+      },
+      "navigableElements": [],
+      "dominantElements": [
+        "Fireplace: shape=organic, orientation=centered, scale=small, style=rustic, surfaces=stone, openings=open-passage, interior_materials=\"stone|stone|stone\", internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "natural rock walls",
+        "earthy atmosphere",
+        "integrated hearth"
+      ],
+      "searchDesc": "Ancient stone grotto dwelling, cozy hearth, warm earth tones, safe mountain haven.",
+      "slug": "null-of-the-grotto-hearth"
+    },
+    "loc-1767624568957-zzkmcei94": {
+      "id": "loc-1767624568957-zzkmcei94",
+      "type": "host",
+      "name": "The Arid Expanse",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast desert plains, rolling sand dunes, distant mesas, clear sky",
+        "colorsAndLighting": "Harsh, bright sunlight creating strong shadows, warm sandy tones, deep blue sky",
+        "atmosphere": "Dry, hot, and expansive",
+        "materials": "Sand, rock formations, sparse dry vegetation",
+        "mood": "Vast, empty, harsh yet beautiful",
+        "sounds": "Wind whistling, rustling sand, distant animal calls",
+        "primary_surfaces": "Sand, rock",
+        "secondary_surfaces": "Dry earth, sparse vegetation",
+        "accent_features": "Distant rock formations, heat shimmer",
+        "dominant": "Sand",
+        "secondary": "Rock",
+        "accent": "Sunlight",
+        "ambient": "Wind",
+        "genre": "Desert",
+        "architectural_tone": "Natural",
+        "cultural_tone": "Nomadic",
+        "palette_bias": "Warm earth tones",
+        "flora_base": "Cacti",
+        "fauna_base": "Lizards"
+      },
+      "description": "Vast, sun-baked deserts stretch endlessly to the horizon, interrupted only by the shimmering heat haze and the occasional hardy scrub. The immense sky above shifts through a spectrum of blues and fiery oranges as the sun traverses its course.",
+      "searchDesc": "Vast desert landscape with mesas and dunes, under a clear blue sky.",
+      "slug": "the-arid-expanse",
+      "structure": {
+        "spatialLayout": "Open, boundless, horizontal emphasis"
+      }
+    },
+    "11bf3078-d7a5-4233-ac19-7e8a4bd18064": {
+      "id": "11bf3078-d7a5-4233-ac19-7e8a4bd18064",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "1134c610-6f0d-40f6-a1e4-bad1610408e4": {
+      "id": "1134c610-6f0d-40f6-a1e4-bad1610408e4",
+      "type": "location",
+      "name": "Nomad Encampment",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Domed tents constructed from heavy, richly colored fabrics, adorned with intricate geometric patterns and embroidery. These structures are anchored with robust poles and ropes, creating a cluster of inviting shelters.",
+        "colorsAndLighting": "Warm, earthy tones dominate, with vibrant jewel tones of crimson, sapphire, and emerald from the tent fabrics. Sunlight filters through the fabric, creating a soft, diffused interior light.",
+        "atmosphere": "The air is dry and carries the scent of exotic spices and desert flora. A gentle breeze rustles the tent fabrics. The temperature is warm, with pockets of coolness inside the tents.",
+        "materials": "The primary materials are heavy, woven fabrics, giving the tents a soft yet durable exterior. Accents of weathered brass and carved wood are visible on tent poles and decorative elements.",
+        "mood": "Inviting and exotic, with a sense of ancient tradition and comfortable hospitality.",
+        "sounds": "Whispering wind, distant camel calls, muffled conversation, clinking metal",
+        "primary_surfaces": "Durable, richly patterned woven fabrics",
+        "secondary_surfaces": "Weathered brass poles, carved wooden accents",
+        "accent_features": "Intricate embroidery, colorful tassels, plush textile hangings",
+        "dominant": "Crimson and gold",
+        "secondary": "Deep blue and earthy brown",
+        "accent": "Emerald green embroidery",
+        "ambient": "Warm, diffused sunlight",
+        "genre": null,
+        "architectural_tone": "ornate nomadic",
+        "cultural_tone": "Desert nomads, temporary shelters",
+        "palette_bias": "Warm jewel tones, earthy neutrals",
+        "flora_base": "Sparse desert scrub",
+        "fauna_base": "Distant camels"
+      },
+      "description": "A cluster of ornate tents spread across the desert sands.",
+      "searchDesc": "Ornate desert tents with vibrant fabrics and plush interiors, set in arid sands.",
+      "slug": "nomad-encampment",
+      "structure": {
+        "spatialLayout": "A sprawling, organic arrangement of cylindrical tents, creating open communal spaces between them. The layout is dictated by the needs of nomadic life."
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center of the encampment",
+          "description": "The main entrance into one of the larger, more ornate tents, leading to a plush interior."
+        }
+      ],
+      "dominantElements": [
+        "ornate tent: shape=cylindrical, orientation=centered, scale=medium, style=sacred, surfaces=fabric, openings=open-passages, interior_materials=fabric|fabric|fabric, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "Intricate embroidered fabrics draped over tent poles",
+        "Richly colored rugs and cushions visible through open entrances",
+        "The subtle shimmer of metalwork on tent seams and supports",
+        "Distant sounds of desert wind and animal calls"
+      ],
+      "primaryMedia": "media-1767624621425-p8b1ykae5"
+    },
+    "niche-1767624655317-vxisvo14d": {
+      "id": "niche-1767624655317-vxisvo14d",
+      "type": "niche",
+      "name": "Ornate Tent",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a spacious, domed chamber enclosed by heavy, richly colored woven fabrics. Intricate geometric patterns and stylized motifs adorn the fabric walls. Robust, weathered brass poles provide structural support.",
+        "colorsAndLighting": "Warm jewel tones of crimson, sapphire, and emerald are deeply saturated in the fabric. Diffused sunlight filters through the tent material, casting a soft, warm glow. Brass lanterns emit a gentle, flickering light.",
+        "atmosphere": "The air within is dry and carries the faint scent of exotic spices and desert herbs. A subtle stillness pervades the space, broken only by the occasional rustle of fabric. The temperature is comfortably warm, offering respite from the desert heat.",
+        "materials": "Primary surfaces are thick, durable woven fabrics with intricate embroidery. Secondary surfaces include weathered brass poles and decorative metal accents. Soft, plush textiles are used for furnishings.",
+        "mood": "Inviting, exotic, and deeply traditional. A sense of ancient hospitality and comfortable refuge.",
+        "sounds": "Soft fabric rustle, distant wind, faint clinking of metal, muffled voices.",
+        "spatialLayout": "A single, expansive domed space that feels both open and enclosed. The layout is designed for communal gathering and comfortable living.",
+        "primary_surfaces": "Richly patterned, embroidered woven fabrics",
+        "secondary_surfaces": "Weathered brass poles and decorative metalwork",
+        "accent_features": "Colorful tassels, hanging textile art, scattered brass lanterns",
+        "dominant": "Crimson and gold fabric walls",
+        "secondary": "Deep blue embroidered patterns",
+        "accent": "Emerald green embroidery details",
+        "ambient": "Warm, diffused sunlight",
+        "genre": "Desert",
+        "architectural_tone": "ornate nomadic",
+        "cultural_tone": "Temporary shelters for desert nomads, communal living",
+        "palette_bias": "Warm jewel tones, earthy neutrals",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767624655315-1uirkb1tp",
+      "description": "You are inside a medium-sized, ornate tent with a cylindrical form and a domed roof. The interior is made of fabric, creating a cozy and sacred atmosphere. The main entrance is an open passage leading back outside.",
+      "structure": {
+        "form": "cylindrical",
+        "roofType": "domed",
+        "scale": "medium",
+        "orientation": "centered",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A medium-sized cylindrical tent with a domed roof, providing a cozy and somewhat sacred atmosphere. The primary entrance is an open passage.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "intricately woven prayer rugs",
+          "low carved wooden seating benches",
+          "ornate brass lanterns emitting warm light",
+          "scattered cushions with tribal patterns",
+          "low table laden with dates and figs"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "front",
+          "description": "passage open-s and rear"
+        },
+        {
+          "type": "object",
+          "position": "left wall",
+          "description": "object fabric partiti"
+        }
+      ],
+      "dominantElements": [
+        "Ornate Tent Interior: shape=cylindrical, orientation=centered, scale=medium, style=sacred, surfaces=fabric, openings=open-passages, interior_materials=fabric|fabric|fabric, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "cylindrical shape",
+        "domed roof",
+        "ornate fabric interior",
+        "sacred/cozy atmosphere"
+      ],
+      "searchDesc": "Ornate nomadic tent interior with rich jewel tones and desert motifs.",
+      "slug": "null-of-nomad-encampment"
+    },
+    "loc-1767624666989-xk7kvjhjl": {
+      "id": "loc-1767624666989-xk7kvjhjl",
+      "type": "host",
+      "name": "Xylos Deep",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast, dark ocean depths punctuated by colossal, alien geological formations and the distant, glowing silhouettes of immense underwater cities. Bioluminescent flora creates ethereal, glowing landscapes on the seabed.",
+        "colorsAndLighting": "The dominant palette is deep blues and blacks, illuminated by the pervasive, soft glow of bioluminescent organisms and the distant, structured lights of civilizations. Occasional shafts of light penetrate from the surface far above.",
+        "atmosphere": "Crushing pressure, profound silence broken by the calls of alien marine life, and a pervasive sense of ancient mystery. The water is dense and rich with minerals.",
+        "materials": "Primarily natural, immense rock formations, dense mineral deposits, and the organic, bioluminescent materials of its unique flora. Engineered structures are often integrated with these natural elements.",
+        "mood": "Mysterious, ancient, awe-inspiring, and alien.",
+        "sounds": "Deep, resonant whale-like calls, clicking and chirping of unknown aquatic life, low rumble of geothermal activity, and the distant murmur of underwater currents.",
+        "primary_surfaces": "Jagged rock formations, deep seabed sediment, dense mineral clusters",
+        "secondary_surfaces": "Bioluminescent flora, immense coral-like structures, filtered sunlight",
+        "accent_features": "Gigantic hydrothermal vents, deep-sea trenches, vast bioluminescent fields",
+        "dominant": "Ocean, pressure, darkness",
+        "secondary": "Bioluminescence, alien geology",
+        "accent": "Geothermal activity, surface light penetration",
+        "ambient": "Deep ocean, alien calls, mineral rich water",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Organic, Colossal, Alien",
+        "cultural_tone": "Ancient, Adaptable, Mysterious",
+        "palette_bias": "Deep Blues, Blacks, Silver, Bioluminescent Greens and Blues",
+        "flora_base": "Bioluminescent kelp forests, deep-sea fungi blooms, chemotrophic organisms",
+        "fauna_base": "Gigantic leviathans, bioluminescent shoals, deep-sea predators"
+      },
+      "description": "An alien world covered by a vast, bioluminescent ocean, home to immense underwater civilizations. The planet's crushing depths conceal advanced societies that have adapted to thrive in an environment alien to most life forms. Gigantic geological formations and unique aquatic ecosystems define its surface.",
+      "searchDesc": "Alien world with a vast bioluminescent ocean and immense underwater civilizations",
+      "slug": "xylos-deep",
+      "structure": {
+        "spatialLayout": "Vast, open ocean expanses punctuated by colossal underwater geological features and sprawling, city-sized structures. Life adapts to the immense scale and pressure."
+      }
+    },
+    "99a8401e-734b-4f5c-8e41-629674885570": {
+      "id": "99a8401e-734b-4f5c-8e41-629674885570",
+      "type": "region",
+      "name": "The Abyssal Plains",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast, dark expanses punctuated by colossal, anchored structures, with bioluminescent flora and fauna dotting the seafloor. Neighborhoods are interconnected by robust tunnels and access shafts, forming intricate, sprawling networks.",
+        "colorsAndLighting": "Dominated by deep blues and blacks, with intermittent bursts of bioluminescence from marine life and internal lighting sources. Soft, diffused light emanates from habitats.",
+        "atmosphere": "A sense of immense pressure, profound quietude, and hidden grandeur. The air is humid and smells faintly of ozone and minerals.",
+        "materials": "Primarily reinforced, dark composite alloys, dense, pressure-resistant concretes, and heavily shielded glass. Substrates are often naturally occurring seabed materials mixed with engineered aggregates.",
+        "mood": "Isolated, awe-inspiring, enduring, and technologically advanced.",
+        "sounds": "Low hum of life support systems, distant creaking of immense structures under pressure, muffled calls of abyssal creatures, and occasional sonar pings.",
+        "primary_surfaces": "Dark, textured composites and reinforced concrete.",
+        "secondary_surfaces": "Heavily insulated metallic panels and reinforced glass.",
+        "accent_features": "Bioluminescent flora, geothermal vents, and access portals to deeper regions.",
+        "dominant": "Darkness, pressure, immense scale",
+        "secondary": "Bioluminescence, engineered structures",
+        "accent": "Geothermal activity, specialized lighting",
+        "ambient": "Deep sea darkness, low hums, mineral scent",
+        "genre": null,
+        "architectural_tone": "Industrial Brutalism, Oceanic Engineering",
+        "cultural_tone": "Resilient Survivalists, Resourceful Innovators",
+        "palette_bias": "Deep Blues, Blacks, Silver, Bioluminescent Greens and Blues",
+        "flora_base": "Bioluminescent algae, deep-sea fungi",
+        "fauna_base": "Abyssal invertebrates, bio-engineered organisms"
+      },
+      "description": "The deepest trenches and plains of Xylos, where colossal structures anchor civilizations to the seabed. These regions are characterized by immense, engineered habitats designed to withstand extreme pressure and harness geothermal energy. Life here is a testament to resilience and advanced technological adaptation.",
+      "searchDesc": "Deepest trenches of Xylos, anchored by colossal underwater civilizations",
+      "slug": "the-abyssal-plains",
+      "structure": {
+        "spatialLayout": "Sprawling, interconnected, and deeply layered. Habitats are built downwards and outwards, conforming to geological features."
+      }
+    },
+    "486c0702-aa0f-4899-b022-24ade174fbef": {
+      "id": "486c0702-aa0f-4899-b022-24ade174fbef",
+      "type": "location",
+      "name": "The Hydro-Habitation Dome",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive, domed structure with a geodesic framework. Polished metallic surfaces reflect the dim abyssal light, interspersed with large, reinforced glass panels offering glimpses inside. Sprawling anchor points secure it to the seabed.",
+        "colorsAndLighting": "Dominated by cool, metallic silvers and deep oceanic blues. Internal lighting is a bright, artificial white, with soft, integrated bioluminescent strips along the exterior.",
+        "atmosphere": "The air within is clean, recycled, and maintained at a comfortable temperature. A low hum of machinery is constant, punctuated by the soft whir of life support systems. No external weather influences the interior.",
+        "materials": "Primary materials are polished, high-tensile alloys and reinforced, multi-layered glass. Interior surfaces are a mix of smooth metallic panels, durable concrete flooring, and transparent glass.",
+        "mood": "A sense of secure, advanced civilization thriving against the odds in an alien environment.",
+        "sounds": "Gentle hum, whirring machinery, distant sonar pings, muffled water pressure.",
+        "primary_surfaces": "Polished metallic alloys",
+        "secondary_surfaces": "Reinforced glass panels",
+        "accent_features": "Integrated bioluminescent lighting strips, geodesic structural lines",
+        "dominant": "Silver across the dome's exterior",
+        "secondary": "Deep blue within the oceanic context",
+        "accent": "Bright white internal lighting",
+        "ambient": "Bright artificial",
+        "genre": "Sci-fi",
+        "architectural_tone": "Futuristic Industrial",
+        "cultural_tone": "Human or advanced alien colony, focused on survival and self-sufficiency",
+        "palette_bias": "Metallic",
+        "flora_base": "Hydroponic gardens (internal)",
+        "fauna_base": "None"
+      },
+      "description": "A massive, pressurized dome anchored to the seabed, housing a self-sustaining colony. EXTERIOR VIEW.",
+      "searchDesc": "Massive pressurized dome on the seabed, a futuristic underwater sci-fi colony.",
+      "slug": "the-hydro-habitation-dome",
+      "structure": {
+        "spatialLayout": "A single, colossal domed space with internal levels and modular sections branching off. The primary shape is a perfect hemisphere, implying vast interior volume."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center of the main facade",
+          "description": "The main entrance to the Hydro-Habitation Dome, leading inside."
+        }
+      ],
+      "dominantElements": [
+        "Hydro-Habitation Dome: shape=domed, orientation=centered, scale=massive, style=futuristic, surfaces=metallic-polished|glass, openings=large-glass, interior_materials='metallic|glass|concrete', internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Geodesic structure",
+        "Submerged anchor points",
+        "Integrated bioluminescent lighting",
+        "Pressurized viewport sections"
+      ],
+      "primaryMedia": "media-1767624691492-hgo2fj3ds"
+    },
+    "niche-1767624980378-u7j51ez1o": {
+      "id": "niche-1767624980378-u7j51ez1o",
+      "type": "niche",
+      "name": "Hydro-Habitation Dome",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This is the central nexus of the Hydro-Habitation Dome, a circular chamber with highly polished metallic walls and a vaulted ceiling. Complex arrays of machinery, integrated conduits, and glowing diagnostic panels dominate the visual landscape.",
+        "colorsAndLighting": "The space is bathed in the cool, stark white of advanced artificial lighting, augmented by the soft, pulsing blues and greens of status indicators. Metallic surfaces reflect and amplify this illumination.",
+        "atmosphere": "The air within is impeccably clean, dry, and precisely temperature-controlled. A constant, low-frequency hum of operational machinery provides a subtle sonic backdrop, with occasional soft whirs from life support regulators.",
+        "materials": "Dominated by seamless, high-tensile alloy panels with a mirror-like polish. Durable, impact-resistant transparent composite forms the main viewport, and textured metallic grating covers the floor.",
+        "mood": "A profound sense of secure, operational efficiency and quiet competence. This is the control center for survival.",
+        "sounds": "Humming machinery, soft whirs, rhythmic pulsing, faint static",
+        "spatialLayout": "A functionally designed circular chamber with a high ceiling, optimized for system access and maintenance. Depth is provided by the layering of conduits and control consoles against the curved walls.",
+        "primary_surfaces": "Polished high-tensile alloy panels",
+        "secondary_surfaces": "Reinforced transparent composite, metallic grating",
+        "accent_features": "Integrated diagnostic readouts, illuminated status indicators, exposed conduit networks",
+        "dominant": "White across illuminated panels and diagnostic screens",
+        "secondary": "Silver across polished alloy walls",
+        "accent": "Blue and green for status indicators",
+        "ambient": "Bright artificial",
+        "genre": "Sci-fi",
+        "architectural_tone": "Futuristic Industrial",
+        "cultural_tone": "Human or advanced alien colony, focused on survival and self-sufficiency",
+        "palette_bias": "Metallic",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767624980377-4y0stonx8",
+      "description": "You are inside the massive, domed Hydro-Habitation Dome. The primary structure is a gleaming, polished metallic shell with expansive glass panels offering breathtaking views of the submerged world. The interior is bright and advanced, designed for comfortable living and scientific research.",
+      "structure": {
+        "form": "domed",
+        "roofType": "domed",
+        "scale": "massive",
+        "orientation": "centered",
+        "openings": "large-glass",
+        "openingShape": "circular",
+        "functionalType": "residential",
+        "elevation": "floating",
+        "spatialLayout": "A vast, central domed space with panoramic views of the ocean. The living areas are integrated into the lower levels, while research and life-support systems occupy the core.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "lower-level",
+          "description": "leading to a maintenance corridor"
+        },
+        {
+          "type": "stairs",
+          "position": "central core",
+          "description": "leading to upper observation decks"
+        }
+      ],
+      "dominantElements": [
+        "Living Quarters: shape=modular, orientation=compact, scale=medium, style=futuristic, surfaces=metallic-smooth|fabric, openings=minimal, interior_materials='fabric|resin|metallic', internal_atmosphere=cozy",
+        "Observation Deck: shape=circular, orientation=centered, scale=large, style=futuristic, surfaces=glass|metallic, openings=large-glass, interior_materials='glass|metallic|tile', internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Underwater panoramic views",
+        "Integrated bio-luminescent lighting",
+        "Atmospheric pressure regulation systems"
+      ],
+      "searchDesc": "The functional core of the Hydro-Habitation Dome, dominated by metallic machinery and life support systems.",
+      "slug": "null-of-the-hydro-habitation-dome"
     }
   },
   "views": {},
@@ -237,9 +1785,224 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1767623985499-ujusq256r",
+      "type": "host",
+      "children": [
+        {
+          "id": "220abf5f-8ab2-4f9a-8b7a-4c533f321f2c",
+          "type": "region",
+          "children": [
+            {
+              "id": "2bfdca79-e6da-484b-8b69-8bb5e81b19bc",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767624035494-8p6cuc57b",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767624082496-5n7hl13w2",
+      "type": "host",
+      "children": [
+        {
+          "id": "b2ef7799-63ca-44ba-a89d-717eb9eeaa25",
+          "type": "region",
+          "children": [
+            {
+              "id": "86695873-9c08-4abc-9da1-1961a948a01f",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767624139411-260e70h89",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767624169971-p0bh7bniq",
+      "type": "host",
+      "children": [
+        {
+          "id": "f84c7b9d-3607-4012-be0d-b8e21f8e8d1a",
+          "type": "region",
+          "children": [
+            {
+              "id": "2d3cf6f9-6112-47b9-84a2-755992753e3b",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767624210713-hts0kn4pe",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767624225357-osszgt5x4",
+      "type": "host",
+      "children": [
+        {
+          "id": "4a72cbc5-70e9-42e3-99f0-4f58ab953306",
+          "type": "region",
+          "children": [
+            {
+              "id": "c3c4f1e1-b544-4065-a127-5a5918ff8fe9",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767624264762-75crpe38k",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767624280738-ih1f4br4m",
+      "type": "host",
+      "children": [
+        {
+          "id": "76b6d158-58ce-490f-829f-7ddd733ddfbe",
+          "type": "region",
+          "children": [
+            {
+              "id": "c382877e-ea58-492a-90a7-008409961088",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767624416832-j5laspsfg",
+                  "type": "niche",
+                  "children": [
+                    {
+                      "id": "loc-1767624433666-yzs7hiaz6",
+                      "type": "location",
+                      "children": [
+                        {
+                          "id": "niche-1767624447377-8kzsdzwth",
+                          "type": "niche",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "loc-1767624462102-8um2c3fi9",
+                      "type": "location",
+                      "children": [
+                        {
+                          "id": "niche-1767624473915-n1eebhy0y",
+                          "type": "niche",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767624506524-s12xugr72",
+      "type": "host",
+      "children": [
+        {
+          "id": "3cdfecae-7d3a-422c-803a-8be617cec445",
+          "type": "region",
+          "children": [
+            {
+              "id": "fb8d09bc-7dfe-44f0-9f95-00c1676d2563",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767624546883-u92g8kmpr",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767624568957-zzkmcei94",
+      "type": "host",
+      "children": [
+        {
+          "id": "11bf3078-d7a5-4233-ac19-7e8a4bd18064",
+          "type": "region",
+          "children": [
+            {
+              "id": "1134c610-6f0d-40f6-a1e4-bad1610408e4",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767624655317-vxisvo14d",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767624666989-xk7kvjhjl",
+      "type": "host",
+      "children": [
+        {
+          "id": "99a8401e-734b-4f5c-8e41-629674885570",
+          "type": "region",
+          "children": [
+            {
+              "id": "486c0702-aa0f-4899-b022-24ade174fbef",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767624980378-u7j51ez1o",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "loc-1767623864349-a2kmi92nv"
+    "loc-1767623864349-a2kmi92nv",
+    "loc-1767623985499-ujusq256r",
+    "loc-1767624082496-5n7hl13w2",
+    "loc-1767624169971-p0bh7bniq",
+    "loc-1767624225357-osszgt5x4",
+    "loc-1767624280738-ih1f4br4m",
+    "loc-1767624506524-s12xugr72",
+    "loc-1767624568957-zzkmcei94",
+    "loc-1767624666989-xk7kvjhjl"
   ]
 }
