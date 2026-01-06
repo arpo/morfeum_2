@@ -149,7 +149,7 @@
         "flora_base": "Sparse mountain vegetation",
         "fauna_base": "Birds"
       },
-      "primaryMedia": "media-1767623923874-4h938gbr0",
+      "primaryMedia": "media-1767625052898-gejkyycg5",
       "description": "You stand within the mystical interior of the monastery, a labyrinth of stone and wood filled with the scent of incense and an ethereal quiet.",
       "structure": {
         "form": "irregular",
@@ -1759,6 +1759,1797 @@
       ],
       "searchDesc": "The functional core of the Hydro-Habitation Dome, dominated by metallic machinery and life support systems.",
       "slug": "null-of-the-hydro-habitation-dome"
+    },
+    "loc-1767649321481-cu0l00ctq": {
+      "id": "loc-1767649321481-cu0l00ctq",
+      "type": "host",
+      "name": "Tropical Archipelago",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Volcanic peaks, dense rainforests, sprawling coastlines, clear turquoise waters, scattered islands",
+        "colorsAndLighting": "Intense, bright sunlight creating high contrast, deep blues of the ocean, vibrant greens of the jungle",
+        "atmosphere": "Exotic, adventurous, remote, naturally beautiful",
+        "materials": "Volcanic rock, dense vegetation, coral reefs, crystal-clear water",
+        "mood": "Enchanting, awe-inspiring, secluded, naturally luxurious",
+        "sounds": "Ocean waves crashing, tropical bird calls, rustling leaves, distant thunder",
+        "primary_surfaces": "Ocean water, jungle foliage, volcanic rock",
+        "secondary_surfaces": "Sandy beaches, coral reefs, exposed earth",
+        "accent_features": "Waterfalls, hidden coves, unique rock formations",
+        "dominant": "Deep ocean blues, vibrant jungle greens",
+        "secondary": "Earthy browns of volcanic rock, sandy beiges",
+        "accent": "Bright tropical flower colors, white of seafoam",
+        "ambient": "Warm, humid, briny air",
+        "genre": "REQUIRED",
+        "architectural_tone": "REQUIRED",
+        "cultural_tone": "REQUIRED",
+        "palette_bias": "REQUIRED",
+        "flora_base": "REQUIRED",
+        "fauna_base": "REQUIRED"
+      },
+      "description": "A chain of lush, vibrant islands surrounded by crystal-clear turquoise waters, teeming with life and natural beauty. These islands offer a breathtaking backdrop of volcanic peaks, dense rainforests, and pristine coastlines.",
+      "searchDesc": "Lush tropical islands with turquoise waters, volcanic peaks, and vibrant coastlines.",
+      "slug": "tropical-archipelago",
+      "structure": {
+        "spatialLayout": "Vast ocean expanses interspersed with mountainous islands and shallow lagoons"
+      }
+    },
+    "563cb3b9-2dc2-4840-a8ed-dc322daa6ade": {
+      "id": "563cb3b9-2dc2-4840-a8ed-dc322daa6ade",
+      "type": "region",
+      "name": "Lagoon District",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Stilted structures, overwater dwellings, elevated walkways, aquatic integration",
+        "colorsAndLighting": "Bright, dappled sunlight filtering through water and foliage, vibrant blues and greens",
+        "atmosphere": "Tranquil, secluded, peaceful, with a gentle lapping of water",
+        "materials": "Weathered wood, thatch, natural fibers, stone foundations where visible",
+        "mood": "Relaxed, bohemian, serene, connected to nature",
+        "sounds": "Gentle waves, distant seabirds, rustling leaves",
+        "primary_surfaces": "Wooden planks, thatch, water",
+        "secondary_surfaces": "Vines, foliage, rough-hewn stone",
+        "accent_features": "Hanging decor, decorative lighting, small piers",
+        "dominant": "Teal blue, ocean blue, natural wood tones",
+        "secondary": "Earthy greens, sandy beiges",
+        "accent": "Vibrant tropical flower colors, woven textures",
+        "ambient": "Warm, humid, sun-drenched",
+        "genre": null,
+        "architectural_tone": "Rustic, bohemian, tropical vernacular",
+        "cultural_tone": "Relaxed island living, eco-conscious",
+        "palette_bias": "Cool blues, warm wood tones, vibrant greens",
+        "flora_base": "Tropical vines, palm fronds, lush foliage",
+        "fauna_base": "Seabirds, small tropical fish"
+      },
+      "description": "Areas featuring stilted structures and overwater dwellings, characteristic of tropical aquatic environments. This district is defined by its unique relationship with the water, offering a serene and often secluded atmosphere.",
+      "searchDesc": "Overwater dwellings and stilted structures in a tropical lagoon setting.",
+      "slug": "lagoon-district",
+      "structure": {
+        "spatialLayout": "Sprawling, interconnected overwater platforms, structures rising directly from the water"
+      }
+    },
+    "423490f5-b067-45f5-8304-ca9f11c7af46": {
+      "id": "423490f5-b067-45f5-8304-ca9f11c7af46",
+      "type": "location",
+      "name": "The Whispering Palms Bungalow",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The bungalow is an organic, medium-scale structure composed of weathered, teal-painted wooden planks. Its form is compact, designed to rest serenely on its overwater platform. A partially thatched roof, softened by the embrace of creeping vines, hints at its rustic charm.",
+        "colorsAndLighting": "The dominant colors are the muted teal of the wood, the earthy brown of the thatch, and the vibrant turquoise of the surrounding water. Natural sunlight floods the scene, creating dappled patterns and highlighting the textures of the materials.",
+        "atmosphere": "The air is warm and humid, carrying the scent of salt and tropical foliage. A gentle breeze rustles the vines and shimmers the water's surface, contributing to a profoundly serene and inviting atmosphere.",
+        "materials": "The primary materials are weathered wood, evident in the planks and deck, and natural thatch for the roof. Creeping vines and foliage add organic textures, softening the architectural lines.",
+        "mood": "The bungalow exudes a feeling of peaceful seclusion and bohemian tranquility. It is a place designed for relaxation and immersion in the tropical environment.",
+        "sounds": "lapping water, rustling leaves, distant seabirds, gentle breeze",
+        "primary_surfaces": "Weathered teal wooden planks",
+        "secondary_surfaces": "Earthy brown thatched roof, creeping green vines",
+        "accent_features": "Rough-hewn wooden steps, bohemian interior visible through open doors",
+        "dominant": "Teal blue overwater deck",
+        "secondary": "Earthy brown thatched roof",
+        "accent": "Vibrant turquoise water",
+        "ambient": "Bright, natural daylight",
+        "genre": null,
+        "architectural_tone": "Rustic overwater bungalow",
+        "cultural_tone": "Tropical island dwelling",
+        "palette_bias": "Blues, greens, browns",
+        "flora_base": "Creeping vines, lush tropical foliage",
+        "fauna_base": "None"
+      },
+      "description": "A rustic, charming overwater bungalow constructed from teal-painted wooden planks, with a partially thatched roof covered in creeping vines. A sturdy wooden deck extends over clear, shimmering turquoise water, revealing the sandy and rocky bottom. Rough-hewn wooden steps ascend from the water to the deck.",
+      "searchDesc": "Rustic teal overwater bungalow with thatched roof, deck, and steps into turquoise water.",
+      "slug": "the-whispering-palms-bungalow",
+      "structure": {
+        "spatialLayout": "The bungalow is a compact, organic form situated horizontally on an extended deck over water. Its dimensions are intimate, emphasizing a cozy dwelling."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center of the deck",
+          "description": "leads into the bungalow interior"
+        },
+        {
+          "type": "stairs",
+          "position": "left side of the deck",
+          "description": "descends into the clear turquoise water"
+        }
+      ],
+      "dominantElements": [
+        "The Whispering Palms Bungalow: shape=organic, orientation=compact, scale=medium, style=rustic, surfaces=wood|organic-membrane, openings=open-passages, interior_materials=\"wood|wood|wood\", internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "Teal-painted wooden planks",
+        "Partially thatched roof with creeping vines",
+        "Overwater deck with clear turquoise water view",
+        "Rough-hewn wooden steps",
+        "Glimpse of bohemian interior through double doors"
+      ],
+      "primaryMedia": "media-1767649366591-n19t6tey5"
+    },
+    "niche-1767649397719-hzvzauhz3": {
+      "id": "niche-1767649397719-hzvzauhz3",
+      "type": "niche",
+      "name": "The Whispering Palms Bungalow Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A compact, medium-scale structure built from weathered, teal-painted wooden planks. Its form is designed to rest on an overwater platform, with a partially thatched roof softened by creeping vines.",
+        "colorsAndLighting": "Dominant colors are muted teal wood, earthy brown thatch, and the vibrant turquoise of the surrounding water. Natural sunlight floods the scene, creating dappled patterns.",
+        "atmosphere": "The air is warm and humid, carrying the scent of salt and tropical foliage. A gentle breeze rustles the vines and shimmers the water's surface.",
+        "materials": "Primary materials are weathered wood planks and natural thatch. Creeping vines add organic textures, softening the architectural lines.",
+        "mood": "Peaceful seclusion and bohemian tranquility.",
+        "sounds": "Gentle lapping water, rustling leaves, distant seabirds.",
+        "spatialLayout": "A singular, open room with rough-hewn wooden steps leading to the entrance, designed for a direct connection with the tropical environment.",
+        "primary_surfaces": "Weathered teal wooden planks",
+        "secondary_surfaces": "Earthy brown thatched roof, creeping green vines",
+        "accent_features": "Rough-hewn wooden steps leading to the entrance",
+        "dominant": "Teal blue overwater deck",
+        "secondary": "Earthy brown thatched roof",
+        "accent": "Vibrant turquoise water",
+        "ambient": "Bright, natural daylight",
+        "genre": "REQUIRED",
+        "architectural_tone": "Rustic overwater bungalow",
+        "cultural_tone": "Tropical island dwelling",
+        "palette_bias": "Blues, greens, browns",
+        "flora_base": "Creeping vines, lush tropical foliage",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767649397718-gv2wwcyy7",
+      "description": "Step inside the cozy embrace of The Whispering Palms Bungalow. The organic form of the exterior flows seamlessly into the interior, where warm wood surfaces create a rustic and inviting atmosphere. This compact, medium-sized space is designed for ultimate relaxation.",
+      "structure": {
+        "form": "organic",
+        "roofType": "pitched",
+        "scale": "medium",
+        "orientation": "compact",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "A cozy, medium-scale residential bungalow with an organic form. Its compact orientation suggests a well-utilized interior space, designed for comfort and relaxation.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "woven rattan sofa",
+          "carved wooden coffee table",
+          "woven floor cushions",
+          "woven rug",
+          "tropical plant in terracotta pot",
+          "driftwood accents",
+          "thatched ceiling fan",
+          "hurricane lanterns."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "front wall",
+          "description": "passage open- to deck"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door small wooden"
+        },
+        {
+          "type": "passage",
+          "position": "right wall",
+          "description": "passage open-"
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "window overlooking ocean"
+        }
+      ],
+      "dominantElements": [
+        "Bungalow Furniture: shape=organic, orientation=compact, scale=small, style=rustic, surfaces=wood, openings=none, interior_materials=\"wood|wood|wood\", internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "organic architecture",
+        "rustic wood interior",
+        "cozy atmosphere"
+      ],
+      "searchDesc": "Secluded overwater bungalow, rustic charm, teal wood, thatch, vines.",
+      "slug": "null-of-the-whispering-palms-bungalow"
+    },
+    "loc-1767649447275-s0onl2dtg": {
+      "id": "loc-1767649447275-s0onl2dtg",
+      "type": "host",
+      "name": "The Dreamscape",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Skyline silhouette, vast cosmic vistas, surreal landmasses, celestial phenomena",
+        "colorsAndLighting": "Deep blues, purples, and blacks of a starry night sky, illuminated by celestial bodies and ethereal glows.",
+        "atmosphere": "Profound mystery, otherworldly, contemplative, dreamlike, sense of being observed.",
+        "materials": "Shifting mists, cosmic dust, light, water, dreamstuff.",
+        "mood": "Awe-inspiring, mysterious, contemplative, serene, slightly unsettling.",
+        "sounds": "Whispers of the cosmos, distant ethereal hums, gentle lapping of water, faint echoes of thought.",
+        "primary_surfaces": "Calm bodies of water, winding paths, rocky outcrops",
+        "secondary_surfaces": "Floating islands, celestial bodies",
+        "accent_features": "Luminous orbs, large observing eyes, smoke wisps",
+        "dominant": "Cosmic Sky",
+        "secondary": "Surreal Landscapes",
+        "accent": "Ethereal Structures",
+        "ambient": "Mysterious Illumination",
+        "genre": "Surreal Fantasy",
+        "architectural_tone": "Ethereal Sacred",
+        "cultural_tone": "Mystical",
+        "palette_bias": "Deep Blues and Purples",
+        "flora_base": "Dreamlike Flora",
+        "fauna_base": "Cosmic Entities"
+      },
+      "description": "An ethereal dimension of shifting reality and profound mystery, where the subconscious manifests in surreal landscapes. This is a realm where the impossible becomes commonplace and the boundaries of perception blur.",
+      "searchDesc": "Ethereal dimension of shifting reality, surreal landscapes, subconscious manifestation.",
+      "slug": "the-dreamscape",
+      "structure": {
+        "spatialLayout": "Vast, open, with floating islands and pathways that defy conventional physics."
+      },
+      "primaryMedia": "media-1767649507628-39colbfob"
+    },
+    "c516b24f-e1d7-4bd2-b746-43e2dde16330": {
+      "id": "c516b24f-e1d7-4bd2-b746-43e2dde16330",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "41ab53a3-a31e-4ce9-b73d-55a660800178": {
+      "id": "41ab53a3-a31e-4ce9-b73d-55a660800178",
+      "type": "location",
+      "name": "The Watcher's Castle",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A grand, irregular-shaped castle, massive in scale, with numerous towers and turrets. Its facade is pristine white stone, suggesting an ethereal or divine construction.",
+        "colorsAndLighting": "Dominated by stark white surfaces, illuminated by a dark, starry night sky with celestial orbs. The overall lighting is dim and mysterious.",
+        "atmosphere": "The air is still and contemplative, with a profound sense of mystery. A faint, ethereal temperature permeates the space, with no discernible weather beyond the celestial backdrop.",
+        "materials": "Primarily pristine white stone, smooth and unblemished. The rocky outcrop is likely rougher, contrasting with the castle's perfection.",
+        "mood": "The mood is one of profound mystery, contemplation, and a sense of being observed. It evokes a feeling of awe and perhaps a touch of trepidation.",
+        "sounds": "Silence, distant celestial hum, faint wind, crackling fire within",
+        "primary_surfaces": "Pristine white stone",
+        "secondary_surfaces": "Rough rock, golden path",
+        "accent_features": "Wisp of smoke, arched windows",
+        "dominant": "White stone",
+        "secondary": "Dark sky",
+        "accent": "Golden path, smoke",
+        "ambient": "Dim starlight and celestial glow",
+        "genre": null,
+        "architectural_tone": "Ethereal sacred",
+        "cultural_tone": null,
+        "palette_bias": "Monochromatic with golden accents",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A grand, pristine white castle-like structure with numerous towers and turrets, perched on a rocky outcrop, with a wisp of smoke rising from its tallest point. EXTERIOR VIEW.",
+      "searchDesc": "Massive white castle with towers on rocky outcrop, leading from golden path under starry sky.",
+      "slug": "the-watcher-s-castle",
+      "structure": {
+        "spatialLayout": "A sprawling, irregular structure with significant verticality due to its towers, perched on a solid base, creating depth and a sense of imposing presence."
+      },
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "central foreground",
+          "description": "A wide, winding golden path leading towards the castle."
+        },
+        {
+          "type": "door",
+          "position": "base of the castle",
+          "description": "The main entrance into the castle."
+        }
+      ],
+      "dominantElements": [
+        "castle: shape=irregular, orientation=sprawling, scale=massive, style=sacred, surfaces=stone, openings=arched-windows, interior_materials=stone|stone|stone, internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "Pristine white stone facade",
+        "Numerous intricate towers and turrets",
+        "Wisp of smoke from the tallest spire",
+        "Rocky outcrop perch",
+        "Reflective golden path leading to entrance"
+      ],
+      "primaryMedia": "media-1767649460751-6mycekclh"
+    },
+    "niche-1767649493472-543m9gh15": {
+      "id": "niche-1767649493472-543m9gh15",
+      "type": "niche",
+      "name": "The Grand Hall",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A colossal, irregular-shaped chamber carved from impossibly smooth, pristine white stone. Alcoves are carved into the walls, offering vantage points to an unseen expanse. The scale is immense, designed for introspection rather than habitation.",
+        "colorsAndLighting": "Dominated by the stark white of the stone, illuminated by the dim, indirect glow of distant celestial orbs projected onto the curving ceiling. Subtle, warm golden light emanates from intricate filigree that traces unseen patterns across the surfaces.",
+        "atmosphere": "The air is utterly still and cool, carrying a faint, ethereal temperature. There is no discernible movement of air, only a profound sense of timelessness. The atmosphere is charged with an unseen energy, fostering deep contemplation.",
+        "materials": "The primary material is an impossibly smooth, unblemished white stone, cool to the touch. Subtle veins of what appears to be solidified starlight or polished gold are integrated into the stonework, forming delicate, intricate patterns.",
+        "mood": "A profound sense of mystery and awe permeates the space, encouraging quiet contemplation and a feeling of being watched by an ancient, benevolent, or perhaps indifferent entity.",
+        "sounds": "Silence, faint cosmic hum, distant whispers.",
+        "spatialLayout": "A vast, cavernous central space with irregular, curving walls that rise to an unseen zenith. Alcoves and nooks punctuate the perimeter, hinting at further concealed areas within the castle's immensity.",
+        "primary_surfaces": "Pristine, impossibly smooth white stone.",
+        "secondary_surfaces": "Integrated golden filigree, subtly glowing celestial projections.",
+        "accent_features": "Shimmering golden archway, alcoves with unseen views, faint wisp of ethereal smoke.",
+        "dominant": "White stone expanses.",
+        "secondary": "Darkness of the celestial projections on the ceiling.",
+        "accent": "Warm golden light from filigree and archway.",
+        "ambient": "Dim starlight and celestial glow.",
+        "genre": "Surreal Fantasy",
+        "architectural_tone": "Ethereal sacred",
+        "cultural_tone": "Mystical contemplation",
+        "palette_bias": "Monochromatic with golden accents",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767649493471-m62ci8kq0",
+      "description": "You stand in the immense Grand Hall of the castle. Vaulted stone ceilings stretch high above, punctuated by large, arched windows that cast dappled light across the expansive floor. The air is cool and carries a faint scent of old stone and woodsmoke, creating a mystical and regal atmosphere.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "civic",
+        "elevation": "ground-level",
+        "spatialLayout": "A vast, open hall with soaring vaulted ceilings and large arched windows. The primary space for gatherings and ceremonies.",
+        "requiredElements": [
+          "throne",
+          "tapestries",
+          "torch sconces"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "massive stone altar with celestial carvings",
+          "rows of ancient wooden prayer benches",
+          "towering gilded candelabras",
+          "mystical glowing runes etched into walls"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "left",
+          "description": "door towering arched ways leading to cloisters"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object grand stone staircase central"
+        },
+        {
+          "type": "window",
+          "position": "right",
+          "description": "window stained-glass  wall"
+        },
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door ornate wooden  rear"
+        }
+      ],
+      "dominantElements": [
+        "Throne: shape=rectangular, orientation=compact, scale=medium, style=sacred, surfaces=polished-wood, openings=none, interior_materials=velvet|wood|velvet, internal_atmosphere=regal",
+        "Tapestries: shape=irregular, orientation=flowing, scale=large, style=victorian, surfaces=fabric, openings=none, interior_materials=fabric|stone|fabric, internal_atmosphere=dim",
+        "Torch sconces: shape=organic, orientation=vertical, scale=small, style=victorian, surfaces=iron, openings=none, interior_materials=iron|iron|iron, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "massive scale",
+        "vaulted ceiling",
+        "stone construction",
+        "arched windows"
+      ],
+      "searchDesc": "Ethereal castle void, star-lit contemplation, profound mystery, golden accents.",
+      "slug": "null-of-the-watcher-s-castle"
+    },
+    "niche-1767650063237-l9jkicudc": {
+      "id": "niche-1767650063237-l9jkicudc",
+      "type": "niche",
+      "name": "Techno Bar",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior retains the imposing scale and raw structure of the monastery. Walls are a blend of exposed, rough-hewn stone and polished concrete, interspersed with geometric patterns reminiscent of mandalas. Lower ceilings in seating areas contrast with a higher central space, all illuminated by pulsing LED lights.",
+        "colorsAndLighting": "Dominant earthy greys and browns of stone are contrasted by vibrant, almost neon accents of electric blue, magenta, and emerald green from integrated LED lighting and projections. Shadows are deep and dynamic, playing across the textured surfaces.",
+        "atmosphere": "The crisp, thin mountain air is present, mingled with the faint, lingering scent of incense and a subtle ozone from the electronic music. A steady, low thrum of deep bass permeates the space, punctuated by the sharp beats of techno. The mood is one of an ecstatic trance, bridging the spiritual and the visceral.",
+        "materials": "Rugged, weathered stone forms the primary structure, softened by polished concrete floors. Accents of dark, weathered wood are present in bar elements and seating. Fabric textures, subtly referencing prayer flags, appear in upholstery and decorative panels, creating a tactile contrast with the hard surfaces. Exposed metal conduits and lighting rigs add an industrial edge.",
+        "mood": "A paradoxical blend of intense energy and profound, meditative focus. The space fosters an environment for uninhibited movement and introspection, a modern pilgrimage through sound and light.",
+        "sounds": "Deep bass, driving beats, ambient drones, subtle chanting echoes, synthesized melodies.",
+        "spatialLayout": "The layout is open and expansive in the center, with more intimate, semi-enclosed seating areas along the perimeter. A raised DJ booth anchors the main space, with walkways and passages creating a sense of flow and exploration.",
+        "primary_surfaces": "Exposed, rough-hewn stone walls; polished concrete floors.",
+        "secondary_surfaces": "Dark, weathered wood bar surfaces; fabric panels with prayer flag motifs.",
+        "accent_features": "Pulsing LED light strips; abstract mandala projections; integrated DJ booth stupa; subtle prayer wheel details.",
+        "dominant": "Grey stone walls",
+        "secondary": "Multi-colored LED lighting",
+        "accent": "Vibrant neon accents on architectural elements",
+        "ambient": "Dynamic, low-key glow with pulsing highlights",
+        "genre": "REQUIRED",
+        "architectural_tone": "Rustic sacred mountain architecture adapted with industrial techno elements",
+        "cultural_tone": "Tibetan Buddhist pilgrimage site reinterpreted as a modern techno pilgrimage",
+        "palette_bias": "Earthy tones with bright, electric accents",
+        "flora_base": "Sparse mountain vegetation",
+        "fauna_base": "Birds"
+      },
+      "primaryMedia": "media-1767650063236-z9t99v5dj",
+      "description": "You step into the dimly lit interior of the techno bar. The space is compact, with metallic walls and concrete floors reflecting the sparse, futuristic lighting. The air buzzes with a low, electronic hum.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "compact",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A dark, enclosed space with a central bar and seating areas. Minimal natural light.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front",
+          "description": "leading back outside to the street"
+        }
+      ],
+      "dominantElements": [
+        "Techno Bar: shape=rectangular, orientation=compact, scale=medium, style=futuristic, surfaces=metallic-polished, openings=minimal, interior_materials=metallic|concrete|glass, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "futuristic style",
+        "dim lighting",
+        "metallic surfaces"
+      ],
+      "searchDesc": "Techno bar within Tengboche Monastery: stone, wood, EDM, Tibetan Buddhist art.",
+      "slug": "null-of-tengboche-monastery"
+    },
+    "niche-1767650134553-boeli3uin": {
+      "id": "niche-1767650134553-boeli3uin",
+      "type": "niche",
+      "name": "The Dance Floor",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A vast, subterranean chamber dominated by the rhythmic pulse of electronic music. Rough-hewn stone walls are softened by cascades of vibrant light projections and integrated neon. The scale is immense, creating a sense of immersive energy.",
+        "colorsAndLighting": "The dominant colors are deep blues, electric purples, and vibrant pinks from the light projections and neon accents, contrasting with the natural grey of the stone. Strobe lights flash in sync with the music, illuminating the dancing crowd.",
+        "atmosphere": "The air is thick with the thumping bass of techno music and the palpable energy of hundreds of dancers. A light mist, possibly from fog machines, hangs in the air, catching the light beams. The crisp mountain air from the exterior is a distant memory.",
+        "materials": "Rough-hewn, ancient stone forms the foundational structure, surprisingly resilient against the sonic vibrations. This is contrasted by polished, reflective surfaces on the DJ booth and scattered metal elements for lighting rigs. Faded prayer flag remnants might be re-contextualized as vibrant, tattered banners.",
+        "mood": "Exhilarating and transcendent, a communal trance state achieved through sound and movement.",
+        "sounds": "Pulsating techno beats, echoing bass, crowd murmurs, synthesized melodies, rhythmic clapping.",
+        "spatialLayout": "A large, open, and cavernous space with a high ceiling, designed to amplify sound and accommodate a dense gathering of dancers. The floor is the primary focus for interaction.",
+        "primary_surfaces": "Rough-hewn stone walls and floor",
+        "secondary_surfaces": "Polished metallic DJ booth, integrated neon tubing, weathered wood elements repurposed as stage risers",
+        "accent_features": "Projected mandala patterns, a large disco ball, glowing DJ equipment, vibrant neon light installations",
+        "dominant": "Grey stone in the walls and floor",
+        "secondary": "Deep blues and electric purples in light projections across the floor",
+        "accent": "Vibrant pinks and neon hues in integrated lighting and DJ booth",
+        "ambient": "Deep, saturated colored light with dynamic strobing",
+        "genre": "REQUIRED",
+        "architectural_tone": "Rustic sacred mountain architecture fused with industrial rave elements",
+        "cultural_tone": "Tibetan Buddhist pilgrimage site adapted for modern ecstatic dance rituals",
+        "palette_bias": "Earthy tones contrasted with electric, vibrant accents",
+        "flora_base": "Sparse mountain vegetation",
+        "fauna_base": "Birds"
+      },
+      "primaryMedia": "media-1767650134551-av3j46zli",
+      "description": "You enter the main dance floor, a large, open rectangular space. The atmosphere is electric, filled with a pulsating beat and a vibrant crowd. Industrial-style concrete walls are accented with exposed metal and dynamic lighting, creating an energetic and immersive entertainment environment.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A large, open rectangular space designed for communal dancing and performance, filled with a lively crowd and pulsating lights.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "main entrance",
+          "description": "leads into the main dance floor area"
+        },
+        {
+          "type": "door",
+          "position": "side",
+          "description": "leads to a lounge area"
+        }
+      ],
+      "dominantElements": [
+        "Main Dance Hall: shape=rectangular, orientation=wide, scale=large, style=industrial, surfaces=concrete, openings=open-passages, interior_materials=concrete|tile|metal, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "central elevated DJ booth",
+        "dynamic lighting system",
+        "high-energy crowd"
+      ],
+      "searchDesc": "Vibrant techno dance floor within a stone monastery, pulsating lights and dancing crowds.",
+      "slug": "techno-dance-floor"
+    },
+    "loc-1767684470428-34u71ai1i": {
+      "id": "loc-1767684470428-34u71ai1i",
+      "type": "host",
+      "name": "The Dreamscape",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast, shifting horizons with abstract geographic features. Skyline silhouettes are fluid and indistinct, blending with the dreamlike atmosphere. Distant landmarks are suggestive rather than concrete.",
+        "colorsAndLighting": "Ethereal lighting, with a palette dominated by deep blues and teals. Gradual shifts in light and color to enhance the surreal nature.",
+        "atmosphere": "Dreamlike, surreal, and highly imaginative.",
+        "materials": "Appears as shifting light and energy, with implied textures of the environment.",
+        "mood": "Mystical wonder and serene contemplation, reflecting the deeper emotional tones of dreams.",
+        "sounds": "Echoes of music, surreal soundscapes, the whisper of flowing energy.",
+        "primary_surfaces": "Vast expanses of ethereal blue and teal.",
+        "secondary_surfaces": "Swirling currents of golden-brown energy.",
+        "accent_features": "Abstract geographic formations, flowing energy currents.",
+        "dominant": "Ethereal blues and teals.",
+        "secondary": "Shifting light and energy.",
+        "accent": "Golden-brown energy currents.",
+        "ambient": "Dreamlike, soft, and otherworldly.",
+        "genre": "Surrealism",
+        "architectural_tone": "Non-existent (natural/ethereal)",
+        "cultural_tone": "Mystical, introspective",
+        "palette_bias": "Cool (Blue, Teal)",
+        "flora_base": "Abstract and ephemeral.",
+        "fauna_base": "Implied, subtle"
+      },
+      "description": "An ethereal dimension of shifting reality where music and surreal imagery intertwine. This realm is a tapestry of dreams, where the laws of physics are fluid and imagination reigns supreme.",
+      "searchDesc": "Ethereal dimension of shifting reality, music and surreal imagery.",
+      "slug": "the-dreamscape",
+      "structure": {
+        "spatialLayout": "Expansive and seemingly infinite, with a sense of boundless depth and verticality."
+      },
+      "primaryMedia": "media-1767684507925-euv95e5d4"
+    },
+    "aa4090c2-1ca5-42c8-af5b-897bb00d5054": {
+      "id": "aa4090c2-1ca5-42c8-af5b-897bb00d5054",
+      "type": "region",
+      "name": "The Harmonic Plains",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Undulating, organic terrain with visible musical structures like grand pianos. Neighborhoods are defined by the flow of these musical elements and fantastical organic growth.",
+        "colorsAndLighting": "Soft, otherworldly lighting that enhances blues and teals. Ethereal blues and teals dominate the backdrop.",
+        "atmosphere": "Mystical and serene, with a sense of peaceful journeying.",
+        "materials": "Root-like and coral-like organic textures, polished ivory or bone for piano keys.",
+        "mood": "Serene contemplation and mystical wonder.",
+        "sounds": "Ambient melodies, the gentle hum of the landscape.",
+        "primary_surfaces": "Organic, textured ground and structures.",
+        "secondary_surfaces": "Polished, smooth surfaces of musical elements.",
+        "accent_features": "Grand pianos, gramophone horns, winding paths.",
+        "dominant": "Organic structures, musical elements.",
+        "secondary": "Ethereal blues and teals.",
+        "accent": "Polished brass, ivory/bone.",
+        "ambient": "Soft otherworldly light.",
+        "genre": null,
+        "architectural_tone": "Organic, surreal, monumental.",
+        "cultural_tone": "Mystical, contemplative.",
+        "palette_bias": "Blue, Teal, White, Black.",
+        "flora_base": "Root-like, coral-like.",
+        "fauna_base": null
+      },
+      "description": "Vast, undulating landscapes where musical elements manifest as physical features. These plains are characterized by their surreal beauty and the constant hum of ambient melodies that seem to emanate from the very earth.",
+      "searchDesc": "Surreal musical landscape with undulating plains and musical elements.",
+      "slug": "the-harmonic-plains",
+      "structure": {
+        "spatialLayout": "Open, flowing, with upward-reaching elements and curving paths."
+      }
+    },
+    "cbefd742-1154-40ab-a813-23170e586420": {
+      "id": "cbefd742-1154-40ab-a813-23170e586420",
+      "type": "location",
+      "name": "The Ivory Path Piano",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A grand piano, its white keys transformed into a winding, upward path, dominates the scene. The instrument's body is organically shaped, blending seamlessly with the environment. The scale is imposing, suggesting a monument rather than a mere piece of furniture.",
+        "colorsAndLighting": "Soft, otherworldly lighting bathes the scene in ethereal blues and teals. Golden-brown energy emanates from a gramophone, creating warm highlights. Shadows are subtle, contributing to the mystical ambiance.",
+        "atmosphere": "The air is still and contemplative, imbued with a gentle, resonant hum. Temperature is pleasantly cool. There is a sense of gentle motion from the swirling energy and falling leaves, but the overall feeling is one of serene stillness.",
+        "materials": "The piano keys appear as polished ivory or bone, smooth and cool to the touch. The surrounding structures are root-like or coral-like, with a textured, organic surface. The gramophone horn gleams with polished brass.",
+        "mood": "The dominant mood is one of serene contemplation and mystical wonder. It evokes feelings of peaceful journeying and quiet introspection.",
+        "sounds": "Gentle hum, faint piano notes, rustling leaves, distant ethereal chorus.",
+        "primary_surfaces": "Polished ivory keys, smooth organic surfaces",
+        "secondary_surfaces": "Weathered brass gramophone, dark green root-like structures",
+        "accent_features": "Swirling golden energy, stylized ruffled collar, vinyl record hat",
+        "dominant": "Ethereal blue and teal backdrop",
+        "secondary": "Pale ivory and white piano keys",
+        "accent": "Golden-brown energy, rose-colored dress",
+        "ambient": "Soft, diffused otherworldly glow",
+        "genre": null,
+        "architectural_tone": "Organic, mystical",
+        "cultural_tone": "Dreamscape inhabitants, artistic expression",
+        "palette_bias": "Blues, teals, whites, golds",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "description": "A surreal landscape featuring a piano whose white keys form an ascending, winding path. EXTERIOR VIEW.",
+      "searchDesc": "Surreal piano path with masked figure and flowing gramophone energy in a dreamscape.",
+      "slug": "the-ivory-path-piano",
+      "structure": {
+        "spatialLayout": "The space is defined by the flowing, upward trajectory of the piano path, creating a sense of depth and invitation. The backdrop suggests an expansive, dreamlike realm."
+      },
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "foreground to midground",
+          "description": "The winding path formed by the white piano keys, leading upwards and into the distance."
+        }
+      ],
+      "dominantElements": [
+        "piano: shape=irregular, orientation=flowing, scale=large, style=sacred, surfaces=organic-membrane, openings=none, interior_materials=wood|stone|fabric, internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "Piano keys forming an ascending path",
+        "Masked figure with vinyl record hat",
+        "Antique gramophone emitting swirling energy",
+        "Ethereal blue and teal backdrop"
+      ],
+      "primaryMedia": "media-1767684491147-8ir1lpnvb"
+    },
+    "location-1767684552278-xtvyb99ye": {
+      "id": "location-1767684552278-xtvyb99ye",
+      "type": "location",
+      "name": "The Path",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The landscape is characterized by undulating, root-like organic terrain. Grand piano structures are subtly integrated, their ivory keys forming a prominent visual element. Winding paths of polished ivory connect these surreal formations.",
+        "colorsAndLighting": "Ethereal blues and teals dominate the backdrop, creating a soft, otherworldly glow. The lighting is gentle and diffused, enhancing the mystical atmosphere and casting subtle shadows.",
+        "atmosphere": "A profound sense of serene contemplation pervades the air, accompanied by an aura of mystical wonder. The environment feels still and peaceful, encouraging introspection and a sense of gentle journeying.",
+        "materials": "The primary materials are organic, resembling gnarled roots and smooth coral formations. Polished ivory or bone is used for accent elements, particularly piano keys, providing a stark contrast in texture and sheen.",
+        "mood": "Serene contemplation and mystical wonder.",
+        "sounds": "Soft ambient hum, distant ethereal chimes, gentle rustling of organic forms.",
+        "spatialLayout": "The space is characterized by flowing, organic contours and meandering pathways, creating a sense of depth and discovery rather than rigid structure.",
+        "primary_surfaces": "Root-like and coral-like organic textures.",
+        "secondary_surfaces": "Polished ivory or bone.",
+        "accent_features": "Grand pianos, gramophone horns, winding ivory paths.",
+        "dominant": "Organic structures in blues and teals.",
+        "secondary": "Ethereal blues and teals in the sky and ambient light.",
+        "accent": "Polished ivory on path and piano keys.",
+        "ambient": "Soft otherworldly light.",
+        "genre": null,
+        "architectural_tone": "Organic, surreal, monumental.",
+        "cultural_tone": "Mystical, contemplative.",
+        "palette_bias": "Blue, Teal, White, Black.",
+        "flora_base": "Root-like, coral-like.",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767684552277-r89qvhdct",
+      "description": "You are on a winding path, surrounded by nature. The trail beckons you forward, its course dictated by the organic flow of the landscape.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "flowing",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "natural",
+        "elevation": "ground-level",
+        "spatialLayout": "A winding trail that meanders through a landscape, inviting exploration. The path itself is the primary navigable element.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "central",
+          "description": "Follows the natural contours of the environment."
+        }
+      ],
+      "dominantElements": [],
+      "uniqueIdentifiers": [
+        "natural winding trail",
+        "integrates with surrounding environment",
+        "invites exploration"
+      ],
+      "searchDesc": "A mystical ivory path through surreal organic structures bathed in ethereal blue and teal light.",
+      "slug": "organic-ivory-path"
+    },
+    "loc-1767684627103-jx5q8m0rl": {
+      "id": "loc-1767684627103-jx5q8m0rl",
+      "type": "host",
+      "name": "The Desolation",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Vast desert landscapes, geographic features, skyline silhouettes",
+        "colorsAndLighting": "Bright daylight, stark color contrasts",
+        "atmosphere": "Surreal, contemplative, stark, promising",
+        "materials": "Cracked earth, dry soil, distant mountains",
+        "mood": "Profound surrealism, awe, discovery, wonder",
+        "sounds": "Wind, silence, distant water",
+        "primary_surfaces": "Desert floor, cracked earth",
+        "secondary_surfaces": "Distant mountains, dry vegetation",
+        "accent_features": "Surreal portals, sculpted forms",
+        "dominant": "Desert",
+        "secondary": "Sky",
+        "accent": "Surreal elements",
+        "ambient": "Dry, still air",
+        "genre": "Surrealism",
+        "architectural_tone": "Ancient, monumental",
+        "cultural_tone": "Mysterious, spiritual",
+        "palette_bias": "Earthy tones, gold",
+        "flora_base": "Sparse desert vegetation",
+        "fauna_base": "None visible"
+      },
+      "description": "A realm of stark contrasts and surreal landscapes where reality bends. Vast deserts meet lush oases, and the very ground seems to breathe with sculpted earth and flowing water.",
+      "searchDesc": "Vast desert, surreal portal, sculpted head, arid beauty",
+      "slug": "the-desolation",
+      "structure": {
+        "spatialLayout": "Expansive, open horizons"
+      }
+    },
+    "2c5e7907-0257-4b65-bb7d-2763c7c4a1f5": {
+      "id": "2c5e7907-0257-4b65-bb7d-2763c7c4a1f5",
+      "type": "region",
+      "name": "Region",
+      "spaceType": "exterior",
+      "dna": {},
+      "description": "",
+      "searchDesc": "",
+      "slug": "region",
+      "isPassThrough": true
+    },
+    "8c81ba35-628a-43fa-869b-1a4607b258fc": {
+      "id": "8c81ba35-628a-43fa-869b-1a4607b258fc",
+      "type": "location",
+      "name": "The Frame of Worlds",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A massive, upright, rectangular golden frame dominates the desolate landscape. Its surface is heavily embellished with intricate, swirling baroque carvings, suggesting immense craftsmanship and ancient origins. The frame itself is the entrance, without glass, revealing a contrasting, lush world within.",
+        "colorsAndLighting": "Bright, clear daylight washes over the scene, creating sharp contrasts between the sun-baked desert and the verdant world within the frame. The gold of the frame has a warm, reflective sheen, while the savanna is a vibrant spectrum of greens.",
+        "atmosphere": "The air is dry and still in the desert, carrying the scent of parched earth. The portal emanates a subtle, almost imperceptible hum. The atmosphere within the framed savanna feels alive and humid, a stark contrast to the desolation.",
+        "materials": "The primary material is highly polished, ornate gold, showing intricate baroque carvings. The desert ground is cracked, dry earth, while the root-sculpted head is made of gnarled, intertwining wood and foliage. The stream is of vividly colored water.",
+        "mood": "The mood is one of profound surrealism and awe, blending the starkness of the desert with the promise of life and the mystery of the portal. It evokes a sense of discovery and wonder at the juxtaposition of realities.",
+        "sounds": "Whispering wind, crackling dry earth, faint hum from the portal, distant animal calls from savanna.",
+        "primary_surfaces": "Polished gold with baroque carvings",
+        "secondary_surfaces": "Cracked dry earth, gnarled roots, vibrant green foliage",
+        "accent_features": "Turquoise stream, root-sculpted head",
+        "dominant": "Golden yellow desert",
+        "secondary": "Emerald green savanna",
+        "accent": "Turquoise stream",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Ornate baroque gilded",
+        "cultural_tone": "Sacred artifact of passage",
+        "palette_bias": "Warm metallics and vibrant greens",
+        "flora_base": "Gnarled trees, foliage",
+        "fauna_base": "Implied (from savanna)"
+      },
+      "description": "A monumental, highly ornate gold picture frame, intricately carved with baroque designs, standing upright in a desolate desert. It acts as a portal revealing a vibrant savanna. A turquoise stream flows from its base across the cracked earth. A colossal, root-sculpted head emerges from the ground nearby, looking towards the framed savanna. A smaller, mirrored frame stands in the distance. EXTERIOR VIEW.",
+      "searchDesc": "Monumental gold baroque frame portal in desolate desert to vibrant savanna with root head.",
+      "slug": "the-frame-of-worlds",
+      "structure": {
+        "spatialLayout": "The frame is a singular, dominant vertical element in a vast, flat expanse. Its depth is nominal, but the revealed savanna offers a sense of deep, lush space beyond."
+      },
+      "navigableElements": [
+        {
+          "type": "portal",
+          "position": "center of scene",
+          "description": "Leads to the vibrant savanna"
+        }
+      ],
+      "dominantElements": [
+        "The Frame: shape=rectangular, orientation=vertical, scale=massive, style=sacred, surfaces=metallic-polished|stone, openings=minimal, interior_materials=gold leaf|stone, internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "Monumental gold picture frame",
+        "Baroque carvings",
+        "Portal to another world",
+        "Colossal root-sculpted head",
+        "Turquoise stream originating from frame"
+      ],
+      "primaryMedia": "media-1767684641293-lss4x0xqo"
+    },
+    "niche-1767684670495-t30adk88y": {
+      "id": "niche-1767684670495-t30adk88y",
+      "type": "niche",
+      "name": "The Frame",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A colossal, upright rectangular frame of burnished gold stands starkly against a barren desert. Its surface is a tapestry of intricate, swirling baroque carvings, suggesting immense age and divine craftsmanship. Through its empty expanse, a vibrant, sun-drenched savanna teems with life.",
+        "colorsAndLighting": "Bright, clear daylight casts sharp shadows across the parched earth, making the warm metallic sheen of the frame intensely reflective. The savanna within glows with an emerald intensity, punctuated by the vivid turquoise of a winding stream.",
+        "atmosphere": "The desert air is dry, still, and carries the scent of baked earth, creating a profound sense of stillness. A subtle, almost inaudible hum emanates from the frame itself, hinting at its otherworldly nature. The atmosphere within the framed savanna is humid and alive.",
+        "materials": "The primary material is highly polished, ornate gold, bearing intricate baroque carvings. The surrounding ground is cracked, dry earth, contrasting with the gnarled roots and vibrant foliage that define the savanna beyond. A vividly colored turquoise stream flows through this verdant expanse.",
+        "mood": "A profound sense of surrealism and awe pervades, a blend of stark desolation and vibrant promise. It evokes wonder at the discovery of a portal to a contrasting reality.",
+        "sounds": "Whispering wind, faint hum, chirping insects, distant animal calls.",
+        "spatialLayout": "The frame stands as a monumental, two-dimensional plane within a vast, open desert landscape, defining a distinct aperture into another environment. The savanna within is implied to be a sprawling, organic space.",
+        "primary_surfaces": "Polished gold with intricate baroque carvings",
+        "secondary_surfaces": "Cracked dry earth, gnarled roots, vibrant green foliage",
+        "accent_features": "Turquoise stream, root-sculpted head",
+        "dominant": "Golden yellow desert",
+        "secondary": "Emerald green savanna",
+        "accent": "Turquoise stream",
+        "ambient": "Bright daylight",
+        "genre": "Surrealism",
+        "architectural_tone": "Ornate baroque gilded",
+        "cultural_tone": "Sacred artifact of passage",
+        "palette_bias": "Warm metallics and vibrant greens",
+        "flora_base": "Gnarled trees, foliage",
+        "fauna_base": "Implied (from savanna)"
+      },
+      "primaryMedia": "media-1767684670494-4t0xplt4o",
+      "description": "You are inside The Frame, a massive, sacred structure characterized by its rectangular form and minimalist, mystical interior. Its colossal scale commands reverence, with polished obsidian and stone surfaces accented by hints of gold leaf, creating an atmosphere of profound spiritual significance.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "massive",
+        "orientation": "vertical",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "religious",
+        "elevation": "ground-level",
+        "spatialLayout": "A vast, rectangular chamber with colossal dimensions, designed to evoke awe and reverence. The primary focus is on its immense scale and sacred purpose.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "central glowing ethereal portal",
+          "shimmering gold leaf pillars",
+          "intricately carved stone plinths",
+          "suspended celestial orbs"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front wall",
+          "description": "archway ornate gold leaf"
+        },
+        {
+          "type": "object",
+          "position": "left wall",
+          "description": "object recessed stone alcove"
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "door heavy obsidian"
+        },
+        {
+          "type": "opening",
+          "position": "ceiling",
+          "description": "opening vertical sliver"
+        }
+      ],
+      "dominantElements": [
+        "The Altar: shape=rectangular, orientation=centered, scale=medium, style=sacred, surfaces=polished obsidian, openings=none, interior_materials=obsidian|marble|gold leaf, internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "colossal scale",
+        "sacred metallic and stone surfaces",
+        "minimal openings",
+        "mystical interior atmosphere"
+      ],
+      "searchDesc": "Ornate gilded frame in desert reveals lush savanna, a surreal passage.",
+      "slug": "null-of-the-frame-of-worlds"
+    },
+    "location-1767684725555-6kdq4lssq": {
+      "id": "location-1767684725555-6kdq4lssq",
+      "type": "location",
+      "name": "The Head Sculpture",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A gargantuan, weathered stone head sculpture dominates the landscape, its features eroded by time and elements. The mouth is a gaping, raw opening that serves as the entrance. Intricate, root-like formations intertwine with the stone, suggesting a deep, organic connection to the earth. The overall scale is immense and awe-inspiring.",
+        "colorsAndLighting": "The sculpture itself is rendered in the earthy tones of the desert, with hints of ochre, sienna, and pale sandstone. Sunlight casts sharp, dramatic shadows across its features, accentuating its monumental form. Inside, the light is dim, filtering in through the entrance.",
+        "atmosphere": "The air around the entrance is dry and still, carrying the scent of dust and ancient stone. A profound sense of stillness pervades the scene, broken only by the distant, almost imperceptible whisper of wind across the desert. It feels like a place steeped in forgotten rituals and immense power.",
+        "materials": "The primary material is ancient, weathered stone, deeply fissured and textured. Intertwined with the stone are organic, root-like structures that appear almost petrified, yet retain a sense of ancient growth. The surfaces are rough and matte, speaking of eons of exposure.",
+        "mood": "A profound sense of awe and mystery permeates the entrance, inviting a journey of discovery into the unknown. It evokes feelings of ancient spiritual power and surreal wonder.",
+        "sounds": "Distant wind, faint stone creaks, echoing silence",
+        "spatialLayout": "The head sculpture is a massive, irregular form emerging from the flat desert floor. The entrance is a large, unadorned opening carved into the front of the sculpture, leading into a shadowed interior space.",
+        "primary_surfaces": "Massive, weathered stone",
+        "secondary_surfaces": "Petrified root-like formations",
+        "accent_features": "Intricate root carvings, eroded facial features",
+        "dominant": "Earthy tones of the desert",
+        "secondary": "Pale sandstone highlights",
+        "accent": "Shadows enhancing form",
+        "ambient": "Dry, still air",
+        "genre": "Surrealism",
+        "architectural_tone": "Ancient, monumental",
+        "cultural_tone": "Mysterious, spiritual",
+        "palette_bias": "Earthy tones, gold",
+        "flora_base": "Sparse desert vegetation",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767684725551-lkhqzz6dx",
+      "description": "You are approaching a large, outdoor public space dominated by an ornate baroque gilded sculpture of a head. The area is designed to be viewed from the exterior, with pathways leading towards the monumental artwork.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "wide",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A large, outdoor area dominated by a significant sculpted head. The surrounding space is open and accessible.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "leading towards the sculpture",
+          "description": "pathway to the sculpture"
+        }
+      ],
+      "dominantElements": [
+        "The Head Sculpture: shape=organic, orientation=centered, scale=large, style=ornate baroque gilded, surfaces=stone, openings=none, interior_materials=null|null|null, internal_atmosphere=grand"
+      ],
+      "uniqueIdentifiers": [
+        "Monumental sculpted head",
+        "Ornate baroque gilded style",
+        "Outdoor public space"
+      ],
+      "searchDesc": "Massive ancient head sculpture entrance carved from stone in a desert landscape.",
+      "slug": "root-sculpted-head-entrance"
+    },
+    "niche-1767684749625-49kfdo4wu": {
+      "id": "niche-1767684749625-49kfdo4wu",
+      "type": "niche",
+      "name": "The Head Sculpture",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a vast, hollowed-out chamber, its form dictated by the colossal, eroded anatomy of the stone head. The immense scale creates a sense of being swallowed by something ancient and powerful. Intricate, petrified root-like structures cling to the rough stone surfaces, adding a layer of organic decay to the monumental architecture.",
+        "colorsAndLighting": "The internal surfaces are a continuation of the earthy, desert tones of the exterior, dominated by ochre and sienna, with paler sandstone hues where the stone is smoother. Dim, filtered sunlight streams in through the mouth entrance, casting dramatic, deep shadows that accentuate the contours of the stone and the root formations.",
+        "atmosphere": "The air within is heavy with the scent of ancient dust and dry stone, still and quiet save for the faint echoes of the outside world. A profound sense of stillness prevails, imbued with a palpable aura of forgotten rituals and immense, dormant power. It feels like a sacred, untouched sanctuary.",
+        "materials": "The primary material is rough, deeply fissured ancient stone, showing the marks of millennia of weathering. Intertwined with the stone are petrified, root-like formations, their texture appearing almost like calcified bark or fossilized tendrils. The surfaces are predominantly matte and rough-textured.",
+        "mood": "A profound sense of awe and mystery permeates the space, inviting a journey of discovery into the unknown, evoking ancient spiritual power and surreal wonder.",
+        "sounds": "Distant wind whispers, faint echoes, profound silence",
+        "spatialLayout": "A vast, irregularly shaped cavern occupying the interior of the head sculpture, with a high, domed ceiling and uneven, curving walls. The spatial experience is one of being within a gargantuan, organic-yet-mineral entity.",
+        "primary_surfaces": "Rough, ancient stone",
+        "secondary_surfaces": "Petrified root-like formations",
+        "accent_features": "Eroded facial contours within the interior, intricate root carvings",
+        "dominant": "Earthy ochre interior",
+        "secondary": "Pale sandstone highlights on smoother stone",
+        "accent": "Deep shadows accentuating form",
+        "ambient": "Dim, filtered light",
+        "genre": "Surrealism",
+        "architectural_tone": "Ancient, monumental",
+        "cultural_tone": "Mysterious, spiritual",
+        "palette_bias": "Earthy tones, gold",
+        "flora_base": "Sparse desert vegetation",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767684749623-zmygof7em",
+      "description": "You stand within the grand, cavernous interior of the Head Sculpture, a space masterfully sculpted to mimic the inside of a colossal baroque head. Golden embellishments and ornate details shimmer around you, contributing to an atmosphere of opulent spectacle.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "centered",
+        "openings": "none",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A grand, cavernous interior space sculpted to resemble the inside of a colossal, ornate baroque head. The space is designed for spectacle and immersion.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "large ornate gilded stone pedestal",
+          "ancient spiritual carvings",
+          "flickering votive candles",
+          "ethereal golden light",
+          "incense smoke tendrils"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "front wall",
+          "description": "archway grand gilded"
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "passage stone way"
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "door ornate carved stone"
+        }
+      ],
+      "dominantElements": [
+        "Gilded Throne: shape=rectangular, orientation=compact, scale=small, style=ornate baroque gilded, surfaces=gold-leaf, openings=none, interior_materials=velvet|velvet|velvet, internal_atmosphere=regal"
+      ],
+      "uniqueIdentifiers": [
+        "massive sculpted head form",
+        "ornate baroque gilded style",
+        "grand interior atmosphere",
+        "domed ceiling resembling cranial vault"
+      ],
+      "searchDesc": "The awe-inspiring, dusty interior of a giant stone head sculpture, a passage to mystery.",
+      "slug": "null-of-the-head-sculpture"
+    },
+    "loc-1767684801145-hilgvvgha": {
+      "id": "loc-1767684801145-hilgvvgha",
+      "type": "host",
+      "name": "The Shifting Sands of Aethelgard",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Skyline silhouette, geographic features, vast landscapes",
+        "colorsAndLighting": "Clear light blue sky, scattered fluffy white clouds, bright soft daylight",
+        "atmosphere": "Surreal, wondrous, dreamlike",
+        "materials": "Sand, wood (portal), foliage (beyond portal)",
+        "mood": "Wondrous, surreal, inviting, mysterious",
+        "sounds": "Distant waterfalls, wind, soft sand shifts, distant exotic flora/fauna",
+        "primary_surfaces": "Sand dunes, cliffs",
+        "secondary_surfaces": "Sky, foliage, water",
+        "accent_features": "Bell-shaped jellyfish, double wooden doors, footprints, waterfall",
+        "dominant": "Desert landscape, sky",
+        "secondary": "Portal, verdant gorge",
+        "accent": "Jellyfish, footprints",
+        "ambient": "Wind, distant water",
+        "genre": "Fantasy",
+        "architectural_tone": "Ancient, organic (portal)",
+        "cultural_tone": "Mysterious, ancient",
+        "palette_bias": "High contrast (golden desert vs. vibrant green gorge)",
+        "flora_base": "Tropical foliage, moss",
+        "fauna_base": "Floating jellyfish, desert insects"
+      },
+      "description": "A realm where reality bends and the mundane meets the surreal. This is a place of unpredictable magic and breathtaking contrasts, where ancient portals reveal impossible vistas.",
+      "searchDesc": "Surreal realm, bending reality, impossible vistas, ancient portals",
+      "slug": "the-shifting-sands-of-aethelgard",
+      "structure": {
+        "spatialLayout": "Vast desert merging with a hidden verdant gorge"
+      }
+    },
+    "948bc1df-fc96-42e0-93fd-92541facd7ce": {
+      "id": "948bc1df-fc96-42e0-93fd-92541facd7ce",
+      "type": "region",
+      "name": "The Golden Dunes",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "District architecture, street patterns, neighborhood character",
+        "colorsAndLighting": "Golden sand, bright soft daylight, gentle shadows",
+        "atmosphere": "Wondrous, dreamlike, serene",
+        "materials": "Fine golden sand, rippled textures",
+        "mood": "Wondrous, surreal, inviting",
+        "sounds": "Whispering wind, soft sand shifts",
+        "primary_surfaces": "Sand dunes",
+        "secondary_surfaces": "Sky",
+        "accent_features": "Footprints in the sand",
+        "dominant": "Golden sand",
+        "secondary": "Sky",
+        "accent": "Footprints",
+        "ambient": "Wind",
+        "genre": null,
+        "architectural_tone": "N/A",
+        "cultural_tone": "N/A",
+        "palette_bias": "Warm, golden, earthy",
+        "flora_base": "Desert scrub (sparse)",
+        "fauna_base": "Desert insects, small reptiles"
+      },
+      "description": "An endless expanse of undulating golden sand, sculpted by unseen winds. Rippling dunes stretch to the horizon under a clear sky, creating a serene and timeless desert vista.",
+      "searchDesc": "Vast desert dunes, rippled golden sand, endless sandy expanse",
+      "slug": "the-golden-dunes",
+      "structure": {
+        "spatialLayout": "Open, expansive, undulating dunes"
+      }
+    },
+    "86d669ef-5f30-4fb6-ab1b-02705afab6af": {
+      "id": "86d669ef-5f30-4fb6-ab1b-02705afab6af",
+      "type": "location",
+      "name": "The Mirage Portal",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A pair of tall, intricately carved wooden double doors stand upright and open in the middle of a vast desert. The wood appears weathered but exceptionally detailed with flowing, organic patterns. The doors are set directly into the undulating sand, with no discernible frame or surrounding structure, appearing almost as if grown from the desert itself.",
+        "colorsAndLighting": "The scene is bathed in bright, soft daylight, casting gentle shadows across the golden sand. The wood of the doors is a warm, earthy brown with darker, deeper tones in the carvings. The interior, visible through the open doors, is a riot of vibrant greens and blues.",
+        "atmosphere": "The air is warm and dry in the desert, with a gentle breeze rippling the sand. Above, translucent, bell-shaped jellyfish drift serenely through a clear, light blue sky dotted with fluffy white clouds, creating a surreal and dreamlike ambiance.",
+        "materials": "The primary exterior material is weathered, intricately carved wood. The surrounding environment is composed of fine, golden sand with soft, rippled textures.",
+        "mood": "Wondrous, surreal, and inviting. The portal evokes a sense of mystery and the allure of discovery.",
+        "sounds": "Gentle desert wind, distant rustling sand, faint echoes from the gorge.",
+        "primary_surfaces": "Weathered, intricately carved wood",
+        "secondary_surfaces": "Fine, rippled golden sand",
+        "accent_features": "Translucent, bell-shaped jellyfish in the sky",
+        "dominant": "Golden sand",
+        "secondary": "Warm brown wood",
+        "accent": "Vibrant greens and blues (visible interior)",
+        "ambient": "Bright, soft daylight",
+        "genre": null,
+        "architectural_tone": "Ancient carved wood",
+        "cultural_tone": null,
+        "palette_bias": [
+          "earth tones",
+          "tropical greens"
+        ],
+        "flora_base": "Dense tropical foliage (visible interior)",
+        "fauna_base": "None"
+      },
+      "description": "An intricately carved wooden double door, standing upright and open amidst the golden sand dunes. It appears to be a gateway to another realm. EXTERIOR VIEW.",
+      "searchDesc": "Carved wooden double doors in desert leading to a lush canyon, under a sky with jellyfish.",
+      "slug": "the-mirage-portal",
+      "structure": {
+        "spatialLayout": "The portal is a singular, upright structure within a vast, open desert landscape. The doors themselves are a substantial opening, leading to an implied depth."
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "The open double doors leading into the Verdant Gorge Beyond."
+        }
+      ],
+      "dominantElements": [
+        "The Mirage Portal: shape=rectangular, orientation=vertical, scale=medium, style=rustic, surfaces=wood, openings=open-passages, interior_materials=wood|wood|wood, internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "Intricately carved wooden double doors",
+        "Embedded in rippled golden sand dunes",
+        "Visible verdant canyon through doorway",
+        "Translucent jellyfish floating in the sky"
+      ],
+      "primaryMedia": "media-1767684872376-ei3e2528d"
+    },
+    "niche-1767684889088-j3gbqonse": {
+      "id": "niche-1767684889088-j3gbqonse",
+      "type": "niche",
+      "name": "The Mirage Portal",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This space is defined by the absence of solid matter, appearing as a gentle, swirling void.  The primary visual element is the continuation of the intricately carved ancient wood doors, appearing to float in a translucent, subtly shimmering expanse.  No floor, ceiling, or walls are present, only the threshold of the portal itself.",
+        "colorsAndLighting": "The lighting is a soft, diffuse glow that seems to emanate from the space itself, a gentle diffusion of the desert daylight.  Hues of warm earth tones and subtle tropical greens are hinted at, as if dreams of the other side are bleeding through.",
+        "atmosphere": "The air is still and silent, carrying a faint, dry warmth. There is a palpable sense of transition, a feeling of being suspended between worlds.  The only motion is the gentle, almost imperceptible drift of ethereal mist.",
+        "materials": "The primary material is the weathered, intricately carved ancient wood of the portal doors, seeming to exist independently within the ethereal space.  Hints of fine, golden sand are suggested by the light refractions.",
+        "mood": "Serene, expectant, and subtly wondrous, a quiet space for contemplation before crossing.",
+        "sounds": "Silence, faint whispers, distant echoes of wind.",
+        "spatialLayout": "An unquantifiable, open space that feels both vast and intimate, defined solely by the presence of the portal doors and the threshold.",
+        "primary_surfaces": "Ethereal expanse, swirling mist",
+        "secondary_surfaces": "Subtle suggestions of fine, golden sand",
+        "accent_features": "Translucent, bell-shaped jellyfish drift serenely through the hazy atmosphere.",
+        "dominant": "Warm earth tones and subtle tropical greens",
+        "secondary": "Weathered, intricately carved ancient wood",
+        "accent": "Hazy blues and greens hinting at the interior",
+        "ambient": "Soft, diffuse daylight",
+        "genre": "Fantasy",
+        "architectural_tone": "Ancient carved wood",
+        "cultural_tone": "N/A",
+        "palette_bias": [
+          "earth tones",
+          "tropical greens"
+        ],
+        "flora_base": "Dense tropical foliage (visible interior)",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767684889087-mtbb30bc9",
+      "description": "You step into the Mirage Portal, a rustic and medium-sized rectangular chamber. The air within is thick with a mystical atmosphere, and the walls, floor, and ceiling are all constructed of wood. The space is entered through open passages, suggesting a transition to another realm.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "compact",
+        "openings": "open-passages",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A medium-sized, rectangular chamber with a flat roof. The primary characteristic is its mystical atmosphere, suggesting an otherworldly or magical destination. It is entered via open passages.",
+        "requiredElements": []
+      },
+      "navigableElements": [],
+      "dominantElements": [
+        "The Mirage Portal: shape=rectangular, orientation=vertical, scale=medium, style=rustic, surfaces=wood, openings=open-passages, interior_materials=wood|wood|wood, internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "rustic wooden surfaces",
+        "mystical atmosphere",
+        "entered via open passages"
+      ],
+      "searchDesc": "An ethereal void within The Mirage Portal, hinting at the exotic.",
+      "slug": "null-of-the-mirage-portal"
+    },
+    "loc-1767684932069-x9jk8nszd": {
+      "id": "loc-1767684932069-x9jk8nszd",
+      "type": "host",
+      "name": "Aethelgard",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Large central floating island, multi-tiered organic buildings, wide-canopied trees with vibrant blossoms, steep rocky edges with vines.",
+        "colorsAndLighting": "Earthy browns and light stone, vibrant purple and pink blossoms, lush green vines, clear daytime light.",
+        "atmosphere": "Serene, vibrant natural beauty, tranquil escapism.",
+        "materials": "Natural stone, wood, light-colored structural materials, lush green vines, organic plant life.",
+        "mood": "Serenity, wonder, vibrant natural beauty, tranquil escapism.",
+        "sounds": "Rustling leaves, gentle winds, birdsong (implied).",
+        "primary_surfaces": "Natural stone, wood.",
+        "secondary_surfaces": "Light-colored structural materials, abundant plant life.",
+        "accent_features": "Vibrant purple and pink blossoms, flowing green vines, tranquil pond.",
+        "dominant": "Earthy browns, light stone, vibrant purples and pinks.",
+        "secondary": "Lush greens, natural wood.",
+        "accent": "Flowing vines, blossoms.",
+        "ambient": "Gentle breezes, natural sounds of a thriving environment.",
+        "genre": "Fantasy",
+        "architectural_tone": "Organic, nature-integrated rustic",
+        "cultural_tone": "Harmony with nature, serene living",
+        "palette_bias": "Earth tones with vibrant floral accents",
+        "flora_base": "Wide-canopied trees, lush vines, flowering plants",
+        "fauna_base": "Implied small creatures or birds"
+      },
+      "description": "A realm of floating islands and ethereal beauty, where a central, large island hosts a vibrant settlement. This majestic landscape is bathed in clear daytime light, creating an atmosphere of profound peace.",
+      "searchDesc": "Large floating island settlement with multi-tiered buildings, vibrant trees, and rocky edges.",
+      "slug": "aethelgard",
+      "structure": {
+        "spatialLayout": "Multi-tiered organic structures integrated with rock, dense tree canopies, vertical edges."
+      }
+    },
+    "e2a95dc8-f61c-4021-bef8-742f7ddfdd6a": {
+      "id": "e2a95dc8-f61c-4021-bef8-742f7ddfdd6a",
+      "type": "region",
+      "name": "The Azure Archipelago",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Scattered floating islands, vast open sky, serene water below, ethereal sky structures.",
+        "colorsAndLighting": "Bright blue sky, gentle sunlight piercing clouds, deep blue-green water.",
+        "atmosphere": "Peaceful, otherworldly, vast, serene.",
+        "materials": "Natural rock formations, water, ethereal translucent materials.",
+        "mood": "Tranquil escapism, wonder, serene beauty.",
+        "sounds": "Gentle wind, distant water lapping, soft ethereal hums.",
+        "primary_surfaces": "Sky, water, rock.",
+        "secondary_surfaces": "Translucent ethereal materials, atmospheric haze.",
+        "accent_features": "Floating rock formations, drifting petals/leaves, ethereal sky structures.",
+        "dominant": "Blue sky, deep blue-green water, open air.",
+        "secondary": "Floating islands, rock formations.",
+        "accent": "Ethereal structures, drifting flora.",
+        "ambient": "Soft ethereal hums, gentle breezes.",
+        "genre": null,
+        "architectural_tone": "Organic, naturally formed.",
+        "cultural_tone": "Mystical, serene.",
+        "palette_bias": "Blues, greens, ethereal purples.",
+        "flora_base": "Vines, drifting petals/leaves.",
+        "fauna_base": "None explicitly described, implied ethereal."
+      },
+      "description": "A realm of scattered islands suspended in the sky, where a tranquil sea lies far below. This region is characterized by its unique geological formations and the ethereal beauty of floating landmasses.",
+      "searchDesc": "Floating islands over a tranquil sea, with ethereal jellyfish-like structures.",
+      "slug": "the-azure-archipelago",
+      "structure": {
+        "spatialLayout": "Vast open spaces, scattered landmasses, verticality of floating islands."
+      }
+    },
+    "5ebda446-07d2-423c-ba6e-8cb0a26126f6": {
+      "id": "5ebda446-07d2-423c-ba6e-8cb0a26126f6",
+      "type": "location",
+      "name": "Veridian Haven",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The settlement is characterized by organically shaped, multi-tiered buildings that blend seamlessly with the natural rock formations. Wide-canopied trees with vibrant purple and pink blossoms are a prominent feature, creating a visually striking and harmonious environment.",
+        "colorsAndLighting": "Bathed in bright, clear daytime light filtering through fluffy white clouds. Sunlight casts gentle rays, illuminating the vibrant purples and pinks of the blossoms against the earthy tones of stone and light-colored structures.",
+        "atmosphere": "The air is filled with a sense of profound peace and otherworldly beauty. A gentle breeze likely carries the scent of blossoms and damp earth. The temperature is pleasant, akin to a perfect daytime.",
+        "materials": "Surfaces are primarily natural stone and wood, complemented by light-colored structural materials. Lush green vines and organic plant life are abundant, adding to the natural aesthetic.",
+        "mood": "The overall mood is one of serenity, wonder, and vibrant natural beauty, evoking a feeling of tranquil escapism.",
+        "sounds": "Gentle rustling leaves, distant trickling water, soft chimes, birdsong, subtle wind.",
+        "primary_surfaces": "Weathered stone, natural wood, lush green foliage.",
+        "secondary_surfaces": "Polished rock faces, flowering plant matter, earthy soil.",
+        "accent_features": "Vivid purple and pink blossoms, flowing green vines, translucent ethereal structures.",
+        "dominant": "Earthy brown and light stone on the island and structures.",
+        "secondary": "Vibrant purple and pink from the blossoms.",
+        "accent": "Deep green from vines and foliage.",
+        "ambient": "Clear, bright daylight.",
+        "genre": null,
+        "architectural_tone": "Organic, nature-integrated rustic",
+        "cultural_tone": null,
+        "palette_bias": "Earthy tones with vibrant floral accents",
+        "flora_base": "Wide-canopied trees, flowering plants, vines",
+        "fauna_base": "None"
+      },
+      "description": "A vibrant settlement nestled on a large floating island, characterized by multi-tiered buildings and unique, wide-canopied trees.",
+      "searchDesc": "Floating island settlement with multi-tiered buildings, vibrant trees, and ethereal sky structures.",
+      "slug": "veridian-haven",
+      "structure": {
+        "spatialLayout": "The settlement occupies a large, central floating island with steep, rocky edges. Buildings are integrated in a multi-tiered fashion, suggesting a compact yet expansive feel within the island's confines."
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center of settlement",
+          "description": "Leads into the main communal building."
+        },
+        {
+          "type": "bridge",
+          "position": "east edge of main island",
+          "description": "Connects to a smaller adjacent island."
+        }
+      ],
+      "dominantElements": [
+        "communal_hall: shape=organic, orientation=sprawling, scale=large, style=rustic, surfaces=stone|wood, openings=open-passages, interior_materials=wood|stone|fabric, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Wide-canopied trees with purple and pink blossoms",
+        "Multi-tiered buildings integrated with rock formations",
+        "Flowing green vines on steep island edges",
+        "Tranquil pond reflecting the sky",
+        "Ethereal, translucent jellyfish-like structures in the sky"
+      ],
+      "primaryMedia": "media-1767684949381-s5mxsftnu"
+    },
+    "location-1767684988743-zeed65dfz": {
+      "id": "location-1767684988743-zeed65dfz",
+      "type": "location",
+      "name": "The Island",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Scattered floating islands drift in a vast, open sky above a deep, serene ocean. Ethereal sky structures hint at unseen realms. The primary island is a natural rock formation, softly sculpted by time and elements, with water features cascading organically.",
+        "colorsAndLighting": "The dominant colors are vibrant blues and deep greens of the ocean and sky, punctuated by ethereal purples and soft, glowing whites from translucent materials. Gentle, diffused sunlight pierces through clouds, casting serene shadows.",
+        "atmosphere": "A profound sense of peace pervades the air. Gentle breezes carry the faint scent of exotic blossoms. The atmosphere is cool and refreshing, imbued with a subtle, otherworldly energy.",
+        "materials": "The island is formed from natural, smoothly eroded rock. Water flows and pools seamlessly. Ethereal, translucent materials interweave with the rock, shimmering with internal light. The bridge is constructed from a similar translucent, glowing substance.",
+        "mood": "Tranquil escapism and a profound sense of wonder. The overwhelming feeling is one of serene beauty and mystical harmony.",
+        "sounds": "Soft ethereal hums, gentle lapping water, distant chime-like resonances.",
+        "spatialLayout": "The island is a roughly circular landmass with undulating terrain, surrounded by an immense expanse of water and sky. The bridge creates a clear, defined pathway to this sanctuary.",
+        "primary_surfaces": "Deep blue ocean, vibrant sky, naturally formed rock.",
+        "secondary_surfaces": "Translucent, glowing ethereal materials, atmospheric haze.",
+        "accent_features": "Floating rock formations, drifting luminous petals, cascading water features.",
+        "dominant": "Blue sky and deep blue-green ocean.",
+        "secondary": "Naturally formed, moss-covered rock formations.",
+        "accent": "Ethereal purple and soft white glows from translucent structures.",
+        "ambient": "Soft, diffused natural light with occasional ethereal glows.",
+        "genre": null,
+        "architectural_tone": "Organic, naturally formed.",
+        "cultural_tone": "Mystical, serene.",
+        "palette_bias": "Blues, greens, ethereal purples.",
+        "flora_base": "Vines, drifting petals/leaves, bioluminescent aquatic plants.",
+        "fauna_base": "None explicitly described, implied ethereal."
+      },
+      "primaryMedia": "media-1767684988742-3sl3k4zd7",
+      "description": "You are on a medium-sized island with an irregular shape. It is connected to the mainland by a bridge. The overall style is organic and nature-integrated rustic, with earthy tones and vibrant floral accents.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "natural",
+        "elevation": "ground-level",
+        "spatialLayout": "A medium-sized island with an irregular shape, connected to the mainland by a bridge. The overall feel is one of natural integration with earthy tones and vibrant floral accents.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "bridge",
+          "position": "connecting to the mainland",
+          "description": "cross the bridge to the mainland"
+        }
+      ],
+      "dominantElements": [],
+      "uniqueIdentifiers": [
+        "natural island formation",
+        "connected by a bridge",
+        "organic, nature-integrated rustic style"
+      ],
+      "searchDesc": "A mystical island oasis with an ethereal bridge, surrounded by serene blue waters and glowing flora.",
+      "slug": "island-oasis"
+    },
+    "niche-1767685024364-qx4zawtv3": {
+      "id": "niche-1767685024364-qx4zawtv3",
+      "type": "niche",
+      "name": "The Island",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "This space is an extension of the island's natural rock, seamlessly blending into formations that appear sculpted by pure elemental force. Translucent, bioluminescent materials weave through the rock, creating shifting patterns of light and shadow. The scale feels grand yet intimate, open to the vastness of the sky above and the depths of the ocean below.",
+        "colorsAndLighting": "Dominant hues of deep blues and verdant greens from the ocean and sky permeate this space. Ethereal purples and soft, internal white glows emanate from the translucent materials, creating a diffused, otherworldly illumination. Sunlight filters through atmospheric haze, casting gentle, elongated shadows.",
+        "atmosphere": "A profound sense of tranquility and wonder fills the air. Gentle, cool breezes carry the faint, sweet scent of blossoms not of this world. The atmosphere is alive with a subtle, mystical energy, creating a feeling of serene detachment.",
+        "materials": "The primary surfaces are composed of natural, smoothly eroded rock, reminiscent of ancient, water-worn stone. This is interwoven with ethereal, translucent materials that possess an internal luminosity, shimmering with a soft, pearlescent sheen. Water flows and pools in organically shaped basins.",
+        "mood": "A pervasive sense of peaceful contemplation and mystical awe. This space evokes a feeling of profound connection to the natural world, infused with an otherworldly magic.",
+        "sounds": "Gentle water whispers, soft wind sighs, faint ethereal hums.",
+        "spatialLayout": "The layout is fluid and organic, with no harsh angles. It feels like an extension of the island's natural terrain, opening outwards to embrace the vast sky and sea. The space is continuous, with smooth transitions between rock, water, and light.",
+        "primary_surfaces": "Smoothly eroded rock, flowing water, translucent ethereal matter",
+        "secondary_surfaces": "Atmospheric haze, diffused sky light",
+        "accent_features": "Cascading waterfalls, drifting luminous petals, integrated bioluminescent veins within rock",
+        "dominant": "Deep blue and green hues from the sky and ocean",
+        "secondary": "Naturally formed, moss-kissed rock formations",
+        "accent": "Ethereal purple and soft white glows from translucent structures",
+        "ambient": "Soft, diffused natural light with gentle, internal ethereal glows",
+        "genre": "Fantasy",
+        "architectural_tone": "Organic, naturally formed",
+        "cultural_tone": "Mystical, serene",
+        "palette_bias": "Blues, greens, ethereal purples",
+        "flora_base": "Vines, drifting petals/leaves",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767685024363-7sx59hcmf",
+      "description": "You stand on The Island, a large, irregular landmass bathed in the open sky. Pathways wind through lush vegetation and towards rocky outcrops, offering glimpses of secluded coves and a mystic grove. The air is filled with a serene, mystical atmosphere, accented by the sounds of whispering winds and the gentle lapping of crystal-clear waters.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "natural",
+        "elevation": "ground-level",
+        "spatialLayout": "A vast, irregular landmass emerging from the sea, with diverse natural features and open sky above. It offers various points of interest and natural pathways.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object stone bridge crossing to the mainland"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object path leading into the island's heart"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object clearing to the north revealing a waterfall"
+        }
+      ],
+      "dominantElements": [
+        "Mystic Grove: shape=organic, orientation=centered, scale=medium, style=sacred, surfaces=organic-membrane, openings=minimal, interior_materials=wood|stone|leaf, internal_atmosphere=mystical",
+        "Secluded Cove: shape=organic, orientation=flowing, scale=small, style=rustic, surfaces=weathered, openings=open-passages, interior_materials=sand|water|rock, internal_atmosphere=serene"
+      ],
+      "uniqueIdentifiers": [
+        "Bioluminescent Flora",
+        "Whispering Winds",
+        "Crystal Clear Waters",
+        "Ancient Stone Formations"
+      ],
+      "searchDesc": "Ethereal island passage blending rock, water, and glowing translucent elements under a vast sky.",
+      "slug": "null-of-the-island"
+    },
+    "loc-1767685060472-o5hzo65u0": {
+      "id": "loc-1767685060472-o5hzo65u0",
+      "type": "location",
+      "name": "the reef",
+      "spaceType": "structure",
+      "dna": {},
+      "description": "Structure: the reef",
+      "searchDesc": "the reef",
+      "slug": "the-reef",
+      "isPassThrough": true
+    },
+    "niche-1767685069522-1hf3gtheu": {
+      "id": "niche-1767685069522-1hf3gtheu",
+      "type": "niche",
+      "name": "The Reef",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "This interior is a natural extension of the reef's structure, with walls of smoothly eroded rock seamlessly transitioning into flowing organic forms. Translucent, bioluminescent materials are intricately woven into the rock, creating dynamic internal illumination. The space feels both grand in scale, echoing the vastness of the ocean, and intimately enclosed.",
+        "colorsAndLighting": "Deep blues and verdant greens from the surrounding ocean dominate, infused with ethereal purples and soft, internal white glows emanating from the bioluminescent veins. Diffused light filters from unseen openings, casting gentle, elongated shadows and highlighting the pearlescent sheen of the translucent materials.",
+        "atmosphere": "A profound sense of tranquility and wonder permeates the air. The atmosphere is cool and still, carrying the faint, sweet scent of alien sea flora. A subtle, mystical energy hums, inducing a feeling of serene detachment and deep connection to the oceanic environment.",
+        "materials": "The primary surfaces are composed of naturally smooth, water-worn rock, feeling ancient and elemental. This is interwoven with ethereal, translucent materials possessing an internal luminosity, creating shifting patterns of light and color with a soft, pearlescent texture. Crystal-clear water pools and flows in organically shaped basins.",
+        "mood": "Peaceful contemplation and mystical awe. A profound sense of connection to the natural, otherworldly magic of the reef.",
+        "sounds": "Gentle water lapping, distant whale song, soft ethereal hum",
+        "spatialLayout": "An irregularly shaped grotto, carved by ancient currents. The space opens and closes organically, with alcoves and larger central chambers, suggesting depth and hidden passages.",
+        "primary_surfaces": "Smoothly eroded, water-worn rock",
+        "secondary_surfaces": "Ethereal translucent matter with internal luminosity",
+        "accent_features": "Integrated bioluminescent veins, crystal-clear water pools with dissolved mineral shimmer, suspended luminous particles",
+        "dominant": "Deep blue and green hues from the ocean filtration",
+        "secondary": "Naturally formed, moss-kissed rock formations",
+        "accent": "Ethereal purple and soft white glows from translucent structures",
+        "ambient": "Soft, diffused natural light with gentle, internal ethereal glows",
+        "genre": "Fantasy",
+        "architectural_tone": "Organic, naturally formed",
+        "cultural_tone": "Mystical, serene",
+        "palette_bias": "Blues, greens, ethereal purples",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767685069519-a7c31vq7f",
+      "description": "You are now inside the vibrant and mystical underwater reef system. Various coral formations create organic shapes around you, teeming with colorful fish and other marine life. Bioluminescent flora casts an ethereal glow.",
+      "structure": {
+        "form": "organic",
+        "roofType": "null",
+        "scale": "medium",
+        "orientation": "flowing",
+        "openings": "minimal",
+        "openingShape": "irregular",
+        "functionalType": "natural",
+        "elevation": "floating",
+        "spatialLayout": "A vibrant underwater coral reef system teeming with marine life, with distinct coral formations and open water channels.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "bioluminescent anemone seating",
+          "polished shell table",
+          "woven seagrass mats",
+          "crystalized sea salt lamp"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "left wall",
+          "description": "archway glowing coral"
+        },
+        {
+          "type": "object",
+          "position": "front wall",
+          "description": "object shimmering kelp curtain"
+        },
+        {
+          "type": "opening",
+          "position": "right wall",
+          "description": "opening hidden grotto"
+        }
+      ],
+      "dominantElements": [
+        "Coral Garden: shape=organic, orientation=centered, scale=medium, style=sacred, surfaces=organic-membrane, openings=minimal, interior_materials=coral|sand|water, internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "Bioluminescent flora",
+        "Schools of colorful fish",
+        "Ancient coral formations"
+      ],
+      "searchDesc": "Mystical reef grotto with glowing veins and serene pools, bathed in blues and purples.",
+      "slug": "interior-of-the-reef"
+    },
+    "niche-1767685117677-f06v9jze8": {
+      "id": "niche-1767685117677-f06v9jze8",
+      "type": "niche",
+      "name": "The Big Outdoor Pool",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A grand, open-air lagoon carved into the island's natural stone, appearing as if shaped by elemental magic. Translucent crystalline structures are interwoven with the rock, casting a gentle, internal light. The scale is immense, blending the openness of the sky with the intimate contours of the earth.",
+        "colorsAndLighting": "Dominated by deep blues and vibrant greens mirroring the sky and ocean, with ethereal purples and soft white glows emanating from the luminous materials. Sunlight filters through a gentle haze, creating dappled patterns and elongated shadows.",
+        "atmosphere": "A pervasive sense of profound tranquility and mystical awe permeates the space. Gentle, cool breezes carry the faint, sweet scent of otherworldly blossoms. The atmosphere is alive with a subtle, magical energy, inducing serene contemplation.",
+        "materials": "Primarily composed of smoothly eroded, ancient-feeling rock, interspersed with ethereal, translucent materials that possess an internal luminosity and a pearlescent sheen. Water flows and pools in organically shaped basins.",
+        "mood": "Serene contemplation and mystical awe, a profound connection to the natural world infused with otherworldly magic.",
+        "sounds": "Gentle lapping water, distant chimes, soft rustling leaves, faint ethereal humming.",
+        "spatialLayout": "A large, naturally formed basin with undulating depths and gracefully curved edges, blending seamlessly with the surrounding rock formations. Expansive and open to the sky.",
+        "primary_surfaces": "Smoothly eroded, ancient rock formations; crystal-clear, luminous water.",
+        "secondary_surfaces": "Moss-kissed stone, atmospheric haze.",
+        "accent_features": "Cascading waterfalls, drifting luminous petals, integrated bioluminescent veins within rock, giant translucent lily pads.",
+        "dominant": "Deep blues and greens from the sky and ocean, filling the vast pool and surrounding rock.",
+        "secondary": "Naturally formed, moss-kissed rock formations, forming the contours of the pool.",
+        "accent": "Ethereal purple and soft white glows from translucent structures and bioluminescent veins.",
+        "ambient": "Soft, diffused natural light interwoven with gentle, internal ethereal glows.",
+        "genre": "Fantasy",
+        "architectural_tone": "Organic, naturally formed",
+        "cultural_tone": "Mystical, serene",
+        "palette_bias": "Blues, greens, ethereal purples",
+        "flora_base": "Vines, drifting petals/leaves, luminous moss",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767685117676-yyzjmjijr",
+      "description": "A large, open-air swimming pool, set in an expansive outdoor area.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "open-sky",
+        "scale": "large",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A large, open-air body of water designed for recreational swimming, surrounded by open space.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "path",
+          "position": "around the perimeter",
+          "description": "Paths leading around the pool's edge."
+        }
+      ],
+      "dominantElements": [],
+      "uniqueIdentifiers": [
+        "large open water body",
+        "outdoor recreational space",
+        "associated with leisure"
+      ],
+      "searchDesc": "A vast, glowing outdoor pool within a mystical island.",
+      "slug": "the-great-outdoor-pool"
+    },
+    "loc-1767685155021-es9a7nmdh": {
+      "id": "loc-1767685155021-es9a7nmdh",
+      "type": "host",
+      "name": "Garden Metropolis",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Towering organic buildings resembling unfurling petals, integrated vertical gardens, vast green landscapes, shimmering waterways.",
+        "colorsAndLighting": "Bright daylight, clear blue sky with fluffy clouds, pearlescent whites, vibrant flower colors, lush greens.",
+        "atmosphere": "Eco-conscious utopia, awe-inspiring beauty, tranquil sophistication, advanced yet natural.",
+        "materials": "Smooth organic membranes, polished stone, glass, abundant natural flora.",
+        "mood": "Awe-inspiring, tranquil, sophisticated, harmonious, utopian.",
+        "sounds": "Gentle city hum, natural sounds of water and birds.",
+        "primary_surfaces": "Pearlescent white facades, organic structural forms, abundant greenery.",
+        "secondary_surfaces": "Glass, water bodies, polished stone accents.",
+        "accent_features": "Vertical gardens, cascading flowers, visible building interiors, exotic fish.",
+        "dominant": "Organic high-rise structures, sprawling green spaces",
+        "secondary": "Waterways, natural flora",
+        "accent": "Intricate details, vibrant life",
+        "ambient": "Bright daylight, clear blue sky",
+        "genre": "Utopian Sci-Fi",
+        "architectural_tone": "Futuristic Organic",
+        "cultural_tone": "Eco-conscious, Harmonious, Advanced",
+        "palette_bias": "Natural and Ethereal",
+        "flora_base": "Flowers, trees, vertical gardens",
+        "fauna_base": "Fish, birds, insects"
+      },
+      "description": "A utopian city where nature and advanced technology coexist in perfect harmony. Its skyline is characterized by organic architectural marvels and vast, integrated green spaces.",
+      "searchDesc": "Futuristic garden city, organic architecture, nature and technology, utopian.",
+      "slug": "garden-metropolis",
+      "structure": {
+        "spatialLayout": "Expansive, integrated, verticality, fluid and organic city planning."
+      }
+    },
+    "c237eda7-7ff3-4e89-bff5-d7863582cfd6": {
+      "id": "c237eda7-7ff3-4e89-bff5-d7863582cfd6",
+      "type": "region",
+      "name": "The Azure Canals District",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Organic architecture, winding waterways, abundant flora, elevated pathways, futuristic vehicles.",
+        "colorsAndLighting": "Bright daylight, clear blue sky, vibrant flower colors (pink, purple, orange, yellow, white, blue), lush greens.",
+        "atmosphere": "Serene, eco-conscious utopia, harmonious coexistence of nature and technology.",
+        "materials": "Smooth, organic membranes, polished stone, glass.",
+        "mood": "Awe-inspiring beauty, tranquil sophistication, vibrant, utopian.",
+        "sounds": "Gentle gliding of vehicles, gentle flow of water, birdsong, rustling leaves.",
+        "primary_surfaces": "Pearlescent white, smooth organic membranes, polished stone.",
+        "secondary_surfaces": "Glass sections, flowing water, abundant foliage.",
+        "accent_features": "Vibrant flower cascades, vertical gardens, colorful fish, butterflies.",
+        "dominant": "Organic structures, waterways",
+        "secondary": "Vibrant flora, foliage",
+        "accent": "Colorful fish, butterflies, pod-like vehicles",
+        "ambient": "Clear blue sky, natural light",
+        "genre": null,
+        "architectural_tone": "Futuristic Organic",
+        "cultural_tone": "Utopian",
+        "palette_bias": "Vibrant natural colors",
+        "flora_base": "Flowers, lush foliage, small trees",
+        "fauna_base": "Fish, birds, butterflies"
+      },
+      "description": "The heart of the Garden Metropolis, this district is defined by its shimmering waterways and organic architectural style. It seamlessly blends advanced technology with lush natural elements, creating a vibrant and harmonious urban environment.",
+      "searchDesc": "Azure Canals District: Organic architecture, waterways, vibrant flora, futuristic city center.",
+      "slug": "the-azure-canals-district",
+      "structure": {
+        "spatialLayout": "Fluid, organic, integrated with water features and vertical gardens."
+      }
+    },
+    "75e94e63-15dd-4eb4-9c73-d088d08a8cf7": {
+      "id": "75e94e63-15dd-4eb4-9c73-d088d08a8cf7",
+      "type": "location",
+      "name": "Petal Tower",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The Petal Tower is a towering, organic structure with a smooth, pearlescent white facade that mimics the graceful unfurling of a flower petal. Expansive glass sections reveal glimpses of its vibrant pink interior, while integrated vertical gardens cascade down its sides.",
+        "colorsAndLighting": "The exterior is dominated by a soft, pearlescent white, reflecting the bright daylight. Accents of vibrant green from the vertical gardens provide contrast, and the interior's pink glow subtly illuminates through the glass.",
+        "atmosphere": "The air around the tower is fresh and clean, with a gentle warmth from the sun. The atmosphere is one of serene futurism, a harmonious blend of nature and advanced architecture. Birdsong can occasionally be heard.",
+        "materials": "The primary exterior material is a smooth, organic membrane with a pearlescent sheen, giving it an almost ethereal quality. Polished stone and glass are seamlessly integrated, contributing to its futuristic and elegant appearance.",
+        "mood": "The overall mood is one of awe-inspiring beauty and tranquil sophistication, embodying an eco-conscious utopia.",
+        "sounds": "Gentle breeze, distant birdsong, soft hum of ambient city.",
+        "primary_surfaces": "Pearlescent organic membrane",
+        "secondary_surfaces": "Large glass panels, integrated living foliage",
+        "accent_features": "Vertical gardens",
+        "dominant": "Pearlescent White",
+        "secondary": "Vibrant Green (gardens)",
+        "accent": "Soft Pink (interior glow)",
+        "ambient": "Bright daylight",
+        "genre": null,
+        "architectural_tone": "Futuristic Organic",
+        "cultural_tone": null,
+        "palette_bias": "Pastels and Greens",
+        "flora_base": "Lush vertical gardens with vibrant flowers",
+        "fauna_base": "Small birds"
+      },
+      "description": "A magnificent, towering building shaped like an opening flower petal, with integrated vertical gardens and a delicate pink interior visible through its glass sections. EXTERIOR VIEW.",
+      "searchDesc": "Towering organic building, Petal Tower, with pink interior, vertical gardens, pearlescent exterior.",
+      "slug": "petal-tower",
+      "structure": {
+        "spatialLayout": "A singular, towering organic form that gently curves upwards, wider at its base and tapering towards its apex, suggesting a dynamic, yet stable presence."
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "base",
+          "description": "Leads into the main lobby of the Petal Tower."
+        }
+      ],
+      "dominantElements": [
+        "<building>: shape=organic, orientation=vertical(tower), scale=towering, style=futuristic, surfaces=organic-membrane|glass, openings=large-glass, interior_materials='glass|polished-stone|glowing-fabric', internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Petal-shaped architecture",
+        "Integrated vertical gardens",
+        "Glimpses of a pink interior",
+        "Pearlescent exterior finish"
+      ],
+      "primaryMedia": "media-1767685198952-i4g7u88dq"
+    },
+    "niche-1767685224544-l4o372xds": {
+      "id": "niche-1767685224544-l4o372xds",
+      "type": "niche",
+      "name": "Petal Tower Core",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior of the Petal Tower is an unbroken expanse of the same pearlescent organic membrane that forms its exterior. The space is characterized by its smooth, flowing curves and a gentle, unbroken curvature that mimics the unfurling of a flower petal. Scale is grand and awe-inspiring, with no sharp edges or corners.",
+        "colorsAndLighting": "The primary color is a soft, pearlescent white, subtly shifting with internal light. A gentle, diffused pink bioluminescence emanates from within the membrane itself, casting a serene and warm glow. Light is even and shadowless, enhancing the sense of tranquility.",
+        "atmosphere": "The air is perfectly still and carries a faint, clean scent reminiscent of rain on petals. The temperature is consistently mild and comfortable, maintaining a feeling of tranquil sophistication. There is a palpable sense of calm and quietude, a complete absence of external noise.",
+        "materials": "The interior is constructed entirely from the smooth, pearlescent organic membrane, possessing an almost ethereal, slightly yielding texture. Polished stone and glass elements are seamlessly integrated, appearing as extensions of the membrane rather than separate components. The overall finish is flawless and immaculate.",
+        "mood": "The mood is one of profound peace and introspective wonder, a serene sanctuary embodying the pinnacle of eco-conscious utopian design.",
+        "sounds": "faint hum, gentle resonance, subtle inner glow sound",
+        "spatialLayout": "The interior is a continuous, cavernous space defined by sweeping, organic curves. It feels both vast and intimate, with a sense of depth that draws one inwards. The form is suggestive of an immense, hollowed-out seed or petal.",
+        "primary_surfaces": "Seamless pearlescent organic membrane with a subtle shimmer",
+        "secondary_surfaces": "Integrated polished stone, translucent glass panels",
+        "accent_features": "Internal pink bioluminescent glow, subtle flower petal motifs in curvature",
+        "dominant": "Pearlescent White, the entirety of the interior surface",
+        "secondary": "Vibrant Green, glimpsed through translucent panels as integrated flora",
+        "accent": "Soft Pink, the pervasive interior illumination",
+        "ambient": "Soft, diffused pink glow",
+        "genre": "Utopian Sci-Fi",
+        "architectural_tone": "Futuristic Organic",
+        "cultural_tone": "Utopian",
+        "palette_bias": "Pastels and Greens",
+        "flora_base": "Integrated living foliage (seen through panels)",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767685224541-b6kz6gw5x",
+      "description": "You are inside the towering, cylindrical core of the Petal Tower. The interior is a mesmerizing blend of organic and futuristic design, with polished stone floors and glowing fabric panels. Large glass walls offer breathtaking panoramic views of the cityscape, and transparent walkways crisscross the vast space, connecting different levels of this elevated structure.",
+      "structure": {
+        "form": "cylindrical",
+        "roofType": "domed",
+        "scale": "large",
+        "orientation": "vertical(tower)",
+        "openings": "large-glass",
+        "openingShape": "mixed",
+        "functionalType": "civic",
+        "elevation": "elevated",
+        "spatialLayout": "The central core of the Petal Tower is a vast, open cylindrical space rising upwards. Transparent walkways and observation decks form concentric rings, offering views of the city and the tower's organic outer shell. Luminescent flora integrated into the walls casts a gentle glow.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "glowing fabric seating pods",
+          "polished stone central fountain with bioluminescent flora",
+          "interactive glass display tables",
+          "diffused light panels embedded in ceiling"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door seamless glass"
+        },
+        {
+          "type": "object",
+          "position": "left wall",
+          "description": "object holographic information display"
+        },
+        {
+          "type": "archway",
+          "position": "right",
+          "description": "archway observation deck"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object elevator shaft rear wall"
+        }
+      ],
+      "dominantElements": [
+        "Observation Deck: shape=round, orientation=centered(dome), scale=large, style=futuristic, surfaces=glass|polished-stone, openings=minimal, interior_materials='polished-stone|glowing-fabric|glass', internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Bioluminescent flora",
+        "Concentric viewing platforms",
+        "Organic membrane exterior visible from inside"
+      ],
+      "searchDesc": "Interior of Petal Tower: pearlescent membrane, soft pink glow, organic futurism.",
+      "slug": "null-of-petal-tower"
     }
   },
   "views": {},
@@ -1777,6 +3568,16 @@
               "children": [
                 {
                   "id": "niche-1767623923875-xfnoqs5qe",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767650063237-l9jkicudc",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1767650134553-boeli3uin",
                   "type": "niche",
                   "children": []
                 }
@@ -1992,6 +3793,199 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1767649321481-cu0l00ctq",
+      "type": "host",
+      "children": [
+        {
+          "id": "563cb3b9-2dc2-4840-a8ed-dc322daa6ade",
+          "type": "region",
+          "children": [
+            {
+              "id": "423490f5-b067-45f5-8304-ca9f11c7af46",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767649397719-hzvzauhz3",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767649447275-s0onl2dtg",
+      "type": "host",
+      "children": [
+        {
+          "id": "c516b24f-e1d7-4bd2-b746-43e2dde16330",
+          "type": "region",
+          "children": [
+            {
+              "id": "41ab53a3-a31e-4ce9-b73d-55a660800178",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767649493472-543m9gh15",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767684470428-34u71ai1i",
+      "type": "host",
+      "children": [
+        {
+          "id": "aa4090c2-1ca5-42c8-af5b-897bb00d5054",
+          "type": "region",
+          "children": [
+            {
+              "id": "cbefd742-1154-40ab-a813-23170e586420",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "location-1767684552278-xtvyb99ye",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767684627103-jx5q8m0rl",
+      "type": "host",
+      "children": [
+        {
+          "id": "2c5e7907-0257-4b65-bb7d-2763c7c4a1f5",
+          "type": "region",
+          "children": [
+            {
+              "id": "8c81ba35-628a-43fa-869b-1a4607b258fc",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767684670495-t30adk88y",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "location-1767684725555-6kdq4lssq",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767684749625-49kfdo4wu",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767684801145-hilgvvgha",
+      "type": "host",
+      "children": [
+        {
+          "id": "948bc1df-fc96-42e0-93fd-92541facd7ce",
+          "type": "region",
+          "children": [
+            {
+              "id": "86d669ef-5f30-4fb6-ab1b-02705afab6af",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767684889088-j3gbqonse",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767684932069-x9jk8nszd",
+      "type": "host",
+      "children": [
+        {
+          "id": "e2a95dc8-f61c-4021-bef8-742f7ddfdd6a",
+          "type": "region",
+          "children": [
+            {
+              "id": "5ebda446-07d2-423c-ba6e-8cb0a26126f6",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "location-1767684988743-zeed65dfz",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767685024364-qx4zawtv3",
+                  "type": "niche",
+                  "children": [
+                    {
+                      "id": "loc-1767685060472-o5hzo65u0",
+                      "type": "location",
+                      "children": [
+                        {
+                          "id": "niche-1767685069522-1hf3gtheu",
+                          "type": "niche",
+                          "children": []
+                        },
+                        {
+                          "id": "niche-1767685117677-f06v9jze8",
+                          "type": "niche",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1767685155021-es9a7nmdh",
+      "type": "host",
+      "children": [
+        {
+          "id": "c237eda7-7ff3-4e89-bff5-d7863582cfd6",
+          "type": "region",
+          "children": [
+            {
+              "id": "75e94e63-15dd-4eb4-9c73-d088d08a8cf7",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1767685224544-l4o372xds",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -2003,6 +3997,13 @@
     "loc-1767624280738-ih1f4br4m",
     "loc-1767624506524-s12xugr72",
     "loc-1767624568957-zzkmcei94",
-    "loc-1767624666989-xk7kvjhjl"
+    "loc-1767624666989-xk7kvjhjl",
+    "loc-1767649321481-cu0l00ctq",
+    "loc-1767649447275-s0onl2dtg",
+    "loc-1767684470428-34u71ai1i",
+    "loc-1767684627103-jx5q8m0rl",
+    "loc-1767684801145-hilgvvgha",
+    "loc-1767684932069-x9jk8nszd",
+    "loc-1767685155021-es9a7nmdh"
   ]
 }

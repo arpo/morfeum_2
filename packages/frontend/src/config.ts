@@ -34,7 +34,7 @@ export const PANEL_CONFIG = {
  */
 export const WORLD_VIEW_3D_CONFIG = {
   /** Depth scale - how much the 3D should "bulge" out (0.1 = subtle, 2.0 = extreme) */
-  MESH_DEPTH: 0.4,
+  MESH_DEPTH: 0.7,
   
   /** Focus plane - depth at which objects stay still during parallax (0 = far, 1 = near) */
   FOCUS: 0.25,
