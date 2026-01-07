@@ -29,6 +29,7 @@ import type { ImagePromptStructure } from './imagePromptTypes';
 import { assembleImagePrompt } from './imagePromptAssembler';
 import { getImageConstraints, getImageLayerGuidance, getDefaultImageLayerGuidance, type ContainerType, type SpacePerspective, type ImageLayerGuidance } from './spaceTypeRegistry';
 import { getTransitionCategory } from '../prompts/shared/interiorTransitionRules';
+import { detectEnvironmentFromDNA, getEnvironmentViewportConstraint } from '../prompts/shared/environmentTransitionRules';
 
 export interface ImagePromptGenerationInput {
   /** Structure analysis result (form, scale, navigableElements, etc.) */
@@ -476,6 +477,17 @@ function buildConstraints(input: ImagePromptGenerationInput): string[] {
   // Open-sky constraint
   if (isOpenSky) {
     constraints.push('[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]');
+  }
+  
+  // Environment constraint for interior spaces with windows
+  // Detects underwater, space, aerial, subterranean environments from parent DNA
+  // and adds constraint to show correct environment through viewports
+  if (input.perspective === 'interior') {
+    const envType = detectEnvironmentFromDNA(input.parentDNA, input.surroundingsDNA);
+    const envConstraint = getEnvironmentViewportConstraint(envType);
+    if (envConstraint) {
+      constraints.push(envConstraint);
+    }
   }
   
   // Shape constraints for non-rectangular dominant elements

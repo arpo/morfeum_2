@@ -197,7 +197,7 @@ export async function parsePromptToHierarchy(
 ): Promise<ParsedHierarchy> {
   console.log(`[ParseHierarchy] ===== parsePromptToHierarchy START =====`);
   console.log(`[ParseHierarchy] useCaching: ${useCaching}`);
-  console.log(`[ParseHierarchy] prompt: "${prompt.substring(0, 100)}${prompt.length > 100 ? '...' : ''}"`);
+  console.log(`[ParseHierarchy] prompt: "${prompt}"`);
   
   let responseText: string;
   

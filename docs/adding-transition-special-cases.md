@@ -2,7 +2,7 @@
 
 When you find a transition that doesn't produce correct images (e.g., exterior→interior, genre-specific), here's how to add special case rules.
 
-## Two Systems to Consider
+## Three Systems to Consider
 
 ### 1. DNA Generation Rules (What the space IS)
 **File:** `packages/backend/src/engine/generation/prompts/locations/nodeDNAGeneration.ts`
@@ -45,7 +45,31 @@ SAME_MATERIAL: [
 ],
 ```
 
-### 3. Image Layer Guidance (Image composition)
+### 3. Environment Transition Rules (What's visible through windows)
+**File:** `packages/backend/src/engine/generation/prompts/shared/environmentTransitionRules.ts`
+
+Controls what environment is visible through windows/viewports based on the parent chain DNA.
+
+**Categories:**
+- `UNDERWATER` - Ocean, bioluminescence, marine life visible through glass
+- `SPACE` - Stars, nebulas, planets visible through viewports
+- `AERIAL` - Clouds, distant ground, sky visible through windows
+- `SUBTERRANEAN` - Rock walls, cave formations, magma visible
+- `SURFACE` - Default regular landscape (no special constraint)
+
+**To add new environment keywords:**
+```typescript
+// In ENVIRONMENT_KEYWORDS
+UNDERWATER: [
+  'underwater', 'ocean', 'seabed', 'abyssal',
+  'your-new-keyword-here',  // Add to detect this environment
+],
+```
+
+**Example use case:**
+Underwater sci-fi dome → interior windows MUST show ocean/bioluminescence, NOT space.
+
+### 4. Image Layer Guidance (Image composition)
 **Files:** `packages/backend/src/engine/generation/shared/spaceTypeRegistry/*/`
 
 Controls how the background/midground/foreground are composed.
@@ -86,8 +110,10 @@ Should use `building-interior` with `interior-dominant` priority.
 |-------|----------|----------|
 | Abstract descriptions | nodeDNAGeneration.ts | Add ✅/❌ examples |
 | Wrong interior materials | interiorTransitionRules.ts | Add style to correct category |
+| Wrong environment through windows | environmentTransitionRules.ts | Add keywords to correct category |
 | Wrong image composition | spaceTypeRegistry/*.ts | Set correct `backgroundPriority` |
 | Gothic ghost poetry | nodeDNAGeneration.ts | Gothic/Horror specific rules |
+| Underwater shows space | environmentTransitionRules.ts | `UNDERWATER` category with ocean keywords |
 
 ## Testing Changes
 
