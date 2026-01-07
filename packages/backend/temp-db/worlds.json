@@ -1,40 +1,40 @@
 {
   "nodes": {
-    "loc-1767774812944-970kqh8gi": {
-      "id": "loc-1767774812944-970kqh8gi",
+    "loc-1767779266412-f4ekoub0p": {
+      "id": "loc-1767779266412-f4ekoub0p",
       "type": "host",
-      "name": "Oceanus Colony",
+      "name": "Neo-Metropolis",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Vast interconnected domed structures, glowing bioluminescent pathways, distant geothermal vent plumes, shadowy abyssal trenches, colossal submerged rock formations",
-        "colorsAndLighting": "Deep indigo and cool blue bioluminescence, occasional warm orange from vents, stark white artificial lights, pervasive darkness",
-        "atmosphere": "Crushing pressure, serene yet alien, humid, electrically charged near vents",
-        "materials": "Reinforced hyper-resistant glass, polished metallic alloys, natural rock formations, bio-luminescent organic matter",
-        "mood": "Hopeful resilience, advanced technological achievement, isolated sanctuary",
-        "sounds": "Subtle hum of life support, distant creaks of pressure, rhythmic pulses of bioluminescence, occasional deep-sea creature calls",
-        "primary_surfaces": "Translucent reinforced glass, dark metallic alloys",
-        "secondary_surfaces": "Natural abyssal rock, smooth, almost organic bio-luminescent surfaces",
-        "accent_features": "Geothermal vent plumes, intricate bioluminescent patterns, access hatches and docking bays",
-        "dominant": "Deep blue and indigo",
-        "secondary": "Cool blue and white light",
-        "accent": "Warm orange and metallic sheen",
-        "ambient": "Oceanic darkness",
-        "genre": "Underwater Sci-Fi",
-        "architectural_tone": "Futuristic Geodesic",
-        "cultural_tone": "Isolated Sanctuary",
-        "palette_bias": "Cool and Dark",
-        "flora_base": "Bioluminescent Algae and Fungi",
-        "fauna_base": "Abyssal Deep-Sea Creatures"
+        "looks": "Distant city skyline with towering, geometric skyscrapers, vast urban sprawl with glowing lights, hints of advanced transportation networks.",
+        "colorsAndLighting": "Cool blues, silvers, and blacks dominate, punctuated by bright, artificial lights from buildings and vehicles. Sharp, defined shadows.",
+        "atmosphere": "Energetic and advanced, a sense of constant forward motion and technological integration.",
+        "materials": "Polished metallic surfaces, glass, concrete, and illuminated digital displays.",
+        "mood": "Ambitious, futuristic, and slightly impersonal.",
+        "sounds": "Distant hum of traffic, whirring of unseen machinery, electronic announcements.",
+        "primary_surfaces": "Smooth metallic cladding, large glass panels.",
+        "secondary_surfaces": "Concrete, illuminated digital signage.",
+        "accent_features": "Glows from windows, traffic lights, and advertising.",
+        "dominant": "Silver, Blue",
+        "secondary": "Black, White",
+        "accent": "Electric Blue, Neon Green",
+        "ambient": "Cool, artificial light",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Futuristic",
+        "cultural_tone": "Modern",
+        "palette_bias": "Cool",
+        "flora_base": "Minimal urban greenery",
+        "fauna_base": "Artificial"
       },
-      "description": "A sprawling futuristic settlement nestled in the abyssal depths, powered by geothermal vents and bioluminescent technology. This deep-sea metropolis thrives amidst crushing pressures and eternal darkness.",
-      "searchDesc": "Abyssal sci-fi colony, underwater metropolis, geothermal-powered settlement",
-      "slug": "oceanus-colony",
+      "description": "Neo-Metropolis is a sprawling, cutting-edge modern city characterized by its towering, sleek skyscrapers and advanced, seamlessly integrated infrastructure. It's a beacon of technological progress and urban innovation.",
+      "searchDesc": "Sleek skyscrapers, advanced infrastructure, futuristic urban landscape",
+      "slug": "neo-metropolis",
       "structure": {
-        "spatialLayout": "Interconnected networks of pressurized habitats, verticality emphasized by settlement height, central core around geothermal energy"
+        "spatialLayout": "Gridded street patterns with elevated highways and walkways, massive verticality."
       }
     },
-    "a45e1490-3211-4073-a41e-ad5e666921d4": {
-      "id": "a45e1490-3211-4073-a41e-ad5e666921d4",
+    "cc48bdf0-56b4-4760-8615-6ea21bcd3e42": {
+      "id": "cc48bdf0-56b4-4760-8615-6ea21bcd3e42",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -44,71 +44,305 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "b4e771fb-4df1-4ff6-8b2e-06e5d9dc5e4c": {
-      "id": "b4e771fb-4df1-4ff6-8b2e-06e5d9dc5e4c",
+    "8a48b0ec-020b-4691-8d5a-ea0301522aec": {
+      "id": "8a48b0ec-020b-4691-8d5a-ea0301522aec",
       "type": "location",
-      "name": "The Bio-Dome Habitation",
+      "name": "The Automotive Gallery",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A monumental, geodesic dome with a highly polished, reflective outer shell. Its form is smooth and aerodynamic, hinting at advanced engineering. Embedded lights create intricate patterns across its surface, resembling a constellation against the dark deep.",
-        "colorsAndLighting": "The primary colors are cool blues and deep indigos of the surrounding ocean, contrasted by the warm, white and cyan glow of the embedded lights. The lighting is generally bright within the dome, with controlled illumination highlighting specific areas.",
-        "atmosphere": "The air inside is crisp and artificially regulated, maintaining a comfortable temperature. There is a gentle hum of life support systems. The atmosphere is contained and protected from the external, crushing pressures.",
-        "materials": "The primary material is a hyper-resistant, reinforced glass or polymer, giving the dome its translucent quality. Accents of polished, dark metallic alloys are visible in structural supports and access points. The textures are smooth and sleek, reflecting the futuristic design.",
-        "mood": "The mood is one of hopeful resilience and advanced technological achievement, a sanctuary against the hostile environment.",
-        "sounds": "Hum of machinery, distant sonar pings, gentle atmospheric circulation.",
-        "primary_surfaces": "Reinforced, translucent glass with a polished sheen.",
-        "secondary_surfaces": "Dark, polished metallic alloys.",
-        "accent_features": "Embedded bioluminescent lighting arrays, intricate geometric patterns.",
-        "dominant": "Cool blue and deep indigo (ocean).",
-        "secondary": "Bright white and cyan (lights).",
-        "accent": "Dark metallic (structural elements).",
-        "ambient": "Bright and artificially controlled.",
-        "genre": "sci-fi",
-        "architectural_tone": "Futuristic geodesic dome",
-        "cultural_tone": "Human habitation, technological sanctuary",
-        "palette_bias": "Blues, indigos, whites, cyans",
+        "looks": "The gallery is a massive, organically shaped structure characterized by sweeping, curved lines and expansive, highly polished glass facades. Its form is designed to be visually dynamic and futuristic, with large sections appearing to flow into one another.",
+        "colorsAndLighting": "The primary colors are derived from the highly reflective glass and polished metal surfaces, creating a bright, almost blinding effect under direct sunlight. The interior is bathed in natural light, with artificial lighting strategically placed to highlight the exhibits.",
+        "atmosphere": "The air inside is likely cool and climate-controlled, with a sense of hushed reverence. There's a feeling of vastness and sophistication, devoid of any harsh elements. The temperature is constant, and there's no discernible outdoor weather affecting the interior.",
+        "materials": "Dominant materials include large panels of clear, polished glass and smooth, reflective metallic surfaces, likely brushed aluminum or chrome. Interior flooring might be polished stone or concrete, with metallic accents on display pedestals.",
+        "mood": "The mood is one of awe and sophisticated appreciation, a celebration of engineering and design. It evokes a sense of wonder and admiration for the showcased automobiles.",
+        "sounds": "Subtle hum of climate control, soft footsteps on polished floors, hushed murmurs of visitors.",
+        "primary_surfaces": "Polished glass, brushed metallic surfaces, smooth concrete floors.",
+        "secondary_surfaces": "Gleaming chrome accents, subtle stone detailing, reflective ceiling panels.",
+        "accent_features": "Architectural curves, recessed lighting, holographic displays (potential).",
+        "dominant": "Silver across large surface areas.",
+        "secondary": "Clear glass in expansive panels.",
+        "accent": "Polished chrome on exhibit details.",
+        "ambient": "Bright, natural light.",
+        "genre": null,
+        "architectural_tone": "Futuristic minimalist",
+        "cultural_tone": "Celebration of automotive design and engineering",
+        "palette_bias": "Cool metallics and neutrals",
         "flora_base": "None",
         "fauna_base": "None"
       },
-      "description": "A massive, translucent pressurized dome, its exterior shimmering with embedded lights, designed to house life in the crushing deep. EXTERIOR VIEW.",
-      "searchDesc": "Massive, futuristic bio-dome habitation in the crushing deep, lit by embedded lights.",
-      "slug": "the-bio-dome-habitation",
+      "description": "A grand, modern museum dedicated to cars, featuring sleek, expansive glass facades and distinctive architectural curves. EXTERIOR VIEW.",
+      "searchDesc": "Modern car museum with sleek glass, curves, and a futuristic architectural style.",
+      "slug": "the-automotive-gallery",
       "structure": {
-        "spatialLayout": "The dome is a single, vast, spherical enclosure, offering a sense of expansive, open space within. Its height and width are substantial, creating a feeling of grand scale."
+        "spatialLayout": "A sprawling, open-plan layout with high ceilings and a vast central atrium. The organic shape creates a sense of fluid movement between different exhibition zones."
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "center of the main facade",
-          "description": "Leads into the main habitation areas."
+          "position": "center of the facade",
+          "description": "Leads inside the main exhibition hall."
+        },
+        {
+          "type": "path",
+          "position": "leading to the entrance",
+          "description": "A polished stone pathway from the street."
         }
       ],
       "dominantElements": [
-        "The Bio-Dome: shape=domed, orientation=centered, scale=massive, style=futuristic, surfaces=glass|metallic-polished, openings=large-glass, interior_materials=metallic|glass|concrete, internal_atmosphere=bright"
+        "Automotive Gallery: shape=organic, orientation=sprawling, scale=massive, style=futuristic, surfaces=glass|metallic-polished, openings=large-glass, interior_materials=metallic|stone|glass, internal_atmosphere=bright"
       ],
       "uniqueIdentifiers": [
-        "Embedded bioluminescent lights",
-        "Translucent, pressure-resistant shell",
-        "Submerged location",
-        "Shimmering exterior facade"
+        "Sweeping glass facade",
+        "Curving architectural elements",
+        "Polished metallic accents",
+        "Showcase of vintage and concept cars",
+        "Sunlight-drenched exhibition spaces"
       ],
-      "primaryMedia": "media-1767774837093-y2hofbb1z"
+      "primaryMedia": "media-1767779281560-406287npt"
+    },
+    "niche-1767779324596-o2ohij4zv": {
+      "id": "niche-1767779324596-o2ohij4zv",
+      "type": "niche",
+      "name": "The Exhibition Hall",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "An immense, organically shaped hall with sweeping curves and a soaring, domed glass ceiling. The space is designed with a sense of boundless volume, allowing each meticulously presented vehicle to command attention. Integrated holographic displays project dynamic visuals around each exhibit.",
+        "colorsAndLighting": "Dominated by cool metallics and neutral tones, the interior is bathed in a bright, diffused natural light that streams through the expansive glass facades. Strategically placed recessed lighting highlights the automotive exhibits with a sophisticated glow.",
+        "atmosphere": "The air is cool, still, and climate-controlled, creating an atmosphere of hushed reverence. A palpable sense of vastness and sophisticated admiration permeates the space, devoid of any visual or auditory distractions.",
+        "materials": "Characterized by large panels of clear, highly polished glass and smooth, brushed metallic surfaces. The flooring consists of polished concrete with subtle metallic inlays, and display pedestals are crafted from reflective chrome.",
+        "mood": "Awe-inspiring and sophisticated, celebrating the pinnacle of automotive design and engineering with a sense of wonder.",
+        "sounds": "Subtle ambient hum, hushed footsteps, soft informational audio snippets.",
+        "spatialLayout": "A grand, cavernous hall with an organically flowing layout. The open central area accommodates numerous vehicles, with pathways designed for optimal viewing and circulation. The scale is immense, creating a feeling of being within a futuristic cathedral of motion.",
+        "primary_surfaces": "Polished glass, brushed metallic walls, smooth concrete floors",
+        "secondary_surfaces": "Gleaming chrome accents, reflective ceiling panels",
+        "accent_features": "Architectural curves, integrated holographic displays, floor lighting tracers",
+        "dominant": "Silver across large surface areas",
+        "secondary": "Clear glass in expansive panels",
+        "accent": "Polished chrome on exhibit details",
+        "ambient": "Bright, natural light",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Futuristic minimalist",
+        "cultural_tone": "Celebration of automotive design and engineering",
+        "palette_bias": "Cool metallics and neutrals",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767779324595-805k6md3u",
+      "description": "A grand, high-ceilinged hall within the Automotive Gallery, designed to showcase a diverse collection of sleek concept cars and iconic vintage automobiles on illuminated pedestals, bathed in a bright, almost sterile glow.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "horizontal",
+        "openings": "open-passages",
+        "openingShape": "rectangular",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A vast, open space designed to display vehicles, with clear sightlines and ample room for movement, featuring a high ceiling.",
+        "requiredElements": [
+          "cars"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "north wall",
+          "description": "leads to the main exhibition floor"
+        },
+        {
+          "type": "passage",
+          "position": "south wall",
+          "description": "leads to the visitor's lounge"
+        }
+      ],
+      "dominantElements": [
+        "Concept Car A: shape=organic, orientation=horizontal, scale=small, style=futuristic, surfaces=metallic-polished|glass, openings=large-glass, interior_materials=metallic|leather|glass, internal_atmosphere=sterile",
+        "Vintage Race Car: shape=rectangular, orientation=horizontal, scale=small, style=art-deco, surfaces=metallic-polished|wood, openings=circular-portholes, interior_materials=leather|metallic|wood, internal_atmosphere=cramped"
+      ],
+      "uniqueIdentifiers": [
+        "gleaming vehicles",
+        "high vaulted ceiling",
+        "polished floors",
+        "futuristic display pedestals"
+      ],
+      "searchDesc": "Futuristic minimalist hall displaying rare cars, cool metallics, awe-inspiring.",
+      "slug": "null-of-the-automotive-gallery"
+    },
+    "loc-1767779333892-rjpgwokj2": {
+      "id": "loc-1767779333892-rjpgwokj2",
+      "type": "location",
+      "name": "car",
+      "spaceType": "structure",
+      "dna": {},
+      "description": "Structure: car",
+      "searchDesc": "car",
+      "slug": "car",
+      "isPassThrough": true
+    },
+    "niche-1767779346715-b26hpmiol": {
+      "id": "niche-1767779346715-b26hpmiol",
+      "type": "niche",
+      "name": "Concept Car A Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A sleek, spacious cabin featuring organically flowing lines and minimalist contours. The layout prioritizes passenger comfort and an immersive technological experience, with integrated displays seamlessly blending into the interior surfaces.",
+        "colorsAndLighting": "Dominated by cool, soft-toned metallics and matte neutrals, illuminated by diffused, adaptive ambient lighting that shifts subtly with the driving conditions and passenger preferences. Recessed lighting highlights key design elements.",
+        "atmosphere": "The air is clean, filtered, and climate-controlled, maintaining a constant, comfortable temperature. A subtle hum of advanced systems and the silence of superior insulation create an atmosphere of serene, sophisticated focus, devoid of external distractions.",
+        "materials": "Crafted from smooth, tactile synthetic leathers, polished composite alloys, and brushed metallic accents. Surfaces are impeccably smooth and cool to the touch, emphasizing a high-tech, durable, and luxurious feel.",
+        "mood": "Awe-inspiring and sophisticated, offering a sanctuary of advanced engineering and unparalleled comfort for the discerning traveler.",
+        "sounds": "Soft engine hum, subtle climate control, ambient audio prompts, synthesized alerts",
+        "spatialLayout": "A curvilinear, pod-like structure that encloses passengers in comfort. The interior is designed for optimal ergonomics and visibility, with a focus on a seamless and uncluttered user interface.",
+        "primary_surfaces": "Soft-touch composite panels, polished metallic trim",
+        "secondary_surfaces": "Integrated, high-resolution display surfaces, brushed chrome accents",
+        "accent_features": "Dynamic ambient lighting strips, sculpted seat contours, minimalist control interfaces",
+        "dominant": "Silver across interior panels and trim",
+        "secondary": "Clear, holographic displays integrated into surfaces",
+        "accent": "Polished chrome on control accents and seat adjustments",
+        "ambient": "Soft, diffused, and adaptive",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Futuristic minimalist",
+        "cultural_tone": "Celebration of automotive design and engineering",
+        "palette_bias": "Cool metallics and neutrals",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767779346714-x4gj03eqd",
+      "description": "Stepping inside the Concept Car A reveals a sterile, futuristic interior defined by its organic lines and metallic-polished surfaces. Large, sweeping glass panels offer expansive views, complementing the sleek, enclosed environment crafted from metallic, leather, and glass materials, all designed for an advanced driving experience.",
+      "structure": {
+        "form": "organic",
+        "roofType": "domed",
+        "scale": "small",
+        "orientation": "horizontal",
+        "openings": "large-glass",
+        "openingShape": "irregular",
+        "functionalType": "civic",
+        "elevation": "ground-level",
+        "spatialLayout": "A compact, streamlined interior designed for driving and passenger comfort, featuring futuristic controls and an enveloping cabin.",
+        "requiredElements": [
+          "seats",
+          "dashboard",
+          "steering wheel",
+          "display screens"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "left and right side",
+          "description": "to the exhibition hall"
+        }
+      ],
+      "dominantElements": [],
+      "uniqueIdentifiers": [
+        "sleek controls",
+        "panoramic view",
+        "ambient lighting",
+        "ergonomic seats"
+      ],
+      "searchDesc": "Futuristic car interior with minimalist design and advanced tech.",
+      "slug": "interior-of-car"
+    },
+    "niche-1767780804717-v0yeofkqm": {
+      "id": "niche-1767780804717-v0yeofkqm",
+      "type": "niche",
+      "name": "Back Seat of the Car",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The back seat is a meticulously crafted haven of comfort, featuring deeply contoured, ergonomic seating surfaces.  The layout emphasizes personal space and immersion, with the rear passengers enveloped by the vehicle's advanced interior architecture. Integrated holographic projectors are subtly recessed into the surrounding panels.",
+        "colorsAndLighting": "Dominated by deep, sophisticated neutrals and muted metallic accents, the interior is bathed in soft, customizable ambient lighting.  The lighting shifts dynamically to complement entertainment or create a serene atmosphere, with the glow of holographic displays providing localized illumination.",
+        "atmosphere": "The air is perfectly still and climate-controlled, offering a sense of quiet seclusion and personalized comfort.  A subtle hum of advanced engineering permeates the space, creating an atmosphere of refined luxury and technological sophistication.",
+        "materials": "Upholstered in supple, brushed microfibers and supple, temperature-regulating synthetic leathers.  Surfaces are a blend of cool, matte metallic finishes and polished composite panels, offering a tactile and visually pleasing experience.  Window surfaces are a seamless, clear electrochromic glass.",
+        "mood": "Intimate and exclusive, conveying a sense of ultimate comfort and advanced personal mobility.",
+        "sounds": "Subtle engine hum, soft ambient music, holographic soundscapes, hushed controls.",
+        "spatialLayout": "The back seat is an integrated component of the larger vehicle's cabin, designed for optimal passenger experience. It forms a defined, yet open, personal zone within the larger hall, with the windows offering a connection to the external environment.",
+        "primary_surfaces": "Sculpted, upholstered seating in deep neutrals",
+        "secondary_surfaces": "Matte metallic and polished composite panels",
+        "accent_features": "Recessed holographic projectors, integrated control surfaces, subtle LED accent lighting",
+        "dominant": "Deep neutral tones across seating",
+        "secondary": "Muted metallic finishes on panels",
+        "accent": "Subtle LED lighting and holographic projections",
+        "ambient": "Soft, customizable ambient light",
+        "genre": "Sci-Fi",
+        "architectural_tone": "Futuristic minimalist",
+        "cultural_tone": "Celebration of automotive design and engineering",
+        "palette_bias": "Cool metallics and neutrals",
+        "flora_base": "None",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767780804716-if36q88ea",
+      "description": "The enclosed back seat of a futuristic minimalist car, featuring cool metallics and neutral tones, with a focus on integrated technology and comfort.",
+      "structure": {
+        "form": "flowing",
+        "roofType": "domed",
+        "scale": "small",
+        "orientation": "horizontal",
+        "openings": "large-glass",
+        "openingShape": "rectangular",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "A sleek, compact cabin designed for passenger comfort, with individual ergonomic seating and integrated technology.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "side of the car",
+          "description": "leads outside"
+        },
+        {
+          "type": "passage",
+          "position": "forward",
+          "description": "leads to the front cabin"
+        }
+      ],
+      "dominantElements": [],
+      "uniqueIdentifiers": [
+        "integrated entertainment screens",
+        "ergonomic seating",
+        "ambient mood lighting",
+        "panoramic glass roof"
+      ],
+      "searchDesc": "Luxurious car back seat with holographic displays and panoramic windows.",
+      "slug": "back-seat"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1767774812944-970kqh8gi",
+      "id": "loc-1767779266412-f4ekoub0p",
       "type": "host",
       "children": [
         {
-          "id": "a45e1490-3211-4073-a41e-ad5e666921d4",
+          "id": "cc48bdf0-56b4-4760-8615-6ea21bcd3e42",
           "type": "region",
           "children": [
             {
-              "id": "b4e771fb-4df1-4ff6-8b2e-06e5d9dc5e4c",
+              "id": "8a48b0ec-020b-4691-8d5a-ea0301522aec",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "niche-1767779324596-o2ohij4zv",
+                  "type": "niche",
+                  "children": [
+                    {
+                      "id": "loc-1767779333892-rjpgwokj2",
+                      "type": "location",
+                      "children": [
+                        {
+                          "id": "niche-1767779346715-b26hpmiol",
+                          "type": "niche",
+                          "children": []
+                        },
+                        {
+                          "id": "niche-1767780804717-v0yeofkqm",
+                          "type": "niche",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -116,6 +350,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1767774812944-970kqh8gi"
+    "loc-1767779266412-f4ekoub0p"
   ]
 }
