@@ -15,4 +15,3 @@ export {
   resolveAncestryDNASkippingPassThrough,
   enforceDNAInheritance
 } from './dnaMerge';
-export { generateBatchDNA } from '../pipelines/worldTreePipeline';

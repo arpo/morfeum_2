@@ -1,40 +1,40 @@
 {
   "nodes": {
-    "loc-1767775670718-hsatm68ui": {
-      "id": "loc-1767775670718-hsatm68ui",
+    "loc-1767775944676-hn5f6ibpr": {
+      "id": "loc-1767775944676-hn5f6ibpr",
       "type": "host",
-      "name": "Atlantis II Colony",
+      "name": "Abyssal Depths",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A vast, interconnected network of glowing domes and cylindrical habitats nestled on the ocean floor. Bioluminescent flora and fauna are integrated into the cityscape. Distant geothermal vents create an ethereal glow on the horizon.",
-        "colorsAndLighting": "Dominated by cool blues and greens, with intermittent pulses of white and cyan light from internal illumination and external markers. Bioluminescence adds organic vibrancy.",
-        "atmosphere": "A sense of awe and wonder, tinged with the quiet hum of advanced life support systems. The ocean currents create a subtle, dynamic visual element.",
-        "materials": "Primary structures are composed of reinforced transparisteel and brushed metallic alloys. Luminescent organic growths and artificial corals are integrated into surfaces.",
-        "mood": "Controlled optimism, technological advancement, and a profound connection to the alien beauty of the deep sea.",
-        "sounds": "The low hum of machinery, the distant calls of marine life, the gentle whoosh of water currents, and the muffled sounds of human activity.",
-        "primary_surfaces": "Transparent domes, metallic alloy walls, textured composite panels.",
-        "secondary_surfaces": "Bioluminescent membranes, integrated coral structures, brushed metal conduits.",
-        "accent_features": "Panoramic viewports, glowing flora, external sensor arrays, docking ports.",
-        "dominant": "Transparent domes",
-        "secondary": "Brushed metallic alloys",
-        "accent": "Bioluminescent flora",
-        "ambient": "Oceanic deep",
-        "genre": "Underwater Sci-Fi",
-        "architectural_tone": "Futuristic, Biomorphic, Functional",
-        "cultural_tone": "Humanitarian, Exploratory, Resilient",
-        "palette_bias": "Cool blues and greens",
-        "flora_base": "Bioluminescent algae and engineered kelp",
-        "fauna_base": "Engineered bioluminescent fish and deep-sea invertebrates"
+        "looks": "Vast underwater landscapes, geological formations, mysterious light shafts, distant silhouettes of colossal structures",
+        "colorsAndLighting": "Deep blues and greens, occasional shafts of ethereal turquoise or bioluminescent light",
+        "atmosphere": "Mysterious, ancient, serene, awe-inspiring",
+        "materials": "Massive rock formations, ancient stone, deep-sea minerals",
+        "mood": "Tranquil majesty, forgotten splendor, profound wonder",
+        "sounds": "Distant whale songs, deep ocean rumbles, faint currents",
+        "primary_surfaces": "Deep-sea rock, ancient stone",
+        "secondary_surfaces": "Water column, mineral deposits",
+        "accent_features": "Bioluminescent flora, ancient structures (silhouetted)",
+        "dominant": "Water, Rock",
+        "secondary": "Light",
+        "accent": "Ancient structures, Bioluminescence",
+        "ambient": "Marine life",
+        "genre": "Fantasy",
+        "architectural_tone": "Ancient Ruin",
+        "cultural_tone": "Forgotten Civilization",
+        "palette_bias": "Cool",
+        "flora_base": "Deep-sea flora",
+        "fauna_base": "Deep-sea fauna"
       },
-      "description": "A sprawling underwater metropolis designed for long-term human habitation and scientific research. This technologically advanced colony is a testament to resilience, with vast domes and interconnected structures housing a thriving community.",
-      "searchDesc": "Underwater sci-fi colony, futuristic city, deep sea settlement",
-      "slug": "atlantis-ii-colony",
+      "description": "A mysterious, light-dappled world beneath the waves, home to ancient secrets and forgotten civilizations. The pressure of the deep shapes colossal geological formations, while ethereal light filters from unknown sources above.",
+      "searchDesc": "Deep ocean, ancient secrets, forgotten civilizations, ethereal light",
+      "slug": "abyssal-depths",
       "structure": {
-        "spatialLayout": "Interconnected spherical and cylindrical modules, with wide, open plazas within the larger domes. Verticality is emphasized with elevated walkways and transit tubes."
+        "spatialLayout": "Vast, open, cavernous, with immense verticality"
       }
     },
-    "ada35bf5-8135-4420-afed-a0162f6dca63": {
-      "id": "ada35bf5-8135-4420-afed-a0162f6dca63",
+    "a923796c-02d9-4f09-b078-18d2dff7e4e0": {
+      "id": "a923796c-02d9-4f09-b078-18d2dff7e4e0",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -44,145 +44,314 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "e21cfe75-9bf4-4adf-952e-abeb10ff7ec9": {
-      "id": "e21cfe75-9bf4-4adf-952e-abeb10ff7ec9",
+    "e86d2dae-2d3b-477d-b3f2-218345d02ab5": {
+      "id": "e86d2dae-2d3b-477d-b3f2-218345d02ab5",
       "type": "location",
-      "name": "Habitat Dome A-7",
+      "name": "The Lumina Reef Ruins",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A massive, perfectly spherical dome constructed from interlocking hexagonal panes of reinforced, transparent composite. The base is a stout, metallic ring anchored to the seabed, with ancillary structures like docking bays and support conduits radiating outwards.",
-        "colorsAndLighting": "The interior is bathed in a bright, even light from diffused ceiling panels, creating a clean, well-lit environment. Exterior illumination is provided by strategically placed spotlights that cut through the abyssal gloom, reflecting off the dome's surfaces.",
-        "atmosphere": "The air within the dome is crisp and regulated, with a constant, gentle circulation. The temperature is kept at a comfortable level, fostering a sense of normalcy and safety. The overwhelming sensation is one of contained, contained life.",
-        "materials": "The primary material is reinforced, ultra-clear transparisteel, offering panoramic views of the ocean floor. Structural supports and interior furnishings are primarily brushed metallic alloys, with some areas featuring textured composite panels.",
-        "mood": "The mood is one of controlled optimism and technological advancement, a testament to humanity's ability to thrive in extreme environments.",
-        "sounds": "Hum of life support, muffled echoes, distant sonar pings, soft chatter.",
-        "primary_surfaces": "Crystal-clear transparisteel, polished metallic alloys",
-        "secondary_surfaces": "Textured composite panels, integrated lighting strips",
-        "accent_features": "Bioluminescent flora within interior gardens, external viewports showcasing marine life",
-        "dominant": "Cool blue-white light throughout",
-        "secondary": "Brushed metallic tones in furnishings and structures",
-        "accent": "Subtle greens and blues from interior foliage and external ocean",
-        "ambient": "Bright and even interior illumination",
+        "looks": "A sprawling, organic structure of massive scale, featuring a grand, domed ceiling. The architecture is characterized by intricate stone arches, elegant balustrades, and multiple tiers that suggest a former palace or city.",
+        "colorsAndLighting": "Bathed in an ethereal turquoise glow, with shafts of brilliant light piercing the water from above. Tiny, shimmering particles drift down like underwater stars, adding to the luminous quality.",
+        "atmosphere": "The water is clear and still, carrying a sense of profound tranquility. A gentle, constant current circulates through the ruins, rustling the marine flora. The temperature is cool and consistent, typical of deep-sea environments.",
+        "materials": "Primarily weathered stone, showing signs of age and erosion from the constant embrace of the sea. This is softened by a vibrant tapestry of marine flora, including coral, sea anemones, and other aquatic plants.",
+        "mood": "One of tranquil majesty and forgotten splendor, evoking a profound sense of wonder and serene beauty in the viewer.",
+        "sounds": "Gentle water currents, distant clicks and pops of marine life, faint echoes.",
+        "primary_surfaces": "Weathered stone, overgrown marine flora",
+        "secondary_surfaces": "Polished stone, glass dome",
+        "accent_features": "Shimmering particles, schools of golden-orange fish, bioluminescent flora",
+        "dominant": "Turquoise light",
+        "secondary": "Golden-orange fish",
+        "accent": "Vibrant coral and plant life (orange, purple, yellow, green)",
+        "ambient": "Ethereal turquoise glow",
         "genre": null,
-        "architectural_tone": "futuristic dome",
-        "cultural_tone": "colony housing",
-        "palette_bias": "blues|whites|metallics",
-        "flora_base": "Minimalist, low-light interior plants",
-        "fauna_base": "None"
+        "architectural_tone": "Ancient sacred ruin",
+        "cultural_tone": "Forgotten palace or city",
+        "palette_bias": "Blues, greens, oranges, purples",
+        "flora_base": "Coral, sea anemones, aquatic plants",
+        "fauna_base": "Small golden-orange fish"
       },
-      "description": "A large, transparent pressurized dome housing a significant residential section of the colony, its interior lights casting a pale glow into the abyssal depths. EXTERIOR VIEW.",
-      "searchDesc": "Large transparent dome, underwater sci-fi colony, residential sector, interior lights glow.",
-      "slug": "habitat-dome-a-7",
+      "description": "A magnificent multi-tiered underwater ruin, likely an ancient palace or city, partially overgrown with vibrant marine flora. EXTERIOR VIEW.",
+      "searchDesc": "Magnificent multi-tiered underwater ruins, illuminated by light shafts and teeming with marine life.",
+      "slug": "the-lumina-reef-ruins",
       "structure": {
-        "spatialLayout": "A vast, single-level interior enclosed by a colossal dome, creating an expansive and open feel. Its centered orientation ensures a unified central space with distinct functional zones."
+        "spatialLayout": "A vast, multi-tiered complex with a predominantly horizontal and sprawling layout, deepening into underwater levels. The central feature is a towering domed structure."
       },
       "navigableElements": [
         {
-          "type": "door",
-          "position": "center of lower hemisphere",
-          "description": "A large, reinforced airlock leading into the main residential sector."
+          "type": "archway",
+          "position": "center of main facade",
+          "description": "The grand, arched main entrance, leading into the ruins."
         },
         {
           "type": "passage",
-          "position": "mid-level, north side",
-          "description": "A pressurized tunnel connecting to adjacent research facilities."
+          "position": "on lower tiers",
+          "description": "Submerged passages connecting different levels and sections of the ruins."
         }
       ],
       "dominantElements": [
-        "habitat dome: shape=domed, orientation=centered, scale=massive, style=futuristic, surfaces=glass|metallic, openings=large-glass|circular-portholes, interior_materials=metallic|tile|fabric, internal_atmosphere=bright"
+        "main structure: shape=organic, orientation=sprawling, scale=massive, style=sacred, surfaces=stone|weathered, openings=arched-windows, interior_materials=stone|stone|stone, internal_atmosphere=mystical"
       ],
       "uniqueIdentifiers": [
-        "transparent pressure hull",
-        "internal biodome gardens",
-        "external docking ports",
-        "luminescent algae farms"
+        "Grand glass dome ceiling",
+        "Intricate stone arches and balustrades",
+        "Vibrant coral and sea anemone overgrowth",
+        "Schools of shimmering golden-orange fish",
+        "Ethereal turquoise underwater glow"
       ],
-      "primaryMedia": "media-1767775702877-718xgn75h"
+      "primaryMedia": "media-1767775969192-2vq3nhzfd"
     },
-    "niche-1767775764379-9t2pxh3l8": {
-      "id": "niche-1767775764379-9t2pxh3l8",
+    "niche-1767776276476-01egot3sv": {
+      "id": "niche-1767776276476-01egot3sv",
       "type": "niche",
-      "name": "Habitat Dome Interior",
+      "name": "Sacred Sanctuary",
       "spaceType": "interior",
       "dna": {
-        "looks": "The interior is a perfectly spherical chamber, defined by the curved, hexagonal panes of the dome itself. Minimalist modular furniture and utility conduits are seamlessly integrated into the structure.",
-        "colorsAndLighting": "The space is bathed in a consistent, cool blue-white light emanating from diffused panels within the ceiling. Reflective metallic surfaces catch and amplify this illumination.",
-        "atmosphere": "The air is meticulously regulated, feeling crisp and sterile with a barely perceptible, gentle circulation. The ambient temperature is maintained for comfort, fostering a sense of safe enclosure.",
-        "materials": "The primary material is ultra-clear, reinforced transparisteel, forming the entire shell. Interior surfaces and structural elements are primarily brushed metallic alloys, with some textured composite panels for non-load-bearing sections.",
-        "mood": "A palpable sense of controlled optimism and advanced technological achievement pervades the space, highlighting humanity's resilience.",
-        "sounds": "Gentle hum, faint air circulation, distant life support whir.",
-        "spatialLayout": "A vast, contiguous spherical interior space with no sharp corners, maximizing usable volume and offering complete 360-degree views of the exterior.",
-        "primary_surfaces": "Crystal-clear transparisteel walls and ceiling offering external views",
-        "secondary_surfaces": "Brushed metallic alloy floor panels and integrated utility panels",
-        "accent_features": "Subtle strips of integrated, low-intensity bioluminescent flora lining select utility conduits.",
-        "dominant": "Cool blue-white light across the entire interior",
-        "secondary": "Brushed metallic tones on floors and integrated fixtures",
-        "accent": "Subtle greens and blues from interior bioluminescent flora",
-        "ambient": "Bright and even interior illumination",
-        "genre": "Underwater Sci-Fi",
-        "architectural_tone": "futuristic dome",
-        "cultural_tone": "colony housing",
-        "palette_bias": "blues|whites|metallics",
-        "flora_base": "Minimalist, low-light interior plants",
-        "fauna_base": "None"
+        "looks": "This is the central, cavernous chamber of the Lumina Reef Ruins, characterized by a grand, domed ceiling that was once a magnificent glass-paned observatory. Massive, intricately carved stone pillars, eroded by time and the sea, support the structure. Multiple tiers and balconies, now partially collapsed and overgrown, hint at its former grandeur as a sacred palace.",
+        "colorsAndLighting": "The space is bathed in a pervasive, ethereal turquoise light that emanates from the ambient ocean and the bioluminescent flora. Shafts of brighter, more direct light pierce the water from above, creating dappled patterns on the stone. Deeper shadows are softened by the gentle glow of various marine life.",
+        "atmosphere": "The water is incredibly clear and still, creating an atmosphere of profound tranquility and deep serenity. A constant, gentle current circulates through the ruins, causing the marine flora to sway rhythmically. The temperature is consistently cool, evoking the silent depths of the ocean.",
+        "materials": "The primary materials are ancient, weathered stone, showing deep erosion and the marks of millennia. This is softened and vibrantized by a dense tapestry of marine flora, including intricate coral formations, pulsating sea anemones, and glowing aquatic plants. Fragments of polished stone and what was once intricate metalwork can be seen in places.",
+        "mood": "A mood of tranquil majesty and forgotten splendor prevails, evoking a profound sense of wonder and serene beauty in the viewer. There is a quiet reverence for the lost civilization that once thrived here.",
+        "sounds": "Gentle currents, distant echoes, soft hums, faint clicks.",
+        "spatialLayout": "A vast, circular central chamber with tiered levels rising upwards. The scale is immense, suggesting a once-bustling hub, now reclaimed by the sea. Openings and passages suggest connections to other parts of the submerged city.",
+        "primary_surfaces": "Weathered, ancient stone encrusted with vibrant coral and bioluminescent marine flora.",
+        "secondary_surfaces": "Cracked glass dome sections, remnants of polished stone, eroded metal.",
+        "accent_features": "Shimmering particles drifting in the water, schools of golden-orange fish, pulsating bioluminescent organisms.",
+        "dominant": "Turquoise light illuminating the main chamber.",
+        "secondary": "Golden-orange fish swimming through the ruins.",
+        "accent": "Vibrant blues, greens, oranges, and purples from the marine flora.",
+        "ambient": "Ethereal turquoise glow.",
+        "genre": "Fantasy",
+        "architectural_tone": "Ancient sacred ruin",
+        "cultural_tone": "Forgotten palace or city",
+        "palette_bias": "Blues, greens, oranges, purples",
+        "flora_base": "Coral, sea anemones, bioluminescent aquatic plants",
+        "fauna_base": "Small golden-orange fish"
       },
-      "primaryMedia": "media-1767775764378-wmzfdeg44",
-      "description": "You are now inside the immense Habitat Dome, a bright, futuristic interior alive with soft light and the hum of advanced systems, offering panoramic views of the outside environment through its transparent shell.",
+      "primaryMedia": "media-1767776276475-makq3lu3v",
+      "description": "A vast, awe-inspiring sacred sanctuary carved from ancient, weathered stone, filled with a mystical atmosphere and illuminated by an ethereal glow filtering through grand arched windows.",
       "structure": {
-        "form": "domed",
-        "roofType": "domed",
+        "form": "organic",
+        "roofType": "vaulted",
         "scale": "massive",
-        "orientation": "centered",
-        "openings": "large-glass|circular-portholes",
-        "openingShape": "mixed",
-        "functionalType": "residential|civic",
+        "orientation": "sprawling",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "religious",
         "elevation": "ground-level",
-        "spatialLayout": "A vast, multi-level central atrium beneath the dome's transparent apex, housing communal areas and access to individual habitat units.",
+        "spatialLayout": "A vast, organically shaped chamber with high vaulted ceilings, revealing ancient carved stone walls and intricate archways, creating a sense of profound reverence and an echo of forgotten rituals.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "at the main entrance",
+          "description": "leads back to The Lumina Reef Ruins"
+        },
+        {
+          "type": "passage",
+          "position": "towards the inner sanctum",
+          "description": "leads deeper into the sprawling structure"
+        }
+      ],
+      "dominantElements": [],
+      "uniqueIdentifiers": [
+        "massive stone arches",
+        "glowing ethereal light",
+        "ancient carvings",
+        "mystical aura"
+      ],
+      "searchDesc": "Ethereal turquoise ruins of a forgotten palace, glowing marine life, ancient stone, underwater wonder.",
+      "slug": "null-of-the-lumina-reef-ruins"
+    },
+    "niche-1767776448933-27k6ho7wn": {
+      "id": "niche-1767776448933-27k6ho7wn",
+      "type": "niche",
+      "name": "The Sunken Pirate Ship Wreck",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A massive, broken wooden galleon lies on the seabed, its timbers warped and encrusted with marine growth. Intricate, weathered carvings are still visible on the hull, hinting at its former glory. Ropes and rigging hang like spectral tendrils, swaying gently with the currents.",
+        "colorsAndLighting": "Ethereal turquoise light filters down, illuminating patches of vibrant coral in oranges and purples. Schools of small golden-orange fish dart through the shadowy interior, their scales catching the faint light. Bioluminescent flora emits soft, pulsating glows.",
+        "atmosphere": "The water is clear and calm, creating a sense of serene stillness. A gentle, consistent current moves through the wreck, rustling the marine flora. The temperature is cool and constant, a typical deep-sea environment, imbued with a profound sense of forgotten history.",
+        "materials": "The primary materials are heavily weathered and waterlogged wood, softened and adorned by dense growths of colorful coral and anemones. Barnacles and sea sponges cling to every surface, with occasional glimpses of corroded brass and iron fittings.",
+        "mood": "A feeling of melancholic splendor and quiet majesty permeates the wreck, a testament to a lost era and the enduring beauty of nature reclaiming man-made structures.",
+        "sounds": "Muffled groans of shifting wood, distant whale song, gentle currents, tiny clicks of marine life.",
+        "spatialLayout": "The wreck lies spread across the seabed, creating a sprawling, three-dimensional labyrinth of decaying decks, cabins, and cargo holds. Deeper sections plunge into shadow, while higher points are bathed in diffused light.",
+        "primary_surfaces": "Rotting, barnacle-covered wood",
+        "secondary_surfaces": "Vibrant coral formations, sea anemones",
+        "accent_features": "Shimmering schools of fish, spectral gold coins, bioluminescent flora",
+        "dominant": "Turquoise light illuminating open water",
+        "secondary": "Golden-orange fish in shadowy interiors",
+        "accent": "Vibrant coral (orange, purple, yellow, green) on hull",
+        "ambient": "Ethereal turquoise glow",
+        "genre": "Fantasy",
+        "architectural_tone": "Ancient sacred ruin",
+        "cultural_tone": "Forgotten palace or city",
+        "palette_bias": "Blues, greens, oranges, purples",
+        "flora_base": "Coral, sea anemones, aquatic plants",
+        "fauna_base": "Small golden-orange fish"
+      },
+      "primaryMedia": "media-1767776448932-66pexeu01",
+      "description": "A haunting interior within the decaying hull of a large pirate ship, now an ancient sacred ruin reclaimed by the ocean depths. Filtered light from above casts mystical blues and greens onto the barnacle-encrusted timbers, while phosphorescent marine life glows in soft oranges and purples, creating an otherworldly, solemn atmosphere.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "horizontal",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "industrial",
+        "elevation": "underground",
+        "spatialLayout": "A labyrinthine interior of decaying wooden decks, cramped cabins, and a cargo hold, all tilted and waterlogged, with marine life having begun to reclaim the structure.",
+        "requiredElements": [
+          "sunken pirate ship wreck"
+        ]
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "along the port side",
+          "description": "a gaping breach in the hull"
+        },
+        {
+          "type": "passage",
+          "position": "midship",
+          "description": "into the galley, now a marine grotto"
+        },
+        {
+          "type": "passage",
+          "position": "stern",
+          "description": "towards the captain's cabin"
+        }
+      ],
+      "dominantElements": [
+        "The Sunken Pirate Ship Wreck: shape=irregular, orientation=horizontal, scale=large, style=sacred, surfaces=weathered, openings=open-passages, interior_materials=wood|wood|wood, internal_atmosphere=mystical"
+      ],
+      "uniqueIdentifiers": [
+        "barnacle-encrusted hull",
+        "rotting timber",
+        "scattered gold coins",
+        "ghostly silence"
+      ],
+      "searchDesc": "Sunken pirate ship wreck, coral-encrusted galleon, underwater ruin.",
+      "slug": "sunken-pirate-ship-wreck"
+    },
+    "loc-1767776500748-bw95f9gmz": {
+      "id": "loc-1767776500748-bw95f9gmz",
+      "type": "location",
+      "name": "sunken pirate ship wreck",
+      "spaceType": "structure",
+      "dna": {},
+      "description": "Structure: sunken pirate ship wreck",
+      "searchDesc": "sunken pirate ship wreck",
+      "slug": "sunken-pirate-ship-wreck",
+      "isPassThrough": true
+    },
+    "niche-1767776526523-ollaon3zb": {
+      "id": "niche-1767776526523-ollaon3zb",
+      "type": "niche",
+      "name": "The Sunken Pirate Ship Wreck",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a skeletal network of massively warped and splintered wooden beams, forming the ghost of a ship's hull. Intricate, now softened carvings are visible beneath thick layers of marine growth, hinting at a forgotten artistry. The overall scale is that of a grand, if broken, vessel.",
+        "colorsAndLighting": "Ethereal turquoise light filters down from above, creating shafts that illuminate patches of the interior. Golden-orange light reflects off darting fish, while pockets of purple and orange coral glow vibrantly. Shadows are deep and embracing, punctuated by soft bioluminescent pulses.",
+        "atmosphere": "The water is exceptionally clear and calm, lending a profound sense of stillness to the space. A gentle, constant current rustles the abundant marine flora. The air is cool and dense, carrying the scent of the deep sea and the weight of centuries.",
+        "materials": "The primary materials are waterlogged, rotting wood, softened and embraced by dense layers of coral, anemones, and sea sponges. Corroded brass and iron fittings peek through the organic growth, their original forms obscured by time and the sea.",
+        "mood": "A melancholic splendor pervades the wreck, a quiet majesty born from decay and nature's beautiful reclamation. It evokes a deep sense of lost history and the enduring, silent beauty of the ocean.",
+        "sounds": "Gentle water currents, distant creaking timbers, soft rustling of flora, muted clicks of marine life.",
+        "spatialLayout": "The interior is a labyrinth of broken decks, collapsed bulkheads, and cavernous holds, all shaped by the ship's original architecture but now warped by the ocean's embrace. Depth is created by shadowy recesses and open passages leading deeper into the wreck.",
+        "primary_surfaces": "Barnacle-encrusted, waterlogged wood planks and beams",
+        "secondary_surfaces": "Vibrant coral formations, soft sea anemones, thick sea sponges",
+        "accent_features": "Shimmering schools of golden-orange fish, scattered glinting gold coins, soft bioluminescent flora",
+        "dominant": "Turquoise light in open water",
+        "secondary": "Golden-orange fish in shadowy interiors",
+        "accent": "Vibrant coral (orange, purple, yellow, green) on hull",
+        "ambient": "Ethereal turquoise glow",
+        "genre": "Fantasy",
+        "architectural_tone": "Ancient sacred ruin",
+        "cultural_tone": "Forgotten palace or city",
+        "palette_bias": "Blues, greens, oranges, purples",
+        "flora_base": "Coral, sea anemones, aquatic plants",
+        "fauna_base": "Small golden-orange fish"
+      },
+      "primaryMedia": "media-1767776526522-1a3t8brz4",
+      "description": "You are inside the colossal, silent skeleton of a sunken pirate ship wreck, its once-proud timbers now a decaying, barnacle-encrusted labyrinth beneath the ocean's surface. A mystical ambiance pervades the waterlogged interior, where beams of light filter dimly through gaping holes in the hull, illuminating forgotten corners.",
+      "structure": {
+        "form": "irregular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "horizontal",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": null,
+        "elevation": "underground",
+        "spatialLayout": "The interior of the wreck is a labyrinth of broken decks, splintered timbers, and corroded structures, permeated by the deep-sea environment. It twists and turns, with areas still semi-intact and others completely collapsed.",
         "requiredElements": []
       },
       "navigableElements": [
         {
           "type": "passage",
-          "position": "straight ahead",
-          "description": "leading to further residential sectors"
+          "position": "through a large breach in the hull",
+          "description": "leads deeper into the main hold"
         },
         {
           "type": "stairs",
-          "position": "to the sides",
-          "description": "ascending to upper observation decks"
+          "position": "midship, partially collapsed",
+          "description": "descends to the lower gun deck"
+        },
+        {
+          "type": "window",
+          "position": "scattered, broken portholes and hull breaches",
+          "description": "offers glimpses of the silent, dark ocean depths"
         }
       ],
       "dominantElements": [
-        "habitat pod: shape=cylindrical, orientation=compact, scale=small, style=futuristic, surfaces=metallic-polished, openings=minimal, interior_materials=metallic|fabric|tile, internal_atmosphere=cozy"
+        "captain's cabin: shape=rectangular, orientation=compact, scale=small, style=rustic, surfaces=weathered, openings=passage, interior_materials=wood|wood|wood, internal_atmosphere=dim"
       ],
       "uniqueIdentifiers": [
-        "panoramic views",
-        "translucent domed ceiling",
-        "integrated technology displays",
-        "lush internal flora"
+        "barnacle-encrusted timbers",
+        "eerie silence of the deep",
+        "scattered, corroded artifacts",
+        "schools of iridescent fish"
       ],
-      "searchDesc": "Advanced underwater habitat dome interior, blue-white light, metallic and glass.",
-      "slug": "null-of-habitat-dome-a-7"
+      "searchDesc": "Sunken pirate ship interior, coral-encrusted wood, shafts of turquoise light, marine life, bioluminescence.",
+      "slug": "interior-of-sunken-pirate-ship-wreck"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1767775670718-hsatm68ui",
+      "id": "loc-1767775944676-hn5f6ibpr",
       "type": "host",
       "children": [
         {
-          "id": "ada35bf5-8135-4420-afed-a0162f6dca63",
+          "id": "a923796c-02d9-4f09-b078-18d2dff7e4e0",
           "type": "region",
           "children": [
             {
-              "id": "e21cfe75-9bf4-4adf-952e-abeb10ff7ec9",
+              "id": "e86d2dae-2d3b-477d-b3f2-218345d02ab5",
               "type": "location",
               "children": [
                 {
-                  "id": "niche-1767775764379-9t2pxh3l8",
+                  "id": "niche-1767776276476-01egot3sv",
                   "type": "niche",
                   "children": []
+                },
+                {
+                  "id": "niche-1767776448933-27k6ho7wn",
+                  "type": "niche",
+                  "children": [
+                    {
+                      "id": "loc-1767776500748-bw95f9gmz",
+                      "type": "location",
+                      "children": [
+                        {
+                          "id": "niche-1767776526523-ollaon3zb",
+                          "type": "niche",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -192,6 +361,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1767775670718-hsatm68ui"
+    "loc-1767775944676-hn5f6ibpr"
   ]
 }

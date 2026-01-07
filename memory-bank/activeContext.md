@@ -1,128 +1,162 @@
 # Active Context
 
-## 2026-01-05 - Interior/Exterior Transition Rules Refinement
+## 2026-01-07 - Unified Image Prompt Generation & Environment Transition Rules
 
-### Monastic Styles Added to SAME_MATERIAL Category - COMPLETED
+### Unified Image Prompt Generation - COMPLETED
 
-Fixed issue where brick monasteries generated "carved from rock" interiors instead of brick interiors.
+Fixed issue where `/NEW_WORLD` and `GO_INSIDE` used different code paths for image prompt generation, causing environment constraints to only apply to navigation flow.
 
 #### The Problem
 
-When creating a world with `/NEW_WORLD Cliffside monastery made out of bricks`:
-- **Parent location DNA**: materials = "weathered, sturdy brick", looks = "mass of ancient brickwork"
-- **Interior niche generated**: looks = "carved directly from the mountain rock", materials = "rough-hewn, unpolished stone"
-
-The LLM was ignoring the explicit "brick" in parent DNA and generating cave-like interiors.
-
-#### Investigation Findings
-
-We investigated the DNA system and confirmed:
-1. **DNA system works correctly** - `getResolvedNodeDNA()` returns full parent DNA including all fields
-2. **Parent DNA is passed correctly** - The parent "brick" materials ARE being sent to the LLM
-3. **extractParentContext()** passes the entire DNA object, not a filtered subset
-
-The issue was that "austere sacred" architectural tone was matching `FANTASY_SPECIFIC` category (via "sacred" keyword), which gave generic "stone walls" guidance instead of "match parent materials".
+When running `/NEW_WORLD pressurized dome in a Underwater sci-fi colony`:
+- Generated exterior image contained terrestrial concepts like "puddles" and "wet seabed"
+- The `[CRITICAL: UNDERWATER EXTERIOR VIEW]` constraint was NOT being applied
+- Root cause: TWO separate code paths existed:
+  - `GO_INSIDE` → Uses `imagePromptGeneration.ts` with `buildConstraints()` → ✅ Worked
+  - `/NEW_WORLD` → Uses `nodeCreationPipeline.ts` with hardcoded `constraints: []` → ❌ Broken
 
 #### Solution
 
-Added monastic styles to `SAME_MATERIAL` category in `interiorTransitionRules.ts`:
-- `austere`
-- `monastic`
-- `hermitage`
-- `abbey`
-- `monastery`
-- `priory`
+Refactored `nodeCreationPipeline.ts` Stage 3 to use the unified `generateStructuredImagePrompt()` function:
 
-Plus added documentation example: "Brick monastery outside → brick walls inside (honest construction)"
+**Before (broken):**
+```typescript
+promptStructure = {
+  ...parsedFields,
+  constraints: [],  // ← HARDCODED EMPTY
+  negatives: []
+};
+```
 
-#### Why This Works
-
-- Uses the **existing transition rules system** (not hardcoded rules in prompts)
-- Follows the pattern documented in `docs/adding-transition-special-cases.md`
-- Monastic buildings have honest construction where interior matches exterior
-- Easy to extend: just add more styles to the appropriate category
+**After (unified):**
+```typescript
+const promptStructure = await generateStructuredImagePrompt(apiKey, {
+  dna: deepestNodeDNA.dna || {},
+  userPrompt: prompt,
+  nodeType: deepestInfo.type,
+  perspective: 'exterior',
+  parentChain,
+});
+```
 
 #### Files Modified
 
-- `packages/backend/src/engine/generation/prompts/shared/interiorTransitionRules.ts`
-  - Added monastic styles to `sameMaterial` array in `getTransitionCategory()`
-  - Updated Category 1 documentation string with monastic styles and brick example
+- `packages/backend/src/engine/pipelines/nodeCreationPipeline.ts`
+  - Replaced Stage 3 with `generateStructuredImagePrompt()` call
+  - Removed `worldTreeImagePromptContext` import
 
 ---
+
+### Environment Transition Rules System - COMPLETED
+
+Created a comprehensive environment detection system for special environments.
+
+#### Environment Types Supported
+
+| Environment | Keywords Detected | Use Case |
+|-------------|-------------------|----------|
+| UNDERWATER | underwater, submerged, aquatic, oceanic, marine, deep-sea, submersible | Sci-fi underwater colonies, submarines |
+| SPACE | space, orbital, asteroid, lunar, mars, cosmic, zero-g, starship | Space stations, spaceships |
+| AERIAL | aerial, airborne, sky, cloud, floating, airship, zeppelin | Cloud cities, airships |
+| SUBTERRANEAN | subterranean, cave, cavern, underground, tunnel, mine | Cave dwellings, mines |
+| SURFACE | (default) | Normal terrestrial environments |
+
+#### Two Constraint Types
+
+**Interior Constraints** - What's visible through windows/viewports:
+- Underwater: "oceanic murk, deep-sea creatures, water particles, bioluminescence"
+- Space: "star field, nebula glow, cosmic void, distant planets"
+
+**Exterior Constraints** - The viewer is IN the environment:
+- Underwater: "NO puddles, NO wet surfaces, NO dampness - everything ALREADY underwater"
+- Space: "NO atmosphere, NO sky gradients, only cosmic void"
+
+#### Key Functions
+
+```typescript
+import { 
+  detectEnvironmentFromDNA,           // Returns environment type
+  getEnvironmentViewportConstraint,   // Interior view constraints
+  getEnvironmentExteriorConstraint    // Exterior view constraints
+} from './environmentTransitionRules';
+```
+
+#### Files Created/Modified
+
+- `packages/backend/src/engine/generation/prompts/shared/environmentTransitionRules.ts`
+  - `detectEnvironmentFromDNA()` - Checks parentDNA, surroundingsDNA, currentDNA for keywords
+  - `getEnvironmentViewportConstraint()` - Returns interior constraint
+  - `getEnvironmentExteriorConstraint()` - Returns exterior constraint
+  - `ENVIRONMENT_VIEWPORT_CONSTRAINTS` - Interior constraint definitions
+  - `ENVIRONMENT_EXTERIOR_CONSTRAINTS` - Exterior constraint definitions
+
+- `packages/backend/src/engine/generation/shared/imagePromptGeneration.ts`
+  - Updated `buildConstraints()` to call environment detection
+  - Passes current node's DNA (for NEW_WORLD with no parent)
+
+---
+
+### Dead Code Cleanup - COMPLETED
+
+Removed unused code after unification:
+
+| Deleted | Reason |
+|---------|--------|
+| `worldTreePipeline.ts` | Never called anywhere (dead code) |
+| `prompts/locations/worldTree/` directory | Only used by dead pipeline |
+| `pipelines/worldTree/` directory | Helper files for dead pipeline |
+| `generateBatchDNA` export | Deprecated function, never used |
+
+#### Files Updated
+
+- `prompts/locations/index.ts` - Removed worldTree exports
+- `hierarchyAnalysis/index.ts` - Removed generateBatchDNA export
+- `PROMPT_INDEX.md` - Updated documentation to reflect unified function
+
+---
+
+## Key Architectural Principle Established
+
+**Single Image Prompt Generation Path**
+
+Both `/NEW_WORLD` and `GO_INSIDE` now use the same `generateStructuredImagePrompt()` function, ensuring:
+- Environment constraints automatically applied to both flows
+- Future environment types work for all creation flows
+- No code duplication between pipelines
+
+---
+
+## Previous Work (Jan 5)
+
+### Monastic Styles Added to SAME_MATERIAL Category - COMPLETED
+- Fixed brick monastery generating cave-like interiors
 
 ### Reverted Hardcoded Prompt Rules - COMPLETED
-
-Removed hardcoded building vs cave rules that were incorrectly added to generic prompts.
-
-#### What Was Reverted
-
-**From `imagePromptGeneration.ts`:**
-- Removed "BUILDING INTERIOR vs CAVE INTERIOR" section
-- Removed "HOW TO TELL THE DIFFERENCE" section
-- Removed "MATERIAL TERMINOLOGY IN BUILDINGS" section
-- Removed cliffside/mountain building rules
-
-**From `nodeDNAGeneration.ts`:**
-- Removed "PARENT BUILDING → INTERIOR BUILDING (NOT CAVE)" section
-- Removed "ARCHITECTURAL STYLE PRESERVATION" section (arch/window/door matching)
-- Removed "GOTHIC/HORROR GENRES" section
-
-#### Why This Was Wrong
-
-The user correctly pointed out that:
-1. The DNA system is the core of what we're building
-2. Hardcoding rules in generic prompts is not scalable
-3. The proper place for style-specific rules is `interiorTransitionRules.ts`
-4. The DNA inheritance should drive interior appearance, not hardcoded rules
-
-#### The Correct Architecture
-
-1. **Parent DNA** contains building indicators (windows, frames, facades)
-2. **Transition rules** (`interiorTransitionRules.ts`) categorize architectural styles
-3. **LLM receives guidance** based on the category (SAME_MATERIAL, FINISHED_INTERIOR, etc.)
-4. **Generic prompts stay generic** - no hardcoded rules about caves vs buildings
-
----
-
-## Key Architectural Principle Clarified
-
-**The DNA system IS working correctly.** When testing shows unexpected results:
-
-1. **First**: Check if parent DNA is being passed correctly (it usually is)
-2. **Second**: Check which transition category the architectural tone falls into
-3. **Third**: Add the style to the appropriate category in `interiorTransitionRules.ts`
-4. **Do NOT**: Add hardcoded rules to the generic prompt templates
-
-This follows the pattern documented in `docs/adding-transition-special-cases.md`.
-
----
-
-## Previous Work (Earlier Today)
-
-### SeedVR Image Upscale Bug Fix - COMPLETED
-- Fixed `data.images[0].url` vs `data.image.url` property path
-
-### Interior/Exterior Transition System - COMPLETED
-- Image Layer Guidance, DNA Schema Integration, Gothic/Horror rules
-
-### NEW_WORLD Niche Over-Generation Fix - COMPLETED
-- Removed conflicting prompts from cache bundle
+- Removed building vs cave rules from generic prompts
 
 ---
 
 ## Current Focus
 
-- ✅ **COMPLETED**: Monastic styles added to SAME_MATERIAL category
-- ✅ **COMPLETED**: Reverted hardcoded prompt rules
-- ✅ **COMPLETED**: Clarified DNA system architecture
-- ⏳ **PENDING**: Test brick monastery interior generation with new rules
-- ⏳ **PENDING**: Test character spawn caching
+- ✅ **COMPLETED**: Unified image prompt generation
+- ✅ **COMPLETED**: Environment transition rules system
+- ✅ **COMPLETED**: Underwater exterior/interior constraints
+- ✅ **COMPLETED**: Dead code cleanup
+- ✅ **VERIFIED**: Underwater NEW_WORLD includes constraints
 
-## Files Modified Today
+## Files Modified Today (Jan 7)
 
-**Transition Rules:**
-- `packages/backend/src/engine/generation/prompts/shared/interiorTransitionRules.ts`
+**Unification:**
+- `packages/backend/src/engine/pipelines/nodeCreationPipeline.ts` - Use unified function
+- `packages/backend/src/engine/generation/shared/imagePromptGeneration.ts` - Environment detection
+- `packages/backend/src/engine/generation/prompts/shared/environmentTransitionRules.ts` - New system
 
-**Reverted (removed hardcoded rules):**
-- `packages/backend/src/engine/generation/shared/imagePromptGeneration.ts`
-- `packages/backend/src/engine/generation/prompts/locations/nodeDNAGeneration.ts`
+**Cleanup (deleted):**
+- `packages/backend/src/engine/pipelines/worldTreePipeline.ts`
+- `packages/backend/src/engine/generation/prompts/locations/worldTree/` (directory)
+- `packages/backend/src/engine/pipelines/worldTree/` (directory)
+
+**Exports updated:**
+- `packages/backend/src/engine/generation/prompts/locations/index.ts`
+- `packages/backend/src/engine/hierarchyAnalysis/index.ts`
+- `packages/backend/src/engine/generation/prompts/PROMPT_INDEX.md`

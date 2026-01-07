@@ -125,6 +125,85 @@ Backend (nested) → extractCleanDNA → Store (clean)
 Store → getCascadedDNA → getMergedDNA → Backend LLM (merged)
 ```
 
+## Environment Transition Rules Pattern
+
+### Environment Detection System
+Location: `packages/backend/src/engine/generation/prompts/shared/environmentTransitionRules.ts`
+
+**Problem**: Underwater/space/aerial environments generated terrestrial concepts (puddles, sky) inappropriately.
+
+**Solution**: Automatic environment detection from DNA with appropriate constraints for interior/exterior views.
+
+**Environment Types**:
+- `UNDERWATER` - Submerged environments (colonies, submarines)
+- `SPACE` - Orbital/cosmic environments (stations, spaceships)
+- `AERIAL` - Airborne environments (cloud cities, airships)
+- `SUBTERRANEAN` - Underground environments (caves, mines)
+- `SURFACE` - Default terrestrial environments
+
+**Architecture**:
+```
+DNA Keywords → detectEnvironmentFromDNA() → Environment Type
+                                              ↓
+                    Interior: getEnvironmentViewportConstraint()
+                    Exterior: getEnvironmentExteriorConstraint()
+```
+
+**Key Functions**:
+```typescript
+import { 
+  detectEnvironmentFromDNA,           // Returns EnvironmentType
+  getEnvironmentViewportConstraint,   // Interior view (through windows)
+  getEnvironmentExteriorConstraint    // Exterior view (viewer in environment)
+} from './environmentTransitionRules';
+```
+
+**Example Constraints**:
+- Underwater Interior: "oceanic murk, deep-sea creatures, water particles"
+- Underwater Exterior: "NO puddles, NO wet surfaces - everything ALREADY underwater"
+
+---
+
+## Unified Image Prompt Generation Pattern
+
+### Single Code Path
+Location: `packages/backend/src/engine/generation/shared/imagePromptGeneration.ts`
+
+**Problem**: `/NEW_WORLD` and `GO_INSIDE` used different code paths, causing environment constraints to only apply to navigation flow.
+
+**Solution**: Both pipelines use `generateStructuredImagePrompt()` for all image prompt generation.
+
+**Architecture**:
+```
+nodeCreationPipeline.ts (NEW_WORLD)
+        ↓
+generateStructuredImagePrompt() ← Single unified function
+        ↑
+createNodePipeline.ts (GO_INSIDE)
+```
+
+**Key Function**:
+```typescript
+const promptStructure = await generateStructuredImagePrompt(apiKey, {
+  dna: nodeDNA,
+  parentDNA: parentDNA,
+  surroundingsDNA: ancestryDNA,
+  userPrompt: prompt,
+  nodeType: 'location' | 'niche' | ...,
+  perspective: 'interior' | 'exterior',
+  parentChain: [...],
+  structureAnalysis?: structureData,
+  immediateSurroundings?: nestedContainerData
+});
+```
+
+**Benefits**:
+- Environment constraints applied consistently
+- Future environment types work for all flows
+- No code duplication between pipelines
+
+---
+
 ## Space Type Registry Pattern
 
 ### Container Type Detection

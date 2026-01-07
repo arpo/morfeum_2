@@ -12,7 +12,7 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 | Character Generation | 5 | `characters/` |
 | Navigation/Intent | 3 | `navigation/` |
 | Location/DNA | 8 | `locations/`, `nodeCreation/prompts/dna/` |
-| Image Generation | 4 | `locations/worldTree/`, `shared/` |
+| Image Generation | 2 | `locations/`, `shared/` |
 | Chat/Impersonation | 3 | `chat/` |
 | Enhancer | 3 | `enhancer/` |
 
@@ -70,9 +70,7 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 
 | Prompt | File | Purpose | Used By |
 |--------|------|---------|---------|
-| `worldTreeImagePromptContext` | [locations/worldTree/contextPromptBuilder.ts](./locations/worldTree/contextPromptBuilder.ts) | Build context for FLUX image prompt (structured JSON) | World Tree Pipeline |
-| `directPromptBuilder` | [locations/worldTree/directPromptBuilder.ts](./locations/worldTree/directPromptBuilder.ts) | Build direct FLUX prompts | Legacy/fallback |
-| `compositionInstructions` | [locations/worldTree/compositionInstructions.ts](./locations/worldTree/compositionInstructions.ts) | Scene composition rules | Image generation |
+| `generateStructuredImagePrompt` | [../../shared/imagePromptGeneration.ts](../../shared/imagePromptGeneration.ts) | Unified image prompt generation with environment constraints | Node Creation Pipeline, Navigation Pipeline |
 | `locationImageGeneration` | [locations/locationImageGeneration.ts](./locations/locationImageGeneration.ts) | Location image prompts | Location creation |
 
 ### Shared/Utility Prompts
@@ -85,6 +83,7 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 | `dnaSchema` | [shared/dnaSchema.ts](./shared/dnaSchema.ts) | DNA field definitions | DNA generation |
 | `elementRules` | [shared/elementRules.ts](./shared/elementRules.ts) | Rules for dominant elements | Structure analysis |
 | `interiorTransitionRules` | [shared/interiorTransitionRules.ts](./shared/interiorTransitionRules.ts) | Exterior→Interior material transition rules | DNA generation, Image prompts |
+| `environmentTransitionRules` | [shared/environmentTransitionRules.ts](./shared/environmentTransitionRules.ts) | Environment detection (underwater/space/aerial) + viewport/exterior constraints | Image prompts |
 
 ### Chat & Impersonation
 
