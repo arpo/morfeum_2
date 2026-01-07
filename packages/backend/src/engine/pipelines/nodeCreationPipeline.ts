@@ -24,10 +24,10 @@ import { generateImage, generateText } from '../../services/mzoo';
 import { AI_MODELS } from '../../config/constants';
 import { parseJSON } from '../utils/parseJSON';
 import { deepestNodeDNAGeneration } from '../generation/prompts/locations/deepestNodeDNA';
-import { worldTreeImagePromptContext } from '../generation/prompts/locations/worldTree';
 import { parentChainDNAGeneration } from '../generation/prompts/locations/parentChainDNA';
 import { applyMorfeumStyle } from '../generation/shared/applyMorfeumStyle';
 import { assembleImagePrompt } from '../generation/shared/imagePromptAssembler';
+import { generateStructuredImagePrompt } from '../generation/shared/imagePromptGeneration';
 import type { ImagePromptStructure } from '../generation/shared/imagePromptTypes';
 import { runInteriorFlow } from './nodeCreation/interiorFlow';
 import {
@@ -132,71 +132,21 @@ export async function runNodeCreationPipeline(
     if (signal.aborted) throw new Error('Aborted');
 
     // ═══════════════════════════════════════════════════════════════════════
-    // Stage 3: Generate IMAGE PROMPT using DNA (LLM synthesis)
+    // Stage 3: Generate IMAGE PROMPT using unified function
     // ═══════════════════════════════════════════════════════════════════════
     
-    // Build context prompt for LLM to generate FLUX image description
-    const imageContextPrompt = worldTreeImagePromptContext({
-      nodeType: deepestInfo.type,
-      nodeName: deepestNodeDNA.name || deepestInfo.name,
-      dna: deepestNodeDNA.dna || {},
-      originalPrompt: prompt,
-      parentChain,
-    });
-
     helper.startStage('image_prompt_generation', 'Crafting visual description...');
 
-    // Step 1: LLM generates structured JSON image description from context
-    const imagePromptResult = await generateText(
-      apiKey,
-      [{ role: 'user', content: imageContextPrompt }],
-      AI_MODELS.SEED_GENERATION
-    );
-
-    if (imagePromptResult.error || !imagePromptResult.data) {
-      throw new Error(imagePromptResult.error || 'Failed to generate image prompt');
-    }
-
-    // Parse the structured JSON response
-    let promptStructure: ImagePromptStructure;
-    const imagePromptRaw = imagePromptResult.data.text.trim();
-    
-    try {
-      // Try to extract JSON from response
-      let jsonStr = imagePromptRaw;
-      if (jsonStr.startsWith('```json')) {
-        jsonStr = jsonStr.replace(/^```json\s*/, '').replace(/\s*```$/, '');
-      } else if (jsonStr.startsWith('```')) {
-        jsonStr = jsonStr.replace(/^```\s*/, '').replace(/\s*```$/, '');
-      }
-      const jsonMatch = jsonStr.match(/\{[\s\S]*\}/);
-      if (jsonMatch) {
-        jsonStr = jsonMatch[0];
-      }
-      const parsed = JSON.parse(jsonStr);
-      promptStructure = {
-        background: parsed.background || '',
-        midground: parsed.midground || '',
-        foreground: parsed.foreground || '',
-        lighting: parsed.lighting || '',
-        atmosphere: parsed.atmosphere || '',
-        constraints: [],
-        negatives: [],
-        camera: parsed.camera,
-        lens: parsed.lens
-      };
-    } catch {
-      // Fallback: treat as plain text (old format) for backward compatibility
-      promptStructure = {
-        background: '',
-        midground: imagePromptRaw,
-        foreground: '',
-        lighting: '',
-        atmosphere: '',
-        constraints: [],
-        negatives: []
-      };
-    }
+    // Use the unified image prompt generation function
+    // This ensures environment constraints (underwater, space, etc.) are applied
+    const promptStructure = await generateStructuredImagePrompt(apiKey, {
+      dna: deepestNodeDNA.dna || {},
+      parentDNA: undefined,  // No parent for NEW_WORLD
+      userPrompt: prompt,
+      nodeType: deepestInfo.type as 'host' | 'region' | 'location' | 'niche' | 'feature' | 'detail',
+      perspective: 'exterior',  // NEW_WORLD creates exterior view
+      parentChain,
+    });
 
     // Assemble into string and apply Morfeum visual style
     const imagePrompt = applyMorfeumStyle(assembleImagePrompt(promptStructure, {

@@ -1,40 +1,40 @@
 {
   "nodes": {
-    "loc-1767774812944-970kqh8gi": {
-      "id": "loc-1767774812944-970kqh8gi",
+    "loc-1767775670718-hsatm68ui": {
+      "id": "loc-1767775670718-hsatm68ui",
       "type": "host",
-      "name": "Oceanus Colony",
+      "name": "Atlantis II Colony",
       "spaceType": "exterior",
       "dna": {
-        "looks": "Vast interconnected domed structures, glowing bioluminescent pathways, distant geothermal vent plumes, shadowy abyssal trenches, colossal submerged rock formations",
-        "colorsAndLighting": "Deep indigo and cool blue bioluminescence, occasional warm orange from vents, stark white artificial lights, pervasive darkness",
-        "atmosphere": "Crushing pressure, serene yet alien, humid, electrically charged near vents",
-        "materials": "Reinforced hyper-resistant glass, polished metallic alloys, natural rock formations, bio-luminescent organic matter",
-        "mood": "Hopeful resilience, advanced technological achievement, isolated sanctuary",
-        "sounds": "Subtle hum of life support, distant creaks of pressure, rhythmic pulses of bioluminescence, occasional deep-sea creature calls",
-        "primary_surfaces": "Translucent reinforced glass, dark metallic alloys",
-        "secondary_surfaces": "Natural abyssal rock, smooth, almost organic bio-luminescent surfaces",
-        "accent_features": "Geothermal vent plumes, intricate bioluminescent patterns, access hatches and docking bays",
-        "dominant": "Deep blue and indigo",
-        "secondary": "Cool blue and white light",
-        "accent": "Warm orange and metallic sheen",
-        "ambient": "Oceanic darkness",
+        "looks": "A vast, interconnected network of glowing domes and cylindrical habitats nestled on the ocean floor. Bioluminescent flora and fauna are integrated into the cityscape. Distant geothermal vents create an ethereal glow on the horizon.",
+        "colorsAndLighting": "Dominated by cool blues and greens, with intermittent pulses of white and cyan light from internal illumination and external markers. Bioluminescence adds organic vibrancy.",
+        "atmosphere": "A sense of awe and wonder, tinged with the quiet hum of advanced life support systems. The ocean currents create a subtle, dynamic visual element.",
+        "materials": "Primary structures are composed of reinforced transparisteel and brushed metallic alloys. Luminescent organic growths and artificial corals are integrated into surfaces.",
+        "mood": "Controlled optimism, technological advancement, and a profound connection to the alien beauty of the deep sea.",
+        "sounds": "The low hum of machinery, the distant calls of marine life, the gentle whoosh of water currents, and the muffled sounds of human activity.",
+        "primary_surfaces": "Transparent domes, metallic alloy walls, textured composite panels.",
+        "secondary_surfaces": "Bioluminescent membranes, integrated coral structures, brushed metal conduits.",
+        "accent_features": "Panoramic viewports, glowing flora, external sensor arrays, docking ports.",
+        "dominant": "Transparent domes",
+        "secondary": "Brushed metallic alloys",
+        "accent": "Bioluminescent flora",
+        "ambient": "Oceanic deep",
         "genre": "Underwater Sci-Fi",
-        "architectural_tone": "Futuristic Geodesic",
-        "cultural_tone": "Isolated Sanctuary",
-        "palette_bias": "Cool and Dark",
-        "flora_base": "Bioluminescent Algae and Fungi",
-        "fauna_base": "Abyssal Deep-Sea Creatures"
+        "architectural_tone": "Futuristic, Biomorphic, Functional",
+        "cultural_tone": "Humanitarian, Exploratory, Resilient",
+        "palette_bias": "Cool blues and greens",
+        "flora_base": "Bioluminescent algae and engineered kelp",
+        "fauna_base": "Engineered bioluminescent fish and deep-sea invertebrates"
       },
-      "description": "A sprawling futuristic settlement nestled in the abyssal depths, powered by geothermal vents and bioluminescent technology. This deep-sea metropolis thrives amidst crushing pressures and eternal darkness.",
-      "searchDesc": "Abyssal sci-fi colony, underwater metropolis, geothermal-powered settlement",
-      "slug": "oceanus-colony",
+      "description": "A sprawling underwater metropolis designed for long-term human habitation and scientific research. This technologically advanced colony is a testament to resilience, with vast domes and interconnected structures housing a thriving community.",
+      "searchDesc": "Underwater sci-fi colony, futuristic city, deep sea settlement",
+      "slug": "atlantis-ii-colony",
       "structure": {
-        "spatialLayout": "Interconnected networks of pressurized habitats, verticality emphasized by settlement height, central core around geothermal energy"
+        "spatialLayout": "Interconnected spherical and cylindrical modules, with wide, open plazas within the larger domes. Verticality is emphasized with elevated walkways and transit tubes."
       }
     },
-    "a45e1490-3211-4073-a41e-ad5e666921d4": {
-      "id": "a45e1490-3211-4073-a41e-ad5e666921d4",
+    "ada35bf5-8135-4420-afed-a0162f6dca63": {
+      "id": "ada35bf5-8135-4420-afed-a0162f6dca63",
       "type": "region",
       "name": "Region",
       "spaceType": "exterior",
@@ -44,71 +44,147 @@
       "slug": "region",
       "isPassThrough": true
     },
-    "b4e771fb-4df1-4ff6-8b2e-06e5d9dc5e4c": {
-      "id": "b4e771fb-4df1-4ff6-8b2e-06e5d9dc5e4c",
+    "e21cfe75-9bf4-4adf-952e-abeb10ff7ec9": {
+      "id": "e21cfe75-9bf4-4adf-952e-abeb10ff7ec9",
       "type": "location",
-      "name": "The Bio-Dome Habitation",
+      "name": "Habitat Dome A-7",
       "spaceType": "exterior",
       "dna": {
-        "looks": "A monumental, geodesic dome with a highly polished, reflective outer shell. Its form is smooth and aerodynamic, hinting at advanced engineering. Embedded lights create intricate patterns across its surface, resembling a constellation against the dark deep.",
-        "colorsAndLighting": "The primary colors are cool blues and deep indigos of the surrounding ocean, contrasted by the warm, white and cyan glow of the embedded lights. The lighting is generally bright within the dome, with controlled illumination highlighting specific areas.",
-        "atmosphere": "The air inside is crisp and artificially regulated, maintaining a comfortable temperature. There is a gentle hum of life support systems. The atmosphere is contained and protected from the external, crushing pressures.",
-        "materials": "The primary material is a hyper-resistant, reinforced glass or polymer, giving the dome its translucent quality. Accents of polished, dark metallic alloys are visible in structural supports and access points. The textures are smooth and sleek, reflecting the futuristic design.",
-        "mood": "The mood is one of hopeful resilience and advanced technological achievement, a sanctuary against the hostile environment.",
-        "sounds": "Hum of machinery, distant sonar pings, gentle atmospheric circulation.",
-        "primary_surfaces": "Reinforced, translucent glass with a polished sheen.",
-        "secondary_surfaces": "Dark, polished metallic alloys.",
-        "accent_features": "Embedded bioluminescent lighting arrays, intricate geometric patterns.",
-        "dominant": "Cool blue and deep indigo (ocean).",
-        "secondary": "Bright white and cyan (lights).",
-        "accent": "Dark metallic (structural elements).",
-        "ambient": "Bright and artificially controlled.",
-        "genre": "sci-fi",
-        "architectural_tone": "Futuristic geodesic dome",
-        "cultural_tone": "Human habitation, technological sanctuary",
-        "palette_bias": "Blues, indigos, whites, cyans",
-        "flora_base": "None",
+        "looks": "A massive, perfectly spherical dome constructed from interlocking hexagonal panes of reinforced, transparent composite. The base is a stout, metallic ring anchored to the seabed, with ancillary structures like docking bays and support conduits radiating outwards.",
+        "colorsAndLighting": "The interior is bathed in a bright, even light from diffused ceiling panels, creating a clean, well-lit environment. Exterior illumination is provided by strategically placed spotlights that cut through the abyssal gloom, reflecting off the dome's surfaces.",
+        "atmosphere": "The air within the dome is crisp and regulated, with a constant, gentle circulation. The temperature is kept at a comfortable level, fostering a sense of normalcy and safety. The overwhelming sensation is one of contained, contained life.",
+        "materials": "The primary material is reinforced, ultra-clear transparisteel, offering panoramic views of the ocean floor. Structural supports and interior furnishings are primarily brushed metallic alloys, with some areas featuring textured composite panels.",
+        "mood": "The mood is one of controlled optimism and technological advancement, a testament to humanity's ability to thrive in extreme environments.",
+        "sounds": "Hum of life support, muffled echoes, distant sonar pings, soft chatter.",
+        "primary_surfaces": "Crystal-clear transparisteel, polished metallic alloys",
+        "secondary_surfaces": "Textured composite panels, integrated lighting strips",
+        "accent_features": "Bioluminescent flora within interior gardens, external viewports showcasing marine life",
+        "dominant": "Cool blue-white light throughout",
+        "secondary": "Brushed metallic tones in furnishings and structures",
+        "accent": "Subtle greens and blues from interior foliage and external ocean",
+        "ambient": "Bright and even interior illumination",
+        "genre": null,
+        "architectural_tone": "futuristic dome",
+        "cultural_tone": "colony housing",
+        "palette_bias": "blues|whites|metallics",
+        "flora_base": "Minimalist, low-light interior plants",
         "fauna_base": "None"
       },
-      "description": "A massive, translucent pressurized dome, its exterior shimmering with embedded lights, designed to house life in the crushing deep. EXTERIOR VIEW.",
-      "searchDesc": "Massive, futuristic bio-dome habitation in the crushing deep, lit by embedded lights.",
-      "slug": "the-bio-dome-habitation",
+      "description": "A large, transparent pressurized dome housing a significant residential section of the colony, its interior lights casting a pale glow into the abyssal depths. EXTERIOR VIEW.",
+      "searchDesc": "Large transparent dome, underwater sci-fi colony, residential sector, interior lights glow.",
+      "slug": "habitat-dome-a-7",
       "structure": {
-        "spatialLayout": "The dome is a single, vast, spherical enclosure, offering a sense of expansive, open space within. Its height and width are substantial, creating a feeling of grand scale."
+        "spatialLayout": "A vast, single-level interior enclosed by a colossal dome, creating an expansive and open feel. Its centered orientation ensures a unified central space with distinct functional zones."
       },
       "navigableElements": [
         {
           "type": "door",
-          "position": "center of the main facade",
-          "description": "Leads into the main habitation areas."
+          "position": "center of lower hemisphere",
+          "description": "A large, reinforced airlock leading into the main residential sector."
+        },
+        {
+          "type": "passage",
+          "position": "mid-level, north side",
+          "description": "A pressurized tunnel connecting to adjacent research facilities."
         }
       ],
       "dominantElements": [
-        "The Bio-Dome: shape=domed, orientation=centered, scale=massive, style=futuristic, surfaces=glass|metallic-polished, openings=large-glass, interior_materials=metallic|glass|concrete, internal_atmosphere=bright"
+        "habitat dome: shape=domed, orientation=centered, scale=massive, style=futuristic, surfaces=glass|metallic, openings=large-glass|circular-portholes, interior_materials=metallic|tile|fabric, internal_atmosphere=bright"
       ],
       "uniqueIdentifiers": [
-        "Embedded bioluminescent lights",
-        "Translucent, pressure-resistant shell",
-        "Submerged location",
-        "Shimmering exterior facade"
+        "transparent pressure hull",
+        "internal biodome gardens",
+        "external docking ports",
+        "luminescent algae farms"
       ],
-      "primaryMedia": "media-1767774837093-y2hofbb1z"
+      "primaryMedia": "media-1767775702877-718xgn75h"
+    },
+    "niche-1767775764379-9t2pxh3l8": {
+      "id": "niche-1767775764379-9t2pxh3l8",
+      "type": "niche",
+      "name": "Habitat Dome Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "The interior is a perfectly spherical chamber, defined by the curved, hexagonal panes of the dome itself. Minimalist modular furniture and utility conduits are seamlessly integrated into the structure.",
+        "colorsAndLighting": "The space is bathed in a consistent, cool blue-white light emanating from diffused panels within the ceiling. Reflective metallic surfaces catch and amplify this illumination.",
+        "atmosphere": "The air is meticulously regulated, feeling crisp and sterile with a barely perceptible, gentle circulation. The ambient temperature is maintained for comfort, fostering a sense of safe enclosure.",
+        "materials": "The primary material is ultra-clear, reinforced transparisteel, forming the entire shell. Interior surfaces and structural elements are primarily brushed metallic alloys, with some textured composite panels for non-load-bearing sections.",
+        "mood": "A palpable sense of controlled optimism and advanced technological achievement pervades the space, highlighting humanity's resilience.",
+        "sounds": "Gentle hum, faint air circulation, distant life support whir.",
+        "spatialLayout": "A vast, contiguous spherical interior space with no sharp corners, maximizing usable volume and offering complete 360-degree views of the exterior.",
+        "primary_surfaces": "Crystal-clear transparisteel walls and ceiling offering external views",
+        "secondary_surfaces": "Brushed metallic alloy floor panels and integrated utility panels",
+        "accent_features": "Subtle strips of integrated, low-intensity bioluminescent flora lining select utility conduits.",
+        "dominant": "Cool blue-white light across the entire interior",
+        "secondary": "Brushed metallic tones on floors and integrated fixtures",
+        "accent": "Subtle greens and blues from interior bioluminescent flora",
+        "ambient": "Bright and even interior illumination",
+        "genre": "Underwater Sci-Fi",
+        "architectural_tone": "futuristic dome",
+        "cultural_tone": "colony housing",
+        "palette_bias": "blues|whites|metallics",
+        "flora_base": "Minimalist, low-light interior plants",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1767775764378-wmzfdeg44",
+      "description": "You are now inside the immense Habitat Dome, a bright, futuristic interior alive with soft light and the hum of advanced systems, offering panoramic views of the outside environment through its transparent shell.",
+      "structure": {
+        "form": "domed",
+        "roofType": "domed",
+        "scale": "massive",
+        "orientation": "centered",
+        "openings": "large-glass|circular-portholes",
+        "openingShape": "mixed",
+        "functionalType": "residential|civic",
+        "elevation": "ground-level",
+        "spatialLayout": "A vast, multi-level central atrium beneath the dome's transparent apex, housing communal areas and access to individual habitat units.",
+        "requiredElements": []
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "straight ahead",
+          "description": "leading to further residential sectors"
+        },
+        {
+          "type": "stairs",
+          "position": "to the sides",
+          "description": "ascending to upper observation decks"
+        }
+      ],
+      "dominantElements": [
+        "habitat pod: shape=cylindrical, orientation=compact, scale=small, style=futuristic, surfaces=metallic-polished, openings=minimal, interior_materials=metallic|fabric|tile, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "panoramic views",
+        "translucent domed ceiling",
+        "integrated technology displays",
+        "lush internal flora"
+      ],
+      "searchDesc": "Advanced underwater habitat dome interior, blue-white light, metallic and glass.",
+      "slug": "null-of-habitat-dome-a-7"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1767774812944-970kqh8gi",
+      "id": "loc-1767775670718-hsatm68ui",
       "type": "host",
       "children": [
         {
-          "id": "a45e1490-3211-4073-a41e-ad5e666921d4",
+          "id": "ada35bf5-8135-4420-afed-a0162f6dca63",
           "type": "region",
           "children": [
             {
-              "id": "b4e771fb-4df1-4ff6-8b2e-06e5d9dc5e4c",
+              "id": "e21cfe75-9bf4-4adf-952e-abeb10ff7ec9",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "niche-1767775764379-9t2pxh3l8",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -116,6 +192,6 @@
     }
   ],
   "pinnedIds": [
-    "loc-1767774812944-970kqh8gi"
+    "loc-1767775670718-hsatm68ui"
   ]
 }
