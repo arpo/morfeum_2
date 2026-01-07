@@ -120,6 +120,50 @@ Interior lighting should feel underground:
 };
 
 /**
+ * EXTERIOR environment constraints
+ * These apply when viewing a structure from OUTSIDE in a special environment
+ * The viewer is IN the environment (underwater, space, etc.) looking AT a structure
+ */
+export const ENVIRONMENT_EXTERIOR_CONSTRAINTS: Record<EnvironmentType, string> = {
+  UNDERWATER: `[CRITICAL: UNDERWATER EXTERIOR VIEW]
+This is an EXTERIOR view UNDERWATER - the camera/viewer is FULLY SUBMERGED in the ocean:
+- Water fills the ENTIRE scene where structures aren't present
+- The viewer is UNDERWATER looking at the structure - NOT standing on shore/land
+- NO TERRESTRIAL CONCEPTS: NO "puddles", NO "wet" surfaces, NO "dampness"
+  (Everything is ALREADY underwater - things can't be "wet" when submerged)
+- NO SKY, NO SHORE, NO SURFACE, NO BEACH - we are DEEP underwater
+- Show: water particles, caustics, marine life, bioluminescence floating in the water
+- The structure must appear fully SURROUNDED by ocean water on ALL sides
+- The seabed is visible but COVERED BY WATER, not exposed to air
+- Include water distortion, floating particles, ambient oceanic blue-green color cast
+- The scene should feel like being in an aquarium looking at the dome, NOT at an oceanside resort`,
+
+  SPACE: `[CRITICAL: SPACE EXTERIOR VIEW]
+This is an EXTERIOR view IN SPACE - the camera/viewer is in the void of space:
+- The void of space surrounds everything
+- NO atmosphere, NO clouds, NO sky gradient
+- Stars and cosmic phenomena visible in all directions
+- The structure floats in zero-gravity environment
+- Include: star fields, distant celestial bodies, cosmic dust`,
+
+  AERIAL: `[CRITICAL: AERIAL EXTERIOR VIEW]
+This is an EXTERIOR view HIGH IN THE AIR - the camera/viewer is airborne:
+- Clouds and sky dominate the scene
+- Ground is distant, far below
+- NO ground-level perspective
+- Include: atmospheric haze, cloud formations, vast open sky`,
+
+  SUBTERRANEAN: `[CRITICAL: SUBTERRANEAN EXTERIOR VIEW]
+This is an EXTERIOR view UNDERGROUND - the camera/viewer is in a cavern:
+- Rock and cave formations surround the scene
+- NO sky, NO surface elements
+- Include: cave ceiling, rock walls, stalactites/stalagmites
+- Lighting comes from bioluminescence, magma, or artificial sources`,
+
+  SURFACE: '' // No special constraint for regular surface environments
+};
+
+/**
  * Detect the environment type from parent DNA chain
  * Scans multiple DNA fields for environment keywords
  * 
@@ -199,11 +243,13 @@ export function buildEnvironmentConstraint(
  * 
  * @param parentDNA - Parent DNA object
  * @param surroundingsDNA - Optional surroundings DNA object
+ * @param currentDNA - Optional current node's DNA (for NEW_WORLD where there's no parent yet)
  * @returns Detected environment type or 'SURFACE' as default
  */
 export function detectEnvironmentFromDNA(
   parentDNA?: Record<string, any>,
-  surroundingsDNA?: Record<string, any>
+  surroundingsDNA?: Record<string, any>,
+  currentDNA?: Record<string, any>
 ): EnvironmentType {
   // Build a simple array to pass to the main detection function
   const dnaArray: Array<{ dna?: Record<string, any> }> = [];
@@ -214,6 +260,21 @@ export function detectEnvironmentFromDNA(
   if (parentDNA) {
     dnaArray.push({ dna: parentDNA });
   }
+  // IMPORTANT: Also check current node's DNA for NEW_WORLD (no parent exists yet)
+  if (currentDNA) {
+    dnaArray.push({ dna: currentDNA });
+  }
   
   return detectEnvironmentType(dnaArray);
+}
+
+/**
+ * Get the EXTERIOR constraint for a detected environment type
+ * Returns empty string for SURFACE (no special constraint needed)
+ * 
+ * @param environmentType - The detected environment type
+ * @returns Constraint string to add to image prompt, or empty string
+ */
+export function getEnvironmentExteriorConstraint(environmentType: EnvironmentType): string {
+  return ENVIRONMENT_EXTERIOR_CONSTRAINTS[environmentType];
 }

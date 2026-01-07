@@ -29,7 +29,7 @@ import type { ImagePromptStructure } from './imagePromptTypes';
 import { assembleImagePrompt } from './imagePromptAssembler';
 import { getImageConstraints, getImageLayerGuidance, getDefaultImageLayerGuidance, type ContainerType, type SpacePerspective, type ImageLayerGuidance } from './spaceTypeRegistry';
 import { getTransitionCategory } from '../prompts/shared/interiorTransitionRules';
-import { detectEnvironmentFromDNA, getEnvironmentViewportConstraint } from '../prompts/shared/environmentTransitionRules';
+import { detectEnvironmentFromDNA, getEnvironmentViewportConstraint, getEnvironmentExteriorConstraint } from '../prompts/shared/environmentTransitionRules';
 
 export interface ImagePromptGenerationInput {
   /** Structure analysis result (form, scale, navigableElements, etc.) */
@@ -479,12 +479,20 @@ function buildConstraints(input: ImagePromptGenerationInput): string[] {
     constraints.push('[CRITICAL: NO ROOF/CEILING - This is an OPEN-SKY outdoor space. The sky is DIRECTLY VISIBLE above. DO NOT show any cave ceiling, dome, vaulted roof, or covered structure overhead. Show natural sky, clouds, or sunset/sunrise above instead.]');
   }
   
-  // Environment constraint for interior spaces with windows
-  // Detects underwater, space, aerial, subterranean environments from parent DNA
-  // and adds constraint to show correct environment through viewports
+  // Environment constraint based on perspective
+  // Detects underwater, space, aerial, subterranean environments from DNA
+  // IMPORTANT: Also check current node's DNA for NEW_WORLD (no parent yet)
+  const envType = detectEnvironmentFromDNA(input.parentDNA, input.surroundingsDNA, input.dna);
+  
   if (input.perspective === 'interior') {
-    const envType = detectEnvironmentFromDNA(input.parentDNA, input.surroundingsDNA);
+    // Interior: what's visible through windows/viewports
     const envConstraint = getEnvironmentViewportConstraint(envType);
+    if (envConstraint) {
+      constraints.push(envConstraint);
+    }
+  } else if (input.perspective === 'exterior') {
+    // Exterior: the viewer is IN the environment looking at the structure
+    const envConstraint = getEnvironmentExteriorConstraint(envType);
     if (envConstraint) {
       constraints.push(envConstraint);
     }
