@@ -182,8 +182,8 @@ export async function displayHandler(req: Request, res: Response): Promise<void>
         regionName: region?.name
       });
       
-      // Build final prompt from layers
-      const basePrompt = buildPromptFromLayers(promptLayers, cascadedDNA, cameraConfig);
+      // Build final prompt from layers (pass spaceType for locations)
+      const basePrompt = buildPromptFromLayers(promptLayers, cascadedDNA, cameraConfig, nodeType === 'node' ? spaceType : undefined);
       const imagePrompt = applyMorfeumStyle(basePrompt, {
         creatureMode: populate ? 'populate' : 'none'
       });

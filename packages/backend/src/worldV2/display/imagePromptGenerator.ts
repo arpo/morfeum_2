@@ -191,10 +191,14 @@ function createFallbackLayers(input: ImagePromptInput): ImagePromptLayers {
 export function buildPromptFromLayers(
   layers: ImagePromptLayers,
   dna: DNA,
-  cameraConfig: { composition: string; shot: string; lens: string; light: string }
+  cameraConfig: { composition: string; shot: string; lens: string; light: string },
+  spaceType?: 'interior' | 'exterior'
 ): string {
   // Combine banned elements (avoid duplicate NEG blocks)
   const allBanned = dna.banned.length > 0 ? dna.banned.join(', ') : '';
+  
+  // Space type line (only for locations with interior/exterior distinction)
+  const spaceTypeLine = spaceType ? `[SPACE:] ${spaceType}` : '';
   
   return `${layers.name}. ${layers.description}
 
@@ -209,6 +213,7 @@ ATMOSPHERE: ${layers.atmosphere}
 Visual Identity: ${dna.essence.join(', ')}
 Forms & Materials: ${dna.formsAndMaterials.join(', ')}
 
+${spaceTypeLine}
 [CAMERA:] ${cameraConfig.shot}
 [LENS:] ${cameraConfig.lens}
 [LIGHT:] ${cameraConfig.light}

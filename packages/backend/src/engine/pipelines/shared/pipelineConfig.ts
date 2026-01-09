@@ -122,7 +122,7 @@ export const PIPELINE_STEPS = {
   
   /** V2: Display command (LLM prompt generation + image generation) */
   v2Display: [
-    { id: 'prompt_generation', name: 'Creating Image Prompt', duration: 2000 },
+    { id: 'prompt_generation', name: 'Creating Image Prompt', duration: 4000 },
     { id: 'image_generation', name: 'Generating Image', duration: 2500 }
   ]
 } as const;

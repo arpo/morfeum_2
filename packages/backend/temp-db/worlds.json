@@ -57,7 +57,7 @@
         ],
         "banned": []
       },
-      "primaryMedia": "media-1767975257065-vcqko83ws"
+      "primaryMedia": "media-1767975547339-27qz9j5wp"
     },
     "v2-1767963850564-oehufolw1": {
       "id": "v2-1767963850564-oehufolw1",
@@ -84,6 +84,113 @@
         "banned": []
       },
       "primaryMedia": "media-1767975293580-r8rd3ctbp"
+    },
+    "v2-1767975451538-7vsxdibhi": {
+      "id": "v2-1767975451538-7vsxdibhi",
+      "type": "region",
+      "name": "City of London",
+      "slug": "city-of-london",
+      "description": "The ancient, financial heart of London, characterized by its dense concentration of historic financial institutions and a unique, almost village-like atmosphere within the bustling city.",
+      "dna": {
+        "essence": [
+          "Financial hub gravitas",
+          "Historic guild hall echoes"
+        ],
+        "formsAndMaterials": [
+          "Stately stone edifices",
+          "Polished brass accents"
+        ],
+        "colorAndLight": [
+          "Formal greys and deep blues",
+          "Sunlight glinting off glass towers and historic stonework"
+        ],
+        "atmosphere": [
+          "Prestigious and formal",
+          "Efficient and business-oriented"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1767975462402-j6838sbet"
+    },
+    "v2-1767975487040-5ovzt1uvn": {
+      "id": "v2-1767975487040-5ovzt1uvn",
+      "type": "location",
+      "name": "The Gilded Mug",
+      "slug": "the-gilded-mug",
+      "spaceType": "exterior",
+      "description": "A distinguished pub entrance with a polished brass sign.",
+      "dna": {
+        "essence": [
+          "Traditional pub gravitas"
+        ],
+        "formsAndMaterials": [
+          "Dark wood facade",
+          "Polished brass accents"
+        ],
+        "colorAndLight": [
+          "Warm glow from interior windows"
+        ],
+        "atmosphere": [
+          "Inviting and established"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1767975497003-4uwogvgkn"
+    },
+    "v2-1767975593359-nu6z802op": {
+      "id": "v2-1767975593359-nu6z802op",
+      "type": "location",
+      "name": "The Camden Arms",
+      "slug": "the-camden-arms",
+      "spaceType": "exterior",
+      "description": "A gritty pub in Camden, with neon signs and a lively atmosphere.",
+      "dna": {
+        "essence": [
+          "Punk rock energy",
+          "Alternative vibe"
+        ],
+        "formsAndMaterials": [
+          "Graffiti-covered facade",
+          "Flickering neon sign"
+        ],
+        "colorAndLight": [
+          "Bold, clashing colors",
+          "Dim, atmospheric lighting"
+        ],
+        "atmosphere": [
+          "Energetic and loud",
+          "Counter-cultural and welcoming"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1767975605007-ycwgprzlk"
+    },
+    "v2-1767975796894-b9nl19ipn": {
+      "id": "v2-1767975796894-b9nl19ipn",
+      "type": "location",
+      "name": "Elite Fashion Boutique",
+      "slug": "elite-fashion-boutique",
+      "spaceType": "exterior",
+      "description": "A high-end fashion store with a polished facade on a busy city street.",
+      "dna": {
+        "essence": [
+          "Chic display window",
+          "Designer label allure"
+        ],
+        "formsAndMaterials": [
+          "Sleek glass frontage",
+          "Branded signage"
+        ],
+        "colorAndLight": [
+          "Spotlighted mannequins",
+          "Reflective surfaces"
+        ],
+        "atmosphere": [
+          "Exclusive and aspirational"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1767975836220-5t1w7ds2o"
     }
   },
   "views": {},
@@ -98,6 +205,27 @@
           "children": [
             {
               "id": "v2-1767963850564-oehufolw1",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "v2-1767975593359-nu6z802op",
+              "type": "location",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "v2-1767975451538-7vsxdibhi",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1767975487040-5ovzt1uvn",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "v2-1767975796894-b9nl19ipn",
               "type": "location",
               "children": []
             }
