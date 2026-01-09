@@ -6,6 +6,8 @@ import { handleCreationCommand } from './creationCommands';
 import { handleMediaCommand } from './mediaCommands';
 import { handleEditCommand } from './editCommands';
 import { handleNavigationCommand } from './navigationCommands';
+// V2 World System - TODO: Remove when V2 is stable
+import { isV2Command, handleV2Command } from '@/worldV2';
 
 /** Commands that support enhancement (navigable elements, furnishing) */
 const ENHANCEABLE_COMMANDS = ['GO_INSIDE', 'GOTO', 'NEW_LOCATION'];
@@ -80,8 +82,8 @@ export function useNavigationLogic() {
     // Get current node (may be undefined for NEW_WORLD)
     let currentNode: ReturnType<typeof getNode> | undefined = undefined;
 
-    // For NEW_WORLD, we don't need an active entity
-    if (command !== 'NEW_WORLD') {
+    // For NEW_WORLD and NEW_HOST, we don't need an active entity
+    if (command !== 'NEW_WORLD' && command !== 'NEW_HOST') {
       const activeEntityId = useStore.getState().activeEntity;
       if (!activeEntityId) {
         console.warn('[useNavigationLogic] No active entity');
@@ -111,6 +113,15 @@ export function useNavigationLogic() {
           parsedCommand = { ...parsedCommand, text: defaultArg };
         }
       }
+    }
+
+    // ============================================
+    // V2 World System Commands
+    // TODO: Remove when V2 is stable
+    // ============================================
+    if (isV2Command(command)) {
+      await handleV2Command(parsedCommand, callbacks);
+      return;
     }
 
     // Route to appropriate command handler

@@ -8,10 +8,11 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 
 | Category | Count | Primary Location |
 |----------|-------|------------------|
+| **V2 World System** | 1+ | `worldV2/prompts/` |
 | Vision/Analysis | 2 | `shared/`, `characters/` |
 | Character Generation | 5 | `characters/` |
 | Navigation/Intent | 3 | `navigation/` |
-| Location/DNA | 8 | `locations/`, `nodeCreation/prompts/dna/` |
+| Location/DNA (V1) | 8 | `locations/`, `nodeCreation/prompts/dna/` |
 | Image Generation | 4 | `locations/worldTree/`, `shared/` |
 | Chat/Impersonation | 3 | `chat/` |
 | Enhancer | 3 | `enhancer/` |
@@ -19,6 +20,15 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 ---
 
 ## Prompt Catalog
+
+### V2 World System (NEW - Simplified DNA)
+
+| Prompt | File | Purpose | Used By |
+|--------|------|---------|---------|
+| `buildHostDNAPrompt` | [hostDNA.ts](../../../worldV2/prompts/hostDNA.ts) | Generate Host DNA from concept | `/NEW_HOST` |
+| `parseHostResponse` | [hostDNA.ts](../../../worldV2/prompts/hostDNA.ts) | Parse LLM response to Host node | `/NEW_HOST` |
+| `buildRegionDNAPrompt` | *(planned)* | Generate Region DNA | `/NEW_REGION` |
+| `buildLocationDNAPrompt` | *(planned)* | Generate Location DNA | `/NEW_LOCATION` |
 
 ### Vision & Image Analysis
 

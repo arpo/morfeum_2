@@ -11,6 +11,8 @@ import { spawnRouter } from './spawn';
 import storageRouter from './storage';
 import mediaRouter from './media';
 import trainingDataRouter from './trainingData';
+import { validateMzooApiKey } from '../middleware/mzooAuth';
+import { worldV2Router } from '../worldV2';
 
 /**
  * Configure all application routes
@@ -33,6 +35,12 @@ export const configureRoutes = (app: any): void => {
   
   // Training data routes (for AI model training)
   app.use(`${API_ROUTES.ROOT}/training-data`, trainingDataRouter);
+  
+  // ============================================
+  // V2 World System Routes
+  // TODO: Remove when V2 is stable and old system is removed
+  // ============================================
+  app.use(`${API_ROUTES.ROOT}/v2`, validateMzooApiKey, worldV2Router);
   
   // Health check routes
   app.use(API_ROUTES.HEALTH, healthRouter);

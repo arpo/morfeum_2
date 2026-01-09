@@ -1,5 +1,37 @@
 # Progress
 
+## 2026-01-09 - World V2 System
+
+- [x] **World V2 Phase 1: /NEW_HOST Command - COMPLETED**
+  - **What**: New simplified world creation system running parallel to existing
+  - **Goal**: Replace complex DNA with simpler, more maintainable approach
+  - **Files Created**:
+    - `packages/backend/src/worldV2/types.ts` - V2 DNA interfaces
+    - `packages/backend/src/worldV2/routes.ts` - NEW_HOST route + SSE
+    - `packages/backend/src/worldV2/prompts/hostDNA.ts` - Host DNA prompt
+    - `packages/backend/src/worldV2/prompts/index.ts` - Exports
+    - `packages/backend/src/worldV2/index.ts` - Module exports
+    - `packages/frontend/src/worldV2/commands/v2Commands.ts` - Command handler
+    - `packages/frontend/src/worldV2/index.ts` - Module exports
+  - **Files Modified**:
+    - `packages/backend/src/routes/index.ts` - Mount V2 at `/api/v2`
+    - `packages/backend/src/config/navigation.ts` - Add NEW_HOST command
+    - `packages/backend/src/engine/pipelines/shared/pipelineConfig.ts` - v2CreateHost pipeline
+    - `packages/frontend/src/features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - V2 routing
+  - **Features**:
+    - Simplified 5-aspect DNA (essence, atmosphere, formsAndMaterials, colorAndLight, banned)
+    - Genre field (e.g., "Aetherpunk", "Fantasy")
+    - Auto-pin to tree view on creation
+    - Elapsed time in terminal output
+    - ~7.5s generation time
+  - **Usage**: `/NEW_HOST A floating city in the clouds`
+
+- [ ] **World V2 Phase 2: /NEW_REGION Command - PENDING**
+- [ ] **World V2 Phase 3: /NEW_LOCATION Command - PENDING**
+- [ ] **World V2 Phase 4: /DISPLAY Command - PENDING**
+- [ ] **World V2 Phase 5: Navigation Commands - PENDING**
+- [ ] **World V2 Phase 6: Remove Old System - PENDING**
+
 ## 2026-01-05 - Bug Fixes
 
 - [x] **SeedVR Image Upscale Database Update Fix - COMPLETED**

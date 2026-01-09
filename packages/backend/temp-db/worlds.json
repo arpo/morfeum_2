@@ -1,222 +1,46 @@
 {
   "nodes": {
-    "loc-1767443643257-l2e8q5ypg": {
-      "id": "loc-1767443643257-l2e8q5ypg",
+    "v2-1767962509691-pnwz7p2r0": {
+      "id": "v2-1767962509691-pnwz7p2r0",
       "type": "host",
-      "name": "Planet Xylar",
-      "spaceType": "exterior",
+      "name": "The Shimmering Isles of Aethel",
+      "slug": "the-shimmering-isles-of-aethel",
+      "description": "A celestial archipelago of floating, iridescent landmasses, where waterfalls of pure light cascade into glowing cloud seas under a sky teeming with alien worlds.",
+      "genre": "Cosmic Fantasy",
       "dna": {
-        "looks": "Skyline silhouette of gravity-defying rock formations, vast surreal landscapes, unusual atmospheric phenomena",
-        "colorsAndLighting": "Bioluminescent flora, vibrant and saturated alien skies, soft, diffused light from a distant, unusual star.",
-        "atmosphere": "Alien, ethereal, dreamlike, breathable with a strange scent.",
-        "materials": "Unknown crystalline compounds, alien organic matter, exotic metals.",
-        "mood": "Mysterious, wondrous, alien, and serene.",
-        "sounds": "Subtle alien hums, soft chimes from flora, distant ethereal calls.",
-        "primary_surfaces": "Smooth, iridescent, unknown compounds.",
-        "secondary_surfaces": "Porous, crystalline rock-like structures.",
-        "accent_features": "Bioluminescent plant structures, floating rock fragments.",
-        "dominant": "Alien flora",
-        "secondary": "Crystalline structures",
-        "accent": "Bioluminescence",
-        "ambient": "Ethereal hum",
-        "genre": "REQUIRED",
-        "architectural_tone": "REQUIRED",
-        "cultural_tone": "REQUIRED",
-        "palette_bias": "REQUIRED",
-        "flora_base": "REQUIRED",
-        "fauna_base": "REQUIRED"
+        "essence": [
+          "Weightless celestial realms",
+          "Luminous liquid light phenomena"
+        ],
+        "formsAndMaterials": [
+          "Jagged rock formations",
+          "Iridescent, crystalline surfaces"
+        ],
+        "colorAndLight": [
+          "Vibrant rainbow spectrum",
+          "Ethereal, glowing luminescence"
+        ],
+        "atmosphere": [
+          "Serene wonder",
+          "Cosmic awe"
+        ],
+        "banned": [
+          "Earthbound physics",
+          "Single-planet astronomy"
+        ]
       },
-      "description": "A world of surreal landscapes and vibrant, alien flora, heavily inspired by the works of Moebius. Gravity-defying rock formations pierce an atmosphere tinged with unusual colors, supporting bizarre and beautiful plant life.",
-      "searchDesc": "Planet Xylar: Surreal alien world, Moebius-inspired, vibrant flora",
-      "slug": "planet-xylar",
-      "structure": {
-        "spatialLayout": "Organic, flowing, with an emphasis on verticality and improbable structures."
-      },
-      "primaryMedia": "media-1767474748311-n11zmtlkb",
-      "updatedAt": 1767597132214
-    },
-    "6d0341a5-5945-48dc-a3db-7f1f6e944169": {
-      "id": "6d0341a5-5945-48dc-a3db-7f1f6e944169",
-      "type": "region",
-      "name": "The Crimson Dunes",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "Organic rock formations, wind-sculpted dunes, flowing street patterns",
-        "colorsAndLighting": "Warm ochre and red hues under a harsh, alien sun. Dramatic shadows cast by rock formations.",
-        "atmosphere": "Dry, windswept, vast, and ancient.",
-        "materials": "Eroded sandstone, compressed sand, crystalline rock outcroppings.",
-        "mood": "Enduring, stark, majestic, and solitary.",
-        "sounds": "Whispering wind, the sifting of sand, distant echoes.",
-        "primary_surfaces": "Rough, textured sandstone.",
-        "secondary_surfaces": "Smooth, wind-polished rock faces, compacted sand.",
-        "accent_features": "Naturally occurring crystal veins, wind-carved arches.",
-        "dominant": "Sand",
-        "secondary": "Rock",
-        "accent": "Crystal",
-        "ambient": "Wind",
-        "genre": null,
-        "architectural_tone": "Sculpted by nature",
-        "cultural_tone": "Nomadic, resilient",
-        "palette_bias": "Ochre, deep reds, burnt sienna",
-        "flora_base": "Sparse, hardy desert succulents",
-        "fauna_base": "Burrowing desert creatures"
-      },
-      "description": "Vast expanses of ochre sand, punctuated by towering, organically shaped rock formations that resemble colossal sculptures. The wind carves intricate patterns into the dunes, creating a constantly shifting, alien topography.",
-      "searchDesc": "Crimson Dunes: Alien desert, sculpted rock formations, shifting sands",
-      "slug": "the-crimson-dunes",
-      "structure": {
-        "spatialLayout": "Open, sprawling, with natural pathways dictated by rock formations."
-      },
-      "primaryMedia": "media-1767474897692-aa0vo3pub"
-    },
-    "022ba666-f38f-402e-a173-802a54626717": {
-      "id": "022ba666-f38f-402e-a173-802a54626717",
-      "type": "location",
-      "name": "The Oracle's Spire",
-      "spaceType": "exterior",
-      "dna": {
-        "looks": "The Spire is a tall, slender, organic spiral that appears to have grown from the desert. Its exterior is entirely clad in large, iridescent panels that catch and refract light.",
-        "colorsAndLighting": "Dominated by the vibrant, shifting colors of the iridescent panels, reflecting the intense sunlight of Planet Xylar. Interior lighting is soft and diffused, creating a mystical glow.",
-        "atmosphere": "The air inside the spire is cool and still, a stark contrast to the desert heat outside. A faint, resonant hum can be felt, as if the structure itself is alive. There is a sense of otherworldly calm.",
-        "materials": "The primary surfaces are highly polished, iridescent metallic panels that shift in color. Interior materials include polished metallic surfaces, possibly with smooth, cool tile flooring and glass elements.",
-        "mood": "Mystical, awe-inspiring, and serene. The Spire evokes a sense of ancient wisdom and otherworldly presence.",
-        "sounds": "Low hum, faint resonance, wind whispers outside.",
-        "primary_surfaces": "Shimmering iridescent metallic panels",
-        "secondary_surfaces": "Polished metal, smooth tile",
-        "accent_features": "Fluid, organic spiral form",
-        "dominant": "Iridescent blues and greens across the facade",
-        "secondary": "Cool metallic silver interiors",
-        "accent": "Warm amber light accents",
-        "ambient": "Soft, diffused mystical light",
-        "genre": null,
-        "architectural_tone": "Organic futuristic",
-        "cultural_tone": "Sacred observatory or oracle site",
-        "palette_bias": "Iridescent jewel tones",
-        "flora_base": "None",
-        "fauna_base": "None"
-      },
-      "description": "A slender, spiraling structure that emerges organically from the desert floor, its surface adorned with shimmering, iridescent panels.",
-      "searchDesc": "Spiraling iridescent tower in Crimson Dunes, Planet Xylar. Mystical interior.",
-      "slug": "the-oracle-s-spire",
-      "structure": {
-        "spatialLayout": "A tall, spiraling structure with a central core, designed for vertical ascent. The interior spaces are likely open and flowing, following the organic external shape."
-      },
-      "navigableElements": [
-        {
-          "type": "archway",
-          "position": "base of the spire",
-          "description": "Leads into the Spire's entrance hall."
-        },
-        {
-          "type": "stairs",
-          "position": "interior of the spire",
-          "description": "Ascends through the spire's core."
-        }
-      ],
-      "dominantElements": [
-        "The Oracle's Spire: shape=organic, orientation=vertical(tower), scale=towering, style=futuristic, surfaces=metallic-polished, openings=large-glass, interior_materials=metallic|tile|glass, internal_atmosphere=mystical"
-      ],
-      "uniqueIdentifiers": [
-        "Organic spiral form",
-        "Iridescent shimmering panels",
-        "Seamless integration with desert floor",
-        "Hypnotic light reflection"
-      ],
-      "primaryMedia": "media-1767443670513-hnsxfmcni"
-    },
-    "niche-1767453746909-c8t1mqu30": {
-      "id": "niche-1767453746909-c8t1mqu30",
-      "type": "niche",
-      "name": "High Hall",
-      "spaceType": "interior",
-      "dna": {
-        "looks": "Soaring, cathedral-like metal hall. Walls and ceiling are a complex weave of riveted metal plates, etched and worn by aeons of wind and exposure. Geometric patterns are overlaid with organic, wind-eroded textures.",
-        "colorsAndLighting": "Dominated by burnished ochre and deep reds from residual heat and metallic oxidation. Harsh, alien sunlight streams in from unseen openings high above, casting long, dramatic shadows. Spotlights of a cool, alien blue emanate from within some of the metallic structures.",
-        "atmosphere": "Dry, still, and cavernous. The air is cool but carries a faint metallic tang. A profound sense of isolation and immense age pervades.",
-        "materials": "Primarily weathered, aged metal. Sections of polished, almost liquid-like metal for the floor contrast with pitted, oxidized plating on the walls and ceiling. Veins of crystalline material are embedded within some of the metalwork.",
-        "mood": "Enduring, stark, majestic, and solitary. A sense of awe at the sheer scale and history, coupled with a feeling of profound loneliness.",
-        "sounds": "Distant wind, faint metallic groans, echoes, resonant hum, clanking of unseen mechanisms.",
-        "spatialLayout": "A vast, open hall with extreme verticality. The floor is a massive, flat expanse, leading towards immense structural elements that support a sky-high ceiling.",
-        "primary_surfaces": "Polished metal floor, oxidized and patinated metal walls and columns",
-        "secondary_surfaces": "Riveted metal plating, crystalline inlays within metal",
-        "accent_features": "Etched geometric patterns, embedded glowing crystalline veins, wind-sculpted metallic ridges",
-        "dominant": "Ochre",
-        "secondary": "Deep Red",
-        "accent": "Metallic Blue",
-        "ambient": "Harsh Sunlight",
-        "genre": "REQUIRED",
-        "architectural_tone": "Sculpted by nature",
-        "cultural_tone": "Nomadic, resilient",
-        "palette_bias": "Ochre, deep reds, burnt sienna",
-        "flora_base": "Sparse, hardy desert succulents",
-        "fauna_base": "Burrowing desert creatures"
-      },
-      "primaryMedia": "media-1767453746908-uc8fue851",
-      "description": "You are now inside the High Hall of The Oracle's Spire. The vaulted ceiling stretches upwards, creating a sense of immense space. Large, arched glass panels dominate the walls, offering a breathtaking view of the Crimson Dunes below. The interior is primarily constructed from polished metallic surfaces and gleaming tiles, with an overall mystical and futuristic atmosphere. A grand staircase ascends from the center, hinting at further exploration within the tower.",
-      "structure": {
-        "form": "irregular",
-        "roofType": "vaulted",
-        "scale": "large",
-        "orientation": "vertical(tower)",
-        "openings": "large-glass",
-        "openingShape": "arched",
-        "functionalType": "civic",
-        "elevation": "elevated",
-        "spatialLayout": "A grand, high-ceilinged hall within a towering structure, likely serving a ceremonial or observational purpose. Features expansive glass openings offering panoramic views.",
-        "requiredElements": []
-      },
-      "navigableElements": [
-        {
-          "type": "door",
-          "position": "entrance",
-          "description": "leads outside to the tower"
-        },
-        {
-          "type": "stairs",
-          "position": "central",
-          "description": "leads to upper levels"
-        }
-      ],
-      "dominantElements": [
-        "The Oracle's Spire: shape=organic, orientation=vertical(tower), scale=towering, style=futuristic, surfaces=metallic-polished, openings=large-glass, interior_materials=metallic|tile|glass, internal_atmosphere=mystical"
-      ],
-      "uniqueIdentifiers": [
-        "Irregular organic form",
-        "Towering scale",
-        "Futuristic metallic style",
-        "Vaulted ceiling"
-      ],
-      "searchDesc": "Vast metal tower hall, wind-sculpted, ochre hues, stark and majestic. High hall.",
-      "slug": "null-of-the-oracle-s-spire"
+      "spaceType": "exterior"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "loc-1767443643257-l2e8q5ypg",
+      "id": "v2-1767962509691-pnwz7p2r0",
       "type": "host",
-      "children": [
-        {
-          "id": "6d0341a5-5945-48dc-a3db-7f1f6e944169",
-          "type": "region",
-          "children": [
-            {
-              "id": "022ba666-f38f-402e-a173-802a54626717",
-              "type": "location",
-              "children": [
-                {
-                  "id": "niche-1767453746909-c8t1mqu30",
-                  "type": "niche",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      "children": []
     }
   ],
   "pinnedIds": [
-    "loc-1767443643257-l2e8q5ypg"
+    "v2-1767962509691-pnwz7p2r0"
   ]
 }

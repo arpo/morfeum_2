@@ -98,6 +98,32 @@ export const PIPELINE_STEPS = {
   // EDIT_IMAGE command - edit existing image with text prompt
   edit: [
     { id: 'edit', name: 'Editing Image', duration: 6000 }
+  ],
+  
+  // ============================================
+  // V2 WORLD SYSTEM PIPELINES
+  // TODO: Remove these and old pipelines when V2 is stable
+  // ============================================
+  
+  /** V2: Create host node (DNA only, no image) */
+  v2CreateHost: [
+    { id: 'dna_generation', name: 'Creating Host DNA', duration: 2000 }
+  ],
+  
+  /** V2: Create region node (DNA only, no image) */
+  v2CreateRegion: [
+    { id: 'dna_generation', name: 'Creating Region DNA', duration: 2000 }
+  ],
+  
+  /** V2: Create generic node (DNA + optional prompt structure, no image) */
+  v2CreateNode: [
+    { id: 'dna_generation', name: 'Creating Node DNA', duration: 3000 },
+    { id: 'prompt_structure', name: 'Building Prompt', duration: 2000 }
+  ],
+  
+  /** V2: Display command (image generation for existing node) */
+  v2Display: [
+    { id: 'image_generation', name: 'Generating Image', duration: 2500 }
   ]
 } as const;
 
