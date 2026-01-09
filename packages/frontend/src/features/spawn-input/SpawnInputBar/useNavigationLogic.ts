@@ -120,7 +120,12 @@ export function useNavigationLogic() {
     // TODO: Remove when V2 is stable
     // ============================================
     if (isV2Command(command)) {
-      await handleV2Command(parsedCommand, callbacks);
+      // Get active entity info for V2 commands that need context
+      const activeEntityId = useStore.getState().activeEntity;
+      const activeNode = activeEntityId ? getNode(activeEntityId) : null;
+      const activeEntityType = activeNode?.type || null;
+      
+      await handleV2Command(parsedCommand, callbacks, activeEntityId, activeEntityType);
       return;
     }
 

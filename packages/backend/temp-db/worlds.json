@@ -1,46 +1,109 @@
 {
   "nodes": {
-    "v2-1767962509691-pnwz7p2r0": {
-      "id": "v2-1767962509691-pnwz7p2r0",
+    "v2-1767963637278-3pgkv6v5y": {
+      "id": "v2-1767963637278-3pgkv6v5y",
       "type": "host",
-      "name": "The Shimmering Isles of Aethel",
-      "slug": "the-shimmering-isles-of-aethel",
-      "description": "A celestial archipelago of floating, iridescent landmasses, where waterfalls of pure light cascade into glowing cloud seas under a sky teeming with alien worlds.",
-      "genre": "Cosmic Fantasy",
+      "name": "London",
+      "slug": "london",
+      "description": "A sprawling metropolis steeped in history and tradition, where fog-kissed cobblestone streets meet towering modern architecture, and the past whispers secrets in every alleyway.",
+      "genre": "Urban Metropole",
       "dna": {
         "essence": [
-          "Weightless celestial realms",
-          "Luminous liquid light phenomena"
+          "Victorian Gothic grandeur",
+          "Industrial Revolution grit"
         ],
         "formsAndMaterials": [
-          "Jagged rock formations",
-          "Iridescent, crystalline surfaces"
+          "Stone and brick monoliths",
+          "Ironwork and glass"
         ],
         "colorAndLight": [
-          "Vibrant rainbow spectrum",
-          "Ethereal, glowing luminescence"
+          "Muted greys and browns with occasional jewel tones",
+          "Gaslight glow and overcast skies"
         ],
         "atmosphere": [
-          "Serene wonder",
-          "Cosmic awe"
+          "Melancholic and mysterious",
+          "Busy and labyrinthine"
         ],
         "banned": [
-          "Earthbound physics",
-          "Single-planet astronomy"
+          "Excessive cyberpunk neon",
+          "Fantasy magic props"
         ]
       },
       "spaceType": "exterior"
+    },
+    "v2-1767963649496-6r4tzt3t2": {
+      "id": "v2-1767963649496-6r4tzt3t2",
+      "type": "region",
+      "name": "Camden",
+      "slug": "camden",
+      "description": "A vibrant and eclectic district known for its alternative culture and bustling markets.",
+      "dna": {
+        "essence": [
+          "Bohemian spirit",
+          "Punk rock rebellion"
+        ],
+        "formsAndMaterials": [
+          "Graffiti-adorned walls",
+          "Street market stalls"
+        ],
+        "colorAndLight": [
+          "Bold and clashing colors",
+          "Flickering neon signs"
+        ],
+        "atmosphere": [
+          "Energetic and chaotic",
+          "Counter-cultural and rebellious"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1767963850564-oehufolw1": {
+      "id": "v2-1767963850564-oehufolw1",
+      "type": "location",
+      "name": "The Psychedelic Hanger",
+      "slug": "the-psychedelic-hanger",
+      "spaceType": "exterior",
+      "description": "An avant-garde boutique specializing in trippy club wear.",
+      "dna": {
+        "essence": [
+          "Surreal fashion"
+        ],
+        "formsAndMaterials": [
+          "Kaleidoscopic window displays",
+          "Iridescent facade"
+        ],
+        "colorAndLight": [
+          "Shifting holographic projections",
+          "Vibrant, unnatural hues"
+        ],
+        "atmosphere": [
+          "Hypnotic and otherworldly"
+        ],
+        "banned": []
+      }
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "v2-1767962509691-pnwz7p2r0",
+      "id": "v2-1767963637278-3pgkv6v5y",
       "type": "host",
-      "children": []
+      "children": [
+        {
+          "id": "v2-1767963649496-6r4tzt3t2",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1767963850564-oehufolw1",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "v2-1767962509691-pnwz7p2r0"
+    "v2-1767963637278-3pgkv6v5y"
   ]
 }

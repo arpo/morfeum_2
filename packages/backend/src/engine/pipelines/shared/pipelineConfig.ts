@@ -115,15 +115,14 @@ export const PIPELINE_STEPS = {
     { id: 'dna_generation', name: 'Creating Region DNA', duration: 2000 }
   ],
   
-  /** V2: Create generic node (DNA + optional prompt structure, no image) */
+  /** V2: Create location node (DNA + promptStructure in single call, no image) */
   v2CreateNode: [
-    { id: 'dna_generation', name: 'Creating Node DNA', duration: 3000 },
-    { id: 'prompt_structure', name: 'Building Prompt', duration: 2000 }
+    { id: 'dna_generation', name: 'Creating Location DNA', duration: 2000 }
   ],
   
   /** V2: Display command (image generation for existing node) */
   v2Display: [
-    { id: 'image_generation', name: 'Generating Image', duration: 2500 }
+    { id: 'image_generation', name: 'Generating Image', duration: 2000 }
   ]
 } as const;
 

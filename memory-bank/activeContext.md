@@ -2,115 +2,116 @@
 
 ## 2026-01-09 - World V2 System Implementation
 
-### /NEW_HOST Command - PHASE 1 COMPLETE
+### Current Status: Phases 1-3 COMPLETE
 
 Built a new simplified world creation system (V2) that runs in parallel with the existing system. The goal is to replace the complex DNA system with a simpler, more maintainable approach.
 
-#### What Was Built
+---
 
-**Backend - World V2 System:**
-- `packages/backend/src/worldV2/` - New V2 module directory
-  - `types.ts` - V2HostDNA, V2RegionDNA, V2LocationDNA interfaces
-  - `routes.ts` - NEW_HOST route with LLM integration + SSE progress
-  - `prompts/hostDNA.ts` - Simplified Host DNA generation prompt
-  - `prompts/index.ts` - Prompt exports
-  - `index.ts` - Module exports
+## Completed Phases
 
-**Frontend - V2 Command Handler:**
-- `packages/frontend/src/worldV2/` - New V2 frontend module
-  - `commands/v2Commands.ts` - Command routing and NEW_HOST handler
-  - `index.ts` - Module exports
+### Phase 1: /NEW_HOST Command ✅
 
-**Integration Points:**
-- `packages/backend/src/routes/index.ts` - V2 routes mounted at `/api/v2`
-- `packages/backend/src/config/navigation.ts` - Added `NEW_HOST` to slash commands
-- `packages/frontend/src/features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - V2 command routing
+Creates a new world with simplified DNA structure.
 
-#### V2 DNA Structure (Simplified)
+**Usage:** `/NEW_HOST A steampunk metropolis`
 
-**Host DNA** - 5 core aspects (each 2 items):
-```typescript
-interface V2HostDNA {
-  essence: string[];        // Core identity (2 items)
-  atmosphere: string[];     // Mood and feeling (2 items)
-  formsAndMaterials: string[];  // Visual elements (2 items)
-  colorAndLight: string[];  // Color palette (2 items)
-  banned: string[];         // What to avoid (2 items)
+**Output:**
+```json
+{
+  "type": "host",
+  "name": "London",
+  "genre": "Urban Metropole",
+  "dna": {
+    "essence": ["Victorian Gothic grandeur", "Industrial Revolution grit"],
+    "formsAndMaterials": ["Stone and brick monoliths", "Ironwork and glass"],
+    "colorAndLight": ["Muted greys and browns", "Gaslight glow"],
+    "atmosphere": ["Melancholic and mysterious", "Busy and labyrinthine"],
+    "banned": ["Excessive cyberpunk neon", "Fantasy magic props"]
+  }
 }
 ```
 
-**Host Node includes:**
-- `id`, `type: 'host'`, `name`, `slug`, `description`
-- `genre` (e.g., "Aetherpunk", "Fantasy", "Noir")
-- `spaceType: 'exterior'`
-- `dna: V2HostDNA`
+### Phase 2: /NEW_REGION2 Command ✅
 
-#### Flow
+Creates a region under a host with delta-only DNA (inherits from host).
 
-1. User types `/NEW_HOST A floating city in the clouds`
-2. Frontend detects V2 command, calls `/api/v2/new-host`
-3. Backend generates unique operation ID, returns SSE events URL
-4. LLM generates Host DNA via Gemini 2.5 Flash
-5. Host saved to `worlds.json` (nodes + worldTrees + pinnedIds)
-6. SSE completion event triggers frontend to:
-   - Reload locations store from backend
-   - Auto-pin host (appears in tree view immediately)
-   - Set host as active entity
+**Usage:** `/NEW_REGION2 The industrial docks` (while on a host node)
 
-#### Terminal Output
+**Features:**
+- Only available when focused on a host node
+- Delta-only DNA (empty arrays inherit from host)
+- Proper nouns preserved (e.g., "Camden")
+
+### Phase 3: /NEW_LOCATION2 Command ✅
+
+Creates a location under a region with delta-only DNA. NO promptStructure generated - that's deferred to /DISPLAY.
+
+**Usage:** `/NEW_LOCATION2 A gritty punk pub` (while on a region node)
+
+**Output:**
+```json
+{
+  "type": "location",
+  "name": "The Rusty Mug",
+  "spaceType": "exterior",
+  "description": "A gritty, independent pub with a distinctive punk-rock aesthetic.",
+  "dna": { ... }
+}
 ```
-🚀 [V2-NEW-HOST] Starting host creation...
-[V2-NEW-HOST] Operation ID: v2-host-xxx
-[V2-NEW-HOST] Concept: A floating city in the clouds
-[V2-NEW-HOST] Calling LLM for DNA generation...
-[V2-NEW-HOST] LLM response received in 7563ms
-✅ [V2-NEW-HOST] Host created: Aeridor
-[V2-NEW-HOST] DNA essence: Weightlessness and upward aspiration...
-[V2-NEW-HOST] Saved to storage
-✅ [V2-NEW-HOST] Complete in 7.6s
+
+**Note:** promptStructure is NOT generated during location creation - it will be generated at /DISPLAY time.
+
+---
+
+## V2 Files Structure
+
+**Backend:**
+```
+packages/backend/src/worldV2/
+├── types.ts              # V2HostDNA, V2RegionDNA, V2LocationDNA interfaces
+├── routes.ts             # NEW_HOST, NEW_REGION, NEW_LOCATION routes
+├── prompts/
+│   ├── hostDNA.ts        # Host DNA generation prompt
+│   ├── regionDNA.ts      # Region DNA generation prompt (delta-only)
+│   ├── locationDNA.ts    # Location DNA generation prompt (delta-only, no promptStructure)
+│   └── index.ts          # Exports
+└── index.ts              # Module exports
+```
+
+**Frontend:**
+```
+packages/frontend/src/worldV2/
+├── commands/
+│   └── v2Commands.ts     # NEW_HOST, NEW_REGION2, NEW_LOCATION2 handlers
+└── index.ts              # Module exports
 ```
 
 ---
 
-## Current Focus
+## V2 DNA Inheritance Model
 
-- ✅ **COMPLETED**: World V2 System - Phase 1 (/NEW_HOST command)
-- ⏳ **NEXT**: Phase 2 - /NEW_REGION command
-- ⏳ **PENDING**: Phase 3 - /NEW_LOCATION command
-- ⏳ **PENDING**: Phase 4 - /DISPLAY command
-- ⏳ **PENDING**: Phase 5 - Navigation commands
-- ⏳ **PENDING**: Phase 6 - Remove old system
+```
+Host (full DNA)
+  └── Region (delta-only, inherits from host)
+        └── Location (delta-only, inherits from region+host)
+```
 
-## V2 Files Created/Modified
-
-**New Files:**
-- `packages/backend/src/worldV2/types.ts`
-- `packages/backend/src/worldV2/routes.ts`
-- `packages/backend/src/worldV2/prompts/hostDNA.ts`
-- `packages/backend/src/worldV2/prompts/index.ts`
-- `packages/backend/src/worldV2/index.ts`
-- `packages/frontend/src/worldV2/commands/v2Commands.ts`
-- `packages/frontend/src/worldV2/index.ts`
-
-**Modified Files:**
-- `packages/backend/src/routes/index.ts` - Mount V2 routes
-- `packages/backend/src/config/navigation.ts` - Add NEW_HOST command
-- `packages/backend/src/engine/pipelines/shared/pipelineConfig.ts` - Add v2CreateHost pipeline
-- `packages/frontend/src/features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - V2 command routing
+**Delta Rule:** Each child node only stores what's NEW or DIFFERENT from its parent. Empty arrays mean "inherit from parent."
 
 ---
 
-## Previous Context (2026-01-05)
+## Next Phases
 
-### Image Upscale Database Update Fix - COMPLETED
-Fixed bug where upscaled images weren't saved (API returns `images[0].url` not `image.url`).
+- [ ] **Phase 4: /DISPLAY Command** - Generate promptStructure + image for any node
+- [ ] **Phase 5: Navigation Commands** - GO_INSIDE, GOTO for V2 nodes
+- [ ] **Phase 6: Remove Old System** - Clean up legacy code
 
-### Multi-View System - COMPLETED
-- Circular/infinite navigation for multi-view images
-- Live view counter in Entity Explorer (e.g., "Node (2/3)")
+---
 
-### /EDIT_IMAGE Slash Command - COMPLETED
-FAL Flux 2 Turbo Edit integration.
+## Key Design Decisions
 
-### Gemini Caching - COMPLETED
-90% cost reduction + 70% performance improvement for world creation and navigation.
+1. **DNA-only creation:** Nodes are created with DNA only. Image prompts generated on-demand via /DISPLAY.
+2. **Delta inheritance:** Child nodes only store differences, reducing redundancy.
+3. **Parallel system:** V2 runs alongside V1 for safe migration.
+4. **Single LLM call per node:** Each creation is one prompt, one response.

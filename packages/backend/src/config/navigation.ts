@@ -49,9 +49,19 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
     description: 'Create region in current host',
     category: 'creation'
   },
+  NEW_REGION2: { 
+    requiresNodeType: ['host'], 
+    description: 'Create region in current host (V2 simplified DNA)',
+    category: 'creation'
+  },
   NEW_LOCATION: { 
     requiresNodeType: ['region'], 
     description: 'Create location in current region',
+    category: 'creation'
+  },
+  NEW_LOCATION2: { 
+    requiresNodeType: ['region'], 
+    description: 'Create location in current region (V2 simplified DNA)',
     category: 'creation'
   },
   
