@@ -16,6 +16,7 @@ import { buildRegionDNAPrompt, parseRegionResponse } from './prompts/regionDNA';
 import { buildLocationDNAPrompt, parseLocationResponse } from './prompts/locationDNA';
 import { storageService } from '../services/storage/storageService';
 import { Host, Region } from './types';
+import { displayHandler, displayPipelineConfigs } from './display';
 
 const router = Router();
 
@@ -40,8 +41,8 @@ function generateId(): string {
 router.get('/events/:operationId', asyncHandler(async (req: Request, res: Response) => {
   const { operationId } = req.params;
   
-  // Get stored pipeline config
-  const config = pipelineConfigs.get(operationId);
+  // Get stored pipeline config - check both local and display configs
+  const config = pipelineConfigs.get(operationId) || displayPipelineConfigs.get(operationId);
   
   // Set up SSE connection
   sseService.addConnection(operationId, res, config);
@@ -562,5 +563,15 @@ router.post('/new-location', asyncHandler(async (req: Request, res: Response) =>
     }
   })();
 }));
+
+// ============================================
+// DISPLAY Command
+// ============================================
+
+/**
+ * POST /api/v2/display
+ * Generate image for a V2 node using cascaded DNA
+ */
+router.post('/display', displayHandler);
 
 export { router as worldV2Router };

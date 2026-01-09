@@ -25,7 +25,7 @@ interface V2CommandResult {
  * Check if command is a V2 command
  */
 export function isV2Command(command: string): boolean {
-  return ['NEW_HOST', 'NEW_REGION2', 'NEW_LOCATION2'].includes(command);
+  return ['NEW_HOST', 'NEW_REGION2', 'NEW_LOCATION2', 'DISPLAY'].includes(command);
 }
 
 /**
@@ -46,6 +46,8 @@ export async function handleV2Command(
       return handleNewRegionCommand(parsedCommand, callbacks, activeEntityId, activeEntityType);
     case 'NEW_LOCATION2':
       return handleNewLocationCommand(parsedCommand, callbacks, activeEntityId, activeEntityType);
+    case 'DISPLAY':
+      return handleDisplayCommand(parsedCommand, callbacks, activeEntityId, activeEntityType);
     default:
       return { success: false, error: `Unknown V2 command: ${command}` };
   }
@@ -354,5 +356,114 @@ async function handleNewLocationCommand(
     setIsMoving(false);
     setMovementInput('');
     return { success: false, error: 'Failed to create location' };
+  }
+}
+
+/**
+ * Handle DISPLAY command
+ * Generate image for current V2 node using cascaded DNA
+ * Supports --populate flag for scene population
+ */
+async function handleDisplayCommand(
+  parsedCommand: ParsedCommand,
+  callbacks: V2CommandCallbacks,
+  activeEntityId?: string | null,
+  activeEntityType?: string | null
+): Promise<V2CommandResult> {
+  const { flags } = parsedCommand;
+  const { setIsMoving, setErrorMessage, setMovementInput } = callbacks;
+  
+  // Validate that we're on a V2 node
+  if (!activeEntityId) {
+    setErrorMessage('No node selected. Select a host, region, or location first.');
+    setTimeout(() => setErrorMessage(null), 5000);
+    return { success: false, error: 'No node selected' };
+  }
+  
+  if (!['host', 'region', 'location'].includes(activeEntityType || '')) {
+    setErrorMessage('DISPLAY can only be used on host, region, or location nodes');
+    setTimeout(() => setErrorMessage(null), 5000);
+    return { success: false, error: 'Invalid node type' };
+  }
+  
+  // Check for --populate flag in passthroughFlags
+  const populate = flags?.passthroughFlags?.includes('--populate') || false;
+  
+  setIsMoving(true);
+  
+  try {
+    const response = await fetch('/api/v2/display', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+        nodeId: activeEntityId,
+        populate
+      })
+    });
+    
+    const result = await response.json();
+    
+    if (!response.ok) {
+      setErrorMessage(result.error || 'Failed to generate image');
+      setTimeout(() => setErrorMessage(null), 5000);
+      setIsMoving(false);
+      setMovementInput('');
+      return { success: false, error: result.error };
+    }
+    
+    const { data } = result;
+    
+    // If there's an events URL, we have a pipeline to monitor
+    if (data.eventsUrl && data.operationId) {
+      const registerExternalSpawn = useStore.getState().registerExternalSpawn;
+      
+      registerExternalSpawn(
+        data.operationId,
+        data.eventsUrl,
+        `/DISPLAY${populate ? ' --populate' : ''}`,
+        'location',
+        async (completedData: any) => {
+          console.log('[V2] DISPLAY completion received:', completedData);
+          
+          if (completedData.imageUrl) {
+            console.log('[V2] Image generated:', completedData.imageUrl);
+            
+            // Reload locations store from backend to get the updated node
+            console.log('[V2] Reloading locations from backend...');
+            const loaded = await useLocationsStore.getState().loadFromBackend();
+            console.log('[V2] Locations reload result:', loaded);
+            
+            // Force refresh by clearing and re-setting the active entity
+            // This ensures the LocationPanel re-renders with new data
+            useStore.getState().setActiveEntity('');
+            setTimeout(() => {
+              useStore.getState().setActiveEntity(activeEntityId!);
+              console.log('[V2] Entity refreshed:', activeEntityId);
+            }, 50);
+          }
+          setIsMoving(false);
+        },
+        (error: any) => {
+          console.error('[V2] DISPLAY error:', error);
+          setErrorMessage(error.message || 'Failed to generate image');
+          setTimeout(() => setErrorMessage(null), 5000);
+          setIsMoving(false);
+        }
+      );
+      
+      setMovementInput('');
+      return { success: true };
+    }
+    
+    setMovementInput('');
+    return { success: true };
+    
+  } catch (error) {
+    console.error('[V2] DISPLAY command error:', error);
+    setErrorMessage('Failed to generate image');
+    setTimeout(() => setErrorMessage(null), 5000);
+    setIsMoving(false);
+    setMovementInput('');
+    return { success: false, error: 'Failed to generate image' };
   }
 }

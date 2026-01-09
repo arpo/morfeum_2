@@ -72,6 +72,11 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
     description: 'Generate image for current node',
     category: 'media'
   },
+  DISPLAY: { 
+    requiresNodeType: ['host', 'region', 'location'], 
+    description: 'Generate image for V2 node (supports --populate)',
+    category: 'media'
+  },
   EDIT_IMAGE: { 
     requiresNodeType: ['host', 'region', 'location', 'niche'], 
     blockedOnPassThrough: true,
