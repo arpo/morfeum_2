@@ -20,9 +20,13 @@
 - NO promptStructure (deferred to /DISPLAY)
 - ~2s generation time
 
-### Phase 4: /DISPLAY Command 🚧 PENDING
-- Will generate promptStructure + image
-- Works on any node type
+### Phase 4: /DISPLAY Command ✅ COMPLETE
+- **Usage:** `/DISPLAY` or `/DISPLAY --populate` (on any V2 node)
+- LLM generates structured prompt layers (background, midground, foreground, lighting, atmosphere)
+- Camera perspective guidance prevents wrong-angle layers
+- DNA cascades from host→region→location
+- Stores promptLayers in media.json for regeneration
+- Uses PipelineHelper for timing/progress tracking
 
 ### Phase 5: Navigation Commands 🚧 PENDING
 ### Phase 6: Remove Old System 🚧 PENDING
@@ -38,6 +42,11 @@
 - `packages/backend/src/worldV2/prompts/regionDNA.ts`
 - `packages/backend/src/worldV2/prompts/locationDNA.ts`
 - `packages/backend/src/worldV2/prompts/index.ts`
+- `packages/backend/src/worldV2/display/displayHandler.ts`
+- `packages/backend/src/worldV2/display/imagePromptGenerator.ts`
+- `packages/backend/src/worldV2/display/promptBuilder.ts`
+- `packages/backend/src/worldV2/display/cameraSettings.ts`
+- `packages/backend/src/worldV2/display/index.ts`
 - `packages/backend/src/worldV2/index.ts`
 
 **Frontend:**
@@ -46,31 +55,9 @@
 
 **Modified:**
 - `packages/backend/src/routes/index.ts` - Mount V2 at `/api/v2`
-- `packages/backend/src/config/navigation.ts` - NEW_HOST, NEW_REGION2, NEW_LOCATION2 commands
+- `packages/backend/src/config/navigation.ts` - NEW_HOST, NEW_REGION2, NEW_LOCATION2, DISPLAY commands
 - `packages/backend/src/engine/pipelines/shared/pipelineConfig.ts` - V2 pipeline configs
 - `packages/frontend/src/features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - V2 routing
-
----
-
-## 2026-01-05 - Bug Fixes
-
-- [x] **SeedVR Image Upscale Database Update Fix**
-  - Fixed `data.images[0].url` vs `data.image.url` issue
-
-## 2026-01-03 - Multi-View System
-
-- [x] **SeedVR Image Upscale Button**
-- [x] **Circular Navigation for Multi-View**
-- [x] **View Counter in Entity Explorer**
-
-## 2026-01-02 - Image Edit Feature
-
-- [x] **/EDIT_IMAGE Slash Command** - FAL Flux 2 Turbo Edit
-
-## 2026-01-01 - Caching
-
-- [x] **Gemini 2.5 Flash-Lite Caching** - 90% cost + 70% performance
-- [x] **Navigation Pipeline Caching** - 14% faster GOTO
 
 ---
 
@@ -79,7 +66,8 @@
 ### V2 World System
 - `/NEW_HOST` - Create world with DNA
 - `/NEW_REGION2` - Create region under host (delta DNA)
-- `/NEW_LOCATION2` - Create location under region (delta DNA, no promptStructure)
+- `/NEW_LOCATION2` - Create location under region (delta DNA)
+- `/DISPLAY` - Generate image for any V2 node via LLM prompt layers
 
 ### Gemini Caching
 | Cache Bundle | Tokens | Status |
@@ -108,8 +96,7 @@
 ## What's Left 🚧
 
 ### V2 System
-- [ ] /DISPLAY command (promptStructure + image)
-- [ ] Navigation for V2 nodes
+- [ ] Navigation for V2 nodes (GO_INSIDE, GOTO)
 - [ ] Remove old system
 
 ### Other

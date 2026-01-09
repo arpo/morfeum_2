@@ -6,10 +6,13 @@
 
 export { displayHandler, displayPipelineConfigs } from './displayHandler';
 export { 
-  buildHostImagePrompt, 
-  buildRegionImagePrompt, 
-  buildLocationImagePrompt,
-  BuildPromptOptions 
+  generateImagePromptLayers,
+  buildPromptFromLayers,
+  ImagePromptLayers 
+} from './imagePromptGenerator';
+export { 
+  cascadeDNA,
+  CascadedDNAChain
 } from './promptBuilder';
 export { 
   getV2CameraConfig, 

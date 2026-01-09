@@ -10,6 +10,27 @@ import { getV2CameraConfig, formatCameraPrompt, V2NodeType } from './cameraSetti
 import { applyMorfeumStyle } from '../../engine/generation/shared/applyMorfeumStyle';
 import type { CreatureMode } from '../../engine/generation/shared/imagePromptTypes';
 
+/**
+ * Structured prompt layers for image composition
+ */
+export interface PromptLayers {
+  name: string;         // Node name
+  description: string;  // Node description
+  background: string;   // Far elements from LAYERS section
+  midground: string;    // Middle elements from LAYERS section
+  foreground: string;   // Close elements from LAYERS section
+  lighting: string;     // From DNA colorAndLight
+  atmosphere: string;   // From DNA atmosphere
+}
+
+/**
+ * Result from prompt builder with both string and structured data
+ */
+export interface PromptResult {
+  prompt: string;       // Final concatenated prompt for image generation
+  layers: PromptLayers; // Structured layers for storage/editing
+}
+
 interface CascadedDNAChain {
   host?: DNA;
   region?: DNA;
@@ -112,9 +133,21 @@ export interface BuildPromptOptions {
 export function buildHostImagePrompt(
   host: Host,
   options: BuildPromptOptions = {}
-): string {
+): PromptResult {
   const cameraConfig = getV2CameraConfig('host');
   const dna = cascadeDNA({ host: host.dna });
+
+  // Build structured layers matching composition instructions
+  // HOST LAYERS: Far → horizon, sky dome, haze | Mid → landmarks, terrain | Close → terrain texture, roads
+  const layers: PromptLayers = {
+    name: host.name,
+    description: host.description || 'World overview.',
+    background: 'Horizon, sky dome, atmospheric haze',
+    midground: 'Landmarks, terrain, district boundaries, waterways',
+    foreground: 'Terrain texture, road networks, building clusters (still distant)',
+    lighting: dna.colorAndLight.join(', ') || 'Natural environmental lighting',
+    atmosphere: dna.atmosphere.join(', ') || 'Epic scale, world-building tone'
+  };
 
   const basePrompt = `${host.name}. ${host.description || 'World overview.'}
 
@@ -126,9 +159,11 @@ ${formatCameraPrompt(cameraConfig)}
 
 ${formatBannedPrompt(dna.banned)}`;
 
-  return applyMorfeumStyle(basePrompt.trim(), {
+  const prompt = applyMorfeumStyle(basePrompt.trim(), {
     creatureMode: options.creatureMode ?? 'none'
   });
+
+  return { prompt, layers };
 }
 
 /**
@@ -138,9 +173,21 @@ export function buildRegionImagePrompt(
   host: Host,
   region: Region,
   options: BuildPromptOptions = {}
-): string {
+): PromptResult {
   const cameraConfig = getV2CameraConfig('region');
   const dna = cascadeDNA({ host: host.dna, region: region.dna });
+
+  // Build structured layers matching composition instructions
+  // REGION LAYERS: Foreground → nearby rooftops | Midground → streets, buildings | Background → distant skyline
+  const layers: PromptLayers = {
+    name: region.name,
+    description: region.description || 'District overview.',
+    background: `Neighboring districts, distant skyline of ${host.name}`,
+    midground: 'Streets, buildings, local landmarks',
+    foreground: 'Nearby rooftops, architectural details',
+    lighting: dna.colorAndLight.join(', ') || 'District ambient lighting',
+    atmosphere: dna.atmosphere.join(', ') || 'Neighborhood character and mood'
+  };
 
   const basePrompt = `${region.name} district of ${host.name}. ${region.description || 'Region overview.'}
 
@@ -152,9 +199,11 @@ ${formatCameraPrompt(cameraConfig)}
 
 ${formatBannedPrompt(dna.banned)}`;
 
-  return applyMorfeumStyle(basePrompt.trim(), {
+  const prompt = applyMorfeumStyle(basePrompt.trim(), {
     creatureMode: options.creatureMode ?? 'none'
   });
+
+  return { prompt, layers };
 }
 
 /**
@@ -165,7 +214,7 @@ export function buildLocationImagePrompt(
   region: Region,
   location: WorldNode,
   options: BuildPromptOptions = {}
-): string {
+): PromptResult {
   const spaceType = location.spaceType || 'exterior';
   const cameraConfig = getV2CameraConfig('location', spaceType);
   const dna = cascadeDNA({ 
@@ -176,6 +225,29 @@ export function buildLocationImagePrompt(
 
   const spaceLabel = spaceType === 'interior' ? 'Interior of' : 'Exterior view of';
   
+  // Build structured layers matching composition instructions
+  // EXTERIOR LAYERS: Foreground → street surface, curb | Midground → building facade | Background → sky, neighbors
+  // INTERIOR LAYERS: Back → walls, windows | Mid → room features | Close → table surfaces, objects
+  const layers: PromptLayers = spaceType === 'interior' 
+    ? {
+        name: location.name,
+        description: location.description || '',
+        background: 'Back walls, windows, distant interior features',
+        midground: 'Main room features, furniture, focal points',
+        foreground: 'Table surfaces, objects, textures near viewer',
+        lighting: dna.colorAndLight.join(', ') || 'Interior lighting and ambiance',
+        atmosphere: dna.atmosphere.join(', ') || 'Interior mood and character'
+      }
+    : {
+        name: location.name,
+        description: location.description || '',
+        background: 'Sky, neighboring buildings',
+        midground: 'Building facade (main subject, off-center)',
+        foreground: 'Street surface, curb, 1 environmental element',
+        lighting: dna.colorAndLight.join(', ') || 'Street-level natural lighting',
+        atmosphere: dna.atmosphere.join(', ') || 'Location character and street mood'
+      };
+
   const basePrompt = `${spaceLabel} ${location.name} in ${region.name}, ${host.name}. ${location.description || ''}
 
 ${formatDNAPrompt(dna)}
@@ -186,9 +258,11 @@ ${formatCameraPrompt(cameraConfig)}
 
 ${formatBannedPrompt(dna.banned)}`;
 
-  return applyMorfeumStyle(basePrompt.trim(), {
+  const prompt = applyMorfeumStyle(basePrompt.trim(), {
     creatureMode: options.creatureMode ?? 'none'
   });
+
+  return { prompt, layers };
 }
 
 // Export for use in displayHandler

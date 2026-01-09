@@ -120,9 +120,10 @@ export const PIPELINE_STEPS = {
     { id: 'dna_generation', name: 'Creating Location DNA', duration: 2000 }
   ],
   
-  /** V2: Display command (image generation for existing node) */
+  /** V2: Display command (LLM prompt generation + image generation) */
   v2Display: [
-    { id: 'image_generation', name: 'Generating Image', duration: 2000 }
+    { id: 'prompt_generation', name: 'Creating Image Prompt', duration: 2000 },
+    { id: 'image_generation', name: 'Generating Image', duration: 2500 }
   ]
 } as const;
 

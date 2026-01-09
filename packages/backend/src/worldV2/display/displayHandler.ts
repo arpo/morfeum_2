@@ -10,21 +10,22 @@ import { HTTP_STATUS } from '../../config';
 import { storageService } from '../../services/storage/storageService';
 import { generateImage } from '../../services/mzoo';
 import mediaService from '../../services/media/mediaService';
-import { sseService } from '../../services/SSEService';
+import { PipelineHelper } from '../../engine/pipelines/shared/pipelineHelpers';
 import { getStepsForPipeline } from '../../engine/pipelines/shared/pipelineConfig';
 import { 
-  buildHostImagePrompt, 
-  buildRegionImagePrompt, 
-  buildLocationImagePrompt,
-  BuildPromptOptions
-} from './promptBuilder';
-import type { Host, Region, WorldNode } from '../types';
-import type { CreatureMode } from '../../engine/generation/shared/imagePromptTypes';
+  generateImagePromptLayers,
+  buildPromptFromLayers,
+  ImagePromptLayers
+} from './imagePromptGenerator';
+import { getV2CameraConfig } from './cameraSettings';
+import { cascadeDNA } from './promptBuilder';
+import { applyMorfeumStyle } from '../../engine/generation/shared/applyMorfeumStyle';
+import type { Host, Region, WorldNode, DNA } from '../types';
 
-// Track pipeline configurations for SSE initialization (same pattern as routes.ts)
+// Track pipeline configurations for SSE initialization
 const pipelineConfigs = new Map<string, { pipelineType: string; steps: any[] }>();
 
-// Export for use in routes.ts if needed
+// Export for use in routes.ts
 export { pipelineConfigs as displayPipelineConfigs };
 
 interface DisplayRequest {
@@ -114,7 +115,7 @@ export async function displayHandler(req: Request, res: Response): Promise<void>
   const operationId = `v2-display-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   const eventsUrl = `/api/v2/events/${operationId}`;
 
-  // Use pipeline config
+  // Store pipeline configuration for SSE initialization BEFORE returning response
   const steps = getStepsForPipeline('v2Display');
   pipelineConfigs.set(operationId, {
     pipelineType: 'v2Display',
@@ -137,14 +138,12 @@ export async function displayHandler(req: Request, res: Response): Promise<void>
 
   // Run pipeline asynchronously
   (async () => {
-    const startTime = Date.now();
+    const pipeline = new PipelineHelper(operationId, 'V2 DISPLAY', 'v2Display');
+    pipeline.started('Loading node data...');
     
     try {
-      // Step 1: Load node and build prompt
-      sseService.sendEvent(operationId, 'progress', {
-        stage: 'prompt_generation',
-        message: 'Building image prompt...'
-      });
+      // Step 1: Load node and generate prompt
+      pipeline.startStage('prompt_generation', 'Creating image prompt...');
 
       const worldsData = await storageService.loadWorlds();
       if (!worldsData) {
@@ -158,35 +157,41 @@ export async function displayHandler(req: Request, res: Response): Promise<void>
 
       const { node, nodeType, host, region } = found;
       
-      // Build prompt options
-      const promptOptions: BuildPromptOptions = {
-        creatureMode: populate ? 'populate' : 'none'
-      };
-
-      // Build prompt based on node type
-      let imagePrompt: string;
+      // Cascade DNA from parent nodes
+      const dnaChain: { host?: DNA; region?: DNA; location?: DNA } = {};
+      if (host) dnaChain.host = host.dna;
+      if (region) dnaChain.region = region.dna;
+      if (nodeType === 'node') dnaChain.location = (node as WorldNode).dna;
+      const cascadedDNA = cascadeDNA(dnaChain);
       
-      switch (nodeType) {
-        case 'host':
-          imagePrompt = buildHostImagePrompt(node as Host, promptOptions);
-          break;
-        case 'region':
-          if (!host) throw new Error('Host not found for region');
-          imagePrompt = buildRegionImagePrompt(host, node as Region, promptOptions);
-          break;
-        case 'node':
-          if (!host || !region) throw new Error('Host/Region not found for node');
-          imagePrompt = buildLocationImagePrompt(host, region, node as WorldNode, promptOptions);
-          break;
-        default:
-          throw new Error(`Unknown node type: ${nodeType}`);
-      }
+      // Get camera config for this node type
+      const spaceType = (node as WorldNode).spaceType || 'exterior';
+      const cameraConfig = getV2CameraConfig(
+        nodeType === 'node' ? 'location' : nodeType,
+        spaceType
+      );
+      
+      // Generate image prompt layers via LLM
+      const promptLayers = await generateImagePromptLayers(apiKey, {
+        nodeType: nodeType === 'node' ? 'location' : nodeType,
+        name: (node as any).name,
+        description: (node as any).description || '',
+        spaceType,
+        dna: cascadedDNA,
+        hostName: host?.name,
+        regionName: region?.name
+      });
+      
+      // Build final prompt from layers
+      const basePrompt = buildPromptFromLayers(promptLayers, cascadedDNA, cameraConfig);
+      const imagePrompt = applyMorfeumStyle(basePrompt, {
+        creatureMode: populate ? 'populate' : 'none'
+      });
+
+      pipeline.completeStage('prompt_generation', 'Image prompt created');
 
       // Step 2: Generate image
-      sseService.sendEvent(operationId, 'progress', {
-        stage: 'image_generation',
-        message: 'Generating image...'
-      });
+      pipeline.startStage('image_generation', 'Generating image...');
 
       const result = await generateImage(
         apiKey,
@@ -202,12 +207,26 @@ export async function displayHandler(req: Request, res: Response): Promise<void>
 
       const imageUrl = result.data.images[0].url;
 
-      // Create media entry
+      pipeline.completeStage('image_generation', 'Image generated');
+
+      // Create media entry with structured prompt data and layers
       const mediaEntry = mediaService.createMedia({
         type: 'image',
         url: imageUrl,
         metadata: {
           prompt: imagePrompt,
+          promptLayers,
+          promptData: {
+            nodeType,
+            nodeId,
+            nodeName: (node as any).name || null,
+            hostId: host?.id || null,
+            hostName: host?.name || null,
+            regionId: region?.id || null,
+            regionName: region?.name || null,
+            populate: populate || false,
+            dna: (node as any).dna || null
+          },
           model: 'flux',
           width: 1920,
           height: 1080,
@@ -216,35 +235,22 @@ export async function displayHandler(req: Request, res: Response): Promise<void>
         entityRefs: [nodeId]
       });
 
-      // Update node with image URL
-      (node as any).imageUrl = imageUrl;
+      // Update node with primaryMedia reference (imageUrl stored in media.json, not worlds.json)
       (node as any).primaryMedia = mediaEntry.id;
 
       // Save updated worlds data
       await storageService.saveWorlds(worldsData);
-      
-      const totalTime = Date.now() - startTime;
 
-      // Send completion event
-      sseService.sendEvent(operationId, 'completed', {
-        message: 'Image generated successfully',
+      // Send completion with all timing info
+      pipeline.completed('Image generated successfully', {
         node,
         nodeType,
         imageUrl,
         mediaId: mediaEntry.id,
-        prompt: imagePrompt,
-        timings: {
-          total: totalTime
-        }
+        prompt: imagePrompt
       });
-
-      setTimeout(() => sseService.closeConnection(operationId), 1000);
     } catch (error) {
-      console.error(`[V2 DISPLAY ERROR]`, error);
-      sseService.sendEvent(operationId, 'error', {
-        message: error instanceof Error ? error.message : 'Failed to generate image'
-      });
-      sseService.closeConnection(operationId);
+      pipeline.error(error instanceof Error ? error : new Error(String(error)));
     } finally {
       pipelineConfigs.delete(operationId);
     }

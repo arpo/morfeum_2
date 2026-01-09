@@ -7,6 +7,7 @@
 
 import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locations';
+import { clearEntityMediaCache } from '@/services/mediaService';
 import type { ParsedCommand } from '@/features/spawn-input/SpawnInputBar/commandParser';
 
 interface V2CommandCallbacks {
@@ -428,18 +429,15 @@ async function handleDisplayCommand(
           if (completedData.imageUrl) {
             console.log('[V2] Image generated:', completedData.imageUrl);
             
-            // Reload locations store from backend to get the updated node
-            console.log('[V2] Reloading locations from backend...');
-            const loaded = await useLocationsStore.getState().loadFromBackend();
-            console.log('[V2] Locations reload result:', loaded);
+            // Update entity's image directly in the store
+            useStore.getState().updateEntityImage(activeEntityId!, completedData.imageUrl);
+            console.log('[V2] Entity image updated in store:', activeEntityId);
             
-            // Force refresh by clearing and re-setting the active entity
-            // This ensures the LocationPanel re-renders with new data
-            useStore.getState().setActiveEntity('');
-            setTimeout(() => {
-              useStore.getState().setActiveEntity(activeEntityId!);
-              console.log('[V2] Entity refreshed:', activeEntityId);
-            }, 50);
+            // Clear media cache for this entity
+            clearEntityMediaCache(activeEntityId!);
+            
+            // Reload locations store from backend to get the updated node data
+            await useLocationsStore.getState().loadFromBackend();
           }
           setIsMoving(false);
         },
