@@ -1,491 +1,107 @@
 {
   "nodes": {
-    "v2-1767963637278-3pgkv6v5y": {
-      "id": "v2-1767963637278-3pgkv6v5y",
-      "type": "host",
-      "name": "London",
-      "slug": "london",
-      "description": "A sprawling metropolis steeped in history and tradition, where fog-kissed cobblestone streets meet towering modern architecture, and the past whispers secrets in every alleyway.",
-      "genre": "Urban Metropole",
-      "dna": {
-        "essence": [
-          "Victorian Gothic grandeur",
-          "Industrial Revolution grit"
-        ],
-        "formsAndMaterials": [
-          "Stone and brick monoliths",
-          "Ironwork and glass"
-        ],
-        "colorAndLight": [
-          "Muted greys and browns with occasional jewel tones",
-          "Gaslight glow and overcast skies"
-        ],
-        "atmosphere": [
-          "Melancholic and mysterious",
-          "Busy and labyrinthine"
-        ],
-        "banned": [
-          "Excessive cyberpunk neon",
-          "Fantasy magic props"
-        ]
-      },
-      "spaceType": "exterior",
-      "primaryMedia": "media-1767975273134-zsoj0wmdr"
-    },
-    "v2-1767963649496-6r4tzt3t2": {
-      "id": "v2-1767963649496-6r4tzt3t2",
-      "type": "region",
-      "name": "Camden",
-      "slug": "camden",
-      "description": "A vibrant and eclectic district known for its alternative culture and bustling markets.",
-      "dna": {
-        "essence": [
-          "Bohemian spirit",
-          "Punk rock rebellion"
-        ],
-        "formsAndMaterials": [
-          "Graffiti-adorned walls",
-          "Street market stalls"
-        ],
-        "colorAndLight": [
-          "Bold and clashing colors",
-          "Flickering neon signs"
-        ],
-        "atmosphere": [
-          "Energetic and chaotic",
-          "Counter-cultural and rebellious"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1767975547339-27qz9j5wp"
-    },
-    "v2-1767963850564-oehufolw1": {
-      "id": "v2-1767963850564-oehufolw1",
-      "type": "location",
-      "name": "The Psychedelic Hanger",
-      "slug": "the-psychedelic-hanger",
-      "spaceType": "exterior",
-      "description": "An avant-garde boutique specializing in trippy club wear.",
-      "dna": {
-        "essence": [
-          "Surreal fashion"
-        ],
-        "formsAndMaterials": [
-          "Kaleidoscopic window displays",
-          "Iridescent facade"
-        ],
-        "colorAndLight": [
-          "Shifting holographic projections",
-          "Vibrant, unnatural hues"
-        ],
-        "atmosphere": [
-          "Hypnotic and otherworldly"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1767975293580-r8rd3ctbp"
-    },
-    "v2-1767975451538-7vsxdibhi": {
-      "id": "v2-1767975451538-7vsxdibhi",
-      "type": "region",
-      "name": "City of London",
-      "slug": "city-of-london",
-      "description": "The ancient, financial heart of London, characterized by its dense concentration of historic financial institutions and a unique, almost village-like atmosphere within the bustling city.",
-      "dna": {
-        "essence": [
-          "Financial hub gravitas",
-          "Historic guild hall echoes"
-        ],
-        "formsAndMaterials": [
-          "Stately stone edifices",
-          "Polished brass accents"
-        ],
-        "colorAndLight": [
-          "Formal greys and deep blues",
-          "Sunlight glinting off glass towers and historic stonework"
-        ],
-        "atmosphere": [
-          "Prestigious and formal",
-          "Efficient and business-oriented"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1767975462402-j6838sbet"
-    },
-    "v2-1767975487040-5ovzt1uvn": {
-      "id": "v2-1767975487040-5ovzt1uvn",
-      "type": "location",
-      "name": "The Gilded Mug",
-      "slug": "the-gilded-mug",
-      "spaceType": "exterior",
-      "description": "A distinguished pub entrance with a polished brass sign.",
-      "dna": {
-        "essence": [
-          "Traditional pub gravitas"
-        ],
-        "formsAndMaterials": [
-          "Dark wood facade",
-          "Polished brass accents"
-        ],
-        "colorAndLight": [
-          "Warm glow from interior windows"
-        ],
-        "atmosphere": [
-          "Inviting and established"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1767975497003-4uwogvgkn"
-    },
-    "v2-1767975593359-nu6z802op": {
-      "id": "v2-1767975593359-nu6z802op",
-      "type": "location",
-      "name": "The Camden Arms",
-      "slug": "the-camden-arms",
-      "spaceType": "exterior",
-      "description": "A gritty pub in Camden, with neon signs and a lively atmosphere.",
-      "dna": {
-        "essence": [
-          "Punk rock energy",
-          "Alternative vibe"
-        ],
-        "formsAndMaterials": [
-          "Graffiti-covered facade",
-          "Flickering neon sign"
-        ],
-        "colorAndLight": [
-          "Bold, clashing colors",
-          "Dim, atmospheric lighting"
-        ],
-        "atmosphere": [
-          "Energetic and loud",
-          "Counter-cultural and welcoming"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1767975605007-ycwgprzlk"
-    },
-    "v2-1767975796894-b9nl19ipn": {
-      "id": "v2-1767975796894-b9nl19ipn",
-      "type": "location",
-      "name": "Elite Fashion Boutique",
-      "slug": "elite-fashion-boutique",
-      "spaceType": "exterior",
-      "description": "A high-end fashion store with a polished facade on a busy city street.",
-      "dna": {
-        "essence": [
-          "Chic display window",
-          "Designer label allure"
-        ],
-        "formsAndMaterials": [
-          "Sleek glass frontage",
-          "Branded signage"
-        ],
-        "colorAndLight": [
-          "Spotlighted mannequins",
-          "Reflective surfaces"
-        ],
-        "atmosphere": [
-          "Exclusive and aspirational"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1767975836220-5t1w7ds2o"
-    },
-    "v2-1767977426441-mqr97uyub": {
-      "id": "v2-1767977426441-mqr97uyub",
-      "type": "region",
-      "name": "Piccadilly Circus",
-      "slug": "piccadilly-circus",
-      "description": "A vibrant West End hub renowned for its dazzling billboards, theaters, and bustling atmosphere.",
-      "dna": {
-        "essence": [
-          "Edwardian exuberance",
-          "Mid-century commercialism"
-        ],
-        "formsAndMaterials": [
-          "Gleaming glass facades",
-          "Polished chrome and neon signage"
-        ],
-        "colorAndLight": [
-          "Electric blues and reds",
-          "Constant, pulsating artificial light"
-        ],
-        "atmosphere": [
-          "Exciting and theatrical",
-          "Visually overwhelming"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1767977436762-wcjektyf4"
-    },
-    "v2-1767977506388-2rxiaytyt": {
-      "id": "v2-1767977506388-2rxiaytyt",
-      "type": "location",
-      "name": "Adult Superstore",
-      "slug": "adult-superstore",
-      "spaceType": "exterior",
-      "description": "An adult store with discreet signage on a bustling street.",
-      "dna": {
-        "essence": [],
-        "formsAndMaterials": [
-          "Opaque window film",
-          "Subtle, tasteful signage"
-        ],
-        "colorAndLight": [
-          "Dimly lit interior visible through frosted glass"
-        ],
-        "atmosphere": [
-          "Discreet and unassuming"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1767977516111-aqvbsh9fz"
-    },
-    "v2-1767977608092-tddsj5qya": {
-      "id": "v2-1767977608092-tddsj5qya",
-      "type": "location",
-      "name": "The Grand Imperial Bar Entrance",
-      "slug": "the-grand-imperial-bar-entrance",
-      "spaceType": "exterior",
-      "description": "The ornate entrance to a distinguished establishment, just off the main thoroughfare.",
-      "dna": {
-        "essence": [
-          "Art Deco elegance"
-        ],
-        "formsAndMaterials": [
-          "Marbled entryway",
-          "Brass fittings",
-          "Large polished wooden doors"
-        ],
-        "colorAndLight": [
-          "Warm interior glow spilling outwards",
-          "Golden hour reflections on brass"
-        ],
-        "atmosphere": [
-          "Sophisticated and inviting"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1767977620153-qxcpxynfx"
-    },
-    "v2-1767979869589-d5uggsehf": {
-      "id": "v2-1767979869589-d5uggsehf",
-      "type": "region",
-      "name": "Soho",
-      "slug": "soho",
-      "description": "A vibrant district known for its eclectic entertainment, diverse culinary scene, and lively, somewhat bohemian atmosphere.",
-      "dna": {
-        "essence": [
-          "Bohemian freedom",
-          "Theatrical flair"
-        ],
-        "formsAndMaterials": [
-          "Ornate theatre facades",
-          "Narrow, winding streets"
-        ],
-        "colorAndLight": [
-          "Warm, inviting glows from shop windows",
-          "Vibrant and diverse signage"
-        ],
-        "atmosphere": [
-          "Energetic and buzzing",
-          "Hedonistic and indulgent"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1767979885709-tkg312k9c"
-    },
-    "v2-1767979908063-3yms8miz3": {
-      "id": "v2-1767979908063-3yms8miz3",
-      "type": "location",
-      "name": "The Spotlight Bar",
-      "slug": "the-spotlight-bar",
-      "spaceType": "exterior",
-      "description": "The exterior of a bustling bar in the heart of Soho.",
-      "dna": {
-        "essence": [
-          "Lively nightlife hub"
-        ],
-        "formsAndMaterials": [
-          "Large, inviting glass frontage",
-          "Marquee sign"
-        ],
-        "colorAndLight": [
-          "Warm interior light spilling onto the street",
-          "Flashing signage"
-        ],
-        "atmosphere": [
-          "Anticipation and excitement",
-          "Sound of music and chatter"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1767979918591-11qtwpfvd"
-    },
-    "v2-1768042440895-cs58f2tvk": {
-      "id": "v2-1768042440895-cs58f2tvk",
+    "v2-1768218920701-tfoyyc2c8": {
+      "id": "v2-1768218920701-tfoyyc2c8",
       "type": "host",
       "name": "Göteborg",
       "slug": "goteborg",
-      "description": "A bustling port city in Sweden, known for its maritime history, canals, and vibrant cultural scene, blending Scandinavian modernism with historic charm.",
-      "genre": "Coastal Metropolis",
+      "description": "A city that blends historical charm with modern vibrancy, known for its maritime heritage and friendly atmosphere.",
+      "genre": "urban",
       "dna": {
         "essence": [
-          "Maritime heritage",
-          "Scandinavian functionality"
+          "maritime history",
+          "industrial past",
+          "contemporary arts scene"
         ],
         "formsAndMaterials": [
-          "Brick and concrete structures",
-          "Glass facades and timber accents"
+          "brickwork",
+          "glass facades",
+          "cobblestone streets"
         ],
         "colorAndLight": [
-          "Cool, muted tones",
-          "Soft, diffused daylight with crisp shadows"
+          "muted blues and greys",
+          "soft, diffused daylight"
         ],
         "atmosphere": [
-          "Pragmatic and convivial",
-          "Open and accessible"
+          "cozy hygge",
+          "urban exploration"
         ],
         "banned": [
-          "Overly ornate historical facades",
-          "Gaudy artificial lighting displays"
+          "sci-fi holograms",
+          "medieval castles"
         ]
       },
       "spaceType": "exterior",
-      "primaryMedia": "media-1768042453738-ok8cgxmor"
+      "primaryMedia": "media-1768218944477-zn8dkxij9"
     },
-    "v2-1768042478895-uptk3d8c6": {
-      "id": "v2-1768042478895-uptk3d8c6",
+    "v2-1768218932778-v5t9q5m9i": {
+      "id": "v2-1768218932778-v5t9q5m9i",
       "type": "region",
-      "name": "Ringön",
-      "slug": "ringon",
-      "description": "An industrial island district in Gothenburg, characterized by its historic warehouses and ongoing transformation into a creative hub.",
+      "name": "Liseberg",
+      "slug": "liseberg",
+      "description": "A vibrant amusement park and cultural hub within Gothenburg, known for its thrilling rides, lush gardens, and festive atmosphere.",
       "dna": {
         "essence": [
-          "Industrial heritage",
-          "Creative revitalization"
+          "amusement park",
+          "festivals",
+          "family entertainment",
+          "Swedish culture"
         ],
         "formsAndMaterials": [
-          "Weathered brick warehouses",
-          "Iron and steel structures"
+          "ornate architecture",
+          "lush gardens",
+          "thrill rides"
         ],
         "colorAndLight": [
-          "Gritty, muted colors",
-          "Harsh industrial lighting with dappled sunlight"
+          "bright, festive lights",
+          "sunny days"
         ],
         "atmosphere": [
-          "Gritty and evolving",
-          "Nostalgic yet forward-looking"
+          "joyful exuberance",
+          "nostalgic charm"
         ],
         "banned": []
       },
-      "primaryMedia": "media-1768042498294-xfhnqqr43"
+      "primaryMedia": "media-1768218970987-vgxij3nww"
     },
-    "v2-1768125973257-nofl1hud5": {
-      "id": "v2-1768125973257-nofl1hud5",
+    "v2-1768219086618-63fit6cfh": {
+      "id": "v2-1768219086618-63fit6cfh",
       "type": "location",
-      "name": "Warehouse Art Studio",
-      "slug": "warehouse-art-studio",
+      "name": "Balder Roller Coaster",
+      "slug": "balder-roller-coaster",
       "spaceType": "exterior",
-      "description": "The exterior of a converted warehouse building serving as an artist's studio.",
+      "description": "An iconic wooden roller coaster at Liseberg amusement park.",
       "dna": {
         "essence": [
-          "Artistic endeavor"
+          "thrill rides"
         ],
         "formsAndMaterials": [
-          "Large loading bay doors",
-          "Industrial metal siding"
+          "wooden structure"
         ],
         "colorAndLight": [
-          "Sunlight reflecting off large windows",
-          "Visible paint splatters on exterior surfaces"
+          "natural wood tones"
         ],
         "atmosphere": [
-          "Creative energy emanating from within"
+          "excitement",
+          "adrenaline rush"
         ],
         "banned": []
       },
-      "primaryMedia": "media-1768125982161-m8t944ko9"
+      "primaryMedia": "media-1768219102055-hvmfx5n2h"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "v2-1767963637278-3pgkv6v5y",
+      "id": "v2-1768218920701-tfoyyc2c8",
       "type": "host",
       "children": [
         {
-          "id": "v2-1767963649496-6r4tzt3t2",
+          "id": "v2-1768218932778-v5t9q5m9i",
           "type": "region",
           "children": [
             {
-              "id": "v2-1767963850564-oehufolw1",
-              "type": "location",
-              "children": []
-            },
-            {
-              "id": "v2-1767975593359-nu6z802op",
-              "type": "location",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "v2-1767975451538-7vsxdibhi",
-          "type": "region",
-          "children": [
-            {
-              "id": "v2-1767975487040-5ovzt1uvn",
-              "type": "location",
-              "children": []
-            },
-            {
-              "id": "v2-1767975796894-b9nl19ipn",
-              "type": "location",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "v2-1767977426441-mqr97uyub",
-          "type": "region",
-          "children": [
-            {
-              "id": "v2-1767977506388-2rxiaytyt",
-              "type": "location",
-              "children": []
-            },
-            {
-              "id": "v2-1767977608092-tddsj5qya",
-              "type": "location",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "v2-1767979869589-d5uggsehf",
-          "type": "region",
-          "children": [
-            {
-              "id": "v2-1767979908063-3yms8miz3",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "v2-1768042440895-cs58f2tvk",
-      "type": "host",
-      "children": [
-        {
-          "id": "v2-1768042478895-uptk3d8c6",
-          "type": "region",
-          "children": [
-            {
-              "id": "v2-1768125973257-nofl1hud5",
+              "id": "v2-1768219086618-63fit6cfh",
               "type": "location",
               "children": []
             }
@@ -495,7 +111,6 @@
     }
   ],
   "pinnedIds": [
-    "v2-1767963637278-3pgkv6v5y",
-    "v2-1768042440895-cs58f2tvk"
+    "v2-1768218920701-tfoyyc2c8"
   ]
 }

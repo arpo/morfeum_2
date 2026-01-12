@@ -12,51 +12,32 @@ import { Host } from '../types';
  * @param hostJSON - The parent host's complete JSON
  */
 export function buildRegionDNAPrompt(concept: string, host: Host): string {
-  const hostJSON = JSON.stringify(host, null, 2);
+  // Only include essential host context, not full JSON dump
+  const hostContext = {
+    name: host.name,
+    genre: host.genre,
+    dna: host.dna
+  };
   
-  return `You must output ONE valid JSON object and NOTHING ELSE.
+  return `Output ONE valid JSON object. No markdown.
 
-You are generating a Morfeum REGION node using:
-1) a REGION CONCEPT (user text)
-2) a CASCADED HOST JSON (already includes the inherited vibe/style constraints)
-
-A region is a sub-area of the host world.
-A region must ONLY add information that is meaningfully DIFFERENT from the host (delta-only).
-Do NOT restate host DNA. If it's not clearly different, leave that region dna array empty.
-
-OUTPUT SHAPE (exact keys, no extras, no missing keys, keep this order):
+REGION in host "${host.name}" (${host.genre}).
+Delta-only: Only add DNA that differs from host. Empty arrays if no difference.
 
 {
   "id": "__AUTO__",
   "type": "region",
-  "name": "<REGION_NAME>",
-  "slug": "<regionSlug>",
-  "description": "<one short sentence>",
-  "dna": {
-    "essence": [],
-    "formsAndMaterials": [],
-    "colorAndLight": [],
-    "atmosphere": [],
-    "banned": []
-  }
+  "name": "...",
+  "slug": "...",
+  "description": "...",
+  "dna": { "essence": [], "formsAndMaterials": [], "colorAndLight": [], "atmosphere": [], "banned": [] }
 }
 
-STRICT RULES:
-- Output JSON only. No markdown. No comments. No trailing commas.
-- Do not add, remove, rename, or reorder keys.
-- "type" must be exactly "region".
-- id MUST be exactly "__AUTO__".
-- regionSlug must be lowercase kebab-case.
+RULES: Exact keys. slug=kebab-case. Preserve proper nouns.
 
-NAME:
-- If input is a proper noun (Camden, City of London), keep it exactly (title-case).
-- Otherwise create a concise title-case name.
+HOST DNA: ${JSON.stringify(hostContext.dna)}
 
-REGION CONCEPT:
-${concept}
-
-CASCADED HOST JSON:
-${hostJSON}`;
+CONCEPT: ${concept}`;
 }
 
 /**

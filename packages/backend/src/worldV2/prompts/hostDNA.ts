@@ -10,57 +10,29 @@
  * @param concept - User's world concept description
  */
 export function buildHostDNAPrompt(concept: string): string {
-  return `You must output ONE valid JSON object and NOTHING ELSE.
-
-Output must match EXACTLY this shape (same keys, no extras, no missing keys, keep this order):
+  return `Output ONE valid JSON object. No markdown, no comments.
 
 {
   "id": "__AUTO__",
   "type": "host",
-  "name": "<HOST_NAME>",
-  "slug": "<slug>",
-  "description": "<short, high-level description of the world>",
-  "genre": "<genre label, e.g. Steampunk, Gothic, Urban Metropole, Carnival, etc.>",
+  "name": "...",
+  "slug": "...",
+  "description": "...",
+  "genre": "...",
   "dna": {
-    "essence": [
-      "<core idea 1>",
-      "<core idea 2>"
-    ],
-    "formsAndMaterials": [
-      "<dominant forms/material families>",
-      "<secondary forms/material families>"
-    ],
-    "colorAndLight": [
-      "<palette tendency>",
-      "<light behavior>"
-    ],
-    "atmosphere": [
-      "<emotional tone>",
-      "<experiential quality>"
-    ],
-    "banned": [
-      "<genre drift ban 1>",
-      "<genre drift ban 2>"
-    ]
+    "essence": ["core idea 1", "core idea 2"],
+    "formsAndMaterials": ["dominant", "secondary"],
+    "colorAndLight": ["palette", "light behavior"],
+    "atmosphere": ["emotional tone", "experiential quality"],
+    "banned": ["genre-drift visual 1", "genre-drift visual 2"]
   }
 }
 
-STRICT RULES:
-- Output JSON only. No markdown. No comments. No trailing commas.
-- Do not add, remove, rename, or reorder keys.
-- "type" must be exactly "host".
-- id MUST be exactly "__AUTO__".
-- slug must be lowercase kebab-case.
+RULES:
+- Exact keys, exact order. slug=kebab-case.
+- banned: Only visual motifs causing genre drift (e.g. "cyberpunk neon", "fantasy magic props"). NOT behaviors, NOT palette constraints.
 
-BANNED (important):
-- Only include consistency-breaking visual motifs/styles (genre drift).
-- Do NOT ban behaviors/conditions (silence, cleanliness, wilderness).
-- Do NOT ban broad palette constraints (monochromatic, muted, dark).
-- Avoid vague bans like "clean lines" or "excessive modernism" for real cities.
-- Use bans like: "fantasy magic props", "cyberpunk neon overload", "retro-futuristic spectacle tech", "single-era theming" (only if relevant).
-
-HOST CONCEPT:
-${concept}`;
+CONCEPT: ${concept}`;
 }
 
 /**

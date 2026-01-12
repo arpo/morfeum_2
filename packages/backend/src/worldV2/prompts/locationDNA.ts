@@ -10,6 +10,8 @@ import { Region, Host } from '../types';
 interface CascadedRegion extends Region {
   /** Host DNA for context */
   hostDna?: Host['dna'];
+  /** Host name for geographic context */
+  hostName?: string;
 }
 
 /**
@@ -18,64 +20,34 @@ interface CascadedRegion extends Region {
  * @param region - The parent region (with host DNA merged)
  */
 export function buildLocationDNAPrompt(concept: string, region: CascadedRegion): string {
-  const regionJSON = JSON.stringify(region, null, 2);
+  // Only include essential context, not full JSON dump
+  const regionContext = {
+    name: region.name,
+    dna: region.dna,
+    hostDna: region.hostDna
+  };
   
-  return `You must output ONE valid JSON object and NOTHING ELSE.
+  return `Output ONE valid JSON object. No markdown.
 
-You are generating a Morfeum LOCATION node using:
-1) a LOCATION CONCEPT (user text)
-2) a CASCADED REGION JSON (already includes the inherited vibe/style constraints)
-
-A location is a concrete traversal start point.
-By default it is EXTERIOR: outside a place that can be entered.
-
-IMPORTANT: The REGION JSON is already the context.
-Do NOT copy region DNA into location DNA.
-Location DNA must be DELTA-ONLY (what is new/specific at this location).
-
-OUTPUT SHAPE (exact keys, no extras, no missing keys, keep this order):
+LOCATION in region "${region.name}", host "${region.hostName || 'unknown'}".
+Delta-only: Only add DNA that differs from region. Empty arrays if no difference.
 
 {
   "id": "__AUTO__",
   "type": "location",
-  "name": "<LOCATION_NAME>",
-  "slug": "<locationSlug>",
+  "name": "...",
+  "slug": "...",
   "spaceType": "exterior",
-  "description": "<one short sentence>",
-  "dna": {
-    "essence": [],
-    "formsAndMaterials": [],
-    "colorAndLight": [],
-    "atmosphere": [],
-    "banned": []
-  }
+  "description": "...",
+  "dna": { "essence": [], "formsAndMaterials": [], "colorAndLight": [], "atmosphere": [], "banned": [] }
 }
 
-STRICT RULES:
-- Output JSON only. No markdown. No comments. No trailing commas.
-- Do not add, remove, rename, or reorder keys.
-- "type" must be exactly "location".
-- id MUST be exactly "__AUTO__".
-- locationSlug must be lowercase kebab-case.
-- spaceType must be "exterior" by default. Use "interior" ONLY if the concept clearly implies interior.
+RULES: Exact keys. slug=kebab-case. Preserve proper nouns.
+spaceType: "exterior" default. Use "interior" only if concept clearly implies inside.
 
-SPACE TYPE RULE:
-- If spaceType = "exterior": the location represents an exterior view of a place that can be entered.
-- If spaceType = "interior": the location represents an interior space.
+REGION DNA: ${JSON.stringify(regionContext.dna)}
 
-DELTA RULE:
-- dna.* arrays must only include what is new/specific at this location vs the cascaded region.
-- If not clearly new, leave that dna array empty.
-
-NAME RULES:
-- If concept is a proper noun (e.g., "Camden", "The Crown pub"), preserve it exactly.
-- Otherwise, invent a fitting name that captures the concept's identity.
-
-LOCATION CONCEPT:
-${concept}
-
-CASCADED REGION JSON:
-${regionJSON}`;
+CONCEPT: ${concept}`;
 }
 
 /**

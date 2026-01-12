@@ -381,10 +381,11 @@ function findRegionWithHost(worldsData: any, regionId: string): { region: Region
 /**
  * Merge host DNA into region for cascaded context
  */
-function cascadeRegionDNA(region: Region, host: Host): Region & { hostDna: Host['dna'] } {
+function cascadeRegionDNA(region: Region, host: Host): Region & { hostDna: Host['dna']; hostName: string } {
   return {
     ...region,
     hostDna: host.dna,
+    hostName: host.name,
     dna: {
       // For each DNA field, use region's if non-empty, else inherit from host
       essence: region.dna.essence.length > 0 ? region.dna.essence : host.dna.essence,

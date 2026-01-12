@@ -41,40 +41,24 @@ interface ImagePromptInput {
 function buildImagePromptSystemMessage(input: ImagePromptInput): string {
   const { nodeType, name, description, spaceType, dna, hostName, regionName, perspectiveGuidance } = input;
   
-  const contextLine = nodeType === 'host' 
-    ? `World: ${name}`
+  const context = nodeType === 'host' 
+    ? name
     : nodeType === 'region'
-    ? `Region: ${name} in ${hostName}`
-    : `Location: ${name} in ${regionName}, ${hostName}`;
+    ? `${name} in ${hostName}`
+    : `${name} in ${regionName}, ${hostName}`;
 
-  return `You are an expert visual prompt engineer for AI image generation.
-
-Generate a structured JSON image prompt for this ${nodeType}:
-
-${contextLine}
-Description: ${description}
-Space Type: ${spaceType || 'exterior'}
+  return `Generate JSON image prompt for ${nodeType}: ${context}
+${description} | ${spaceType || 'exterior'}
 
 ${perspectiveGuidance}
 
-Visual DNA:
-- Visual Identity: ${dna.essence.join(', ') || 'Not specified'}
-- Forms & Materials: ${dna.formsAndMaterials.join(', ') || 'Not specified'}
-- Colors & Lighting: ${dna.colorAndLight.join(', ') || 'Not specified'}
-- Atmosphere: ${dna.atmosphere.join(', ') || 'Not specified'}
-- Banned Elements: ${dna.banned.join(', ') || 'None'}
+DNA: essence=[${dna.essence.join(',')}] forms=[${dna.formsAndMaterials.join(',')}] color=[${dna.colorAndLight.join(',')}] mood=[${dna.atmosphere.join(',')}] banned=[${dna.banned.join(',')}]
 
-Return ONLY valid JSON with these fields (no markdown, no explanation):
-{
-  "background": "Far layer appropriate for the camera perspective",
-  "midground": "Middle layer appropriate for the camera perspective",
-  "foreground": "Close layer appropriate for the camera perspective (for aerial: rooftops/terrain, NOT street-level)",
-  "lighting": "Light quality, direction, color temperature, shadows specific to this scene",
-  "atmosphere": "Mood, tone, atmospheric effects, emotional quality"
-}
+Return ONLY JSON:
+{"background":"far layer","midground":"middle layer","foreground":"close layer","lighting":"light details","atmosphere":"mood/effects"}
 
-Make each field specific to "${name}" - not generic templates. Use the DNA to inform the visual details.
-IMPORTANT: Match all layer descriptions to the camera perspective specified above.`;
+Be specific to "${name}". Match layers to camera perspective.
+REAL PLACES: If this is a real existing location, describe it accurately to match real-world appearance.`;
 }
 
 /**
