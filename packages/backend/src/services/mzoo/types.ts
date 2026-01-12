@@ -47,15 +47,10 @@ export interface TextGenerationResponse {
 }
 
 export interface VisionAnalysisResponse {
-  analysis: string;
-  model: string;
-  candidates?: Array<{ content: string }>;
-  metadata?: {
-    temperature?: number;
-    topP?: number;
-    candidateCount?: number;
-    maxOutputTokens?: number;
-  };
+  text: string;
+  model?: string;
+  candidates?: Array<{ content: { parts: Array<{ text: string }>; role: string }; finishReason: string; index: number }>;
+  usage?: Record<string, unknown>;
 }
 
 export interface ImageGenerationResponse {

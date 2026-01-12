@@ -48,7 +48,7 @@ export async function analyzeImageCached(
   }
   
   return {
-    text: result.data.analysis,  // Map 'analysis' to 'text' for backward compatibility
+    text: result.data.text,  // mzoo API returns 'text' field
     usage: {
       promptTokens: 0,
       cachedTokens: 0,  // Caching is now internal to mzoo

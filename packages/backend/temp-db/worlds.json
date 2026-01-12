@@ -671,6 +671,155 @@
         "banned": []
       },
       "primaryMedia": "media-1768251268697-ufn5x4hd6"
+    },
+    "v2-1768252681422-gjpgschiq": {
+      "id": "v2-1768252681422-gjpgschiq",
+      "type": "host",
+      "name": "Marrakech",
+      "slug": "marrakech",
+      "description": "A vibrant imperial city in Morocco, known for its bustling souks, historic medina, and stunning architecture, with a warm, dry climate.",
+      "genre": "Exotic Urban",
+      "weather": "clear and star-filled",
+      "timeOfDay": "night",
+      "dna": {
+        "essence": [
+          "Moroccan culture",
+          "exotic desert city",
+          "ancient artistry"
+        ],
+        "formsAndMaterials": [
+          "riad architecture",
+          "mosaic tiles",
+          "arches",
+          "terracotta"
+        ],
+        "colorAndLight": [
+          "rich jewel tones",
+          "warm lantern light",
+          "deep blue night sky"
+        ],
+        "atmosphere": [
+          "exotic",
+          "tranquil",
+          "inviting",
+          "intimate",
+          "magical"
+        ],
+        "banned": [
+          "industrial elements",
+          "modern minimalism"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1768252681422-iuw5xtq6h": {
+      "id": "v2-1768252681422-iuw5xtq6h",
+      "type": "region",
+      "name": "Medina",
+      "slug": "medina",
+      "description": "The historic heart of Marrakech, a labyrinth of narrow alleyways, bustling souks, and hidden courtyards.",
+      "isPassThrough": false,
+      "dna": {
+        "essence": [
+          "historic medina",
+          "souk atmosphere"
+        ],
+        "formsAndMaterials": [
+          "mudbrick walls",
+          "carved wooden doors",
+          "riad courtyards"
+        ],
+        "colorAndLight": [
+          "shadowed alleys",
+          "sun-drenched squares",
+          "warm lamplight"
+        ],
+        "atmosphere": [
+          "bohemian",
+          "bustling",
+          "intimate",
+          "sensory"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1768252681422-xoyafg44e": {
+      "id": "v2-1768252681422-xoyafg44e",
+      "type": "location",
+      "name": "Riad Courtyard",
+      "slug": "riad-courtyard",
+      "spaceType": "exterior",
+      "description": "A secluded riad courtyard at night, featuring a small, irregularly shaped swimming pool with clear, turquoise water reflecting the warm lights. The space is heavily adorned with lush green foliage, including hanging vines and potted plants, creating a private, enclosed feel. Numerous ornate lanterns of various shapes and sizes, along with string lights, cast a warm, inviting amber glow throughout the area.",
+      "dna": {
+        "essence": [
+          "riad courtyard",
+          "private oasis"
+        ],
+        "formsAndMaterials": [
+          "lush foliage",
+          "hanging vines",
+          "potted plants",
+          "ornate lanterns",
+          "turquoise water",
+          "mosaic tile accents"
+        ],
+        "colorAndLight": [
+          "deep green",
+          "turquoise blue",
+          "warm amber",
+          "dark blue",
+          "gold reflections"
+        ],
+        "atmosphere": [
+          "tranquil",
+          "bohemian",
+          "cozy",
+          "magical",
+          "exotic",
+          "inviting",
+          "intimate",
+          "serene",
+          "dreamlike"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1768252715324-bbbdddrgc"
+    },
+    "v2-1768252681422-zhigozby4": {
+      "id": "v2-1768252681422-zhigozby4",
+      "type": "location",
+      "name": "Covered Patio",
+      "slug": "covered-patio",
+      "spaceType": "interior",
+      "description": "A comfortable and well-lit covered patio space adjacent to the courtyard, featuring a cozy seating arrangement with low tables, plush cushions, and a patterned pouf, set against a wall decorated with mirrors and intricate tapestries.",
+      "dna": {
+        "essence": [
+          "Moroccan lounge",
+          "covered relaxation space"
+        ],
+        "formsAndMaterials": [
+          "plush cushions",
+          "low tables",
+          "patterned pouf",
+          "mirrors",
+          "intricate tapestries",
+          "woven rugs"
+        ],
+        "colorAndLight": [
+          "warm amber glow",
+          "rich tapestry colors",
+          "reflections from mirrors"
+        ],
+        "atmosphere": [
+          "cozy",
+          "inviting",
+          "intimate",
+          "bohemian",
+          "exotic"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1768252686354-njoeeyy9j"
     }
   },
   "views": {},
@@ -782,6 +931,29 @@
           ]
         }
       ]
+    },
+    {
+      "id": "v2-1768252681422-gjpgschiq",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1768252681422-iuw5xtq6h",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1768252681422-xoyafg44e",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1768252681422-zhigozby4",
+                  "type": "location",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -790,6 +962,7 @@
     "v2-1768239899341-ksveau7kk",
     "v2-1768240064567-vszlicmq8",
     "v2-1768248299262-s9xhmb9mx",
-    "v2-1768251262387-dbt8p5jff"
+    "v2-1768251262387-dbt8p5jff",
+    "v2-1768252681422-gjpgschiq"
   ]
 }

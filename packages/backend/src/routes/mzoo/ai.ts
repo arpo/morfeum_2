@@ -105,7 +105,12 @@ router.post('/vision', asyncHandler(async (req: Request, res: Response) => {
     
     res.status(HTTP_STATUS.OK).json({
       message: 'Image analyzed successfully',
-      data: result.data,
+      data: {
+        text: result.data?.text,
+        model: result.data?.model,
+        candidates: result.data?.candidates,
+        usage: result.data?.usage
+      },
       timestamp: new Date().toISOString(),
     });
   } catch (error) {
