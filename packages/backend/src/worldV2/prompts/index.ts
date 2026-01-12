@@ -24,5 +24,12 @@ export {
   type WorldLocationFullResult
 } from './worldLocationFull';
 
+// Interior location prompt (for /NEW_WORLD_LOCATION_INTERIOR)
+export {
+  buildWorldLocationInteriorPrompt,
+  parseWorldLocationInteriorResponse,
+  type WorldLocationInteriorResult
+} from './worldLocationInterior';
+
 // Shared prompt sections
 export * from './shared/dnaSchema';

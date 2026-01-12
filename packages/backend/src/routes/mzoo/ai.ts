@@ -7,6 +7,7 @@ import { Router, Request, Response } from 'express';
 import { HTTP_STATUS } from '../../config';
 import { asyncHandler } from '../../middleware';
 import * as mzooService from '../../services/mzoo.service';
+import { analyzeImageCached } from '../../services/mzoo';
 import { visionDescriptionPrompt } from '../../engine/generation/prompts/shared';
 
 const router = Router();
@@ -46,13 +47,17 @@ router.post('/gemini/text', asyncHandler(async (req: Request, res: Response) => 
 
 /**
  * MZOO Vision API endpoint - Analyzes images
+ * 
+ * Uses cached context when using the default visionDescriptionPrompt for better performance.
+ * Pass useCaching: false to disable, or provide a custom prompt to bypass caching.
  */
 router.post('/vision', asyncHandler(async (req: Request, res: Response) => {
   const { 
     base64Image, 
     mimeType = 'image/png',
     model = 'gemini-2.5-flash',
-    prompt = visionDescriptionPrompt
+    prompt,
+    useCaching = true
   } = req.body;
 
   if (!base64Image) {
@@ -64,22 +69,53 @@ router.post('/vision', asyncHandler(async (req: Request, res: Response) => {
     return;
   }
 
-  const result = await mzooService.analyzeImage((req as any).mzooApiKey, base64Image, prompt, mimeType, model);
-  
-  if (result.error) {
-    res.status(result.status).json({
-      message: 'Failed to analyze image from MZOO API',
-      error: result.error,
+  // Use cached version when using default prompt and caching is enabled
+  const useDefaultPrompt = !prompt;
+  const shouldUseCaching = useDefaultPrompt && useCaching;
+
+  try {
+    if (shouldUseCaching) {
+      // Use cached vision analysis (default prompt is in cache)
+      const cachedResult = await analyzeImageCached((req as any).mzooApiKey, base64Image, mimeType);
+      
+      res.status(HTTP_STATUS.OK).json({
+        message: 'Image analyzed successfully',
+        data: { 
+          text: cachedResult.text,
+          usage: cachedResult.usage,
+          cacheHit: cachedResult.cacheHit
+        },
+        timestamp: new Date().toISOString(),
+      });
+      return;
+    }
+
+    // Non-cached path: custom prompt or caching disabled
+    const actualPrompt = prompt || visionDescriptionPrompt;
+    const result = await mzooService.analyzeImage((req as any).mzooApiKey, base64Image, actualPrompt, mimeType, model);
+    
+    if (result.error) {
+      res.status(result.status).json({
+        message: 'Failed to analyze image from MZOO API',
+        error: result.error,
+        timestamp: new Date().toISOString(),
+      });
+      return;
+    }
+    
+    res.status(HTTP_STATUS.OK).json({
+      message: 'Image analyzed successfully',
+      data: result.data,
       timestamp: new Date().toISOString(),
     });
-    return;
+  } catch (error) {
+    // Fallback error handling
+    res.status(HTTP_STATUS.INTERNAL_SERVER_ERROR).json({
+      message: 'Failed to analyze image',
+      error: error instanceof Error ? error.message : 'Unknown error',
+      timestamp: new Date().toISOString(),
+    });
   }
-  
-  res.status(HTTP_STATUS.OK).json({
-    message: 'Image analyzed successfully',
-    data: result.data,
-    timestamp: new Date().toISOString(),
-  });
 }));
 
 /**

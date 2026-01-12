@@ -49,6 +49,11 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
     description: 'Create world with Host + Region + Location + Image',
     category: 'creation'
   },
+  NEW_WORLD_LOCATION_INTERIOR: { 
+    requiresNodeType: null, 
+    description: 'Create interior location inside current location (requires location selected)',
+    category: 'creation'
+  },
   NEW_REGION: { 
     requiresNodeType: ['host'], 
     description: 'Create region in current host',

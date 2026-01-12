@@ -10,6 +10,7 @@ import {
   newRegionHandler,
   newLocationHandler,
   newWorldLocationHandler,
+  newWorldLocationInteriorHandler,
   eventsHandler,
   setTimeHandler,
   setWeatherHandler
@@ -35,6 +36,9 @@ router.post('/display', displayHandler);
 
 // NEW_WORLD_LOCATION Command - Create complete world hierarchy (Host + Region + Location) with image
 router.post('/new-world-location', newWorldLocationHandler);
+
+// NEW_WORLD_LOCATION_INTERIOR Command - Create interior location as child of existing location
+router.post('/new-world-location-interior', newWorldLocationInteriorHandler);
 
 // SET_TIME Command - Update host timeOfDay
 router.post('/set-time', setTimeHandler);

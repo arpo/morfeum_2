@@ -1,62 +1,47 @@
 # Active Context
 
-## 2026-01-12 - NEW_WORLD_LOCATION Single LLM Call Refactor ✅
+## 2026-01-12 - NEW_WORLD_LOCATION_INTERIOR Command ✅
 
-Refactored `/NEW_WORLD_LOCATION` from 4 LLM calls to 1 for better performance.
+Created new `/NEW_WORLD_LOCATION_INTERIOR` command that creates a 4-node hierarchy from a single concept.
 
-### Before (4 LLM calls)
-```
-1. Categorization → Parse into host/region/location
-2. Host DNA → Generate host
-3. Region DNA → Generate region  
-4. Location DNA → Generate location
-```
+### What It Does
+Creates: `Host → Region → Location (exterior) → Location (interior)` + image for interior
 
-### After (1 LLM call)
+### Usage
 ```
-1. worldLocationFull → Generate all 3 nodes in single call
+/NEW_WORLD_LOCATION_INTERIOR the kitchen of a pub in Camden in London
 ```
 
-### Modular Prompt Architecture
-Created shared prompt sections to avoid duplication:
-
+Creates:
 ```
-packages/backend/src/worldV2/prompts/
-├── shared/
-│   └── dnaSchema.ts          # DNA_SCHEMA, DNA_FIELD_RULES, HOST_RULES, etc.
-├── worldLocationFull.ts       # Combined prompt (imports from shared)
-├── hostDNA.ts                 # Individual (can import shared later)
-├── regionDNA.ts
-├── locationDNA.ts
-└── index.ts
+London (host)
+└── Camden (region)
+    └── The Crown & Anchor (exterior location)
+        └── The Kitchen (interior location) ← IMAGE GENERATED HERE
 ```
 
-**Shared sections in `dnaSchema.ts`:**
-- `DNA_SCHEMA` - JSON structure for DNA
-- `DNA_FIELD_RULES` - Explanations for each field
-- `DNA_DELTA_RULES` - Child inheritance rules
-- `HOST_RULES`, `REGION_RULES`, `LOCATION_RULES`
-- `ATMOSPHERE_EXTRACTION` - Style/mood term extraction
-- `VISUAL_CONSTRAINTS_RULES` - Consistency enforcement
+### Implementation Pattern
+Same as `/NEW_WORLD_LOCATION` but with 4 nodes instead of 3:
+- Single LLM call generates all 4 nodes
+- User provides interior concept, LLM infers exterior building and world
+- Image generated for interior (deepest node with `spaceType: "interior"`)
 
-### Visual Consistency (Enhanced)
-Mood/style terms like "whimsical", "ethereal", "surreal" are now:
-1. Explicitly listed in prompt guidance
-2. Extracted to `atmosphere` array
-3. Enforced in host `dna.essence` AND `dna.atmosphere`
-4. Inherited by all child nodes
+### Files Created/Modified
+**Backend:**
+- NEW: `prompts/worldLocationInterior.ts` - 4-node prompt
+- NEW: `handlers/newWorldLocationInteriorHandler.ts` - Route handler
+- UPDATED: `routes.ts`, `handlers/index.ts`, `prompts/index.ts`
+- UPDATED: `pipelineConfig.ts` - Added `v2CreateWorldLocationInterior` pipeline
+- UPDATED: `navigation.ts` - Added `NEW_WORLD_LOCATION_INTERIOR` to SLASH_COMMANDS
 
-### Files Modified
-- `worldLocationFull.ts` - NEW: Combined prompt
-- `shared/dnaSchema.ts` - NEW: Shared prompt sections
-- `newWorldLocationHandler.ts` - Uses single LLM call
-- `pipelineConfig.ts` - Updated steps (7→4)
-- `prompts/index.ts` - New exports
+**Frontend:**
+- NEW: `commands/handlers/newWorldLocationInteriorHandler.ts`
+- UPDATED: `commands/handlers/index.ts`, `commands/index.ts`
 
-### Pipeline Steps (Updated)
+### Pipeline Steps
 ```typescript
-v2CreateWorldLocation: [
-  { id: 'world_creation', name: 'Creating World', duration: 4000 },
+v2CreateWorldLocationInterior: [
+  { id: 'interior_creation', name: 'Creating World', duration: 5000 },
   { id: 'saving', name: 'Saving World', duration: 500 },
   { id: 'prompt_generation', name: 'Creating Image Prompt', duration: 4000 },
   { id: 'image_generation', name: 'Generating Image', duration: 2500 }
@@ -65,59 +50,46 @@ v2CreateWorldLocation: [
 
 ---
 
-## 2026-01-12 - Weather & Time of Day Commands ✅
+## 2026-01-12 - MZOO Vision API Updated ✅
 
-Added dynamic weather and time control for V2 world system.
+Updated vision API integration to use new mzoo endpoint with internal caching.
 
-### New Props on Host Nodes
-- `weather` - String describing weather conditions (e.g., "Overcast with light drizzle")
-- `timeOfDay` - Enum: pre_dawn, dawn, morning, midday, afternoon, golden_hour, sunset, dusk, night, midnight
+### Key Changes
+- **Endpoint:** `/api/v1/ai/vision` (unchanged)
+- **Response format:** `analysis` instead of `text`
+- **Caching:** Now handled internally by mzoo (no client-side cache management)
 
-These are NOT part of DNA. They're read-time properties that cascade to all child nodes during image generation.
+### Files Modified
+- `packages/backend/src/services/mzoo/types.ts`
+  - Changed `VisionAnalysisResponse.text` → `VisionAnalysisResponse.analysis`
+  - Added `candidates` and `metadata` fields
 
-### New Slash Commands
-- `/SET_TIME <time>` - Set time of day (e.g., `/SET_TIME night`)
-- `/SET_WEATHER <description>` - Set weather (e.g., `/SET_WEATHER heavy rain`)
+- `packages/backend/src/services/mzoo/services/cachedVisionAnalysis.ts`
+  - Simplified from ~120 lines to ~55 lines
+  - Removed complex caching logic (mzoo handles internally)
+  - Maps `analysis` → `text` for backward compatibility
 
-**Available from:** Any node (host, region, location) - automatically finds and updates parent host
-
-### Files Created
-**Backend:**
-- `packages/backend/src/worldV2/handlers/setTimeHandler.ts`
-- `packages/backend/src/worldV2/handlers/setWeatherHandler.ts`
-- Routes: `POST /api/v2/set-time`, `POST /api/v2/set-weather`
-
-**Frontend:**
-- `packages/frontend/src/worldV2/commands/handlers/setTimeHandler.ts`
-- `packages/frontend/src/worldV2/commands/handlers/setWeatherHandler.ts`
-
-**Config:**
-- Added to `SLASH_COMMANDS` in `packages/backend/src/config/navigation.ts`
-
-### Dynamic Architecture
-Weather/time are stored on host → read fresh each time `/DISPLAY` generates an image → cascaded to all child nodes. Changing time to "night" then running `/DISPLAY` on any node shows night lighting.
+### Before/After
+```
+Before: Client manages cacheIds, calls cached-vision with cacheId, handles fallbacks
+After:  Client just calls vision API, mzoo handles caching internally
+```
 
 ---
 
-## 2026-01-12 - V2 Code Cleanup & Modularization
+## Previous Entries (2026-01-12)
 
-### Code Cleanup Complete ✅
+### NEW_WORLD_LOCATION Single LLM Call Refactor ✅
+- Refactored from 4 LLM calls to 1
+- Created modular prompt architecture with `shared/dnaSchema.ts`
 
-Major refactoring to split large files and remove dead code.
+### Weather & Time of Day Commands ✅
+- `/SET_TIME <time>` and `/SET_WEATHER <description>`
+- Stored on host, cascaded to children during image generation
 
-**1. promptBuilder.ts - Dead Code Removed**
-- Before: ~265 lines
-- After: ~70 lines
-- Removed unused: `PromptLayers`, `PromptResult`, `BuildPromptOptions`, `buildHostImagePrompt()`, `buildRegionImagePrompt()`, `buildLocationImagePrompt()`, `formatDNAPrompt()`, `formatBannedPrompt()`
-- Kept: `cascadeDNA()`, `CascadedDNAChain` (used by displayHandler)
-
-**2. v2Commands.ts (Frontend) - Split into Modules**
-- Before: 1 file, 431 lines
-- After: 8 files, ~50-85 lines each
-
-**3. routes.ts (Backend) - Split into Modules**
-- Before: 1 file, 471 lines  
-- After: 7 files, ~35-130 lines each
+### V2 Code Cleanup & Modularization ✅
+- Split large files into modules
+- Removed dead code from promptBuilder.ts
 
 ---
 
@@ -126,45 +98,36 @@ Major refactoring to split large files and remove dead code.
 **Backend:**
 ```
 packages/backend/src/worldV2/
-├── types.ts              # DNA, Host, Region, WorldNode interfaces
-├── routes.ts             # Router (~32 lines) - imports handlers
+├── routes.ts
 ├── handlers/
-│   ├── index.ts
 │   ├── newHostHandler.ts
 │   ├── newRegionHandler.ts
 │   ├── newLocationHandler.ts
+│   ├── newWorldLocationHandler.ts
+│   ├── newWorldLocationInteriorHandler.ts  ← NEW
+│   ├── setTimeHandler.ts
+│   ├── setWeatherHandler.ts
 │   └── eventsHandler.ts
-├── utils/
-│   └── routeUtils.ts     # Shared utilities (generateId, SSE helpers, etc.)
 ├── prompts/
-│   ├── hostDNA.ts
-│   ├── regionDNA.ts
-│   ├── locationDNA.ts
+│   ├── shared/dnaSchema.ts
+│   ├── worldLocationFull.ts
+│   ├── worldLocationInterior.ts  ← NEW
+│   ├── hostDNA.ts, regionDNA.ts, locationDNA.ts
 │   └── index.ts
-├── display/
-│   ├── displayHandler.ts
-│   ├── imagePromptGenerator.ts
-│   ├── promptBuilder.ts      # Only cascadeDNA now
-│   ├── cameraSettings.ts
-│   └── index.ts
-└── index.ts
+└── display/
 ```
 
 **Frontend:**
 ```
 packages/frontend/src/worldV2/
 ├── commands/
-│   ├── index.ts              # Main exports (isV2Command, handleV2Command)
-│   ├── types.ts              # V2CommandCallbacks, V2CommandResult
 │   ├── handlers/
-│   │   ├── index.ts
-│   │   ├── newHostHandler.ts
-│   │   ├── newRegionHandler.ts
-│   │   ├── newLocationHandler.ts
-│   │   └── displayHandler.ts
-│   └── utils/
-│       └── commandUtils.ts   # Shared utilities (showError, registerSpawn, etc.)
-└── index.ts
+│   │   ├── newWorldLocationHandler.ts
+│   │   ├── newWorldLocationInteriorHandler.ts  ← NEW
+│   │   ├── setTimeHandler.ts, setWeatherHandler.ts
+│   │   └── ...
+│   └── ...
+└── ...
 ```
 
 ---
@@ -173,13 +136,3 @@ packages/frontend/src/worldV2/
 
 - [ ] **Phase 5: Navigation Commands** - GO_INSIDE, GOTO for V2 nodes
 - [ ] **Phase 6: Remove Old System** - Clean up legacy code
-
----
-
-## Key Design Decisions
-
-1. **LLM-generated prompt layers:** More specific than template-based prompts
-2. **Camera perspective in LLM prompt:** Ensures foreground matches view height
-3. **DNA cascading:** Child nodes inherit from parents, override only deltas
-4. **Modular file structure:** Each file <150 lines, single responsibility
-5. **Shared utilities:** DRY pattern for common operations (SSE, error handling)

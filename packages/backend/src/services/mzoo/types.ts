@@ -47,12 +47,14 @@ export interface TextGenerationResponse {
 }
 
 export interface VisionAnalysisResponse {
-  text: string;
+  analysis: string;
   model: string;
-  usage?: {
-    promptTokens?: number;
-    completionTokens?: number;
-    totalTokens?: number;
+  candidates?: Array<{ content: string }>;
+  metadata?: {
+    temperature?: number;
+    topP?: number;
+    candidateCount?: number;
+    maxOutputTokens?: number;
   };
 }
 

@@ -132,6 +132,14 @@ export const PIPELINE_STEPS = {
     { id: 'saving', name: 'Saving World', duration: 500 },
     { id: 'prompt_generation', name: 'Creating Image Prompt', duration: 4000 },
     { id: 'image_generation', name: 'Generating Image', duration: 2500 }
+  ],
+  
+  /** V2: Create interior location as child of existing exterior location + auto-Display */
+  v2CreateWorldLocationInterior: [
+    { id: 'interior_creation', name: 'Creating Interior', duration: 3000 },
+    { id: 'saving', name: 'Saving Interior', duration: 500 },
+    { id: 'prompt_generation', name: 'Creating Image Prompt', duration: 4000 },
+    { id: 'image_generation', name: 'Generating Image', duration: 2500 }
   ]
 } as const;
 

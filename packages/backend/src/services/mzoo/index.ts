@@ -6,6 +6,7 @@
 // Export all service functions
 export { generateText } from './services/textGeneration';
 export { analyzeImage } from './services/visionAnalysis';
+export { analyzeImageCached, type CachedVisionResponse } from './services/cachedVisionAnalysis';
 export { generateImage } from './services/imageGeneration';
 export { editImage } from './services/imageEdit';
 export { upscaleImage } from './services/imageUpscale';
