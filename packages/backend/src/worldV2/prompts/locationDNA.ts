@@ -43,7 +43,8 @@ Delta-only: Only add DNA that differs from region. Empty arrays if no difference
 }
 
 RULES: Exact keys. slug=kebab-case. Preserve proper nouns.
-spaceType: "exterior" default. Use "interior" only if concept clearly implies inside.
+
+spaceType: Default "exterior" (viewing from outside). Use "interior" only for enclosed host environments (space station, underground world, inside a vessel).
 
 REGION DNA: ${JSON.stringify(regionContext.dna)}
 
@@ -101,9 +102,9 @@ export function parseLocationResponse(jsonString: string, generateId: () => stri
     }
   }
   
-  // Validate spaceType
+  // Validate spaceType - default to exterior if invalid
   if (parsed.spaceType !== 'exterior' && parsed.spaceType !== 'interior') {
-    parsed.spaceType = 'exterior'; // Default to exterior
+    parsed.spaceType = 'exterior';
   }
   
   // Replace __AUTO__ with generated ID

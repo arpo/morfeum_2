@@ -1,94 +1,5 @@
 {
   "nodes": {
-    "v2-1768218920701-tfoyyc2c8": {
-      "id": "v2-1768218920701-tfoyyc2c8",
-      "type": "host",
-      "name": "Göteborg",
-      "slug": "goteborg",
-      "description": "A city that blends historical charm with modern vibrancy, known for its maritime heritage and friendly atmosphere.",
-      "genre": "urban",
-      "dna": {
-        "essence": [
-          "maritime history",
-          "industrial past",
-          "contemporary arts scene"
-        ],
-        "formsAndMaterials": [
-          "brickwork",
-          "glass facades",
-          "cobblestone streets"
-        ],
-        "colorAndLight": [
-          "muted blues and greys",
-          "soft, diffused daylight"
-        ],
-        "atmosphere": [
-          "cozy hygge",
-          "urban exploration"
-        ],
-        "banned": [
-          "sci-fi holograms",
-          "medieval castles"
-        ]
-      },
-      "spaceType": "exterior",
-      "primaryMedia": "media-1768220806956-z1952k2j2"
-    },
-    "v2-1768218932778-v5t9q5m9i": {
-      "id": "v2-1768218932778-v5t9q5m9i",
-      "type": "region",
-      "name": "Liseberg",
-      "slug": "liseberg",
-      "description": "A vibrant amusement park and cultural hub within Gothenburg, known for its thrilling rides, lush gardens, and festive atmosphere.",
-      "dna": {
-        "essence": [
-          "amusement park",
-          "festivals",
-          "family entertainment",
-          "Swedish culture"
-        ],
-        "formsAndMaterials": [
-          "ornate architecture",
-          "lush gardens",
-          "thrill rides"
-        ],
-        "colorAndLight": [
-          "bright, festive lights",
-          "sunny days"
-        ],
-        "atmosphere": [
-          "joyful exuberance",
-          "nostalgic charm"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1768219562414-2uwqow873"
-    },
-    "v2-1768219086618-63fit6cfh": {
-      "id": "v2-1768219086618-63fit6cfh",
-      "type": "location",
-      "name": "Balder Roller Coaster",
-      "slug": "balder-roller-coaster",
-      "spaceType": "exterior",
-      "description": "An iconic wooden roller coaster at Liseberg amusement park.",
-      "dna": {
-        "essence": [
-          "thrill rides"
-        ],
-        "formsAndMaterials": [
-          "wooden structure"
-        ],
-        "colorAndLight": [
-          "natural wood tones"
-        ],
-        "atmosphere": [
-          "excitement",
-          "adrenaline rush"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1768219545825-un5rbgcj6"
-    },
     "v2-1768220875965-hozpk4324": {
       "id": "v2-1768220875965-hozpk4324",
       "type": "host",
@@ -120,7 +31,8 @@
           "medieval banners"
         ]
       },
-      "spaceType": "exterior"
+      "spaceType": "exterior",
+      "primaryMedia": "media-1768222008559-rffmez94c"
     },
     "v2-1768220890179-fctj9zk5d": {
       "id": "v2-1768220890179-fctj9zk5d",
@@ -147,58 +59,37 @@
           "creative chaos"
         ],
         "banned": []
-      }
+      },
+      "primaryMedia": "media-1768221988405-q97at6unb"
     },
-    "v2-1768220927007-ffj7l1y4f": {
-      "id": "v2-1768220927007-ffj7l1y4f",
+    "v2-1768221943033-1w1mvy076": {
+      "id": "v2-1768221943033-1w1mvy076",
       "type": "location",
-      "name": "Cyber Dog",
-      "slug": "cyber-dog",
-      "spaceType": "interior",
-      "description": "A cutting-edge store specializing in club wear, echoing the vibrant and alternative spirit of Camden.",
+      "name": "Camden Clubwear Emporium",
+      "slug": "camden-clubwear-emporium",
+      "spaceType": "exterior",
+      "description": "A vibrant hub for cutting-edge club attire, nestled within the eclectic heart of Camden.",
       "dna": {
-        "essence": [
-          "cyberpunk aesthetics",
-          "futuristic fashion"
-        ],
+        "essence": [],
         "formsAndMaterials": [
-          "industrial elements",
-          "reflective surfaces",
-          "LED lighting installations"
+          "street art",
+          "markets"
         ],
         "colorAndLight": [
-          "neons",
-          "strobes",
-          "dark, atmospheric lighting"
+          "vibrant graffiti",
+          "neon signs"
         ],
         "atmosphere": [
-          "energetic club vibe",
-          "futuristic bazaar"
+          "bohemian energy",
+          "creative chaos"
         ],
         "banned": []
       },
-      "primaryMedia": "media-1768220940405-s0rwnfsef"
+      "primaryMedia": "media-1768221964017-r72u8gf96"
     }
   },
   "views": {},
   "worldTrees": [
-    {
-      "id": "v2-1768218920701-tfoyyc2c8",
-      "type": "host",
-      "children": [
-        {
-          "id": "v2-1768218932778-v5t9q5m9i",
-          "type": "region",
-          "children": [
-            {
-              "id": "v2-1768219086618-63fit6cfh",
-              "type": "location",
-              "children": []
-            }
-          ]
-        }
-      ]
-    },
     {
       "id": "v2-1768220875965-hozpk4324",
       "type": "host",
@@ -208,7 +99,7 @@
           "type": "region",
           "children": [
             {
-              "id": "v2-1768220927007-ffj7l1y4f",
+              "id": "v2-1768221943033-1w1mvy076",
               "type": "location",
               "children": []
             }
@@ -218,7 +109,6 @@
     }
   ],
   "pinnedIds": [
-    "v2-1768218920701-tfoyyc2c8",
     "v2-1768220875965-hozpk4324"
   ]
 }
