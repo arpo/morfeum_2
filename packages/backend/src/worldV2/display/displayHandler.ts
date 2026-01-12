@@ -179,7 +179,8 @@ export async function displayHandler(req: Request, res: Response): Promise<void>
         spaceType,
         dna: cascadedDNA,
         hostName: host?.name,
-        regionName: region?.name
+        regionName: region?.name,
+        perspectiveGuidance: cameraConfig.perspectiveGuidance
       });
       
       // Build final prompt from layers (pass spaceType for locations)

@@ -191,6 +191,222 @@
         "banned": []
       },
       "primaryMedia": "media-1767975836220-5t1w7ds2o"
+    },
+    "v2-1767977426441-mqr97uyub": {
+      "id": "v2-1767977426441-mqr97uyub",
+      "type": "region",
+      "name": "Piccadilly Circus",
+      "slug": "piccadilly-circus",
+      "description": "A vibrant West End hub renowned for its dazzling billboards, theaters, and bustling atmosphere.",
+      "dna": {
+        "essence": [
+          "Edwardian exuberance",
+          "Mid-century commercialism"
+        ],
+        "formsAndMaterials": [
+          "Gleaming glass facades",
+          "Polished chrome and neon signage"
+        ],
+        "colorAndLight": [
+          "Electric blues and reds",
+          "Constant, pulsating artificial light"
+        ],
+        "atmosphere": [
+          "Exciting and theatrical",
+          "Visually overwhelming"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1767977436762-wcjektyf4"
+    },
+    "v2-1767977506388-2rxiaytyt": {
+      "id": "v2-1767977506388-2rxiaytyt",
+      "type": "location",
+      "name": "Adult Superstore",
+      "slug": "adult-superstore",
+      "spaceType": "exterior",
+      "description": "An adult store with discreet signage on a bustling street.",
+      "dna": {
+        "essence": [],
+        "formsAndMaterials": [
+          "Opaque window film",
+          "Subtle, tasteful signage"
+        ],
+        "colorAndLight": [
+          "Dimly lit interior visible through frosted glass"
+        ],
+        "atmosphere": [
+          "Discreet and unassuming"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1767977516111-aqvbsh9fz"
+    },
+    "v2-1767977608092-tddsj5qya": {
+      "id": "v2-1767977608092-tddsj5qya",
+      "type": "location",
+      "name": "The Grand Imperial Bar Entrance",
+      "slug": "the-grand-imperial-bar-entrance",
+      "spaceType": "exterior",
+      "description": "The ornate entrance to a distinguished establishment, just off the main thoroughfare.",
+      "dna": {
+        "essence": [
+          "Art Deco elegance"
+        ],
+        "formsAndMaterials": [
+          "Marbled entryway",
+          "Brass fittings",
+          "Large polished wooden doors"
+        ],
+        "colorAndLight": [
+          "Warm interior glow spilling outwards",
+          "Golden hour reflections on brass"
+        ],
+        "atmosphere": [
+          "Sophisticated and inviting"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1767977620153-qxcpxynfx"
+    },
+    "v2-1767979869589-d5uggsehf": {
+      "id": "v2-1767979869589-d5uggsehf",
+      "type": "region",
+      "name": "Soho",
+      "slug": "soho",
+      "description": "A vibrant district known for its eclectic entertainment, diverse culinary scene, and lively, somewhat bohemian atmosphere.",
+      "dna": {
+        "essence": [
+          "Bohemian freedom",
+          "Theatrical flair"
+        ],
+        "formsAndMaterials": [
+          "Ornate theatre facades",
+          "Narrow, winding streets"
+        ],
+        "colorAndLight": [
+          "Warm, inviting glows from shop windows",
+          "Vibrant and diverse signage"
+        ],
+        "atmosphere": [
+          "Energetic and buzzing",
+          "Hedonistic and indulgent"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1767979885709-tkg312k9c"
+    },
+    "v2-1767979908063-3yms8miz3": {
+      "id": "v2-1767979908063-3yms8miz3",
+      "type": "location",
+      "name": "The Spotlight Bar",
+      "slug": "the-spotlight-bar",
+      "spaceType": "exterior",
+      "description": "The exterior of a bustling bar in the heart of Soho.",
+      "dna": {
+        "essence": [
+          "Lively nightlife hub"
+        ],
+        "formsAndMaterials": [
+          "Large, inviting glass frontage",
+          "Marquee sign"
+        ],
+        "colorAndLight": [
+          "Warm interior light spilling onto the street",
+          "Flashing signage"
+        ],
+        "atmosphere": [
+          "Anticipation and excitement",
+          "Sound of music and chatter"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1767979918591-11qtwpfvd"
+    },
+    "v2-1768042440895-cs58f2tvk": {
+      "id": "v2-1768042440895-cs58f2tvk",
+      "type": "host",
+      "name": "Göteborg",
+      "slug": "goteborg",
+      "description": "A bustling port city in Sweden, known for its maritime history, canals, and vibrant cultural scene, blending Scandinavian modernism with historic charm.",
+      "genre": "Coastal Metropolis",
+      "dna": {
+        "essence": [
+          "Maritime heritage",
+          "Scandinavian functionality"
+        ],
+        "formsAndMaterials": [
+          "Brick and concrete structures",
+          "Glass facades and timber accents"
+        ],
+        "colorAndLight": [
+          "Cool, muted tones",
+          "Soft, diffused daylight with crisp shadows"
+        ],
+        "atmosphere": [
+          "Pragmatic and convivial",
+          "Open and accessible"
+        ],
+        "banned": [
+          "Overly ornate historical facades",
+          "Gaudy artificial lighting displays"
+        ]
+      },
+      "spaceType": "exterior",
+      "primaryMedia": "media-1768042453738-ok8cgxmor"
+    },
+    "v2-1768042478895-uptk3d8c6": {
+      "id": "v2-1768042478895-uptk3d8c6",
+      "type": "region",
+      "name": "Ringön",
+      "slug": "ringon",
+      "description": "An industrial island district in Gothenburg, characterized by its historic warehouses and ongoing transformation into a creative hub.",
+      "dna": {
+        "essence": [
+          "Industrial heritage",
+          "Creative revitalization"
+        ],
+        "formsAndMaterials": [
+          "Weathered brick warehouses",
+          "Iron and steel structures"
+        ],
+        "colorAndLight": [
+          "Gritty, muted colors",
+          "Harsh industrial lighting with dappled sunlight"
+        ],
+        "atmosphere": [
+          "Gritty and evolving",
+          "Nostalgic yet forward-looking"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1768042498294-xfhnqqr43"
+    },
+    "v2-1768125973257-nofl1hud5": {
+      "id": "v2-1768125973257-nofl1hud5",
+      "type": "location",
+      "name": "Warehouse Art Studio",
+      "slug": "warehouse-art-studio",
+      "spaceType": "exterior",
+      "description": "The exterior of a converted warehouse building serving as an artist's studio.",
+      "dna": {
+        "essence": [
+          "Artistic endeavor"
+        ],
+        "formsAndMaterials": [
+          "Large loading bay doors",
+          "Industrial metal siding"
+        ],
+        "colorAndLight": [
+          "Sunlight reflecting off large windows",
+          "Visible paint splatters on exterior surfaces"
+        ],
+        "atmosphere": [
+          "Creative energy emanating from within"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1768125982161-m8t944ko9"
     }
   },
   "views": {},
@@ -230,11 +446,56 @@
               "children": []
             }
           ]
+        },
+        {
+          "id": "v2-1767977426441-mqr97uyub",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1767977506388-2rxiaytyt",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "v2-1767977608092-tddsj5qya",
+              "type": "location",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "v2-1767979869589-d5uggsehf",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1767979908063-3yms8miz3",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v2-1768042440895-cs58f2tvk",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1768042478895-uptk3d8c6",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1768125973257-nofl1hud5",
+              "type": "location",
+              "children": []
+            }
+          ]
         }
       ]
     }
   ],
   "pinnedIds": [
-    "v2-1767963637278-3pgkv6v5y"
+    "v2-1767963637278-3pgkv6v5y",
+    "v2-1768042440895-cs58f2tvk"
   ]
 }

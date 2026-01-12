@@ -429,15 +429,16 @@ async function handleDisplayCommand(
           if (completedData.imageUrl) {
             console.log('[V2] Image generated:', completedData.imageUrl);
             
-            // Update entity's image directly in the store
-            useStore.getState().updateEntityImage(activeEntityId!, completedData.imageUrl);
-            console.log('[V2] Entity image updated in store:', activeEntityId);
-            
             // Clear media cache for this entity
             clearEntityMediaCache(activeEntityId!);
             
             // Reload locations store from backend to get the updated node data
             await useLocationsStore.getState().loadFromBackend();
+            
+            // Dispatch event to trigger WorldView refresh (same pattern as V1 pipelines)
+            window.dispatchEvent(new CustomEvent('imageGenerated', { 
+              detail: { entityId: activeEntityId } 
+            }));
           }
           setIsMoving(false);
         },

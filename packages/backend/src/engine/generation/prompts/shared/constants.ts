@@ -10,10 +10,7 @@ export const qualityPrompt = 'crisp micro-detail, refined surfaces, natural text
 
 export const fluxRoofFix = "CRITICAL!!!: This is an interior scene. Fully enclosed ceiling of thick, continuous solid wood/metal/stone with no gaps, holes, skylights, or open breaches to the sky";
 
-export const NoCreatures = `
-[FILTER: NoLivingSubjects] DON'T INCLUDE:
-[NEG:] humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.
-`;
+export const NoCreatures = `[FILTER: NoLivingSubjects] DON'T INCLUDE: humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.`;
 
 export const PopulateScene = `
 [REQUIRED: PEOPLE IN SCENE] This location MUST show multiple people. The scene is crowded and lively.

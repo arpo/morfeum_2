@@ -8,7 +8,7 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 
 | Category | Count | Primary Location |
 |----------|-------|------------------|
-| **V2 World System** | 1+ | `worldV2/prompts/` |
+| **V2 World System** | 10 | `worldV2/prompts/`, `worldV2/display/` |
 | Vision/Analysis | 2 | `shared/`, `characters/` |
 | Character Generation | 5 | `characters/` |
 | Navigation/Intent | 3 | `navigation/` |
@@ -21,14 +21,27 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 
 ## Prompt Catalog
 
-### V2 World System (NEW - Simplified DNA)
+### V2 World System (Simplified DNA + LLM Image Prompts)
+
+**DNA Generation Prompts** (in `worldV2/prompts/`):
 
 | Prompt | File | Purpose | Used By |
-|--------|------|---------|---------|
-| `buildHostDNAPrompt` | [hostDNA.ts](../../../worldV2/prompts/hostDNA.ts) | Generate Host DNA from concept | `/NEW_HOST` |
+|--------|------|---------|---------
+| `buildHostDNAPrompt` | [hostDNA.ts](../../../worldV2/prompts/hostDNA.ts) | Generate Host DNA (5-aspect: semantic, spatial, render, profile, meta) | `/NEW_HOST` |
 | `parseHostResponse` | [hostDNA.ts](../../../worldV2/prompts/hostDNA.ts) | Parse LLM response to Host node | `/NEW_HOST` |
-| `buildRegionDNAPrompt` | *(planned)* | Generate Region DNA | `/NEW_REGION` |
-| `buildLocationDNAPrompt` | *(planned)* | Generate Location DNA | `/NEW_LOCATION` |
+| `buildRegionDNAPrompt` | [regionDNA.ts](../../../worldV2/prompts/regionDNA.ts) | Generate Region DNA (delta-only, inherits from host) | `/NEW_REGION2` |
+| `parseRegionResponse` | [regionDNA.ts](../../../worldV2/prompts/regionDNA.ts) | Parse LLM response to Region node | `/NEW_REGION2` |
+| `buildLocationDNAPrompt` | [locationDNA.ts](../../../worldV2/prompts/locationDNA.ts) | Generate Location DNA (delta-only, inherits from region+host) | `/NEW_LOCATION2` |
+| `parseLocationResponse` | [locationDNA.ts](../../../worldV2/prompts/locationDNA.ts) | Parse LLM response to Location node | `/NEW_LOCATION2` |
+
+**Image Prompt Generation** (in `worldV2/display/`):
+
+| Prompt | File | Purpose | Used By |
+|--------|------|---------|---------
+| `generateImagePromptLayers` | [imagePromptGenerator.ts](../../../worldV2/display/imagePromptGenerator.ts) | LLM generates structured layers (background, midground, foreground, lighting, atmosphere) with camera perspective guidance | `/DISPLAY` |
+| `buildPromptFromLayers` | [promptBuilder.ts](../../../worldV2/display/promptBuilder.ts) | Assemble layers + camera config + DNA into final FLUX prompt | `/DISPLAY` |
+| `cascadeDNA` | [promptBuilder.ts](../../../worldV2/display/promptBuilder.ts) | Merge host→region→location DNA for image generation | `/DISPLAY` |
+| `getV2CameraConfig` | [cameraSettings.ts](../../../worldV2/display/cameraSettings.ts) | Camera angle/perspective configs by node type (host=aerial, region=elevated, location=street-level) | `/DISPLAY` |
 
 ### Vision & Image Analysis
 
@@ -114,6 +127,80 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 ---
 
 ## Pipeline Flows
+
+### V2 World System Pipeline (NEW_HOST, NEW_REGION2, NEW_LOCATION2, DISPLAY)
+
+**Node Creation (NEW_HOST, NEW_REGION2, NEW_LOCATION2):**
+```
+User command: "/NEW_HOST A steampunk metropolis"
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 1: buildHostDNAPrompt              │
+│ Generate 5-aspect DNA from concept      │
+│ (semantic, spatial, render, profile, meta)
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 2: parseHostResponse               │
+│ Parse LLM JSON to Host node             │
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 3: Save to worlds.json             │
+│ Add to nodes + worldTrees               │
+└─────────────────────────────────────────┘
+```
+
+**Image Generation (/DISPLAY):**
+```
+User command: "/DISPLAY" (on any V2 node)
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 1: cascadeDNA                      │
+│ Merge host→region→location DNA          │
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 2: getV2CameraConfig               │
+│ Get camera perspective for node type    │
+│ (host=aerial, region=elevated, etc.)    │
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 3: generateImagePromptLayers       │
+│ LLM generates structured layers with    │
+│ camera perspective guidance             │
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 4: buildPromptFromLayers           │
+│ Assemble layers + DNA into FLUX prompt  │
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 5: applyMorfeumStyle               │
+│ Add quality modifiers + creature mode   │
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 6: generateImage (FLUX)            │
+│ Generate image via Mzoo API             │
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 7: Save to media.json              │
+│ Store image with promptLayers metadata  │
+└─────────────────────────────────────────┘
+```
+
+**Files involved:**
+- `worldV2/routes.ts` - API endpoints
+- `worldV2/display/displayHandler.ts` - Orchestrator
+- `worldV2/display/imagePromptGenerator.ts` - LLM layer generation
+- `worldV2/display/promptBuilder.ts` - DNA cascade + prompt assembly
+- `worldV2/display/cameraSettings.ts` - Camera configs
+
+---
 
 ### Image Drop/Paste Flow (Spawn Input)
 ```

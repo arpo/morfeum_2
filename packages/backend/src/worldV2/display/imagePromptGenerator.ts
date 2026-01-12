@@ -31,34 +31,21 @@ interface ImagePromptInput {
   dna: DNA;
   hostName?: string;
   regionName?: string;
+  /** Camera perspective guidance from centralized cameraSettings */
+  perspectiveGuidance: string;
 }
 
 /**
  * Build the LLM prompt for generating image layers
  */
 function buildImagePromptSystemMessage(input: ImagePromptInput): string {
-  const { nodeType, name, description, spaceType, dna, hostName, regionName } = input;
+  const { nodeType, name, description, spaceType, dna, hostName, regionName, perspectiveGuidance } = input;
   
   const contextLine = nodeType === 'host' 
     ? `World: ${name}`
     : nodeType === 'region'
     ? `Region: ${name} in ${hostName}`
     : `Location: ${name} in ${regionName}, ${hostName}`;
-
-  // Camera perspective guidance based on node type
-  const cameraGuidance = nodeType === 'host'
-    ? `CAMERA PERSPECTIVE: AERIAL VIEW from satellite/airplane height (30-60° down angle).
-       All layers must be described AS SEEN FROM HIGH ABOVE - buildings appear small, streets are distant lines.
-       NO street-level details, NO close-up textures, NO objects "at your feet".`
-    : nodeType === 'region'
-    ? `CAMERA PERSPECTIVE: ELEVATED VIEW from rooftop/drone height (35-50° down angle).
-       All layers must be described AS SEEN FROM ABOVE - rooftops visible, streets seen from height.
-       NO street-level details, NO close-up ground textures.`
-    : spaceType === 'interior'
-    ? `CAMERA PERSPECTIVE: INTERIOR EYE-LEVEL view inside the space.
-       Describe what you see standing inside the room/space.`
-    : `CAMERA PERSPECTIVE: STREET-LEVEL view (25-30° tilt up).
-       Describe what you see standing on the street looking at the location.`;
 
   return `You are an expert visual prompt engineer for AI image generation.
 
@@ -68,7 +55,7 @@ ${contextLine}
 Description: ${description}
 Space Type: ${spaceType || 'exterior'}
 
-${cameraGuidance}
+${perspectiveGuidance}
 
 Visual DNA:
 - Visual Identity: ${dna.essence.join(', ') || 'Not specified'}
@@ -194,11 +181,22 @@ export function buildPromptFromLayers(
   cameraConfig: { composition: string; shot: string; lens: string; light: string },
   spaceType?: 'interior' | 'exterior'
 ): string {
-  // Combine banned elements (avoid duplicate NEG blocks)
-  const allBanned = dna.banned.length > 0 ? dna.banned.join(', ') : '';
+  // Build NEG items: DNA banned + spaceType enforcement
+  const negItems: string[] = [...dna.banned];
   
-  // Space type line (only for locations with interior/exterior distinction)
-  const spaceTypeLine = spaceType ? `[SPACE:] ${spaceType}` : '';
+  // Add spaceType enforcement to prevent wrong scene type
+  if (spaceType === 'exterior') {
+    negItems.push('interior', 'indoor', 'inside room', 'indoor scene');
+  } else if (spaceType === 'interior') {
+    negItems.push('exterior', 'outdoor', 'building facade', 'street view');
+  }
+  
+  const negLine = negItems.length > 0 ? `[NEG:] ${negItems.join(', ')}` : '';
+  
+  // Space type line with explicit emphasis
+  const spaceTypeLine = spaceType 
+    ? `[SPACE:] ${spaceType.toUpperCase()} - ${spaceType === 'exterior' ? 'OUTSIDE view of the building/location' : 'INSIDE the space'}`
+    : '';
   
   return `${layers.name}. ${layers.description}
 
@@ -218,5 +216,5 @@ ${spaceTypeLine}
 [LENS:] ${cameraConfig.lens}
 [LIGHT:] ${cameraConfig.light}
 
-${allBanned ? `[NEG:] ${allBanned}` : ''}`.trim();
+${negLine}`.trim();
 }
