@@ -31,7 +31,8 @@
           "medieval castles"
         ]
       },
-      "spaceType": "exterior"
+      "spaceType": "exterior",
+      "primaryMedia": "media-1768220806956-z1952k2j2"
     },
     "v2-1768218932778-v5t9q5m9i": {
       "id": "v2-1768218932778-v5t9q5m9i",
@@ -87,6 +88,96 @@
         "banned": []
       },
       "primaryMedia": "media-1768219545825-un5rbgcj6"
+    },
+    "v2-1768220875965-hozpk4324": {
+      "id": "v2-1768220875965-hozpk4324",
+      "type": "host",
+      "name": "London",
+      "slug": "london",
+      "description": "The sprawling, historic, and dynamic capital of the United Kingdom, a global hub of culture, finance, and fashion.",
+      "genre": "Urban",
+      "dna": {
+        "essence": [
+          "historical depth",
+          "contemporary dynamism"
+        ],
+        "formsAndMaterials": [
+          "Victorian architecture",
+          "glass skyscrapers",
+          "red brick"
+        ],
+        "colorAndLight": [
+          "foggy greys",
+          "warm streetlights",
+          "vibrant market colors"
+        ],
+        "atmosphere": [
+          "sophisticated bustle",
+          "timeless grandeur"
+        ],
+        "banned": [
+          "sci-fi holographic displays",
+          "medieval banners"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1768220890179-fctj9zk5d": {
+      "id": "v2-1768220890179-fctj9zk5d",
+      "type": "region",
+      "name": "Camden",
+      "slug": "camden",
+      "description": "A vibrant and eclectic borough in London, known for its alternative culture, bustling markets, and rich musical history.",
+      "dna": {
+        "essence": [
+          "alternative culture",
+          "punk rock heritage"
+        ],
+        "formsAndMaterials": [
+          "Victorian warehouses",
+          "street art",
+          "markets"
+        ],
+        "colorAndLight": [
+          "vibrant graffiti",
+          "neon signs"
+        ],
+        "atmosphere": [
+          "bohemian energy",
+          "creative chaos"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1768220927007-ffj7l1y4f": {
+      "id": "v2-1768220927007-ffj7l1y4f",
+      "type": "location",
+      "name": "Cyber Dog",
+      "slug": "cyber-dog",
+      "spaceType": "interior",
+      "description": "A cutting-edge store specializing in club wear, echoing the vibrant and alternative spirit of Camden.",
+      "dna": {
+        "essence": [
+          "cyberpunk aesthetics",
+          "futuristic fashion"
+        ],
+        "formsAndMaterials": [
+          "industrial elements",
+          "reflective surfaces",
+          "LED lighting installations"
+        ],
+        "colorAndLight": [
+          "neons",
+          "strobes",
+          "dark, atmospheric lighting"
+        ],
+        "atmosphere": [
+          "energetic club vibe",
+          "futuristic bazaar"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1768220940405-s0rwnfsef"
     }
   },
   "views": {},
@@ -107,9 +198,27 @@
           ]
         }
       ]
+    },
+    {
+      "id": "v2-1768220875965-hozpk4324",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1768220890179-fctj9zk5d",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1768220927007-ffj7l1y4f",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "v2-1768218920701-tfoyyc2c8"
+    "v2-1768218920701-tfoyyc2c8",
+    "v2-1768220875965-hozpk4324"
   ]
 }

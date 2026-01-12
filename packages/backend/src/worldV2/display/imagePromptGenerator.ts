@@ -5,7 +5,7 @@
  */
 
 import { generateText } from '../../services/mzoo/services/textGeneration';
-import type { Host, Region, WorldNode, DNA } from '../types';
+import type { DNA } from '../types';
 
 /**
  * Structured image prompt layers

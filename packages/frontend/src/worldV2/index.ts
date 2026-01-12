@@ -6,4 +6,4 @@
  */
 
 // Export command handlers
-export { isV2Command, handleV2Command } from './commands/v2Commands';
+export { isV2Command, handleV2Command } from './commands';
