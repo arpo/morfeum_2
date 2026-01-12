@@ -10,6 +10,21 @@
  */
 
 /**
+ * Time of day options for host-level atmosphere
+ */
+export type TimeOfDay = 
+  | 'pre_dawn'
+  | 'dawn'
+  | 'morning'
+  | 'midday'
+  | 'afternoon'
+  | 'golden_hour'
+  | 'sunset'
+  | 'dusk'
+  | 'night'
+  | 'midnight';
+
+/**
  * Simplified DNA structure
  * 
  * All fields are arrays for consistent cascading behavior.
@@ -72,6 +87,12 @@ export interface Host {
   
   /** Genre tag (e.g., 'steampunk', 'post-apocalyptic') - only on Host */
   genre?: string;
+  
+  /** Weather conditions (e.g., 'overcast with light drizzle', 'clear sunny') - only on Host */
+  weather?: string;
+  
+  /** Time of day for atmospheric lighting - only on Host */
+  timeOfDay?: TimeOfDay;
   
   /** Child regions */
   regions?: Region[];

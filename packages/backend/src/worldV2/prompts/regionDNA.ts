@@ -16,12 +16,20 @@ export function buildRegionDNAPrompt(concept: string, host: Host): string {
   const hostContext = {
     name: host.name,
     genre: host.genre,
+    weather: host.weather,
+    timeOfDay: host.timeOfDay,
     dna: host.dna
   };
   
+  // Build environment context
+  const envParts: string[] = [];
+  if (host.weather) envParts.push(`Weather: ${host.weather}`);
+  if (host.timeOfDay) envParts.push(`Time: ${host.timeOfDay.replace('_', ' ')}`);
+  const envLine = envParts.length > 0 ? `\nEnvironment: ${envParts.join(', ')}` : '';
+  
   return `Output ONE valid JSON object. No markdown.
 
-REGION in host "${host.name}" (${host.genre}).
+REGION in host "${host.name}" (${host.genre}).${envLine}
 Delta-only: Only add DNA that differs from host. Empty arrays if no difference.
 
 {

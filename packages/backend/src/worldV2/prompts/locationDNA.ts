@@ -5,13 +5,17 @@
  * promptStructure is generated at /DISPLAY time
  */
 
-import { Region, Host } from '../types';
+import { Region, Host, TimeOfDay } from '../types';
 
 interface CascadedRegion extends Region {
   /** Host DNA for context */
   hostDna?: Host['dna'];
   /** Host name for geographic context */
   hostName?: string;
+  /** Host weather for environment context */
+  hostWeather?: string;
+  /** Host time of day for environment context */
+  hostTimeOfDay?: TimeOfDay;
 }
 
 /**
@@ -27,9 +31,15 @@ export function buildLocationDNAPrompt(concept: string, region: CascadedRegion):
     hostDna: region.hostDna
   };
   
+  // Build environment context
+  const envParts: string[] = [];
+  if (region.hostWeather) envParts.push(`Weather: ${region.hostWeather}`);
+  if (region.hostTimeOfDay) envParts.push(`Time: ${region.hostTimeOfDay.replace('_', ' ')}`);
+  const envLine = envParts.length > 0 ? `\nEnvironment: ${envParts.join(', ')}` : '';
+  
   return `Output ONE valid JSON object. No markdown.
 
-LOCATION in region "${region.name}", host "${region.hostName || 'unknown'}".
+LOCATION in region "${region.name}", host "${region.hostName || 'unknown'}".${envLine}
 Delta-only: Only add DNA that differs from region. Empty arrays if no difference.
 
 {

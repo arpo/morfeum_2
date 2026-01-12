@@ -4,7 +4,7 @@
 
 import { sseService } from '../../services/SSEService';
 import { getStepsForPipeline, type PipelineType } from '../../engine/pipelines/shared/pipelineConfig';
-import type { Host, Region } from '../types';
+import type { Host, Region, TimeOfDay } from '../types';
 
 // Track pipeline configurations for SSE initialization
 export const pipelineConfigs = new Map<string, { pipelineType: string; steps: any[] }>();
@@ -104,12 +104,20 @@ export function findRegionWithHost(
 
 /**
  * Merge host DNA into region for cascaded context
+ * Includes host weather and timeOfDay for environment context
  */
-export function cascadeRegionDNA(region: Region, host: Host): Region & { hostDna: Host['dna']; hostName: string } {
+export function cascadeRegionDNA(region: Region, host: Host): Region & { 
+  hostDna: Host['dna']; 
+  hostName: string;
+  hostWeather?: string;
+  hostTimeOfDay?: TimeOfDay;
+} {
   return {
     ...region,
     hostDna: host.dna,
     hostName: host.name,
+    hostWeather: host.weather,
+    hostTimeOfDay: host.timeOfDay,
     dna: {
       // For each DNA field, use region's if non-empty, else inherit from host
       essence: region.dna.essence.length > 0 ? region.dna.essence : host.dna.essence,

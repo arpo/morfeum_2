@@ -180,11 +180,20 @@ export async function displayHandler(req: Request, res: Response): Promise<void>
         dna: cascadedDNA,
         hostName: host?.name,
         regionName: region?.name,
-        perspectiveGuidance: cameraConfig.perspectiveGuidance
+        perspectiveGuidance: cameraConfig.perspectiveGuidance,
+        weather: host?.weather,
+        timeOfDay: host?.timeOfDay
       });
       
-      // Build final prompt from layers (pass spaceType for locations)
-      const basePrompt = buildPromptFromLayers(promptLayers, cascadedDNA, cameraConfig, nodeType === 'node' ? spaceType : undefined);
+      // Build final prompt from layers (pass spaceType for locations, weather/time from host)
+      const basePrompt = buildPromptFromLayers(
+        promptLayers,
+        cascadedDNA,
+        cameraConfig,
+        nodeType === 'node' ? spaceType : undefined,
+        host?.weather,
+        host?.timeOfDay
+      );
       const imagePrompt = applyMorfeumStyle(basePrompt, {
         creatureMode: populate ? 'populate' : 'none'
       });

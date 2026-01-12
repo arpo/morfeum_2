@@ -83,6 +83,16 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
     description: 'Edit current image with a prompt (e.g., change to winter)',
     category: 'media'
   },
+  SET_TIME: { 
+    requiresNodeType: ['host', 'region', 'location'], 
+    description: 'Set time of day for the world (e.g., night, dawn, golden_hour)',
+    category: 'media'
+  },
+  SET_WEATHER: { 
+    requiresNodeType: ['host', 'region', 'location'], 
+    description: 'Set weather conditions for the world (e.g., heavy rain, foggy)',
+    category: 'media'
+  },
   
   // Character creation commands
   CREATE_CHARACTER_REAL: {

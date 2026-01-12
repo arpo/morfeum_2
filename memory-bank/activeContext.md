@@ -1,5 +1,39 @@
 # Active Context
 
+## 2026-01-12 - Weather & Time of Day Commands ✅
+
+Added dynamic weather and time control for V2 world system.
+
+### New Props on Host Nodes
+- `weather` - String describing weather conditions (e.g., "Overcast with light drizzle")
+- `timeOfDay` - Enum: pre_dawn, dawn, morning, midday, afternoon, golden_hour, sunset, dusk, night, midnight
+
+These are NOT part of DNA. They're read-time properties that cascade to all child nodes during image generation.
+
+### New Slash Commands
+- `/SET_TIME <time>` - Set time of day (e.g., `/SET_TIME night`)
+- `/SET_WEATHER <description>` - Set weather (e.g., `/SET_WEATHER heavy rain`)
+
+**Available from:** Any node (host, region, location) - automatically finds and updates parent host
+
+### Files Created
+**Backend:**
+- `packages/backend/src/worldV2/handlers/setTimeHandler.ts`
+- `packages/backend/src/worldV2/handlers/setWeatherHandler.ts`
+- Routes: `POST /api/v2/set-time`, `POST /api/v2/set-weather`
+
+**Frontend:**
+- `packages/frontend/src/worldV2/commands/handlers/setTimeHandler.ts`
+- `packages/frontend/src/worldV2/commands/handlers/setWeatherHandler.ts`
+
+**Config:**
+- Added to `SLASH_COMMANDS` in `packages/backend/src/config/navigation.ts`
+
+### Dynamic Architecture
+Weather/time are stored on host → read fresh each time `/DISPLAY` generates an image → cascaded to all child nodes. Changing time to "night" then running `/DISPLAY` on any node shows night lighting.
+
+---
+
 ## 2026-01-12 - V2 Code Cleanup & Modularization
 
 ### Code Cleanup Complete ✅

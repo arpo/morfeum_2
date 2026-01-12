@@ -9,7 +9,9 @@ import {
   newHostHandler,
   newRegionHandler,
   newLocationHandler,
-  eventsHandler
+  eventsHandler,
+  setTimeHandler,
+  setWeatherHandler
 } from './handlers';
 import { displayHandler } from './display';
 
@@ -29,5 +31,11 @@ router.post('/new-location', newLocationHandler);
 
 // DISPLAY Command
 router.post('/display', displayHandler);
+
+// SET_TIME Command - Update host timeOfDay
+router.post('/set-time', setTimeHandler);
+
+// SET_WEATHER Command - Update host weather
+router.post('/set-weather', setWeatherHandler);
 
 export { router as worldV2Router };

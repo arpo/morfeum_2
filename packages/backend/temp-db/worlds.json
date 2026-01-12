@@ -1,105 +1,210 @@
 {
   "nodes": {
-    "v2-1768220875965-hozpk4324": {
-      "id": "v2-1768220875965-hozpk4324",
+    "v2-1768224807050-e8qci3thc": {
+      "id": "v2-1768224807050-e8qci3thc",
       "type": "host",
-      "name": "London",
-      "slug": "london",
-      "description": "The sprawling, historic, and dynamic capital of the United Kingdom, a global hub of culture, finance, and fashion.",
+      "name": "Barcelona",
+      "slug": "barcelona",
+      "description": "A vibrant coastal city in northeastern Spain, known for its rich history, diverse architecture, and lively culture. It is the capital of Catalonia.",
       "genre": "Urban",
+      "weather": "clear and sunny",
+      "timeOfDay": "night",
       "dna": {
         "essence": [
-          "historical depth",
-          "contemporary dynamism"
+          "mediterranean vibrancy",
+          "architectural innovation"
         ],
         "formsAndMaterials": [
-          "Victorian architecture",
-          "glass skyscrapers",
-          "red brick"
+          " Gaudí's organic curves",
+          "classical stone"
         ],
         "colorAndLight": [
-          "foggy greys",
-          "warm streetlights",
-          "vibrant market colors"
+          "warm terracotta hues",
+          "sharp sunlit contrasts"
         ],
         "atmosphere": [
-          "sophisticated bustle",
-          "timeless grandeur"
+          "energetic",
+          "artistic"
         ],
         "banned": [
-          "sci-fi holographic displays",
-          "medieval banners"
+          "medieval banners",
+          "futuristic chrome"
         ]
       },
       "spaceType": "exterior",
-      "primaryMedia": "media-1768222008559-rffmez94c"
+      "primaryMedia": "media-1768224824341-xxed6wai8"
     },
-    "v2-1768220890179-fctj9zk5d": {
-      "id": "v2-1768220890179-fctj9zk5d",
+    "v2-1768224892020-zch6hncmk": {
+      "id": "v2-1768224892020-zch6hncmk",
       "type": "region",
-      "name": "Camden",
-      "slug": "camden",
-      "description": "A vibrant and eclectic borough in London, known for its alternative culture, bustling markets, and rich musical history.",
+      "name": "Gràcia",
+      "slug": "gracia",
+      "description": "The Gràcia district, a formerly independent town, retains its distinct village charm within Barcelona, known for its lively plazas, independent boutiques, and community spirit.",
       "dna": {
         "essence": [
-          "alternative culture",
-          "punk rock heritage"
+          "local community spirit",
+          "bohemian artistic flair"
         ],
         "formsAndMaterials": [
-          "Victorian warehouses",
-          "street art",
-          "markets"
+          "intricate iron balconies",
+          "tree-lined pedestrian streets"
         ],
         "colorAndLight": [
-          "vibrant graffiti",
-          "neon signs"
+          "vibrant street art",
+          "soft dappled sunlight"
         ],
         "atmosphere": [
-          "bohemian energy",
-          "creative chaos"
+          "laid-back",
+          "festive"
         ],
         "banned": []
       },
-      "primaryMedia": "media-1768221988405-q97at6unb"
+      "primaryMedia": "media-1768224941993-14mbaweuq"
     },
-    "v2-1768221943033-1w1mvy076": {
-      "id": "v2-1768221943033-1w1mvy076",
+    "v2-1768224912494-kobw4o18r": {
+      "id": "v2-1768224912494-kobw4o18r",
+      "type": "region",
+      "name": "La Barceloneta",
+      "slug": "la-barceloneta",
+      "description": "A vibrant seaside neighborhood in Barcelona, known for its beaches, seafood restaurants, and lively atmosphere.",
+      "dna": {
+        "essence": [
+          "mediterranean vibrancy",
+          "maritime charm"
+        ],
+        "formsAndMaterials": [
+          "modern beachfront structures",
+          "historic fishing quarter architecture"
+        ],
+        "colorAndLight": [
+          "bright seaside blues",
+          "golden hour glow"
+        ],
+        "atmosphere": [
+          "leisurely",
+          "bustling"
+        ],
+        "banned": [
+          "industrial pollution",
+          "overcrowded tourist traps"
+        ]
+      },
+      "primaryMedia": "media-1768224926575-7rxbf5az3"
+    },
+    "v2-1768224987686-0ltn03laa": {
+      "id": "v2-1768224987686-0ltn03laa",
       "type": "location",
-      "name": "Camden Clubwear Emporium",
-      "slug": "camden-clubwear-emporium",
+      "name": "Trendy Gràcia Restaurant",
+      "slug": "trendy-gracia-restaurant",
       "spaceType": "exterior",
-      "description": "A vibrant hub for cutting-edge club attire, nestled within the eclectic heart of Camden.",
+      "description": "A popular, modern eatery in the heart of Gràcia, Barcelona, bustling with activity under the night sky.",
       "dna": {
         "essence": [],
         "formsAndMaterials": [
-          "street art",
-          "markets"
+          "outdoor seating",
+          "modern lighting fixtures"
         ],
         "colorAndLight": [
-          "vibrant graffiti",
-          "neon signs"
+          "warm ambient lighting",
+          "contrasting neon signs"
         ],
         "atmosphere": [
-          "bohemian energy",
-          "creative chaos"
+          "lively",
+          "social"
         ],
         "banned": []
       },
-      "primaryMedia": "media-1768221964017-r72u8gf96"
+      "primaryMedia": "media-1768224999846-71fft0kkr"
+    },
+    "v2-1768225041256-5d6rg65fi": {
+      "id": "v2-1768225041256-5d6rg65fi",
+      "type": "location",
+      "name": "Plaça de la Vila de Gràcia",
+      "slug": "placa-de-la-vila-de-gracia",
+      "spaceType": "exterior",
+      "description": "The heart of the Gràcia neighborhood in Barcelona, a bustling main square alive with local life and artistic expression.",
+      "dna": {
+        "essence": [
+          "local community spirit",
+          "bohemian artistic flair"
+        ],
+        "formsAndMaterials": [
+          "intricate iron balconies",
+          "tree-lined pedestrian streets"
+        ],
+        "colorAndLight": [
+          "vibrant street art",
+          "warm lamplight"
+        ],
+        "atmosphere": [
+          "lively",
+          "social",
+          "festive"
+        ],
+        "banned": [
+          "medieval banners",
+          "futuristic chrome"
+        ]
+      },
+      "primaryMedia": "media-1768225054493-t9dcxgnhn"
+    },
+    "v2-1768225150468-d7y57s6wx": {
+      "id": "v2-1768225150468-d7y57s6wx",
+      "type": "location",
+      "name": "La Barceloneta Beach Bar",
+      "slug": "la-barceloneta-beach-bar",
+      "spaceType": "exterior",
+      "description": "A lively beach bar in La Barceloneta, Barcelona, buzzing with cool people and a DJ setting the vibe.",
+      "dna": {
+        "essence": [
+          "cool social scene",
+          "electronic music pulse"
+        ],
+        "formsAndMaterials": [
+          "contemporary bar design",
+          "sandy beach surroundings"
+        ],
+        "colorAndLight": [
+          "cool blue ambient lighting",
+          "starlight"
+        ],
+        "atmosphere": [
+          "energetic nightlife",
+          "chic"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1768225163781-qngm0jfv5"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "v2-1768220875965-hozpk4324",
+      "id": "v2-1768224807050-e8qci3thc",
       "type": "host",
       "children": [
         {
-          "id": "v2-1768220890179-fctj9zk5d",
+          "id": "v2-1768224892020-zch6hncmk",
           "type": "region",
           "children": [
             {
-              "id": "v2-1768221943033-1w1mvy076",
+              "id": "v2-1768224987686-0ltn03laa",
+              "type": "location",
+              "children": []
+            },
+            {
+              "id": "v2-1768225041256-5d6rg65fi",
+              "type": "location",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "v2-1768224912494-kobw4o18r",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1768225150468-d7y57s6wx",
               "type": "location",
               "children": []
             }
@@ -109,6 +214,6 @@
     }
   ],
   "pinnedIds": [
-    "v2-1768220875965-hozpk4324"
+    "v2-1768224807050-e8qci3thc"
   ]
 }

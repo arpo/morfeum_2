@@ -5,7 +5,7 @@
  */
 
 import { generateText } from '../../services/mzoo/services/textGeneration';
-import type { DNA } from '../types';
+import type { DNA, TimeOfDay } from '../types';
 
 /**
  * Structured image prompt layers
@@ -33,13 +33,17 @@ interface ImagePromptInput {
   regionName?: string;
   /** Camera perspective guidance from centralized cameraSettings */
   perspectiveGuidance: string;
+  /** Weather conditions from host (cascades to all children) */
+  weather?: string;
+  /** Time of day from host (cascades to all children) */
+  timeOfDay?: TimeOfDay;
 }
 
 /**
  * Build the LLM prompt for generating image layers
  */
 function buildImagePromptSystemMessage(input: ImagePromptInput): string {
-  const { nodeType, name, description, spaceType, dna, hostName, regionName, perspectiveGuidance } = input;
+  const { nodeType, name, description, spaceType, dna, hostName, regionName, perspectiveGuidance, weather, timeOfDay } = input;
   
   const context = nodeType === 'host' 
     ? name
@@ -47,8 +51,14 @@ function buildImagePromptSystemMessage(input: ImagePromptInput): string {
     ? `${name} in ${hostName}`
     : `${name} in ${regionName}, ${hostName}`;
 
+  // Build environment context from weather and time
+  const envContext: string[] = [];
+  if (weather) envContext.push(`Weather: ${weather}`);
+  if (timeOfDay) envContext.push(`Time: ${timeOfDay.replace('_', ' ')}`);
+  const envLine = envContext.length > 0 ? `\nENVIRONMENT: ${envContext.join(', ')}` : '';
+
   return `Generate JSON image prompt for ${nodeType}: ${context}
-${description} | ${spaceType || 'exterior'}
+${description} | ${spaceType || 'exterior'}${envLine}
 
 ${perspectiveGuidance}
 
@@ -58,6 +68,7 @@ Return ONLY JSON:
 {"background":"far layer","midground":"middle layer","foreground":"close layer","lighting":"light details","atmosphere":"mood/effects"}
 
 Be specific to "${name}". Match layers to camera perspective.
+IMPORTANT: Lighting MUST reflect the time of day (${timeOfDay || 'midday'}) and weather (${weather || 'clear'}).
 REAL PLACES: If this is a real existing location, describe it accurately to match real-world appearance.`;
 }
 
@@ -163,7 +174,9 @@ export function buildPromptFromLayers(
   layers: ImagePromptLayers,
   dna: DNA,
   cameraConfig: { composition: string; shot: string; lens: string; light: string },
-  spaceType?: 'interior' | 'exterior'
+  spaceType?: 'interior' | 'exterior',
+  weather?: string,
+  timeOfDay?: TimeOfDay
 ): string {
   // Build NEG items: DNA banned + spaceType enforcement
   const negItems: string[] = [...dna.banned];
@@ -182,6 +195,12 @@ export function buildPromptFromLayers(
     ? `[SPACE:] ${spaceType.toUpperCase()} - ${spaceType === 'exterior' ? 'OUTSIDE view of the building/location' : 'INSIDE the space'}`
     : '';
   
+  // Build environment line
+  const envParts: string[] = [];
+  if (weather) envParts.push(weather);
+  if (timeOfDay) envParts.push(timeOfDay.replace('_', ' '));
+  const envLine = envParts.length > 0 ? `[ENVIRONMENT:] ${envParts.join(', ')}` : '';
+
   return `${layers.name}. ${layers.description}
 
 SCENE LAYERS:
@@ -196,6 +215,7 @@ Visual Identity: ${dna.essence.join(', ')}
 Forms & Materials: ${dna.formsAndMaterials.join(', ')}
 
 ${spaceTypeLine}
+${envLine}
 [CAMERA:] ${cameraConfig.shot}
 [LENS:] ${cameraConfig.lens}
 [LIGHT:] ${cameraConfig.light}
