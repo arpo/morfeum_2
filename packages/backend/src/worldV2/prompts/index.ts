@@ -7,3 +7,9 @@
 export { buildHostDNAPrompt, parseHostResponse } from './hostDNA';
 export { buildRegionDNAPrompt, parseRegionResponse } from './regionDNA';
 export { buildLocationDNAPrompt, parseLocationResponse } from './locationDNA';
+export { 
+  buildWorldLocationCategorizationPrompt, 
+  parseWorldLocationCategorizationResponse,
+  type WorldLocationCategorization,
+  type VisualElements
+} from './worldLocationCategorization';

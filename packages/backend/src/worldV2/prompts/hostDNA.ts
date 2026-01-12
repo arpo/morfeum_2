@@ -6,12 +6,40 @@
  */
 
 import type { TimeOfDay } from '../types';
+import type { VisualElements } from './worldLocationCategorization';
+
+/**
+ * Options for building host DNA with visual constraints
+ */
+export interface HostDNAOptions {
+  visualConstraints?: VisualElements;
+}
 
 /**
  * Build the prompt for generating a Host node with DNA
  * @param concept - User's world concept description
+ * @param options - Optional visual constraints extracted from full description
  */
-export function buildHostDNAPrompt(concept: string): string {
+export function buildHostDNAPrompt(concept: string, options?: HostDNAOptions): string {
+  const visualConstraintsSection = options?.visualConstraints ? `
+
+VISUAL CONSTRAINTS (from original description - MUST be followed):
+These visual elements were extracted from the user's original description.
+You MUST incorporate them into the DNA to ensure consistency:
+- Colors to use in colorAndLight: ${JSON.stringify(options.visualConstraints.colors)}
+- Lighting style: ${options.visualConstraints.lighting}
+- Atmosphere/style values: ${JSON.stringify(options.visualConstraints.atmosphere)}
+${options.visualConstraints.timeOfDay ? `- timeOfDay: ${options.visualConstraints.timeOfDay}` : ''}
+${options.visualConstraints.weather ? `- weather: ${options.visualConstraints.weather}` : ''}
+
+MANDATORY DNA REQUIREMENTS:
+1. dna.colorAndLight MUST include ALL colors from the constraints above
+2. dna.atmosphere MUST include ALL atmosphere values from the constraints above
+3. dna.essence MUST include key style/mood terms from the atmosphere values above (e.g., "whimsical design", "futuristic architecture", "surreal landscapes")
+
+The essence array defines the core visual identity of this world. Any style terms like "whimsical", "futuristic", "organic", "ethereal" from the atmosphere constraints MUST be reflected in essence to ensure all child locations inherit these qualities.
+` : '';
+
   return `Output ONE valid JSON object. No markdown, no comments.
 
 {
@@ -41,7 +69,7 @@ RULES:
 - banned: Only visual motifs causing genre drift (e.g. "cyberpunk neon", "fantasy magic props"). NOT behaviors, NOT palette constraints.
 - weather: Describe current weather conditions (e.g. "overcast with light drizzle", "clear and sunny", "heavy fog"). If user specifies weather, use it. Otherwise, choose something typical for the location.
 - timeOfDay: MUST be one of: pre_dawn, dawn, morning, midday, afternoon, golden_hour, sunset, dusk, night, midnight. If user specifies time, use it. Otherwise, default to "midday" for neutral lighting.
-
+${visualConstraintsSection}
 CONCEPT: ${concept}`;
 }
 

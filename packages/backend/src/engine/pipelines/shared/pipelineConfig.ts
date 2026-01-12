@@ -124,6 +124,17 @@ export const PIPELINE_STEPS = {
   v2Display: [
     { id: 'prompt_generation', name: 'Creating Image Prompt', duration: 4000 },
     { id: 'image_generation', name: 'Generating Image', duration: 2500 }
+  ],
+  
+  /** V2: Create full world with Host + Region + Location + auto-Display */
+  v2CreateWorldLocation: [
+    { id: 'categorization', name: 'Analyzing Concept', duration: 3000 },
+    { id: 'host_dna', name: 'Creating Host', duration: 2000 },
+    { id: 'region_dna', name: 'Creating Region', duration: 2000 },
+    { id: 'location_dna', name: 'Creating Location', duration: 2000 },
+    { id: 'saving', name: 'Saving World', duration: 500 },
+    { id: 'prompt_generation', name: 'Creating Image Prompt', duration: 4000 },
+    { id: 'image_generation', name: 'Generating Image', duration: 2500 }
   ]
 } as const;
 

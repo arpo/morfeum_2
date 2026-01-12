@@ -1,5 +1,41 @@
 # Active Context
 
+## 2026-01-12 - NEW_WORLD_LOCATION Command ✅
+
+Added `/NEW_WORLD_LOCATION` command that creates a complete world hierarchy (Host + Region + Location) from a single concept.
+
+### Usage Examples
+```bash
+/NEW_WORLD_LOCATION a pub in Camden in London
+/NEW_WORLD_LOCATION A multi-tiered white structure over sandy desert with pink moon
+```
+
+### Visual Consistency Feature
+Complex descriptions (like full image descriptions) now maintain visual consistency across all nodes:
+1. **Categorization step** extracts `visualElements` from full description:
+   - colors, lighting, atmosphere, timeOfDay, weather
+2. **Host DNA prompt** receives these as constraints (MUST use)
+3. **Location DNA** inherits from host naturally
+
+**Files Created/Modified:**
+- `packages/backend/src/worldV2/prompts/worldLocationCategorization.ts` - Added `VisualElements` interface and extraction
+- `packages/backend/src/worldV2/prompts/hostDNA.ts` - Added `visualConstraints` parameter
+- `packages/backend/src/worldV2/handlers/newWorldLocationHandler.ts` - New handler
+- `packages/frontend/src/worldV2/commands/handlers/newWorldLocationHandler.ts` - Frontend handler
+- `packages/frontend/src/features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - Added to exception list
+
+### Pipeline Flow
+```
+1. Categorize: Concept → Host/Region/Location + VisualElements
+2. Host DNA: Generated with visual constraints locked
+3. Region DNA: Pass-through or real region
+4. Location DNA: Inherits cascaded DNA from host
+5. Save all nodes + build world tree
+6. Generate image for location
+```
+
+---
+
 ## 2026-01-12 - Weather & Time of Day Commands ✅
 
 Added dynamic weather and time control for V2 world system.

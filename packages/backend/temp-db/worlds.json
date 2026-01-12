@@ -1,210 +1,127 @@
 {
   "nodes": {
-    "v2-1768224807050-e8qci3thc": {
-      "id": "v2-1768224807050-e8qci3thc",
+    "v2-1768232318899-klg4t2w0b": {
+      "id": "v2-1768232318899-klg4t2w0b",
       "type": "host",
-      "name": "Barcelona",
-      "slug": "barcelona",
-      "description": "A vibrant coastal city in northeastern Spain, known for its rich history, diverse architecture, and lively culture. It is the capital of Catalonia.",
-      "genre": "Urban",
-      "weather": "clear and sunny",
-      "timeOfDay": "night",
+      "name": "Xylos",
+      "slug": "xylos",
+      "description": "A vibrant, surreal alien landscape bathed in bright daylight under a clear, deep blue sky with a distant pink-orange celestial body. The terrain is an orange-brown sandy expanse dotted with patches of green vegetation. Structures feature red-rimmed oval windows and are primarily constructed with earthy tones, white, red, yellow, blue, and green. A lone figure with light blonde hair, wearing a light-colored dress, surveys the scene.",
+      "genre": "Sci-Fi",
+      "weather": "clear",
+      "timeOfDay": "midday",
       "dna": {
         "essence": [
-          "mediterranean vibrancy",
-          "architectural innovation"
+          "surreal landscapes",
+          "whimsical design",
+          "futuristic structures",
+          "alien flora"
         ],
         "formsAndMaterials": [
-          " Gaudí's organic curves",
-          "classical stone"
+          "smooth, organic shapes",
+          "crystalline formations",
+          "sandy terrain"
         ],
         "colorAndLight": [
-          "warm terracotta hues",
-          "sharp sunlit contrasts"
+          "bright daylight",
+          "clear, deep blue sky",
+          "soft pink-orange orb",
+          "orange-brown sandy terrain",
+          "green vegetation",
+          "earthy tones",
+          "white",
+          "red",
+          "yellow",
+          "blue",
+          "green",
+          "red-rimmed oval window",
+          "light blonde hair",
+          "light-colored dress"
         ],
         "atmosphere": [
-          "energetic",
-          "artistic"
-        ],
-        "banned": [
-          "medieval banners",
-          "futuristic chrome"
-        ]
-      },
-      "spaceType": "exterior",
-      "primaryMedia": "media-1768224824341-xxed6wai8"
-    },
-    "v2-1768224892020-zch6hncmk": {
-      "id": "v2-1768224892020-zch6hncmk",
-      "type": "region",
-      "name": "Gràcia",
-      "slug": "gracia",
-      "description": "The Gràcia district, a formerly independent town, retains its distinct village charm within Barcelona, known for its lively plazas, independent boutiques, and community spirit.",
-      "dna": {
-        "essence": [
-          "local community spirit",
-          "bohemian artistic flair"
-        ],
-        "formsAndMaterials": [
-          "intricate iron balconies",
-          "tree-lined pedestrian streets"
-        ],
-        "colorAndLight": [
-          "vibrant street art",
-          "soft dappled sunlight"
-        ],
-        "atmosphere": [
-          "laid-back",
-          "festive"
+          "vibrant",
+          "surreal",
+          "alien",
+          "whimsical",
+          "futuristic",
+          "magnificent",
+          "festive",
+          "graceful",
+          "delicate",
+          "serene",
+          "fantastical",
+          "otherworldly"
         ],
         "banned": []
       },
-      "primaryMedia": "media-1768224941993-14mbaweuq"
-    },
-    "v2-1768224912494-kobw4o18r": {
-      "id": "v2-1768224912494-kobw4o18r",
-      "type": "region",
-      "name": "La Barceloneta",
-      "slug": "la-barceloneta",
-      "description": "A vibrant seaside neighborhood in Barcelona, known for its beaches, seafood restaurants, and lively atmosphere.",
-      "dna": {
-        "essence": [
-          "mediterranean vibrancy",
-          "maritime charm"
-        ],
-        "formsAndMaterials": [
-          "modern beachfront structures",
-          "historic fishing quarter architecture"
-        ],
-        "colorAndLight": [
-          "bright seaside blues",
-          "golden hour glow"
-        ],
-        "atmosphere": [
-          "leisurely",
-          "bustling"
-        ],
-        "banned": [
-          "industrial pollution",
-          "overcrowded tourist traps"
-        ]
-      },
-      "primaryMedia": "media-1768224926575-7rxbf5az3"
-    },
-    "v2-1768224987686-0ltn03laa": {
-      "id": "v2-1768224987686-0ltn03laa",
-      "type": "location",
-      "name": "Trendy Gràcia Restaurant",
-      "slug": "trendy-gracia-restaurant",
       "spaceType": "exterior",
-      "description": "A popular, modern eatery in the heart of Gràcia, Barcelona, bustling with activity under the night sky.",
+      "primaryMedia": "media-1768232351773-f5zxnyw4c"
+    },
+    "v2-1768232318899-k5xn6qgjo": {
+      "id": "v2-1768232318899-k5xn6qgjo",
+      "type": "region",
+      "name": "Region",
+      "slug": "region",
+      "description": "Pass-through region in Xylos",
+      "isPassThrough": true,
       "dna": {
         "essence": [],
+        "formsAndMaterials": [],
+        "colorAndLight": [],
+        "atmosphere": [],
+        "banned": []
+      }
+    },
+    "v2-1768232320841-ocrwjlwhq": {
+      "id": "v2-1768232320841-ocrwjlwhq",
+      "type": "location",
+      "name": "Xylos's Magnificent Structure",
+      "slug": "xylos-magnificent-structure",
+      "spaceType": "exterior",
+      "description": "A magnificent, multi-layered structure on Xylos, resembling a whimsical, futuristic building or spacecraft. Its white oval main body is adorned with diamond-shaped windows of red, yellow, blue, and green, topped with slender yellow and red spires. Smaller, bulbous pods and platforms with colorful windows extend from its sides. The underside is a complex, organic mass of colorful elements. Elongated, pendulum-like ornaments and banners dangle from the structure. A graceful, curving white staircase with glowing yellow details descends from the lower part of the main structure towards the ground. A small, delicate character with short, light blonde hair, wearing a frilly, light-colored dress with a full skirt and short sleeves, stands at the base, holding a large cluster of bright yellow flowers or objects, her bare legs extending into white knee-high coverings. The weather is clear at midday.",
+      "dna": {
+        "essence": [
+          "futuristic structures",
+          "whimsical design"
+        ],
         "formsAndMaterials": [
-          "outdoor seating",
-          "modern lighting fixtures"
+          "smooth, organic shapes"
         ],
         "colorAndLight": [
-          "warm ambient lighting",
-          "contrasting neon signs"
+          "bright daylight",
+          "clear, deep blue sky",
+          "white",
+          "red",
+          "yellow",
+          "blue",
+          "green",
+          "red-rimmed oval window",
+          "light blonde hair",
+          "light-colored dress"
         ],
         "atmosphere": [
-          "lively",
-          "social"
+          "magnificent",
+          "whimsical",
+          "futuristic",
+          "graceful",
+          "delicate"
         ],
         "banned": []
       },
-      "primaryMedia": "media-1768224999846-71fft0kkr"
-    },
-    "v2-1768225041256-5d6rg65fi": {
-      "id": "v2-1768225041256-5d6rg65fi",
-      "type": "location",
-      "name": "Plaça de la Vila de Gràcia",
-      "slug": "placa-de-la-vila-de-gracia",
-      "spaceType": "exterior",
-      "description": "The heart of the Gràcia neighborhood in Barcelona, a bustling main square alive with local life and artistic expression.",
-      "dna": {
-        "essence": [
-          "local community spirit",
-          "bohemian artistic flair"
-        ],
-        "formsAndMaterials": [
-          "intricate iron balconies",
-          "tree-lined pedestrian streets"
-        ],
-        "colorAndLight": [
-          "vibrant street art",
-          "warm lamplight"
-        ],
-        "atmosphere": [
-          "lively",
-          "social",
-          "festive"
-        ],
-        "banned": [
-          "medieval banners",
-          "futuristic chrome"
-        ]
-      },
-      "primaryMedia": "media-1768225054493-t9dcxgnhn"
-    },
-    "v2-1768225150468-d7y57s6wx": {
-      "id": "v2-1768225150468-d7y57s6wx",
-      "type": "location",
-      "name": "La Barceloneta Beach Bar",
-      "slug": "la-barceloneta-beach-bar",
-      "spaceType": "exterior",
-      "description": "A lively beach bar in La Barceloneta, Barcelona, buzzing with cool people and a DJ setting the vibe.",
-      "dna": {
-        "essence": [
-          "cool social scene",
-          "electronic music pulse"
-        ],
-        "formsAndMaterials": [
-          "contemporary bar design",
-          "sandy beach surroundings"
-        ],
-        "colorAndLight": [
-          "cool blue ambient lighting",
-          "starlight"
-        ],
-        "atmosphere": [
-          "energetic nightlife",
-          "chic"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1768225163781-qngm0jfv5"
+      "primaryMedia": "media-1768232326685-0wf6f464h"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "v2-1768224807050-e8qci3thc",
+      "id": "v2-1768232318899-klg4t2w0b",
       "type": "host",
       "children": [
         {
-          "id": "v2-1768224892020-zch6hncmk",
+          "id": "v2-1768232318899-k5xn6qgjo",
           "type": "region",
           "children": [
             {
-              "id": "v2-1768224987686-0ltn03laa",
-              "type": "location",
-              "children": []
-            },
-            {
-              "id": "v2-1768225041256-5d6rg65fi",
-              "type": "location",
-              "children": []
-            }
-          ]
-        },
-        {
-          "id": "v2-1768224912494-kobw4o18r",
-          "type": "region",
-          "children": [
-            {
-              "id": "v2-1768225150468-d7y57s6wx",
+              "id": "v2-1768232320841-ocrwjlwhq",
               "type": "location",
               "children": []
             }
@@ -214,6 +131,6 @@
     }
   ],
   "pinnedIds": [
-    "v2-1768224807050-e8qci3thc"
+    "v2-1768232318899-klg4t2w0b"
   ]
 }

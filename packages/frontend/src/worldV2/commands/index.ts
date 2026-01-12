@@ -10,6 +10,7 @@ import {
   handleNewHostCommand,
   handleNewRegionCommand,
   handleNewLocationCommand,
+  handleNewWorldLocationCommand,
   handleDisplayCommand,
   handleSetTimeCommand,
   handleSetWeatherCommand
@@ -18,7 +19,7 @@ import {
 // Re-export types
 export type { V2CommandCallbacks, V2CommandResult } from './types';
 
-const V2_COMMANDS = ['NEW_HOST', 'NEW_REGION2', 'NEW_LOCATION2', 'DISPLAY', 'SET_TIME', 'SET_WEATHER'] as const;
+const V2_COMMANDS = ['NEW_HOST', 'NEW_REGION2', 'NEW_LOCATION2', 'NEW_WORLD_LOCATION', 'DISPLAY', 'SET_TIME', 'SET_WEATHER'] as const;
 
 /**
  * Check if command is a V2 command
@@ -41,6 +42,8 @@ export async function handleV2Command(
   switch (command) {
     case 'NEW_HOST':
       return handleNewHostCommand(parsedCommand, callbacks);
+    case 'NEW_WORLD_LOCATION':
+      return handleNewWorldLocationCommand(parsedCommand, callbacks);
     case 'NEW_REGION2':
       return handleNewRegionCommand(parsedCommand, callbacks, activeEntityId, activeEntityType);
     case 'NEW_LOCATION2':

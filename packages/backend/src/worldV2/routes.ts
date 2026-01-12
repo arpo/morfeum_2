@@ -9,6 +9,7 @@ import {
   newHostHandler,
   newRegionHandler,
   newLocationHandler,
+  newWorldLocationHandler,
   eventsHandler,
   setTimeHandler,
   setWeatherHandler
@@ -31,6 +32,9 @@ router.post('/new-location', newLocationHandler);
 
 // DISPLAY Command
 router.post('/display', displayHandler);
+
+// NEW_WORLD_LOCATION Command - Create complete world hierarchy (Host + Region + Location) with image
+router.post('/new-world-location', newWorldLocationHandler);
 
 // SET_TIME Command - Update host timeOfDay
 router.post('/set-time', setTimeHandler);
