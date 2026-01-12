@@ -8,6 +8,7 @@
 import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locations';
 import { clearEntityMediaCache } from '@/services/mediaService';
+import { createEntitySession } from '@/utils/entity/sessionManager';
 import type { ParsedCommand } from '@/features/spawn-input/SpawnInputBar/commandParser';
 
 interface V2CommandCallbacks {
@@ -427,18 +428,20 @@ async function handleDisplayCommand(
           console.log('[V2] DISPLAY completion received:', completedData);
           
           if (completedData.imageUrl) {
-            console.log('[V2] Image generated:', completedData.imageUrl);
-            
             // Clear media cache for this entity
             clearEntityMediaCache(activeEntityId!);
             
             // Reload locations store from backend to get the updated node data
             await useLocationsStore.getState().loadFromBackend();
             
-            // Dispatch event to trigger WorldView refresh (same pattern as V1 pipelines)
-            window.dispatchEvent(new CustomEvent('imageGenerated', { 
-              detail: { entityId: activeEntityId } 
-            }));
+            // Update entity session with new image (same pattern as /VIEW command)
+            createEntitySession(useStore.getState(), {
+              id: activeEntityId!,
+              name: completedData.node?.name || 'Unknown',
+              type: 'location',
+              primaryMedia: completedData.mediaId,
+              imageUrl: completedData.imageUrl
+            });
           }
           setIsMoving(false);
         },
