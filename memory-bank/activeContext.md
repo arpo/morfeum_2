@@ -1,37 +1,66 @@
 # Active Context
 
-## 2026-01-12 - NEW_WORLD_LOCATION Command ✅
+## 2026-01-12 - NEW_WORLD_LOCATION Single LLM Call Refactor ✅
 
-Added `/NEW_WORLD_LOCATION` command that creates a complete world hierarchy (Host + Region + Location) from a single concept.
+Refactored `/NEW_WORLD_LOCATION` from 4 LLM calls to 1 for better performance.
 
-### Usage Examples
-```bash
-/NEW_WORLD_LOCATION a pub in Camden in London
-/NEW_WORLD_LOCATION A multi-tiered white structure over sandy desert with pink moon
+### Before (4 LLM calls)
+```
+1. Categorization → Parse into host/region/location
+2. Host DNA → Generate host
+3. Region DNA → Generate region  
+4. Location DNA → Generate location
 ```
 
-### Visual Consistency Feature
-Complex descriptions (like full image descriptions) now maintain visual consistency across all nodes:
-1. **Categorization step** extracts `visualElements` from full description:
-   - colors, lighting, atmosphere, timeOfDay, weather
-2. **Host DNA prompt** receives these as constraints (MUST use)
-3. **Location DNA** inherits from host naturally
-
-**Files Created/Modified:**
-- `packages/backend/src/worldV2/prompts/worldLocationCategorization.ts` - Added `VisualElements` interface and extraction
-- `packages/backend/src/worldV2/prompts/hostDNA.ts` - Added `visualConstraints` parameter
-- `packages/backend/src/worldV2/handlers/newWorldLocationHandler.ts` - New handler
-- `packages/frontend/src/worldV2/commands/handlers/newWorldLocationHandler.ts` - Frontend handler
-- `packages/frontend/src/features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - Added to exception list
-
-### Pipeline Flow
+### After (1 LLM call)
 ```
-1. Categorize: Concept → Host/Region/Location + VisualElements
-2. Host DNA: Generated with visual constraints locked
-3. Region DNA: Pass-through or real region
-4. Location DNA: Inherits cascaded DNA from host
-5. Save all nodes + build world tree
-6. Generate image for location
+1. worldLocationFull → Generate all 3 nodes in single call
+```
+
+### Modular Prompt Architecture
+Created shared prompt sections to avoid duplication:
+
+```
+packages/backend/src/worldV2/prompts/
+├── shared/
+│   └── dnaSchema.ts          # DNA_SCHEMA, DNA_FIELD_RULES, HOST_RULES, etc.
+├── worldLocationFull.ts       # Combined prompt (imports from shared)
+├── hostDNA.ts                 # Individual (can import shared later)
+├── regionDNA.ts
+├── locationDNA.ts
+└── index.ts
+```
+
+**Shared sections in `dnaSchema.ts`:**
+- `DNA_SCHEMA` - JSON structure for DNA
+- `DNA_FIELD_RULES` - Explanations for each field
+- `DNA_DELTA_RULES` - Child inheritance rules
+- `HOST_RULES`, `REGION_RULES`, `LOCATION_RULES`
+- `ATMOSPHERE_EXTRACTION` - Style/mood term extraction
+- `VISUAL_CONSTRAINTS_RULES` - Consistency enforcement
+
+### Visual Consistency (Enhanced)
+Mood/style terms like "whimsical", "ethereal", "surreal" are now:
+1. Explicitly listed in prompt guidance
+2. Extracted to `atmosphere` array
+3. Enforced in host `dna.essence` AND `dna.atmosphere`
+4. Inherited by all child nodes
+
+### Files Modified
+- `worldLocationFull.ts` - NEW: Combined prompt
+- `shared/dnaSchema.ts` - NEW: Shared prompt sections
+- `newWorldLocationHandler.ts` - Uses single LLM call
+- `pipelineConfig.ts` - Updated steps (7→4)
+- `prompts/index.ts` - New exports
+
+### Pipeline Steps (Updated)
+```typescript
+v2CreateWorldLocation: [
+  { id: 'world_creation', name: 'Creating World', duration: 4000 },
+  { id: 'saving', name: 'Saving World', duration: 500 },
+  { id: 'prompt_generation', name: 'Creating Image Prompt', duration: 4000 },
+  { id: 'image_generation', name: 'Generating Image', duration: 2500 }
+]
 ```
 
 ---

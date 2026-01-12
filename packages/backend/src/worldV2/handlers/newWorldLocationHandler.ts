@@ -1,21 +1,18 @@
 /**
  * NEW_WORLD_LOCATION Route Handler
  * 
- * Creates a complete world hierarchy (Host + Region + Location) from a single concept,
- * then auto-runs display to generate an image for the location.
+ * Creates a complete world hierarchy (Host + Region + Location) from a single concept
+ * using a single LLM call, then auto-runs display to generate an image for the location.
  */
 
 import { Request, Response } from 'express';
 import { asyncHandler } from '../../middleware/errorHandler';
 import { HTTP_STATUS, AI_MODELS } from '../../config';
 import { generateText, generateImage, hasMzooData } from '../../services/mzoo';
-import { buildHostDNAPrompt, parseHostResponse } from '../prompts/hostDNA';
-import { buildRegionDNAPrompt, parseRegionResponse } from '../prompts/regionDNA';
-import { buildLocationDNAPrompt, parseLocationResponse } from '../prompts/locationDNA';
 import { 
-  buildWorldLocationCategorizationPrompt, 
-  parseWorldLocationCategorizationResponse 
-} from '../prompts/worldLocationCategorization';
+  buildWorldLocationFullPrompt, 
+  parseWorldLocationFullResponse 
+} from '../prompts/worldLocationFull';
 import { storageService } from '../../services/storage/storageService';
 import mediaService from '../../services/media/mediaService';
 import { applyMorfeumStyle } from '../../engine/generation/shared/applyMorfeumStyle';
@@ -26,8 +23,7 @@ import {
   cleanupPipeline,
   sendProgress,
   sendCompletion,
-  sendError,
-  cascadeRegionDNA
+  sendError
 } from '../utils/routeUtils';
 import { 
   generateImagePromptLayers,
@@ -62,9 +58,6 @@ export const newWorldLocationHandler = asyncHandler(async (req: Request, res: Re
   const eventsUrl = setupPipeline(operationId, 'v2CreateWorldLocation');
 
   const pipelineStartTime = Date.now();
-  console.log(`\n🚀 [V2-NEW-WORLD-LOCATION] Starting world creation...`);
-  console.log(`[V2-NEW-WORLD-LOCATION] Operation ID: ${operationId}`);
-  console.log(`[V2-NEW-WORLD-LOCATION] Concept: ${concept.substring(0, 100)}${concept.length > 100 ? '...' : ''}`);
 
   // Return response immediately with eventsUrl
   res.status(HTTP_STATUS.OK).json({
@@ -79,113 +72,28 @@ export const newWorldLocationHandler = asyncHandler(async (req: Request, res: Re
   (async () => {
     try {
       // ═══════════════════════════════════════════════════════════════════════
-      // Stage 1: Categorize concept into host/region/location
+      // Stage 1: Generate all nodes in single LLM call
       // ═══════════════════════════════════════════════════════════════════════
-      sendProgress(operationId, 'categorization', 'Analyzing concept...');
+      sendProgress(operationId, 'world_creation', 'Creating world...');
 
-      const categorizationPrompt = buildWorldLocationCategorizationPrompt(concept);
-      const categorizationResult = await generateText(
+      const fullPrompt = buildWorldLocationFullPrompt(concept);
+      const fullResult = await generateText(
         apiKey,
-        [{ role: 'user', content: categorizationPrompt }],
+        [{ role: 'user', content: fullPrompt }],
         AI_MODELS.SEED_GENERATION
       );
 
-      if (!hasMzooData(categorizationResult)) {
-        throw new Error(categorizationResult.error || 'Failed to categorize concept');
+      if (!hasMzooData(fullResult)) {
+        throw new Error(fullResult.error || 'Failed to create world');
       }
 
-      const categorization = parseWorldLocationCategorizationResponse(categorizationResult.data.text);
-      console.log(`[V2-NEW-WORLD-LOCATION] Categorized:`, {
-        host: categorization.host.name || categorization.host.concept.substring(0, 30),
-        region: categorization.region ? (categorization.region.name || categorization.region.concept.substring(0, 30)) : 'PASS-THROUGH',
-        location: categorization.location.concept.substring(0, 30)
-      });
-
-      // ═══════════════════════════════════════════════════════════════════════
-      // Stage 2: Create Host DNA (with visual constraints from categorization)
-      // ═══════════════════════════════════════════════════════════════════════
-      sendProgress(operationId, 'host_dna', 'Creating host...');
-
-      const hostPrompt = buildHostDNAPrompt(categorization.host.concept, {
-        visualConstraints: categorization.visualElements
-      });
-      const hostResult = await generateText(
-        apiKey,
-        [{ role: 'user', content: hostPrompt }],
-        AI_MODELS.SEED_GENERATION
+      const { host, region, location } = parseWorldLocationFullResponse(
+        fullResult.data.text, 
+        generateId
       );
 
-      if (!hasMzooData(hostResult)) {
-        throw new Error(hostResult.error || 'Failed to create host');
-      }
-
-      const host = parseHostResponse(hostResult.data.text, generateId);
-      console.log(`✅ [V2-NEW-WORLD-LOCATION] Host created: ${host.name}`);
-
       // ═══════════════════════════════════════════════════════════════════════
-      // Stage 3: Create Region DNA (or pass-through)
-      // ═══════════════════════════════════════════════════════════════════════
-      sendProgress(operationId, 'region_dna', categorization.region ? 'Creating region...' : 'Creating pass-through region...');
-
-      let region: Region;
-      
-      if (categorization.region) {
-        // Real region - call LLM
-        const regionPrompt = buildRegionDNAPrompt(categorization.region.concept, host);
-        const regionResult = await generateText(
-          apiKey,
-          [{ role: 'user', content: regionPrompt }],
-          AI_MODELS.SEED_GENERATION
-        );
-
-        if (!hasMzooData(regionResult)) {
-          throw new Error(regionResult.error || 'Failed to create region');
-        }
-
-        region = parseRegionResponse(regionResult.data.text, generateId);
-        console.log(`✅ [V2-NEW-WORLD-LOCATION] Region created: ${region.name}`);
-      } else {
-        // Pass-through region - no LLM call
-        region = {
-          id: generateId(),
-          type: 'region',
-          name: 'Region',
-          slug: 'region',
-          description: `Pass-through region in ${host.name}`,
-          isPassThrough: true,
-          dna: {
-            essence: [],
-            formsAndMaterials: [],
-            colorAndLight: [],
-            atmosphere: [],
-            banned: []
-          }
-        } as Region;
-        console.log(`✅ [V2-NEW-WORLD-LOCATION] Pass-through region created`);
-      }
-
-      // ═══════════════════════════════════════════════════════════════════════
-      // Stage 4: Create Location DNA
-      // ═══════════════════════════════════════════════════════════════════════
-      sendProgress(operationId, 'location_dna', 'Creating location...');
-
-      const cascadedRegion = cascadeRegionDNA(region, host);
-      const locationPrompt = buildLocationDNAPrompt(categorization.location.concept, cascadedRegion);
-      const locationResult = await generateText(
-        apiKey,
-        [{ role: 'user', content: locationPrompt }],
-        AI_MODELS.SEED_GENERATION
-      );
-
-      if (!hasMzooData(locationResult)) {
-        throw new Error(locationResult.error || 'Failed to create location');
-      }
-
-      const location = parseLocationResponse(locationResult.data.text, generateId);
-      console.log(`✅ [V2-NEW-WORLD-LOCATION] Location created: ${location.name}`);
-
-      // ═══════════════════════════════════════════════════════════════════════
-      // Stage 5: Save all nodes to storage
+      // Stage 2: Save all nodes to storage
       // ═══════════════════════════════════════════════════════════════════════
       sendProgress(operationId, 'saving', 'Saving world...');
 
@@ -217,10 +125,9 @@ export const newWorldLocationHandler = asyncHandler(async (req: Request, res: Re
       }
 
       await storageService.saveWorlds(worldsData);
-      console.log(`[V2-NEW-WORLD-LOCATION] Saved to storage`);
 
       // ═══════════════════════════════════════════════════════════════════════
-      // Stage 6: Generate image prompt
+      // Stage 3: Generate image prompt
       // ═══════════════════════════════════════════════════════════════════════
       sendProgress(operationId, 'prompt_generation', 'Creating image prompt...');
 
@@ -261,7 +168,7 @@ export const newWorldLocationHandler = asyncHandler(async (req: Request, res: Re
       const imagePrompt = applyMorfeumStyle(basePrompt, { creatureMode: 'none' });
 
       // ═══════════════════════════════════════════════════════════════════════
-      // Stage 7: Generate image
+      // Stage 4: Generate image
       // ═══════════════════════════════════════════════════════════════════════
       sendProgress(operationId, 'image_generation', 'Generating image...');
 
@@ -310,7 +217,6 @@ export const newWorldLocationHandler = asyncHandler(async (req: Request, res: Re
       await storageService.saveWorlds(worldsData);
 
       const totalElapsed = ((Date.now() - pipelineStartTime) / 1000).toFixed(1);
-      console.log(`✅ [V2-NEW-WORLD-LOCATION] Complete in ${totalElapsed}s`);
 
       sendCompletion(operationId, {
         message: 'World created successfully',
@@ -321,7 +227,6 @@ export const newWorldLocationHandler = asyncHandler(async (req: Request, res: Re
         mediaId: mediaEntry.id
       });
     } catch (error) {
-      console.error(`\n❌ [V2-NEW-WORLD-LOCATION ERROR]`, error);
       sendError(operationId, error);
     } finally {
       cleanupPipeline(operationId);

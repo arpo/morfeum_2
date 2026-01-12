@@ -1,18 +1,25 @@
 # Progress
 
-## 2026-01-12 - NEW_WORLD_LOCATION Command ✅
+## 2026-01-12 - NEW_WORLD_LOCATION Single LLM Call ✅
 
-Added `/NEW_WORLD_LOCATION` - creates complete world hierarchy from single concept.
+Refactored `/NEW_WORLD_LOCATION` from 4 LLM calls to 1 for performance.
 
-**Command:** `/NEW_WORLD_LOCATION <concept>`
-- Simple: `a pub in Soho in London`
-- Complex: Full image descriptions with colors, lighting, etc.
+**Before:** Categorization → Host → Region → Location (4 calls)
+**After:** worldLocationFull (1 call) → all 3 nodes at once
 
-**Visual Consistency:** Extracts `visualElements` (colors, lighting, atmosphere) from full description and enforces them as constraints on host DNA generation. Location inherits naturally.
+**Modular Architecture:**
+- `shared/dnaSchema.ts` - Shared prompt sections (DNA_SCHEMA, HOST_RULES, etc.)
+- `worldLocationFull.ts` - Combined prompt using shared sections
+- Individual prompts can import from shared later
+
+**Visual Consistency Enhanced:**
+- Style terms (whimsical, ethereal, surreal) explicitly listed in prompt
+- Extracted to `atmosphere` array
+- Enforced in host `dna.essence` AND `dna.atmosphere`
 
 **Files:**
-- Backend: `newWorldLocationHandler.ts`, `worldLocationCategorization.ts` (VisualElements), `hostDNA.ts` (visualConstraints)
-- Frontend: `newWorldLocationHandler.ts`, updated `useNavigationLogic.ts`
+- NEW: `prompts/shared/dnaSchema.ts`, `prompts/worldLocationFull.ts`
+- UPDATED: `newWorldLocationHandler.ts`, `pipelineConfig.ts`, `prompts/index.ts`
 
 ---
 
