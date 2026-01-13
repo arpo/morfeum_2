@@ -11,6 +11,7 @@ import {
   newLocationHandler,
   newWorldLocationHandler,
   newWorldLocationInteriorHandler,
+  goInsideHandler,
   eventsHandler,
   setTimeHandler,
   setWeatherHandler
@@ -45,5 +46,8 @@ router.post('/set-time', setTimeHandler);
 
 // SET_WEATHER Command - Update host weather
 router.post('/set-weather', setWeatherHandler);
+
+// GO_INSIDE2 Command - Navigate into a space using image edit
+router.post('/go-inside', goInsideHandler);
 
 export { router as worldV2Router };

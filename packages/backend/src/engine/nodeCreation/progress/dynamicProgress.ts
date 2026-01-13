@@ -15,6 +15,8 @@ const NODE_STEP_DEFINITIONS: Record<NodeType, { id: string; name: string }> = {
   region: { id: 'create_region', name: 'Creating region...' },
   location: { id: 'create_location', name: 'Creating location...' },
   niche: { id: 'create_niche', name: 'Creating niche...' },
+  container: { id: 'create_container', name: 'Creating container...' },
+  space: { id: 'create_space', name: 'Creating space...' },
 };
 
 /**

@@ -140,6 +140,14 @@ export const PIPELINE_STEPS = {
     { id: 'saving', name: 'Saving Interior', duration: 500 },
     { id: 'prompt_generation', name: 'Creating Image Prompt', duration: 4000 },
     { id: 'image_generation', name: 'Generating Image', duration: 2500 }
+  ],
+  
+  /** V2: GO_INSIDE2 - Navigate into a space using image edit */
+  v2GoInside: [
+    { id: 'analyzing', name: 'Analyzing Location', duration: 1000 },
+    { id: 'structure', name: 'Creating Entrance Structure', duration: 3000 },
+    { id: 'image', name: 'Generating Space View', duration: 6000 },
+    { id: 'saving', name: 'Saving Space', duration: 500 }
   ]
 } as const;
 

@@ -39,6 +39,16 @@ const CAMERA_CONFIGS: Record<NodeType, {
     composition: 'Room composition showing space character',
     angle: 'Eye-level or slightly elevated, inviting perspective',
   },
+  container: {
+    style: 'Transitional photography',
+    composition: 'Entry point or threshold in focus, showing passage',
+    angle: 'Ground level, centered on entry point',
+  },
+  space: {
+    style: 'Interior photography',
+    composition: 'Full room view showing space character and atmosphere',
+    angle: 'Eye-level, immersive perspective',
+  },
 };
 
 /**

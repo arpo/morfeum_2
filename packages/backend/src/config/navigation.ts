@@ -10,7 +10,7 @@
  * - category: Command category for grouping (navigation, creation, media)
  */
 
-export type NodeType = 'host' | 'region' | 'location' | 'niche';
+export type NodeType = 'host' | 'region' | 'location' | 'niche' | 'container' | 'space';
 
 export interface SlashCommandConfig {
   requiresNodeType: NodeType[] | null;
@@ -25,6 +25,11 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
   GO_INSIDE: { 
     requiresNodeType: ['location', 'niche'], 
     description: 'Enter a location or niche (infinite depth)',
+    category: 'navigation'
+  },
+  GO_INSIDE2: { 
+    requiresNodeType: ['location', 'space'], 
+    description: 'Enter a space using image edit (V2 style lock)',
     category: 'navigation'
   },
   GOTO: { 
