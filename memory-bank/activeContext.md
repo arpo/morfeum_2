@@ -1,5 +1,47 @@
 # Active Context
 
+## 2026-01-13 - DNA Cascading Fix (CSS-Style Inheritance) ✅
+
+Fixed DNA cascading to properly follow CSS-style inheritance as specified in fundamentals.md.
+
+### Problem
+DNA arrays were using **accumulation** (`[...parent, ...child]`) instead of **CSS-style inheritance** where:
+- Empty array = inherit from parent
+- Non-empty array = REPLACE parent (not add to it)
+
+This caused DNA to bloat as you went deeper in the hierarchy (Host → Region → Location → Space), with all ancestor values concatenating.
+
+### Solution
+Fixed `mergeDNAArrays` in `promptBuilder.ts`:
+
+```typescript
+// BEFORE (wrong - accumulation):
+return [...parent, ...child];
+
+// AFTER (correct - CSS-style):
+if (child.length === 0) return parent;  // Empty = inherit
+return child;  // Non-empty = REPLACE
+```
+
+### Files Modified
+- `packages/backend/src/worldV2/display/promptBuilder.ts` - Fixed `mergeDNAArrays`
+- `packages/backend/src/worldV2/prompts/goInside.ts` - Improved delta DNA enforcement in prompt
+- `packages/backend/src/worldV2/handlers/goInsideHandler.ts` - Updated DNA handling
+
+### Note: Cleanup Needed
+`promptBuilder.ts` now has duplicate functions doing the same thing:
+- `cascadeDNA` (uses `mergeDNAArrays`) - used by most handlers
+- `getMergedDNA` (uses `mergeNonEmpty`) - added during this session
+
+These can be consolidated later - both work correctly with CSS-style inheritance.
+
+### Fundamentals Reference
+From `memory-bank/fundamentals.md`:
+> - **`null` = "inherit from parent"** - Child gets parent's value
+> - **Explicit value = override** - Child's value takes precedence
+
+---
+
 ## 2026-01-12 - NEW_WORLD_LOCATION_INTERIOR Command ✅
 
 Created new `/NEW_WORLD_LOCATION_INTERIOR` command that creates a 4-node hierarchy from a single concept.
@@ -10,69 +52,6 @@ Creates: `Host → Region → Location (exterior) → Location (interior)` + ima
 ### Usage
 ```
 /NEW_WORLD_LOCATION_INTERIOR the kitchen of a pub in Camden in London
-```
-
-Creates:
-```
-London (host)
-└── Camden (region)
-    └── The Crown & Anchor (exterior location)
-        └── The Kitchen (interior location) ← IMAGE GENERATED HERE
-```
-
-### Implementation Pattern
-Same as `/NEW_WORLD_LOCATION` but with 4 nodes instead of 3:
-- Single LLM call generates all 4 nodes
-- User provides interior concept, LLM infers exterior building and world
-- Image generated for interior (deepest node with `spaceType: "interior"`)
-
-### Files Created/Modified
-**Backend:**
-- NEW: `prompts/worldLocationInterior.ts` - 4-node prompt
-- NEW: `handlers/newWorldLocationInteriorHandler.ts` - Route handler
-- UPDATED: `routes.ts`, `handlers/index.ts`, `prompts/index.ts`
-- UPDATED: `pipelineConfig.ts` - Added `v2CreateWorldLocationInterior` pipeline
-- UPDATED: `navigation.ts` - Added `NEW_WORLD_LOCATION_INTERIOR` to SLASH_COMMANDS
-
-**Frontend:**
-- NEW: `commands/handlers/newWorldLocationInteriorHandler.ts`
-- UPDATED: `commands/handlers/index.ts`, `commands/index.ts`
-
-### Pipeline Steps
-```typescript
-v2CreateWorldLocationInterior: [
-  { id: 'interior_creation', name: 'Creating World', duration: 5000 },
-  { id: 'saving', name: 'Saving World', duration: 500 },
-  { id: 'prompt_generation', name: 'Creating Image Prompt', duration: 4000 },
-  { id: 'image_generation', name: 'Generating Image', duration: 2500 }
-]
-```
-
----
-
-## 2026-01-12 - MZOO Vision API Updated ✅
-
-Updated vision API integration to use new mzoo endpoint with internal caching.
-
-### Key Changes
-- **Endpoint:** `/api/v1/ai/vision` (unchanged)
-- **Response format:** `analysis` instead of `text`
-- **Caching:** Now handled internally by mzoo (no client-side cache management)
-
-### Files Modified
-- `packages/backend/src/services/mzoo/types.ts`
-  - Changed `VisionAnalysisResponse.text` → `VisionAnalysisResponse.analysis`
-  - Added `candidates` and `metadata` fields
-
-- `packages/backend/src/services/mzoo/services/cachedVisionAnalysis.ts`
-  - Simplified from ~120 lines to ~55 lines
-  - Removed complex caching logic (mzoo handles internally)
-  - Maps `analysis` → `text` for backward compatibility
-
-### Before/After
-```
-Before: Client manages cacheIds, calls cached-vision with cacheId, handles fallbacks
-After:  Client just calls vision API, mzoo handles caching internally
 ```
 
 ---
@@ -104,35 +83,25 @@ packages/backend/src/worldV2/
 │   ├── newRegionHandler.ts
 │   ├── newLocationHandler.ts
 │   ├── newWorldLocationHandler.ts
-│   ├── newWorldLocationInteriorHandler.ts  ← NEW
+│   ├── newWorldLocationInteriorHandler.ts
+│   ├── goInsideHandler.ts  ← UPDATED (DNA cascading)
 │   ├── setTimeHandler.ts
 │   ├── setWeatherHandler.ts
 │   └── eventsHandler.ts
 ├── prompts/
 │   ├── shared/dnaSchema.ts
 │   ├── worldLocationFull.ts
-│   ├── worldLocationInterior.ts  ← NEW
-│   ├── hostDNA.ts, regionDNA.ts, locationDNA.ts
-│   └── index.ts
-└── display/
-```
-
-**Frontend:**
-```
-packages/frontend/src/worldV2/
-├── commands/
-│   ├── handlers/
-│   │   ├── newWorldLocationHandler.ts
-│   │   ├── newWorldLocationInteriorHandler.ts  ← NEW
-│   │   ├── setTimeHandler.ts, setWeatherHandler.ts
-│   │   └── ...
+│   ├── worldLocationInterior.ts
+│   ├── goInside.ts  ← UPDATED (delta DNA enforcement)
 │   └── ...
-└── ...
+└── display/
+    ├── promptBuilder.ts  ← UPDATED (CSS-style mergeDNAArrays)
+    └── ...
 ```
 
 ---
 
-## Next Phases
+## Next Steps
 
-- [ ] **Phase 5: Navigation Commands** - GO_INSIDE, GOTO for V2 nodes
+- [ ] **Cleanup:** Consolidate duplicate DNA functions in promptBuilder.ts
 - [ ] **Phase 6: Remove Old System** - Clean up legacy code

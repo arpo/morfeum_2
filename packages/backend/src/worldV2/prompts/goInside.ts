@@ -21,6 +21,8 @@ export type SpaceType = 'indoor' | 'outdoor' | 'semi-enclosed' | 'underground' |
 
 /**
  * Container node structure
+ * NOTE: Container has NO DNA - it's a pass-through node.
+ * DNA cascades directly from parent location to space.
  */
 export interface ContainerNode {
   id: string;
@@ -28,13 +30,6 @@ export interface ContainerNode {
   name: string;
   slug: string;
   description: string;
-  dna: {
-    essence: string[];
-    formsAndMaterials: string[];
-    colorAndLight: string[];
-    atmosphere: string[];
-    banned: string[];
-  };
   forbiddenTransformations: string[];
 }
 
@@ -114,9 +109,31 @@ Determine the appropriate spaceType for the Space Node:
 ${DNA_FIELD_RULES}
 
 ${DNA_DELTA_RULES}
-- Container DNA should capture the establishment's overall character
-- Space DNA should capture the specific area's character (can differ from container)
-- Both inherit from parent but can override with specific characteristics
+
+**CRITICAL - DELTA DNA ENFORCEMENT:**
+You MUST NOT copy or repeat ANY values from the Parent DNA shown above!
+The cascade system will automatically inherit parent values.
+Your job is ONLY to add what is NEW and DIFFERENT for this space.
+
+**WRONG (copying parent values):**
+- Parent essence: ["haunted architecture", "perpetual twilight"]
+- Space essence: ["haunted architecture", "decaying grandeur"] ← WRONG! "haunted architecture" is copied from parent!
+
+**CORRECT (true delta):**
+- Parent essence: ["haunted architecture", "perpetual twilight"]
+- Space essence: ["decaying grandeur"] ← CORRECT! Only what's NEW
+- Or: [] ← CORRECT! Nothing new, inherit everything
+
+**colorAndLight is especially important:**
+- DO NOT add color terms - colors INHERIT from parent automatically
+- ONLY add lighting terms if lighting ACTUALLY CHANGES (e.g., exterior → interior lighting)
+- If lighting is the same, use EMPTY ARRAY []
+
+**Container and Space DNA:**
+- Container: NO DNA - it's a pass-through node
+- Space DNA: ONLY items that are NEW and DIFFERENT from parent
+- Use EMPTY ARRAYS [] for fields that don't change
+- NEVER repeat parent values - the system cascades automatically!
 
 ### Forbidden Transformations
 Generate 5-8 specific visual prohibitions for each node that would break consistency:
@@ -135,7 +152,6 @@ Return ONLY valid JSON with this exact structure:
     "name": "Descriptive name for the establishment/area",
     "slug": "kebab-case-slug",
     "description": "2-3 sentence description of this place as an establishment",
-    ${DNA_SCHEMA},
     "forbiddenTransformations": ["prohibition 1", "prohibition 2", "..."]
   },
   "space": {
@@ -188,19 +204,13 @@ export function parseGoInsideResponse(
   const parsed = JSON.parse(jsonStr);
 
   // Validate and assign IDs
+  // Container has NO DNA - it's a pass-through node
   const container: ContainerNode = {
     id: generateId(),
     type: 'container',
     name: parsed.container.name,
     slug: parsed.container.slug,
     description: parsed.container.description,
-    dna: {
-      essence: parsed.container.dna?.essence || [],
-      formsAndMaterials: parsed.container.dna?.formsAndMaterials || [],
-      colorAndLight: parsed.container.dna?.colorAndLight || [],
-      atmosphere: parsed.container.dna?.atmosphere || [],
-      banned: parsed.container.dna?.banned || []
-    },
     forbiddenTransformations: parsed.container.forbiddenTransformations || []
   };
 

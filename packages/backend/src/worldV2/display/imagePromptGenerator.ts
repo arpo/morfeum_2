@@ -6,6 +6,7 @@
 
 import { generateText } from '../../services/mzoo/services/textGeneration';
 import type { DNA, TimeOfDay } from '../types';
+import { buildStyleLock } from '../utils/styleLockCompiler';
 
 /**
  * Structured image prompt layers
@@ -57,18 +58,22 @@ function buildImagePromptSystemMessage(input: ImagePromptInput): string {
   if (timeOfDay) envContext.push(`Time: ${timeOfDay.replace('_', ' ')}`);
   const envLine = envContext.length > 0 ? `\nENVIRONMENT: ${envContext.join(', ')}` : '';
 
+  // Build visual style from DNA using centralized function
+  const visualStyle = buildStyleLock(dna);
+
   return `Generate JSON image prompt for ${nodeType}: ${context}
 ${description} | ${spaceType || 'exterior'}${envLine}
 
 ${perspectiveGuidance}
 
-DNA: essence=[${dna.essence.join(',')}] forms=[${dna.formsAndMaterials.join(',')}] color=[${dna.colorAndLight.join(',')}] mood=[${dna.atmosphere.join(',')}] banned=[${dna.banned.join(',')}]
+${visualStyle}
 
 Return ONLY JSON:
 {"background":"far layer","midground":"middle layer","foreground":"close layer","lighting":"light details","atmosphere":"mood/effects"}
 
 Be specific to "${name}". Match layers to camera perspective.
 IMPORTANT: Lighting MUST reflect the time of day (${timeOfDay || 'midday'}) and weather (${weather || 'clear'}).
+COLOR PALETTE: Incorporate the Color Palette values above as the dominant colors in your scene.
 REAL PLACES: If this is a real existing location, describe it accurately to match real-world appearance.`;
 }
 
@@ -178,8 +183,8 @@ export function buildPromptFromLayers(
   weather?: string,
   timeOfDay?: TimeOfDay
 ): string {
-  // Build NEG items: DNA banned + spaceType enforcement
-  const negItems: string[] = [...dna.banned];
+  // Build NEG items: spaceType enforcement only (banned is now in style lock)
+  const negItems: string[] = [];
   
   // Add spaceType enforcement to prevent wrong scene type
   if (spaceType === 'exterior') {
@@ -201,7 +206,14 @@ export function buildPromptFromLayers(
   if (timeOfDay) envParts.push(timeOfDay.replace('_', ' '));
   const envLine = envParts.length > 0 ? `[ENVIRONMENT:] ${envParts.join(', ')}` : '';
 
+  // Build style lock from DNA (simple: DNA in → style lock out)
+  const styleLock = buildStyleLock(dna);
+
   return `${layers.name}. ${layers.description}
+
+STYLE LOCK — NON-NEGOTIABLE:
+
+${styleLock}
 
 SCENE LAYERS:
 - Background: ${layers.background}
@@ -210,9 +222,6 @@ SCENE LAYERS:
 
 LIGHTING: ${layers.lighting}
 ATMOSPHERE: ${layers.atmosphere}
-
-Visual Identity: ${dna.essence.join(', ')}
-Forms & Materials: ${dna.formsAndMaterials.join(', ')}
 
 ${spaceTypeLine}
 ${envLine}

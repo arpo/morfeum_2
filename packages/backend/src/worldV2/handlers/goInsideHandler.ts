@@ -19,7 +19,7 @@ import { HTTP_STATUS, AI_MODELS } from '../../config';
 import { generateText, editImage, hasMzooData } from '../../services/mzoo';
 import { buildGoInsidePrompt, parseGoInsideResponse } from '../prompts/goInside';
 import { buildEnterImageEditPrompt } from '../prompts/imageEditPrompt';
-import { cascadeDNA } from '../display/promptBuilder';
+import { getMergedDNA } from '../display/promptBuilder';
 import { storageService } from '../../services/storage/storageService';
 import mediaService from '../../services/media/mediaService';
 import {
@@ -126,50 +126,31 @@ function getNodeImageUrl(worldsData: any, nodeId: string): string | null {
 }
 
 /**
- * Build effective DNA by cascading through ancestry
+ * Build effective DNA by cascading through ancestry using getMergedDNA
+ * Uses CSS-style inheritance: empty array = inherit, non-empty = override
+ * 
+ * Follows pattern from: packages/frontend/src/utils/nodeDNAExtractor.ts
  */
-function buildEffectiveDNA(ancestry: {
-  host?: Host;
-  region?: any;
-  locationChain: any[];
-}): DNA {
-  const dnaChain: { host?: DNA; region?: DNA; location?: DNA } = {};
+function buildEffectiveDNA(
+  ancestry: {
+    host?: Host;
+    region?: any;
+    locationChain: any[];
+  },
+  additionalDNA?: DNA
+): DNA {
+  // Find the deepest location/container in the chain
+  const deepestLocation = ancestry.locationChain.length > 0 
+    ? ancestry.locationChain[ancestry.locationChain.length - 1] 
+    : null;
 
-  if (ancestry.host?.dna) {
-    dnaChain.host = ancestry.host.dna;
-  }
-
-  if (ancestry.region?.dna) {
-    dnaChain.region = ancestry.region.dna;
-  }
-
-  // Cascade through location chain
-  if (ancestry.locationChain.length > 0) {
-    // Merge all location DNA in order
-    let mergedLocationDNA: DNA = {
-      essence: [],
-      formsAndMaterials: [],
-      colorAndLight: [],
-      atmosphere: [],
-      banned: []
-    };
-
-    for (const loc of ancestry.locationChain) {
-      if (loc.dna) {
-        mergedLocationDNA = {
-          essence: [...mergedLocationDNA.essence, ...(loc.dna.essence || [])],
-          formsAndMaterials: [...mergedLocationDNA.formsAndMaterials, ...(loc.dna.formsAndMaterials || [])],
-          colorAndLight: [...mergedLocationDNA.colorAndLight, ...(loc.dna.colorAndLight || [])],
-          atmosphere: [...mergedLocationDNA.atmosphere, ...(loc.dna.atmosphere || [])],
-          banned: [...mergedLocationDNA.banned, ...(loc.dna.banned || [])]
-        };
-      }
-    }
-
-    dnaChain.location = mergedLocationDNA;
-  }
-
-  return cascadeDNA(dnaChain);
+  // Use getMergedDNA with CSS-style inheritance
+  return getMergedDNA({
+    host: ancestry.host?.dna,
+    region: ancestry.region?.dna,
+    location: deepestLocation?.dna,
+    space: additionalDNA
+  });
 }
 
 /**
@@ -279,22 +260,20 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
       // ═══════════════════════════════════════════════════════════════════════
       sendProgress(operationId, 'image', 'Generating space view...');
 
-      // Build effective DNA for the space (cascaded parent + space delta)
-      const spaceDNA: DNA = {
-        essence: [...effectiveDNA.essence, ...space.dna.essence],
-        formsAndMaterials: [...effectiveDNA.formsAndMaterials, ...space.dna.formsAndMaterials],
-        colorAndLight: [...effectiveDNA.colorAndLight, ...space.dna.colorAndLight],
-        atmosphere: [...effectiveDNA.atmosphere, ...space.dna.atmosphere],
-        banned: [...effectiveDNA.banned, ...space.dna.banned]
-      };
+      // Build effective DNA for the space using proper cascade
+      // effectiveDNA = parent DNA (before space), spaceDNA = cascaded with space delta
+      const spaceDNA = buildEffectiveDNA(ancestry, space.dna);
 
       // Build image edit prompt
+      // Pass both merged DNA (for materials/lighting/essence) and parent DNA (for palette preservation)
       const imageEditPrompt = buildEnterImageEditPrompt({
         targetDescription: space.description,
         spaceType: space.spaceType,
-        effectiveDNA: spaceDNA,
+        effectiveDNA: spaceDNA,           // cascaded DNA (parent + space) for materials, lighting, essence
+        parentDNA: effectiveDNA,           // parent DNA for palette (preserves source image colors)
         forbiddenTransformations: space.forbiddenTransformations,
         parentName: ancestry.currentNode.name,
+        spaceName: space.name,
         weather: ancestry.hostWeather,
         timeOfDay: ancestry.hostTimeOfDay
       });

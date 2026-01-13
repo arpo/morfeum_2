@@ -1,103 +1,198 @@
 {
   "nodes": {
-    "v2-1768297952995-fenyg060d": {
-      "id": "v2-1768297952995-fenyg060d",
+    "v2-1768316778321-blb5b172l": {
+      "id": "v2-1768316778321-blb5b172l",
       "type": "host",
-      "name": "The Gloomwood Estate",
-      "slug": "the-gloomwood-estate",
-      "description": "A decaying Victorian mansion shrouded in perpetual twilight and mist.",
-      "genre": "Gothic Horror",
-      "weather": "heavy fog",
-      "timeOfDay": "dusk",
+      "name": "Azure Coast",
+      "slug": "azure-coast",
+      "description": "A picturesque coastline with dramatic cliffs, vibrant seas, and sun-drenched landscapes.",
+      "genre": "Coastal",
+      "weather": "clear",
+      "timeOfDay": "midday",
       "dna": {
         "essence": [
-          "haunted architecture",
-          "victorian decay",
-          "supernatural presence",
-          "melancholic atmosphere"
+          "coastal living",
+          "Mediterranean aesthetic",
+          "cliffside architecture",
+          "vibrant natural beauty"
         ],
         "formsAndMaterials": [
-          "rotting wood",
-          "chipped stone",
-          "cobwebs",
-          "aged wallpaper"
+          "rock",
+          "textured plaster",
+          "wood",
+          "stone"
         ],
         "colorAndLight": [
-          "muted grays",
-          "deep shadows",
-          "flickering candlelight",
-          "sickly greens"
+          "vibrant blue",
+          "light pink",
+          "turquoise",
+          "purple",
+          "bright azure sky",
+          "clear midday sun",
+          "sparkling water"
         ],
         "atmosphere": [
-          "haunting",
-          "mysterious",
-          "foreboding",
-          "melancholic"
+          "idyllic",
+          "tranquil",
+          "serene",
+          "luxurious",
+          "vibrant",
+          "picturesque"
         ],
         "banned": [
-          "bright colors",
-          "modern amenities",
-          "cheerful characters"
+          "industrial elements",
+          "foggy weather",
+          "urban sprawl"
         ]
       },
-      "spaceType": "exterior"
-    },
-    "v2-1768297952995-tekt9zucy": {
-      "id": "v2-1768297952995-tekt9zucy",
-      "type": "region",
-      "name": "Region",
-      "slug": "region",
-      "description": "Pass-through region in The Gloomwood Estate",
-      "isPassThrough": true,
-      "dna": {
-        "essence": [],
-        "formsAndMaterials": [],
-        "colorAndLight": [],
-        "atmosphere": [],
-        "banned": []
-      }
-    },
-    "v2-1768297952995-c2nu51syy": {
-      "id": "v2-1768297952995-c2nu51syy",
-      "type": "location",
-      "name": "The Haunted House",
-      "slug": "the-haunted-house",
       "spaceType": "exterior",
-      "description": "A sprawling, dilapidated Victorian mansion with broken windows, overgrown gardens, and an eerie aura.",
+      "primaryMedia": "media-1768316799760-55plbtx0b"
+    },
+    "v2-1768316778321-zhpw9vg26": {
+      "id": "v2-1768316778321-zhpw9vg26",
+      "type": "region",
+      "name": "The Cliffside",
+      "slug": "the-cliffside",
+      "description": "A dramatic rocky cliff face overlooking the sea, dotted with exclusive residences.",
+      "isPassThrough": false,
       "dna": {
         "essence": [
-          "decaying grandeur"
+          "rocky terrain",
+          "secluded residences"
         ],
         "formsAndMaterials": [
-          "gothic architecture",
-          "broken panes",
-          "rotting eaves",
-          "overgrown vines"
+          "natural rock",
+          "textured cliff face"
         ],
         "colorAndLight": [
-          "shadow-drenched",
-          "faint spectral glow"
+          "stone gray",
+          "shadows from cliffs"
         ],
-        "atmosphere": [],
+        "atmosphere": [
+          "dramatic",
+          "secluded"
+        ],
         "banned": []
       },
-      "primaryMedia": "media-1768297958236-w025vo1nz"
+      "primaryMedia": "media-1768316812932-6azx1yjih"
+    },
+    "v2-1768316778321-ongtfq94h": {
+      "id": "v2-1768316778321-ongtfq94h",
+      "type": "location",
+      "name": "The Cliffside House",
+      "slug": "the-cliffside-house",
+      "spaceType": "exterior",
+      "description": "A stunning multi-level house, painted a textured light pink, nestled into the rocky cliffside. It features turquoise doors and windows, a small balcony with a wooden railing, and a patio area furnished with a wooden dining table and chairs. Lush purple bougainvillea cascades over the rock wall. A custom-built, infinity-edge swimming pool with sparkling turquoise water is seamlessly integrated below the patio, accessed by stone steps.",
+      "dna": {
+        "essence": [
+          "multi-level architecture",
+          "bougainvillea cascade",
+          "infinity pool"
+        ],
+        "formsAndMaterials": [
+          "textured light pink plaster",
+          "turquoise accents",
+          "wooden railing",
+          "wooden furniture",
+          "stone steps"
+        ],
+        "colorAndLight": [
+          "light pink walls",
+          "turquoise doors and windows",
+          "purple bougainvillea",
+          "sparkling turquoise pool water"
+        ],
+        "atmosphere": [
+          "luxurious",
+          "tranquil",
+          "vibrant"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1768316786103-dgmqeqmma"
+    },
+    "v2-1768316849606-uuu4oa96u": {
+      "id": "v2-1768316849606-uuu4oa96u",
+      "type": "container",
+      "name": "The Cliffside House",
+      "slug": "the-cliffside-house",
+      "description": "A luxurious, multi-level cliffside dwelling offering stunning ocean views. This residence blends seamlessly with its natural rocky surroundings, providing a tranquil and vibrant escape.",
+      "forbiddenTransformations": [
+        "industrial facades",
+        "graffiti art",
+        "stormy weather",
+        "commercial signage"
+      ],
+      "parentId": "v2-1768316778321-ongtfq94h"
+    },
+    "v2-1768316849606-2rhvr6bks": {
+      "id": "v2-1768316849606-2rhvr6bks",
+      "type": "space",
+      "name": "Interior Living Area",
+      "slug": "interior-living-area",
+      "description": "Stepping inside, you find a bright and airy living space. The walls are a soft, textured light pink, echoing the exterior. Sunlight streams in through turquoise-framed windows, illuminating the comfortable, uncluttered furnishings.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "open-plan living",
+          "sunlit interiors"
+        ],
+        "formsAndMaterials": [
+          "smooth plaster walls",
+          "wooden flooring"
+        ],
+        "colorAndLight": [
+          "natural light"
+        ],
+        "atmosphere": [
+          "serene",
+          "inviting"
+        ],
+        "banned": [
+          "dark, heavy drapery",
+          "exposed ductwork",
+          "cluttered decor",
+          "artificial neon lighting"
+        ]
+      },
+      "forbiddenTransformations": [
+        "cluttered antique furniture",
+        "dark, moody lighting",
+        "exposed brickwork",
+        "industrial lighting fixtures",
+        "barbed wire",
+        "overgrown indoor plants"
+      ],
+      "parentId": "v2-1768316849606-uuu4oa96u",
+      "primaryMedia": "media-1768316855952-47y7oen91"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "v2-1768297952995-fenyg060d",
+      "id": "v2-1768316778321-blb5b172l",
       "type": "host",
       "children": [
         {
-          "id": "v2-1768297952995-tekt9zucy",
+          "id": "v2-1768316778321-zhpw9vg26",
           "type": "region",
           "children": [
             {
-              "id": "v2-1768297952995-c2nu51syy",
+              "id": "v2-1768316778321-ongtfq94h",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "v2-1768316849606-uuu4oa96u",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1768316849606-2rhvr6bks",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -105,6 +200,6 @@
     }
   ],
   "pinnedIds": [
-    "v2-1768297952995-fenyg060d"
+    "v2-1768316778321-blb5b172l"
   ]
 }

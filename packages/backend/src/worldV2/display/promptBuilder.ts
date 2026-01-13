@@ -3,25 +3,36 @@
  * 
  * DNA cascading utilities for V2 world nodes.
  * Used by displayHandler to merge host→region→location DNA.
+ * 
+ * FOLLOWS THE PATTERN FROM: packages/frontend/src/utils/nodeDNAExtractor.ts
+ * - getMergedDNA() merges cascaded DNA with CSS-style inheritance
+ * - Empty array = inherit from parent
+ * - Non-empty array = REPLACE parent (not add to it)
  */
 
 import type { DNA } from '../types';
 
+/**
+ * Cascaded DNA structure matching frontend pattern
+ * See: packages/frontend/src/utils/nodeDNAExtractor.ts
+ */
 interface CascadedDNAChain {
   host?: DNA;
   region?: DNA;
   location?: DNA;
+  space?: DNA;
 }
 
 /**
- * Merge DNA arrays, combining parent and child values
- * Child values come after parent values for emphasis
+ * Merge DNA arrays using CSS-style inheritance
+ * - Empty array = inherit from parent
+ * - Non-empty array = REPLACE parent (not add to it)
  */
 function mergeDNAArrays(parent: string[] = [], child: string[] = []): string[] {
-  // If child is empty, inherit parent
+  // Empty array = inherit from parent (CSS-style)
   if (child.length === 0) return parent;
-  // Combine both, child additions come after
-  return [...parent, ...child];
+  // Non-empty array = child REPLACES parent (CSS-style override)
+  return child;
 }
 
 /**
@@ -67,4 +78,80 @@ function cascadeDNA(dnaChain: CascadedDNAChain): DNA {
   return base;
 }
 
-export { cascadeDNA, CascadedDNAChain };
+/**
+ * Merge source DNA into target, skipping empty arrays (CSS-style inheritance)
+ * Mirrors: mergeNonNull from frontend/utils/nodeDNAExtractor.ts
+ * 
+ * - Empty array = skip (inherit parent value)
+ * - Non-empty array = override (replace parent value)
+ */
+function mergeNonEmpty(target: DNA, source: DNA): void {
+  for (const key of ['essence', 'formsAndMaterials', 'colorAndLight', 'atmosphere', 'banned'] as const) {
+    const value = source[key];
+    // Only override if array has items (CSS-style: non-empty = override)
+    if (Array.isArray(value) && value.length > 0) {
+      target[key] = value;
+    }
+  }
+}
+
+/**
+ * Merge cascaded DNA into flat object with CSS-style inheritance
+ * Mirrors: getMergedDNA from frontend/utils/nodeDNAExtractor.ts
+ * 
+ * USAGE:
+ *   const merged = getMergedDNA({ host, region, location, space });
+ * 
+ * INHERITANCE:
+ *   - Start with host DNA as base
+ *   - Override with region DNA (skip empty arrays)
+ *   - Override with location DNA (skip empty arrays)
+ *   - Override with space DNA (skip empty arrays)
+ * 
+ * EXAMPLE:
+ *   Input:
+ *   {
+ *     host: { essence: ["gothic", "haunted"], colorAndLight: ["shadows"] },
+ *     region: { essence: [], colorAndLight: ["fog"] },
+ *     location: { essence: ["ominous"], colorAndLight: [] }
+ *   }
+ * 
+ *   Output:
+ *   {
+ *     essence: ["ominous"],        // from location (override)
+ *     colorAndLight: ["fog"]       // from region (location was empty = inherit)
+ *   }
+ */
+function getMergedDNA(cascadedDNA: CascadedDNAChain): DNA {
+  const merged: DNA = {
+    essence: [],
+    formsAndMaterials: [],
+    colorAndLight: [],
+    atmosphere: [],
+    banned: []
+  };
+  
+  // Start with host DNA as base layer
+  if (cascadedDNA.host) {
+    mergeNonEmpty(merged, cascadedDNA.host);
+  }
+  
+  // Override with region DNA (skip empty arrays)
+  if (cascadedDNA.region) {
+    mergeNonEmpty(merged, cascadedDNA.region);
+  }
+  
+  // Override with location DNA (skip empty arrays)
+  if (cascadedDNA.location) {
+    mergeNonEmpty(merged, cascadedDNA.location);
+  }
+  
+  // Override with space DNA (skip empty arrays)
+  if (cascadedDNA.space) {
+    mergeNonEmpty(merged, cascadedDNA.space);
+  }
+  
+  return merged;
+}
+
+export { cascadeDNA, getMergedDNA, CascadedDNAChain, mergeDNAArrays };

@@ -68,6 +68,19 @@ Added `/SET_TIME` and `/SET_WEATHER` slash commands.
 
 ---
 
+## 2026-01-13 - DNA Cascading Fix ✅
+
+Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = inherit, non-empty = REPLACE.
+
+**Files Modified:**
+- `promptBuilder.ts` - Fixed `mergeDNAArrays`
+- `goInside.ts` - Improved delta DNA enforcement
+- `goInsideHandler.ts` - Updated DNA handling
+
+**Note:** `promptBuilder.ts` has duplicate functions (`cascadeDNA` + `getMergedDNA`) - can consolidate later.
+
+---
+
 ## World V2 System
 
 ### Commands: ✅ COMPLETE
