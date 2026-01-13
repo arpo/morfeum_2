@@ -822,6 +822,94 @@
         "banned": []
       },
       "primaryMedia": "media-1768252686354-njoeeyy9j"
+    },
+    "v2-1768285018372-llq8hasyj": {
+      "id": "v2-1768285018372-llq8hasyj",
+      "type": "host",
+      "name": "Goa",
+      "slug": "goa",
+      "description": "A state on the southwestern coast of India, known for its beaches, nightlife, and Portuguese colonial architecture.",
+      "genre": "Coastal",
+      "weather": "Clear and warm",
+      "timeOfDay": "night",
+      "dna": {
+        "essence": [
+          "vibrant nightlife",
+          "coastal charm",
+          "colonial heritage"
+        ],
+        "formsAndMaterials": [
+          "tropical vegetation",
+          "beachfront structures",
+          "whitewashed buildings"
+        ],
+        "colorAndLight": [
+          "deep blues and purples",
+          "warm yellow and orange lights",
+          "moonlight"
+        ],
+        "atmosphere": [
+          "lively and energetic",
+          "relaxed and tropical"
+        ],
+        "banned": [
+          "industrial smog",
+          "barren desert"
+        ]
+      },
+      "spaceType": "exterior",
+      "primaryMedia": "media-1768291763031-hrx5y2zxg"
+    },
+    "v2-1768285032440-qi4rxeb52": {
+      "id": "v2-1768285032440-qi4rxeb52",
+      "type": "region",
+      "name": "Palolem",
+      "slug": "palolem",
+      "description": "A crescent-shaped beach in South Goa, known for its serene beauty and laid-back atmosphere, especially vibrant at night under the moonlight.",
+      "dna": {
+        "essence": [
+          "serene beauty",
+          "laid-back atmosphere"
+        ],
+        "formsAndMaterials": [
+          "palm-fringed shores",
+          "thatched huts"
+        ],
+        "colorAndLight": [
+          "starry sky",
+          "soft, ambient lighting"
+        ],
+        "atmosphere": [
+          "tranquil",
+          "bohemian"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1768285102056-5q5xsb485"
+    },
+    "v2-1768285152555-e4gbrmjl3": {
+      "id": "v2-1768285152555-e4gbrmjl3",
+      "type": "location",
+      "name": "Palolem",
+      "slug": "palolem",
+      "spaceType": "exterior",
+      "description": "A massage hut nestled amongst palm trees on the serene shores of Palolem, Goa.",
+      "dna": {
+        "essence": [],
+        "formsAndMaterials": [
+          "massage hut",
+          "palm trees"
+        ],
+        "colorAndLight": [
+          "starry sky",
+          "soft, ambient lighting"
+        ],
+        "atmosphere": [
+          "tranquil"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1768285161825-4ci6xcndg"
     }
   },
   "views": {},
@@ -956,6 +1044,23 @@
           ]
         }
       ]
+    },
+    {
+      "id": "v2-1768285018372-llq8hasyj",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1768285032440-qi4rxeb52",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1768285152555-e4gbrmjl3",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -965,6 +1070,7 @@
     "v2-1768240064567-vszlicmq8",
     "v2-1768248299262-s9xhmb9mx",
     "v2-1768251262387-dbt8p5jff",
-    "v2-1768252681422-gjpgschiq"
+    "v2-1768252681422-gjpgschiq",
+    "v2-1768285018372-llq8hasyj"
   ]
 }
