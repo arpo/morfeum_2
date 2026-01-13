@@ -1199,6 +1199,143 @@
       "entityRefs": [
         "v2-1768252681422-xoyafg44e"
       ]
+    },
+    "media-1768252992622-8nw8k1op4": {
+      "id": "media-1768252992622-8nw8k1op4",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a23d2/QcAE7P1N4GaZp8zR3p3G2.jpg",
+      "createdAt": "2026-01-12T21:23:12.622Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nHalf portrait, Isolde Reyes facing the camera directly with warm amber eyes, sun-kissed skin with faint laugh lines, tousled dark brown hair with woven beads, a flowy crimson off-the-shoulder top, and multiple thin silver bangles on each wrist, is positioned in a cozy, inviting, intimate, bohemian, and exotic covered patio. Soft directional light enhances her skin texture, with a gentle background bokeh hinting at the lush, exotic greenery and woven decor of the patio. Her demeanor is warm, approachable, free-spirited, and at ease, conveying a sense of familiar comfort.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1768252992620-ng1v9xx5d"
+      ]
+    },
+    "media-1768253019160-pmplwl2kb": {
+      "id": "media-1768253019160-pmplwl2kb",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a23d5/0Byb4xbt0rsUuutBT7jYi.jpg",
+      "createdAt": "2026-01-12T21:23:39.160Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nMarrakech. A vibrant imperial city in Morocco, known for its bustling souks, historic medina, and stunning architecture, with a warm, dry climate.\n\nSCENE LAYERS:\n- Background: A vast, deep indigo night sky, completely clear and speckled with countless sharp, bright stars. The distant, dark silhouette of the Atlas Mountains might be faintly visible on the horizon.\n- Midground: The sprawling, densely packed medina of Marrakech, appearing as an intricate tapestry of muted terracotta and ochre rooftops. Winding, faint lines represent distant streets, barely illuminated. Clusters of small, geometrically organized buildings with characteristic riad courtyards are discernible, their forms softened by the distance. The Jemaa el-Fnaa square might be a slightly brighter, more concentrated area of faint light.\n- Foreground: The outermost edges of the city, transitioning into the surrounding desert or palm groves, appearing as dark, textured expanses. The faint glow of distant lights might hint at the city's perimeter.\n\nLIGHTING: Warm, inviting lantern light spills from within courtyards and along shadowed alleyways, creating pools of amber and gold that contrast with the deep blue of the night sky. The stars themselves are a primary light source, casting a subtle, ethereal glow that is not strong enough to illuminate details on the ground. No harsh artificial lights are visible.\nATMOSPHERE: An exotic and tranquil mood, evoking the magic of an ancient desert city. The clear, star-filled sky contributes to a sense of peaceful vastness, while the warm internal lights suggest an intimate and inviting atmosphere within the medina's walls.\n\nVisual Identity: Moroccan culture, exotic desert city, ancient artistry\nForms & Materials: riad architecture, mosaic tiles, arches, terracotta\n\n\n[ENVIRONMENT:] clear and star-filled, night\n[CAMERA:] elevated oblique, aerial 45° tilt, wide composition with centered framing, layered depth with foreground elements\n[LENS:] 16-35mm wide-angle lens, centered perspective\n[LIGHT:] diffused key with parallax through haze, environmental motion (mist, wind, smoke)\n\n[NEG:] industrial elements, modern minimalism\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE: humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "promptLayers": {
+          "name": "Marrakech",
+          "description": "A vibrant imperial city in Morocco, known for its bustling souks, historic medina, and stunning architecture, with a warm, dry climate.",
+          "background": "A vast, deep indigo night sky, completely clear and speckled with countless sharp, bright stars. The distant, dark silhouette of the Atlas Mountains might be faintly visible on the horizon.",
+          "midground": "The sprawling, densely packed medina of Marrakech, appearing as an intricate tapestry of muted terracotta and ochre rooftops. Winding, faint lines represent distant streets, barely illuminated. Clusters of small, geometrically organized buildings with characteristic riad courtyards are discernible, their forms softened by the distance. The Jemaa el-Fnaa square might be a slightly brighter, more concentrated area of faint light.",
+          "foreground": "The outermost edges of the city, transitioning into the surrounding desert or palm groves, appearing as dark, textured expanses. The faint glow of distant lights might hint at the city's perimeter.",
+          "lighting": "Warm, inviting lantern light spills from within courtyards and along shadowed alleyways, creating pools of amber and gold that contrast with the deep blue of the night sky. The stars themselves are a primary light source, casting a subtle, ethereal glow that is not strong enough to illuminate details on the ground. No harsh artificial lights are visible.",
+          "atmosphere": "An exotic and tranquil mood, evoking the magic of an ancient desert city. The clear, star-filled sky contributes to a sense of peaceful vastness, while the warm internal lights suggest an intimate and inviting atmosphere within the medina's walls."
+        },
+        "promptData": {
+          "nodeType": "host",
+          "nodeId": "v2-1768252681422-gjpgschiq",
+          "nodeName": "Marrakech",
+          "hostId": "v2-1768252681422-gjpgschiq",
+          "hostName": "Marrakech",
+          "regionId": null,
+          "regionName": null,
+          "populate": false,
+          "dna": {
+            "essence": [
+              "Moroccan culture",
+              "exotic desert city",
+              "ancient artistry"
+            ],
+            "formsAndMaterials": [
+              "riad architecture",
+              "mosaic tiles",
+              "arches",
+              "terracotta"
+            ],
+            "colorAndLight": [
+              "rich jewel tones",
+              "warm lantern light",
+              "deep blue night sky"
+            ],
+            "atmosphere": [
+              "exotic",
+              "tranquil",
+              "inviting",
+              "intimate",
+              "magical"
+            ],
+            "banned": [
+              "industrial elements",
+              "modern minimalism"
+            ]
+          }
+        },
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768252681422-gjpgschiq"
+      ]
+    },
+    "media-1768253030369-jb6i5kbqc": {
+      "id": "media-1768253030369-jb6i5kbqc",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a23d6/7oyyPMOm1xdFgHzHpv7gb.jpg",
+      "createdAt": "2026-01-12T21:23:50.369Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nMedina. The historic heart of Marrakech, a labyrinth of narrow alleyways, bustling souks, and hidden courtyards.\n\nSCENE LAYERS:\n- Background: A deep indigo, star-filled night sky stretches above, dotted with a myriad of twinkling constellations. The faint glow of distant desert stars is visible.\n- Midground: The sprawling, ochre-toned rooftops of the Marrakech medina, a dense tapestry of flat surfaces and low-slung buildings. Visible are the geometric patterns of terracotta tiles and the occasional domed roof. The dark, winding outlines of narrow alleyways snake between the structures, appearing as deep shadows from this height. Hints of ancient mudbrick walls are discernible.\n- Foreground: The rooftops immediately below, showing more intricate details of riad architecture. Glimpses into open riad courtyards reveal the warm glow of interior lighting. Intricate patterns of mosaic tiles might be subtly visible on some elevated surfaces. The dark silhouettes of traditional arched doorways and carved wooden elements are suggested on building edges.\n\nLIGHTING: Warm, inviting lantern light emanates from within the visible riad courtyards, casting soft pools of golden-yellow light onto the surrounding rooftops and walls. This warm light contrasts with the deep blue shadows of the alleyways. The starlight provides a subtle, cool illumination from above.\nATMOSPHERE: A magical and exotic mood prevails, evoking the ancient artistry and historic medina of Marrakech. The scene feels tranquil and intimate, yet with an underlying sense of the bustling souk atmosphere conveyed by the distributed pockets of warm light. The deep night sky and star-filled quality add to the bohemian and sensory experience. The overall impression is that of an ancient, inviting desert city.\n\nVisual Identity: Moroccan culture, exotic desert city, ancient artistry, historic medina, souk atmosphere\nForms & Materials: riad architecture, mosaic tiles, arches, terracotta, mudbrick walls, carved wooden doors, riad courtyards\n\n\n[ENVIRONMENT:] clear and star-filled, night\n[CAMERA:] elevated oblique, aerial 45° tilt, wide composition with centered framing, layered depth with foreground elements\n[LENS:] 16-35mm wide-angle lens, centered perspective\n[LIGHT:] diffused key with parallax through haze, environmental motion (mist, wind, smoke)\n\n[NEG:] industrial elements, modern minimalism\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE: humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "promptLayers": {
+          "name": "Medina",
+          "description": "The historic heart of Marrakech, a labyrinth of narrow alleyways, bustling souks, and hidden courtyards.",
+          "background": "A deep indigo, star-filled night sky stretches above, dotted with a myriad of twinkling constellations. The faint glow of distant desert stars is visible.",
+          "midground": "The sprawling, ochre-toned rooftops of the Marrakech medina, a dense tapestry of flat surfaces and low-slung buildings. Visible are the geometric patterns of terracotta tiles and the occasional domed roof. The dark, winding outlines of narrow alleyways snake between the structures, appearing as deep shadows from this height. Hints of ancient mudbrick walls are discernible.",
+          "foreground": "The rooftops immediately below, showing more intricate details of riad architecture. Glimpses into open riad courtyards reveal the warm glow of interior lighting. Intricate patterns of mosaic tiles might be subtly visible on some elevated surfaces. The dark silhouettes of traditional arched doorways and carved wooden elements are suggested on building edges.",
+          "lighting": "Warm, inviting lantern light emanates from within the visible riad courtyards, casting soft pools of golden-yellow light onto the surrounding rooftops and walls. This warm light contrasts with the deep blue shadows of the alleyways. The starlight provides a subtle, cool illumination from above.",
+          "atmosphere": "A magical and exotic mood prevails, evoking the ancient artistry and historic medina of Marrakech. The scene feels tranquil and intimate, yet with an underlying sense of the bustling souk atmosphere conveyed by the distributed pockets of warm light. The deep night sky and star-filled quality add to the bohemian and sensory experience. The overall impression is that of an ancient, inviting desert city."
+        },
+        "promptData": {
+          "nodeType": "region",
+          "nodeId": "v2-1768252681422-iuw5xtq6h",
+          "nodeName": "Medina",
+          "hostId": "v2-1768252681422-gjpgschiq",
+          "hostName": "Marrakech",
+          "regionId": "v2-1768252681422-iuw5xtq6h",
+          "regionName": "Medina",
+          "populate": false,
+          "dna": {
+            "essence": [
+              "historic medina",
+              "souk atmosphere"
+            ],
+            "formsAndMaterials": [
+              "mudbrick walls",
+              "carved wooden doors",
+              "riad courtyards"
+            ],
+            "colorAndLight": [
+              "shadowed alleys",
+              "sun-drenched squares",
+              "warm lamplight"
+            ],
+            "atmosphere": [
+              "bohemian",
+              "bustling",
+              "intimate",
+              "sensory"
+            ],
+            "banned": []
+          }
+        },
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768252681422-iuw5xtq6h"
+      ]
     }
   }
 }
