@@ -45,10 +45,11 @@ export interface ImageEditContext {
  * Build image edit prompt for GO_INSIDE2 (entering a new space)
  * 
  * Uses SIMPLE ACTION-ORIENTED format with UNIFIED STYLE LOCK
+ * Generic solution that works for any space type (indoor, outdoor, underground, etc.)
  */
 export function buildEnterImageEditPrompt(context: ImageEditContext): string {
-  const spaceName = context.spaceName || 'the interior';
-  const parentName = context.parentName || 'the building';
+  const spaceName = context.spaceName || 'the space';
+  const parentName = context.parentName || 'the area';
   
   // Build style lock from DNA (simple: DNA in → style lock out)
   const styleLock = buildStyleLock(context.effectiveDNA);
@@ -62,29 +63,34 @@ export function buildEnterImageEditPrompt(context: ImageEditContext): string {
   if (context.weather) envParts.push(context.weather);
   const envContext = envParts.length > 0 ? envParts.join(', ') : 'current lighting';
 
-  const prompt = `Move the camera forward through the entrance and enter ${spaceName}.
+  const prompt = `You have entered ${spaceName}. Transform the view to show what you see from within this space.
 
 Target location:
-Interior of ${spaceName} within ${parentName}.
+Inside ${spaceName} (within ${parentName}).
 
-Camera:
-Eye-level, just inside the threshold, facing inward from the doorway.
+Camera position:
+Eye-level, positioned within the space itself. You have stepped through the entrance into ${spaceName}. The entrance you came from is now behind you, and you are looking at the space around you.
 
-Reveal:
+Perspective:
+Show the view FROM WITHIN the space, not approaching it or viewing it from outside. The camera has entered and is now inside. What you stepped through to enter is behind the camera position.
+
+What to reveal:
 ${revealText}
 
-Preserve:
-Exterior architecture, building identity, scale, ${envContext}.
+Preserve from source:
+Overall architectural character, scale, ${envContext}.
 
 STYLE LOCK — NON-NEGOTIABLE:
 
 ${styleLock}
 
 Constraints:
-This is an interior space.
-Do not show exterior viewpoints.
-No new building geometry.
-Maintain grounded realism.`;
+Show the space from within, as if you've stepped inside and are looking around.
+The entrance/doorway is behind the camera - do not show it in the view.
+Do not show the exterior or entrance view of the space.
+Do not show the space from outside looking in.
+You are now INSIDE this space - show what surrounds you from this interior position.
+Maintain grounded realism and spatial continuity.`;
 
   // Log the prompt for debugging
   console.log('\n========== GO_INSIDE2 IMAGE EDIT PROMPT ==========');

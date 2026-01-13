@@ -186,21 +186,48 @@
         "v2-1768316778321-zhpw9vg26"
       ]
     },
-    "media-1768316855952-47y7oen91": {
-      "id": "media-1768316855952-47y7oen91",
+    "media-1768317735775-o4aeum4sa": {
+      "id": "media-1768317735775-o4aeum4sa",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8a3cc5/QX-JWazL2R6v9tuCIkzn-.jpg",
-      "createdAt": "2026-01-13T15:07:35.952Z",
+      "url": "https://v3b.fal.media/files/b/0a8a3d1d/UJPweHvPoktzxrF8Nq867.jpg",
+      "createdAt": "2026-01-13T15:22:15.775Z",
       "metadata": {
-        "prompt": "Move the camera forward through the entrance and enter Interior Living Area.\n\nTarget location:\nInterior of Interior Living Area within The Cliffside House.\n\nCamera:\nEye-level, just inside the threshold, facing inward from the doorway.\n\nReveal:\nStepping inside, you find a bright and airy living space.\n\nPreserve:\nExterior architecture, building identity, scale, midday, clear.\n\nSTYLE LOCK — NON-NEGOTIABLE:\n\nIdentity:\n* open-plan living\n* sunlit interiors\n\nMaterials:\n* smooth plaster walls\n* wooden flooring\n\nColor & Light:\n* natural light\n\nAtmosphere:\n* serene\n* inviting\n\nBanned:\n* dark, heavy drapery\n* exposed ductwork\n* cluttered decor\n* artificial neon lighting\n\nConstraints:\nThis is an interior space.\nDo not show exterior viewpoints.\nNo new building geometry.\nMaintain grounded realism.",
+        "prompt": "You have entered Balcony. Transform the view to show what you see from within this space.\n\nTarget location:\nInside Balcony (within The Cliffside House).\n\nCamera position:\nEye-level, positioned within the space itself. You have stepped through the entrance into Balcony. The entrance you came from is now behind you, and you are looking at the space around you.\n\nPerspective:\nShow the view FROM WITHIN the space, not approaching it or viewing it from outside. The camera has entered and is now inside. What you stepped through to enter is behind the camera position.\n\nWhat to reveal:\nPerched on the cliffside, this outdoor space offers breathtaking views.\n\nPreserve from source:\nOverall architectural character, scale, midday, clear.\n\nSTYLE LOCK — NON-NEGOTIABLE:\n\nIdentity:\n* outdoor living\n* panoramic views\n\nMaterials:\n* wooden railing\n\nColor & Light:\n* light pink walls\n* turquoise doors and windows\n* purple bougainvillea\n* sparkling turquoise pool water\n\nAtmosphere:\n* expansive\n* airy\n\nBanned:\n* enclosed structures\n* lack of natural light\n* cluttered surfaces\n* unnatural lighting fixtures\n\nConstraints:\nShow the space from within, as if you've stepped inside and are looking around.\nThe entrance/doorway is behind the camera - do not show it in the view.\nDo not show the exterior or entrance view of the space.\nDo not show the space from outside looking in.\nYou are now INSIDE this space - show what surrounds you from this interior position.\nMaintain grounded realism and spatial continuity.",
         "promptData": {
           "command": "GO_INSIDE2",
           "sourceNodeId": "v2-1768316778321-ongtfq94h",
           "sourceNodeName": "The Cliffside House",
-          "containerId": "v2-1768316849606-uuu4oa96u",
+          "containerId": "v2-1768317731458-agbkrlmpj",
           "containerName": "The Cliffside House",
-          "spaceId": "v2-1768316849606-2rhvr6bks",
-          "spaceName": "Interior Living Area",
+          "spaceId": "v2-1768317731458-v5387ikym",
+          "spaceName": "Balcony",
+          "spaceType": "elevated"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768317731458-v5387ikym"
+      ],
+      "parentMedia": "media-1768316786103-dgmqeqmma"
+    },
+    "media-1768317854275-gs5x7wgvv": {
+      "id": "media-1768317854275-gs5x7wgvv",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a3d29/TGnQxdIXYeO4kbWThocCi.jpg",
+      "createdAt": "2026-01-13T15:24:14.275Z",
+      "metadata": {
+        "prompt": "You have entered The Kitchen. Transform the view to show what you see from within this space.\n\nTarget location:\nInside The Kitchen (within The Cliffside House).\n\nCamera position:\nEye-level, positioned within the space itself. You have stepped through the entrance into The Kitchen. The entrance you came from is now behind you, and you are looking at the space around you.\n\nPerspective:\nShow the view FROM WITHIN the space, not approaching it or viewing it from outside. The camera has entered and is now inside. What you stepped through to enter is behind the camera position.\n\nWhat to reveal:\nA bright and airy kitchen, continuing the house's vibrant aesthetic.\n\nPreserve from source:\nOverall architectural character, scale, midday, clear.\n\nSTYLE LOCK — NON-NEGOTIABLE:\n\nIdentity:\n* domestic comfort\n* culinary focus\n\nMaterials:\n* custom cabinetry\n* stone countertops\n\nColor & Light:\n* natural illumination\n\nAtmosphere:\n* inviting\n* functional\n\nBanned:\n* exposed wiring\n* fluorescent lighting\n* utilitarian, stark design\n\nConstraints:\nShow the space from within, as if you've stepped inside and are looking around.\nThe entrance/doorway is behind the camera - do not show it in the view.\nDo not show the exterior or entrance view of the space.\nDo not show the space from outside looking in.\nYou are now INSIDE this space - show what surrounds you from this interior position.\nMaintain grounded realism and spatial continuity.",
+        "promptData": {
+          "command": "GO_INSIDE2",
+          "sourceNodeId": "v2-1768316778321-ongtfq94h",
+          "sourceNodeName": "The Cliffside House",
+          "containerId": "v2-1768317847683-96n060wjt",
+          "containerName": "The Cliffside House",
+          "spaceId": "v2-1768317847683-b7irzaaly",
+          "spaceName": "The Kitchen",
           "spaceType": "indoor"
         },
         "model": "fal-flux-2-turbo-edit",
@@ -209,7 +236,7 @@
         "aspectRatio": "landscape_16_9"
       },
       "entityRefs": [
-        "v2-1768316849606-2rhvr6bks"
+        "v2-1768317847683-b7irzaaly"
       ],
       "parentMedia": "media-1768316786103-dgmqeqmma"
     }

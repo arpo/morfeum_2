@@ -111,60 +111,111 @@
       },
       "primaryMedia": "media-1768316786103-dgmqeqmma"
     },
-    "v2-1768316849606-uuu4oa96u": {
-      "id": "v2-1768316849606-uuu4oa96u",
+    "v2-1768317731458-agbkrlmpj": {
+      "id": "v2-1768317731458-agbkrlmpj",
       "type": "container",
       "name": "The Cliffside House",
       "slug": "the-cliffside-house",
-      "description": "A luxurious, multi-level cliffside dwelling offering stunning ocean views. This residence blends seamlessly with its natural rocky surroundings, providing a tranquil and vibrant escape.",
+      "description": "A luxurious, multi-level dwelling carved into the natural rock face. Its vibrant colors and tranquil setting offer a unique escape.",
       "forbiddenTransformations": [
-        "industrial facades",
-        "graffiti art",
-        "stormy weather",
-        "commercial signage"
+        "absence of vibrant flora",
+        "overly geometric modern structures",
+        "dilapidated or neglected sections",
+        "gritty or industrial materials",
+        "overcast or dreary weather effects"
       ],
       "parentId": "v2-1768316778321-ongtfq94h"
     },
-    "v2-1768316849606-2rhvr6bks": {
-      "id": "v2-1768316849606-2rhvr6bks",
+    "v2-1768317731458-v5387ikym": {
+      "id": "v2-1768317731458-v5387ikym",
       "type": "space",
-      "name": "Interior Living Area",
-      "slug": "interior-living-area",
-      "description": "Stepping inside, you find a bright and airy living space. The walls are a soft, textured light pink, echoing the exterior. Sunlight streams in through turquoise-framed windows, illuminating the comfortable, uncluttered furnishings.",
-      "spaceType": "indoor",
+      "name": "Balcony",
+      "slug": "balcony",
+      "description": "Perched on the cliffside, this outdoor space offers breathtaking views. A charming wooden railing encloses the area, providing a secure vantage point.",
+      "spaceType": "elevated",
       "dna": {
         "essence": [
-          "open-plan living",
-          "sunlit interiors"
+          "outdoor living",
+          "panoramic views"
         ],
         "formsAndMaterials": [
-          "smooth plaster walls",
-          "wooden flooring"
+          "wooden railing"
         ],
-        "colorAndLight": [
-          "natural light"
-        ],
+        "colorAndLight": [],
         "atmosphere": [
-          "serene",
-          "inviting"
+          "expansive",
+          "airy"
         ],
         "banned": [
-          "dark, heavy drapery",
-          "exposed ductwork",
-          "cluttered decor",
-          "artificial neon lighting"
+          "enclosed structures",
+          "lack of natural light",
+          "cluttered surfaces",
+          "unnatural lighting fixtures"
         ]
       },
       "forbiddenTransformations": [
-        "cluttered antique furniture",
-        "dark, moody lighting",
-        "exposed brickwork",
-        "industrial lighting fixtures",
-        "barbed wire",
-        "overgrown indoor plants"
+        "walls or a roof obscuring the sky",
+        "lack of any natural elements",
+        "industrial railings or fixtures",
+        "ominous or dark shadows",
+        "any signs of decay or damage"
       ],
-      "parentId": "v2-1768316849606-uuu4oa96u",
-      "primaryMedia": "media-1768316855952-47y7oen91"
+      "parentId": "v2-1768317731458-agbkrlmpj",
+      "primaryMedia": "media-1768317735775-o4aeum4sa"
+    },
+    "v2-1768317847683-96n060wjt": {
+      "id": "v2-1768317847683-96n060wjt",
+      "type": "container",
+      "name": "The Cliffside House",
+      "slug": "the-cliffside-house",
+      "description": "A multi-level residence built into the cliffside, offering stunning ocean views. The house blends seamlessly with the natural rock formations and features vibrant Mediterranean-inspired colors and lush greenery.",
+      "forbiddenTransformations": [
+        "modern, minimalist additions",
+        "industrial materials like steel beams",
+        "overgrown or neglected plant life",
+        "lack of natural light",
+        "elements that suggest a colder climate"
+      ],
+      "parentId": "v2-1768316778321-ongtfq94h"
+    },
+    "v2-1768317847683-b7irzaaly": {
+      "id": "v2-1768317847683-b7irzaaly",
+      "type": "space",
+      "name": "The Kitchen",
+      "slug": "the-kitchen",
+      "description": "A bright and airy kitchen, continuing the house's vibrant aesthetic. It features custom cabinetry and ample counter space, overlooking the stunning cliffside scenery.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "domestic comfort",
+          "culinary focus"
+        ],
+        "formsAndMaterials": [
+          "custom cabinetry",
+          "stone countertops"
+        ],
+        "colorAndLight": [
+          "natural illumination"
+        ],
+        "atmosphere": [
+          "inviting",
+          "functional"
+        ],
+        "banned": [
+          "exposed wiring",
+          "fluorescent lighting",
+          "utilitarian, stark design"
+        ]
+      },
+      "forbiddenTransformations": [
+        "exposed plumbing or ventilation",
+        "plastic fixtures",
+        "harsh, artificial lighting",
+        "industrial-grade appliances",
+        "a lack of visual connection to the outdoors"
+      ],
+      "parentId": "v2-1768317847683-96n060wjt",
+      "primaryMedia": "media-1768317854275-gs5x7wgvv"
     }
   },
   "views": {},
@@ -182,11 +233,22 @@
               "type": "location",
               "children": [
                 {
-                  "id": "v2-1768316849606-uuu4oa96u",
+                  "id": "v2-1768317731458-agbkrlmpj",
                   "type": "container",
                   "children": [
                     {
-                      "id": "v2-1768316849606-2rhvr6bks",
+                      "id": "v2-1768317731458-v5387ikym",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "v2-1768317847683-96n060wjt",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1768317847683-b7irzaaly",
                       "type": "space",
                       "children": []
                     }
