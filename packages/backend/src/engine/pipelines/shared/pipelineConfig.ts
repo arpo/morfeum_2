@@ -137,7 +137,6 @@ export const PIPELINE_STEPS = {
   /** V2: Create interior location as child of existing exterior location + auto-Display */
   v2CreateWorldLocationInterior: [
     { id: 'interior_creation', name: 'Creating Interior', duration: 3000 },
-    { id: 'saving', name: 'Saving Interior', duration: 500 },
     { id: 'prompt_generation', name: 'Creating Image Prompt', duration: 4000 },
     { id: 'image_generation', name: 'Generating Image', duration: 2500 }
   ],
@@ -151,10 +150,9 @@ export const PIPELINE_STEPS = {
   
   /** V2: GOTO2 - Create sibling space within same container */
   v2Goto: [
-    { id: 'analyzing', name: 'Analyzing Parent Location', duration: 3000 },
+    { id: 'analyzing', name: 'Analyzing Parent Location', duration: 5000 },
     { id: 'structure', name: 'Creating Sibling Space', duration: 3000 },
     { id: 'image', name: 'Generating Space View', duration: 5000 },
-    { id: 'saving', name: 'Saving Space', duration: 500 }
   ]
 } as const;
 

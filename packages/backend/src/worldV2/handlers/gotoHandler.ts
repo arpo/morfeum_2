@@ -15,8 +15,8 @@
 import { Request, Response } from 'express';
 import { asyncHandler } from '../../middleware/errorHandler';
 import { HTTP_STATUS, AI_MODELS } from '../../config';
-import { generateText, editImage, hasMzooData } from '../../services/mzoo';
-import { buildGoInsidePrompt, parseGoInsideResponse } from '../prompts/goInside';
+import { generateText, generateCachedText, editImage, hasMzooData } from '../../services/mzoo';
+import { buildGoInsidePrompt, goInsideDynamic, parseGoInsideResponse } from '../prompts/goInside';
 import { buildEnterImageEditPrompt, buildEnterOutdoorEditPrompt, buildEnterSemiEnclosedEditPrompt } from '../prompts/imageEditPrompt';
 import { storageService } from '../../services/storage/storageService';
 import mediaService from '../../services/media/mediaService';
@@ -257,24 +257,43 @@ export const gotoHandler = asyncHandler(async (req: Request, res: Response) => {
       // ═══════════════════════════════════════════════════════════════════════
       sendProgress(operationId, 'structure', 'Creating new sibling space...');
 
-      const goInsidePrompt = buildGoInsidePrompt(target, {
+      // Build dynamic prompt content (context-specific parts only)
+      const dynamicPrompt = goInsideDynamic(target, {
         name: parentLocation.name,
         description: parentLocation.description,
         sourcePromptLayers: effectiveSourcePromptLayers
       });
 
-      const llmResult = await generateText(
-        apiKey,
-        [{ role: 'user', content: goInsidePrompt }],
-        AI_MODELS.SEED_GENERATION
-      );
-
-      if (!hasMzooData(llmResult)) {
-        throw new Error(llmResult.error || 'Failed to generate space structure');
+      // Use cached text generation for efficient token usage
+      // Static content (~1200 tokens) is cached, only dynamic (~300 tokens) sent per request
+      let llmResponseText: string;
+      try {
+        const cachedResult = await generateCachedText(
+          apiKey,
+          'morfeum-v2-navigation',
+          dynamicPrompt
+        );
+        llmResponseText = cachedResult.text;
+      } catch (cacheError) {
+        // Fallback to non-cached generation if caching fails
+        const goInsidePrompt = buildGoInsidePrompt(target, {
+          name: parentLocation.name,
+          description: parentLocation.description,
+          sourcePromptLayers: effectiveSourcePromptLayers
+        });
+        const llmResult = await generateText(
+          apiKey,
+          [{ role: 'user', content: goInsidePrompt }],
+          AI_MODELS.SEED_GENERATION
+        );
+        if (!hasMzooData(llmResult)) {
+          throw new Error(llmResult.error || 'Failed to generate space structure');
+        }
+        llmResponseText = llmResult.data.text;
       }
 
       // Parse response - we only need the space node (container already exists)
-      const { space } = parseGoInsideResponse(llmResult.data.text, generateId);
+      const { space } = parseGoInsideResponse(llmResponseText, generateId);
 
       // ═══════════════════════════════════════════════════════════════════════
       // Stage 3: Generate edited image for the new sibling space

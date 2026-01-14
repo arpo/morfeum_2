@@ -25,6 +25,7 @@ import { getContainerTypeDescriptions } from '../../shared/spaceTypeRegistry';
 import { DEEPEST_NODE_DNA_STATIC } from '../locations/deepestNodeDNA';
 import { CHAT_IMPERSONATION_STATIC } from '../chat/chatCharacterImpersonation';
 import { PARSE_HIERARCHY_STATIC } from '../../../nodeCreation/detection/parsePromptToHierarchy';
+import { GO_INSIDE_STATIC } from '../../../../worldV2/prompts/goInside';
 
 /**
  * Cache Group 1: World Creation (~6,500 tokens)
@@ -180,13 +181,25 @@ ${CHAT_IMPERSONATION_STATIC}
 `;
 
 /**
+ * Cache Group 5: V2 Navigation (~2,000 tokens)
+ * Used for: GO_INSIDE2, GOTO2 commands (V2 system)
+ * Note: Separate from morfeum-navigation which is for V1 (will be deprecated)
+ */
+export const CACHE_V2_NAVIGATION = `
+=== MORFEUM V2 NAVIGATION SYSTEM ===
+
+${GO_INSIDE_STATIC}
+`;
+
+/**
  * Cache group identifiers
  */
 export type CacheGroupId = 
   | 'morfeum-world-creation'
   | 'morfeum-character-creation'
   | 'morfeum-navigation'
-  | 'morfeum-chat';
+  | 'morfeum-chat'
+  | 'morfeum-v2-navigation';
 
 /**
  * Map of cache group IDs to their static content
@@ -195,7 +208,8 @@ export const CACHE_GROUPS: Record<CacheGroupId, string> = {
   'morfeum-world-creation': CACHE_WORLD_CREATION,
   'morfeum-character-creation': CACHE_CHARACTER_CREATION,
   'morfeum-navigation': CACHE_NAVIGATION,
-  'morfeum-chat': CACHE_CHAT
+  'morfeum-chat': CACHE_CHAT,
+  'morfeum-v2-navigation': CACHE_V2_NAVIGATION
 };
 
 /**

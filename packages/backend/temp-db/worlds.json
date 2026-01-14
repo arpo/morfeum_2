@@ -8,7 +8,7 @@
       "description": "A coastal resort town in Mexico's Yucatán Peninsula, known for its Mayan ruins and vibrant nightlife.",
       "genre": "Coastal",
       "weather": "clear and sunny",
-      "timeOfDay": "midday",
+      "timeOfDay": "night",
       "dna": {
         "essence": [
           "Mayan ruins",
@@ -315,113 +315,6 @@
       "parentId": "v2-1768394868245-ly9ndx04p",
       "primaryMedia": "media-1768395816672-1l2732qtg"
     },
-    "v2-1768395893217-mop4q12ag": {
-      "id": "v2-1768395893217-mop4q12ag",
-      "type": "space",
-      "name": "Sculpture Garden at Dusk",
-      "slug": "sculpture-garden-at-dusk",
-      "description": "Winding pathways lead through a vibrant outdoor gallery where enigmatic statues begin to emanate their own soft, internal light as dusk settles. The jungle foliage provides a lush backdrop, contrasting with the artificial glow of the art.",
-      "spaceType": "outdoor",
-      "dna": {
-        "essence": [
-          "tropical festival",
-          "Mayan art",
-          "glowing art installations",
-          "enchanting jungle"
-        ],
-        "formsAndMaterials": [
-          "organic jungle growth",
-          "abstract sculptural forms",
-          "vibrant festival banners (repurposed as subtle accents)",
-          "natural stone"
-        ],
-        "colorAndLight": [
-          "warm yellows, oranges, deep blues, emerald greens",
-          "dappled sunlight transitioning to the soft luminescence of glowing sculptures"
-        ],
-        "atmosphere": [
-          "magical",
-          "curious",
-          "festive",
-          "exploratory"
-        ],
-        "banned": [
-          "modern industrial lighting",
-          "ominous or scary statues",
-          "overgrown and unkempt foliage",
-          "lack of visible art"
-        ]
-      },
-      "promptLayers": {
-        "background": "Distant, lush silhouettes of Mayan jungle foliage against a darkening azure sky, with the hints of the festival's distant lights.",
-        "midground": "A network of sun-dappled paths winding between various art sculptures, some beginning to emit a soft, internal glow. Temporary festival banners might be subtly integrated into displays or as ambient lighting reflectors. Tropical flowers and palm fronds are artfully placed.",
-        "foreground": "The edge of a pathway, showing hints of soft earth or decorative stone. The base of a partially illuminated sculpture, hinting at its unique form and glowing material.",
-        "lighting": "The last vestiges of warm afternoon sunlight dappled on the ground, transitioning into the subtle, enchanting luminescence emanating from the art installations themselves. Shadows are softening but still present.",
-        "atmosphere": "A magical transition from day to night, filled with a sense of wonder and anticipation as the glowing art comes to life against the backdrop of the tropical jungle."
-      },
-      "forbiddenTransformations": [
-        "The glow from the statues becoming harsh or electric.",
-        "The jungle foliage obscuring the art.",
-        "The pathways becoming indistinct or muddy.",
-        "The atmosphere shifting to one of fear or unease.",
-        "The statues appearing mundane or static.",
-        "Any sign of artificial, non-glowing urban elements."
-      ],
-      "parentId": "v2-1768394868245-ly9ndx04p",
-      "primaryMedia": "media-1768395902653-psi2skiwd"
-    },
-    "v2-1768397754933-ae7nzk97t": {
-      "id": "v2-1768397754933-ae7nzk97t",
-      "type": "space",
-      "name": "Zero Day Festival Beach",
-      "slug": "zero-day-festival-beach",
-      "description": "You step onto the warm, sun-drenched sand of the festival beach. Gentle waves lap at the shore, and the vibrant sounds of the festival blend with the ocean breeze.",
-      "spaceType": "outdoor",
-      "dna": {
-        "essence": [
-          "Tropical Celebration",
-          "Oceanic Serenity",
-          "Festival Vibrancy"
-        ],
-        "formsAndMaterials": [
-          "Natural Sand",
-          "Gentle Waves",
-          "Integrated Festival Decor"
-        ],
-        "colorAndLight": [
-          "Brilliant Azure Sky",
-          "Warm Golden Sunlight",
-          "Reflective Water"
-        ],
-        "atmosphere": [
-          "Joyful Relaxation",
-          "Exhilarating Freedom",
-          "Sensory Delight"
-        ],
-        "banned": [
-          "Industrial machinery",
-          "Urban skyscrapers",
-          "Snow or ice",
-          "Fossils or ancient ruins"
-        ]
-      },
-      "promptLayers": {
-        "background": "Distant silhouette of lush Mayan jungle foliage, meeting the brilliant azure sky. The horizon where the ocean meets the sky is a sharp, clear line.",
-        "midground": "The main expanse of the festival beach, with soft, warm sand leading to the gentle, blue-tinted waves. Hints of festival decor (e.g., colorful flags, stylized seating) are subtly integrated into the natural landscape. People are enjoying the space, some closer to the water, others towards the festival's edge.",
-        "foreground": "The edge of the sun-dappled path transitioning to warm sand. Individual grains of sand are visible, perhaps with a few stray palm fronds or colorful festival confetti scattered on the ground.",
-        "lighting": "Bright, clear afternoon sunlight casts sharp, warm shadows across the sand. The sun glints off the surface of the gentle waves. The overall lighting is natural and expansive, reflecting the open sky.",
-        "atmosphere": "A feeling of joyful liberation and vibrant relaxation. The air is filled with the distant sounds of music and laughter, carried on the refreshing ocean breeze. It's a perfect blend of natural beauty and festive energy."
-      },
-      "forbiddenTransformations": [
-        "Replacing the sand with concrete or asphalt.",
-        "Introducing dense, artificial structures like buildings or piers.",
-        "Making the water appear murky or polluted.",
-        "Blocking the view of the sky with excessive festival infrastructure.",
-        "Adding wintery elements or cold-toned lighting."
-      ],
-      "parentId": "v2-1768394868245-ly9ndx04p",
-      "primaryMedia": "media-1768397768123-m04ehzcsj"
-    },
     "v2-1768397838379-y4bhi8950": {
       "id": "v2-1768397838379-y4bhi8950",
       "type": "space",
@@ -477,6 +370,174 @@
       ],
       "parentId": "v2-1768394868245-ly9ndx04p",
       "primaryMedia": "media-1768397842659-p9io888gn"
+    },
+    "v2-1768398872217-67oapys6j": {
+      "id": "v2-1768398872217-67oapys6j",
+      "type": "space",
+      "name": "Festival Beach Shore",
+      "slug": "festival-beach-shore",
+      "description": "A pristine stretch of golden sand, where the Zero Day Festival meets the ocean. The air is alive with the gentle lapping of waves and the distant festival buzz, all under the broad, open sky.",
+      "spaceType": "outdoor",
+      "dna": {
+        "essence": [],
+        "formsAndMaterials": [
+          "soft golden sands",
+          "clear turquoise ocean",
+          "gentle waves",
+          "natural rock formations",
+          "scattered tropical flora",
+          "lightweight festival installations"
+        ],
+        "colorAndLight": [
+          "oceanic blues and greens",
+          "sparkling water reflections",
+          "sun-dappled sand patterns"
+        ],
+        "atmosphere": [
+          "refreshing",
+          "expansive",
+          "serene yet lively"
+        ],
+        "banned": [
+          "industrial structures on the beach",
+          "polluted or murky water",
+          "barren or rocky shorelines without sand",
+          "heavy urban elements",
+          "overcast, stormy, or perpetually dark skies"
+        ]
+      },
+      "promptLayers": {
+        "background": "Distant, deep blue ocean meeting the brilliant azure sky on the horizon, framed by the lush silhouette of Mayan jungle foliage along the coastline. The vastness of the sea emphasizes the natural setting.",
+        "midground": "A wide expanse of sun-warmed golden sand, gently lapped by clear, sparkling turquoise waves. Scattered festivalgoers are enjoying the beach, with some vibrant, temporary festival flags and lightweight structures visible further down the shore, blending seamlessly with the natural beauty.",
+        "foreground": "Close-up details of soft, textured sand, small seashells, and the foamy, translucent edge of incoming waves. Playful footprints might indent the sand, or a few stray tropical flowers could be partially buried near the waterline.",
+        "lighting": "Bright, clear afternoon sunlight bathing the entire scene in a warm, natural glow. The sun casts shimmering highlights on the water's surface and creates soft, dappled patterns on the sand. The light is open and unfiltered, characteristic of a sunny tropical day.",
+        "atmosphere": "An energetic yet profoundly serene blend of joyful festival celebration and the peaceful, refreshing embrace of a tropical beach paradise. The gentle rhythm of the waves provides a calming counterpoint to the distant, lively festival sounds, evoking a sense of tranquil exhilaration."
+      },
+      "forbiddenTransformations": [
+        "Introducing artificial, polluted, or dark, ominous water",
+        "Replacing sandy shores with sharp, barren rocky cliffs or concrete embankments",
+        "Removing the tropical jungle backdrop and replacing it with an urban skyline or desert",
+        "Introducing heavy, permanent commercial structures like high-rise hotels or industrial docks",
+        "Shifting the atmosphere to desolate, eerie, or overtly melancholic",
+        "Incorporating snow, ice, or temperate climate elements",
+        "Eliminating all connections to the festival's vibrant energy and aesthetic"
+      ],
+      "parentId": "v2-1768394868245-ly9ndx04p",
+      "primaryMedia": "media-1768398877023-zuwn4uck0"
+    },
+    "v2-1768399337789-mggdxbo0i": {
+      "id": "v2-1768399337789-mggdxbo0i",
+      "type": "space",
+      "name": "Hidden Jungle Dance Floor",
+      "slug": "hidden-jungle-dance-floor",
+      "description": "A small, intimate dance floor nestled deep within the jungle, partially covered by lush canopies and illuminated by soft, ambient festival lights. The air hums with distant music, creating a secluded and magical party atmosphere.",
+      "spaceType": "semi-enclosed",
+      "dna": {
+        "essence": [
+          "hidden jungle rave",
+          "Mayan-inspired celebration",
+          "enchanted tropical grove"
+        ],
+        "formsAndMaterials": [
+          "organic jungle foliage",
+          "temporary woven structures",
+          "natural earth and stone"
+        ],
+        "colorAndLight": [
+          "vibrant jungle greens and blues",
+          "warm festival oranges and yellows",
+          "dappled, filtered light"
+        ],
+        "atmosphere": [
+          "secluded revelry",
+          "magical discovery",
+          "energetic yet intimate"
+        ],
+        "banned": [
+          "stark, modern architectural elements",
+          "overly manufactured or artificial terrain",
+          "clear, direct overhead sunlight",
+          "signs of decay or abandonment",
+          "heavy machinery or industrial equipment"
+        ]
+      },
+      "promptLayers": {
+        "background": "Thick, overlapping jungle foliage forming a natural canopy, with glimpses of the distant azure sky filtered through dense leaves. Hints of woven festival decorations are subtly integrated into the vegetation.",
+        "midground": "A circular area of packed earth or moss serves as the dance floor, surrounded by vibrant jungle plants and artfully placed, low-profile festival lighting structures that cast warm, colored glows.",
+        "foreground": "The packed earth or moss floor of the dance space, with scattered fallen leaves and small, luminous tropical flowers. The edge of the space might show roots or natural ground cover.",
+        "lighting": "Soft, dappled sunlight filters through the dense jungle canopy, mingling with the warm, colored ambient light from hidden festival lamps, creating a magical, glowing atmosphere.",
+        "atmosphere": "An intimate, enchanting, and energetic party vibe, feeling like a secret discovery within the vibrant jungle."
+      },
+      "forbiddenTransformations": [
+        "Complete removal of jungle foliage",
+        "Replacing the dance floor with open, clear grassland",
+        "Introducing harsh, direct artificial spotlights",
+        "Making the space fully enclosed with solid walls",
+        "Removing all traces of the festival's decorative elements",
+        "Introducing large, imposing architectural structures",
+        "Replacing the ground surface with concrete or asphalt"
+      ],
+      "parentId": "v2-1768394868245-ly9ndx04p",
+      "primaryMedia": "media-1768399342626-j12cuvmui"
+    },
+    "v2-1768399529677-bu2n9iadu": {
+      "id": "v2-1768399529677-bu2n9iadu",
+      "type": "space",
+      "name": "Jungle-Encroached Starship Chamber",
+      "slug": "jungle-encroached-starship-chamber",
+      "description": "You are inside a chamber within the derelict alien spacecraft, where the jungle has aggressively reclaimed the space. Rusty metal hull plates are intertwined with thick vines and moss, and the air is humid and earthy.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "ancient alien technology",
+          "jungle reclamation",
+          "Inca decay",
+          "rusty derelict"
+        ],
+        "formsAndMaterials": [
+          "curved, corroded metal",
+          "organic growth",
+          "stone fragments",
+          "thick vines"
+        ],
+        "colorAndLight": [
+          "muted metallic rust",
+          "deep jungle greens",
+          "earthy browns",
+          "filtered, dim light"
+        ],
+        "atmosphere": [
+          "mysterious",
+          "forgotten",
+          "oppressive humidity",
+          "ancient secrets"
+        ],
+        "banned": [
+          "glowing functional alien lights",
+          "clean, polished surfaces",
+          "visible modern tools",
+          "obvious alien symbols",
+          "sound of active machinery"
+        ]
+      },
+      "promptLayers": {
+        "background": "Curved, corroded spaceship hull plates that disappear into darkness, interwoven with thick, dark green jungle vines and moss.",
+        "midground": "A central chamber area with large, rusted alien machinery partially obscured by encroaching vegetation and weathered stone fragments that resemble Inca stonework.",
+        "foreground": "The floor is a mix of damp, decaying organic matter, mossy stone, and patches of rusted metal plating, with roots snaking across the surface.",
+        "lighting": "Dim, filtered light that penetrates through gaps in the hull and dense foliage, casting long, eerie shadows; the dominant light palette is the dull glow of rust and deep greens.",
+        "atmosphere": "Thick, humid, and stagnant, carrying the scent of decay and damp earth; a palpable sense of forgotten history and the overwhelming power of nature's reclamation."
+      },
+      "forbiddenTransformations": [
+        "The interior should not appear clean or recently used.",
+        "Any technology should look clearly ancient and non-functional.",
+        "The jungle growth should feel wild and actively consuming the structure.",
+        "No signs of current habitation or recent activity.",
+        "The light should be dim and naturalistic (filtered sunlight, not active alien glow).",
+        "The space should not feel like an accessible or maintained ruin.",
+        "The overall impression should be one of abandonment and decay over millennia."
+      ],
+      "parentId": "v2-1768394868245-ly9ndx04p",
+      "primaryMedia": "media-1768399535709-eqdcu8zcy"
     }
   },
   "views": {},
@@ -518,17 +579,22 @@
                       "children": []
                     },
                     {
-                      "id": "v2-1768395893217-mop4q12ag",
-                      "type": "space",
-                      "children": []
-                    },
-                    {
-                      "id": "v2-1768397754933-ae7nzk97t",
-                      "type": "space",
-                      "children": []
-                    },
-                    {
                       "id": "v2-1768397838379-y4bhi8950",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1768398872217-67oapys6j",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1768399337789-mggdxbo0i",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1768399529677-bu2n9iadu",
                       "type": "space",
                       "children": []
                     }

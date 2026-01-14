@@ -9,6 +9,9 @@
  * Uses promptLayers for visual style preservation across navigation.
  * The source image's promptLayers are passed in, and the LLM generates
  * new promptLayers for the interior that inherits the visual signature.
+ * 
+ * CACHING: Static content is exported as GO_INSIDE_STATIC for use with
+ * generateCachedText(). Dynamic content is built by goInsideDynamic().
  */
 
 import { DNA_SCHEMA, DNA_FIELD_RULES, DNA_DELTA_RULES } from './shared/dnaSchema';
@@ -66,44 +69,11 @@ export interface SpaceNode {
 }
 
 /**
- * Build the prompt for generating container + space nodes
- * 
- * @param target - What the user wants to enter (e.g., "the restaurant", "the park")
- * @param parentContext - Context about the parent location (name, description, promptLayers)
- * @returns The complete prompt for LLM
+ * Static content for GO_INSIDE2 prompt - CACHEABLE
+ * Contains all rules, schemas, and output format that don't change per request.
+ * ~1200 tokens - exported for use in morfeum-v2-navigation cache group.
  */
-export function buildGoInsidePrompt(
-  target: string,
-  parentContext: {
-    name: string;
-    description: string;
-    /** Source image's visual style - MUST be preserved */
-    sourcePromptLayers: ImagePromptLayers;
-  }
-): string {
-  const { sourcePromptLayers } = parentContext;
-  
-  return `You are a world-building assistant creating structured location data for a visual navigation system.
-
-## CONTEXT
-The user is currently at: "${parentContext.name}"
-Description: ${parentContext.description}
-
-## SOURCE IMAGE VISUAL STYLE (CRITICAL - PRESERVE THIS)
-The image you're editing shows this scene:
-
-**Background:** ${sourcePromptLayers.background}
-
-**Midground:** ${sourcePromptLayers.midground}
-
-**Foreground:** ${sourcePromptLayers.foreground}
-
-**Lighting:** ${sourcePromptLayers.lighting}
-
-**Atmosphere:** ${sourcePromptLayers.atmosphere}
-
-## USER REQUEST
-The user wants to GO INSIDE: "${target}"
+export const GO_INSIDE_STATIC = `You are a world-building assistant creating structured location data for a visual navigation system.
 
 ## YOUR TASK
 Create TWO nodes:
@@ -222,15 +192,136 @@ Return ONLY valid JSON with this exact structure:
 
 ## EXAMPLES
 
-For entering a rock-hewn tower from its exterior:
-- Source shows: reddish-brown rock, harsh midday sun, barren desert
-- Interior promptLayers should have: same reddish-brown rock on walls, but indirect filtered light, carved interior passages, enclosed ceiling
+### Example 1: Rock-Hewn Tower (indoor)
+**Source:** reddish-brown rock, harsh midday sun, barren desert
+**Interior promptLayers:**
+- background: "Reddish-brown carved rock walls stretching to a vaulted stone ceiling"
+- midground: "Central carved passages and alcoves hewn from solid rock"
+- foreground: "Smooth worn stone floor with ancient inscriptions"
+- lighting: "Indirect filtered light from narrow slits, warm amber torchlight"
+- atmosphere: "Ancient, enclosed, slightly cool desert sanctuary"
 
-For entering a pub from a Camden street:
-- Source shows: Victorian brick, warm amber lighting, gritty urban feel
-- Interior promptLayers should have: same brick/wood materials, warm amber glow from interior lights, cozy enclosed atmosphere
+### Example 2: Victorian Pub (indoor)
+**Source:** Victorian brick, warm amber lighting, gritty urban
+**Interior promptLayers:**
+- background: "Exposed brick walls with dark wood paneling"
+- midground: "Long wooden bar, brass taps, hanging glasses"
+- foreground: "Worn wooden floorboards, bar stools"
+- lighting: "Warm amber glow from wall sconces and pendant lights"
+- atmosphere: "Cozy, welcoming, traditional pub warmth"
+
+### Example 3: Japanese Garden Pavilion (semi-enclosed)
+**Source:** Traditional Japanese garden, paper screens, pine trees
+**Interior promptLayers:**
+- background: "Open lattice walls with garden views through shoji screens"
+- midground: "Low wooden platform, tatami edges visible"
+- foreground: "Polished dark wood decking, stepping stones below"
+- lighting: "Dappled sunlight through lattice, soft diffused glow"
+- atmosphere: "Tranquil, meditative, connection to nature preserved"
+
+### Example 4: Rooftop Terrace (outdoor)
+**Source:** Modern skyscraper, glass and steel, city skyline
+**Interior promptLayers:**
+- background: "City skyline visible, open sky above"
+- midground: "Outdoor seating, potted plants, glass barriers"
+- foreground: "Composite decking, urban garden elements"
+- lighting: "Direct sunlight (preserve time of day), city ambient"
+- atmosphere: "Urban retreat, elevated perspective, open air"
+
+### Example 5: Underground Cave System (underground)
+**Source:** Mountain entrance, moss-covered rocks, waterfall nearby
+**Interior promptLayers:**
+- background: "Natural rock walls disappearing into darkness, stalactites"
+- midground: "Underground stream, rock formations, narrow passages"
+- foreground: "Wet stone floor, phosphorescent moss patches"
+- lighting: "Bioluminescent glow, no natural sky light"
+- atmosphere: "Mysterious, ancient, isolated from surface world"
+
+### SpaceType Decision Tree
+
+1. Can you see the sky directly (no roof at all)?
+   - YES → Is it raised/elevated? → YES = "elevated" / NO = "outdoor"
+   - NO → Continue...
+
+2. Is there a partial roof/canopy with gaps to sky?
+   - YES → "semi-enclosed"
+   - NO → Continue...
+
+3. Is it below ground level?
+   - YES → "underground"
+   - NO → "indoor"
+
+### Common Mistakes to Avoid
+
+❌ Calling a gazebo "indoor" (it's semi-enclosed - has roof but open sides)
+❌ Calling a covered market "indoor" (likely semi-enclosed if skylights/gaps exist)
+❌ Calling a cave entrance "indoor" (it's underground)
+❌ Calling a balcony "outdoor" (it's elevated - has no roof but is raised)
+❌ Using "atrium" for indoor spaces (implies central void - use "hall" or "chamber")`;
+
+/**
+ * Build DYNAMIC content for GO_INSIDE2 prompt
+ * Contains only the context-specific parts (parent location, target, promptLayers)
+ * Used with generateCachedText() for efficient caching.
+ * 
+ * @param target - What the user wants to enter
+ * @param parentContext - Context about the parent location
+ * @returns Dynamic portion of the prompt
+ */
+export function goInsideDynamic(
+  target: string,
+  parentContext: {
+    name: string;
+    description: string;
+    sourcePromptLayers: ImagePromptLayers;
+  }
+): string {
+  const { sourcePromptLayers } = parentContext;
+  
+  return `## CONTEXT
+The user is currently at: "${parentContext.name}"
+Description: ${parentContext.description}
+
+## SOURCE IMAGE VISUAL STYLE (CRITICAL - PRESERVE THIS)
+The image you're editing shows this scene:
+
+**Background:** ${sourcePromptLayers.background}
+
+**Midground:** ${sourcePromptLayers.midground}
+
+**Foreground:** ${sourcePromptLayers.foreground}
+
+**Lighting:** ${sourcePromptLayers.lighting}
+
+**Atmosphere:** ${sourcePromptLayers.atmosphere}
+
+## USER REQUEST
+The user wants to GO INSIDE: "${target}"
 
 Now generate the JSON for entering "${target}" from "${parentContext.name}":`;
+}
+
+/**
+ * Build the FULL prompt for generating container + space nodes
+ * Legacy function - combines static + dynamic for non-cached usage
+ * 
+ * @param target - What the user wants to enter (e.g., "the restaurant", "the park")
+ * @param parentContext - Context about the parent location (name, description, promptLayers)
+ * @returns The complete prompt for LLM
+ */
+export function buildGoInsidePrompt(
+  target: string,
+  parentContext: {
+    name: string;
+    description: string;
+    /** Source image's visual style - MUST be preserved */
+    sourcePromptLayers: ImagePromptLayers;
+  }
+): string {
+  // Combine static + dynamic for full prompt
+  return `${GO_INSIDE_STATIC}
+
+${goInsideDynamic(target, parentContext)}`;
 }
 
 /**
