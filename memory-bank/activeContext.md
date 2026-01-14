@@ -101,9 +101,50 @@ packages/backend/src/worldV2/
 
 ---
 
+## 2026-01-14 - GO_INSIDE2 Complete (v1.8) ✅
+
+Completed comprehensive GO_INSIDE2 system with three parallel prompt builders and time/weather enforcement.
+
+### Prompt Builders Added
+
+| Version | Change |
+|---------|--------|
+| v1.4 | `buildEnterOutdoorEditPrompt()` - for outdoor→outdoor |
+| v1.6 | `buildEnterSemiEnclosedEditPrompt()` - for semi-enclosed (pavilions, gazebos) |
+| v1.7 | Time/weather enforcement in outdoor + semi-enclosed |
+| v1.8 | Time/weather enforcement in indoor prompt |
+
+### SpaceType Detection
+
+LLM in `goInside.ts` chooses spaceType based on physical characteristics:
+- `indoor` - Solid walls AND ceiling, NO sky visible
+- `outdoor` - No roof, full sky visible  
+- `semi-enclosed` - Partial roof, sky through gaps/lattice
+- `underground` - Below ground
+- `elevated` - Raised platform, no roof
+
+Handler routes to correct prompt builder based on spaceType.
+
+### Test Results
+
+13 diverse scenarios tested:
+- ✅ Megastructures (sci-fi tower, pyramid)
+- ✅ Small buildings (cottage, spaceship)
+- ✅ Natural formations (cave, hollow tree)
+- ✅ Outdoor areas (parks, festivals)
+- ✅ Semi-enclosed (art installations, temples)
+- ✅ Time/weather enforcement (night vs day)
+
+Full test log: `docs/go-inside-test-scenarios.md`
+
+---
+
 ## Next Steps
 
 - [x] Fix "tower inside tower" bug
 - [x] Fix openings/windows bug
-- [ ] Test chain navigation (interior → deeper room)
-- [ ] Test on different structure types (small house, spaceship, etc.)
+- [x] Test on different structure types
+- [x] Three parallel prompt builders (indoor, outdoor, semi-enclosed)
+- [x] Time/weather enforcement (v1.8)
+- [ ] Future: Add season support to Host node
+- [ ] GOTO navigation

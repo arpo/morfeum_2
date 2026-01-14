@@ -369,10 +369,57 @@ Edit prompts follow structured format:
 - **Megastructure protection**: "The structure is NOT visible as an object inside"
 - **Threshold trap avoidance**: "Entrance is behind the camera"
 
+### Three Parallel Prompt Builders (v1.8)
+
+The image edit system has three different prompt builders based on `spaceType`:
+
+| spaceType | Prompt Builder | Use Case |
+|-----------|----------------|----------|
+| `indoor`, `underground`, `elevated` | `buildEnterImageEditPrompt()` | Enclosed spaces, solid ceiling |
+| `outdoor` | `buildEnterOutdoorEditPrompt()` | Open-air areas, full sky visible |
+| `semi-enclosed` | `buildEnterSemiEnclosedEditPrompt()` | Partial covering, sky through gaps |
+
+### SpaceType Detection (goInside.ts)
+
+LLM chooses spaceType based on physical characteristics:
+
+| spaceType | Physical Characteristics | Examples |
+|-----------|-------------------------|----------|
+| `indoor` | Solid walls AND ceiling, NO sky | Rooms, restaurants, closed chambers |
+| `outdoor` | No roof, full sky visible | Park lawns, plazas, beaches |
+| `semi-enclosed` | Partial roof, sky through gaps/lattice | Pavilions, gazebos, art installations |
+| `underground` | Below ground, surrounded by earth | Caves, cellars, tunnels |
+| `elevated` | Raised platform, no roof | Balconies, rooftop terraces |
+
+**Key tests for LLM:**
+- Can you see sky? NO → indoor
+- Is there ANY roof? NO → outdoor
+- Roof but sky visible through it? → semi-enclosed
+
+### Time/Weather Enforcement (MANDATORY)
+
+All three prompts enforce host's `timeOfDay` and `weather`:
+
+**Indoor:**
+```
+LIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):
+Time of day: NIGHT
+NIGHT interior - artificial light sources (lamps, candles), warm pools of light, darker shadows.
+```
+
+**Outdoor/Semi-enclosed:**
+```
+LIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):
+Time of day: NIGHT
+This is a NIGHT SCENE - the sky must be dark with stars/moon, NOT bright blue daytime sky.
+```
+
+**Night detection:** `night`, `midnight`, `dusk` trigger artificial lighting for indoor, dark sky for outdoor.
+
 ### Key Files
 
 | File | Purpose |
 |------|---------|
-| `goInside.ts` | LLM prompt - receives sourcePromptLayers, outputs new promptLayers |
-| `goInsideHandler.ts` | Reads from media, stores to media |
-| `imageEditPrompt.ts` | Builds scene-expert formatted edit prompts |
+| `goInside.ts` | LLM prompt - receives sourcePromptLayers, outputs new promptLayers + spaceType |
+| `goInsideHandler.ts` | Reads from media, routes to correct prompt builder, stores to media |
+| `imageEditPrompt.ts` | Three parallel prompt builders: indoor, outdoor, semi-enclosed |

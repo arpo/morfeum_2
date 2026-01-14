@@ -98,7 +98,11 @@ Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = i
 
 ### Phase 5-6: Navigation 🚧 IN PROGRESS
 
-- [x] GO_INSIDE2 - Enter structures/buildings ← WORKING
+- [x] GO_INSIDE2 - Enter structures/buildings ← COMPLETE (v1.8)
+  - Three prompt builders: indoor, outdoor, semi-enclosed
+  - spaceType detection (indoor/outdoor/semi-enclosed/underground/elevated)
+  - Time/weather enforcement (MANDATORY section in prompts)
+  - 13 test scenarios passed
 - [ ] GOTO - Move between locations
 - [ ] Remove old system
 
@@ -141,11 +145,12 @@ prompts/
 
 ## What's Left 🚧
 
-- [x] GO_INSIDE2 navigation ← DONE
+- [x] GO_INSIDE2 navigation ← COMPLETE (v1.8)
 - [ ] GOTO navigation (move between locations)
 - [ ] Remove old system
 - [ ] Character spawn caching test
 - [ ] Bundle size optimization
+- [ ] Future: Season support for Host node
 
 ---
 

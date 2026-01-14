@@ -214,6 +214,35 @@
         "v2-1768395893217-mop4q12ag"
       ],
       "parentMedia": "media-1768394821323-gw133g32i"
+    },
+    "media-1768396097686-20rn2ovm2": {
+      "id": "media-1768396097686-20rn2ovm2",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a5bb9/EifbY4rdblMbDOLYURXtB.jpg",
+      "createdAt": "2026-01-14T13:08:17.686Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nTulum. A coastal resort town in Mexico's Yucatán Peninsula, known for its Mayan ruins and vibrant nightlife.\n\nSTYLE LOCK — NON-NEGOTIABLE:\n\nIdentity:\n* Mayan ruins\n* tropical coast\n* festivals\n\nMaterials:\n* limestone\n* thatched roofs\n* jungle flora\n\nColor & Light:\n* bright turquoise ocean\n* lush green jungle\n* golden sand\n* vibrant festival lights\n\nAtmosphere:\n* festive\n* tropical\n* ancient\n* lively\n\nBanned:\n* snow\n* urban sprawl\n\nSCENE LAYERS:\n- Background: A vast expanse of the bright turquoise ocean meets the distant, darker expanse of the clear night sky. Stars are faintly visible due to the clear weather, but the dominant feature is the inky blue of the sea merging with the night.\n- Midground: The lush green jungle forms a dense canopy, broken by the irregular shapes of ancient Mayan ruins constructed from pale limestone.  Scattered across the tropical coast, these structures are softened by the distance.  The golden sand beaches are narrow ribbons separating the jungle from the ocean.\n- Foreground: Clusters of small, thatched roofs of resort buildings are nestled within the jungle and along the coast. These appear as small, dark shapes from this height. Vibrant festival lights, appearing as tiny, scattered points of intense color (reds, blues, greens, yellows), punctuate the darkness of the resort areas and the edges of the jungle, hinting at the lively nightlife.\n\nLIGHTING: The scene is illuminated by a clear, sunny night sky. Moonlight casts a subtle, cool glow over the landscape, highlighting the turquoise ocean and the pale limestone ruins. The vibrant festival lights provide concentrated, warm, and colorful illumination in specific areas, creating a striking contrast with the natural moonlight.\nATMOSPHERE: The overall mood is festive and lively, with the ancient atmosphere of the Mayan ruins subtly present beneath the modern resort town's energy. The tropical setting is palpable, with the lush jungle and warm coastal air evoked by the visual elements.\n\n\n[ENVIRONMENT:] clear and sunny, night\n[CAMERA:] elevated oblique, aerial 45° tilt, wide composition with centered framing, layered depth with foreground elements\n[LENS:] 16-35mm wide-angle lens, centered perspective\n[LIGHT:] diffused key with parallax through haze, environmental motion (mist, wind, smoke)\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE: humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "promptLayers": {
+          "name": "Tulum",
+          "description": "A coastal resort town in Mexico's Yucatán Peninsula, known for its Mayan ruins and vibrant nightlife.",
+          "background": "A vast expanse of the bright turquoise ocean meets the distant, darker expanse of the clear night sky. Stars are faintly visible due to the clear weather, but the dominant feature is the inky blue of the sea merging with the night.",
+          "midground": "The lush green jungle forms a dense canopy, broken by the irregular shapes of ancient Mayan ruins constructed from pale limestone.  Scattered across the tropical coast, these structures are softened by the distance.  The golden sand beaches are narrow ribbons separating the jungle from the ocean.",
+          "foreground": "Clusters of small, thatched roofs of resort buildings are nestled within the jungle and along the coast. These appear as small, dark shapes from this height. Vibrant festival lights, appearing as tiny, scattered points of intense color (reds, blues, greens, yellows), punctuate the darkness of the resort areas and the edges of the jungle, hinting at the lively nightlife.",
+          "lighting": "The scene is illuminated by a clear, sunny night sky. Moonlight casts a subtle, cool glow over the landscape, highlighting the turquoise ocean and the pale limestone ruins. The vibrant festival lights provide concentrated, warm, and colorful illumination in specific areas, creating a striking contrast with the natural moonlight.",
+          "atmosphere": "The overall mood is festive and lively, with the ancient atmosphere of the Mayan ruins subtly present beneath the modern resort town's energy. The tropical setting is palpable, with the lush jungle and warm coastal air evoked by the visual elements."
+        },
+        "promptData": {
+          "command": "DISPLAY",
+          "populate": false
+        },
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768394817652-uewrwobpf"
+      ]
     }
   }
 }
