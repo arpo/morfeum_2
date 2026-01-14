@@ -116,7 +116,8 @@ function buildProhibitions(spaceType: SpaceType): string {
     'indoor': [
       'No sky visible through ceiling',
       'No open roof or atrium to sky',
-      'No exterior landscape visible'
+      'No exterior landscape visible',
+      'No exterior vegetation unless interior description specifies overgrowth/abandoned'
     ],
     'underground': [
       'No sky visible',

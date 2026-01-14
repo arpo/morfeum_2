@@ -1,263 +1,274 @@
 {
   "nodes": {
-    "v2-1768383849568-opl8natk9": {
-      "id": "v2-1768383849568-opl8natk9",
+    "v2-1768387925077-muvmn0tcj": {
+      "id": "v2-1768387925077-muvmn0tcj",
       "type": "host",
-      "name": "Aridia",
-      "slug": "aridia",
-      "description": "A vast, arid desert planet with a vibrant blue sky and monolithic geological formations.",
+      "name": "The Void",
+      "slug": "the-void",
+      "description": "The vast, empty expanse of interstellar space.",
       "genre": "Sci-Fi",
-      "weather": "clear and sunny",
+      "weather": "vacuum",
       "timeOfDay": "midday",
       "dna": {
         "essence": [
-          "ancient monoliths",
-          "futuristic organic architecture",
-          "arid desert",
-          "sci-fi"
+          "interstellar travel",
+          "industrial aesthetic",
+          "worn technology"
         ],
         "formsAndMaterials": [
-          "cracked rock formations",
-          "metallic platforms",
-          "curved architecture"
+          "battered hull plating",
+          "industrial metal",
+          "exposed wiring"
         ],
         "colorAndLight": [
-          "orange-brown",
-          "sandy yellow",
-          "vibrant blue sky",
-          "turquoise accents",
-          "bright direct sunlight",
-          "sharp shadows"
+          "grimy metallic",
+          "cold blue emergency lights",
+          "starlight"
         ],
         "atmosphere": [
-          "futuristic",
-          "ancient",
-          "desolate",
-          "vast",
-          "solitary",
-          "adventurous",
-          "monolithic"
+          "gritty",
+          "utilitarian",
+          "isolating"
         ],
         "banned": [
-          "lush vegetation",
-          "water bodies"
+          "organic elements",
+          "natural landscapes"
         ]
       },
       "spaceType": "exterior"
     },
-    "v2-1768383849568-jitwpropr": {
-      "id": "v2-1768383849568-jitwpropr",
+    "v2-1768387925077-yuhyxjzxn": {
+      "id": "v2-1768387925077-yuhyxjzxn",
       "type": "region",
-      "name": "The Great Expanse",
-      "slug": "the-great-expanse",
-      "description": "A seemingly endless stretch of arid desert, characterized by towering rock formations and distant mesas.",
+      "name": "Region",
+      "slug": "region",
+      "description": "Pass-through region in The Void",
+      "isPassThrough": true,
+      "dna": {
+        "essence": [],
+        "formsAndMaterials": [],
+        "colorAndLight": [],
+        "atmosphere": [],
+        "banned": []
+      }
+    },
+    "v2-1768387925077-po8lrioei": {
+      "id": "v2-1768387925077-po8lrioei",
+      "type": "location",
+      "name": "Stellar Freighter Vagrant",
+      "slug": "stellar-freighter-vagrant",
+      "spaceType": "exterior",
+      "description": "A battered stellar freighter, its hull plating scarred and dented, with numerous cargo containers mag-locked to its exterior.",
+      "dna": {
+        "essence": [
+          "worn spacecraft",
+          "cargo transport"
+        ],
+        "formsAndMaterials": [
+          "battered hull plating",
+          "mag-lock connectors",
+          "cargo containers",
+          "exposed pipes"
+        ],
+        "colorAndLight": [
+          "dull metallic sheen",
+          "occasional flickering lights"
+        ],
+        "atmosphere": [
+          "gritty",
+          "utilitarian",
+          "worn down"
+        ],
+        "banned": [
+          "clean lines",
+          "new construction"
+        ]
+      },
+      "primaryMedia": "media-1768387930088-cn7dlsguc"
+    },
+    "v2-1768387941867-nzrl4breb": {
+      "id": "v2-1768387941867-nzrl4breb",
+      "type": "container",
+      "name": "Stellar Freighter Vagrant",
+      "slug": "stellar-freighter-vagrant",
+      "description": "A battered stellar freighter, its hull plating scarred and dented. Numerous cargo containers are mag-locked to its exterior, hinting at its utilitarian purpose.",
+      "forbiddenTransformations": [
+        "The ship appearing pristine or new",
+        "Exterior details like pipes and dents vanishing",
+        "Any sense of organized, clean cargo bays",
+        "The ship being significantly smaller or larger",
+        "The void outside being replaced with a planetary view"
+      ],
+      "parentId": "v2-1768387925077-po8lrioei"
+    },
+    "v2-1768387941867-5t9lnnxzf": {
+      "id": "v2-1768387941867-5t9lnnxzf",
+      "type": "space",
+      "name": "Cargo Hold",
+      "slug": "cargo-hold",
+      "description": "The cavernous main cargo hold of the freighter, filled with stacks of utilitarian containers. Exposed structural elements and dim lighting create a utilitarian, workhorse atmosphere.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "utilitarian space",
+          "worn down",
+          "functional cargo"
+        ],
+        "formsAndMaterials": [
+          "exposed structural beams",
+          "bare metal plating",
+          "industrial conduits"
+        ],
+        "colorAndLight": [
+          "dull metallic sheen",
+          "intermittent functional lighting",
+          "deep shadows"
+        ],
+        "atmosphere": [
+          "functional isolation",
+          "immense scale within",
+          "gritty resilience"
+        ],
+        "banned": [
+          "cleanliness",
+          "luxury furnishings",
+          "natural light sources",
+          "decorative elements"
+        ]
+      },
+      "promptLayers": {
+        "background": "The far interior walls are composed of scarred, dull metallic plating, mirroring the freighter's exterior. Exposed structural beams and conduits crisscross the ceiling and distant walls. Occasional dim, functional lights flicker, casting long, deep shadows.",
+        "midground": "Stacks of unadorned, industrial cargo containers, some showing wear, fill the space. Heavy-duty mag-locks and tie-down points are visible on the floor and walls. Massive, utilitarian support beams define the vastness of the chamber.",
+        "foreground": "The floor is a grimy, metallic plating, showing scuff marks and faint oil stains. The immediate area is dominated by the base of stacked containers and the curve of the freighter's internal hull.",
+        "lighting": "Harsh, functional lights provide localized illumination, creating stark contrasts and deep, inky shadows. The overall light is dim and utilitarian, lacking any diffusion, reminiscent of the external harshness but contained within.",
+        "atmosphere": "A profound sense of utilitarian isolation and immense scale within the confines of the ship. The atmosphere is that of a workhorse space, designed for function over form, reflecting the freighter's battered exterior and the harshness of its operational environment."
+      },
+      "forbiddenTransformations": [
+        "The space appearing clean or organized",
+        "Luxurious or decorative elements appearing",
+        "Any visible windows to the outside void",
+        "The space feeling small or cramped",
+        "The walls becoming smooth or polished",
+        "The lighting becoming warm or ambient"
+      ],
+      "parentId": "v2-1768387941867-nzrl4breb",
+      "primaryMedia": "media-1768387947966-8ubs97o99"
+    },
+    "v2-1768388028657-50qopyqi8": {
+      "id": "v2-1768388028657-50qopyqi8",
+      "type": "host",
+      "name": "Crystal Caves",
+      "slug": "crystal-caves",
+      "description": "A vast subterranean network of caves filled with luminous crystal formations and mineral deposits.",
+      "genre": "Fantasy",
+      "weather": "damp and cool",
+      "timeOfDay": "night",
+      "dna": {
+        "essence": [
+          "crystalline formations",
+          "subterranean beauty",
+          "natural wonder"
+        ],
+        "formsAndMaterials": [
+          "jagged amethyst",
+          "quartz veins",
+          "mineral deposits",
+          "rock"
+        ],
+        "colorAndLight": [
+          "purple-blue glow",
+          "ambient luminescence",
+          "dark shadows"
+        ],
+        "atmosphere": [
+          "mysterious",
+          "ethereal",
+          "awe-inspiring"
+        ],
+        "banned": [
+          "organic life",
+          "artificial lighting"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1768388028657-ppz9rixnx": {
+      "id": "v2-1768388028657-ppz9rixnx",
+      "type": "region",
+      "name": "Amethyst Entrance",
+      "slug": "amethyst-entrance",
+      "description": "The primary entrance to the Crystal Caves, framed by massive, jagged amethyst formations.",
       "isPassThrough": false,
       "dna": {
         "essence": [
-          "arid desert",
-          "rock formations",
-          "vastness"
+          "grand entrance",
+          "crystal framing"
         ],
         "formsAndMaterials": [
-          "cracked orange-brown rock",
-          "sandy terrain",
-          "mesa-like formations"
+          "jagged amethyst formations",
+          "mineral encrustations"
         ],
         "colorAndLight": [
-          "sandy yellow",
-          "orange-brown",
-          "sharp shadows"
+          "intense purple-blue glow",
+          "deep shadows"
         ],
         "atmosphere": [
-          "desolate",
-          "vast",
-          "solitary"
+          "inviting yet formidable",
+          "magical"
         ],
         "banned": []
       }
     },
-    "v2-1768383849568-ck78ai9vs": {
-      "id": "v2-1768383849568-ck78ai9vs",
+    "v2-1768388028657-q1v5c6y59": {
+      "id": "v2-1768388028657-q1v5c6y59",
       "type": "location",
-      "name": "The Chronos Pillar",
-      "slug": "the-chronos-pillar",
+      "name": "Crystal Cave Mouth",
+      "slug": "crystal-cave-mouth",
       "spaceType": "exterior",
-      "description": "A colossal, ancient-looking tower-like structure that seamlessly blends natural cracked orange-brown rock formations with futuristic, organic metallic architecture, featuring curved platforms, balconies, and windows with turquoise accents.",
+      "description": "The dark, imposing entrance to the Crystal Caves, where jagged amethyst formations and mineral deposits create a dramatic frame.",
       "dna": {
         "essence": [
-          "colossal tower",
-          "blended architecture"
+          "cave entrance",
+          "crystal framing"
         ],
         "formsAndMaterials": [
-          "massive rock pillar",
-          "metallic curved platforms",
-          "balconies",
-          "windows"
+          "jagged amethyst",
+          "mineral deposits",
+          "dark earth"
         ],
         "colorAndLight": [
-          "turquoise accents",
-          "bright direct sunlight"
+          "purple-blue glow",
+          "deep shadows"
         ],
         "atmosphere": [
-          "architectural",
-          "sci-fi"
+          "foreboding",
+          "luminous"
         ],
         "banned": []
       },
-      "primaryMedia": "media-1768383854314-cmgmeoat1"
-    },
-    "v2-1768386568474-1gg99e7qi": {
-      "id": "v2-1768386568474-1gg99e7qi",
-      "type": "container",
-      "name": "The Chronos Pillar Complex",
-      "slug": "the-chronos-pillar-complex",
-      "description": "The Chronos Pillar Complex is a monumental fusion of ancient earth and advanced alien technology. It serves as a nexus of exploration and scientific study within the Great Expanse.",
-      "forbiddenTransformations": [
-        "rendering the exterior sky or horizon visible from within the main entrance hall",
-        "showing a transition to vastly different, non-integrated architectural styles",
-        "depicting the pillar's exterior as a backdrop visible through the interior space",
-        "introducing elements that suggest a natural cave system rather than a constructed interior",
-        "making the entrance appear small or low-ceilinged"
-      ],
-      "parentId": "v2-1768383849568-ck78ai9vs"
-    },
-    "v2-1768386568474-g2252no5r": {
-      "id": "v2-1768386568474-g2252no5r",
-      "type": "space",
-      "name": "Grand Vestibule",
-      "slug": "grand-vestibule",
-      "description": "You have entered a vast, high-ceilinged vestibule carved into the base of the Chronos Pillar. The space seamlessly blends the raw, cracked rock of the pillar's foundation with polished metallic surfaces, illuminated by diffused, glowing light.",
-      "spaceType": "indoor",
-      "dna": {
-        "essence": [
-          "ancient earth",
-          "organic futurism",
-          "alien grandeur"
-        ],
-        "formsAndMaterials": [
-          "curved metallic structures",
-          "cracked rock formations",
-          "polished stone accents"
-        ],
-        "colorAndLight": [
-          "warm orange-browns",
-          "metallic silvers",
-          "glowing turquoise accents",
-          "diffused interior lighting"
-        ],
-        "atmosphere": [
-          "awe-inspiring",
-          "architectural",
-          "sci-fi",
-          "spacious"
-        ],
-        "banned": [
-          "visible sky",
-          "harsh direct sunlight",
-          "exposed scaffolding",
-          "traditional door frames",
-          "ornate carvings"
-        ]
-      },
-      "promptLayers": {
-        "background": "The far walls are a continuation of the cracked orange-brown rock, smoothed and polished in places, with sections of seamless, organically curved metallic plating extending upwards into the unseen height of the ceiling. Subtle, recessed turquoise lights are embedded along the upper architectural lines.",
-        "midground": "The primary architectural elements are sweeping, metallic curves that merge with the natural rock. Archways and openings hint at further interior passages. Integrated platforms, also made of the same polished metal and rock, are visible at various heights, receding into the vastness of the space.",
-        "foreground": "The floor is a polished, dark grey stone with subtle, crystalline inclusions, mirroring the arid ground outside but treated for interior use. The very edge of the massive, carved rock foundation of the pillar is visible, demonstrating the immense scale of the interior.",
-        "lighting": "Soft, diffused light emanates from hidden sources within the metallic architecture and embedded turquoise accents, casting gentle shadows and highlighting the textures of the rock and metal. The harshness of the exterior sun is entirely absent, replaced by a warm, inviting glow.",
-        "atmosphere": "An overwhelming sense of scale and awe pervades the space. The fusion of raw, ancient materials with sleek, organic technology creates a feeling of entering a sacred, technologically advanced chamber."
-      },
-      "forbiddenTransformations": [
-        "rendering the space as a simple cavern or cave",
-        "showing the exterior sky or natural horizon from within this hall",
-        "introducing elements of typical Earth architecture (e.g., modern doors, windows showing outside)",
-        "making the ceiling appear low or flat",
-        "depicting the metallic elements as sharp or angular",
-        "showing the raw, unfinished exterior rock face as the primary interior material",
-        "introducing artificial or overtly modern flooring materials that clash with the organic theme"
-      ],
-      "parentId": "v2-1768386568474-1gg99e7qi",
-      "primaryMedia": "media-1768386574247-vc0vlfpbo"
-    },
-    "v2-1768386657582-byqnkkbcr": {
-      "id": "v2-1768386657582-byqnkkbcr",
-      "type": "space",
-      "name": "The Terrace",
-      "slug": "the-terrace",
-      "description": "You have arrived at the rooftop terrace bar. This elevated space offers sweeping vistas of the Great Expanse under the Aridian sun, with comfortable seating integrated into the pillar's architecture.",
-      "spaceType": "elevated",
-      "dna": {
-        "essence": [
-          "ancient fusion",
-          "organic tech",
-          "arid alien"
-        ],
-        "formsAndMaterials": [
-          "curved metal",
-          "cracked rock",
-          "smooth composite"
-        ],
-        "colorAndLight": [
-          "warm earth tones",
-          "vivid turquoise accents",
-          "harsh sun"
-        ],
-        "atmosphere": [
-          "awe-inspiring",
-          "expansive views",
-          "leisurely"
-        ],
-        "banned": [
-          "visible interior walls not matching exterior texture",
-          "overhead structures that are not part of the pillar's design",
-          "common terrestrial flora",
-          "obvious electrical wiring"
-        ]
-      },
-      "promptLayers": {
-        "background": "The expansive, clear sky of Aridia stretching to the horizon of the Great Expanse. Distant, muted arid rock formations are visible under the bright midday sun.",
-        "midground": "The main bar area and seating arrangements are integrated into the curved metallic and rock platforms of the pillar. Turquoise-accented windows reflect the intense sunlight. The organic metallic architecture flows seamlessly into areas of cracked orange-brown rock.",
-        "foreground": "The polished, smooth surface of the terrace floor, perhaps with subtle integrated patterns. The edge of the elevated platform with a low, sculpted barrier that blends with the pillar's structure.",
-        "lighting": "Bright, direct midday sunlight, creating strong specular highlights on metallic surfaces and warm illumination on rock. Turquoise accents glow with reflected light. Shadows are sharp and well-defined.",
-        "atmosphere": "A sense of elevated freedom and wonder, with the harsh beauty of Aridia laid out below. The fusion of ancient rock and futuristic metal creates an awe-inspiring, distinctly sci-fi lounge experience."
-      },
-      "forbiddenTransformations": [
-        "The sky becoming unnaturally close or having visible cloud formations not consistent with Aridia's depiction.",
-        "The floor suddenly changing material to something that doesn't complement the rock and metal aesthetic.",
-        "Seating that appears as standard, mass-produced furniture.",
-        "Any architectural elements that look like they were bolted on as an afterthought, rather than organically integrated.",
-        "The turquoise accents losing their vibrant glow or appearing dull.",
-        "The presence of railings or barriers that look like generic safety equipment.",
-        "The sun's harshness being significantly softened or diffused."
-      ],
-      "parentId": "v2-1768386568474-1gg99e7qi",
-      "primaryMedia": "media-1768386663488-u3itee9um"
+      "primaryMedia": "media-1768388032849-p0ra0fa2i"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "v2-1768383849568-opl8natk9",
+      "id": "v2-1768387925077-muvmn0tcj",
       "type": "host",
       "children": [
         {
-          "id": "v2-1768383849568-jitwpropr",
+          "id": "v2-1768387925077-yuhyxjzxn",
           "type": "region",
           "children": [
             {
-              "id": "v2-1768383849568-ck78ai9vs",
+              "id": "v2-1768387925077-po8lrioei",
               "type": "location",
               "children": [
                 {
-                  "id": "v2-1768386568474-1gg99e7qi",
+                  "id": "v2-1768387941867-nzrl4breb",
                   "type": "container",
                   "children": [
                     {
-                      "id": "v2-1768386568474-g2252no5r",
-                      "type": "space",
-                      "children": []
-                    },
-                    {
-                      "id": "v2-1768386657582-byqnkkbcr",
+                      "id": "v2-1768387941867-5t9lnnxzf",
                       "type": "space",
                       "children": []
                     }
@@ -268,9 +279,27 @@
           ]
         }
       ]
+    },
+    {
+      "id": "v2-1768388028657-50qopyqi8",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1768388028657-ppz9rixnx",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1768388028657-q1v5c6y59",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "v2-1768383849568-opl8natk9"
+    "v2-1768387925077-muvmn0tcj",
+    "v2-1768388028657-50qopyqi8"
   ]
 }
