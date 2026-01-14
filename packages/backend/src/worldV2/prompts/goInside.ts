@@ -150,6 +150,29 @@ You MUST generate \`promptLayers\` that describe the interior space visually.
 - The same ATMOSPHERE TONE should be felt
 - LIGHTING adapts from exterior to interior (direct sun → indirect/filtered)
 
+### INTERIOR SPACE NAMING (CRITICAL - Avoid Edit Model Failures)
+For INDOOR spaces, you MUST follow these naming rules to prevent visual confusion:
+
+**DO NOT use these space types in names or descriptions:**
+- "atrium" - implies a central void where you can see the structure
+- "void" - implies emptiness with visible structure
+- "shaft" - implies vertical opening
+- "gallery" (in the vertical sense) - implies multi-level void
+- Any space concept where "you can see the full height/structure from inside"
+
+**INSTEAD, use these space types:**
+- "chamber" - enclosed, carved-into-mass space
+- "hall" - elongated enclosed space
+- "room" - standard enclosed space
+- "corridor" - passage carved through mass
+- "vestibule" - entry chamber
+- "salon" - refined enclosed space
+- "gallery" (as exhibition space) - OK if describing walls with art, NOT a vertical void
+- "anteroom" - waiting area before main space
+
+**Why this matters:**
+When the edit model sees "atrium" or "void" in the prompt, it renders the structure as visible from inside (the "tower inside tower" bug). The interior should feel CARVED INTO the mass, not a void CONTAINING the structure.
+
 ## OUTPUT FORMAT
 Return ONLY valid JSON with this exact structure:
 

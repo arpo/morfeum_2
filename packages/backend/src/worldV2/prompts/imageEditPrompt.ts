@@ -50,19 +50,29 @@ export interface ImageEditContext {
 /**
  * Build enclosure assertions based on space type
  * Following scene-expert skill guidance on enclosure
+ * 
+ * IMPORTANT: For indoor spaces, we include universal rules that prevent common
+ * edit-model failure modes (open roof, tower-inside-tower, etc.) without
+ * needing any pattern-matching or detection. These assertions are simply
+ * TRUE for any enclosed interior.
  */
 function buildEnclosureAssertions(spaceType: SpaceType): string {
   switch (spaceType) {
     case 'indoor':
+      // Universal indoor rules - these are TRUE for ANY enclosed interior
+      // No detection needed - these statements never hurt
       return `Physical constraints:
 Solid ceiling above. Fully enclosed interior. No sky visible.
-Indirect lighting only - light enters through openings not visible in frame.
+The space is carved into the structure's mass — not a void containing the structure.
+The structure itself is NOT visible as an object from inside.
+Indirect lighting only — light enters through openings not visible in frame.
 The entrance is behind the camera position.`;
 
     case 'underground':
       return `Physical constraints:
 Solid rock/earth ceiling above. Fully enclosed underground space. No sky, no exterior openings.
-Indirect or artificial lighting only. Carved into the mass, not a void.
+The space is carved into the mass — not a void or cavern containing structures.
+Indirect or artificial lighting only.
 The entrance passage is behind the camera position.`;
 
     case 'semi-enclosed':
@@ -90,24 +100,6 @@ Maintain spatial continuity.`;
   }
 }
 
-/**
- * Build megastructure protection clause
- * Prevents the "tower inside tower" bug for large singular structures
- */
-function buildMegastructureProtection(parentName: string): string {
-  // Check if parent sounds like a megastructure
-  const megastructurePatterns = /tower|spire|monolith|sphere|dome|pyramid|obelisk|citadel|fortress|temple|cathedral|palace|castle/i;
-  
-  if (megastructurePatterns.test(parentName)) {
-    return `
-Megastructure rule:
-The ${parentName} is NOT visible as an object inside this interior.
-This space is CARVED INTO the mass of the structure, not a void containing it.
-Do not show the structure's exterior form from inside.`;
-  }
-  
-  return '';
-}
 
 /**
  * Build prohibitions based on space type
@@ -152,8 +144,12 @@ function buildProhibitions(spaceType: SpaceType): string {
 /**
  * Build image edit prompt for GO_INSIDE2 (entering a new space)
  * 
- * Follows scene-expert skill format:
- * Action, Target location, Camera, Orientation, Reveal, Preserve, Style lock, Physical constraints, Prohibitions
+ * Follows the proven scene-expert structure that prevents "tower inside tower" bug:
+ * - Preserve = visual identity as SURFACE TREATMENT ONLY (not the object itself)
+ * - Carry forward = explicit materials list from target
+ * - Interior adaptation = how those materials transform for indoor context
+ * - Physical constraints = strong enclosure assertions
+ * - Prohibitions = ban central structures and exterior views
  */
 export function buildEnterImageEditPrompt(context: ImageEditContext): string {
   const { sourcePromptLayers, targetPromptLayers, spaceType, spaceName, parentName, weather, timeOfDay } = context;
@@ -164,45 +160,57 @@ export function buildEnterImageEditPrompt(context: ImageEditContext): string {
   if (weather) envParts.push(weather);
   const envContext = envParts.length > 0 ? envParts.join(', ') : 'current conditions';
 
-  // Get enclosure and protection clauses
+  // Get enclosure assertions and prohibitions
   const enclosureAssertions = buildEnclosureAssertions(spaceType);
-  const megastructureProtection = buildMegastructureProtection(parentName);
   const prohibitions = buildProhibitions(spaceType);
 
+  // Build the prompt following the proven working structure
+  // CRITICAL: Do NOT pass sourcePromptLayers.midground directly - it contains object descriptions
+  // that cause the edit model to show the structure inside itself
   const prompt = `Action:
-Move the camera forward into ${spaceName} and step fully inside.
+Move the camera forward and step into ${spaceName}.
 
 Target location:
-Interior space within ${parentName}.
+Interior space carved inside ${parentName}.
 
 Camera:
-Human eye level, well inside the space, past the last exterior-facing opening.
+Human eye level, positioned well inside the structure.
+The camera is past the entrance and past any exterior-facing opening.
 
 Orientation:
-Facing inward toward interior features. The entrance you came through is behind the camera.
+Facing inward toward the interior.
+The entrance is behind the camera and must not be visible.
 
 Reveal:
+An enclosed interior space within the structure.
 ${targetPromptLayers.midground}
 ${targetPromptLayers.foreground}
 
-Preserve from source (CRITICAL - maintain visual continuity):
-* Materials language: ${sourcePromptLayers.midground}
-* Lighting quality: ${sourcePromptLayers.lighting} → adapted for ${spaceType} context
+Preserve (visual identity as SURFACE TREATMENT ONLY):
+The exterior's visual signature applied to interior walls and surfaces:
+* Lighting quality: ${sourcePromptLayers.lighting}
 * Atmosphere tone: ${sourcePromptLayers.atmosphere}
-* Environmental context: ${envContext}
+* Environmental context: ${envContext} (influencing interior indirectly)
 
-Style lock — carry forward and apply to interior:
-* Background: ${targetPromptLayers.background}
-* Lighting: ${targetPromptLayers.lighting}
-* Atmosphere: ${targetPromptLayers.atmosphere}
+Style lock:
+Preserve the exterior's aesthetic as surface treatment for interior walls.
+
+Carry forward (apply to enclosing walls, floor, ceiling):
+${targetPromptLayers.background}
+
+Interior adaptation:
+${targetPromptLayers.lighting}
+${targetPromptLayers.atmosphere}
 
 ${enclosureAssertions}
-${megastructureProtection}
 
 Prohibitions:
 ${prohibitions}
+* Do not create a central pillar, spire, column, or tower form inside the space
+* Do not show the structure as an object visible from inside
 
-Maintain grounded realism and spatial continuity with the source image.`;
+Final constraint:
+Show a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.`;
 
   return prompt;
 }

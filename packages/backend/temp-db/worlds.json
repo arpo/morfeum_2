@@ -106,73 +106,73 @@
       },
       "primaryMedia": "media-1768383854314-cmgmeoat1"
     },
-    "v2-1768383874789-j5ldv7k0n": {
-      "id": "v2-1768383874789-j5ldv7k0n",
+    "v2-1768385852922-ochss6g3k": {
+      "id": "v2-1768385852922-ochss6g3k",
       "type": "container",
-      "name": "The Chronos Pillar Interior",
-      "slug": "the-chronos-pillar-interior",
-      "description": "The colossal structure known as the Chronos Pillar offers internal passages and chambers, seamlessly blending its natural rock foundations with advanced organic metallic architecture.",
+      "name": "The Chronos Pillar",
+      "slug": "the-chronos-pillar",
+      "description": "A colossal, ancient-looking tower that is a marvel of blended natural rock and futuristic metallic architecture. It features curved platforms, balconies, and windows with striking turquoise accents.",
       "forbiddenTransformations": [
-        "exterior sky visible inside",
-        "direct, harsh midday sun",
-        "open-air vistas of the Great Expanse",
-        "dusty, cracked earth flooring",
-        "prominent scattered rocks"
+        "Any visible sky or horizon from within the tower's primary entry points.",
+        "Signs of external weather or atmospheric conditions affecting the interior.",
+        "Architectural styles drastically different from the organic metallic and cracked rock fusion.",
+        "Modern, mundane human technology that clashes with the alien aesthetic.",
+        "Signs of decay or ruin that are not intentionally part of the ancient design."
       ],
       "parentId": "v2-1768383849568-ck78ai9vs"
     },
-    "v2-1768383874789-0tvk2vead": {
-      "id": "v2-1768383874789-0tvk2vead",
+    "v2-1768385852922-5jaoy1d7c": {
+      "id": "v2-1768385852922-5jaoy1d7c",
       "type": "space",
-      "name": "Central Concourse",
-      "slug": "central-concourse",
-      "description": "You have entered a wide, grand concourse within the Chronos Pillar. Curved metallic walls, echoing the exterior's organic design, rise around you, interspersed with sections of cracked, orange-brown rock. Turquoise-accented light fixtures cast a soft glow, illuminating the pathway forward.",
+      "name": "Pillar Vestibule",
+      "slug": "pillar-vestibule",
+      "description": "The immediate entry chamber within the Chronos Pillar, where the cracked orange-brown rock of the exterior gives way to the integrated metallic architecture. You are greeted by a sense of enclosed, awe-inspiring space, a transition from the arid expanse to the pillar's heart.",
       "spaceType": "indoor",
       "dna": {
         "essence": [
-          "ancient-future fusion",
-          "organic technology",
-          "cosmic monument"
+          "ancient fusion",
+          "organic tech",
+          "alien monolith"
         ],
         "formsAndMaterials": [
-          "curved metallic structures",
-          "cracked natural rock",
-          "smooth, polished surfaces"
+          "curved metallic plating",
+          "smooth integrated rock"
         ],
         "colorAndLight": [
-          "muted earthy tones",
-          "turquoise accents",
-          "soft, diffused interior lighting"
+          "warm earth tones",
+          "cool turquoise highlights",
+          "indirect, diffused light"
         ],
         "atmosphere": [
           "awe-inspiring",
-          "technological serenity",
-          "echoing immensity"
+          "architectural",
+          "alien sci-fi"
         ],
         "banned": [
-          "exposed wiring or rough industrial elements",
-          "sharp, angular architecture",
-          "natural desert flora",
-          "visible external weather effects"
+          "exposed rebar or crude construction",
+          "industrial lighting fixtures",
+          "natural wood elements",
+          "visible electrical wiring",
+          "fluorescent lighting"
         ]
       },
       "promptLayers": {
-        "background": "The smooth, organically curved metallic walls of the concourse continue upwards, meeting a softly illuminated, domed ceiling. Sections of the cracked orange-brown rock remain visible, integrated seamlessly into the metallic structure.",
-        "midground": "The central concourse stretches ahead, wide and inviting. Passages branch off to the sides, framed by the same curved metallic architecture. Subtle, embedded turquoise light sources emanate a gentle, diffused glow.",
-        "foreground": "The floor is a polished, dark material, reflecting the soft light. The transition between the metallic walls and the rock formations is visible up close, showcasing the intricate craftsmanship.",
-        "lighting": "Soft, diffused light emanates from integrated turquoise fixtures within the walls and ceiling, creating a warm, inviting glow. Specular highlights are gentle, reflecting off the polished metallic surfaces. Shadows are soft and undefined.",
-        "atmosphere": "A sense of technological serenity and contained immensity pervades the space, maintaining the awe-inspiring feel of the exterior within an enclosed, advanced interior environment."
+        "background": "Smooth, organically curving metallic walls that seamlessly integrate with sections of cracked, orange-brown rock, reminiscent of the exterior. The ceiling is not visible, implying a deep, enclosed structure.",
+        "midground": "The transition from the exterior rock foundation to the smooth, flowing metallic interior architecture. Passageways and subtle alcoves might be visible, hinting at further exploration within the tower.",
+        "foreground": "The polished, perhaps slightly textured floor, likely made of a dark, dense material that complements the metallic walls. The very edge of the massive rock foundation from the exterior might still be subtly visible near the entrance.",
+        "lighting": "Indirect light sources cast a warm, diffused glow, reflecting off the metallic surfaces and highlighting the textured rock. The vibrant turquoise accents of the exterior windows are muted, their glow now a softer internal luminescence, casting subtle colored light onto nearby surfaces.",
+        "atmosphere": "A profound sense of immense scale and ancient, advanced craftsmanship pervades the space, maintaining the awe-inspiring, architectural, and distinctly sci-fi atmosphere of the exterior, now within an enclosed, protected environment."
       },
       "forbiddenTransformations": [
-        "any direct sunlight or harsh shadows",
-        "exposed sky or exterior views",
-        "visible dust or debris on interior surfaces",
-        "unfiltered, natural rock textures without integration",
-        "sharp, jagged edges on any architectural elements",
-        "any signs of decay or ruin within the structure"
+        "Visible sky or direct sunlight pouring into the vestibule.",
+        "The appearance of standard doors or conventional architectural entryways.",
+        "Any materials that are overtly modern or manufactured in a common, Earth-like industrial style.",
+        "The interior walls appearing flat or lacking the organic, curved forms.",
+        "The color palette shifting significantly away from the dominant orange-brown and metallic tones with turquoise accents.",
+        "The lighting becoming harsh or revealing the true extent of the tower's structure as an empty void."
       ],
-      "parentId": "v2-1768383874789-j5ldv7k0n",
-      "primaryMedia": "media-1768383880873-mzyoakesl"
+      "parentId": "v2-1768385852922-ochss6g3k",
+      "primaryMedia": "media-1768385858958-gw5e50dd6"
     }
   },
   "views": {},
@@ -190,11 +190,11 @@
               "type": "location",
               "children": [
                 {
-                  "id": "v2-1768383874789-j5ldv7k0n",
+                  "id": "v2-1768385852922-ochss6g3k",
                   "type": "container",
                   "children": [
                     {
-                      "id": "v2-1768383874789-0tvk2vead",
+                      "id": "v2-1768385852922-5jaoy1d7c",
                       "type": "space",
                       "children": []
                     }
