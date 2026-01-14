@@ -1,274 +1,411 @@
 {
   "nodes": {
-    "v2-1768387925077-muvmn0tcj": {
-      "id": "v2-1768387925077-muvmn0tcj",
+    "v2-1768392217513-a1d6tzcep": {
+      "id": "v2-1768392217513-a1d6tzcep",
       "type": "host",
-      "name": "The Void",
-      "slug": "the-void",
-      "description": "The vast, empty expanse of interstellar space.",
-      "genre": "Sci-Fi",
-      "weather": "vacuum",
-      "timeOfDay": "midday",
-      "dna": {
-        "essence": [
-          "interstellar travel",
-          "industrial aesthetic",
-          "worn technology"
-        ],
-        "formsAndMaterials": [
-          "battered hull plating",
-          "industrial metal",
-          "exposed wiring"
-        ],
-        "colorAndLight": [
-          "grimy metallic",
-          "cold blue emergency lights",
-          "starlight"
-        ],
-        "atmosphere": [
-          "gritty",
-          "utilitarian",
-          "isolating"
-        ],
-        "banned": [
-          "organic elements",
-          "natural landscapes"
-        ]
-      },
-      "spaceType": "exterior"
-    },
-    "v2-1768387925077-yuhyxjzxn": {
-      "id": "v2-1768387925077-yuhyxjzxn",
-      "type": "region",
-      "name": "Region",
-      "slug": "region",
-      "description": "Pass-through region in The Void",
-      "isPassThrough": true,
-      "dna": {
-        "essence": [],
-        "formsAndMaterials": [],
-        "colorAndLight": [],
-        "atmosphere": [],
-        "banned": []
-      }
-    },
-    "v2-1768387925077-po8lrioei": {
-      "id": "v2-1768387925077-po8lrioei",
-      "type": "location",
-      "name": "Stellar Freighter Vagrant",
-      "slug": "stellar-freighter-vagrant",
-      "spaceType": "exterior",
-      "description": "A battered stellar freighter, its hull plating scarred and dented, with numerous cargo containers mag-locked to its exterior.",
-      "dna": {
-        "essence": [
-          "worn spacecraft",
-          "cargo transport"
-        ],
-        "formsAndMaterials": [
-          "battered hull plating",
-          "mag-lock connectors",
-          "cargo containers",
-          "exposed pipes"
-        ],
-        "colorAndLight": [
-          "dull metallic sheen",
-          "occasional flickering lights"
-        ],
-        "atmosphere": [
-          "gritty",
-          "utilitarian",
-          "worn down"
-        ],
-        "banned": [
-          "clean lines",
-          "new construction"
-        ]
-      },
-      "primaryMedia": "media-1768387930088-cn7dlsguc"
-    },
-    "v2-1768387941867-nzrl4breb": {
-      "id": "v2-1768387941867-nzrl4breb",
-      "type": "container",
-      "name": "Stellar Freighter Vagrant",
-      "slug": "stellar-freighter-vagrant",
-      "description": "A battered stellar freighter, its hull plating scarred and dented. Numerous cargo containers are mag-locked to its exterior, hinting at its utilitarian purpose.",
-      "forbiddenTransformations": [
-        "The ship appearing pristine or new",
-        "Exterior details like pipes and dents vanishing",
-        "Any sense of organized, clean cargo bays",
-        "The ship being significantly smaller or larger",
-        "The void outside being replaced with a planetary view"
-      ],
-      "parentId": "v2-1768387925077-po8lrioei"
-    },
-    "v2-1768387941867-5t9lnnxzf": {
-      "id": "v2-1768387941867-5t9lnnxzf",
-      "type": "space",
-      "name": "Cargo Hold",
-      "slug": "cargo-hold",
-      "description": "The cavernous main cargo hold of the freighter, filled with stacks of utilitarian containers. Exposed structural elements and dim lighting create a utilitarian, workhorse atmosphere.",
-      "spaceType": "indoor",
-      "dna": {
-        "essence": [
-          "utilitarian space",
-          "worn down",
-          "functional cargo"
-        ],
-        "formsAndMaterials": [
-          "exposed structural beams",
-          "bare metal plating",
-          "industrial conduits"
-        ],
-        "colorAndLight": [
-          "dull metallic sheen",
-          "intermittent functional lighting",
-          "deep shadows"
-        ],
-        "atmosphere": [
-          "functional isolation",
-          "immense scale within",
-          "gritty resilience"
-        ],
-        "banned": [
-          "cleanliness",
-          "luxury furnishings",
-          "natural light sources",
-          "decorative elements"
-        ]
-      },
-      "promptLayers": {
-        "background": "The far interior walls are composed of scarred, dull metallic plating, mirroring the freighter's exterior. Exposed structural beams and conduits crisscross the ceiling and distant walls. Occasional dim, functional lights flicker, casting long, deep shadows.",
-        "midground": "Stacks of unadorned, industrial cargo containers, some showing wear, fill the space. Heavy-duty mag-locks and tie-down points are visible on the floor and walls. Massive, utilitarian support beams define the vastness of the chamber.",
-        "foreground": "The floor is a grimy, metallic plating, showing scuff marks and faint oil stains. The immediate area is dominated by the base of stacked containers and the curve of the freighter's internal hull.",
-        "lighting": "Harsh, functional lights provide localized illumination, creating stark contrasts and deep, inky shadows. The overall light is dim and utilitarian, lacking any diffusion, reminiscent of the external harshness but contained within.",
-        "atmosphere": "A profound sense of utilitarian isolation and immense scale within the confines of the ship. The atmosphere is that of a workhorse space, designed for function over form, reflecting the freighter's battered exterior and the harshness of its operational environment."
-      },
-      "forbiddenTransformations": [
-        "The space appearing clean or organized",
-        "Luxurious or decorative elements appearing",
-        "Any visible windows to the outside void",
-        "The space feeling small or cramped",
-        "The walls becoming smooth or polished",
-        "The lighting becoming warm or ambient"
-      ],
-      "parentId": "v2-1768387941867-nzrl4breb",
-      "primaryMedia": "media-1768387947966-8ubs97o99"
-    },
-    "v2-1768388028657-50qopyqi8": {
-      "id": "v2-1768388028657-50qopyqi8",
-      "type": "host",
-      "name": "Crystal Caves",
-      "slug": "crystal-caves",
-      "description": "A vast subterranean network of caves filled with luminous crystal formations and mineral deposits.",
+      "name": "Drakon's Maw",
+      "slug": "drakons-maw",
+      "description": "A volatile volcanic realm dominated by obsidian peaks and rivers of molten rock.",
       "genre": "Fantasy",
-      "weather": "damp and cool",
-      "timeOfDay": "night",
+      "weather": "ash fall with sulfurous winds",
+      "timeOfDay": "dusk",
       "dna": {
         "essence": [
-          "crystalline formations",
-          "subterranean beauty",
-          "natural wonder"
+          "draconic ruins",
+          "volcanic landscape",
+          "bone architecture",
+          "ominous"
         ],
         "formsAndMaterials": [
-          "jagged amethyst",
-          "quartz veins",
-          "mineral deposits",
-          "rock"
+          "calcified bone",
+          "obsidian",
+          "basalt",
+          "magma flows"
         ],
         "colorAndLight": [
-          "purple-blue glow",
-          "ambient luminescence",
-          "dark shadows"
+          "scorched earth palette",
+          "glowing lava",
+          "deep shadows",
+          "fiery oranges"
         ],
         "atmosphere": [
-          "mysterious",
-          "ethereal",
+          "ominous",
+          "dangerous",
+          "primal",
           "awe-inspiring"
         ],
         "banned": [
-          "organic life",
-          "artificial lighting"
+          "lush vegetation",
+          "clear blue skies"
         ]
       },
       "spaceType": "exterior"
     },
-    "v2-1768388028657-ppz9rixnx": {
-      "id": "v2-1768388028657-ppz9rixnx",
+    "v2-1768392217513-1gppsmmy3": {
+      "id": "v2-1768392217513-1gppsmmy3",
       "type": "region",
-      "name": "Amethyst Entrance",
-      "slug": "amethyst-entrance",
-      "description": "The primary entrance to the Crystal Caves, framed by massive, jagged amethyst formations.",
+      "name": "The Cinder Peaks",
+      "slug": "the-cinder-peaks",
+      "description": "A treacherous mountain range composed of jagged obsidian and the fossilized remnants of colossal beasts.",
       "isPassThrough": false,
       "dna": {
         "essence": [
-          "grand entrance",
-          "crystal framing"
+          "bone structures",
+          "jagged terrain"
         ],
         "formsAndMaterials": [
-          "jagged amethyst formations",
-          "mineral encrustations"
+          "fossilized bone architecture",
+          "shattered obsidian"
         ],
         "colorAndLight": [
-          "intense purple-blue glow",
-          "deep shadows"
+          "monochromatic grays",
+          "hints of internal glow"
         ],
         "atmosphere": [
-          "inviting yet formidable",
-          "magical"
+          "foreboding",
+          "harsh"
         ],
         "banned": []
       }
     },
-    "v2-1768388028657-q1v5c6y59": {
-      "id": "v2-1768388028657-q1v5c6y59",
+    "v2-1768392217513-vksmmddmf": {
+      "id": "v2-1768392217513-vksmmddmf",
       "type": "location",
-      "name": "Crystal Cave Mouth",
-      "slug": "crystal-cave-mouth",
+      "name": "The Great Skull Dwelling",
+      "slug": "the-great-skull-dwelling",
       "spaceType": "exterior",
-      "description": "The dark, imposing entrance to the Crystal Caves, where jagged amethyst formations and mineral deposits create a dramatic frame.",
+      "description": "A colossal dragon skull, its hollowed eye sockets serving as cavernous entrances, its bone structure reinforced and shaped into a formidable lair.",
       "dna": {
         "essence": [
-          "cave entrance",
-          "crystal framing"
+          "skull conversion",
+          "bone dwelling"
         ],
         "formsAndMaterials": [
-          "jagged amethyst",
-          "mineral deposits",
-          "dark earth"
+          "massive bone struts",
+          "carved bone doorways",
+          "fossilized teeth"
         ],
         "colorAndLight": [
-          "purple-blue glow",
-          "deep shadows"
+          "muted bone whites",
+          "dark interior shadows",
+          "glowing lava veins"
         ],
         "atmosphere": [
-          "foreboding",
-          "luminous"
+          "imposing",
+          "ancient",
+          "powerful"
         ],
         "banned": []
       },
-      "primaryMedia": "media-1768388032849-p0ra0fa2i"
+      "primaryMedia": "media-1768392221891-z0dmjmjgz"
+    },
+    "v2-1768392240652-holh847ye": {
+      "id": "v2-1768392240652-holh847ye",
+      "type": "container",
+      "name": "The Great Skull Dwelling",
+      "slug": "the-great-skull-dwelling",
+      "description": "A colossal dragon skull, its hollowed eye sockets serving as cavernous entrances, its bone structure reinforced and shaped into a formidable lair. This ancient and imposing structure houses untold secrets and vast collections.",
+      "forbiddenTransformations": [
+        "The skull structure appearing as made of modern materials",
+        "Any signs of organic life other than the dwelling itself",
+        "A bright, sunny sky visible from within the dwelling",
+        "Any visible technology or complex machinery",
+        "Signs of recent construction or repairs",
+        "Vegetation growing on the interior bone surfaces"
+      ],
+      "parentId": "v2-1768392217513-vksmmddmf"
+    },
+    "v2-1768392240652-eocha4gq3": {
+      "id": "v2-1768392240652-eocha4gq3",
+      "type": "space",
+      "name": "The Dragon's Treasure Hoard",
+      "slug": "the-dragons-treasure-hoard",
+      "description": "A vast chamber carved deep within the dragon's skull, the air thick with the scent of aged gold and ancient dust. Mountains of glittering treasures—coins, jewels, and artifacts—are piled high against the cavernous bone walls.",
+      "spaceType": "underground",
+      "dna": {
+        "essence": [
+          "hoarded wealth",
+          "ancient dragon lair",
+          "calcified bone"
+        ],
+        "formsAndMaterials": [
+          "smooth, polished bone",
+          "piles of metallic objects",
+          "gemstones"
+        ],
+        "colorAndLight": [
+          "muted bone white and gold",
+          "eerie internal luminescence"
+        ],
+        "atmosphere": [
+          "opulent",
+          "foreboding",
+          "timeless"
+        ],
+        "banned": [
+          "modern display cases",
+          "velvet ropes",
+          "security cameras",
+          "open flames from torches"
+        ]
+      },
+      "promptLayers": {
+        "background": "The immense, curving walls are formed from the smoothed and polished interior bone of the dragon's skull. Occasional deep fissures and natural cavities within the bone offer pockets of intense shadow, contrasting with the primary bone-white material. No sky is visible, only the continuous, enclosed bone structure.",
+        "midground": "Towering mounds of treasure dominate the midground. Gleaming gold coins form cascading slopes, interspersed with the faceted brilliance of countless gemstones. Ancient, ornate chests lie open, spilling their contents. Some larger, fossilized teeth jut out from the walls, encrusted with precious metals.",
+        "foreground": "The floor is uneven, a chaotic spread of scattered coins, loose jewels, and smaller artifacts. Fine layers of dust and ash settle over everything, disturbed by unseen drafts. The edges of coin piles and scattered gems catch the dim light.",
+        "lighting": "Soft, pulsating glows emanate from within the bone structure itself, hinting at the residual energy of the dragon or hidden lava veins. This internal luminescence casts a warm, ethereal light that glints off the metallic surfaces and gemstones, creating a play of deep shadows and shimmering highlights. The overall light is dim and indirect, suitable for an enclosed, subterranean space.",
+        "atmosphere": "An atmosphere of immense, ancient wealth and the dormant power of a dragon pervades the space. The air feels heavy with the silence of ages, broken only by the faint whisper of settling dust. The sheer opulence is awe-inspiring, yet the lurking shadows and the colossal scale of the bone structure evoke a sense of potent, untamed energy."
+      },
+      "forbiddenTransformations": [
+        "The treasure appearing as cheap plastic replicas",
+        "Modern security measures such as laser grids or alarms",
+        "Signs of recent human activity like footprints or discarded tools",
+        "The bone walls appearing smooth and featureless, lacking the natural texture of bone",
+        "The lighting becoming bright and uniform, eliminating shadows",
+        "The presence of any living creatures other than the echoes of the dragon",
+        "The treasure being organized or cataloged in any modern fashion"
+      ],
+      "parentId": "v2-1768392240652-holh847ye",
+      "primaryMedia": "media-1768392246220-4acntuv5h"
+    },
+    "v2-1768392268649-zvfsg066z": {
+      "id": "v2-1768392268649-zvfsg066z",
+      "type": "host",
+      "name": "Whispering Woods",
+      "slug": "whispering-woods",
+      "description": "An ancient, primeval forest where trees grow to colossal sizes and a mystical aura pervades the air.",
+      "genre": "Fantasy",
+      "weather": "damp and cool",
+      "timeOfDay": "afternoon",
+      "dna": {
+        "essence": [
+          "ancient forest",
+          "mystical aura",
+          "primeval wilderness"
+        ],
+        "formsAndMaterials": [
+          "massive gnarled trees",
+          "thick moss",
+          "rotting wood",
+          "dense foliage"
+        ],
+        "colorAndLight": [
+          "deep greens",
+          "earthy browns",
+          "dappled sunlight",
+          "filtered light"
+        ],
+        "atmosphere": [
+          "mystical",
+          "ancient",
+          "serene",
+          "haunting"
+        ],
+        "banned": [
+          "modern structures",
+          "artificial light"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1768392268649-bwmu3ne44": {
+      "id": "v2-1768392268649-bwmu3ne44",
+      "type": "region",
+      "name": "The Elder Grove",
+      "slug": "the-elder-grove",
+      "description": "The oldest part of the Whispering Woods, characterized by exceptionally large and ancient trees.",
+      "isPassThrough": false,
+      "dna": {
+        "essence": [
+          "ancient trees",
+          "sacred ground"
+        ],
+        "formsAndMaterials": [
+          "colossal trunks",
+          "gnarled roots",
+          "vines"
+        ],
+        "colorAndLight": [
+          "deep shadows",
+          "emerald moss"
+        ],
+        "atmosphere": [
+          "reverent",
+          "ancient"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1768392268649-j4khj1em1": {
+      "id": "v2-1768392268649-j4khj1em1",
+      "type": "location",
+      "name": "The Great Hollow Oak",
+      "slug": "the-great-hollow-oak",
+      "spaceType": "exterior",
+      "description": "A monumental, ancient oak tree with a massive gnarled trunk and thick, moss-covered bark. A mystical aura emanates from its hollow interior.",
+      "dna": {
+        "essence": [
+          "hollow refuge",
+          "ancient sentinel"
+        ],
+        "formsAndMaterials": [
+          "gnarled bark",
+          "moss-covered",
+          "hollow trunk"
+        ],
+        "colorAndLight": [
+          "dim, filtered light",
+          "glowing moss"
+        ],
+        "atmosphere": [
+          "mystical",
+          "ancient",
+          "sheltered"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1768392273648-4s5muf5er"
+    },
+    "v2-1768392286244-dgny2oebd": {
+      "id": "v2-1768392286244-dgny2oebd",
+      "type": "container",
+      "name": "The Great Hollow Oak",
+      "slug": "the-great-hollow-oak",
+      "description": "A monumental, ancient oak tree, housing a mystical interior. This venerable arboreal dwelling offers a sanctuary within its massive, hollowed trunk.",
+      "forbiddenTransformations": [
+        "Rendering the tree exterior as anything other than ancient and gnarled",
+        "Removing the mystical aura from the tree's presence",
+        "Depicting the tree in a modern or artificial setting",
+        "Showing the tree as small or insignificant in scale",
+        "Introducing metallic or synthetic materials on the tree's bark or roots"
+      ],
+      "parentId": "v2-1768392268649-j4khj1em1"
+    },
+    "v2-1768392286244-jgn1nhndg": {
+      "id": "v2-1768392286244-jgn1nhndg",
+      "type": "space",
+      "name": "Root Chamber",
+      "slug": "root-chamber",
+      "description": "A dimly lit, subterranean chamber carved within the colossal roots of the Great Hollow Oak. The air is thick with the scent of damp earth and ancient wood, illuminated by a soft, natural luminescence.",
+      "spaceType": "underground",
+      "dna": {
+        "essence": [
+          "ancient",
+          "earthy",
+          "mystical",
+          "sheltered"
+        ],
+        "formsAndMaterials": [
+          "gnarled roots",
+          "damp earth",
+          "moss-covered wood"
+        ],
+        "colorAndLight": [
+          "deep earth tones",
+          "subtle moss luminescence",
+          "filtered natural light"
+        ],
+        "atmosphere": [
+          "reverent",
+          "timeless",
+          "enclosed"
+        ],
+        "banned": [
+          "sharp geometric shapes",
+          "artificial lighting fixtures",
+          "open sky visibility"
+        ]
+      },
+      "promptLayers": {
+        "background": "The gnarled, twisting surfaces of immense roots form the chamber walls, their textures mirroring the exterior bark but darker and more compressed. Faint, glowing moss patches cling to the root structures, providing ambient light.",
+        "midground": "Thick, interwoven root systems create natural alcoves and passages. The floor is a compacted mix of damp earth and ancient leaf litter. Some larger roots may form natural seating areas or shelves.",
+        "foreground": "Close-up details of damp soil, exposed root fibers, and scattered, decaying leaves. Small phosphorescent fungi might be visible on the root surfaces.",
+        "lighting": "The primary light source is the soft, internal luminescence of moss, similar to the exterior but more concentrated and diffuse within the enclosed space. This glow is cool and muted, creating pockets of soft illumination and deep shadows.",
+        "atmosphere": "The air feels heavy, still, and deeply ancient, carrying the scent of rich, damp earth and the subtle, sweet decay of ages. A profound sense of being cradled by the earth and the tree's immense presence pervades the chamber."
+      },
+      "forbiddenTransformations": [
+        "Introducing any bright, harsh, or artificial light sources",
+        "Showing any evidence of recent construction or modern tools",
+        "Removing the pervasive dampness and earthy aroma",
+        "Making the roots appear smooth or polished",
+        "Adding furniture or objects that are not organically formed by the roots",
+        "Opening up the chamber to reveal an exterior view",
+        "Depicting the moss as non-luminescent or overly vibrant"
+      ],
+      "parentId": "v2-1768392286244-dgny2oebd",
+      "primaryMedia": "media-1768392294677-nnlehxrik"
+    },
+    "v2-1768392361968-5aeho69zi": {
+      "id": "v2-1768392361968-5aeho69zi",
+      "type": "space",
+      "name": "Treetop Observatory",
+      "slug": "treetop-observatory",
+      "description": "An elevated, open-air platform nestled high within the branches of The Great Hollow Oak. It offers a breathtaking panoramic view of the Whispering Woods, with the damp, cool forest floor visible far below.",
+      "spaceType": "elevated",
+      "dna": {
+        "essence": [
+          "ancient nature",
+          "mystical height",
+          "forest vista"
+        ],
+        "formsAndMaterials": [
+          "gnarled wood",
+          "moss-covered branches",
+          "exposed roots"
+        ],
+        "colorAndLight": [
+          "dim, filtered green hues",
+          "soft, natural luminescence"
+        ],
+        "atmosphere": [
+          "serene contemplation",
+          "vast perspective"
+        ],
+        "banned": [
+          "artificial railings or safety barriers",
+          "paved surfaces",
+          "modern signage"
+        ]
+      },
+      "promptLayers": {
+        "background": "A panoramic vista of the dense, ancient Whispering Woods canopy stretching to the horizon. The dim, filtered light suggests a perpetual twilight, with occasional shafts of light piercing through. The distant trees are a deep, mossy green.",
+        "midground": "The sturdy, gnarled branches of The Great Hollow Oak itself form the immediate surroundings, interwoven with the observatory platform. Visible moss glows faintly, mirroring the luminescence from the trunk below. The wooden surface of the platform is worn and natural.",
+        "foreground": "The edge of the wooden observation platform, showing its natural, slightly uneven texture. Below, the damp forest floor is visible as a tapestry of greens and browns, with the massive roots of the oak disappearing into the mist. Fallen leaves and patches of moss are evident.",
+        "lighting": "The light is a continuation of the forest's filtered illumination – dim, dappled, and cool. The moss on the surrounding branches provides a subtle, organic luminescence, casting soft, ethereal glows on the wooden surfaces. No direct sunlight reaches this height.",
+        "atmosphere": "An atmosphere of profound tranquility and awe, as if suspended above the world. The immense scale and the feeling of being high in an ancient tree foster a sense of peaceful isolation and deep connection to nature."
+      },
+      "forbiddenTransformations": [
+        "adding any visible sky or direct sunlight",
+        "introducing any structures not organically part of the tree",
+        "showing any visible man-made steps or ladders leading to the platform",
+        "rendering the wooden platform as polished or modern",
+        "depicting birds or animals that are not native to a mystical forest",
+        "showing any signs of decay or rot on the platform itself"
+      ],
+      "parentId": "v2-1768392286244-dgny2oebd",
+      "primaryMedia": "media-1768392369033-2794cgzoy"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "v2-1768387925077-muvmn0tcj",
+      "id": "v2-1768392217513-a1d6tzcep",
       "type": "host",
       "children": [
         {
-          "id": "v2-1768387925077-yuhyxjzxn",
+          "id": "v2-1768392217513-1gppsmmy3",
           "type": "region",
           "children": [
             {
-              "id": "v2-1768387925077-po8lrioei",
+              "id": "v2-1768392217513-vksmmddmf",
               "type": "location",
               "children": [
                 {
-                  "id": "v2-1768387941867-nzrl4breb",
+                  "id": "v2-1768392240652-holh847ye",
                   "type": "container",
                   "children": [
                     {
-                      "id": "v2-1768387941867-5t9lnnxzf",
+                      "id": "v2-1768392240652-eocha4gq3",
                       "type": "space",
                       "children": []
                     }
@@ -281,17 +418,34 @@
       ]
     },
     {
-      "id": "v2-1768388028657-50qopyqi8",
+      "id": "v2-1768392268649-zvfsg066z",
       "type": "host",
       "children": [
         {
-          "id": "v2-1768388028657-ppz9rixnx",
+          "id": "v2-1768392268649-bwmu3ne44",
           "type": "region",
           "children": [
             {
-              "id": "v2-1768388028657-q1v5c6y59",
+              "id": "v2-1768392268649-j4khj1em1",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "v2-1768392286244-dgny2oebd",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1768392286244-jgn1nhndg",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1768392361968-5aeho69zi",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -299,7 +453,7 @@
     }
   ],
   "pinnedIds": [
-    "v2-1768387925077-muvmn0tcj",
-    "v2-1768388028657-50qopyqi8"
+    "v2-1768392217513-a1d6tzcep",
+    "v2-1768392268649-zvfsg066z"
   ]
 }

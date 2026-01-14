@@ -45,42 +45,43 @@
 /NEW_WORLD_LOCATION Crystal Cave Mouth - Jagged amethyst crystal formations, purple-blue glow, mineral deposits framing dark entrance
 /GO_INSIDE2 Inner Grotto
 ```
-- [ ] Pass
+- [x] Pass
 
 ### 6. Medieval Tower (historical, stone, vertical)
 ```
 /NEW_WORLD_LOCATION Medieval Castle Tower - Grey stone walls, crenellated battlements, narrow arrow slits, misty highlands
 /GO_INSIDE2 Armory
 ```
-- [ ] Pass
+- [x] Pass
 
 ### 7. Glass Building (modern, transparent, reflective)
 ```
 /NEW_WORLD_LOCATION Glass Office Tower - Floor-to-ceiling glass curtain wall, steel frame, reflective facade, city skyline
 /GO_INSIDE2 Server Room
 ```
-- [ ] Pass
+- [x] Pass
 
 ### 8. Organic Alien (bio-mechanical, curved, living)
 ```
 /NEW_WORLD_LOCATION Alien Dropship - Bio-mechanical hull, chitinous armor plates, pulsing organic veins, landed in clearing
 /GO_INSIDE2 Troop Bay
 ```
-- [ ] Pass
+- [x] Pass
 
 ### 9. Fantasy Skull (bone, whimsical, converted)
 ```
 /NEW_WORLD_LOCATION Dragon's Skull Lair - Massive dragon skull converted to dwelling, bone architecture, ominous volcanic setting
 /GO_INSIDE2 Treasure Hoard
 ```
-- [ ] Pass
+- [x] Pass
 
 ### 10. Hollow Tree (natural, wood, mystical)
 ```
 /NEW_WORLD_LOCATION Ancient Hollow Tree - Massive gnarled trunk, moss-covered bark, mystical aura, forest primeval
 /GO_INSIDE2 Root Chamber
+/GO_INSIDE2 top terrace in the treetop with view over the forest canopy
 ```
-- [ ] Pass
+- [x] Pass
 
 ---
 
@@ -106,3 +107,4 @@
 | v1.0 | Initial prompt with universal indoor rules |
 | v1.1 | Added prohibition: "No exterior vegetation, plants, or foliage from outside" |
 | v1.2 | Softened: "No exterior vegetation unless interior description specifies overgrowth/abandoned" |
+| v1.3 | Force spaceType='exterior' for NEW_WORLD_LOCATION (fixes caves generating interior) |

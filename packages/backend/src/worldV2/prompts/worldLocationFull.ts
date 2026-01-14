@@ -236,10 +236,9 @@ export function parseWorldLocationFullResponse(
     timeOfDay = parsed.host.timeOfDay;
   }
   
-  // Normalize spaceType
-  if (parsed.location.spaceType !== 'exterior' && parsed.location.spaceType !== 'interior') {
-    parsed.location.spaceType = 'exterior';
-  }
+  // FORCE exterior for initial location - you must GO_INSIDE to see interior
+  // This prevents caves, towers, etc. from generating interior views on creation
+  parsed.location.spaceType = 'exterior';
   
   return {
     host: {
