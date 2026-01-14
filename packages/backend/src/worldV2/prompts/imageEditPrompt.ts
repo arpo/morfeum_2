@@ -155,11 +155,14 @@ function buildProhibitions(spaceType: SpaceType): string {
 export function buildEnterImageEditPrompt(context: ImageEditContext): string {
   const { sourcePromptLayers, targetPromptLayers, spaceType, spaceName, parentName, weather, timeOfDay } = context;
 
-  // Build environment context
-  const envParts: string[] = [];
-  if (timeOfDay) envParts.push(timeOfDay.replace(/_/g, ' '));
-  if (weather) envParts.push(weather);
-  const envContext = envParts.length > 0 ? envParts.join(', ') : 'current conditions';
+  // Format time of day for display
+  const timeDisplay = timeOfDay ? timeOfDay.replace(/_/g, ' ') : 'daytime';
+  
+  // Determine lighting character based on time
+  const isNight = timeOfDay && ['night', 'midnight', 'dusk'].includes(timeOfDay);
+  const interiorLightingNote = isNight 
+    ? 'NIGHT interior - artificial light sources (lamps, candles, fixtures), warm pools of light, darker shadows, no bright daylight.'
+    : 'DAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.';
 
   // Get enclosure assertions and prohibitions
   const enclosureAssertions = buildEnclosureAssertions(spaceType);
@@ -183,6 +186,11 @@ Orientation:
 Facing inward toward the interior.
 The entrance is behind the camera and must not be visible.
 
+LIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):
+Time of day: ${timeDisplay.toUpperCase()}
+${interiorLightingNote}
+Interior lighting MUST reflect ${timeDisplay} conditions even though sky is not visible.
+
 Reveal:
 An enclosed interior space within the structure.
 ${targetPromptLayers.midground}
@@ -191,7 +199,6 @@ ${targetPromptLayers.foreground}
 Preserve (visual identity as SURFACE TREATMENT ONLY):
 The exterior's visual signature applied to interior walls and surfaces:
 * Atmosphere tone: ${sourcePromptLayers.atmosphere}
-* Environmental context: ${envContext} (influencing interior indirectly, not directly visible)
 
 Style lock:
 Preserve the exterior's aesthetic as surface treatment for interior walls.
@@ -199,8 +206,8 @@ Preserve the exterior's aesthetic as surface treatment for interior walls.
 Carry forward (apply to enclosing walls, floor, ceiling):
 ${targetPromptLayers.background}
 
-Interior lighting and atmosphere (ADAPTED FOR ENCLOSED SPACE):
-${targetPromptLayers.lighting}
+Interior lighting and atmosphere (MUST MATCH ${timeDisplay.toUpperCase()}):
+Lighting appropriate for ${timeDisplay} interior.
 ${targetPromptLayers.atmosphere}
 
 ${enclosureAssertions}
@@ -233,11 +240,15 @@ Show a grounded, enclosed interior that clearly belongs inside this structure an
 export function buildEnterSemiEnclosedEditPrompt(context: ImageEditContext): string {
   const { sourcePromptLayers, targetPromptLayers, spaceType, spaceName, parentName, weather, timeOfDay } = context;
 
-  // Build environment context
-  const envParts: string[] = [];
-  if (timeOfDay) envParts.push(timeOfDay.replace(/_/g, ' '));
-  if (weather) envParts.push(weather);
-  const envContext = envParts.length > 0 ? envParts.join(', ') : 'current conditions';
+  // Format time of day for display
+  const timeDisplay = timeOfDay ? timeOfDay.replace(/_/g, ' ') : 'daytime';
+  const weatherDisplay = weather || 'clear';
+  
+  // Determine sky appearance based on time
+  const isNight = timeOfDay && ['night', 'midnight', 'dusk'].includes(timeOfDay);
+  const skyDescription = isNight 
+    ? 'dark night sky glimpsed through the framework/gaps' 
+    : 'sky appropriate for ' + timeDisplay + ' glimpsed through gaps';
 
   // Build the prompt for semi-enclosed spaces
   const prompt = `Action:
@@ -254,15 +265,20 @@ Orientation:
 Facing into the semi-enclosed space.
 The entrance is behind the camera.
 
+LIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):
+Time of day: ${timeDisplay.toUpperCase()}
+Weather: ${weatherDisplay}
+The sky visible through gaps and all lighting MUST reflect ${timeDisplay} conditions.
+${isNight ? 'This is a NIGHT SCENE - any visible sky must be dark, NOT bright blue daytime.' : ''}
+
 Reveal:
-A partially covered space with sky visible through gaps, lattice, framework, or open sections.
+A partially covered space with ${skyDescription}.
 ${targetPromptLayers.midground}
 ${targetPromptLayers.foreground}
 
 Preserve (visual identity and structural continuity):
 The structure's visual signature:
 * Atmosphere tone: ${sourcePromptLayers.atmosphere}
-* Environmental context: ${envContext}
 
 Style lock:
 Maintain the structure's established aesthetic and materials.
@@ -270,14 +286,15 @@ Maintain the structure's established aesthetic and materials.
 Carry forward (structure and surroundings):
 ${targetPromptLayers.background}
 
-Lighting and atmosphere (ADAPTED FOR SEMI-ENCLOSED SPACE):
-${targetPromptLayers.lighting}
+Lighting and atmosphere (MUST MATCH ${timeDisplay.toUpperCase()}):
+Lighting appropriate for ${timeDisplay}, ${weatherDisplay} conditions.
 ${targetPromptLayers.atmosphere}
 
 Physical constraints:
 PARTIAL sky visible through framework, lattice, gaps, or open roof sections.
+The visible sky MUST show ${timeDisplay} conditions.
 NOT fully enclosed - some openings to sky are intentional and visible.
-Natural light filters through the structure.
+Natural light filters through the structure appropriate for ${timeDisplay}.
 The entrance/arrival point is behind the camera position.
 The structure provides shelter but is NOT sealed.
 
@@ -288,9 +305,10 @@ Prohibitions:
 * Do not reinterpret the architectural/structural style
 * No solid walls on all sides
 * No completely sealed roof
+${isNight ? '* Do NOT show bright blue daytime sky through gaps - this is a NIGHT scene' : '* Do NOT show dark night sky through gaps - this is a DAYTIME scene'}
 
 Final constraint:
-Show a sheltered but partially open space where sky is visible through the structure, creating filtered natural light.`;
+Show a sheltered but partially open space at ${timeDisplay} where sky is visible through the structure, creating filtered natural light.`;
 
   return prompt;
 }
@@ -310,11 +328,15 @@ Show a sheltered but partially open space where sky is visible through the struc
 export function buildEnterOutdoorEditPrompt(context: ImageEditContext): string {
   const { sourcePromptLayers, targetPromptLayers, spaceType, spaceName, parentName, weather, timeOfDay } = context;
 
-  // Build environment context
-  const envParts: string[] = [];
-  if (timeOfDay) envParts.push(timeOfDay.replace(/_/g, ' '));
-  if (weather) envParts.push(weather);
-  const envContext = envParts.length > 0 ? envParts.join(', ') : 'current conditions';
+  // Format time of day for display
+  const timeDisplay = timeOfDay ? timeOfDay.replace(/_/g, ' ') : 'daytime';
+  const weatherDisplay = weather || 'clear';
+  
+  // Determine sky appearance based on time
+  const isNight = timeOfDay && ['night', 'midnight', 'dusk'].includes(timeOfDay);
+  const skyDescription = isNight 
+    ? 'dark night sky with stars visible' 
+    : 'open sky appropriate for ' + timeDisplay;
 
   // Build the prompt for outdoor-to-outdoor navigation
   const prompt = `Action:
@@ -331,15 +353,20 @@ Orientation:
 Facing into the outdoor space.
 The arrival/entrance point is behind the camera.
 
+LIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):
+Time of day: ${timeDisplay.toUpperCase()}
+Weather: ${weatherDisplay}
+The sky and all lighting in this scene MUST reflect ${timeDisplay} conditions.
+${isNight ? 'This is a NIGHT SCENE - the sky must be dark with stars/moon, NOT bright blue daytime sky.' : ''}
+
 Reveal:
-An open outdoor area with visible sky.
+An open outdoor area with ${skyDescription}.
 ${targetPromptLayers.midground}
 ${targetPromptLayers.foreground}
 
 Preserve (visual identity and environmental continuity):
 The surrounding landscape's visual signature:
 * Atmosphere tone: ${sourcePromptLayers.atmosphere}
-* Environmental context: ${envContext}
 
 Style lock:
 Maintain the location's established aesthetic and visual style.
@@ -347,14 +374,14 @@ Maintain the location's established aesthetic and visual style.
 Carry forward (surrounding environment):
 ${targetPromptLayers.background}
 
-Lighting and atmosphere (ADAPTED FOR OUTDOOR SPACE):
-${targetPromptLayers.lighting}
+Lighting and atmosphere (MUST MATCH ${timeDisplay.toUpperCase()}):
+Lighting appropriate for ${timeDisplay}, ${weatherDisplay} conditions.
 ${targetPromptLayers.atmosphere}
 
 Physical constraints:
-Open sky visible above. Outdoor space with natural lighting.
+Open sky visible above - ${skyDescription}.
 Surrounding landscape and horizon visible.
-Natural environmental lighting from sun/sky.
+Natural environmental lighting appropriate for ${timeDisplay}.
 The entrance/arrival point is behind the camera position.
 
 Prohibitions:
@@ -365,9 +392,10 @@ Prohibitions:
 * No enclosed interior elements
 * No solid ceiling or roof covering the main view
 * No walls enclosing the space
+${isNight ? '* Do NOT show bright blue daytime sky - this is a NIGHT scene' : '* Do NOT show dark night sky - this is a DAYTIME scene'}
 
 Final constraint:
-Show a grounded, open outdoor space that clearly belongs within this location and invites further exploration.`;
+Show a grounded, open outdoor space at ${timeDisplay} that clearly belongs within this location and invites further exploration.`;
 
   return prompt;
 }

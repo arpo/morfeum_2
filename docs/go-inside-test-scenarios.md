@@ -94,19 +94,19 @@
 ```
 - [x] Pass
 
-### 12. Festival Grounds (outdoor event, temporary structures)
+### 12. Festival Grounds (outdoor event, semi-enclosed structure)
 ```
 /NEW_WORLD_LOCATION Burning Man - Black Rock Desert playa with massive art installations, dust storms, neon-lit structures at night
 /GO_INSIDE2 The Temple of Gratitude
 ```
-- [x] Pass
+- [x] Pass (v1.6: semi-enclosed works - sky visible through framework)
 
-### 13. Beach Village (outdoor coastal, tropical)
+### 13. Botanical Gardens (outdoor area, landscaped)
 ```
-/NEW_WORLD_LOCATION Palolem Beach, Goa - Palm trees, colorful beach huts, fishing boats on sand, Indian Ocean backdrop
-/GO_INSIDE2 The Beachfront Promenade
+/NEW_WORLD_LOCATION The Botanical Gardens - Victorian glasshouses, manicured flowerbeds, hedge mazes, ornamental fountains
+/GO_INSIDE2 The Rose Garden
 ```
-- [ ] Pass
+- [x] Pass
 
 ---
 
@@ -136,3 +136,5 @@
 | v1.4 | Added parallel buildEnterOutdoorEditPrompt() for outdoor→outdoor navigation |
 | v1.5 | Strengthened outdoor entrance prohibition: "must NOT be visible anywhere in frame" |
 | v1.6 | Added buildEnterSemiEnclosedEditPrompt() + improved spaceType detection criteria in goInside.ts |
+| v1.7 | Strengthened timeOfDay/weather enforcement in outdoor and semi-enclosed prompts (MANDATORY section) |
+| v1.8 | Added timeOfDay enforcement to indoor prompt (artificial vs natural light based on time) |
