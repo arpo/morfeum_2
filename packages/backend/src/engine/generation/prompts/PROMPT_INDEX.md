@@ -43,6 +43,16 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 | `cascadeDNA` | [promptBuilder.ts](../../../worldV2/display/promptBuilder.ts) | Merge host→region→location DNA for image generation | `/DISPLAY` |
 | `getV2CameraConfig` | [cameraSettings.ts](../../../worldV2/display/cameraSettings.ts) | Camera angle/perspective configs by node type (host=aerial, region=elevated, location=street-level) | `/DISPLAY` |
 
+**Navigation Image Edit Prompts** (in `worldV2/prompts/`):
+
+| Prompt | File | Purpose | Used By |
+|--------|------|---------|---------|
+| `buildGoInsidePrompt` | [goInside.ts](../../../worldV2/prompts/goInside.ts) | LLM generates container + space nodes with promptLayers | `/GO_INSIDE2`, `/GOTO2` |
+| `parseGoInsideResponse` | [goInside.ts](../../../worldV2/prompts/goInside.ts) | Parse LLM response to Container + Space nodes | `/GO_INSIDE2`, `/GOTO2` |
+| `buildEnterImageEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for indoor spaces | `/GO_INSIDE2`, `/GOTO2` |
+| `buildEnterOutdoorEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for outdoor spaces | `/GO_INSIDE2`, `/GOTO2` |
+| `buildEnterSemiEnclosedEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for semi-enclosed spaces (pavilions, gazebos) | `/GO_INSIDE2`, `/GOTO2` |
+
 ### Vision & Image Analysis
 
 | Prompt | File | Purpose | Used By |
@@ -199,6 +209,84 @@ User command: "/DISPLAY" (on any V2 node)
 - `worldV2/display/imagePromptGenerator.ts` - LLM layer generation
 - `worldV2/display/promptBuilder.ts` - DNA cascade + prompt assembly
 - `worldV2/display/cameraSettings.ts` - Camera configs
+
+---
+
+### V2 Navigation Pipeline (GO_INSIDE2, GOTO2)
+
+**GO_INSIDE2** - Enter a structure/building from a location:
+```
+User command: "/GO_INSIDE2 the restaurant" (from location node)
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 1: Get source image + promptLayers │
+│ From current location's media           │
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 2: buildGoInsidePrompt             │
+│ LLM generates container + space nodes   │
+│ with spaceType detection + promptLayers │
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 3: Select image edit prompt        │
+│ Based on spaceType:                     │
+│ - indoor → buildEnterImageEditPrompt    │
+│ - outdoor → buildEnterOutdoorEditPrompt │
+│ - semi-enclosed → buildEnterSemiEncl... │
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 4: Image Edit (FLUX edit model)    │
+│ Edit source image to show interior      │
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 5: Save container + space nodes    │
+│ Store promptLayers in media metadata    │
+└─────────────────────────────────────────┘
+```
+
+**GOTO2** - Create sibling space from within a container:
+```
+User command: "/GOTO2 the VIP lounge" (from space node)
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 1: Find parent container + location│
+│ Validate user is on a space node        │
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 2: Get source image from PARENT    │
+│ Uses parent location's image (not space)│
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Steps 3-5: Same as GO_INSIDE2           │
+│ Reuses same prompts + image edit logic  │
+└─────────────────────────────────────────┘
+    ↓
+┌─────────────────────────────────────────┐
+│ Step 6: Add space as sibling            │
+│ Container already exists, add child     │
+└─────────────────────────────────────────┘
+```
+
+**Files involved:**
+- `worldV2/handlers/goInsideHandler.ts` - GO_INSIDE2 handler
+- `worldV2/handlers/gotoHandler.ts` - GOTO2 handler
+- `worldV2/prompts/goInside.ts` - LLM prompt for container + space
+- `worldV2/prompts/imageEditPrompt.ts` - Image edit prompts (3 variants)
+
+**SpaceType Detection:**
+| Type | Description | Prompt Builder |
+|------|-------------|----------------|
+| `indoor` | Solid walls + ceiling, no sky | `buildEnterImageEditPrompt` |
+| `outdoor` | No roof, full sky visible | `buildEnterOutdoorEditPrompt` |
+| `semi-enclosed` | Partial roof, sky through gaps | `buildEnterSemiEnclosedEditPrompt` |
+| `underground` | Below ground level | `buildEnterImageEditPrompt` |
+| `elevated` | Raised platform, no roof | `buildEnterImageEditPrompt` |
 
 ---
 
