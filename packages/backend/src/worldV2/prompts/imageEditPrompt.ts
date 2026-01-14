@@ -219,6 +219,161 @@ Show a grounded, enclosed interior that clearly belongs inside this structure an
 
 
 /**
+ * Build image edit prompt for GO_INSIDE2 when entering a SEMI-ENCLOSED space
+ * 
+ * Parallel to buildEnterImageEditPrompt but optimized for partial enclosure.
+ * Allows sky visibility through gaps, lattice, or partial roofing.
+ * 
+ * Use cases:
+ * - Art installations with framework roofs
+ * - Open-air temples and pavilions
+ * - Gazebos, pergolas, covered markets
+ * - Any structure with partial sky visibility
+ */
+export function buildEnterSemiEnclosedEditPrompt(context: ImageEditContext): string {
+  const { sourcePromptLayers, targetPromptLayers, spaceType, spaceName, parentName, weather, timeOfDay } = context;
+
+  // Build environment context
+  const envParts: string[] = [];
+  if (timeOfDay) envParts.push(timeOfDay.replace(/_/g, ' '));
+  if (weather) envParts.push(weather);
+  const envContext = envParts.length > 0 ? envParts.join(', ') : 'current conditions';
+
+  // Build the prompt for semi-enclosed spaces
+  const prompt = `Action:
+Move the camera forward and step into ${spaceName}.
+
+Target location:
+A semi-enclosed space within ${parentName}.
+
+Camera:
+Human eye level, positioned inside the structure/pavilion.
+The camera has moved past the entrance into the sheltered area.
+
+Orientation:
+Facing into the semi-enclosed space.
+The entrance is behind the camera.
+
+Reveal:
+A partially covered space with sky visible through gaps, lattice, framework, or open sections.
+${targetPromptLayers.midground}
+${targetPromptLayers.foreground}
+
+Preserve (visual identity and structural continuity):
+The structure's visual signature:
+* Atmosphere tone: ${sourcePromptLayers.atmosphere}
+* Environmental context: ${envContext}
+
+Style lock:
+Maintain the structure's established aesthetic and materials.
+
+Carry forward (structure and surroundings):
+${targetPromptLayers.background}
+
+Lighting and atmosphere (ADAPTED FOR SEMI-ENCLOSED SPACE):
+${targetPromptLayers.lighting}
+${targetPromptLayers.atmosphere}
+
+Physical constraints:
+PARTIAL sky visible through framework, lattice, gaps, or open roof sections.
+NOT fully enclosed - some openings to sky are intentional and visible.
+Natural light filters through the structure.
+The entrance/arrival point is behind the camera position.
+The structure provides shelter but is NOT sealed.
+
+Prohibitions:
+* The entrance must NOT be visible anywhere in the frame - it is behind the camera
+* Do not show a FULLY enclosed interior with solid ceiling
+* Do not show a FULLY open outdoor space with no structure
+* Do not reinterpret the architectural/structural style
+* No solid walls on all sides
+* No completely sealed roof
+
+Final constraint:
+Show a sheltered but partially open space where sky is visible through the structure, creating filtered natural light.`;
+
+  return prompt;
+}
+
+
+/**
+ * Build image edit prompt for GO_INSIDE2 when entering an OUTDOOR space
+ * 
+ * Parallel to buildEnterImageEditPrompt but optimized for outdoor→outdoor transitions.
+ * Instead of enclosure assertions, uses open-sky assertions.
+ * 
+ * Use cases:
+ * - Entering a park (exterior → outdoor space within)
+ * - Exploring a festival (exterior → outdoor area)
+ * - Walking into a beach area (exterior → outdoor space)
+ */
+export function buildEnterOutdoorEditPrompt(context: ImageEditContext): string {
+  const { sourcePromptLayers, targetPromptLayers, spaceType, spaceName, parentName, weather, timeOfDay } = context;
+
+  // Build environment context
+  const envParts: string[] = [];
+  if (timeOfDay) envParts.push(timeOfDay.replace(/_/g, ' '));
+  if (weather) envParts.push(weather);
+  const envContext = envParts.length > 0 ? envParts.join(', ') : 'current conditions';
+
+  // Build the prompt for outdoor-to-outdoor navigation
+  const prompt = `Action:
+Move the camera forward and enter ${spaceName}.
+
+Target location:
+An outdoor area within ${parentName}.
+
+Camera:
+Human eye level, positioned within the outdoor space.
+The camera has moved past the entrance/arrival point into the open area.
+
+Orientation:
+Facing into the outdoor space.
+The arrival/entrance point is behind the camera.
+
+Reveal:
+An open outdoor area with visible sky.
+${targetPromptLayers.midground}
+${targetPromptLayers.foreground}
+
+Preserve (visual identity and environmental continuity):
+The surrounding landscape's visual signature:
+* Atmosphere tone: ${sourcePromptLayers.atmosphere}
+* Environmental context: ${envContext}
+
+Style lock:
+Maintain the location's established aesthetic and visual style.
+
+Carry forward (surrounding environment):
+${targetPromptLayers.background}
+
+Lighting and atmosphere (ADAPTED FOR OUTDOOR SPACE):
+${targetPromptLayers.lighting}
+${targetPromptLayers.atmosphere}
+
+Physical constraints:
+Open sky visible above. Outdoor space with natural lighting.
+Surrounding landscape and horizon visible.
+Natural environmental lighting from sun/sky.
+The entrance/arrival point is behind the camera position.
+
+Prohibitions:
+* The entrance/arrival point must NOT be visible anywhere in the frame - it is behind the camera
+* No park gates, entrance archways, arrival paths, or boundary markers visible
+* Do not show exterior establishing shot (we're already in the space)
+* Do not reinterpret the architectural/environmental style
+* No enclosed interior elements
+* No solid ceiling or roof covering the main view
+* No walls enclosing the space
+
+Final constraint:
+Show a grounded, open outdoor space that clearly belongs within this location and invites further exploration.`;
+
+  return prompt;
+}
+
+
+/**
  * Build image edit prompt for REFRAME2 (camera move/orient within same space)
  * Simplified version that preserves all visual elements
  */

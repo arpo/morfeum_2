@@ -112,13 +112,29 @@ Create TWO nodes:
 
 ## IMPORTANT RULES
 
-### Space Type Detection
-Determine the appropriate spaceType for the Space Node:
-- "indoor" - Fully enclosed interior spaces (restaurants, bedrooms, shops, living rooms, closed rooms)
-- "outdoor" - Large open-air spaces you "enter" as destinations (parks, gardens, courtyards, plazas)
-- "semi-enclosed" - Partially covered/sheltered spaces attached to buildings (covered terraces, patios with roofs, covered porches, pavilions, pergolas with roofs)
-- "underground" - Below-ground spaces (caves, cellars, basements, tunnels, grottos)
-- "elevated" - Open-air raised platforms attached to buildings (balconies, rooftop terraces, elevated decks, observation platforms without roofs)
+### Space Type Detection (CRITICAL - Choose Carefully)
+Determine the appropriate spaceType for the Space Node based on PHYSICAL characteristics:
+
+- "indoor" - FULLY enclosed: solid walls AND solid ceiling, NO sky visible through any opening
+  Examples: restaurants, bedrooms, shops, closed rooms, sealed chambers
+  Key test: Can you see sky? NO → indoor
+
+- "outdoor" - NO enclosure: open air, full sky visible, no roof at all
+  Examples: park lawns, open plazas, beaches, clearings, fields
+  Key test: Is there ANY roof/canopy? NO → outdoor
+
+- "semi-enclosed" - PARTIAL enclosure: has SOME covering but sky visible through gaps, lattice, open sides, or partial roof
+  Examples: pavilions, gazebos, pergolas, open-air temples, art installations with framework roofs, covered markets with skylights, structures with lattice/mesh roofs, canopied areas, arbors
+  Key test: Is there a roof/framework but you can see sky through it? YES → semi-enclosed
+  IMPORTANT: Large art installations, temple structures, and pavilion-type buildings are typically semi-enclosed, NOT indoor
+
+- "underground" - Below ground level: surrounded by earth/rock, no natural sky access
+  Examples: caves, cellars, basements, tunnels, grottos, catacombs
+  Key test: Is it below ground? YES → underground
+
+- "elevated" - Open-air raised platform: above ground level, no roof, open to sky
+  Examples: balconies, rooftop terraces, observation decks, elevated walkways
+  Key test: Is it raised AND has no roof? YES → elevated
 
 ### DNA Rules (for world-building context)
 ${DNA_FIELD_RULES}

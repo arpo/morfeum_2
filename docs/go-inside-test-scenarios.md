@@ -85,6 +85,31 @@
 
 ---
 
+## Outdoor→Outdoor Test Cases (v1.4)
+
+### 11. City Park (outdoor area, landscaped)
+```
+/NEW_WORLD_LOCATION Victoria Park - A gated city park with ornate iron gates, tree-lined paths, Victorian lamp posts, manicured gardens
+/GO_INSIDE2 The Central Lawn
+```
+- [x] Pass
+
+### 12. Festival Grounds (outdoor event, temporary structures)
+```
+/NEW_WORLD_LOCATION Burning Man - Black Rock Desert playa with massive art installations, dust storms, neon-lit structures at night
+/GO_INSIDE2 The Temple of Gratitude
+```
+- [x] Pass
+
+### 13. Beach Village (outdoor coastal, tropical)
+```
+/NEW_WORLD_LOCATION Palolem Beach, Goa - Palm trees, colorful beach huts, fishing boats on sand, Indian Ocean backdrop
+/GO_INSIDE2 The Beachfront Promenade
+```
+- [ ] Pass
+
+---
+
 ## Test Log
 
 | # | Scenario | Material | Scale | Result |
@@ -108,3 +133,6 @@
 | v1.1 | Added prohibition: "No exterior vegetation, plants, or foliage from outside" |
 | v1.2 | Softened: "No exterior vegetation unless interior description specifies overgrowth/abandoned" |
 | v1.3 | Force spaceType='exterior' for NEW_WORLD_LOCATION (fixes caves generating interior) |
+| v1.4 | Added parallel buildEnterOutdoorEditPrompt() for outdoor→outdoor navigation |
+| v1.5 | Strengthened outdoor entrance prohibition: "must NOT be visible anywhere in frame" |
+| v1.6 | Added buildEnterSemiEnclosedEditPrompt() + improved spaceType detection criteria in goInside.ts |

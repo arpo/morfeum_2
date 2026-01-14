@@ -17,7 +17,7 @@ import { asyncHandler } from '../../middleware/errorHandler';
 import { HTTP_STATUS, AI_MODELS } from '../../config';
 import { generateText, editImage, hasMzooData } from '../../services/mzoo';
 import { buildGoInsidePrompt, parseGoInsideResponse } from '../prompts/goInside';
-import { buildEnterImageEditPrompt } from '../prompts/imageEditPrompt';
+import { buildEnterImageEditPrompt, buildEnterOutdoorEditPrompt, buildEnterSemiEnclosedEditPrompt } from '../prompts/imageEditPrompt';
 import { storageService } from '../../services/storage/storageService';
 import mediaService from '../../services/media/mediaService';
 import {
@@ -284,15 +284,32 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
       sendProgress(operationId, 'image', 'Generating space view...');
 
       // Build image edit prompt using promptLayers for visual preservation
-      const imageEditPrompt = buildEnterImageEditPrompt({
+      // Select prompt builder based on target space type:
+      // - outdoor → use outdoor-optimized prompt (open sky, landscape visible)
+      // - indoor/underground/etc → use enclosure-optimized prompt (solid ceiling, no exterior)
+      const promptContext = {
         sourcePromptLayers: effectiveSourcePromptLayers, // What source image looks like
-        targetPromptLayers: space.promptLayers,          // What interior should look like
+        targetPromptLayers: space.promptLayers,          // What target should look like
         spaceType: space.spaceType,
         spaceName: space.name,
         parentName: ancestry.currentNode.name,
         weather: ancestry.hostWeather,
         timeOfDay: ancestry.hostTimeOfDay
-      });
+      };
+      
+      // Select prompt builder based on target space type
+      let imageEditPrompt: string;
+      switch (space.spaceType) {
+        case 'outdoor':
+          imageEditPrompt = buildEnterOutdoorEditPrompt(promptContext);
+          break;
+        case 'semi-enclosed':
+          imageEditPrompt = buildEnterSemiEnclosedEditPrompt(promptContext);
+          break;
+        default:
+          // indoor, underground, elevated all use the enclosed prompt
+          imageEditPrompt = buildEnterImageEditPrompt(promptContext);
+      }
 
       // Call image edit API
       const imageResult = await editImage(

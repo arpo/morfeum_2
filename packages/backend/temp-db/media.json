@@ -1,204 +1,112 @@
 {
   "media": {
-    "media-1768392221891-z0dmjmjgz": {
-      "id": "media-1768392221891-z0dmjmjgz",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8a5a36/AVtae13t92xl-W7Ru1uTX.jpg",
-      "createdAt": "2026-01-14T12:03:41.891Z",
+    "media-1768393048306-h5nob69z7": {
+      "id": "media-1768393048306-h5nob69z7",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a8a5a88/Mc8AlSzikPZahVrNghbZK_a2c6516ada404badbe14ed69c25c4628.png",
+      "createdAt": "2026-01-14T12:17:28.306Z",
       "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nThe Great Skull Dwelling. A colossal dragon skull, its hollowed eye sockets serving as cavernous entrances, its bone structure reinforced and shaped into a formidable lair.\n\nSTYLE LOCK — NON-NEGOTIABLE:\n\nIdentity:\n* skull conversion\n* bone dwelling\n\nMaterials:\n* massive bone struts\n* carved bone doorways\n* fossilized teeth\n\nColor & Light:\n* muted bone whites\n* dark interior shadows\n* glowing lava veins\n\nAtmosphere:\n* imposing\n* ancient\n* powerful\n\nBanned:\n* lush vegetation\n* clear blue skies\n\nSCENE LAYERS:\n- Background: The jagged, imposing peaks of Drakon's Maw recede into a swirling haze of ash, with faint, distant glows of lava veins illuminating the gloom. The sky is a bruised, sulfurous grey, indicative of dusk and constant ash fall.\n- Midground: The Great Skull Dwelling dominates the midground. Its colossal, muted bone-white structure, a dragon skull expertly converted into a lair, looms large. Massive bone struts reinforce its ancient form. Carved bone doorways, some darkened with deep interior shadows, are visible within the hollowed eye sockets. Fossilized teeth, immense and formidable, jut out from the jawline, acting as natural fortifications.\n- Foreground: At the street-level, the ground is uneven, covered in a fine layer of ash and grit. Wisps of sulfurous wind kick up dust and ash around the base of the skull. The perspective is from approximately 25-30 degrees looking upwards, emphasizing the sheer scale of the entranceways and the imposing nature of the dwelling.\n\nLIGHTING: Dusk light filters weakly through the ash-laden atmosphere, casting long, distorted shadows. Subtle, pulsating glows from hidden lava veins within the bone structure offer pockets of eerie, internal luminescence, contrasting with the muted bone whites. The sulfurous winds carry a faint, internal glow that catches the ash particles.\nATMOSPHERE: An ancient, powerful, and imposing atmosphere permeates the scene. The air feels heavy with sulfur and ash. The sheer scale of the skull dwelling conveys immense, primal power. The constant ash fall and sulfurous winds create a sense of desolation and enduring resilience.\n\n[SPACE:] EXTERIOR - OUTSIDE view of the building/location\n[ENVIRONMENT:] ash fall with sulfurous winds, dusk\n[CAMERA:] camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context\n[LENS:] 12-24mm ultra-wide lens, elevated perspective, expansive framing\n[LIGHT:] directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions\n\n[NEG:] interior, indoor, inside room, indoor scene\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE: humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
-        "promptLayers": {
-          "name": "The Great Skull Dwelling",
-          "description": "A colossal dragon skull, its hollowed eye sockets serving as cavernous entrances, its bone structure reinforced and shaped into a formidable lair.",
-          "background": "The jagged, imposing peaks of Drakon's Maw recede into a swirling haze of ash, with faint, distant glows of lava veins illuminating the gloom. The sky is a bruised, sulfurous grey, indicative of dusk and constant ash fall.",
-          "midground": "The Great Skull Dwelling dominates the midground. Its colossal, muted bone-white structure, a dragon skull expertly converted into a lair, looms large. Massive bone struts reinforce its ancient form. Carved bone doorways, some darkened with deep interior shadows, are visible within the hollowed eye sockets. Fossilized teeth, immense and formidable, jut out from the jawline, acting as natural fortifications.",
-          "foreground": "At the street-level, the ground is uneven, covered in a fine layer of ash and grit. Wisps of sulfurous wind kick up dust and ash around the base of the skull. The perspective is from approximately 25-30 degrees looking upwards, emphasizing the sheer scale of the entranceways and the imposing nature of the dwelling.",
-          "lighting": "Dusk light filters weakly through the ash-laden atmosphere, casting long, distorted shadows. Subtle, pulsating glows from hidden lava veins within the bone structure offer pockets of eerie, internal luminescence, contrasting with the muted bone whites. The sulfurous winds carry a faint, internal glow that catches the ash particles.",
-          "atmosphere": "An ancient, powerful, and imposing atmosphere permeates the scene. The air feels heavy with sulfur and ash. The sheer scale of the skull dwelling conveys immense, primal power. The constant ash fall and sulfurous winds create a sense of desolation and enduring resilience."
-        },
-        "promptData": {
-          "nodeType": "location",
-          "nodeId": "v2-1768392217513-vksmmddmf",
-          "nodeName": "The Great Skull Dwelling",
-          "hostId": "v2-1768392217513-a1d6tzcep",
-          "hostName": "Drakon's Maw",
-          "regionId": "v2-1768392217513-1gppsmmy3",
-          "regionName": "The Cinder Peaks",
-          "populate": false,
-          "dna": {
-            "essence": [
-              "skull conversion",
-              "bone dwelling"
-            ],
-            "formsAndMaterials": [
-              "massive bone struts",
-              "carved bone doorways",
-              "fossilized teeth"
-            ],
-            "colorAndLight": [
-              "muted bone whites",
-              "dark interior shadows",
-              "glowing lava veins"
-            ],
-            "atmosphere": [
-              "imposing",
-              "ancient",
-              "powerful"
-            ],
-            "banned": []
-          }
-        },
-        "model": "flux",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "v2-1768392217513-vksmmddmf"
-      ]
-    },
-    "media-1768392246220-4acntuv5h": {
-      "id": "media-1768392246220-4acntuv5h",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8a5a38/On-UohMAkXFz4tv84oggw.jpg",
-      "createdAt": "2026-01-14T12:04:06.220Z",
-      "metadata": {
-        "prompt": "Action:\nMove the camera forward and step into The Dragon's Treasure Hoard.\n\nTarget location:\nInterior space carved inside The Great Skull Dwelling.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nReveal:\nAn enclosed interior space within the structure.\nTowering mounds of treasure dominate the midground. Gleaming gold coins form cascading slopes, interspersed with the faceted brilliance of countless gemstones. Ancient, ornate chests lie open, spilling their contents. Some larger, fossilized teeth jut out from the walls, encrusted with precious metals.\nThe floor is uneven, a chaotic spread of scattered coins, loose jewels, and smaller artifacts. Fine layers of dust and ash settle over everything, disturbed by unseen drafts. The edges of coin piles and scattered gems catch the dim light.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: An ancient, powerful, and imposing atmosphere permeates the scene. The air feels heavy with sulfur and ash. The sheer scale of the skull dwelling conveys immense, primal power. The constant ash fall and sulfurous winds create a sense of desolation and enduring resilience.\n* Environmental context: dusk, ash fall with sulfurous winds (influencing interior indirectly, not directly visible)\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nThe immense, curving walls are formed from the smoothed and polished interior bone of the dragon's skull. Occasional deep fissures and natural cavities within the bone offer pockets of intense shadow, contrasting with the primary bone-white material. No sky is visible, only the continuous, enclosed bone structure.\n\nInterior lighting and atmosphere (ADAPTED FOR ENCLOSED SPACE):\nSoft, pulsating glows emanate from within the bone structure itself, hinting at the residual energy of the dragon or hidden lava veins. This internal luminescence casts a warm, ethereal light that glints off the metallic surfaces and gemstones, creating a play of deep shadows and shimmering highlights. The overall light is dim and indirect, suitable for an enclosed, subterranean space.\nAn atmosphere of immense, ancient wealth and the dormant power of a dragon pervades the space. The air feels heavy with the silence of ages, broken only by the faint whisper of settling dust. The sheer opulence is awe-inspiring, yet the lurking shadows and the colossal scale of the bone structure evoke a sense of potent, untamed energy.\n\nPhysical constraints:\nSolid rock/earth ceiling above. Fully enclosed underground space. No sky, no exterior openings.\nThe space is carved into the mass — not a void or cavern containing structures.\nIndirect or artificial lighting only.\nThe entrance passage is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible\n* No surface-level features\n* No central pillar/spire structure\n* No atrium or void to surface\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
-        "promptLayers": {
-          "name": "The Dragon's Treasure Hoard",
-          "description": "A vast chamber carved deep within the dragon's skull, the air thick with the scent of aged gold and ancient dust. Mountains of glittering treasures—coins, jewels, and artifacts—are piled high against the cavernous bone walls.",
-          "background": "The immense, curving walls are formed from the smoothed and polished interior bone of the dragon's skull. Occasional deep fissures and natural cavities within the bone offer pockets of intense shadow, contrasting with the primary bone-white material. No sky is visible, only the continuous, enclosed bone structure.",
-          "midground": "Towering mounds of treasure dominate the midground. Gleaming gold coins form cascading slopes, interspersed with the faceted brilliance of countless gemstones. Ancient, ornate chests lie open, spilling their contents. Some larger, fossilized teeth jut out from the walls, encrusted with precious metals.",
-          "foreground": "The floor is uneven, a chaotic spread of scattered coins, loose jewels, and smaller artifacts. Fine layers of dust and ash settle over everything, disturbed by unseen drafts. The edges of coin piles and scattered gems catch the dim light.",
-          "lighting": "Soft, pulsating glows emanate from within the bone structure itself, hinting at the residual energy of the dragon or hidden lava veins. This internal luminescence casts a warm, ethereal light that glints off the metallic surfaces and gemstones, creating a play of deep shadows and shimmering highlights. The overall light is dim and indirect, suitable for an enclosed, subterranean space.",
-          "atmosphere": "An atmosphere of immense, ancient wealth and the dormant power of a dragon pervades the space. The air feels heavy with the silence of ages, broken only by the faint whisper of settling dust. The sheer opulence is awe-inspiring, yet the lurking shadows and the colossal scale of the bone structure evoke a sense of potent, untamed energy."
-        },
-        "promptData": {
-          "command": "GO_INSIDE2"
-        },
-        "model": "fal-flux-2-turbo-edit",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "v2-1768392240652-eocha4gq3"
-      ],
-      "parentMedia": "media-1768392221891-z0dmjmjgz"
-    },
-    "media-1768392273648-4s5muf5er": {
-      "id": "media-1768392273648-4s5muf5er",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8a5a3b/FRtTOfTmNYNOcSSmmuFlb.jpg",
-      "createdAt": "2026-01-14T12:04:33.648Z",
-      "metadata": {
-        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nThe Great Hollow Oak. A monumental, ancient oak tree with a massive gnarled trunk and thick, moss-covered bark. A mystical aura emanates from its hollow interior.\n\nSTYLE LOCK — NON-NEGOTIABLE:\n\nIdentity:\n* hollow refuge\n* ancient sentinel\n\nMaterials:\n* gnarled bark\n* moss-covered\n* hollow trunk\n\nColor & Light:\n* dim, filtered light\n* glowing moss\n\nAtmosphere:\n* mystical\n* ancient\n* sheltered\n\nBanned:\n* modern structures\n* artificial light\n\nSCENE LAYERS:\n- Background: Distant, dense trees of the Whispering Woods with a canopy that allows only dim, filtered light to penetrate. The air is visibly damp.\n- Midground: The colossal trunk of The Great Hollow Oak, its gnarled bark deeply textured and heavily draped in vibrant, glowing moss.  The immense scale is emphasized by the slightly upward tilt of the camera.  The entrance to the hollow is a dark, inviting aperture within the trunk.\n- Foreground: The base of the oak's trunk, with exposed roots snaking across the damp forest floor. Patches of moss and fallen leaves are visible, hinting at the age and decay of the surroundings.  The ground is slightly muddy, reflecting the damp and cool weather.\n\nLIGHTING: Dim, filtered afternoon sunlight struggles to break through the thick canopy, casting dappled shadows.  The moss on the oak emits a soft, internal luminescence, creating pockets of subtle, glowing light against the overall dimness.  The light is cool and diffused.\nATMOSPHERE: A palpable sense of ancientness and mystical wonder permeates the scene.  The air feels heavy and still, imbued with the sheltered and timeless aura of the hollow refuge. The dampness contributes to a hushed, almost reverent atmosphere.\n\n[SPACE:] EXTERIOR - OUTSIDE view of the building/location\n[ENVIRONMENT:] damp and cool, afternoon\n[CAMERA:] camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context\n[LENS:] 12-24mm ultra-wide lens, elevated perspective, expansive framing\n[LIGHT:] directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions\n\n[NEG:] interior, indoor, inside room, indoor scene\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE: humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
-        "promptLayers": {
-          "name": "The Great Hollow Oak",
-          "description": "A monumental, ancient oak tree with a massive gnarled trunk and thick, moss-covered bark. A mystical aura emanates from its hollow interior.",
-          "background": "Distant, dense trees of the Whispering Woods with a canopy that allows only dim, filtered light to penetrate. The air is visibly damp.",
-          "midground": "The colossal trunk of The Great Hollow Oak, its gnarled bark deeply textured and heavily draped in vibrant, glowing moss.  The immense scale is emphasized by the slightly upward tilt of the camera.  The entrance to the hollow is a dark, inviting aperture within the trunk.",
-          "foreground": "The base of the oak's trunk, with exposed roots snaking across the damp forest floor. Patches of moss and fallen leaves are visible, hinting at the age and decay of the surroundings.  The ground is slightly muddy, reflecting the damp and cool weather.",
-          "lighting": "Dim, filtered afternoon sunlight struggles to break through the thick canopy, casting dappled shadows.  The moss on the oak emits a soft, internal luminescence, creating pockets of subtle, glowing light against the overall dimness.  The light is cool and diffused.",
-          "atmosphere": "A palpable sense of ancientness and mystical wonder permeates the scene.  The air feels heavy and still, imbued with the sheltered and timeless aura of the hollow refuge. The dampness contributes to a hushed, almost reverent atmosphere."
-        },
-        "promptData": {
-          "nodeType": "location",
-          "nodeId": "v2-1768392268649-j4khj1em1",
-          "nodeName": "The Great Hollow Oak",
-          "hostId": "v2-1768392268649-zvfsg066z",
-          "hostName": "Whispering Woods",
-          "regionId": "v2-1768392268649-bwmu3ne44",
-          "regionName": "The Elder Grove",
-          "populate": false,
-          "dna": {
-            "essence": [
-              "hollow refuge",
-              "ancient sentinel"
-            ],
-            "formsAndMaterials": [
-              "gnarled bark",
-              "moss-covered",
-              "hollow trunk"
-            ],
-            "colorAndLight": [
-              "dim, filtered light",
-              "glowing moss"
-            ],
-            "atmosphere": [
-              "mystical",
-              "ancient",
-              "sheltered"
-            ],
-            "banned": []
-          }
-        },
-        "model": "flux",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "v2-1768392268649-j4khj1em1"
-      ]
-    },
-    "media-1768392294677-nnlehxrik": {
-      "id": "media-1768392294677-nnlehxrik",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8a5a3d/K_SC3GWN1qP9GKdDJDSX9.jpg",
-      "createdAt": "2026-01-14T12:04:54.677Z",
-      "metadata": {
-        "prompt": "Action:\nMove the camera forward and step into Root Chamber.\n\nTarget location:\nInterior space carved inside The Great Hollow Oak.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nReveal:\nAn enclosed interior space within the structure.\nThick, interwoven root systems create natural alcoves and passages. The floor is a compacted mix of damp earth and ancient leaf litter. Some larger roots may form natural seating areas or shelves.\nClose-up details of damp soil, exposed root fibers, and scattered, decaying leaves. Small phosphorescent fungi might be visible on the root surfaces.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: A palpable sense of ancientness and mystical wonder permeates the scene.  The air feels heavy and still, imbued with the sheltered and timeless aura of the hollow refuge. The dampness contributes to a hushed, almost reverent atmosphere.\n* Environmental context: afternoon, damp and cool (influencing interior indirectly, not directly visible)\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nThe gnarled, twisting surfaces of immense roots form the chamber walls, their textures mirroring the exterior bark but darker and more compressed. Faint, glowing moss patches cling to the root structures, providing ambient light.\n\nInterior lighting and atmosphere (ADAPTED FOR ENCLOSED SPACE):\nThe primary light source is the soft, internal luminescence of moss, similar to the exterior but more concentrated and diffuse within the enclosed space. This glow is cool and muted, creating pockets of soft illumination and deep shadows.\nThe air feels heavy, still, and deeply ancient, carrying the scent of rich, damp earth and the subtle, sweet decay of ages. A profound sense of being cradled by the earth and the tree's immense presence pervades the chamber.\n\nPhysical constraints:\nSolid rock/earth ceiling above. Fully enclosed underground space. No sky, no exterior openings.\nThe space is carved into the mass — not a void or cavern containing structures.\nIndirect or artificial lighting only.\nThe entrance passage is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible\n* No surface-level features\n* No central pillar/spire structure\n* No atrium or void to surface\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
-        "promptLayers": {
-          "name": "Root Chamber",
-          "description": "A dimly lit, subterranean chamber carved within the colossal roots of the Great Hollow Oak. The air is thick with the scent of damp earth and ancient wood, illuminated by a soft, natural luminescence.",
-          "background": "The gnarled, twisting surfaces of immense roots form the chamber walls, their textures mirroring the exterior bark but darker and more compressed. Faint, glowing moss patches cling to the root structures, providing ambient light.",
-          "midground": "Thick, interwoven root systems create natural alcoves and passages. The floor is a compacted mix of damp earth and ancient leaf litter. Some larger roots may form natural seating areas or shelves.",
-          "foreground": "Close-up details of damp soil, exposed root fibers, and scattered, decaying leaves. Small phosphorescent fungi might be visible on the root surfaces.",
-          "lighting": "The primary light source is the soft, internal luminescence of moss, similar to the exterior but more concentrated and diffuse within the enclosed space. This glow is cool and muted, creating pockets of soft illumination and deep shadows.",
-          "atmosphere": "The air feels heavy, still, and deeply ancient, carrying the scent of rich, damp earth and the subtle, sweet decay of ages. A profound sense of being cradled by the earth and the tree's immense presence pervades the chamber."
-        },
-        "promptData": {
-          "command": "GO_INSIDE2"
-        },
-        "model": "fal-flux-2-turbo-edit",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "v2-1768392286244-jgn1nhndg"
-      ],
-      "parentMedia": "media-1768392273648-4s5muf5er"
-    },
-    "media-1768392369033-2794cgzoy": {
-      "id": "media-1768392369033-2794cgzoy",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8a5a44/7EU8oYmeQEH6IRsI3bNea.jpg",
-      "createdAt": "2026-01-14T12:06:09.033Z",
-      "metadata": {
-        "prompt": "Action:\nMove the camera forward and step into Treetop Observatory.\n\nTarget location:\nInterior space carved inside The Great Hollow Oak.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nReveal:\nAn enclosed interior space within the structure.\nThe sturdy, gnarled branches of The Great Hollow Oak itself form the immediate surroundings, interwoven with the observatory platform. Visible moss glows faintly, mirroring the luminescence from the trunk below. The wooden surface of the platform is worn and natural.\nThe edge of the wooden observation platform, showing its natural, slightly uneven texture. Below, the damp forest floor is visible as a tapestry of greens and browns, with the massive roots of the oak disappearing into the mist. Fallen leaves and patches of moss are evident.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: A palpable sense of ancientness and mystical wonder permeates the scene.  The air feels heavy and still, imbued with the sheltered and timeless aura of the hollow refuge. The dampness contributes to a hushed, almost reverent atmosphere.\n* Environmental context: afternoon, damp and cool (influencing interior indirectly, not directly visible)\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nA panoramic vista of the dense, ancient Whispering Woods canopy stretching to the horizon. The dim, filtered light suggests a perpetual twilight, with occasional shafts of light piercing through. The distant trees are a deep, mossy green.\n\nInterior lighting and atmosphere (ADAPTED FOR ENCLOSED SPACE):\nThe light is a continuation of the forest's filtered illumination – dim, dappled, and cool. The moss on the surrounding branches provides a subtle, organic luminescence, casting soft, ethereal glows on the wooden surfaces. No direct sunlight reaches this height.\nAn atmosphere of profound tranquility and awe, as if suspended above the world. The immense scale and the feeling of being high in an ancient tree foster a sense of peaceful isolation and deep connection to nature.\n\nPhysical constraints:\nOpen to sky above (balcony/terrace). Railing or edge defines the boundary.\nNatural lighting from above and sides.\nThe entrance back into the building is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No interior room appearance\n* No ground-level perspective\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
-        "promptLayers": {
-          "name": "Treetop Observatory",
-          "description": "An elevated, open-air platform nestled high within the branches of The Great Hollow Oak. It offers a breathtaking panoramic view of the Whispering Woods, with the damp, cool forest floor visible far below.",
-          "background": "A panoramic vista of the dense, ancient Whispering Woods canopy stretching to the horizon. The dim, filtered light suggests a perpetual twilight, with occasional shafts of light piercing through. The distant trees are a deep, mossy green.",
-          "midground": "The sturdy, gnarled branches of The Great Hollow Oak itself form the immediate surroundings, interwoven with the observatory platform. Visible moss glows faintly, mirroring the luminescence from the trunk below. The wooden surface of the platform is worn and natural.",
-          "foreground": "The edge of the wooden observation platform, showing its natural, slightly uneven texture. Below, the damp forest floor is visible as a tapestry of greens and browns, with the massive roots of the oak disappearing into the mist. Fallen leaves and patches of moss are evident.",
-          "lighting": "The light is a continuation of the forest's filtered illumination – dim, dappled, and cool. The moss on the surrounding branches provides a subtle, organic luminescence, casting soft, ethereal glows on the wooden surfaces. No direct sunlight reaches this height.",
-          "atmosphere": "An atmosphere of profound tranquility and awe, as if suspended above the world. The immense scale and the feeling of being high in an ancient tree foster a sense of peaceful isolation and deep connection to nature."
-        },
-        "promptData": {
-          "command": "GO_INSIDE2"
-        },
-        "model": "fal-flux-2-turbo-edit",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "parentMedia": "media-1768392369033-2794cgzoy",
+        "model": "fal-depth-anything-v2"
       },
       "entityRefs": [
         "v2-1768392361968-5aeho69zi"
       ],
-      "parentMedia": "media-1768392273648-4s5muf5er"
+      "parentMedia": "media-1768392369033-2794cgzoy"
+    },
+    "media-1768394253294-o2qp92q9s": {
+      "id": "media-1768394253294-o2qp92q9s",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a5b01/MqMJRtPK0r7PRDUxg-dIJ.jpg",
+      "createdAt": "2026-01-14T12:37:33.294Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nNeon-Lit Structure. A massive, ephemeral art installation on the playa, constructed from various materials and illuminated by a network of vibrant neon lights. It stands tall against the night sky, casting a colorful glow onto the dusty surroundings, often appearing in modular or geometric forms.\n\nSTYLE LOCK — NON-NEGOTIABLE:\n\nIdentity:\n* ephemeral art\n* light sculpture\n\nMaterials:\n* steel frame\n* plywood panels\n* LED strips\n* neon tubes\n* recycled components\n\nColor & Light:\n* fluorescent pink\n* electric blue\n* lime green\n* intense glow\n* harsh shadows\n\nAtmosphere:\n* dazzling\n* surreal\n* intense\n* otherworldly\n\nBanned:\n* organic forms\n* natural materials\n\nSCENE LAYERS:\n- Background: Vast, star-speckled night sky of the Black Rock Desert, with a faint aurora of light pollution from a distant, unseen event. The immense, arid playa stretches to the horizon, appearing as a dusty, dark expanse under the starlight.\n- Midground: The massive, geometric Neon-Lit Structure dominates the midground. Its intricate steel frame is outlined by vibrant neon tubes and LED strips, forming sharp angles and repeating modules. Fluorescent pink, electric blue, and lime green light intensely illuminates the plywood panels and various recycled components. The structure appears to float, its sharp edges casting harsh, elongated shadows across the dusty playa.\n- Foreground: The cracked, dusty surface of the playa, kicked up in fine particles by a gentle breeze. The ground reflects the dazzling, neon glow from the structure, creating pools of intense color. The viewer is standing at street-level, looking up at the imposing facade.\n\nLIGHTING: The intense, almost blinding glow of the neon and LED lights from the structure. Harsh, sharp shadows are cast by the geometric forms, creating a stark contrast against the dusty ground. The faint ambient light of the night sky is overwhelmed by the artificial illumination.\nATMOSPHERE: Dazzling and surreal. The intense, otherworldly glow of the neon lights combined with the dusty, desolate environment creates a scene of intense, futuristic beauty. The lack of organic forms emphasizes the artificial and ephemeral nature of the art installation.\n\n[SPACE:] EXTERIOR - OUTSIDE view of the building/location\n[ENVIRONMENT:] clear and very dusty, night\n[CAMERA:] camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context\n[LENS:] 12-24mm ultra-wide lens, elevated perspective, expansive framing\n[LIGHT:] directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions\n\n[NEG:] interior, indoor, inside room, indoor scene\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE: humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "promptLayers": {
+          "name": "Neon-Lit Structure",
+          "description": "A massive, ephemeral art installation on the playa, constructed from various materials and illuminated by a network of vibrant neon lights. It stands tall against the night sky, casting a colorful glow onto the dusty surroundings, often appearing in modular or geometric forms.",
+          "background": "Vast, star-speckled night sky of the Black Rock Desert, with a faint aurora of light pollution from a distant, unseen event. The immense, arid playa stretches to the horizon, appearing as a dusty, dark expanse under the starlight.",
+          "midground": "The massive, geometric Neon-Lit Structure dominates the midground. Its intricate steel frame is outlined by vibrant neon tubes and LED strips, forming sharp angles and repeating modules. Fluorescent pink, electric blue, and lime green light intensely illuminates the plywood panels and various recycled components. The structure appears to float, its sharp edges casting harsh, elongated shadows across the dusty playa.",
+          "foreground": "The cracked, dusty surface of the playa, kicked up in fine particles by a gentle breeze. The ground reflects the dazzling, neon glow from the structure, creating pools of intense color. The viewer is standing at street-level, looking up at the imposing facade.",
+          "lighting": "The intense, almost blinding glow of the neon and LED lights from the structure. Harsh, sharp shadows are cast by the geometric forms, creating a stark contrast against the dusty ground. The faint ambient light of the night sky is overwhelmed by the artificial illumination.",
+          "atmosphere": "Dazzling and surreal. The intense, otherworldly glow of the neon lights combined with the dusty, desolate environment creates a scene of intense, futuristic beauty. The lack of organic forms emphasizes the artificial and ephemeral nature of the art installation."
+        },
+        "promptData": {
+          "nodeType": "location",
+          "nodeId": "v2-1768394248791-8kblrkp8x",
+          "nodeName": "Neon-Lit Structure",
+          "hostId": "v2-1768394248791-atkosh24t",
+          "hostName": "Black Rock Desert",
+          "regionId": "v2-1768394248791-3lft8mvej",
+          "regionName": "Playa",
+          "populate": false,
+          "dna": {
+            "essence": [
+              "ephemeral art",
+              "light sculpture"
+            ],
+            "formsAndMaterials": [
+              "steel frame",
+              "plywood panels",
+              "LED strips",
+              "neon tubes",
+              "recycled components"
+            ],
+            "colorAndLight": [
+              "fluorescent pink",
+              "electric blue",
+              "lime green",
+              "intense glow",
+              "harsh shadows"
+            ],
+            "atmosphere": [
+              "dazzling",
+              "surreal",
+              "intense",
+              "otherworldly"
+            ],
+            "banned": [
+              "organic forms",
+              "natural materials"
+            ]
+          }
+        },
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768394248791-8kblrkp8x"
+      ]
+    },
+    "media-1768394275491-qoqy13u4g": {
+      "id": "media-1768394275491-qoqy13u4g",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a5b03/nGsGQIQDU6z2-StjO6mPZ.jpg",
+      "createdAt": "2026-01-14T12:37:55.491Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and step into Gratitude Chamber.\n\nTarget location:\nA semi-enclosed space within Neon-Lit Structure.\n\nCamera:\nHuman eye level, positioned inside the structure/pavilion.\nThe camera has moved past the entrance into the sheltered area.\n\nOrientation:\nFacing into the semi-enclosed space.\nThe entrance is behind the camera.\n\nReveal:\nA partially covered space with sky visible through gaps, lattice, framework, or open sections.\nThe dominant feature is the internal structural geometry, creating angular alcoves and passages. The neon and LED lighting is integrated into this structure, casting an ambient glow rather than harsh lines. Subtle interactive elements or projections might be present, hinting at the theme of gratitude.\nThe floor is the same dusty playa material, subtly illuminated by the glow from above and the sides. Fine dust particles might catch the light, adding a shimmering quality to the immediate surroundings. The base of the steel structure is visible where it meets the ground.\n\nPreserve (visual identity and structural continuity):\nThe structure's visual signature:\n* Atmosphere tone: Dazzling and surreal. The intense, otherworldly glow of the neon lights combined with the dusty, desolate environment creates a scene of intense, futuristic beauty. The lack of organic forms emphasizes the artificial and ephemeral nature of the art installation.\n* Environmental context: night, clear and very dusty\n\nStyle lock:\nMaintain the structure's established aesthetic and materials.\n\nCarry forward (structure and surroundings):\nThe internal faces of the geometric steel frame, clad in treated plywood and recycled materials, form the walls. These surfaces glow with diffused light, appearing as continuous planes of soft, vibrant color. The 'ceiling' is an implied continuation of this geometric framework, largely obscured by the integrated lighting.\n\nLighting and atmosphere (ADAPTED FOR SEMI-ENCLOSED SPACE):\nThe harsh neon exterior light is transformed into a pervasive, diffused glow emanating from the structure's internal surfaces. The primary colors of pink, electric blue, and lime green are present but softened and blended, creating an otherworldly luminescence that fills the space. Shadows are soft and form gentle, rounded edges rather than sharp lines.\nThe dazzling and surreal atmosphere of the exterior is internalized. The sense of being within a futuristic, artificial construct is amplified, fostering a feeling of immersive reflection and wonder. The intense artificial light and geometric forms combine to create a deeply contemplative yet vibrantly alive space.\n\nPhysical constraints:\nPARTIAL sky visible through framework, lattice, gaps, or open roof sections.\nNOT fully enclosed - some openings to sky are intentional and visible.\nNatural light filters through the structure.\nThe entrance/arrival point is behind the camera position.\nThe structure provides shelter but is NOT sealed.\n\nProhibitions:\n* The entrance must NOT be visible anywhere in the frame - it is behind the camera\n* Do not show a FULLY enclosed interior with solid ceiling\n* Do not show a FULLY open outdoor space with no structure\n* Do not reinterpret the architectural/structural style\n* No solid walls on all sides\n* No completely sealed roof\n\nFinal constraint:\nShow a sheltered but partially open space where sky is visible through the structure, creating filtered natural light.",
+        "promptLayers": {
+          "name": "Gratitude Chamber",
+          "description": "You step into a chamber where the geometric steel frame of the structure continues inward, now acting as the walls of this space. The plywood panels and recycled components are treated to absorb and diffuse the vibrant neon light, creating an immersive, glowing environment. The air hums with a subtle, resonant energy.",
+          "background": "The internal faces of the geometric steel frame, clad in treated plywood and recycled materials, form the walls. These surfaces glow with diffused light, appearing as continuous planes of soft, vibrant color. The 'ceiling' is an implied continuation of this geometric framework, largely obscured by the integrated lighting.",
+          "midground": "The dominant feature is the internal structural geometry, creating angular alcoves and passages. The neon and LED lighting is integrated into this structure, casting an ambient glow rather than harsh lines. Subtle interactive elements or projections might be present, hinting at the theme of gratitude.",
+          "foreground": "The floor is the same dusty playa material, subtly illuminated by the glow from above and the sides. Fine dust particles might catch the light, adding a shimmering quality to the immediate surroundings. The base of the steel structure is visible where it meets the ground.",
+          "lighting": "The harsh neon exterior light is transformed into a pervasive, diffused glow emanating from the structure's internal surfaces. The primary colors of pink, electric blue, and lime green are present but softened and blended, creating an otherworldly luminescence that fills the space. Shadows are soft and form gentle, rounded edges rather than sharp lines.",
+          "atmosphere": "The dazzling and surreal atmosphere of the exterior is internalized. The sense of being within a futuristic, artificial construct is amplified, fostering a feeling of immersive reflection and wonder. The intense artificial light and geometric forms combine to create a deeply contemplative yet vibrantly alive space."
+        },
+        "promptData": {
+          "command": "GO_INSIDE2"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768394269574-n4dyc03eh"
+      ],
+      "parentMedia": "media-1768394253294-o2qp92q9s"
     }
   }
 }
