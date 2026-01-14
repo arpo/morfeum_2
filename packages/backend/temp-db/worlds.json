@@ -106,73 +106,131 @@
       },
       "primaryMedia": "media-1768383854314-cmgmeoat1"
     },
-    "v2-1768385852922-ochss6g3k": {
-      "id": "v2-1768385852922-ochss6g3k",
+    "v2-1768386568474-1gg99e7qi": {
+      "id": "v2-1768386568474-1gg99e7qi",
       "type": "container",
-      "name": "The Chronos Pillar",
-      "slug": "the-chronos-pillar",
-      "description": "A colossal, ancient-looking tower that is a marvel of blended natural rock and futuristic metallic architecture. It features curved platforms, balconies, and windows with striking turquoise accents.",
+      "name": "The Chronos Pillar Complex",
+      "slug": "the-chronos-pillar-complex",
+      "description": "The Chronos Pillar Complex is a monumental fusion of ancient earth and advanced alien technology. It serves as a nexus of exploration and scientific study within the Great Expanse.",
       "forbiddenTransformations": [
-        "Any visible sky or horizon from within the tower's primary entry points.",
-        "Signs of external weather or atmospheric conditions affecting the interior.",
-        "Architectural styles drastically different from the organic metallic and cracked rock fusion.",
-        "Modern, mundane human technology that clashes with the alien aesthetic.",
-        "Signs of decay or ruin that are not intentionally part of the ancient design."
+        "rendering the exterior sky or horizon visible from within the main entrance hall",
+        "showing a transition to vastly different, non-integrated architectural styles",
+        "depicting the pillar's exterior as a backdrop visible through the interior space",
+        "introducing elements that suggest a natural cave system rather than a constructed interior",
+        "making the entrance appear small or low-ceilinged"
       ],
       "parentId": "v2-1768383849568-ck78ai9vs"
     },
-    "v2-1768385852922-5jaoy1d7c": {
-      "id": "v2-1768385852922-5jaoy1d7c",
+    "v2-1768386568474-g2252no5r": {
+      "id": "v2-1768386568474-g2252no5r",
       "type": "space",
-      "name": "Pillar Vestibule",
-      "slug": "pillar-vestibule",
-      "description": "The immediate entry chamber within the Chronos Pillar, where the cracked orange-brown rock of the exterior gives way to the integrated metallic architecture. You are greeted by a sense of enclosed, awe-inspiring space, a transition from the arid expanse to the pillar's heart.",
+      "name": "Grand Vestibule",
+      "slug": "grand-vestibule",
+      "description": "You have entered a vast, high-ceilinged vestibule carved into the base of the Chronos Pillar. The space seamlessly blends the raw, cracked rock of the pillar's foundation with polished metallic surfaces, illuminated by diffused, glowing light.",
       "spaceType": "indoor",
       "dna": {
         "essence": [
-          "ancient fusion",
-          "organic tech",
-          "alien monolith"
+          "ancient earth",
+          "organic futurism",
+          "alien grandeur"
         ],
         "formsAndMaterials": [
-          "curved metallic plating",
-          "smooth integrated rock"
+          "curved metallic structures",
+          "cracked rock formations",
+          "polished stone accents"
         ],
         "colorAndLight": [
-          "warm earth tones",
-          "cool turquoise highlights",
-          "indirect, diffused light"
+          "warm orange-browns",
+          "metallic silvers",
+          "glowing turquoise accents",
+          "diffused interior lighting"
         ],
         "atmosphere": [
           "awe-inspiring",
           "architectural",
-          "alien sci-fi"
+          "sci-fi",
+          "spacious"
         ],
         "banned": [
-          "exposed rebar or crude construction",
-          "industrial lighting fixtures",
-          "natural wood elements",
-          "visible electrical wiring",
-          "fluorescent lighting"
+          "visible sky",
+          "harsh direct sunlight",
+          "exposed scaffolding",
+          "traditional door frames",
+          "ornate carvings"
         ]
       },
       "promptLayers": {
-        "background": "Smooth, organically curving metallic walls that seamlessly integrate with sections of cracked, orange-brown rock, reminiscent of the exterior. The ceiling is not visible, implying a deep, enclosed structure.",
-        "midground": "The transition from the exterior rock foundation to the smooth, flowing metallic interior architecture. Passageways and subtle alcoves might be visible, hinting at further exploration within the tower.",
-        "foreground": "The polished, perhaps slightly textured floor, likely made of a dark, dense material that complements the metallic walls. The very edge of the massive rock foundation from the exterior might still be subtly visible near the entrance.",
-        "lighting": "Indirect light sources cast a warm, diffused glow, reflecting off the metallic surfaces and highlighting the textured rock. The vibrant turquoise accents of the exterior windows are muted, their glow now a softer internal luminescence, casting subtle colored light onto nearby surfaces.",
-        "atmosphere": "A profound sense of immense scale and ancient, advanced craftsmanship pervades the space, maintaining the awe-inspiring, architectural, and distinctly sci-fi atmosphere of the exterior, now within an enclosed, protected environment."
+        "background": "The far walls are a continuation of the cracked orange-brown rock, smoothed and polished in places, with sections of seamless, organically curved metallic plating extending upwards into the unseen height of the ceiling. Subtle, recessed turquoise lights are embedded along the upper architectural lines.",
+        "midground": "The primary architectural elements are sweeping, metallic curves that merge with the natural rock. Archways and openings hint at further interior passages. Integrated platforms, also made of the same polished metal and rock, are visible at various heights, receding into the vastness of the space.",
+        "foreground": "The floor is a polished, dark grey stone with subtle, crystalline inclusions, mirroring the arid ground outside but treated for interior use. The very edge of the massive, carved rock foundation of the pillar is visible, demonstrating the immense scale of the interior.",
+        "lighting": "Soft, diffused light emanates from hidden sources within the metallic architecture and embedded turquoise accents, casting gentle shadows and highlighting the textures of the rock and metal. The harshness of the exterior sun is entirely absent, replaced by a warm, inviting glow.",
+        "atmosphere": "An overwhelming sense of scale and awe pervades the space. The fusion of raw, ancient materials with sleek, organic technology creates a feeling of entering a sacred, technologically advanced chamber."
       },
       "forbiddenTransformations": [
-        "Visible sky or direct sunlight pouring into the vestibule.",
-        "The appearance of standard doors or conventional architectural entryways.",
-        "Any materials that are overtly modern or manufactured in a common, Earth-like industrial style.",
-        "The interior walls appearing flat or lacking the organic, curved forms.",
-        "The color palette shifting significantly away from the dominant orange-brown and metallic tones with turquoise accents.",
-        "The lighting becoming harsh or revealing the true extent of the tower's structure as an empty void."
+        "rendering the space as a simple cavern or cave",
+        "showing the exterior sky or natural horizon from within this hall",
+        "introducing elements of typical Earth architecture (e.g., modern doors, windows showing outside)",
+        "making the ceiling appear low or flat",
+        "depicting the metallic elements as sharp or angular",
+        "showing the raw, unfinished exterior rock face as the primary interior material",
+        "introducing artificial or overtly modern flooring materials that clash with the organic theme"
       ],
-      "parentId": "v2-1768385852922-ochss6g3k",
-      "primaryMedia": "media-1768385858958-gw5e50dd6"
+      "parentId": "v2-1768386568474-1gg99e7qi",
+      "primaryMedia": "media-1768386574247-vc0vlfpbo"
+    },
+    "v2-1768386657582-byqnkkbcr": {
+      "id": "v2-1768386657582-byqnkkbcr",
+      "type": "space",
+      "name": "The Terrace",
+      "slug": "the-terrace",
+      "description": "You have arrived at the rooftop terrace bar. This elevated space offers sweeping vistas of the Great Expanse under the Aridian sun, with comfortable seating integrated into the pillar's architecture.",
+      "spaceType": "elevated",
+      "dna": {
+        "essence": [
+          "ancient fusion",
+          "organic tech",
+          "arid alien"
+        ],
+        "formsAndMaterials": [
+          "curved metal",
+          "cracked rock",
+          "smooth composite"
+        ],
+        "colorAndLight": [
+          "warm earth tones",
+          "vivid turquoise accents",
+          "harsh sun"
+        ],
+        "atmosphere": [
+          "awe-inspiring",
+          "expansive views",
+          "leisurely"
+        ],
+        "banned": [
+          "visible interior walls not matching exterior texture",
+          "overhead structures that are not part of the pillar's design",
+          "common terrestrial flora",
+          "obvious electrical wiring"
+        ]
+      },
+      "promptLayers": {
+        "background": "The expansive, clear sky of Aridia stretching to the horizon of the Great Expanse. Distant, muted arid rock formations are visible under the bright midday sun.",
+        "midground": "The main bar area and seating arrangements are integrated into the curved metallic and rock platforms of the pillar. Turquoise-accented windows reflect the intense sunlight. The organic metallic architecture flows seamlessly into areas of cracked orange-brown rock.",
+        "foreground": "The polished, smooth surface of the terrace floor, perhaps with subtle integrated patterns. The edge of the elevated platform with a low, sculpted barrier that blends with the pillar's structure.",
+        "lighting": "Bright, direct midday sunlight, creating strong specular highlights on metallic surfaces and warm illumination on rock. Turquoise accents glow with reflected light. Shadows are sharp and well-defined.",
+        "atmosphere": "A sense of elevated freedom and wonder, with the harsh beauty of Aridia laid out below. The fusion of ancient rock and futuristic metal creates an awe-inspiring, distinctly sci-fi lounge experience."
+      },
+      "forbiddenTransformations": [
+        "The sky becoming unnaturally close or having visible cloud formations not consistent with Aridia's depiction.",
+        "The floor suddenly changing material to something that doesn't complement the rock and metal aesthetic.",
+        "Seating that appears as standard, mass-produced furniture.",
+        "Any architectural elements that look like they were bolted on as an afterthought, rather than organically integrated.",
+        "The turquoise accents losing their vibrant glow or appearing dull.",
+        "The presence of railings or barriers that look like generic safety equipment.",
+        "The sun's harshness being significantly softened or diffused."
+      ],
+      "parentId": "v2-1768386568474-1gg99e7qi",
+      "primaryMedia": "media-1768386663488-u3itee9um"
     }
   },
   "views": {},
@@ -190,11 +248,16 @@
               "type": "location",
               "children": [
                 {
-                  "id": "v2-1768385852922-ochss6g3k",
+                  "id": "v2-1768386568474-1gg99e7qi",
                   "type": "container",
                   "children": [
                     {
-                      "id": "v2-1768385852922-5jaoy1d7c",
+                      "id": "v2-1768386568474-g2252no5r",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1768386657582-byqnkkbcr",
                       "type": "space",
                       "children": []
                     }

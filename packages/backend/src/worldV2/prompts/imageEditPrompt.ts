@@ -165,8 +165,9 @@ export function buildEnterImageEditPrompt(context: ImageEditContext): string {
   const prohibitions = buildProhibitions(spaceType);
 
   // Build the prompt following the proven working structure
-  // CRITICAL: Do NOT pass sourcePromptLayers.midground directly - it contains object descriptions
-  // that cause the edit model to show the structure inside itself
+  // CRITICAL: Do NOT pass sourcePromptLayers.midground or sourcePromptLayers.lighting directly
+  // - midground contains object descriptions that cause "tower inside tower" bug
+  // - lighting describes exterior light (sunlight etc) which causes openings/windows to appear
   const prompt = `Action:
 Move the camera forward and step into ${spaceName}.
 
@@ -188,9 +189,8 @@ ${targetPromptLayers.foreground}
 
 Preserve (visual identity as SURFACE TREATMENT ONLY):
 The exterior's visual signature applied to interior walls and surfaces:
-* Lighting quality: ${sourcePromptLayers.lighting}
 * Atmosphere tone: ${sourcePromptLayers.atmosphere}
-* Environmental context: ${envContext} (influencing interior indirectly)
+* Environmental context: ${envContext} (influencing interior indirectly, not directly visible)
 
 Style lock:
 Preserve the exterior's aesthetic as surface treatment for interior walls.
@@ -198,7 +198,7 @@ Preserve the exterior's aesthetic as surface treatment for interior walls.
 Carry forward (apply to enclosing walls, floor, ceiling):
 ${targetPromptLayers.background}
 
-Interior adaptation:
+Interior lighting and atmosphere (ADAPTED FOR ENCLOSED SPACE):
 ${targetPromptLayers.lighting}
 ${targetPromptLayers.atmosphere}
 
@@ -208,6 +208,7 @@ Prohibitions:
 ${prohibitions}
 * Do not create a central pillar, spire, column, or tower form inside the space
 * Do not show the structure as an object visible from inside
+* Do not show windows or openings to the exterior
 
 Final constraint:
 Show a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.`;

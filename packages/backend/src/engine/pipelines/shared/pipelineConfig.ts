@@ -144,7 +144,7 @@ export const PIPELINE_STEPS = {
   
   /** V2: GO_INSIDE2 - Navigate into a space using image edit */
   v2GoInside: [
-    { id: 'analyzing', name: 'Analyzing Location', duration: 4000 },
+    { id: 'analyzing', name: 'Analyzing Location', duration: 5000 },
     { id: 'structure', name: 'Creating Entrance Structure', duration: 3000 },
     { id: 'image', name: 'Generating Space View', duration: 5000 }
   ]

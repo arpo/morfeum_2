@@ -96,9 +96,10 @@ Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = i
 | `/SET_TIME` | Set time of day for world | ✅ |
 | `/SET_WEATHER` | Set weather conditions for world | ✅ |
 
-### Phase 5-6: 🚧 PENDING
+### Phase 5-6: Navigation 🚧 IN PROGRESS
 
-- [ ] Navigation for V2 nodes (GO_INSIDE, GOTO)
+- [x] GO_INSIDE2 - Enter structures/buildings ← WORKING
+- [ ] GOTO - Move between locations
 - [ ] Remove old system
 
 ---
@@ -140,7 +141,8 @@ prompts/
 
 ## What's Left 🚧
 
-- [ ] V2 Navigation (GO_INSIDE, GOTO)
+- [x] GO_INSIDE2 navigation ← DONE
+- [ ] GOTO navigation (move between locations)
 - [ ] Remove old system
 - [ ] Character spawn caching test
 - [ ] Bundle size optimization
