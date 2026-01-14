@@ -1,101 +1,208 @@
 /**
  * Image Edit Prompt Builder
  * 
- * Assembles prompts for the fal-flux-2-turbo-edit model following the Navigation spec format:
- * 1. STYLE LOCK (compiled from effective DNA) - using unified buildStyleLock
- * 2. PROHIBITIONS (from forbiddenTransformations + command-specific bans)
- * 3. ACTION (command-specific instruction) - declarative "camera IS now inside"
+ * Assembles prompts for the fal-flux-2-turbo-edit model following the scene-expert skill format.
+ * Uses promptLayers for visual style preservation across navigation.
  * 
- * This creates highly constrained prompts that maintain visual consistency
- * when editing images for navigation.
+ * Key principles from scene-expert skill:
+ * - Style lock must PRESERVE, not reinvent
+ * - Camera physics is king (position, orientation)
+ * - Enclosure must be asserted (solid ceiling)
+ * - Megastructure interior paradox protection
+ * - Threshold trap avoidance (entrance behind camera)
  */
 
-import type { DNA } from '../types';
 import type { SpaceType } from './goInside';
-import { compileStyleLock, buildStyleLock, buildStyleLockForSpace } from '../utils/styleLockCompiler';
+import type { ImagePromptLayers } from '../display/imagePromptGenerator';
+import type { TimeOfDay } from '../types';
+
+/**
+ * Prompt layers for interior space (without name/description)
+ */
+interface TargetPromptLayers {
+  background: string;
+  midground: string;
+  foreground: string;
+  lighting: string;
+  atmosphere: string;
+}
 
 /**
  * Context for building an image edit prompt
  */
 export interface ImageEditContext {
-  /** The target space description */
-  targetDescription: string;
+  /** Source image's visual style - what we're preserving */
+  sourcePromptLayers: ImagePromptLayers;
+  /** Target interior's visual description - what we're creating */
+  targetPromptLayers: TargetPromptLayers;
   /** The space type (indoor, outdoor, etc.) */
   spaceType: SpaceType;
-  /** Effective DNA for style lock (merged parent + child) */
-  effectiveDNA: DNA;
-  /** Parent DNA BEFORE merging child delta - used for Palette (source image colors) */
-  parentDNA: DNA;
-  /** Node-specific forbidden transformations */
-  forbiddenTransformations: string[];
+  /** Space name for specific references */
+  spaceName: string;
   /** Parent location name for context */
   parentName: string;
-  /** Space name for specific references */
-  spaceName?: string;
-  /** Interior details from LLM (what's visible inside) */
-  interiorDetails?: string[];
   /** Weather conditions (from host) */
   weather?: string;
   /** Time of day (from host) */
-  timeOfDay?: string;
+  timeOfDay?: TimeOfDay;
 }
 
+/**
+ * Build enclosure assertions based on space type
+ * Following scene-expert skill guidance on enclosure
+ */
+function buildEnclosureAssertions(spaceType: SpaceType): string {
+  switch (spaceType) {
+    case 'indoor':
+      return `Physical constraints:
+Solid ceiling above. Fully enclosed interior. No sky visible.
+Indirect lighting only - light enters through openings not visible in frame.
+The entrance is behind the camera position.`;
+
+    case 'underground':
+      return `Physical constraints:
+Solid rock/earth ceiling above. Fully enclosed underground space. No sky, no exterior openings.
+Indirect or artificial lighting only. Carved into the mass, not a void.
+The entrance passage is behind the camera position.`;
+
+    case 'semi-enclosed':
+      return `Physical constraints:
+Partial roof/covering visible above. Semi-enclosed space with filtered light.
+Some sky may be visible through gaps, but primary view is sheltered.
+The entrance is behind the camera position.`;
+
+    case 'elevated':
+      return `Physical constraints:
+Open to sky above (balcony/terrace). Railing or edge defines the boundary.
+Natural lighting from above and sides.
+The entrance back into the building is behind the camera position.`;
+
+    case 'outdoor':
+      return `Physical constraints:
+Open sky above. Natural outdoor lighting.
+Camera is within the outdoor space, not at its entrance.
+The entrance/arrival point is behind the camera position.`;
+
+    default:
+      return `Physical constraints:
+Camera is within the space, entrance behind.
+Maintain spatial continuity.`;
+  }
+}
+
+/**
+ * Build megastructure protection clause
+ * Prevents the "tower inside tower" bug for large singular structures
+ */
+function buildMegastructureProtection(parentName: string): string {
+  // Check if parent sounds like a megastructure
+  const megastructurePatterns = /tower|spire|monolith|sphere|dome|pyramid|obelisk|citadel|fortress|temple|cathedral|palace|castle/i;
+  
+  if (megastructurePatterns.test(parentName)) {
+    return `
+Megastructure rule:
+The ${parentName} is NOT visible as an object inside this interior.
+This space is CARVED INTO the mass of the structure, not a void containing it.
+Do not show the structure's exterior form from inside.`;
+  }
+  
+  return '';
+}
+
+/**
+ * Build prohibitions based on space type
+ * Following scene-expert guidance on what to ban
+ */
+function buildProhibitions(spaceType: SpaceType): string {
+  const common = [
+    'Do not frame the entrance door/opening in the view',
+    'Do not show exterior establishing shot',
+    'Do not reinterpret the architectural style'
+  ];
+
+  const spaceSpecific: Record<SpaceType, string[]> = {
+    'indoor': [
+      'No sky visible through ceiling',
+      'No open roof or atrium to sky',
+      'No exterior landscape visible'
+    ],
+    'underground': [
+      'No sky visible',
+      'No surface-level features',
+      'No central pillar/spire structure',
+      'No atrium or void to surface'
+    ],
+    'semi-enclosed': [
+      'No fully open roof',
+      'No interior room appearance'
+    ],
+    'elevated': [
+      'No interior room appearance',
+      'No ground-level perspective'
+    ],
+    'outdoor': [
+      'No interior room appearance',
+      'No enclosed ceiling'
+    ]
+  };
+
+  return [...common, ...(spaceSpecific[spaceType] || [])].map(p => `* ${p}`).join('\n');
+}
 
 /**
  * Build image edit prompt for GO_INSIDE2 (entering a new space)
  * 
- * Uses SIMPLE ACTION-ORIENTED format with UNIFIED STYLE LOCK
- * Generic solution that works for any space type (indoor, outdoor, underground, etc.)
+ * Follows scene-expert skill format:
+ * Action, Target location, Camera, Orientation, Reveal, Preserve, Style lock, Physical constraints, Prohibitions
  */
 export function buildEnterImageEditPrompt(context: ImageEditContext): string {
-  const spaceName = context.spaceName || 'the space';
-  const parentName = context.parentName || 'the area';
-  
-  // Build style lock with space-type-aware filtering to remove inappropriate inherited elements
-  const styleLock = buildStyleLockForSpace(context.effectiveDNA, context.spaceType);
-  
-  // Get first sentence of description as reveal
-  const revealText = context.targetDescription.split('.')[0] + '.';
-  
-  // Build environment context for preserve section
-  const envParts: string[] = [];
-  if (context.timeOfDay) envParts.push(context.timeOfDay.replace(/_/g, ' '));
-  if (context.weather) envParts.push(context.weather);
-  const envContext = envParts.length > 0 ? envParts.join(', ') : 'current lighting';
+  const { sourcePromptLayers, targetPromptLayers, spaceType, spaceName, parentName, weather, timeOfDay } = context;
 
-  const prompt = `You have entered ${spaceName}. Transform the view to show what you see from within this space.
+  // Build environment context
+  const envParts: string[] = [];
+  if (timeOfDay) envParts.push(timeOfDay.replace(/_/g, ' '));
+  if (weather) envParts.push(weather);
+  const envContext = envParts.length > 0 ? envParts.join(', ') : 'current conditions';
+
+  // Get enclosure and protection clauses
+  const enclosureAssertions = buildEnclosureAssertions(spaceType);
+  const megastructureProtection = buildMegastructureProtection(parentName);
+  const prohibitions = buildProhibitions(spaceType);
+
+  const prompt = `Action:
+Move the camera forward into ${spaceName} and step fully inside.
 
 Target location:
-Inside ${spaceName} (within ${parentName}).
+Interior space within ${parentName}.
 
-Camera position:
-Eye-level, positioned within the space itself. You have stepped through the entrance into ${spaceName}. The entrance you came from is now behind you, and you are looking at the space around you.
+Camera:
+Human eye level, well inside the space, past the last exterior-facing opening.
 
-Perspective:
-Show the view FROM WITHIN the space, not approaching it or viewing it from outside. The camera has entered and is now inside. What you stepped through to enter is behind the camera position.
+Orientation:
+Facing inward toward interior features. The entrance you came through is behind the camera.
 
-What to reveal:
-${revealText}
+Reveal:
+${targetPromptLayers.midground}
+${targetPromptLayers.foreground}
 
-Preserve from source:
-Overall architectural character, scale, ${envContext}.
+Preserve from source (CRITICAL - maintain visual continuity):
+* Materials language: ${sourcePromptLayers.midground}
+* Lighting quality: ${sourcePromptLayers.lighting} → adapted for ${spaceType} context
+* Atmosphere tone: ${sourcePromptLayers.atmosphere}
+* Environmental context: ${envContext}
 
-STYLE LOCK — NON-NEGOTIABLE:
+Style lock — carry forward and apply to interior:
+* Background: ${targetPromptLayers.background}
+* Lighting: ${targetPromptLayers.lighting}
+* Atmosphere: ${targetPromptLayers.atmosphere}
 
-${styleLock}
+${enclosureAssertions}
+${megastructureProtection}
 
-Constraints:
-Show the space from within, as if you've stepped inside and are looking around.
-The entrance/doorway is behind the camera - do not show it in the view.
-Do not show the exterior or entrance view of the space.
-Do not show the space from outside looking in.
-You are now INSIDE this space - show what surrounds you from this interior position.
-Maintain grounded realism and spatial continuity.`;
+Prohibitions:
+${prohibitions}
 
-  // Log the prompt for debugging
-  console.log('\n========== GO_INSIDE2 IMAGE EDIT PROMPT ==========');
-  console.log(prompt);
-  console.log('==================================================\n');
+Maintain grounded realism and spatial continuity with the source image.`;
 
   return prompt;
 }
@@ -103,123 +210,92 @@ Maintain grounded realism and spatial continuity.`;
 
 /**
  * Build image edit prompt for REFRAME2 (camera move/orient within same space)
- * 
- * Based on the `/reframe` template from Navigation spec
+ * Simplified version that preserves all visual elements
  */
 export function buildReframeImageEditPrompt(
-  effectiveDNA: DNA,
+  sourcePromptLayers: ImagePromptLayers,
   reframeInstruction: string,
   weather?: string,
-  timeOfDay?: string
+  timeOfDay?: TimeOfDay
 ): string {
-  const { styleLockText, prohibitionsText } = compileStyleLock(effectiveDNA);
+  const envParts: string[] = [];
+  if (timeOfDay) envParts.push(timeOfDay.replace(/_/g, ' '));
+  if (weather) envParts.push(weather);
+  const envContext = envParts.length > 0 ? `Environment: ${envParts.join(', ')}` : '';
 
-  const environmentContext = buildEnvironmentContext(weather, timeOfDay);
+  return `Action:
+Reframe the camera within the current location.
 
-  return `You are performing a constrained image edit.
-Preserve the original image's identity, materials, lighting logic, and scale exactly.
-Do not reinterpret style, technology level, or surfaces.
+Target location:
+Same location (no location change).
 
-STYLE LOCK — NON-NEGOTIABLE:
-${styleLockText}
-${environmentContext}
+Camera:
+Human eye level; move to the specified position.
 
-ABSOLUTE PROHIBITIONS:
-${prohibitionsText}
+Preserve (CRITICAL - maintain all visual elements):
+* Background: ${sourcePromptLayers.background}
+* Midground: ${sourcePromptLayers.midground}
+* Foreground: ${sourcePromptLayers.foreground}
+* Lighting: ${sourcePromptLayers.lighting}
+* Atmosphere: ${sourcePromptLayers.atmosphere}
+${envContext}
 
-* Do not change location/node.
-* Do not introduce new objects.
-* Do not redesign materials, lighting, or mood.
-
-EDIT INSTRUCTION:
+Edit instruction:
 ${reframeInstruction}
 
-Maintain strict spatial continuity: same place, only camera pose changes.`;
+Constraints:
+No structural redesign; maintain spatial continuity.
+Same place, only camera pose changes.
+
+Prohibitions:
+* Do not change location/node
+* Do not introduce new objects
+* Do not redesign materials, lighting, or mood
+* No teleport establishing shots`;
 }
 
 /**
  * Build image edit prompt for INSPECT2 (zoom/focus on detail)
- * 
- * Based on the `/inspect` template from Navigation spec
+ * Close-up that preserves style lock
  */
 export function buildInspectImageEditPrompt(
-  effectiveDNA: DNA,
+  sourcePromptLayers: ImagePromptLayers,
   targetDetail: string,
   weather?: string,
-  timeOfDay?: string
+  timeOfDay?: TimeOfDay
 ): string {
-  const { styleLockText, prohibitionsText } = compileStyleLock(effectiveDNA);
+  const envParts: string[] = [];
+  if (timeOfDay) envParts.push(timeOfDay.replace(/_/g, ' '));
+  if (weather) envParts.push(weather);
+  const envContext = envParts.length > 0 ? `Environment: ${envParts.join(', ')}` : '';
 
-  const environmentContext = buildEnvironmentContext(weather, timeOfDay);
+  return `Action:
+Inspect a specific detail closely.
 
-  return `You are performing a constrained image edit.
-Preserve the original image's identity, materials, lighting logic, and scale exactly.
-Do not reinterpret style, technology level, or surfaces.
+Target location:
+Same location, closer viewpoint.
 
-STYLE LOCK — NON-NEGOTIABLE:
-${styleLockText}
-${environmentContext}
+Camera:
+Move closer to the target at human eye level (or slight lean-in).
 
-ABSOLUTE PROHIBITIONS:
-${prohibitionsText}
+Orientation:
+Center the target detail: ${targetDetail}
 
-* Do not change location/node.
-* Do not introduce new objects.
-* Do not alter global lighting or palette.
+Preserve (maintain visual consistency):
+* Materials from: ${sourcePromptLayers.midground}
+* Lighting: ${sourcePromptLayers.lighting}
+* Atmosphere: ${sourcePromptLayers.atmosphere}
+${envContext}
 
-EDIT INSTRUCTION:
-Inspect and zoom in on: ${targetDetail}
-Move the camera closer to emphasize the same physical object/surface.
-Preserve continuity of the same surface/material (no teleporting, no new context).`;
-}
+Reveal:
+Surface-level micro detail (texture, engraving, label, small objects) consistent with existing scene.
 
-/**
- * Build image edit prompt for GOTO2 (jump to different node)
- * 
- * Based on the `/jump` template from Navigation spec
- */
-export function buildJumpImageEditPrompt(
-  targetDNA: DNA,
-  targetDescription: string,
-  weather?: string,
-  timeOfDay?: string
-): string {
-  const { styleLockText, prohibitionsText } = compileStyleLock(targetDNA);
+Constraints:
+No new rooms. No new major objects.
+Same materials and palette at close range.
 
-  const environmentContext = buildEnvironmentContext(weather, timeOfDay);
-
-  return `You are performing a constrained image edit.
-
-STYLE LOCK — NON-NEGOTIABLE:
-Discard the previous location's DNA/style lock entirely.
-Apply ONLY the target node's effective DNA/style lock:
-
-${styleLockText}
-${environmentContext}
-
-ABSOLUTE PROHIBITIONS:
-${prohibitionsText}
-
-EDIT INSTRUCTION:
-Change the scene to the target location: ${targetDescription}
-Establish the new place clearly (materials, lighting, palette, atmosphere) per the target lock.`;
-}
-
-/**
- * Build environment context string from weather and time of day
- */
-function buildEnvironmentContext(weather?: string, timeOfDay?: string): string {
-  const parts: string[] = [];
-  
-  if (timeOfDay) {
-    parts.push(`Time of day: ${timeOfDay.replace(/_/g, ' ')}`);
-  }
-  
-  if (weather) {
-    parts.push(`Weather conditions: ${weather}`);
-  }
-  
-  return parts.length > 0 
-    ? `\nENVIRONMENT:\n${parts.map(p => `* ${p}`).join('\n')}`
-    : '';
+Prohibitions:
+* Do not reinterpret the object category
+* Do not change the scene's era/genre
+* Do not introduce new context`;
 }

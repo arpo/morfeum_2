@@ -5,12 +5,11 @@
  * Creates container + space nodes and generates an edited image.
  * 
  * Flow:
- * 1. Get current node and its source image
- * 2. Build DNA chain (cascade from ancestors)
- * 3. Generate container + space nodes via LLM
- * 4. Build image edit prompt with style lock
- * 5. Call image edit API
- * 6. Save nodes and image
+ * 1. Get current node and its source image + promptLayers
+ * 2. Generate container + space nodes via LLM (with source promptLayers context)
+ * 3. Build image edit prompt using promptLayers for visual preservation
+ * 4. Call image edit API
+ * 5. Save nodes, image, and new promptLayers (for future navigation)
  */
 
 import { Request, Response } from 'express';
@@ -19,7 +18,6 @@ import { HTTP_STATUS, AI_MODELS } from '../../config';
 import { generateText, editImage, hasMzooData } from '../../services/mzoo';
 import { buildGoInsidePrompt, parseGoInsideResponse } from '../prompts/goInside';
 import { buildEnterImageEditPrompt } from '../prompts/imageEditPrompt';
-import { getMergedDNA } from '../display/promptBuilder';
 import { storageService } from '../../services/storage/storageService';
 import mediaService from '../../services/media/mediaService';
 import {
@@ -31,11 +29,12 @@ import {
   sendCompletion,
   sendError
 } from '../utils/routeUtils';
-import type { DNA, Host, Region, TimeOfDay } from '../types';
+import type { Host, TimeOfDay } from '../types';
+import type { ImagePromptLayers } from '../display/imagePromptGenerator';
 
 /**
- * Find node ancestry chain for DNA cascading
- * Returns the host, region, and location DNA up to the current node
+ * Find node ancestry chain for context
+ * Returns host, region info and current node details
  */
 function findNodeAncestry(
   worldsData: any,
@@ -115,42 +114,28 @@ function findNodePath(tree: any, targetId: string, path: string[] = []): string[
 }
 
 /**
- * Get source image URL for a node (from primaryMedia reference)
+ * Get source image URL and promptLayers for a node (from primaryMedia reference)
  */
-function getNodeImageUrl(worldsData: any, nodeId: string): string | null {
+function getNodeMediaInfo(worldsData: any, nodeId: string): { 
+  imageUrl: string | null; 
+  promptLayers: ImagePromptLayers | null;
+  mediaId: string | null;
+} {
   const node = worldsData.nodes[nodeId];
-  if (!node?.primaryMedia) return null;
+  if (!node?.primaryMedia) {
+    return { imageUrl: null, promptLayers: null, mediaId: null };
+  }
 
   const media = mediaService.getMediaById(node.primaryMedia);
-  return media?.url || null;
-}
+  if (!media) {
+    return { imageUrl: null, promptLayers: null, mediaId: null };
+  }
 
-/**
- * Build effective DNA by cascading through ancestry using getMergedDNA
- * Uses CSS-style inheritance: empty array = inherit, non-empty = override
- * 
- * Follows pattern from: packages/frontend/src/utils/nodeDNAExtractor.ts
- */
-function buildEffectiveDNA(
-  ancestry: {
-    host?: Host;
-    region?: any;
-    locationChain: any[];
-  },
-  additionalDNA?: DNA
-): DNA {
-  // Find the deepest location/container in the chain
-  const deepestLocation = ancestry.locationChain.length > 0 
-    ? ancestry.locationChain[ancestry.locationChain.length - 1] 
-    : null;
-
-  // Use getMergedDNA with CSS-style inheritance
-  return getMergedDNA({
-    host: ancestry.host?.dna,
-    region: ancestry.region?.dna,
-    location: deepestLocation?.dna,
-    space: additionalDNA
-  });
+  return {
+    imageUrl: media.url || null,
+    promptLayers: media.metadata?.promptLayers || null,
+    mediaId: node.primaryMedia
+  };
 }
 
 /**
@@ -183,6 +168,22 @@ function findExistingContainer(worldsData: any, parentNodeId: string): any | nul
     }
   }
   return null;
+}
+
+/**
+ * Create fallback promptLayers when source doesn't have them
+ * Uses node name and description to create basic layers
+ */
+function createFallbackPromptLayers(node: any): ImagePromptLayers {
+  return {
+    name: node.name || 'Unknown Location',
+    description: node.description || 'A location in the world',
+    background: 'Distant surroundings and sky',
+    midground: 'Main architectural features and structures',
+    foreground: 'Ground surface and immediate environment',
+    lighting: 'Natural ambient lighting',
+    atmosphere: 'Scene atmosphere with depth'
+  };
 }
 
 export const goInsideHandler = asyncHandler(async (req: Request, res: Response) => {
@@ -222,7 +223,7 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
   (async () => {
     try {
       // ═══════════════════════════════════════════════════════════════════════
-      // Stage 1: Analyze current location and get context
+      // Stage 1: Analyze current location and get source image context
       // ═══════════════════════════════════════════════════════════════════════
       sendProgress(operationId, 'analyzing', 'Analyzing location...');
 
@@ -231,20 +232,21 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
         throw new Error('No worlds data found');
       }
 
-      // Find ancestry chain for DNA cascading
+      // Find ancestry chain for context
       const ancestry = findNodeAncestry(worldsData, nodeId);
       if (!ancestry) {
         throw new Error(`Node ${nodeId} not found in any world tree`);
       }
 
-      // Get source image from current node
-      const sourceImageUrl = getNodeImageUrl(worldsData, nodeId);
+      // Get source image and promptLayers from current node's media
+      const { imageUrl: sourceImageUrl, promptLayers: sourcePromptLayers, mediaId: sourceMediaId } = getNodeMediaInfo(worldsData, nodeId);
+      
       if (!sourceImageUrl) {
         throw new Error(`Node ${nodeId} has no image. Generate an image first using /DISPLAY`);
       }
 
-      // Build effective DNA from ancestry
-      const effectiveDNA = buildEffectiveDNA(ancestry);
+      // Use source promptLayers if available, otherwise create fallback
+      const effectiveSourcePromptLayers = sourcePromptLayers || createFallbackPromptLayers(ancestry.currentNode);
 
       // Check if container already exists for this parent node
       const existingContainer = findExistingContainer(worldsData, nodeId);
@@ -254,10 +256,11 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
       // ═══════════════════════════════════════════════════════════════════════
       sendProgress(operationId, 'structure', existingContainer ? 'Creating new space...' : 'Creating entrance structure...');
 
+      // Pass source promptLayers to LLM so it can inherit visual style
       const goInsidePrompt = buildGoInsidePrompt(target, {
         name: ancestry.currentNode.name,
         description: ancestry.currentNode.description,
-        effectiveDNA
+        sourcePromptLayers: effectiveSourcePromptLayers
       });
 
       const llmResult = await generateText(
@@ -280,20 +283,13 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
       // ═══════════════════════════════════════════════════════════════════════
       sendProgress(operationId, 'image', 'Generating space view...');
 
-      // Build effective DNA for the space using proper cascade
-      // effectiveDNA = parent DNA (before space), spaceDNA = cascaded with space delta
-      const spaceDNA = buildEffectiveDNA(ancestry, space.dna);
-
-      // Build image edit prompt
-      // Pass both merged DNA (for materials/lighting/essence) and parent DNA (for palette preservation)
+      // Build image edit prompt using promptLayers for visual preservation
       const imageEditPrompt = buildEnterImageEditPrompt({
-        targetDescription: space.description,
+        sourcePromptLayers: effectiveSourcePromptLayers, // What source image looks like
+        targetPromptLayers: space.promptLayers,          // What interior should look like
         spaceType: space.spaceType,
-        effectiveDNA: spaceDNA,           // cascaded DNA (parent + space) for materials, lighting, essence
-        parentDNA: effectiveDNA,           // parent DNA for palette (preserves source image colors)
-        forbiddenTransformations: space.forbiddenTransformations,
-        parentName: ancestry.currentNode.name,
         spaceName: space.name,
+        parentName: ancestry.currentNode.name,
         weather: ancestry.hostWeather,
         timeOfDay: ancestry.hostTimeOfDay
       });
@@ -330,21 +326,24 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
         parentId: container.id
       };
 
-      // Create media entry for space image
+      // Create media entry for space image with promptLayers for future navigation
+      // NOTE: Keep promptData minimal - avoid duplicating data from worlds.json
+      // Node names, IDs, DNA etc. can be looked up via entityRefs
       const mediaEntry = mediaService.createMedia({
         type: 'image',
         url: imageUrl,
         metadata: {
           prompt: imageEditPrompt,
+          // Store promptLayers for future navigation from this space
+          promptLayers: {
+            name: space.name,
+            description: space.description,
+            ...space.promptLayers
+          },
+          // Minimal promptData - only what's useful for debugging/auditing
+          // All other info derivable via entityRefs + parentMedia + worlds.json
           promptData: {
-            command: 'GO_INSIDE2',
-            sourceNodeId: nodeId,
-            sourceNodeName: ancestry.currentNode.name,
-            containerId: container.id,
-            containerName: container.name,
-            spaceId: space.id,
-            spaceName: space.name,
-            spaceType: space.spaceType
+            command: 'GO_INSIDE2'
           },
           model: 'fal-flux-2-turbo-edit',
           width: 1920,
@@ -352,7 +351,7 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
           aspectRatio: 'landscape_16_9'
         },
         entityRefs: [space.id],
-        parentMedia: getNodeMediaId(worldsData, nodeId)
+        parentMedia: sourceMediaId || undefined
       });
 
       // Update space node with primaryMedia reference
@@ -424,11 +423,3 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
     }
   })();
 });
-
-/**
- * Get media ID for a node (for parentMedia reference)
- */
-function getNodeMediaId(worldsData: any, nodeId: string): string | undefined {
-  const node = worldsData.nodes[nodeId];
-  return node?.primaryMedia;
-}

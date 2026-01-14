@@ -6,13 +6,13 @@
  * 1. Container node (wrapper for the establishment/area being entered)
  * 2. Space node (the actual space you're now in - can be indoor OR outdoor)
  * 
- * Examples:
- * - "the restaurant" → Container: "The Restaurant", Space: "Restaurant Interior"
- * - "the park" → Container: "Central Park", Space: "Park Grounds" (outdoor)
- * - "the secret chamber" → Container: "Hidden Passage", Space: "Secret Chamber"
+ * Uses promptLayers for visual style preservation across navigation.
+ * The source image's promptLayers are passed in, and the LLM generates
+ * new promptLayers for the interior that inherits the visual signature.
  */
 
 import { DNA_SCHEMA, DNA_FIELD_RULES, DNA_DELTA_RULES } from './shared/dnaSchema';
+import type { ImagePromptLayers } from '../display/imagePromptGenerator';
 
 /**
  * Space type for the entered area
@@ -50,6 +50,18 @@ export interface SpaceNode {
     atmosphere: string[];
     banned: string[];
   };
+  /** 
+   * Visual style layers for the interior space
+   * Inherits visual signature from source image and adapts for interior context
+   * Used for image generation AND for future navigation from this space
+   */
+  promptLayers: {
+    background: string;
+    midground: string;
+    foreground: string;
+    lighting: string;
+    atmosphere: string;
+  };
   forbiddenTransformations: string[];
 }
 
@@ -57,7 +69,7 @@ export interface SpaceNode {
  * Build the prompt for generating container + space nodes
  * 
  * @param target - What the user wants to enter (e.g., "the restaurant", "the park")
- * @param parentContext - Context about the parent location (name, description, DNA)
+ * @param parentContext - Context about the parent location (name, description, promptLayers)
  * @returns The complete prompt for LLM
  */
 export function buildGoInsidePrompt(
@@ -65,27 +77,30 @@ export function buildGoInsidePrompt(
   parentContext: {
     name: string;
     description: string;
-    effectiveDNA: {
-      essence: string[];
-      formsAndMaterials: string[];
-      colorAndLight: string[];
-      atmosphere: string[];
-      banned: string[];
-    };
+    /** Source image's visual style - MUST be preserved */
+    sourcePromptLayers: ImagePromptLayers;
   }
 ): string {
+  const { sourcePromptLayers } = parentContext;
+  
   return `You are a world-building assistant creating structured location data for a visual navigation system.
 
 ## CONTEXT
 The user is currently at: "${parentContext.name}"
 Description: ${parentContext.description}
 
-Parent location DNA (style context to inherit from):
-- Essence: ${parentContext.effectiveDNA.essence.join(', ')}
-- Forms & Materials: ${parentContext.effectiveDNA.formsAndMaterials.join(', ')}
-- Color & Light: ${parentContext.effectiveDNA.colorAndLight.join(', ')}
-- Atmosphere: ${parentContext.effectiveDNA.atmosphere.join(', ')}
-- Banned: ${parentContext.effectiveDNA.banned.join(', ')}
+## SOURCE IMAGE VISUAL STYLE (CRITICAL - PRESERVE THIS)
+The image you're editing shows this scene:
+
+**Background:** ${sourcePromptLayers.background}
+
+**Midground:** ${sourcePromptLayers.midground}
+
+**Foreground:** ${sourcePromptLayers.foreground}
+
+**Lighting:** ${sourcePromptLayers.lighting}
+
+**Atmosphere:** ${sourcePromptLayers.atmosphere}
 
 ## USER REQUEST
 The user wants to GO INSIDE: "${target}"
@@ -105,48 +120,35 @@ Determine the appropriate spaceType for the Space Node:
 - "underground" - Below-ground spaces (caves, cellars, basements, tunnels, grottos)
 - "elevated" - Open-air raised platforms attached to buildings (balconies, rooftop terraces, elevated decks, observation platforms without roofs)
 
-**Key distinctions:**
-- Terraces/patios/balconies attached to buildings → "elevated" (if open to sky) or "semi-enclosed" (if partially roofed)
-- Large independent outdoor areas → "outdoor"
-- If it has a roof/covering → "semi-enclosed"
-- If it's raised and open to sky → "elevated"
-
-### DNA Rules
+### DNA Rules (for world-building context)
 ${DNA_FIELD_RULES}
 
 ${DNA_DELTA_RULES}
-
-**CRITICAL - DELTA DNA ENFORCEMENT:**
-You MUST NOT copy or repeat ANY values from the Parent DNA shown above!
-The cascade system will automatically inherit parent values.
-Your job is ONLY to add what is NEW and DIFFERENT for this space.
-
-**WRONG (copying parent values):**
-- Parent essence: ["haunted architecture", "perpetual twilight"]
-- Space essence: ["haunted architecture", "decaying grandeur"] ← WRONG! "haunted architecture" is copied from parent!
-
-**CORRECT (true delta):**
-- Parent essence: ["haunted architecture", "perpetual twilight"]
-- Space essence: ["decaying grandeur"] ← CORRECT! Only what's NEW
-- Or: [] ← CORRECT! Nothing new, inherit everything
-
-**colorAndLight is especially important:**
-- DO NOT add color terms - colors INHERIT from parent automatically
-- ONLY add lighting terms if lighting ACTUALLY CHANGES (e.g., exterior → interior lighting)
-- If lighting is the same, use EMPTY ARRAY []
 
 **Container and Space DNA:**
 - Container: NO DNA - it's a pass-through node
 - Space DNA: ONLY items that are NEW and DIFFERENT from parent
 - Use EMPTY ARRAYS [] for fields that don't change
-- NEVER repeat parent values - the system cascades automatically!
 
 ### Forbidden Transformations
-Generate 5-8 specific visual prohibitions for each node that would break consistency:
-- Things that would cause genre drift
-- Style elements that contradict the established aesthetic
-- Anachronistic additions
-- Material/lighting changes that would break immersion
+Generate 5-8 specific visual prohibitions for each node that would break consistency.
+
+### promptLayers (CRITICAL - Visual Style for Interior)
+You MUST generate \`promptLayers\` that describe the interior space visually.
+
+**The promptLayers should:**
+1. **INHERIT** the visual signature from the source image (materials, palette, atmosphere tone)
+2. **ADAPT** for the interior context:
+   - For indoor/underground: No sky, indirect lighting, enclosed ceiling
+   - For semi-enclosed: Filtered light, partial enclosure
+   - For elevated/outdoor: Adapted perspective from within the space
+3. **DESCRIBE** what the camera sees from INSIDE the space
+
+**Key principles:**
+- The same MATERIALS should appear on interior walls/surfaces
+- The same COLOR PALETTE should be visible
+- The same ATMOSPHERE TONE should be felt
+- LIGHTING adapts from exterior to interior (direct sun → indirect/filtered)
 
 ## OUTPUT FORMAT
 Return ONLY valid JSON with this exact structure:
@@ -168,23 +170,26 @@ Return ONLY valid JSON with this exact structure:
     "description": "2-3 sentence description of this specific space and what you see",
     "spaceType": "indoor|outdoor|semi-enclosed|underground|elevated",
     ${DNA_SCHEMA},
+    "promptLayers": {
+      "background": "What's visible in the far layer of this interior space (walls, distant features, ceiling treatment)",
+      "midground": "Main interior features at medium distance (furniture, passages, architectural elements)",
+      "foreground": "Close elements and floor/surface details",
+      "lighting": "How light behaves INSIDE this space (inherit source palette, adapt for enclosure)",
+      "atmosphere": "Mood and feeling of the interior (inherit source tone, adapt for space type)"
+    },
     "forbiddenTransformations": ["prohibition 1", "prohibition 2", "..."]
   }
 }
 
 ## EXAMPLES
 
-For "the restaurant" from a town square:
-- Container: "The Golden Anchor Tavern" (the establishment)
-- Space: "Main Dining Hall" (where you actually are, indoor)
+For entering a rock-hewn tower from its exterior:
+- Source shows: reddish-brown rock, harsh midday sun, barren desert
+- Interior promptLayers should have: same reddish-brown rock on walls, but indirect filtered light, carved interior passages, enclosed ceiling
 
-For "the park" from a city street:
-- Container: "Riverside Park" (the park as a whole)
-- Space: "Central Meadow" (the specific area you're in, outdoor)
-
-For "the secret passage" from a library:
-- Container: "Hidden Archive Entrance" (the passage system)
-- Space: "Secret Document Vault" (where you emerge, underground)
+For entering a pub from a Camden street:
+- Source shows: Victorian brick, warm amber lighting, gritty urban feel
+- Interior promptLayers should have: same brick/wood materials, warm amber glow from interior lights, cozy enclosed atmosphere
 
 Now generate the JSON for entering "${target}" from "${parentContext.name}":`;
 }
@@ -233,6 +238,13 @@ export function parseGoInsideResponse(
       colorAndLight: parsed.space.dna?.colorAndLight || [],
       atmosphere: parsed.space.dna?.atmosphere || [],
       banned: parsed.space.dna?.banned || []
+    },
+    promptLayers: {
+      background: parsed.space.promptLayers?.background || 'Interior walls and ceiling',
+      midground: parsed.space.promptLayers?.midground || 'Interior features and passages',
+      foreground: parsed.space.promptLayers?.foreground || 'Floor and close surfaces',
+      lighting: parsed.space.promptLayers?.lighting || 'Indirect ambient lighting',
+      atmosphere: parsed.space.promptLayers?.atmosphere || 'Enclosed interior atmosphere'
     },
     forbiddenTransformations: parsed.space.forbiddenTransformations || []
   };

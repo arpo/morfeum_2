@@ -217,6 +217,63 @@ Location: `packages/backend/src/engine/generation/prompts/navigation/structureAn
 - Shapes: rectangular, circular, arched, mixed, irregular
 - Image prompts include explicit window shape descriptions
 
+## PromptLayers Visual Preservation Pattern
+
+### Location
+`packages/backend/src/worldV2/prompts/imageEditPrompt.ts`, `packages/backend/src/worldV2/handlers/goInsideHandler.ts`
+
+### Problem
+DNA cascading caused visual style drift during navigation:
+- Region atmosphere (e.g., "barren", "desolate") bleeding into interior scenes
+- Visual signature from source image not preserved
+- Missing enclosure assertions causing open-roof bugs
+
+### Solution
+Use `promptLayers` stored in media metadata instead of cascaded DNA for image edits.
+
+### Architecture
+```
+Source Image (has promptLayers in media.metadata)
+    ↓
+GO_INSIDE2: Read source promptLayers
+    ↓
+LLM generates interior promptLayers (inherits visual signature)
+    ↓
+Build edit prompt using BOTH source and target promptLayers
+    ↓
+Store new promptLayers in media (enables chain navigation)
+```
+
+### promptLayers Structure
+```typescript
+interface ImagePromptLayers {
+  name: string;
+  description: string;
+  background: string;   // Far layer (walls, ceiling, distant features)
+  midground: string;    // Main features (furniture, passages)
+  foreground: string;   // Close elements (floor, surfaces)
+  lighting: string;     // How light behaves
+  atmosphere: string;   // Mood and feeling
+}
+```
+
+### Scene-Expert Skill Integration
+Edit prompts follow the `scene-prompt-expert-using-edit-model` skill format:
+- **Enclosure assertions**: "Solid ceiling above. Fully enclosed interior."
+- **Megastructure protection**: "The structure is NOT visible as an object inside"
+- **Threshold trap avoidance**: "Entrance is behind the camera"
+
+### Key Files
+- `goInside.ts` - Receives `sourcePromptLayers`, outputs `promptLayers`
+- `goInsideHandler.ts` - Reads from media, stores to media
+- `imageEditPrompt.ts` - Builds scene-expert formatted prompts
+
+### When to Use
+- **Image editing (GO_INSIDE2)**: Use promptLayers (preserves visual signature)
+- **Image generation (NEW_WORLD_LOCATION)**: Use DNA cascade (gives regional character)
+
+---
+
 ## Navigation System
 
 ### Two-Step Architecture

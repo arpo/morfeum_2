@@ -220,22 +220,19 @@ export async function displayHandler(req: Request, res: Response): Promise<void>
       pipeline.completeStage('image_generation', 'Image generated');
 
       // Create media entry with structured prompt data and layers
+      // NOTE: Keep promptData minimal - avoid duplicating data from worlds.json
+      // Node names, IDs, DNA etc. can be looked up via entityRefs
       const mediaEntry = mediaService.createMedia({
         type: 'image',
         url: imageUrl,
         metadata: {
           prompt: imagePrompt,
           promptLayers,
+          // Minimal promptData - only what's useful for debugging/auditing
+          // All other info derivable via entityRefs + worlds.json
           promptData: {
-            nodeType,
-            nodeId,
-            nodeName: (node as any).name || null,
-            hostId: host?.id || null,
-            hostName: host?.name || null,
-            regionId: region?.id || null,
-            regionName: region?.name || null,
-            populate: populate || false,
-            dna: (node as any).dna || null
+            command: 'DISPLAY',
+            populate: populate || false
           },
           model: 'flux',
           width: 1920,

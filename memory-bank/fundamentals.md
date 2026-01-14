@@ -91,7 +91,7 @@ All rooms are siblings under the "little house" location, not under the basement
 
 ---
 
-## 2. DNA Inheritance (Cascading System)
+## 2. DNA Inheritance (for Initial Image Generation)
 
 Properties flow down from parent to child unless explicitly overridden:
 
@@ -106,6 +106,8 @@ Host (genre: "steampunk", mood: "mysterious")
 ```
 
 **Why**: Creates visual consistency across the entire world without repetition.
+
+**Important**: DNA cascading is for **initial image generation** only. For **image editing** (navigation), use **promptLayers** instead (see Section 11).
 
 ---
 
@@ -307,3 +309,70 @@ Navigation separates understanding from action:
 - (default) - No people (adds `[FILTER: NoLivingSubjects]`)
 
 **Prompt Enhancer**: Use `furnish:` prefix in prompt text for furnishing suggestions (e.g., `GO_INSIDE the cafe furnish: cozy reading nook`).
+
+---
+
+## 11. PromptLayers for Navigation (Image Editing)
+
+When navigating into locations (GO_INSIDE), use **promptLayers** instead of cascaded DNA for visual style preservation.
+
+### Two Different Approaches
+
+| Purpose | Approach | Why |
+|---------|----------|-----|
+| **Initial image generation** | DNA cascade | Gives regional character to new locations |
+| **Image editing (navigation)** | promptLayers | Preserves visual signature from source |
+
+### Why Not DNA for Navigation?
+
+DNA cascading caused visual drift during navigation:
+- Region atmosphere (e.g., "barren", "desolate") bleeding into interior scenes
+- Visual signature from source image not preserved
+- Missing enclosure assertions causing open-roof bugs
+
+### How PromptLayers Works
+
+1. **Initial generation** stores `promptLayers` in media metadata
+2. **GO_INSIDE** reads source image's promptLayers
+3. LLM generates interior promptLayers (inheriting visual signature)
+4. Edit prompt uses BOTH source and target promptLayers
+5. New promptLayers stored in media for chain navigation
+
+### promptLayers Structure
+
+```typescript
+interface ImagePromptLayers {
+  name: string;
+  description: string;
+  background: string;   // Far layer (walls, ceiling, distant features)
+  midground: string;    // Main features (furniture, passages)
+  foreground: string;   // Close elements (floor, surfaces)
+  lighting: string;     // How light behaves
+  atmosphere: string;   // Mood and feeling
+}
+```
+
+### Chain Navigation
+
+Each space has its own promptLayers, enabling infinite navigation depth:
+
+```
+Exterior (promptLayers A)
+  → GO_INSIDE → Interior (promptLayers B, inherits from A)
+    → GO_INSIDE → Inner Room (promptLayers C, inherits from B)
+```
+
+### Scene-Expert Skill Integration
+
+Edit prompts follow structured format:
+- **Enclosure assertions**: "Solid ceiling above. Fully enclosed interior."
+- **Megastructure protection**: "The structure is NOT visible as an object inside"
+- **Threshold trap avoidance**: "Entrance is behind the camera"
+
+### Key Files
+
+| File | Purpose |
+|------|---------|
+| `goInside.ts` | LLM prompt - receives sourcePromptLayers, outputs new promptLayers |
+| `goInsideHandler.ts` | Reads from media, stores to media |
+| `imageEditPrompt.ts` | Builds scene-expert formatted edit prompts |

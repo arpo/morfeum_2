@@ -1,74 +1,76 @@
 # Active Context
 
-## 2026-01-13 - DNA Cascading Fix (CSS-Style Inheritance) ✅
+## 2026-01-14 - PromptLayers-Based Visual Style Preservation ✅
 
-Fixed DNA cascading to properly follow CSS-style inheritance as specified in fundamentals.md.
+Replaced DNA-cascading for image edits (GO_INSIDE2) with **promptLayers-based visual preservation**.
 
 ### Problem
-DNA arrays were using **accumulation** (`[...parent, ...child]`) instead of **CSS-style inheritance** where:
-- Empty array = inherit from parent
-- Non-empty array = REPLACE parent (not add to it)
+When navigating into locations (GO_INSIDE2), the cascaded DNA included inappropriate inherited elements:
+- Region atmosphere ("barren", "desolate") bleeding into interior scenes
+- Visual signature from source image (palette, materials, lighting) not preserved
+- Missing enclosure assertions causing open-roof bugs
 
-This caused DNA to bloat as you went deeper in the hierarchy (Host → Region → Location → Space), with all ancestor values concatenating.
+### Solution: PromptLayers Instead of DNA Cascade
 
-### Solution
-Fixed `mergeDNAArrays` in `promptBuilder.ts`:
+**Core Principle**: Use `promptLayers` stored in media metadata for visual preservation instead of cascading DNA.
 
-```typescript
-// BEFORE (wrong - accumulation):
-return [...parent, ...child];
+**How it works:**
+1. Initial image generation stores `promptLayers` in media metadata
+2. When navigating (GO_INSIDE2), read source's promptLayers
+3. LLM generates interior `promptLayers` that inherits visual signature
+4. Edit prompt uses BOTH source and target promptLayers
+5. New promptLayers stored for future chain navigation
 
-// AFTER (correct - CSS-style):
-if (child.length === 0) return parent;  // Empty = inherit
-return child;  // Non-empty = REPLACE
+### New Data Flow
+```
+Source Image (has promptLayers in media)
+    ↓
+GO_INSIDE2 command
+    ↓
+Read source promptLayers from media
+    ↓
+LLM generates interior promptLayers (inheriting visual signature)
+    ↓
+Build edit prompt using BOTH source and target promptLayers
+    ↓
+Generate edited image
+    ↓
+Store new promptLayers in media (for future navigation)
 ```
 
 ### Files Modified
+- `goInside.ts` - Changed from `styleLockDNA` to `promptLayers`, receives `sourcePromptLayers`
+- `goInsideHandler.ts` - Reads source promptLayers from media, stores new promptLayers
+- `imageEditPrompt.ts` - Rewritten to follow scene-expert skill format
+- `styleLockCompiler.ts` - Removed unused `buildStyleLockForSpace()`
+
+### Scene-Expert Skill Patterns Applied
+The new prompt format follows `scene-prompt-expert-using-edit-model` skill:
+- Action, Target location, Camera, Orientation, Reveal, Preserve, Style lock sections
+- **Enclosure assertions**: "Solid ceiling above. Fully enclosed interior."
+- **Megastructure protection**: "The structure is NOT visible as an object inside"
+- **Threshold trap avoidance**: "Entrance is behind the camera"
+
+### Test Results
+Interior "Living Platform" correctly preserves exterior "Mesa Dwelling" visual signature:
+- ✅ Teal accents preserved
+- ✅ Art Nouveau metalwork carried through
+- ✅ Lighting adapted (harsh sun → soft diffused)
+- ✅ Enclosure assertions working
+- ✅ Chain navigation ready (interior has its own promptLayers)
+
+---
+
+## 2026-01-13 - DNA Cascading Fix (CSS-Style Inheritance) ✅
+
+Fixed DNA cascading to properly follow CSS-style inheritance:
+- Empty array = inherit from parent
+- Non-empty array = REPLACE parent (not add to it)
+
+### Files Modified
 - `packages/backend/src/worldV2/display/promptBuilder.ts` - Fixed `mergeDNAArrays`
-- `packages/backend/src/worldV2/prompts/goInside.ts` - Improved delta DNA enforcement in prompt
+- `packages/backend/src/worldV2/prompts/goInside.ts` - Improved delta DNA enforcement
 - `packages/backend/src/worldV2/handlers/goInsideHandler.ts` - Updated DNA handling
-
-### Note: Cleanup Needed
-`promptBuilder.ts` now has duplicate functions doing the same thing:
-- `cascadeDNA` (uses `mergeDNAArrays`) - used by most handlers
-- `getMergedDNA` (uses `mergeNonEmpty`) - added during this session
-
-These can be consolidated later - both work correctly with CSS-style inheritance.
-
-### Fundamentals Reference
-From `memory-bank/fundamentals.md`:
-> - **`null` = "inherit from parent"** - Child gets parent's value
-> - **Explicit value = override** - Child's value takes precedence
-
----
-
-## 2026-01-12 - NEW_WORLD_LOCATION_INTERIOR Command ✅
-
-Created new `/NEW_WORLD_LOCATION_INTERIOR` command that creates a 4-node hierarchy from a single concept.
-
-### What It Does
-Creates: `Host → Region → Location (exterior) → Location (interior)` + image for interior
-
-### Usage
-```
-/NEW_WORLD_LOCATION_INTERIOR the kitchen of a pub in Camden in London
-```
-
----
-
-## Previous Entries (2026-01-12)
-
-### NEW_WORLD_LOCATION Single LLM Call Refactor ✅
-- Refactored from 4 LLM calls to 1
-- Created modular prompt architecture with `shared/dnaSchema.ts`
-
-### Weather & Time of Day Commands ✅
-- `/SET_TIME <time>` and `/SET_WEATHER <description>`
-- Stored on host, cascaded to children during image generation
-
-### V2 Code Cleanup & Modularization ✅
-- Split large files into modules
-- Removed dead code from promptBuilder.ts
 
 ---
 
@@ -79,29 +81,19 @@ Creates: `Host → Region → Location (exterior) → Location (interior)` + ima
 packages/backend/src/worldV2/
 ├── routes.ts
 ├── handlers/
-│   ├── newHostHandler.ts
-│   ├── newRegionHandler.ts
-│   ├── newLocationHandler.ts
-│   ├── newWorldLocationHandler.ts
-│   ├── newWorldLocationInteriorHandler.ts
-│   ├── goInsideHandler.ts  ← UPDATED (DNA cascading)
-│   ├── setTimeHandler.ts
-│   ├── setWeatherHandler.ts
-│   └── eventsHandler.ts
-├── prompts/
-│   ├── shared/dnaSchema.ts
-│   ├── worldLocationFull.ts
-│   ├── worldLocationInterior.ts
-│   ├── goInside.ts  ← UPDATED (delta DNA enforcement)
+│   ├── goInsideHandler.ts  ← UPDATED (promptLayers)
 │   └── ...
-└── display/
-    ├── promptBuilder.ts  ← UPDATED (CSS-style mergeDNAArrays)
-    └── ...
+├── prompts/
+│   ├── goInside.ts         ← UPDATED (promptLayers)
+│   ├── imageEditPrompt.ts  ← REWRITTEN (scene-expert format)
+│   └── ...
+└── utils/
+    └── styleLockCompiler.ts ← CLEANED (removed buildStyleLockForSpace)
 ```
 
 ---
 
 ## Next Steps
 
-- [ ] **Cleanup:** Consolidate duplicate DNA functions in promptBuilder.ts
-- [ ] **Phase 6: Remove Old System** - Clean up legacy code
+- [ ] Test chain navigation (interior → deeper room)
+- [ ] Consider adding promptLayers to other navigation commands (REFRAME, INSPECT)

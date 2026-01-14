@@ -1,185 +1,200 @@
 {
   "nodes": {
-    "v2-1768328700090-1lriclvna": {
-      "id": "v2-1768328700090-1lriclvna",
+    "v2-1768383849568-opl8natk9": {
+      "id": "v2-1768383849568-opl8natk9",
       "type": "host",
       "name": "Aridia",
       "slug": "aridia",
-      "description": "A vast, arid desert planet under a vivid blue sky with scattered clouds, featuring colossal rock-hewn structures.",
+      "description": "A vast, arid desert planet with a vibrant blue sky and monolithic geological formations.",
       "genre": "Sci-Fi",
-      "weather": "clear with scattered clouds",
+      "weather": "clear and sunny",
       "timeOfDay": "midday",
       "dna": {
         "essence": [
-          "monumental architecture",
+          "ancient monoliths",
+          "futuristic organic architecture",
           "arid desert",
-          "rock-hewn structures",
-          "organic design",
-          "futuristic"
+          "sci-fi"
         ],
         "formsAndMaterials": [
-          "sandstone",
-          "terracotta",
-          "rock",
-          "curvilinear forms",
-          "cantilevered platforms"
+          "cracked rock formations",
+          "metallic platforms",
+          "curved architecture"
         ],
         "colorAndLight": [
-          "sandy orange-brown",
-          "deep blue sky",
-          "white clouds",
-          "dark brown shadows",
-          "light blue/teal accents"
+          "orange-brown",
+          "sandy yellow",
+          "vibrant blue sky",
+          "turquoise accents",
+          "bright direct sunlight",
+          "sharp shadows"
         ],
         "atmosphere": [
           "futuristic",
-          "desert",
-          "isolated",
-          "monumental",
+          "ancient",
+          "desolate",
+          "vast",
+          "solitary",
           "adventurous",
-          "unique"
+          "monolithic"
         ],
         "banned": [
           "lush vegetation",
-          "oceanic elements"
+          "water bodies"
         ]
       },
       "spaceType": "exterior"
     },
-    "v2-1768328700090-8owqbxcbm": {
-      "id": "v2-1768328700090-8owqbxcbm",
+    "v2-1768383849568-jitwpropr": {
+      "id": "v2-1768383849568-jitwpropr",
       "type": "region",
       "name": "The Great Expanse",
       "slug": "the-great-expanse",
-      "description": "A seemingly endless, flat, and sandy desert landscape with distant mesas and scattered rock formations.",
+      "description": "A seemingly endless stretch of arid desert, characterized by towering rock formations and distant mesas.",
       "isPassThrough": false,
       "dna": {
         "essence": [
-          "vastness",
-          "flat terrain",
-          "desert flora"
+          "arid desert",
+          "rock formations",
+          "vastness"
         ],
         "formsAndMaterials": [
-          "sand dunes",
-          "mesas",
-          "small rock formations"
+          "cracked orange-brown rock",
+          "sandy terrain",
+          "mesa-like formations"
         ],
         "colorAndLight": [
-          "uniform sandy hues",
-          "harsh midday sun"
+          "sandy yellow",
+          "orange-brown",
+          "sharp shadows"
         ],
         "atmosphere": [
-          "barren",
           "desolate",
-          "exposed"
+          "vast",
+          "solitary"
         ],
         "banned": []
       }
     },
-    "v2-1768328700090-bytymyghx": {
-      "id": "v2-1768328700090-bytymyghx",
+    "v2-1768383849568-ck78ai9vs": {
+      "id": "v2-1768383849568-ck78ai9vs",
       "type": "location",
-      "name": "The Sky-Piercer Tower",
-      "slug": "the-sky-piercer-tower",
+      "name": "The Chronos Pillar",
+      "slug": "the-chronos-pillar",
       "spaceType": "exterior",
-      "description": "A colossal, multi-level rock-hewn tower with organic, curvilinear elements, cantilevered platforms, and integrated windows, rising dramatically from the desert floor. Prominent cracks and a textured surface indicate both natural and engineered origins. A large opening near the top reveals figures, and a lower platform holds bicycles and smaller figures.",
+      "description": "A colossal, ancient-looking tower-like structure that seamlessly blends natural cracked orange-brown rock formations with futuristic, organic metallic architecture, featuring curved platforms, balconies, and windows with turquoise accents.",
       "dna": {
         "essence": [
-          "colossal scale",
-          "engineered rock",
-          "integrated functionality"
+          "colossal tower",
+          "blended architecture"
         ],
         "formsAndMaterials": [
-          "reddish-brown rock",
-          "organic curves",
-          "cantilevered platforms",
-          "textured surface",
-          "prominent cracks"
+          "massive rock pillar",
+          "metallic curved platforms",
+          "balconies",
+          "windows"
         ],
-        "colorAndLight": [],
-        "atmosphere": [],
-        "banned": [
-          "sharp angles",
-          "metallic sheen"
-        ]
+        "colorAndLight": [
+          "turquoise accents",
+          "bright direct sunlight"
+        ],
+        "atmosphere": [
+          "architectural",
+          "sci-fi"
+        ],
+        "banned": []
       },
-      "primaryMedia": "media-1768328706621-s4i8qh7lz"
+      "primaryMedia": "media-1768383854314-cmgmeoat1"
     },
-    "v2-1768328731756-y8zp2afk5": {
-      "id": "v2-1768328731756-y8zp2afk5",
+    "v2-1768383874789-j5ldv7k0n": {
+      "id": "v2-1768383874789-j5ldv7k0n",
       "type": "container",
-      "name": "The Sky-Piercer Tower Interior",
-      "slug": "the-sky-piercer-tower-interior",
-      "description": "The monolithic rock-hewn structure opens inwards, revealing a network of passages and chambers carved directly from its colossal form. The tower serves as both a dwelling and a monumental feat of integrated engineering.",
+      "name": "The Chronos Pillar Interior",
+      "slug": "the-chronos-pillar-interior",
+      "description": "The colossal structure known as the Chronos Pillar offers internal passages and chambers, seamlessly blending its natural rock foundations with advanced organic metallic architecture.",
       "forbiddenTransformations": [
-        "external ornamentation not carved from rock",
-        "smooth, polished stone surfaces",
-        "sharp, geometric architectural elements",
-        "any visible metal fixtures or supports",
-        "artificial lighting sources not integrated into the rock"
+        "exterior sky visible inside",
+        "direct, harsh midday sun",
+        "open-air vistas of the Great Expanse",
+        "dusty, cracked earth flooring",
+        "prominent scattered rocks"
       ],
-      "parentId": "v2-1768328700090-bytymyghx"
+      "parentId": "v2-1768383849568-ck78ai9vs"
     },
-    "v2-1768328731756-j3cr1q7io": {
-      "id": "v2-1768328731756-j3cr1q7io",
+    "v2-1768383874789-0tvk2vead": {
+      "id": "v2-1768383874789-0tvk2vead",
       "type": "space",
-      "name": "Central Chamber",
-      "slug": "central-chamber",
-      "description": "You stand within a vast, roughly circular chamber hollowed from the tower's core. The rough, textured rock walls rise and curve upwards, illuminated by the harsh desert sun filtering through openings high above. The air is dry and still.",
+      "name": "Central Concourse",
+      "slug": "central-concourse",
+      "description": "You have entered a wide, grand concourse within the Chronos Pillar. Curved metallic walls, echoing the exterior's organic design, rise around you, interspersed with sections of cracked, orange-brown rock. Turquoise-accented light fixtures cast a soft glow, illuminating the pathway forward.",
       "spaceType": "indoor",
       "dna": {
         "essence": [
-          "organic excavation",
-          "integrated dwelling"
+          "ancient-future fusion",
+          "organic technology",
+          "cosmic monument"
         ],
         "formsAndMaterials": [
-          "undulating rock walls",
-          "carved stone pathways"
+          "curved metallic structures",
+          "cracked natural rock",
+          "smooth, polished surfaces"
         ],
-        "colorAndLight": [],
+        "colorAndLight": [
+          "muted earthy tones",
+          "turquoise accents",
+          "soft, diffused interior lighting"
+        ],
         "atmosphere": [
-          "stark",
-          "cavernous"
+          "awe-inspiring",
+          "technological serenity",
+          "echoing immensity"
         ],
         "banned": [
-          "any signs of modern construction",
-          "clean, uniform surfaces",
-          "delicate or intricate carvings",
-          "overt signs of mechanical systems"
+          "exposed wiring or rough industrial elements",
+          "sharp, angular architecture",
+          "natural desert flora",
+          "visible external weather effects"
         ]
       },
+      "promptLayers": {
+        "background": "The smooth, organically curved metallic walls of the concourse continue upwards, meeting a softly illuminated, domed ceiling. Sections of the cracked orange-brown rock remain visible, integrated seamlessly into the metallic structure.",
+        "midground": "The central concourse stretches ahead, wide and inviting. Passages branch off to the sides, framed by the same curved metallic architecture. Subtle, embedded turquoise light sources emanate a gentle, diffused glow.",
+        "foreground": "The floor is a polished, dark material, reflecting the soft light. The transition between the metallic walls and the rock formations is visible up close, showcasing the intricate craftsmanship.",
+        "lighting": "Soft, diffused light emanates from integrated turquoise fixtures within the walls and ceiling, creating a warm, inviting glow. Specular highlights are gentle, reflecting off the polished metallic surfaces. Shadows are soft and undefined.",
+        "atmosphere": "A sense of technological serenity and contained immensity pervades the space, maintaining the awe-inspiring feel of the exterior within an enclosed, advanced interior environment."
+      },
       "forbiddenTransformations": [
-        "any painted or decorated surfaces",
-        "introduction of soft furnishings or textiles",
-        "any evidence of sharp tools or machinery used in construction",
-        "the presence of any plant life",
-        "the appearance of manufactured materials such as glass or plastic",
-        "glowing or ethereal light sources"
+        "any direct sunlight or harsh shadows",
+        "exposed sky or exterior views",
+        "visible dust or debris on interior surfaces",
+        "unfiltered, natural rock textures without integration",
+        "sharp, jagged edges on any architectural elements",
+        "any signs of decay or ruin within the structure"
       ],
-      "parentId": "v2-1768328731756-y8zp2afk5",
-      "primaryMedia": "media-1768328737683-ekywktsta"
+      "parentId": "v2-1768383874789-j5ldv7k0n",
+      "primaryMedia": "media-1768383880873-mzyoakesl"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "v2-1768328700090-1lriclvna",
+      "id": "v2-1768383849568-opl8natk9",
       "type": "host",
       "children": [
         {
-          "id": "v2-1768328700090-8owqbxcbm",
+          "id": "v2-1768383849568-jitwpropr",
           "type": "region",
           "children": [
             {
-              "id": "v2-1768328700090-bytymyghx",
+              "id": "v2-1768383849568-ck78ai9vs",
               "type": "location",
               "children": [
                 {
-                  "id": "v2-1768328731756-y8zp2afk5",
+                  "id": "v2-1768383874789-j5ldv7k0n",
                   "type": "container",
                   "children": [
                     {
-                      "id": "v2-1768328731756-j3cr1q7io",
+                      "id": "v2-1768383874789-0tvk2vead",
                       "type": "space",
                       "children": []
                     }
@@ -193,6 +208,6 @@
     }
   ],
   "pinnedIds": [
-    "v2-1768328700090-1lriclvna"
+    "v2-1768383849568-opl8natk9"
   ]
 }
