@@ -171,6 +171,20 @@ function findTreeEntry(tree: any, nodeId: string): any | null {
   return null;
 }
 
+/**
+ * Find existing container for a parent node
+ * Returns the first container child of the parent node, or null if none exists
+ */
+function findExistingContainer(worldsData: any, parentNodeId: string): any | null {
+  for (const nodeId in worldsData.nodes) {
+    const node = worldsData.nodes[nodeId];
+    if (node.type === 'container' && node.parentId === parentNodeId) {
+      return node;
+    }
+  }
+  return null;
+}
+
 export const goInsideHandler = asyncHandler(async (req: Request, res: Response) => {
   const { nodeId, target } = req.body as { nodeId: string; target: string };
 
@@ -232,10 +246,13 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
       // Build effective DNA from ancestry
       const effectiveDNA = buildEffectiveDNA(ancestry);
 
+      // Check if container already exists for this parent node
+      const existingContainer = findExistingContainer(worldsData, nodeId);
+
       // ═══════════════════════════════════════════════════════════════════════
       // Stage 2: Generate container + space nodes via LLM
       // ═══════════════════════════════════════════════════════════════════════
-      sendProgress(operationId, 'structure', 'Creating entrance structure...');
+      sendProgress(operationId, 'structure', existingContainer ? 'Creating new space...' : 'Creating entrance structure...');
 
       const goInsidePrompt = buildGoInsidePrompt(target, {
         name: ancestry.currentNode.name,
@@ -253,7 +270,10 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
         throw new Error(llmResult.error || 'Failed to generate node structure');
       }
 
-      const { container, space } = parseGoInsideResponse(llmResult.data.text, generateId);
+      const { container: newContainer, space } = parseGoInsideResponse(llmResult.data.text, generateId);
+      
+      // Use existing container if found, otherwise use newly generated one
+      const container = existingContainer || newContainer;
 
       // ═══════════════════════════════════════════════════════════════════════
       // Stage 3: Generate edited image for the space
@@ -296,13 +316,15 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
       // ═══════════════════════════════════════════════════════════════════════
       sendProgress(operationId, 'saving', 'Saving space...');
 
-      // Save container node (no image)
-      worldsData.nodes[container.id] = {
-        ...container,
-        parentId: nodeId
-      };
+      // Only save container if it's new (not existing)
+      if (!existingContainer) {
+        worldsData.nodes[container.id] = {
+          ...container,
+          parentId: nodeId
+        };
+      }
 
-      // Save space node
+      // Always save the new space node
       worldsData.nodes[space.id] = {
         ...space,
         parentId: container.id
@@ -336,23 +358,40 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
       // Update space node with primaryMedia reference
       (worldsData.nodes[space.id] as any).primaryMedia = mediaEntry.id;
 
-      // Update world tree structure - add container as child of current node, space as child of container
+      // Update world tree structure
       for (const hostTree of worldsData.worldTrees) {
-        const parentEntry = findTreeEntry(hostTree, nodeId);
-        if (parentEntry) {
-          if (!parentEntry.children) {
-            parentEntry.children = [];
-          }
-          parentEntry.children.push({
-            id: container.id,
-            type: 'container',
-            children: [{
+        if (existingContainer) {
+          // If container exists, find it in tree and add space as sibling
+          const containerEntry = findTreeEntry(hostTree, container.id);
+          if (containerEntry) {
+            if (!containerEntry.children) {
+              containerEntry.children = [];
+            }
+            containerEntry.children.push({
               id: space.id,
               type: 'space',
               children: []
-            }]
-          });
-          break;
+            });
+            break;
+          }
+        } else {
+          // If container is new, add container + space to parent node
+          const parentEntry = findTreeEntry(hostTree, nodeId);
+          if (parentEntry) {
+            if (!parentEntry.children) {
+              parentEntry.children = [];
+            }
+            parentEntry.children.push({
+              id: container.id,
+              type: 'container',
+              children: [{
+                id: space.id,
+                type: 'space',
+                children: []
+              }]
+            });
+            break;
+          }
         }
       }
 

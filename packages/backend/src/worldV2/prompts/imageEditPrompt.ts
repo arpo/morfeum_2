@@ -12,7 +12,7 @@
 
 import type { DNA } from '../types';
 import type { SpaceType } from './goInside';
-import { compileStyleLock, buildStyleLock } from '../utils/styleLockCompiler';
+import { compileStyleLock, buildStyleLock, buildStyleLockForSpace } from '../utils/styleLockCompiler';
 
 /**
  * Context for building an image edit prompt
@@ -51,8 +51,8 @@ export function buildEnterImageEditPrompt(context: ImageEditContext): string {
   const spaceName = context.spaceName || 'the space';
   const parentName = context.parentName || 'the area';
   
-  // Build style lock from DNA (simple: DNA in → style lock out)
-  const styleLock = buildStyleLock(context.effectiveDNA);
+  // Build style lock with space-type-aware filtering to remove inappropriate inherited elements
+  const styleLock = buildStyleLockForSpace(context.effectiveDNA, context.spaceType);
   
   // Get first sentence of description as reveal
   const revealText = context.targetDescription.split('.')[0] + '.';

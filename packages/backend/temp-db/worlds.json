@@ -1,254 +1,185 @@
 {
   "nodes": {
-    "v2-1768316778321-blb5b172l": {
-      "id": "v2-1768316778321-blb5b172l",
+    "v2-1768328700090-1lriclvna": {
+      "id": "v2-1768328700090-1lriclvna",
       "type": "host",
-      "name": "Azure Coast",
-      "slug": "azure-coast",
-      "description": "A picturesque coastline with dramatic cliffs, vibrant seas, and sun-drenched landscapes.",
-      "genre": "Coastal",
-      "weather": "clear",
+      "name": "Aridia",
+      "slug": "aridia",
+      "description": "A vast, arid desert planet under a vivid blue sky with scattered clouds, featuring colossal rock-hewn structures.",
+      "genre": "Sci-Fi",
+      "weather": "clear with scattered clouds",
       "timeOfDay": "midday",
       "dna": {
         "essence": [
-          "coastal living",
-          "Mediterranean aesthetic",
-          "cliffside architecture",
-          "vibrant natural beauty"
+          "monumental architecture",
+          "arid desert",
+          "rock-hewn structures",
+          "organic design",
+          "futuristic"
         ],
         "formsAndMaterials": [
+          "sandstone",
+          "terracotta",
           "rock",
-          "textured plaster",
-          "wood",
-          "stone"
+          "curvilinear forms",
+          "cantilevered platforms"
         ],
         "colorAndLight": [
-          "vibrant blue",
-          "light pink",
-          "turquoise",
-          "purple",
-          "bright azure sky",
-          "clear midday sun",
-          "sparkling water"
+          "sandy orange-brown",
+          "deep blue sky",
+          "white clouds",
+          "dark brown shadows",
+          "light blue/teal accents"
         ],
         "atmosphere": [
-          "idyllic",
-          "tranquil",
-          "serene",
-          "luxurious",
-          "vibrant",
-          "picturesque"
+          "futuristic",
+          "desert",
+          "isolated",
+          "monumental",
+          "adventurous",
+          "unique"
         ],
         "banned": [
-          "industrial elements",
-          "foggy weather",
-          "urban sprawl"
+          "lush vegetation",
+          "oceanic elements"
         ]
       },
-      "spaceType": "exterior",
-      "primaryMedia": "media-1768316799760-55plbtx0b"
+      "spaceType": "exterior"
     },
-    "v2-1768316778321-zhpw9vg26": {
-      "id": "v2-1768316778321-zhpw9vg26",
+    "v2-1768328700090-8owqbxcbm": {
+      "id": "v2-1768328700090-8owqbxcbm",
       "type": "region",
-      "name": "The Cliffside",
-      "slug": "the-cliffside",
-      "description": "A dramatic rocky cliff face overlooking the sea, dotted with exclusive residences.",
+      "name": "The Great Expanse",
+      "slug": "the-great-expanse",
+      "description": "A seemingly endless, flat, and sandy desert landscape with distant mesas and scattered rock formations.",
       "isPassThrough": false,
       "dna": {
         "essence": [
-          "rocky terrain",
-          "secluded residences"
+          "vastness",
+          "flat terrain",
+          "desert flora"
         ],
         "formsAndMaterials": [
-          "natural rock",
-          "textured cliff face"
+          "sand dunes",
+          "mesas",
+          "small rock formations"
         ],
         "colorAndLight": [
-          "stone gray",
-          "shadows from cliffs"
+          "uniform sandy hues",
+          "harsh midday sun"
         ],
         "atmosphere": [
-          "dramatic",
-          "secluded"
+          "barren",
+          "desolate",
+          "exposed"
         ],
         "banned": []
-      },
-      "primaryMedia": "media-1768316812932-6azx1yjih"
+      }
     },
-    "v2-1768316778321-ongtfq94h": {
-      "id": "v2-1768316778321-ongtfq94h",
+    "v2-1768328700090-bytymyghx": {
+      "id": "v2-1768328700090-bytymyghx",
       "type": "location",
-      "name": "The Cliffside House",
-      "slug": "the-cliffside-house",
+      "name": "The Sky-Piercer Tower",
+      "slug": "the-sky-piercer-tower",
       "spaceType": "exterior",
-      "description": "A stunning multi-level house, painted a textured light pink, nestled into the rocky cliffside. It features turquoise doors and windows, a small balcony with a wooden railing, and a patio area furnished with a wooden dining table and chairs. Lush purple bougainvillea cascades over the rock wall. A custom-built, infinity-edge swimming pool with sparkling turquoise water is seamlessly integrated below the patio, accessed by stone steps.",
+      "description": "A colossal, multi-level rock-hewn tower with organic, curvilinear elements, cantilevered platforms, and integrated windows, rising dramatically from the desert floor. Prominent cracks and a textured surface indicate both natural and engineered origins. A large opening near the top reveals figures, and a lower platform holds bicycles and smaller figures.",
       "dna": {
         "essence": [
-          "multi-level architecture",
-          "bougainvillea cascade",
-          "infinity pool"
+          "colossal scale",
+          "engineered rock",
+          "integrated functionality"
         ],
         "formsAndMaterials": [
-          "textured light pink plaster",
-          "turquoise accents",
-          "wooden railing",
-          "wooden furniture",
-          "stone steps"
-        ],
-        "colorAndLight": [
-          "light pink walls",
-          "turquoise doors and windows",
-          "purple bougainvillea",
-          "sparkling turquoise pool water"
-        ],
-        "atmosphere": [
-          "luxurious",
-          "tranquil",
-          "vibrant"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1768316786103-dgmqeqmma"
-    },
-    "v2-1768317731458-agbkrlmpj": {
-      "id": "v2-1768317731458-agbkrlmpj",
-      "type": "container",
-      "name": "The Cliffside House",
-      "slug": "the-cliffside-house",
-      "description": "A luxurious, multi-level dwelling carved into the natural rock face. Its vibrant colors and tranquil setting offer a unique escape.",
-      "forbiddenTransformations": [
-        "absence of vibrant flora",
-        "overly geometric modern structures",
-        "dilapidated or neglected sections",
-        "gritty or industrial materials",
-        "overcast or dreary weather effects"
-      ],
-      "parentId": "v2-1768316778321-ongtfq94h"
-    },
-    "v2-1768317731458-v5387ikym": {
-      "id": "v2-1768317731458-v5387ikym",
-      "type": "space",
-      "name": "Balcony",
-      "slug": "balcony",
-      "description": "Perched on the cliffside, this outdoor space offers breathtaking views. A charming wooden railing encloses the area, providing a secure vantage point.",
-      "spaceType": "elevated",
-      "dna": {
-        "essence": [
-          "outdoor living",
-          "panoramic views"
-        ],
-        "formsAndMaterials": [
-          "wooden railing"
+          "reddish-brown rock",
+          "organic curves",
+          "cantilevered platforms",
+          "textured surface",
+          "prominent cracks"
         ],
         "colorAndLight": [],
-        "atmosphere": [
-          "expansive",
-          "airy"
-        ],
+        "atmosphere": [],
         "banned": [
-          "enclosed structures",
-          "lack of natural light",
-          "cluttered surfaces",
-          "unnatural lighting fixtures"
+          "sharp angles",
+          "metallic sheen"
         ]
       },
-      "forbiddenTransformations": [
-        "walls or a roof obscuring the sky",
-        "lack of any natural elements",
-        "industrial railings or fixtures",
-        "ominous or dark shadows",
-        "any signs of decay or damage"
-      ],
-      "parentId": "v2-1768317731458-agbkrlmpj",
-      "primaryMedia": "media-1768317735775-o4aeum4sa"
+      "primaryMedia": "media-1768328706621-s4i8qh7lz"
     },
-    "v2-1768317847683-96n060wjt": {
-      "id": "v2-1768317847683-96n060wjt",
+    "v2-1768328731756-y8zp2afk5": {
+      "id": "v2-1768328731756-y8zp2afk5",
       "type": "container",
-      "name": "The Cliffside House",
-      "slug": "the-cliffside-house",
-      "description": "A multi-level residence built into the cliffside, offering stunning ocean views. The house blends seamlessly with the natural rock formations and features vibrant Mediterranean-inspired colors and lush greenery.",
+      "name": "The Sky-Piercer Tower Interior",
+      "slug": "the-sky-piercer-tower-interior",
+      "description": "The monolithic rock-hewn structure opens inwards, revealing a network of passages and chambers carved directly from its colossal form. The tower serves as both a dwelling and a monumental feat of integrated engineering.",
       "forbiddenTransformations": [
-        "modern, minimalist additions",
-        "industrial materials like steel beams",
-        "overgrown or neglected plant life",
-        "lack of natural light",
-        "elements that suggest a colder climate"
+        "external ornamentation not carved from rock",
+        "smooth, polished stone surfaces",
+        "sharp, geometric architectural elements",
+        "any visible metal fixtures or supports",
+        "artificial lighting sources not integrated into the rock"
       ],
-      "parentId": "v2-1768316778321-ongtfq94h"
+      "parentId": "v2-1768328700090-bytymyghx"
     },
-    "v2-1768317847683-b7irzaaly": {
-      "id": "v2-1768317847683-b7irzaaly",
+    "v2-1768328731756-j3cr1q7io": {
+      "id": "v2-1768328731756-j3cr1q7io",
       "type": "space",
-      "name": "The Kitchen",
-      "slug": "the-kitchen",
-      "description": "A bright and airy kitchen, continuing the house's vibrant aesthetic. It features custom cabinetry and ample counter space, overlooking the stunning cliffside scenery.",
+      "name": "Central Chamber",
+      "slug": "central-chamber",
+      "description": "You stand within a vast, roughly circular chamber hollowed from the tower's core. The rough, textured rock walls rise and curve upwards, illuminated by the harsh desert sun filtering through openings high above. The air is dry and still.",
       "spaceType": "indoor",
       "dna": {
         "essence": [
-          "domestic comfort",
-          "culinary focus"
+          "organic excavation",
+          "integrated dwelling"
         ],
         "formsAndMaterials": [
-          "custom cabinetry",
-          "stone countertops"
+          "undulating rock walls",
+          "carved stone pathways"
         ],
-        "colorAndLight": [
-          "natural illumination"
-        ],
+        "colorAndLight": [],
         "atmosphere": [
-          "inviting",
-          "functional"
+          "stark",
+          "cavernous"
         ],
         "banned": [
-          "exposed wiring",
-          "fluorescent lighting",
-          "utilitarian, stark design"
+          "any signs of modern construction",
+          "clean, uniform surfaces",
+          "delicate or intricate carvings",
+          "overt signs of mechanical systems"
         ]
       },
       "forbiddenTransformations": [
-        "exposed plumbing or ventilation",
-        "plastic fixtures",
-        "harsh, artificial lighting",
-        "industrial-grade appliances",
-        "a lack of visual connection to the outdoors"
+        "any painted or decorated surfaces",
+        "introduction of soft furnishings or textiles",
+        "any evidence of sharp tools or machinery used in construction",
+        "the presence of any plant life",
+        "the appearance of manufactured materials such as glass or plastic",
+        "glowing or ethereal light sources"
       ],
-      "parentId": "v2-1768317847683-96n060wjt",
-      "primaryMedia": "media-1768317854275-gs5x7wgvv"
+      "parentId": "v2-1768328731756-y8zp2afk5",
+      "primaryMedia": "media-1768328737683-ekywktsta"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "v2-1768316778321-blb5b172l",
+      "id": "v2-1768328700090-1lriclvna",
       "type": "host",
       "children": [
         {
-          "id": "v2-1768316778321-zhpw9vg26",
+          "id": "v2-1768328700090-8owqbxcbm",
           "type": "region",
           "children": [
             {
-              "id": "v2-1768316778321-ongtfq94h",
+              "id": "v2-1768328700090-bytymyghx",
               "type": "location",
               "children": [
                 {
-                  "id": "v2-1768317731458-agbkrlmpj",
+                  "id": "v2-1768328731756-y8zp2afk5",
                   "type": "container",
                   "children": [
                     {
-                      "id": "v2-1768317731458-v5387ikym",
-                      "type": "space",
-                      "children": []
-                    }
-                  ]
-                },
-                {
-                  "id": "v2-1768317847683-96n060wjt",
-                  "type": "container",
-                  "children": [
-                    {
-                      "id": "v2-1768317847683-b7irzaaly",
+                      "id": "v2-1768328731756-j3cr1q7io",
                       "type": "space",
                       "children": []
                     }
@@ -262,6 +193,6 @@
     }
   ],
   "pinnedIds": [
-    "v2-1768316778321-blb5b172l"
+    "v2-1768328700090-1lriclvna"
   ]
 }

@@ -99,11 +99,17 @@ Create TWO nodes:
 
 ### Space Type Detection
 Determine the appropriate spaceType for the Space Node:
-- "indoor" - Fully enclosed interior spaces (restaurants, houses, shops)
-- "outdoor" - Open air spaces that you "enter" (parks, gardens, plazas within larger areas)
-- "semi-enclosed" - Partially covered spaces (covered markets, pavilions, porches)
-- "underground" - Below-ground spaces (caves, cellars, tunnels)
-- "elevated" - Above-ground open spaces (rooftops, observation decks, tree platforms)
+- "indoor" - Fully enclosed interior spaces (restaurants, bedrooms, shops, living rooms, closed rooms)
+- "outdoor" - Large open-air spaces you "enter" as destinations (parks, gardens, courtyards, plazas)
+- "semi-enclosed" - Partially covered/sheltered spaces attached to buildings (covered terraces, patios with roofs, covered porches, pavilions, pergolas with roofs)
+- "underground" - Below-ground spaces (caves, cellars, basements, tunnels, grottos)
+- "elevated" - Open-air raised platforms attached to buildings (balconies, rooftop terraces, elevated decks, observation platforms without roofs)
+
+**Key distinctions:**
+- Terraces/patios/balconies attached to buildings → "elevated" (if open to sky) or "semi-enclosed" (if partially roofed)
+- Large independent outdoor areas → "outdoor"
+- If it has a roof/covering → "semi-enclosed"
+- If it's raised and open to sky → "elevated"
 
 ### DNA Rules
 ${DNA_FIELD_RULES}
