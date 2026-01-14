@@ -8,7 +8,7 @@
       "description": "A coastal resort town in Mexico's Yucatán Peninsula, known for its Mayan ruins and vibrant nightlife.",
       "genre": "Coastal",
       "weather": "clear and sunny",
-      "timeOfDay": "night",
+      "timeOfDay": "midday",
       "dna": {
         "essence": [
           "Mayan ruins",
@@ -369,6 +369,114 @@
       ],
       "parentId": "v2-1768394868245-ly9ndx04p",
       "primaryMedia": "media-1768395902653-psi2skiwd"
+    },
+    "v2-1768397754933-ae7nzk97t": {
+      "id": "v2-1768397754933-ae7nzk97t",
+      "type": "space",
+      "name": "Zero Day Festival Beach",
+      "slug": "zero-day-festival-beach",
+      "description": "You step onto the warm, sun-drenched sand of the festival beach. Gentle waves lap at the shore, and the vibrant sounds of the festival blend with the ocean breeze.",
+      "spaceType": "outdoor",
+      "dna": {
+        "essence": [
+          "Tropical Celebration",
+          "Oceanic Serenity",
+          "Festival Vibrancy"
+        ],
+        "formsAndMaterials": [
+          "Natural Sand",
+          "Gentle Waves",
+          "Integrated Festival Decor"
+        ],
+        "colorAndLight": [
+          "Brilliant Azure Sky",
+          "Warm Golden Sunlight",
+          "Reflective Water"
+        ],
+        "atmosphere": [
+          "Joyful Relaxation",
+          "Exhilarating Freedom",
+          "Sensory Delight"
+        ],
+        "banned": [
+          "Industrial machinery",
+          "Urban skyscrapers",
+          "Snow or ice",
+          "Fossils or ancient ruins"
+        ]
+      },
+      "promptLayers": {
+        "background": "Distant silhouette of lush Mayan jungle foliage, meeting the brilliant azure sky. The horizon where the ocean meets the sky is a sharp, clear line.",
+        "midground": "The main expanse of the festival beach, with soft, warm sand leading to the gentle, blue-tinted waves. Hints of festival decor (e.g., colorful flags, stylized seating) are subtly integrated into the natural landscape. People are enjoying the space, some closer to the water, others towards the festival's edge.",
+        "foreground": "The edge of the sun-dappled path transitioning to warm sand. Individual grains of sand are visible, perhaps with a few stray palm fronds or colorful festival confetti scattered on the ground.",
+        "lighting": "Bright, clear afternoon sunlight casts sharp, warm shadows across the sand. The sun glints off the surface of the gentle waves. The overall lighting is natural and expansive, reflecting the open sky.",
+        "atmosphere": "A feeling of joyful liberation and vibrant relaxation. The air is filled with the distant sounds of music and laughter, carried on the refreshing ocean breeze. It's a perfect blend of natural beauty and festive energy."
+      },
+      "forbiddenTransformations": [
+        "Replacing the sand with concrete or asphalt.",
+        "Introducing dense, artificial structures like buildings or piers.",
+        "Making the water appear murky or polluted.",
+        "Blocking the view of the sky with excessive festival infrastructure.",
+        "Adding wintery elements or cold-toned lighting."
+      ],
+      "parentId": "v2-1768394868245-ly9ndx04p",
+      "primaryMedia": "media-1768397768123-m04ehzcsj"
+    },
+    "v2-1768397838379-y4bhi8950": {
+      "id": "v2-1768397838379-y4bhi8950",
+      "type": "space",
+      "name": "Oceanfront Chamber",
+      "slug": "oceanfront-chamber",
+      "description": "A cavernous chamber within the ancient ruin, open to the bracing ocean air. Salt spray mists the weathered stones, and the rhythmic crash of waves provides a constant soundtrack.",
+      "spaceType": "semi-enclosed",
+      "dna": {
+        "essence": [
+          "ancient",
+          "oceanic",
+          "weathered",
+          "tropical-archaeology"
+        ],
+        "formsAndMaterials": [
+          "rough-hewn stone",
+          "ancient masonry",
+          "sea-worn surfaces",
+          "open archways"
+        ],
+        "colorAndLight": [
+          "muted earth tones",
+          "oceanic blues and greens",
+          "sun-dappled and sea-mist diffused light"
+        ],
+        "atmosphere": [
+          "mysterious",
+          "timeless",
+          "reverent",
+          "awe-inspiring"
+        ],
+        "banned": [
+          "modern polished surfaces",
+          "electric lighting fixtures",
+          "plastic or synthetic materials",
+          "futuristic architectural elements"
+        ]
+      },
+      "promptLayers": {
+        "background": "Distant, hazy view of the endless azure ocean through large, irregularly shaped openings in the stone walls. The sky above is a brilliant, clear blue. The inner surfaces of the stone walls are visible, showing signs of ancient carving and erosion.",
+        "midground": "The main body of the chamber, characterized by massive, rough-hewn stone blocks forming partial walls and archways. Hints of Mayan-inspired carvings might be subtly visible, worn by time. The floor is uneven, composed of packed earth and scattered pebbles.",
+        "foreground": "Close-up texture of the weathered stone floor and the base of the ancient walls. Small, hardy sea-grasses or hardy tropical plants might be seen growing in crevices. The edge of the open ocean expanse is clearly visible.",
+        "lighting": "Bright, natural sunlight streams in through the open archways and gaps in the stonework, creating dynamic patterns of light and shadow. The light is slightly diffused by sea mist, giving it a soft, ethereal quality. The colors of the ocean and sky are reflected softly on the stone surfaces.",
+        "atmosphere": "A sense of profound peace and timelessness pervades the chamber. The constant, powerful sound of the ocean is both calming and exhilarating. The air is fresh and carries the scent of salt and damp stone, evoking a feeling of discovery and ancient grandeur."
+      },
+      "forbiddenTransformations": [
+        "Adding a solid, modern roof structure.",
+        "Introducing any enclosed, indoor-feeling spaces within this chamber.",
+        "Depicting a perfectly flat, paved floor.",
+        "Showing any signs of electronic devices or modern amenities.",
+        "Filling the openings with glass panels.",
+        "Introducing dense, overhanging jungle foliage directly into the chamber."
+      ],
+      "parentId": "v2-1768394868245-ly9ndx04p",
+      "primaryMedia": "media-1768397842659-p9io888gn"
     }
   },
   "views": {},
@@ -411,6 +519,16 @@
                     },
                     {
                       "id": "v2-1768395893217-mop4q12ag",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1768397754933-ae7nzk97t",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1768397838379-y4bhi8950",
                       "type": "space",
                       "children": []
                     }

@@ -139,6 +139,51 @@ Full test log: `docs/go-inside-test-scenarios.md`
 
 ---
 
+## 2026-01-14 - GOTO2 Command Implemented ✅
+
+Implemented `/GOTO2` - creates sibling spaces within the same container.
+
+### Problem Solved
+
+**Before:** User had to go back to parent location to run `/GO_INSIDE2` multiple times for each room.
+
+**After:** User stays on any space node and runs `/GOTO2 <target>` to create a sibling.
+
+### How It Works
+
+```
+User is on: "Main Kitchen" (space) inside "The Pub" (container)
+Runs: /GOTO2 VIP Lounge
+System:
+1. Finds parent container ("The Pub")
+2. Finds parent location (container's parent)
+3. Uses parent location's image for edit (NOT current space)
+4. Reuses GO_INSIDE2 LLM prompt + image edit logic
+5. Creates sibling space under existing container
+```
+
+### Key Design Decisions
+
+1. **Source Image:** Uses parent location's image, not current sibling - all rooms share same visual source
+2. **Command Visibility:** `requiresNodeType: ['space']` - only appears when on space node
+3. **Reuses GO_INSIDE2:** Same LLM prompt (buildGoInsidePrompt), same image edit prompts (indoor/outdoor/semi-enclosed)
+
+### Files Created
+
+**Backend:**
+- `worldV2/handlers/gotoHandler.ts` - Handler with validation + pipeline
+- Added `v2Goto` pipeline in `pipelineConfig.ts`
+
+**Frontend:**
+- `worldV2/commands/handlers/gotoHandler.ts` - Frontend handler
+
+**Modified:**
+- `config/navigation.ts` - Added GOTO2 command config
+- `routes.ts` - Added `/api/v2/goto` route
+- Handler indexes and command registrations
+
+---
+
 ## Next Steps
 
 - [x] Fix "tower inside tower" bug
@@ -146,5 +191,6 @@ Full test log: `docs/go-inside-test-scenarios.md`
 - [x] Test on different structure types
 - [x] Three parallel prompt builders (indoor, outdoor, semi-enclosed)
 - [x] Time/weather enforcement (v1.8)
+- [x] GOTO2 navigation (sibling spaces)
 - [ ] Future: Add season support to Host node
-- [ ] GOTO navigation
+- [ ] Future: GOTO (legacy system move between locations)

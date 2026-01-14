@@ -147,6 +147,14 @@ export const PIPELINE_STEPS = {
     { id: 'analyzing', name: 'Analyzing Location', duration: 5000 },
     { id: 'structure', name: 'Creating Entrance Structure', duration: 3000 },
     { id: 'image', name: 'Generating Space View', duration: 5000 }
+  ],
+  
+  /** V2: GOTO2 - Create sibling space within same container */
+  v2Goto: [
+    { id: 'analyzing', name: 'Analyzing Parent Location', duration: 3000 },
+    { id: 'structure', name: 'Creating Sibling Space', duration: 3000 },
+    { id: 'image', name: 'Generating Space View', duration: 5000 },
+    { id: 'saving', name: 'Saving Space', duration: 500 }
   ]
 } as const;
 

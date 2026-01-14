@@ -12,6 +12,7 @@ import {
   newWorldLocationHandler,
   newWorldLocationInteriorHandler,
   goInsideHandler,
+  gotoHandler,
   eventsHandler,
   setTimeHandler,
   setWeatherHandler
@@ -49,5 +50,8 @@ router.post('/set-weather', setWeatherHandler);
 
 // GO_INSIDE2 Command - Navigate into a space using image edit
 router.post('/go-inside', goInsideHandler);
+
+// GOTO2 Command - Create sibling space within same container
+router.post('/goto', gotoHandler);
 
 export { router as worldV2Router };

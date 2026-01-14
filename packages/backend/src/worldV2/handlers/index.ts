@@ -8,6 +8,7 @@ export { newLocationHandler } from './newLocationHandler';
 export { newWorldLocationHandler } from './newWorldLocationHandler';
 export { newWorldLocationInteriorHandler } from './newWorldLocationInteriorHandler';
 export { goInsideHandler } from './goInsideHandler';
+export { gotoHandler } from './gotoHandler';
 export { eventsHandler } from './eventsHandler';
 export { setTimeHandler } from './setTimeHandler';
 export { setWeatherHandler } from './setWeatherHandler';

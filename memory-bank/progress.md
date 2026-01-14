@@ -95,15 +95,20 @@ Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = i
 | `/DISPLAY` | Generate image via LLM layers | ✅ |
 | `/SET_TIME` | Set time of day for world | ✅ |
 | `/SET_WEATHER` | Set weather conditions for world | ✅ |
+| `/GO_INSIDE2` | Enter structures (image edit) | ✅ |
+| `/GOTO2` | Create sibling space in container | ✅ NEW |
 
-### Phase 5-6: Navigation 🚧 IN PROGRESS
+### Phase 5-6: Navigation ✅ COMPLETE
 
 - [x] GO_INSIDE2 - Enter structures/buildings ← COMPLETE (v1.8)
   - Three prompt builders: indoor, outdoor, semi-enclosed
   - spaceType detection (indoor/outdoor/semi-enclosed/underground/elevated)
   - Time/weather enforcement (MANDATORY section in prompts)
   - 13 test scenarios passed
-- [ ] GOTO - Move between locations
+- [x] GOTO2 - Create sibling spaces within container ← COMPLETE
+  - Only available from space nodes (`requiresNodeType: ['space']`)
+  - Uses parent location's image (not current space)
+  - Reuses GO_INSIDE2 LLM prompt + image edit logic
 - [ ] Remove old system
 
 ---
@@ -117,7 +122,9 @@ handlers/
 ├── newRegionHandler.ts
 ├── newLocationHandler.ts
 ├── newWorldLocationHandler.ts
-├── newWorldLocationInteriorHandler.ts  ← NEW
+├── newWorldLocationInteriorHandler.ts
+├── goInsideHandler.ts
+├── gotoHandler.ts  ← NEW
 ├── setTimeHandler.ts
 ├── setWeatherHandler.ts
 └── eventsHandler.ts
@@ -146,7 +153,7 @@ prompts/
 ## What's Left 🚧
 
 - [x] GO_INSIDE2 navigation ← COMPLETE (v1.8)
-- [ ] GOTO navigation (move between locations)
+- [x] GOTO2 navigation (sibling spaces) ← COMPLETE
 - [ ] Remove old system
 - [ ] Character spawn caching test
 - [ ] Bundle size optimization

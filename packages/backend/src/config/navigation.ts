@@ -37,6 +37,11 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
     description: 'Navigate to a specific place',
     category: 'navigation'
   },
+  GOTO2: { 
+    requiresNodeType: ['space'], 
+    description: 'Create sibling space within same container',
+    category: 'navigation'
+  },
   
   // Node creation commands
   NEW_HOST: { 

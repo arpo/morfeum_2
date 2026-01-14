@@ -243,6 +243,78 @@
       "entityRefs": [
         "v2-1768394817652-uewrwobpf"
       ]
+    },
+    "media-1768396825281-yvmv7mybg": {
+      "id": "media-1768396825281-yvmv7mybg",
+      "type": "depth-map",
+      "url": "https://v3b.fal.media/files/b/0a8a5c02/9WPU3seiBCsu1ZhikYsDY_03b15283ac414f598dc40ebb5fc02d03.png",
+      "createdAt": "2026-01-14T13:20:25.281Z",
+      "metadata": {
+        "parentMedia": "media-1768394821323-gw133g32i",
+        "model": "fal-depth-anything-v2"
+      },
+      "entityRefs": [
+        "v2-1768394817652-90gkbgrnt"
+      ],
+      "parentMedia": "media-1768394821323-gw133g32i"
+    },
+    "media-1768397768123-m04ehzcsj": {
+      "id": "media-1768397768123-m04ehzcsj",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a5c60/zEw0cJ-6aWrx56Wiuyffw.jpg",
+      "createdAt": "2026-01-14T13:36:08.123Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and enter Zero Day Festival Beach.\n\nTarget location:\nAn outdoor area within Zero Day Festival Entrance.\n\nCamera:\nHuman eye level, positioned within the outdoor space.\nThe camera has moved past the entrance/arrival point into the open area.\n\nOrientation:\nFacing into the outdoor space.\nThe arrival/entrance point is behind the camera.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: NIGHT\nWeather: clear and sunny\nThe sky and all lighting in this scene MUST reflect night conditions.\nThis is a NIGHT SCENE - the sky must be dark with stars/moon, NOT bright blue daytime sky.\n\nReveal:\nAn open outdoor area with dark night sky with stars visible.\nThe main expanse of the festival beach, with soft, warm sand leading to the gentle, blue-tinted waves. Hints of festival decor (e.g., colorful flags, stylized seating) are subtly integrated into the natural landscape. People are enjoying the space, some closer to the water, others towards the festival's edge.\nThe edge of the sun-dappled path transitioning to warm sand. Individual grains of sand are visible, perhaps with a few stray palm fronds or colorful festival confetti scattered on the ground.\n\nPreserve (visual identity and environmental continuity):\nThe surrounding landscape's visual signature:\n* Atmosphere tone: Energetic and joyful. The scene is alive with the implied sound of music and the buzz of a happy crowd. It feels enchanting, a vibrant celebration within a tropical paradise.\n\nStyle lock:\nMaintain the location's established aesthetic and visual style.\n\nCarry forward (surrounding environment):\nDistant silhouette of lush Mayan jungle foliage, meeting the brilliant azure sky. The horizon where the ocean meets the sky is a sharp, clear line.\n\nLighting and atmosphere (MUST MATCH NIGHT):\nLighting appropriate for night, clear and sunny conditions.\nA feeling of joyful liberation and vibrant relaxation. The air is filled with the distant sounds of music and laughter, carried on the refreshing ocean breeze. It's a perfect blend of natural beauty and festive energy.\n\nPhysical constraints:\nOpen sky visible above - dark night sky with stars visible.\nSurrounding landscape and horizon visible.\nNatural environmental lighting appropriate for night.\nThe entrance/arrival point is behind the camera position.\n\nProhibitions:\n* The entrance/arrival point must NOT be visible anywhere in the frame - it is behind the camera\n* No park gates, entrance archways, arrival paths, or boundary markers visible\n* Do not show exterior establishing shot (we're already in the space)\n* Do not reinterpret the architectural/environmental style\n* No enclosed interior elements\n* No solid ceiling or roof covering the main view\n* No walls enclosing the space\n* Do NOT show bright blue daytime sky - this is a NIGHT scene\n\nFinal constraint:\nShow a grounded, open outdoor space at night that clearly belongs within this location and invites further exploration.",
+        "promptLayers": {
+          "name": "Zero Day Festival Beach",
+          "description": "You step onto the warm, sun-drenched sand of the festival beach. Gentle waves lap at the shore, and the vibrant sounds of the festival blend with the ocean breeze.",
+          "background": "Distant silhouette of lush Mayan jungle foliage, meeting the brilliant azure sky. The horizon where the ocean meets the sky is a sharp, clear line.",
+          "midground": "The main expanse of the festival beach, with soft, warm sand leading to the gentle, blue-tinted waves. Hints of festival decor (e.g., colorful flags, stylized seating) are subtly integrated into the natural landscape. People are enjoying the space, some closer to the water, others towards the festival's edge.",
+          "foreground": "The edge of the sun-dappled path transitioning to warm sand. Individual grains of sand are visible, perhaps with a few stray palm fronds or colorful festival confetti scattered on the ground.",
+          "lighting": "Bright, clear afternoon sunlight casts sharp, warm shadows across the sand. The sun glints off the surface of the gentle waves. The overall lighting is natural and expansive, reflecting the open sky.",
+          "atmosphere": "A feeling of joyful liberation and vibrant relaxation. The air is filled with the distant sounds of music and laughter, carried on the refreshing ocean breeze. It's a perfect blend of natural beauty and festive energy."
+        },
+        "promptData": {
+          "command": "GOTO2"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768397754933-ae7nzk97t"
+      ],
+      "parentMedia": "media-1768394821323-gw133g32i"
+    },
+    "media-1768397842659-p9io888gn": {
+      "id": "media-1768397842659-p9io888gn",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a5c68/18Q6mBUlCsUStGtp6j75Z.jpg",
+      "createdAt": "2026-01-14T13:37:22.659Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and step into Oceanfront Chamber.\n\nTarget location:\nA semi-enclosed space within Zero Day Festival Entrance.\n\nCamera:\nHuman eye level, positioned inside the structure/pavilion.\nThe camera has moved past the entrance into the sheltered area.\n\nOrientation:\nFacing into the semi-enclosed space.\nThe entrance is behind the camera.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nWeather: clear and sunny\nThe sky visible through gaps and all lighting MUST reflect midday conditions.\n\n\nReveal:\nA partially covered space with sky appropriate for midday glimpsed through gaps.\nThe main body of the chamber, characterized by massive, rough-hewn stone blocks forming partial walls and archways. Hints of Mayan-inspired carvings might be subtly visible, worn by time. The floor is uneven, composed of packed earth and scattered pebbles.\nClose-up texture of the weathered stone floor and the base of the ancient walls. Small, hardy sea-grasses or hardy tropical plants might be seen growing in crevices. The edge of the open ocean expanse is clearly visible.\n\nPreserve (visual identity and structural continuity):\nThe structure's visual signature:\n* Atmosphere tone: Energetic and joyful. The scene is alive with the implied sound of music and the buzz of a happy crowd. It feels enchanting, a vibrant celebration within a tropical paradise.\n\nStyle lock:\nMaintain the structure's established aesthetic and materials.\n\nCarry forward (structure and surroundings):\nDistant, hazy view of the endless azure ocean through large, irregularly shaped openings in the stone walls. The sky above is a brilliant, clear blue. The inner surfaces of the stone walls are visible, showing signs of ancient carving and erosion.\n\nLighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday, clear and sunny conditions.\nA sense of profound peace and timelessness pervades the chamber. The constant, powerful sound of the ocean is both calming and exhilarating. The air is fresh and carries the scent of salt and damp stone, evoking a feeling of discovery and ancient grandeur.\n\nPhysical constraints:\nPARTIAL sky visible through framework, lattice, gaps, or open roof sections.\nThe visible sky MUST show midday conditions.\nNOT fully enclosed - some openings to sky are intentional and visible.\nNatural light filters through the structure appropriate for midday.\nThe entrance/arrival point is behind the camera position.\nThe structure provides shelter but is NOT sealed.\n\nProhibitions:\n* The entrance must NOT be visible anywhere in the frame - it is behind the camera\n* Do not show a FULLY enclosed interior with solid ceiling\n* Do not show a FULLY open outdoor space with no structure\n* Do not reinterpret the architectural/structural style\n* No solid walls on all sides\n* No completely sealed roof\n* Do NOT show dark night sky through gaps - this is a DAYTIME scene\n\nFinal constraint:\nShow a sheltered but partially open space at midday where sky is visible through the structure, creating filtered natural light.",
+        "promptLayers": {
+          "name": "Oceanfront Chamber",
+          "description": "A cavernous chamber within the ancient ruin, open to the bracing ocean air. Salt spray mists the weathered stones, and the rhythmic crash of waves provides a constant soundtrack.",
+          "background": "Distant, hazy view of the endless azure ocean through large, irregularly shaped openings in the stone walls. The sky above is a brilliant, clear blue. The inner surfaces of the stone walls are visible, showing signs of ancient carving and erosion.",
+          "midground": "The main body of the chamber, characterized by massive, rough-hewn stone blocks forming partial walls and archways. Hints of Mayan-inspired carvings might be subtly visible, worn by time. The floor is uneven, composed of packed earth and scattered pebbles.",
+          "foreground": "Close-up texture of the weathered stone floor and the base of the ancient walls. Small, hardy sea-grasses or hardy tropical plants might be seen growing in crevices. The edge of the open ocean expanse is clearly visible.",
+          "lighting": "Bright, natural sunlight streams in through the open archways and gaps in the stonework, creating dynamic patterns of light and shadow. The light is slightly diffused by sea mist, giving it a soft, ethereal quality. The colors of the ocean and sky are reflected softly on the stone surfaces.",
+          "atmosphere": "A sense of profound peace and timelessness pervades the chamber. The constant, powerful sound of the ocean is both calming and exhilarating. The air is fresh and carries the scent of salt and damp stone, evoking a feeling of discovery and ancient grandeur."
+        },
+        "promptData": {
+          "command": "GOTO2"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768397838379-y4bhi8950"
+      ],
+      "parentMedia": "media-1768394821323-gw133g32i"
     }
   }
 }
