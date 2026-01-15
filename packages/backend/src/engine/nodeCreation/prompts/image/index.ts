@@ -49,6 +49,11 @@ const CAMERA_CONFIGS: Record<NodeType, {
     composition: 'Full room view showing space character and atmosphere',
     angle: 'Eye-level, immersive perspective',
   },
+  view: {
+    style: 'Point-of-view photography',
+    composition: 'Focused perspective from specific viewpoint',
+    angle: 'Eye-level, as if standing in the space looking at specific direction',
+  },
 };
 
 /**

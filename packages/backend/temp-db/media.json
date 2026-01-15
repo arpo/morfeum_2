@@ -436,6 +436,99 @@
         "v2-1768482935619-fvme33332"
       ],
       "parentMedia": "media-1768466689478-tp5fvg7zg"
+    },
+    "media-1768485554718-dznpqzaco": {
+      "id": "media-1768485554718-dznpqzaco",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a7eab/uZO499lRRHj26SYbQq36o.jpg",
+      "createdAt": "2026-01-15T13:59:14.718Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nPosition at the edge of the balcony and look OUTWARD at the distant panorama. Minimize foreground elements (balcony railing, furniture) - the distant vista should dominate at least 80% of the frame. Use 35mm lens, medium shot, f/8.\n\nShow the distant panorama beyond the balcony prominently - it should fill most of the frame.\n\nSame The Twilit Tower Residence, same night lighting, same style.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "The Twilit Tower Residence",
+          "description": "A distinctive, multi-storied building with whitewashed, textured walls, featuring numerous arched windows, some with intricate grilles. A prominent tower is topped with a green and white patterned dome. Vibrant purple bougainvillea cascades down one side, and the entrance is marked by a wide archway decorated with blue and white tiles. Palm trees surround the building.",
+          "background": "Distant azure hues of the sky transitioning to twilight, with the faint silhouette of coastal mountains. A few scattered stars begin to appear.",
+          "midground": "The Twilit Tower Residence itself. The whitewashed, textured walls are softly illuminated by a warm glow emanating from within the numerous arched windows. The intricate grilles on some windows add depth. The vibrant purple bougainvillea trellis is a striking visual against the building. The wide archway entrance, adorned with blue and white tiles, invites the viewer. Palm trees with dark silhouettes stand sentinel around the property.",
+          "foreground": "The subtle detail of the paved street or pathway leading to the entrance, catching the soft street lighting. The base of the palm trees and the lower cascades of bougainvillea might extend into this layer.",
+          "lighting": "Soft, warm light spilling from the windows, creating an inviting glow. Gentle, diffused street lighting casting long, soft shadows. The fading sunlight of dusk provides a warm, overall ambient light, subtly highlighting the domed roof. The clear sky allows for distinct twilight colors.",
+          "atmosphere": "An inviting and elegant mood, with an exotic allure. The scene feels tranquil and serene, bathed in the soft colors of dusk. The combination of the architecture and the tropical foliage creates a sense of escapism."
+        },
+        "promptData": {
+          "command": "LOOK",
+          "operation": "angle_change",
+          "camera": "Position at the edge of the balcony and look OUTWARD at the distant panorama. Minimize foreground elements (balcony railing, furniture) - the distant vista should dominate at least 80% of the frame. Use 35mm lens, medium shot, f/8.",
+          "target": "the distant panorama beyond the balcony"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768485554717-o6kdc2a4o"
+      ],
+      "parentMedia": "media-1768466689478-tp5fvg7zg"
+    },
+    "media-1768487312714-q280t3zg6": {
+      "id": "media-1768487312714-q280t3zg6",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a7f5b/3nTxiHGNEb8wweDnu9tke.jpg",
+      "createdAt": "2026-01-15T14:28:32.714Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and step into Residential Pool Courtyard.\n\nTarget location:\nA semi-enclosed space within The Twilit Tower Residence.\n\nCamera:\nHuman eye level, positioned inside the structure/pavilion.\nThe camera has moved past the entrance into the sheltered area.\n\nOrientation:\nFacing into the semi-enclosed space.\nThe entrance is behind the camera.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: DUSK\nWeather: clear\nThe sky visible through gaps and all lighting MUST reflect dusk conditions.\nThis is a NIGHT SCENE - any visible sky must be dark, NOT bright blue daytime.\n\nReveal:\nA partially covered space with dark night sky glimpsed through the framework/gaps.\nA shimmering swimming pool with clear water, surrounded by stone paving. Partially visible pergolas or arched colonnades offering partial shade.\nWorn, textured stone tiles of the pool deck, perhaps a decorative mosaic tile border around the pool's edge.\n\nPreserve (visual identity and structural continuity):\nThe structure's visual signature:\n* Atmosphere tone: An inviting and elegant mood, with an exotic allure. The scene feels tranquil and serene, bathed in the soft colors of dusk. The combination of the architecture and the tropical foliage creates a sense of escapism.\n\nStyle lock:\nMaintain the structure's established aesthetic and materials.\n\nCarry forward (structure and surroundings):\nPartial view of whitewashed textured walls with arched openings and ceramic tile accents, glimpses of lush green foliage and distant azure sky visible through upper openings.\n\nLighting and atmosphere (MUST MATCH DUSK):\nLighting appropriate for dusk, clear conditions.\nTranquil, serene, and inviting, with the feeling of an exclusive private oasis protected from the outside world while still connected to it.\n\nPhysical constraints:\nPARTIAL sky visible through framework, lattice, gaps, or open roof sections.\nThe visible sky MUST show dusk conditions.\nNOT fully enclosed - some openings to sky are intentional and visible.\nNatural light filters through the structure appropriate for dusk.\nThe entrance/arrival point is behind the camera position.\nThe structure provides shelter but is NOT sealed.\n\nProhibitions:\n* The entrance must NOT be visible anywhere in the frame - it is behind the camera\n* Do not show a FULLY enclosed interior with solid ceiling\n* Do not show a FULLY open outdoor space with no structure\n* Do not reinterpret the architectural/structural style\n* No solid walls on all sides\n* No completely sealed roof\n* Do NOT show bright blue daytime sky through gaps - this is a NIGHT scene\n\nFinal constraint:\nShow a sheltered but partially open space at dusk where sky is visible through the structure, creating filtered natural light.",
+        "promptLayers": {
+          "name": "Residential Pool Courtyard",
+          "description": "An open-air courtyard area within the residence, featuring a shimmering swimming pool. Whitewashed walls partially enclose the space, adorned with architectural details and climbing vines. The area is illuminated by soft, ambient light, creating a tranquil oasis.",
+          "background": "Partial view of whitewashed textured walls with arched openings and ceramic tile accents, glimpses of lush green foliage and distant azure sky visible through upper openings.",
+          "midground": "A shimmering swimming pool with clear water, surrounded by stone paving. Partially visible pergolas or arched colonnades offering partial shade.",
+          "foreground": "Worn, textured stone tiles of the pool deck, perhaps a decorative mosaic tile border around the pool's edge.",
+          "lighting": "Soft, diffused light filtering through the semi-enclosed structure, with warm, inviting light spilling from interior arches, mimicking the twilight glow of the exterior.",
+          "atmosphere": "Tranquil, serene, and inviting, with the feeling of an exclusive private oasis protected from the outside world while still connected to it."
+        },
+        "promptData": {
+          "command": "GOTO2"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768487308007-h788c2rpw"
+      ],
+      "parentMedia": "media-1768466689478-tp5fvg7zg"
+    },
+    "media-1768487374590-a761v2ctx": {
+      "id": "media-1768487374590-a761v2ctx",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a7f61/6IBAWpib3buhSHj6kdtY0.jpg",
+      "createdAt": "2026-01-15T14:29:34.590Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nStep forward into the pool, immersing the lower half of the frame in clear, shimmering water. The pool's edge and surrounding paving should recede. Use 35mm lens, medium shot, f/5.6.\n\nShow the pool water prominently - it should fill most of the frame.\n\nSame Residential Pool Courtyard, same night lighting, same style.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "Residential Pool Courtyard",
+          "description": "An open-air courtyard area within the residence, featuring a shimmering swimming pool. Whitewashed walls partially enclose the space, adorned with architectural details and climbing vines. The area is illuminated by soft, ambient light, creating a tranquil oasis.",
+          "background": "Partial view of whitewashed textured walls with arched openings and ceramic tile accents, glimpses of lush green foliage and distant azure sky visible through upper openings.",
+          "midground": "A shimmering swimming pool with clear water, surrounded by stone paving. Partially visible pergolas or arched colonnades offering partial shade.",
+          "foreground": "Worn, textured stone tiles of the pool deck, perhaps a decorative mosaic tile border around the pool's edge.",
+          "lighting": "Soft, diffused light filtering through the semi-enclosed structure, with warm, inviting light spilling from interior arches, mimicking the twilight glow of the exterior.",
+          "atmosphere": "Tranquil, serene, and inviting, with the feeling of an exclusive private oasis protected from the outside world while still connected to it."
+        },
+        "promptData": {
+          "command": "LOOK",
+          "operation": "traversal",
+          "camera": "Step forward into the pool, immersing the lower half of the frame in clear, shimmering water. The pool's edge and surrounding paving should recede. Use 35mm lens, medium shot, f/5.6.",
+          "target": "the pool water"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768487374589-2v6n95ewj"
+      ],
+      "parentMedia": "media-1768487312714-q280t3zg6"
     }
   }
 }

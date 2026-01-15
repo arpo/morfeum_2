@@ -37,7 +37,9 @@ export {
   IconArrowBadgeRight,
   IconSparkles,
   IconEye,
-  IconCompass
+  IconCompass,
+  IconMicrophone,
+  IconPlayerStop
 } from '@tabler/icons-react';
 
 // Icon type for string references

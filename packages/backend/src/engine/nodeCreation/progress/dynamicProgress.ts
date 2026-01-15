@@ -17,6 +17,7 @@ const NODE_STEP_DEFINITIONS: Record<NodeType, { id: string; name: string }> = {
   niche: { id: 'create_niche', name: 'Creating niche...' },
   container: { id: 'create_container', name: 'Creating container...' },
   space: { id: 'create_space', name: 'Creating space...' },
+  view: { id: 'create_view', name: 'Creating view...' },
 };
 
 /**

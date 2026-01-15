@@ -247,9 +247,6 @@ When triggered, generate the following format (the user will copy this to the de
 - Node Type: [nodeType]
 - Image Prompt: [imagePrompt if available]
 
-**Conversation Summary:**
-[Brief summary of the conversation leading to this issue]
-
 **Suggested Investigation:**
 [Any thoughts on what might be wrong - prompt phrasing, operation detection, etc.]
 \`\`\`

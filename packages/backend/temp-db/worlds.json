@@ -375,6 +375,84 @@
       "description": "View: The rear elevation of the Twilit Tower Residence, including any additional architectural features, windows, doors, or yard elements that define the back of the property.",
       "parentId": "v2-1768466685306-li0rpn72x",
       "primaryMedia": "media-1768482935619-b4tpi9w29"
+    },
+    "v2-1768485554717-o6kdc2a4o": {
+      "id": "v2-1768485554717-o6kdc2a4o",
+      "type": "view",
+      "name": "The Panorama from the Balcony",
+      "slug": "the-panorama-from-the-balcony",
+      "description": "View: The expansive distant view - cityscape, landscape, horizon, or whatever lies beyond the balcony, with the twilight sky and mountains prominent.",
+      "parentId": "v2-1768466685306-li0rpn72x",
+      "primaryMedia": "media-1768485554718-dznpqzaco"
+    },
+    "v2-1768487308007-h788c2rpw": {
+      "id": "v2-1768487308007-h788c2rpw",
+      "type": "space",
+      "name": "Residential Pool Courtyard",
+      "slug": "residential-pool-courtyard",
+      "description": "An open-air courtyard area within the residence, featuring a shimmering swimming pool. Whitewashed walls partially enclose the space, adorned with architectural details and climbing vines. The area is illuminated by soft, ambient light, creating a tranquil oasis.",
+      "spaceType": "semi-enclosed",
+      "dna": {
+        "essence": [
+          "exotic retreat",
+          "tranquil oasis",
+          "residential luxury"
+        ],
+        "formsAndMaterials": [
+          "arches",
+          "whitewashed textured plaster",
+          "ceramic tiles",
+          "stone paving",
+          "water"
+        ],
+        "colorAndLight": [
+          "azure sky",
+          "warm interior glow",
+          "tropical greens",
+          "vibrant purples",
+          "soft dappled light"
+        ],
+        "atmosphere": [
+          "serene",
+          "inviting",
+          "exclusive"
+        ],
+        "banned": [
+          "harsh fluorescent lighting",
+          "minimalist industrial design",
+          "overly modern or futuristic elements",
+          "bare concrete",
+          "straight, unadorned walls"
+        ]
+      },
+      "promptLayers": {
+        "background": "Partial view of whitewashed textured walls with arched openings and ceramic tile accents, glimpses of lush green foliage and distant azure sky visible through upper openings.",
+        "midground": "A shimmering swimming pool with clear water, surrounded by stone paving. Partially visible pergolas or arched colonnades offering partial shade.",
+        "foreground": "Worn, textured stone tiles of the pool deck, perhaps a decorative mosaic tile border around the pool's edge.",
+        "lighting": "Soft, diffused light filtering through the semi-enclosed structure, with warm, inviting light spilling from interior arches, mimicking the twilight glow of the exterior.",
+        "atmosphere": "Tranquil, serene, and inviting, with the feeling of an exclusive private oasis protected from the outside world while still connected to it."
+      },
+      "forbiddenTransformations": [
+        "the pool becoming murky or dirty",
+        "walls becoming plain or untextured",
+        "absence of tiling details",
+        "elimination of the bougainvillea or other climbing plants",
+        "overly bright or artificial lighting",
+        "the space becoming fully enclosed (indoor)",
+        "the space becoming completely open (outdoor)",
+        "modern, geometric furniture"
+      ],
+      "parentId": "v2-1768472182160-o60gzpdtj",
+      "primaryMedia": "media-1768487312714-q280t3zg6"
+    },
+    "v2-1768487374589-2v6n95ewj": {
+      "id": "v2-1768487374589-2v6n95ewj",
+      "type": "view",
+      "name": "Entering the Pool",
+      "slug": "entering-the-pool",
+      "description": "View: The immediate experience of stepping into the pool, with water rippling around the legs and the pool's depth becoming apparent.",
+      "parentId": "v2-1768487308007-h788c2rpw",
+      "primaryMedia": "media-1768487374590-a761v2ctx"
     }
   },
   "views": {},
@@ -439,6 +517,17 @@
                           ]
                         }
                       ]
+                    },
+                    {
+                      "id": "v2-1768487308007-h788c2rpw",
+                      "type": "space",
+                      "children": [
+                        {
+                          "id": "v2-1768487374589-2v6n95ewj",
+                          "type": "view",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 },
@@ -454,6 +543,11 @@
                 },
                 {
                   "id": "v2-1768482935619-fvme33332",
+                  "type": "view",
+                  "children": []
+                },
+                {
+                  "id": "v2-1768485554717-o6kdc2a4o",
                   "type": "view",
                   "children": []
                 }
