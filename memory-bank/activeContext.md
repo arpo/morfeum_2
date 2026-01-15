@@ -1,5 +1,60 @@
 # Active Context
 
+## 2026-01-15 - LOOK Command Implementation ✅
+
+Implemented `/LOOK` command for camera control within same space. Creates **view nodes** (camera angles without location change).
+
+### What Was Built
+
+**Backend:**
+- `worldV2/prompts/look.ts` - LLM prompt for camera instruction generation
+- `worldV2/prompts/imageEditPrompt.ts` - Added `buildLookImageEditPrompt()`
+- `worldV2/handlers/lookHandler.ts` - Backend handler
+- Pipeline: `v2Look` in pipelineConfig.ts
+- Route: `/api/v2/look`
+
+**Frontend:**
+- `worldV2/commands/handlers/lookHandler.ts` - Frontend handler
+- View node styling: italic text, eye icon
+- Command registered in v2Commands
+
+**Documentation:**
+- `docs/look-command-best-practices.md` - User guide
+
+### Operation Types
+
+| Operation | Triggers | Lens | Result |
+|-----------|----------|------|--------|
+| `angle_change` | look up/down, turn, face | 35mm medium | Camera rotation/tilt |
+| `traversal` | walk toward, approach | 35mm medium | Camera moves through space |
+| `zoom_in` | inspect, closer, out the window | 85mm close | Tight framing on target |
+| `zoom_out` | step back, wider view | 24mm wide | Shows more context |
+
+### Key Prompt Tuning
+
+1. **"Out the window"** - Uses 85mm close, explicit "look OUTWARD through it"
+2. **"See the view from"** - Panorama focus, minimize foreground (80%+ vista)
+3. **Dramatic movements** - "Target should FILL THE FRAME (60-80%)"
+4. **No inventions** - Explicit prohibition on adding new elements
+
+### Best Phrasing Patterns
+
+| Intent | ✅ Recommended | ❌ Avoid |
+|--------|----------------|----------|
+| Look through window | `out the window` | `at the window` |
+| Specific window | `out the right window` | `out through the window to the right` |
+| Panorama | `see the view from the balcony` | `look at the railing` |
+
+### Files Created/Modified
+
+- NEW: `look.ts`, `lookHandler.ts` (backend/frontend)
+- NEW: `docs/look-command-best-practices.md`
+- MODIFIED: `imageEditPrompt.ts` (added buildLookImageEditPrompt)
+- MODIFIED: `navigation.ts` (added LOOK command, `view` node type)
+- MODIFIED: `pipelineConfig.ts` (added v2Look pipeline)
+
+---
+
 ## 2026-01-14 - GO_INSIDE2 Prompt Fixes ("Tower Inside Tower" Bug) ✅
 
 Fixed critical edit-model failure modes in GO_INSIDE2 prompts.

@@ -96,7 +96,8 @@ Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = i
 | `/SET_TIME` | Set time of day for world | ✅ |
 | `/SET_WEATHER` | Set weather conditions for world | ✅ |
 | `/GO_INSIDE2` | Enter structures (image edit) | ✅ |
-| `/GOTO2` | Create sibling space in container | ✅ NEW |
+| `/GOTO2` | Create sibling space in container | ✅ |
+| `/LOOK` | Camera control within same space | ✅ NEW |
 
 ### Phase 5-6: Navigation ✅ COMPLETE
 
@@ -109,6 +110,12 @@ Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = i
   - Only available from space nodes (`requiresNodeType: ['space']`)
   - Uses parent location's image (not current space)
   - Reuses GO_INSIDE2 LLM prompt + image edit logic
+- [x] LOOK - Camera control within same space ← COMPLETE
+  - Creates view nodes (camera angles, not locations)
+  - 4 operation types: angle_change, traversal, zoom_in, zoom_out
+  - Lens mnemonics: 24mm wide, 35mm medium, 85mm close
+  - Fine-tuned for windows, panoramas, details
+  - Best practices guide: `docs/look-command-best-practices.md`
 - [ ] Remove old system
 
 ---
@@ -124,7 +131,8 @@ handlers/
 ├── newWorldLocationHandler.ts
 ├── newWorldLocationInteriorHandler.ts
 ├── goInsideHandler.ts
-├── gotoHandler.ts  ← NEW
+├── gotoHandler.ts
+├── lookHandler.ts  ← NEW
 ├── setTimeHandler.ts
 ├── setWeatherHandler.ts
 └── eventsHandler.ts
@@ -154,6 +162,7 @@ prompts/
 
 - [x] GO_INSIDE2 navigation ← COMPLETE (v1.8)
 - [x] GOTO2 navigation (sibling spaces) ← COMPLETE
+- [x] LOOK command (camera control) ← COMPLETE
 - [ ] Remove old system
 - [ ] Character spawn caching test
 - [ ] Bundle size optimization

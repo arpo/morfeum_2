@@ -159,7 +159,7 @@ export const PIPELINE_STEPS = {
   v2Look: [
     { id: 'analyzing', name: 'Analyzing Current View', duration: 2000 },
     { id: 'camera', name: 'Planning Camera Movement', duration: 3000 },
-    { id: 'image', name: 'Generating New View', duration: 6000 },
+    { id: 'image', name: 'Generating New View', duration: 7000 },
   ]
 } as const;
 
