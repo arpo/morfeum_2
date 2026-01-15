@@ -74,10 +74,11 @@ You must produce a structured output that FLUX.2 can follow reliably.
    * Treat the prompt as a virtual camera rig: lens + angle + distance + action.
    * Use FLUX.2's instruction-following for reframe/rotation and edit moves.
 
-3. **Minimal-discontinuity movement**
-   * Movement can be small (step/lean) or larger (walk further across the room).
-   * Avoid discontinuous jumps that would break continuity.
-   * Describe movement as a continuous, physically plausible traversal.
+3. **BOLD, DECISIVE camera movements**
+   * Camera movements should be DRAMATIC, not subtle tilts.
+   * The target should FILL THE FRAME (60-80% of the view).
+   * Movement can be small (step/lean) or larger (walk across the room).
+   * Describe movement as continuous and physically plausible.
 
 4. **No implicit state changes**
    * NEVER open/close/unlock/unfold/reveal contents unless explicitly requested.
@@ -108,8 +109,9 @@ Triggers: "go further", "walk forward", "move to", "step closer", "approach"
 → Physically plausible forward/sideways move with new facing direction.
 
 ### C) Zoom In / Detail Inspect (zoom_in)
-Triggers: "look closer", "inspect", "zoom in", "read", "see details", "examine"
+Triggers: "look closer", "inspect", "zoom in", "read", "see details", "examine", "look through", "out through", "see through"
 → Tighter framing, closer approach, 85mm lens preferred.
+→ NOTE: "look through" a window/door = zoom_in operation (get close, frame tightly)
 
 ### D) Zoom Out / Expand View (zoom_out)
 Triggers: "zoom out", "show more", "pan", "wider view", "step back"
@@ -157,15 +159,37 @@ Input: "walk toward the fireplace"
   "lens": { "focalLength": "35mm", "aperture": "f/5.6", "shotDistance": "medium" }
 }
 
-### Example 2: Angle Change
+### Example 2: Angle Change (Looking Up)
 Input: "look up at the ceiling"
 {
   "viewName": "The Ceiling Above",
   "operation": "angle_change",
-  "camera": "Tilt camera upward to view the ceiling. Use 24mm lens, wide shot, f/8.",
+  "camera": "Tilt camera dramatically upward so the ceiling fills most of the frame. Use 24mm lens, wide shot, f/8.",
   "target": "the ceiling",
-  "reveal": "Ceiling architecture, light fixtures, and upper wall details.",
+  "reveal": "Ceiling architecture, light fixtures, and upper wall details filling the view.",
   "lens": { "focalLength": "24mm", "aperture": "f/8", "shotDistance": "wide" }
+}
+
+### Example 5: Look Through (Zoom In to see beyond)
+Input: "look out the window" or "look through the window"
+{
+  "viewName": "Through the Window",
+  "operation": "zoom_in",
+  "camera": "Move right up to the window, press close to the glass, and look OUTWARD through it. The exterior world beyond the window should fill the frame. Use 85mm lens, close shot, f/4.",
+  "target": "the exterior view through the window",
+  "reveal": "The world outside seen through the window - the exterior environment beyond the glass.",
+  "lens": { "focalLength": "85mm", "aperture": "f/4", "shotDistance": "close" }
+}
+
+### Example 6: Angle Change (Turn to face something)
+Input: "turn to face the door on the right"
+{
+  "viewName": "Facing the Door",
+  "operation": "angle_change",
+  "camera": "Turn fully to face the door on the right so it dominates the frame. Use 35mm lens, medium shot, f/5.6.",
+  "target": "the door on the right",
+  "reveal": "The door and its immediate surroundings.",
+  "lens": { "focalLength": "35mm", "aperture": "f/5.6", "shotDistance": "medium" }
 }
 
 ### Example 3: Zoom In

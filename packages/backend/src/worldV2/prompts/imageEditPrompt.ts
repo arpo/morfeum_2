@@ -479,16 +479,16 @@ export function buildLookImageEditPrompt(
 
   // Build a concise, action-focused prompt
   // IMPORTANT: Lead with the change, minimize preservation language
-  // CRITICAL: Explicitly tell FLUX not to invent new elements
+  // CRITICAL: Explicitly tell FLUX not to invent new elements, but allow bold camera moves
   return `REFRAME THIS IMAGE:
 
 ${lookResponse.camera}
 
-Show ${lookResponse.target} prominently in frame.
+Show ${lookResponse.target} prominently - it should fill most of the frame.
 
 Same ${spaceName}, same ${lightingContext}, same style.
 
-IMPORTANT: Only change the camera angle. Do not invent or add new architectural details, fixtures, or objects. Show only what already exists in this scene from a different angle.`;
+Only change the camera angle and/or position. Do not invent or add new objects. Show only what already exists from this new viewpoint.`;
 }
 
 /**
