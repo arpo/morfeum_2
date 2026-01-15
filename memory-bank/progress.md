@@ -107,23 +107,29 @@ Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = i
   - spaceType detection (indoor/outdoor/semi-enclosed/underground/elevated)
   - Time/weather enforcement (MANDATORY section in prompts)
   - 13 test scenarios passed
+  - **Description Preservation**: Navigation Assistant preserves full user descriptions
 - [x] GOTO2 - Create sibling spaces within container ← COMPLETE
   - Only available from space nodes (`requiresNodeType: ['space']`)
   - Uses parent location's image (not current space)
   - Reuses GO_INSIDE2 LLM prompt + image edit logic
-- [x] LOOK - Camera control within same space ← COMPLETE (v2 with immersion)
+- [x] LOOK - Camera control within same space ← COMPLETE (v3 with "see the view from")
   - Creates view nodes (camera angles, not locations)
   - 5 operation types: angle_change, traversal, zoom_in, zoom_out, **immersion**
   - Lens mnemonics: 24mm wide, 35mm medium, 85mm close
   - Fine-tuned for windows, panoramas, details
-  - **Immersion**: "get into", "dive into", "sit in" - camera positioned inside element
+  - **Immersion v3**: "see the view from X" pattern (canonical)
+    - ✅ `/LOOK see the view from the toilet` - camera AT position, looking outward
+    - ❌ `/LOOK sit on the toilet` - broken (shows toilet in front)
+  - **Spatial boundaries**: Use `/GO_INSIDE2` for background→enter transitions
   - First-person POV enforced (no visible body/hands/feet)
+  - Duplicate object prohibition added to prevent model adding extras
   - Best practices guide: `docs/look-command-best-practices.md`
 - [x] Navigation Assistant Panel ← COMPLETE
   - In-app chat assistant for navigation help
   - Command suggestions with insert button
   - `/bug` command for developer reports
   - Context-aware (passes node ID, image prompt)
+  - **GO_INSIDE2 guidance**: Preserves full descriptive details from user
 - [ ] Remove old system
 
 ---

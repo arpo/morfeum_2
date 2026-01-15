@@ -16,7 +16,6 @@
  */
 
 import type { ImagePromptLayers } from '../display/imagePromptGenerator';
-import type { TimeOfDay } from '../types';
 
 /**
  * Operation type detected from user input
@@ -243,6 +242,28 @@ Input: "get into the pool" or "dive into the water"
   "target": "the pool surroundings from water level",
   "reveal": "The pool edge, surrounding deck, sky, and environment as seen from water level - water surface visible at frame edges.",
   "lens": { "focalLength": "24mm", "aperture": "f/8", "shotDistance": "wide" }
+}
+
+### Example 8: View From Seating Position (Outdoor)
+Input: "see the view from the cafe table" or "see the view from the outdoor seating"
+{
+  "viewName": "View from Cafe Table",
+  "operation": "immersion",
+  "camera": "Camera positioned at one of the outdoor cafe tables, looking OUTWARD into the street/plaza, away from the building. The perspective is from a seated height. Use 35mm lens, medium shot, f/5.6.",
+  "target": "the street scene ahead",
+  "reveal": "The view from the seated position - the cobblestone street, passing pedestrians, distant buildings, surrounding plaza. The cafe table edge may be visible at bottom of frame.",
+  "lens": { "focalLength": "35mm", "aperture": "f/5.6", "shotDistance": "medium" }
+}
+
+### Example 9: View From Seating Position (Indoor)
+Input: "see the view from the toilet" or "see the view from the chair"
+{
+  "viewName": "View from the Toilet",
+  "operation": "immersion",
+  "camera": "Camera positioned at the toilet, looking OUTWARD into the bathroom. The perspective is from a seated height. Use 35mm lens, medium shot, f/5.6.",
+  "target": "the bathroom ahead",
+  "reveal": "The view from this seated position - bathroom fixtures, walls, door, window if present. The furniture you're positioned at is behind the camera, not visible in frame.",
+  "lens": { "focalLength": "35mm", "aperture": "f/5.6", "shotDistance": "medium" }
 }
 
 ### Example 8: See the View FROM a vantage point (panorama focus)

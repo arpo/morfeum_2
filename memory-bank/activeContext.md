@@ -1,8 +1,92 @@
 # Active Context
 
-## 2026-01-15 - LOOK Command Fine-Tuning (Immersion + First-Person POV) ✅
+## 2026-01-15 - LOOK Command Fine-Tuning Session 3: "See the View From" Pattern ✅
 
-### Session 2: Added Immersion Operation & First-Person Enforcement
+### Critical Discoveries: Immersion Phrasing
+
+**Problem 1: Outdoor Cafe Seating**
+- User: `/LOOK sit in the cafe chair`
+- Result: Chair positioned FACING the cafe (incorrect)
+- Expected: Seated AT the cafe looking outward
+
+**Root Cause:** When seating is in the BACKGROUND of an exterior image, "sit in" creates spatial ambiguity. The edit model doesn't understand it should "enter" that background space.
+
+**Solution:** Use `/GO_INSIDE2 the outdoor seating area` for spatial boundary crossing.
+
+**Problem 2: Indoor Furniture (Toilet Example)**
+- User: `/LOOK sit on the toilet`
+- Result: Still seeing the toilet in front (incorrect)
+- Expected: Seated position, looking outward into bathroom
+
+**Root Cause:** "Sit on X" makes X the target (in front of camera), not the position (behind camera).
+
+**Solution Discovery:** User found the correct pattern:
+```
+✅ /LOOK see the view from the toilet  (WORKS)
+❌ /LOOK sit on the toilet              (BROKEN)
+```
+
+### Changes Made
+
+**1. Updated look.ts Examples**
+- **Example 8** - Changed to "see the view from the cafe table"
+  - Camera positioned AT seating, looking OUTWARD
+  - Target: "the street scene ahead" (not the furniture)
+  - Reveal: Street, pedestrians, plaza (furniture behind camera)
+
+- **Example 9** - NEW: Indoor furniture immersion
+  - Input: "see the view from the toilet" or "see the view from the chair"
+  - Camera: Positioned at furniture, looking OUTWARD
+  - Target: "the bathroom ahead"
+  - Reveal: "The furniture you're positioned at is behind the camera, not visible"
+
+**2. Updated imageEditPrompt.ts**
+- Added stronger prohibition: "Do not add duplicate objects that already exist in the scene"
+- Prevents model from adding extra toilets/chairs
+
+**3. Updated navigationAssistant.ts**
+- Added CRITICAL section to GO_INSIDE2 documentation
+- **"Preserve ALL descriptive details!"**
+- Examples showing good vs bad:
+  - ✅ `/GO_INSIDE2 the chill out area among the palm trees with sun shades and colorful lights`
+  - ❌ `/GO_INSIDE2 the chill out area` (strips valuable details)
+
+### The "See the View From" Pattern
+
+This is now the **canonical pattern** for immersion with furniture/fixtures:
+
+| Use Case | ✅ Correct | ❌ Wrong |
+|----------|-----------|----------|
+| Outdoor seating (background) | `/GO_INSIDE2 the outdoor seating` | `/LOOK sit in chair` |
+| Outdoor seating (nearby) | `/LOOK see the view from the table` | `/LOOK sit at table` |
+| Indoor furniture | `/LOOK see the view from the toilet` | `/LOOK sit on toilet` |
+| Water immersion | `/LOOK get into the pool` | Either works |
+
+### Why "See the View From" Works
+
+1. **Unambiguous positioning** - "from X" = camera AT X
+2. **Direction clarity** - "view" = looking outward
+3. **Target specification** - The view ahead, not the furniture
+4. **No spatial confusion** - Clear that furniture is behind camera
+
+### Files Modified
+- `look.ts` - Updated Examples 8 & 9 with correct pattern
+- `imageEditPrompt.ts` - Added duplicate object prohibition
+- `navigationAssistant.ts` - Added GO_INSIDE2 description preservation guidance
+- `navigationAssistant.ts` - Added troubleshooting case for outdoor seating spatial boundaries
+
+### Key Lessons
+
+1. **Spatial Boundaries**: LOOK can't cross spatial boundaries (background → enter space). Use GO_INSIDE2.
+2. **Furniture Position**: "Sit on X" makes X visible (target). "See view from X" makes X your position (behind camera).
+3. **Description Preservation**: Navigation Assistant must pass through full user descriptions for GO_INSIDE2 commands.
+4. **Prompt Literalism**: Still avoid mechanical camera terms. Describe the VIEW.
+
+---
+
+## 2026-01-15 - LOOK Command Fine-Tuning Session 2: Immersion + First-Person POV ✅
+
+### Added Immersion Operation & First-Person Enforcement
 
 Added new `immersion` operation type and strengthened first-person POV constraints.
 
