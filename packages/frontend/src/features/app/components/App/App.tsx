@@ -6,6 +6,7 @@
 import { ChatHistoryViewer } from '@/features/chat/components/ChatHistoryViewer';
 import { ImagePromptPanel } from '@/features/chat/components/ImagePromptPanel';
 import { ChatPanel } from '@/features/chat/components/ChatPanel';
+import { NavigationAssistantPanel } from '@/features/chat/components/NavigationAssistantPanel';
 import { CharacterInfoModal } from '@/features/chat/components/CharacterInfoModal';
 import { LocationInfoModal } from '@/features/chat/components/LocationInfoModal';
 import { SpawnInputBar } from '@/features/spawn-input/SpawnInputBar';
@@ -14,9 +15,19 @@ import { EntityExplorerPanel } from '@/features/app/components/EntityExplorer/En
 import { TopButtonRow } from '@/features/app/components/TopButtonRow';
 import { WorldView } from '@/features/app/components/WorldView/WorldView';
 import { useAppLogic } from './useAppLogic';
+import { useStore } from '@/store';
 import styles from './App.module.css';
 
 export function App() {
+  // Navigation assistant state
+  const navigationAssistantOpen = useStore(state => state.navigationAssistantOpen);
+  const closeNavigationAssistant = useStore(state => state.closeNavigationAssistant);
+  const setNavigationInput = useStore(state => state.setNavigationInput);
+
+  // Handle command suggested by navigation assistant
+  const handleCommandSuggested = (command: string) => {
+    setNavigationInput(command);
+  };
 
   const {
     // State
@@ -131,6 +142,16 @@ export function App() {
             </div>
           );
         })}
+
+        {/* Navigation Assistant Panel */}
+        {navigationAssistantOpen && (
+          <div className={focusModeEnabled ? styles.uiHidden : ''}>
+            <NavigationAssistantPanel
+              onClose={closeNavigationAssistant}
+              onCommandSuggested={handleCommandSuggested}
+            />
+          </div>
+        )}
       </>
 
       {/* Character Info Modal */}

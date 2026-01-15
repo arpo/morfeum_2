@@ -16,7 +16,8 @@ import {
   lookHandler,
   eventsHandler,
   setTimeHandler,
-  setWeatherHandler
+  setWeatherHandler,
+  navigationAssistantHandler
 } from './handlers';
 import { displayHandler } from './display';
 
@@ -57,5 +58,8 @@ router.post('/goto', gotoHandler);
 
 // LOOK Command - Change viewpoint within same space (creates view node)
 router.post('/look', lookHandler);
+
+// Navigation Assistant Chat - AI help for navigation commands
+router.post('/navigation-assistant/chat', navigationAssistantHandler);
 
 export { router as worldV2Router };

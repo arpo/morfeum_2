@@ -366,6 +366,15 @@
       "parentId": "v2-1768473678267-vnprxhkct",
       "primaryMedia": "media-1768473814066-3a7v06eln",
       "updatedAt": 1768473854823
+    },
+    "v2-1768482935619-fvme33332": {
+      "id": "v2-1768482935619-fvme33332",
+      "type": "view",
+      "name": "Toward the Back of the House",
+      "slug": "toward-the-back-of-the-house",
+      "description": "View: The rear elevation of the Twilit Tower Residence, including any additional architectural features, windows, doors, or yard elements that define the back of the property.",
+      "parentId": "v2-1768466685306-li0rpn72x",
+      "primaryMedia": "media-1768482935619-b4tpi9w29"
     }
   },
   "views": {},
@@ -440,6 +449,11 @@
                 },
                 {
                   "id": "v2-1768472669260-nzeb4mc7u",
+                  "type": "view",
+                  "children": []
+                },
+                {
+                  "id": "v2-1768482935619-fvme33332",
                   "type": "view",
                   "children": []
                 }

@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useEffect } from 'react';
 import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locations';
 import { parseCommandInput, isCreationCommand, isMediaCommand, isEditCommand, isNavigationCommand } from './commandParser';
@@ -44,10 +44,28 @@ function getDefaultNavigationArg(command: string, node: any): string | null {
 }
 
 export function useNavigationLogic() {
-  const [movementInput, setMovementInput] = useState('');
+  // Use store for navigation input so it can be set from NavigationAssistantPanel
+  const storeNavigationInput = useStore(state => state.navigationInput);
+  const setStoreNavigationInput = useStore(state => state.setNavigationInput);
+  
+  // Local state as fallback and for immediate UI updates
+  const [localInput, setLocalInput] = useState('');
   const [isMoving, setIsMoving] = useState(false);
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  // Sync store value to local state when it changes externally
+  useEffect(() => {
+    if (storeNavigationInput && storeNavigationInput !== localInput) {
+      setLocalInput(storeNavigationInput);
+      // Clear store value after syncing to avoid re-triggering
+      setStoreNavigationInput('');
+    }
+  }, [storeNavigationInput, localInput, setStoreNavigationInput]);
+
+  // Use local input for immediate updates
+  const movementInput = localInput;
+  const setMovementInput = setLocalInput;
 
   const getNode = useLocationsStore(state => state.getNode);
   const getSpatialNodes = useLocationsStore(state => state.getSpatialNodes);

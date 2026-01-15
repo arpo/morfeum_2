@@ -239,6 +239,72 @@ System:
 
 ---
 
+---
+
+## 2026-01-15 - Navigation Assistant Panel ✅
+
+Implemented an **in-app chat assistant** that helps users navigate Morfeum worlds using natural language.
+
+### What Was Built
+
+**Backend:**
+- `worldV2/prompts/navigationAssistant.ts` - Expert system prompt with:
+  - Command reference (/LOOK, /GO_INSIDE2, /GOTO2, /NEW_WORLD_LOCATION)
+  - Best phrasing patterns table
+  - Operation types and lens mnemonics
+  - Troubleshooting mode (toggleable via env)
+  - `/bug` command for generating developer reports
+- `worldV2/handlers/navigationAssistantHandler.ts` - Chat API handler
+- Route: `/api/v2/navigation-assistant/chat`
+- Env: `NAVIGATION_ASSISTANT_TROUBLESHOOTING` (default true)
+
+**Frontend:**
+- `features/chat/components/NavigationAssistantPanel/` - Complete chat UI
+  - `NavigationAssistantPanel.tsx` - Draggable panel with chat interface
+  - `useNavigationAssistant.ts` - Chat logic hook with context passing
+  - Custom markdown renderers for commands and reports
+- Toggle button (IconCompass) in SpawnInputBar
+- Store state: `navigationAssistantOpen`, `setNavigationInput`
+
+### Key Features
+
+1. **Command Suggestions** - User describes intent, assistant suggests exact command
+2. **Insert Button** - Click arrow icon to insert suggested command into navigation input
+3. **Context Aware** - Passes node ID, type, name, and image prompt to assistant
+4. **Developer Reports** - Type `/bug` to generate structured report with full context
+
+### Developer Report Feature
+
+When user types `/bug`, assistant generates:
+```markdown
+## Navigation Fine-Tuning Request
+**User Goal:** [...]
+**Command Tried:** [...]
+**Current Context:**
+- Node ID: [exact ID for lookup]
+- Image Prompt: [from media metadata]
+**Conversation Summary:** [...]
+**Suggested Investigation:** [...]
+```
+
+User clicks **Copy** button and pastes to dev chat for fine-tuning.
+
+### Files Created/Modified
+
+**New:**
+- `worldV2/prompts/navigationAssistant.ts`
+- `worldV2/handlers/navigationAssistantHandler.ts`
+- `features/chat/components/NavigationAssistantPanel/` (6 files)
+
+**Modified:**
+- `worldV2/routes.ts` - Added navigation-assistant route
+- `worldV2/handlers/index.ts` - Export handler
+- `store/slices/entityUISlice.ts` - Added navigationInput state
+- `features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - Sync store input
+- `features/app/components/App/App.tsx` - Render panel
+
+---
+
 ## Next Steps
 
 - [x] Fix "tower inside tower" bug
@@ -247,5 +313,6 @@ System:
 - [x] Three parallel prompt builders (indoor, outdoor, semi-enclosed)
 - [x] Time/weather enforcement (v1.8)
 - [x] GOTO2 navigation (sibling spaces)
+- [x] Navigation Assistant chat panel
 - [ ] Future: Add season support to Host node
 - [ ] Future: GOTO (legacy system move between locations)

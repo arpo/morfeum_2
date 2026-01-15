@@ -404,6 +404,38 @@
         "v2-1768473814065-ov3nruo4x"
       ],
       "parentMedia": "media-1768473678268-xwhyf6vc6"
+    },
+    "media-1768482935619-b4tpi9w29": {
+      "id": "media-1768482935619-b4tpi9w29",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a7da5/wGWVLg4z58S9FmQ1ovrRf.jpg",
+      "createdAt": "2026-01-15T13:15:35.619Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nWalk forward from the current position, moving toward what is perceived as the rear of the Twilit Tower Residence. Continue until the rear facade and its immediate surroundings dominate the frame. Use a 35mm lens, medium shot, f/5.6, for a natural perspective.\n\nShow the back of the house prominently - it should fill most of the frame.\n\nSame The Twilit Tower Residence, same night lighting, same style.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "The Twilit Tower Residence",
+          "description": "A distinctive, multi-storied building with whitewashed, textured walls, featuring numerous arched windows, some with intricate grilles. A prominent tower is topped with a green and white patterned dome. Vibrant purple bougainvillea cascades down one side, and the entrance is marked by a wide archway decorated with blue and white tiles. Palm trees surround the building.",
+          "background": "Distant azure hues of the sky transitioning to twilight, with the faint silhouette of coastal mountains. A few scattered stars begin to appear.",
+          "midground": "The Twilit Tower Residence itself. The whitewashed, textured walls are softly illuminated by a warm glow emanating from within the numerous arched windows. The intricate grilles on some windows add depth. The vibrant purple bougainvillea trellis is a striking visual against the building. The wide archway entrance, adorned with blue and white tiles, invites the viewer. Palm trees with dark silhouettes stand sentinel around the property.",
+          "foreground": "The subtle detail of the paved street or pathway leading to the entrance, catching the soft street lighting. The base of the palm trees and the lower cascades of bougainvillea might extend into this layer.",
+          "lighting": "Soft, warm light spilling from the windows, creating an inviting glow. Gentle, diffused street lighting casting long, soft shadows. The fading sunlight of dusk provides a warm, overall ambient light, subtly highlighting the domed roof. The clear sky allows for distinct twilight colors.",
+          "atmosphere": "An inviting and elegant mood, with an exotic allure. The scene feels tranquil and serene, bathed in the soft colors of dusk. The combination of the architecture and the tropical foliage creates a sense of escapism."
+        },
+        "promptData": {
+          "command": "LOOK",
+          "operation": "traversal",
+          "camera": "Walk forward from the current position, moving toward what is perceived as the rear of the Twilit Tower Residence. Continue until the rear facade and its immediate surroundings dominate the frame. Use a 35mm lens, medium shot, f/5.6, for a natural perspective.",
+          "target": "the back of the house"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768482935619-fvme33332"
+      ],
+      "parentMedia": "media-1768466689478-tp5fvg7zg"
     }
   }
 }

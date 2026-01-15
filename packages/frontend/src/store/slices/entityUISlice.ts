@@ -10,6 +10,8 @@ export interface EntityUISlice {
   entityExplorerPanelOpen: boolean;
   spawnInputMinimized: boolean;
   focusModeEnabled: boolean;
+  navigationAssistantOpen: boolean;
+  navigationInput: string;
 
   openEntityPanel: (entityId: string) => void;
   closeEntityPanel: (entityId: string) => void;
@@ -17,6 +19,9 @@ export interface EntityUISlice {
   toggleEntityExplorerPanel: () => void;
   toggleSpawnInput: () => void;
   toggleFocusMode: () => void;
+  toggleNavigationAssistant: () => void;
+  closeNavigationAssistant: () => void;
+  setNavigationInput: (value: string) => void;
 }
 
 export const createEntityUISlice: StateCreator<EntityUISlice> = (set, get) => ({
@@ -24,6 +29,8 @@ export const createEntityUISlice: StateCreator<EntityUISlice> = (set, get) => ({
   entityExplorerPanelOpen: localStorage.getItem('entityExplorerPanelOpen') !== 'false',
   spawnInputMinimized: localStorage.getItem('spawnInputMinimized') === 'true',
   focusModeEnabled: false,
+  navigationAssistantOpen: false,
+  navigationInput: '',
 
   openEntityPanel: (entityId: string) => {
     set((state) => {
@@ -63,5 +70,17 @@ export const createEntityUISlice: StateCreator<EntityUISlice> = (set, get) => ({
 
   toggleFocusMode: () => {
     set((state) => ({ focusModeEnabled: !state.focusModeEnabled }));
-  }
+  },
+
+  toggleNavigationAssistant: () => {
+    set((state) => ({ navigationAssistantOpen: !state.navigationAssistantOpen }));
+  },
+
+  closeNavigationAssistant: () => {
+    set({ navigationAssistantOpen: false });
+  },
+
+  setNavigationInput: (value: string) => {
+    set({ navigationInput: value });
+  },
 });

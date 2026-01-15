@@ -7,7 +7,7 @@ import { KeyboardEvent, useCallback } from 'react';
 import { useNavigationLogic } from './useNavigationLogic';
 import { useImageDropLogic } from './useImageDropLogic';
 import { useStore } from '@/store';
-import { IconChevronDown, IconChevronUp, IconInfoCircle, IconLoader2, IconSparkles } from '@/icons';
+import { IconChevronDown, IconChevronUp, IconInfoCircle, IconLoader2, IconSparkles, IconCompass } from '@/icons';
 import { ProgressBar } from '@/components/ui/ProgressBar';
 import { Button, SlashCommandInput } from '@/components/ui';
 import { NAVIGATION_COMMANDS } from '@backend/config/navigation';
@@ -40,6 +40,9 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
   // Get spawn input state from store
   const isMinimized = useStore(state => state.spawnInputMinimized);
   const toggleSpawnInput = useStore(state => state.toggleSpawnInput);
+  
+  // Navigation assistant toggle
+  const toggleNavigationAssistant = useStore(state => state.toggleNavigationAssistant);
   
   // Get active spawns from store
   const activeSpawns = useStore(state => state.activeSpawns);
@@ -193,6 +196,13 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                 placeholder="Type / to see commands... (paste or drop image)"
                 disabled={navigation.state.isMoving}
               />
+              <Button
+                onClick={toggleNavigationAssistant}
+                title="Open Navigation Assistant - AI help for commands"
+                style={{ padding: '0 var(--spacing-sm)' }}
+              >
+                <IconCompass size={18} />
+              </Button>
               <Button
                 onClick={navigation.handlers.handleEnhance}
                 disabled={navigation.state.isEnhancing || navigation.state.isMoving || !navigation.utils.canEnhance()}

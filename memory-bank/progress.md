@@ -97,7 +97,8 @@ Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = i
 | `/SET_WEATHER` | Set weather conditions for world | ✅ |
 | `/GO_INSIDE2` | Enter structures (image edit) | ✅ |
 | `/GOTO2` | Create sibling space in container | ✅ |
-| `/LOOK` | Camera control within same space | ✅ NEW |
+| `/LOOK` | Camera control within same space | ✅ |
+| **Navigation Assistant** | In-app chat for command help | ✅ NEW |
 
 ### Phase 5-6: Navigation ✅ COMPLETE
 
@@ -116,6 +117,11 @@ Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = i
   - Lens mnemonics: 24mm wide, 35mm medium, 85mm close
   - Fine-tuned for windows, panoramas, details
   - Best practices guide: `docs/look-command-best-practices.md`
+- [x] Navigation Assistant Panel ← COMPLETE
+  - In-app chat assistant for navigation help
+  - Command suggestions with insert button
+  - `/bug` command for developer reports
+  - Context-aware (passes node ID, image prompt)
 - [ ] Remove old system
 
 ---
@@ -132,7 +138,8 @@ handlers/
 ├── newWorldLocationInteriorHandler.ts
 ├── goInsideHandler.ts
 ├── gotoHandler.ts
-├── lookHandler.ts  ← NEW
+├── lookHandler.ts
+├── navigationAssistantHandler.ts  ← NEW
 ├── setTimeHandler.ts
 ├── setWeatherHandler.ts
 └── eventsHandler.ts
@@ -143,7 +150,8 @@ handlers/
 prompts/
 ├── shared/dnaSchema.ts
 ├── worldLocationFull.ts        (3-node: Host+Region+Location)
-├── worldLocationInterior.ts    (4-node: +Interior) ← NEW
+├── worldLocationInterior.ts    (4-node: +Interior)
+├── navigationAssistant.ts      (chat assistant prompt) ← NEW
 ├── hostDNA.ts, regionDNA.ts, locationDNA.ts
 └── index.ts
 ```
@@ -163,6 +171,7 @@ prompts/
 - [x] GO_INSIDE2 navigation ← COMPLETE (v1.8)
 - [x] GOTO2 navigation (sibling spaces) ← COMPLETE
 - [x] LOOK command (camera control) ← COMPLETE
+- [x] Navigation Assistant chat panel ← COMPLETE
 - [ ] Remove old system
 - [ ] Character spawn caching test
 - [ ] Bundle size optimization

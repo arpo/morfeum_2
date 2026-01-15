@@ -13,3 +13,4 @@ export { lookHandler } from './lookHandler';
 export { eventsHandler } from './eventsHandler';
 export { setTimeHandler } from './setTimeHandler';
 export { setWeatherHandler } from './setWeatherHandler';
+export { navigationAssistantHandler } from './navigationAssistantHandler';
