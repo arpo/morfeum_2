@@ -13,6 +13,9 @@ The `/LOOK` command creates **view nodes** - camera movements within the same sp
 | Change angle | `/LOOK up at the ceiling` | Dramatic camera tilt |
 | Move through space | `/LOOK walk toward the fireplace` | Camera moves, approaches target |
 | Widen view | `/LOOK step back to see more` | Wider shot, more context |
+| Exterior: zoom in | `/LOOK closer at the tower` | Tight framing on building detail |
+| Exterior: peer inside | `/LOOK in through the window` | Close-up, looking inward through glass |
+| Exterior: approach | `/LOOK approach the entrance` | Camera moves toward door/entrance |
 
 ---
 
@@ -64,7 +67,7 @@ The `/LOOK` command creates **view nodes** - camera movements within the same sp
 
 ### 3. Inspecting Details
 
-**Best for:** Paintings, objects, textures, signage
+**Best for:** Paintings, objects, textures, signage, plants, small features
 
 **✅ Recommended phrasings:**
 ```
@@ -72,7 +75,14 @@ The `/LOOK` command creates **view nodes** - camera movements within the same sp
 /LOOK inspect the bookshelf
 /LOOK at the details on the table
 /LOOK read the sign
+/LOOK read the leaves on the bush
 ```
+
+**💡 Pro tip: Use "read" for extreme close-ups**
+The word "read" implies needing to see fine detail, which produces tighter framing than "zoom in" or "closer at". Great for:
+- Leaves, petals, textures
+- Small text, engravings
+- Intricate patterns
 
 **What happens:** Camera moves close, tight framing with 85mm lens feel. Subject fills most of frame.
 
@@ -126,6 +136,35 @@ The `/LOOK` command creates **view nodes** - camera movements within the same sp
 
 ---
 
+### 7. Exterior View Commands
+
+**Best for:** Looking at a building from outside, zooming in on architectural details, peering in through openings
+
+**✅ Recommended phrasings:**
+```
+/LOOK closer at the tower
+/LOOK zoom in on the ornate door
+/LOOK in through the window
+/LOOK peer inside through the doorway
+/LOOK approach the entrance
+/LOOK at the entrance
+```
+
+**❌ Avoid:**
+```
+/LOOK at the building  (too vague - specify which part)
+/LOOK inside  (ambiguous - use "in through the window" or "peer inside")
+/LOOK at the window  (focuses on window itself, not view inside)
+```
+
+**What happens:** Camera moves closer to the building exterior to frame details, or approaches openings to peer inside. For "look in through", camera presses close to the glass/opening and looks INWARD (opposite of "look out the window").
+
+**Key Pattern - IN vs OUT:**
+- From **interior**: `/LOOK out the window` → looks OUTWARD through glass
+- From **exterior**: `/LOOK in through the window` → looks INWARD through glass
+
+---
+
 ## Phrasing Tips
 
 ### ✅ Do:
@@ -172,6 +211,12 @@ The `/LOOK` command creates **view nodes** - camera movements within the same sp
 
 ### Problem: "Invents new elements that weren't in the scene"
 **Solution:** This is rare but can happen. The command includes explicit instructions not to invent elements. Try rephrasing with more specific existing targets.
+
+### Problem: "Zoom in doesn't get close enough"
+**Solution:** Long descriptive targets like `the large purple bush growing on the house` can dilute the zoom effect. Use shorter, focused targets:
+- ❌ `/LOOK zoom in on the large purple bush growing on the house`
+- ✅ `/LOOK inspect the purple flowers`
+- ✅ `/LOOK read the leaves on the bush` (for extreme close-up)
 
 ---
 
