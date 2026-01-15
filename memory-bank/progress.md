@@ -111,11 +111,13 @@ Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = i
   - Only available from space nodes (`requiresNodeType: ['space']`)
   - Uses parent location's image (not current space)
   - Reuses GO_INSIDE2 LLM prompt + image edit logic
-- [x] LOOK - Camera control within same space ← COMPLETE
+- [x] LOOK - Camera control within same space ← COMPLETE (v2 with immersion)
   - Creates view nodes (camera angles, not locations)
-  - 4 operation types: angle_change, traversal, zoom_in, zoom_out
+  - 5 operation types: angle_change, traversal, zoom_in, zoom_out, **immersion**
   - Lens mnemonics: 24mm wide, 35mm medium, 85mm close
   - Fine-tuned for windows, panoramas, details
+  - **Immersion**: "get into", "dive into", "sit in" - camera positioned inside element
+  - First-person POV enforced (no visible body/hands/feet)
   - Best practices guide: `docs/look-command-best-practices.md`
 - [x] Navigation Assistant Panel ← COMPLETE
   - In-app chat assistant for navigation help

@@ -25,7 +25,8 @@ export type CameraOperation =
   | 'angle_change'    // look up/down, turn, rotate, face
   | 'traversal'       // walk forward, step closer, move to
   | 'zoom_in'         // inspect, look closer, read
-  | 'zoom_out';       // show more, pan, expand view
+  | 'zoom_out'        // show more, pan, expand view
+  | 'immersion';      // get into, dive into, be in (position AS IF inside element)
 
 /**
  * Lens recommendation based on operation
@@ -70,22 +71,28 @@ You must produce a structured output that FLUX.2 can follow reliably.
 
 ## CORE PRINCIPLES (NON-NEGOTIABLE)
 
-1. **Preserve place identity and geometry**
+1. **FIRST-PERSON POV ONLY**
+   * Camera represents the viewer's eyes - NO visible body, hands, feet, or avatar.
+   * NEVER generate a third-person perspective showing a person.
+   * No reflection of a person in mirrors, water, or reflective surfaces.
+   * The viewer IS the camera - invisible, disembodied observation point.
+
+2. **Preserve place identity and geometry**
    * Same place, same architecture, same layout, same object arrangement, same scale.
    * Do not reinterpret structural geometry (walls, stairs, doors, windows, etc.).
    * Do not "redesign" materials or lighting logic; preserve wear, grime, imperfections, and mood.
 
-2. **Semantic camera control**
+3. **Semantic camera control**
    * Treat the prompt as a virtual camera rig: lens + angle + distance + action.
    * Use FLUX.2's instruction-following for reframe/rotation and edit moves.
 
-3. **BOLD, DECISIVE camera movements**
+4. **BOLD, DECISIVE camera movements**
    * Camera movements should be DRAMATIC, not subtle tilts.
    * The target should FILL THE FRAME (60-80% of the view).
    * Movement can be small (step/lean) or larger (walk across the room).
    * Describe movement as continuous and physically plausible.
 
-4. **No implicit state changes**
+5. **No implicit state changes**
    * NEVER open/close/unlock/unfold/reveal contents unless explicitly requested.
    * This is camera movement ONLY - no object interactions.
 
@@ -122,6 +129,13 @@ Triggers: "look closer", "inspect", "zoom in", "read", "see details", "examine",
 ### D) Zoom Out / Expand View (zoom_out)
 Triggers: "zoom out", "show more", "pan", "wider view", "step back"
 → Wider framing, more environment visible, 24mm lens preferred.
+
+### E) Immersion (immersion)
+Triggers: "get into", "dive into", "enter the", "be in", "submerge", "stand in", "sit in", "lie in"
+→ Camera positioned AS IF the viewer is physically inside/within the element.
+→ For water: camera at water level or partially submerged, looking outward at surroundings.
+→ For other elements (chair, bed, vehicle): camera positioned from within, looking out.
+→ The viewer becomes part of the scene element, observing surroundings FROM that position.
 
 ## VIEW NAME GENERATION
 
@@ -217,6 +231,17 @@ Input: "step back to see the whole room"
   "camera": "Step backward and widen the frame to show more of the room. Use 24mm lens, wide shot, f/8.",
   "target": "the room",
   "reveal": "Full room layout, all furniture, doorways, and spatial relationships.",
+  "lens": { "focalLength": "24mm", "aperture": "f/8", "shotDistance": "wide" }
+}
+
+### Example 7: Immersion in Water
+Input: "get into the pool" or "dive into the water"
+{
+  "viewName": "In the Pool",
+  "operation": "immersion",
+  "camera": "View from water level in the pool. Eye-height at the waterline, looking outward at pool surroundings. Use 24mm lens, wide shot, f/8.",
+  "target": "the pool surroundings from water level",
+  "reveal": "The pool edge, surrounding deck, sky, and environment as seen from water level - water surface visible at frame edges.",
   "lens": { "focalLength": "24mm", "aperture": "f/8", "shotDistance": "wide" }
 }
 

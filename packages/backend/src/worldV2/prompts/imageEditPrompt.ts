@@ -488,6 +488,8 @@ Show ${lookResponse.target} prominently - it should fill most of the frame.
 
 Same ${spaceName}, same ${lightingContext}, same style.
 
+FIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.
+
 Only change the camera angle and/or position. Do not invent or add new objects. Show only what already exists from this new viewpoint.`;
 }
 

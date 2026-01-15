@@ -2,6 +2,8 @@
 
 The `/LOOK` command creates **view nodes** - camera movements within the same space that let you explore different angles and perspectives without leaving the location.
 
+> **First-Person POV Only**: All LOOK commands render through the viewer's eyes. No visible body, hands, feet, or avatar will appear. No reflections of a person in mirrors or water.
+
 ## Quick Reference
 
 | Intent | Best Phrasing | Result |
@@ -13,6 +15,7 @@ The `/LOOK` command creates **view nodes** - camera movements within the same sp
 | Change angle | `/LOOK up at the ceiling` | Dramatic camera tilt |
 | Move through space | `/LOOK walk toward the fireplace` | Camera moves, approaches target |
 | Widen view | `/LOOK step back to see more` | Wider shot, more context |
+| Get immersed | `/LOOK get into the pool` | Camera at water level, view surroundings |
 | Exterior: zoom in | `/LOOK closer at the tower` | Tight framing on building detail |
 | Exterior: peer inside | `/LOOK in through the window` | Close-up, looking inward through glass |
 | Exterior: approach | `/LOOK approach the entrance` | Camera moves toward door/entrance |
@@ -136,7 +139,33 @@ The word "read" implies needing to see fine detail, which produces tighter frami
 
 ---
 
-### 7. Exterior View Commands
+### 7. Immersion Commands
+
+**Best for:** Getting "into" something - pools, chairs, vehicles, beds
+
+**✅ Recommended phrasings:**
+```
+/LOOK get into the pool
+/LOOK dive into the water
+/LOOK sit in the chair
+/LOOK lie in the hammock
+/LOOK stand in the fountain
+```
+
+**❌ Avoid:**
+```
+/LOOK go to the pool  (moves toward it, not into it)
+/LOOK at the pool  (looks at it from outside)
+/LOOK enter the pool from the edge  (ambiguous - "from the edge" confuses the action)
+```
+
+**What happens:** Camera positions AS IF you are physically inside/within the element. For water, camera is at water level looking outward at surroundings. For furniture, camera is positioned as if seated/lying with a view of the space.
+
+**Key phrasing:** Use "get into", "dive into", "sit in", "lie in", "stand in" to trigger immersion mode.
+
+---
+
+### 8. Exterior View Commands
 
 **Best for:** Looking at a building from outside, zooming in on architectural details, peering in through openings
 
@@ -217,6 +246,15 @@ The word "read" implies needing to see fine detail, which produces tighter frami
 - ❌ `/LOOK zoom in on the large purple bush growing on the house`
 - ✅ `/LOOK inspect the purple flowers`
 - ✅ `/LOOK read the leaves on the bush` (for extreme close-up)
+
+### Problem: "Shows a person/avatar when I wanted first-person view"
+**Solution:** This should not happen - the system enforces first-person POV. If it does occur, try rephrasing without words that suggest a third-party viewer (e.g., avoid "watch someone swim" - use "get into the pool" instead).
+
+### Problem: "Get into X positioned me AT the edge, not IN it"
+**Solution:** Use clear immersion triggers:
+- ❌ `/LOOK get into the pool from the edge` (confusing - "from the edge" muddles the intent)
+- ✅ `/LOOK get into the pool` (clear immersion)
+- ✅ `/LOOK dive into the water` (clear immersion)
 
 ---
 

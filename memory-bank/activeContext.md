@@ -1,6 +1,42 @@
 # Active Context
 
+## 2026-01-15 - LOOK Command Fine-Tuning (Immersion + First-Person POV) ✅
+
+### Session 2: Added Immersion Operation & First-Person Enforcement
+
+Added new `immersion` operation type and strengthened first-person POV constraints.
+
+**Changes Made:**
+
+1. **New Operation Type: `immersion`**
+   - Triggers: "get into", "dive into", "sit in", "stand in", "lie in"
+   - Purpose: Position camera AS IF viewer is inside/within an element
+   - Example: `/LOOK get into the pool` → camera at water level looking out
+
+2. **First-Person POV Enforcement**
+   - Added as Core Principle #1 in `look.ts`
+   - Added to `buildLookImageEditPrompt()` in `imageEditPrompt.ts`
+   - Camera = viewer's eyes, NO visible body/hands/feet/avatar
+
+3. **Updated Documentation**
+   - `docs/look-command-best-practices.md` - Added Section 7: Immersion Commands
+   - `navigationAssistant.ts` - Updated with immersion operation and troubleshooting
+
+### Key Lesson Learned: Prompt Literalism
+
+**Problem:** When we tried to strengthen the prompt with "DISEMBODIED CAMERA" and "floating camera", the edit model interpreted this literally and added a visible camera object to the image!
+
+**Solution:** Reverted to simpler language:
+- ❌ "Disembodied camera floating at water surface level. NOT a person swimming - just a floating camera."
+- ✅ "View from water level in the pool. Eye-height at the waterline, looking outward at pool surroundings."
+
+**Best Practice:** Describe the VIEW, not the camera mechanics. Avoid words like "camera", "floating", "disembodied" in edit prompts.
+
+---
+
 ## 2026-01-15 - LOOK Command Implementation ✅
+
+### Session 1: Initial Implementation
 
 Implemented `/LOOK` command for camera control within same space. Creates **view nodes** (camera angles without location change).
 
@@ -29,6 +65,7 @@ Implemented `/LOOK` command for camera control within same space. Creates **view
 | `traversal` | walk toward, approach | 35mm medium | Camera moves through space |
 | `zoom_in` | inspect, closer, out the window | 85mm close | Tight framing on target |
 | `zoom_out` | step back, wider view | 24mm wide | Shows more context |
+| `immersion` | get into, dive into, sit in | 24mm wide | Camera positioned inside element |
 
 ### Key Prompt Tuning
 

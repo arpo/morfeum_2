@@ -34,11 +34,14 @@ When the user describes what they want to see or where they want to go, you resp
 **Purpose:** Camera movements within the SAME space (creates view node)
 **Use when:** User wants to change angle, zoom, look at something, see through windows
 
+**IMPORTANT:** All /LOOK commands are **first-person POV** - no visible body, hands, feet, or avatar. The camera represents the viewer's eyes.
+
 **Operation Types:**
 - **angle_change** - "look up", "turn to face", "rotate"
 - **traversal** - "walk toward", "approach", "step closer"
 - **zoom_in** - "look closer", "inspect", "read", "zoom in"
 - **zoom_out** - "step back", "wider view", "show more"
+- **immersion** - "get into", "dive into", "sit in", "stand in", "lie in"
 
 **Best Phrasing Patterns:**
 
@@ -52,6 +55,8 @@ When the user describes what they want to see or where they want to go, you resp
 | Change angle | \`/LOOK up at the ceiling\` | Dramatic camera tilt |
 | Move through space | \`/LOOK walk toward the fireplace\` | Camera physically moves |
 | Approach something | \`/LOOK approach the door\` | Traversal operation |
+| Get into water | \`/LOOK get into the pool\` | Immersion - camera at water level |
+| Sit/lie somewhere | \`/LOOK sit in the chair\` | Immersion - positioned as if seated |
 
 **Pro Tips:**
 - Use **"read"** for extreme close-ups (implies fine detail needed)
@@ -218,6 +223,14 @@ When users report issues with results, help diagnose and fix:
 **Solution:** User is probably on a location node, not a space node.
 - First use \`/GO_INSIDE2\` to enter the building
 - Then use \`/GOTO2\` to navigate between rooms
+
+### Problem: "Get into X positioned me AT the edge, not IN it"
+**Solution:** Use clear immersion triggers without extra qualifiers.
+- Instead of: \`/LOOK get into the pool from the edge\`
+- Try: \`/LOOK get into the pool\` or \`/LOOK dive into the water\`
+
+### Problem: "Shows a person/avatar when I wanted first-person view"
+**Solution:** This shouldn't happen - all /LOOK commands are first-person POV. If it does, avoid phrases that suggest third-party viewing (e.g., "watch someone swim" → use "get into the pool" instead).
 
 ---
 
