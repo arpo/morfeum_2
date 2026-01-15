@@ -14,6 +14,8 @@ export interface TreeItem {
   isExpanded?: boolean; // Initial expanded state (optional)
   /** True for pass-through regions that inherit all DNA from host */
   isPassThrough?: boolean;
+  /** True for view nodes (camera angles within a space) - styled with italic text */
+  isView?: boolean;
 }
 
 interface TreeViewProps {
@@ -73,9 +75,9 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
   return (
     <div className={styles.itemContainer}>
       <div 
-        className={`${styles.itemContent} ${isSelected ? styles.selected : ''} ${item.isPassThrough ? styles.passThrough : ''}`}
+        className={`${styles.itemContent} ${isSelected ? styles.selected : ''} ${item.isPassThrough ? styles.passThrough : ''} ${item.isView ? styles.viewNode : ''}`}
         onClick={handleSelect}
-        title={item.isPassThrough ? 'Pass-through region (inherits from host)' : undefined}
+        title={item.isPassThrough ? 'Pass-through region (inherits from host)' : item.isView ? 'View (camera angle)' : undefined}
       >
         {hasChildren ? (
           <div 

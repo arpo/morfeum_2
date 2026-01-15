@@ -1,602 +1,225 @@
 {
   "nodes": {
-    "v2-1768394817652-uewrwobpf": {
-      "id": "v2-1768394817652-uewrwobpf",
+    "v2-1768466685305-0loyvyf0g": {
+      "id": "v2-1768466685305-0loyvyf0g",
       "type": "host",
-      "name": "Tulum",
-      "slug": "tulum",
-      "description": "A coastal resort town in Mexico's Yucatán Peninsula, known for its Mayan ruins and vibrant nightlife.",
-      "genre": "Coastal",
-      "weather": "clear and sunny",
-      "timeOfDay": "night",
+      "name": "Aethelgard",
+      "slug": "aethelgard",
+      "description": "A sun-drenched land where ancient architectural styles blend with vibrant natural beauty, bathed in the perpetual glow of twilight.",
+      "genre": "Fantasy",
+      "weather": "clear",
+      "timeOfDay": "dusk",
       "dna": {
         "essence": [
-          "Mayan ruins",
-          "tropical coast",
-          "festivals"
+          "Mediterranean-Moorish architecture",
+          "exotic flora",
+          "ancient empires"
         ],
         "formsAndMaterials": [
-          "limestone",
-          "thatched roofs",
-          "jungle flora"
+          "whitewashed textured walls",
+          "arched windows",
+          "patterned domes",
+          "tiles",
+          "stone",
+          "bougainvillea"
         ],
         "colorAndLight": [
-          "bright turquoise ocean",
-          "lush green jungle",
-          "golden sand",
-          "vibrant festival lights"
+          "warm amber",
+          "vibrant purple",
+          "emerald green",
+          "sky blue",
+          "sunset hues"
         ],
         "atmosphere": [
-          "festive",
-          "tropical",
-          "ancient",
-          "lively"
+          "serene",
+          "inviting",
+          "architectural",
+          "picturesque",
+          "elegant",
+          "exotic"
         ],
         "banned": [
-          "snow",
-          "urban sprawl"
+          "brutalism",
+          "industrial smog"
         ]
       },
-      "spaceType": "exterior",
-      "primaryMedia": "media-1768396097686-20rn2ovm2"
+      "spaceType": "exterior"
     },
-    "v2-1768394817652-mv408hxgt": {
-      "id": "v2-1768394817652-mv408hxgt",
+    "v2-1768466685306-3gcjw1zbs": {
+      "id": "v2-1768466685306-3gcjw1zbs",
       "type": "region",
-      "name": "Region",
-      "slug": "region",
-      "description": "Pass-through region in Tulum",
-      "isPassThrough": true,
+      "name": "The Azure Coast",
+      "slug": "the-azure-coast",
+      "description": "A picturesque stretch of coastline known for its unique architectural wonders and vibrant, cascading flora, under a sky of perpetual twilight.",
+      "isPassThrough": false,
       "dna": {
-        "essence": [],
-        "formsAndMaterials": [],
-        "colorAndLight": [],
-        "atmosphere": [],
+        "essence": [
+          "coastal architecture",
+          "vibrant blooms"
+        ],
+        "formsAndMaterials": [
+          "whitewashed textured walls",
+          "arched windows",
+          "patterned domes",
+          "tiles",
+          "palm trees"
+        ],
+        "colorAndLight": [
+          "vibrant purple",
+          "emerald green",
+          "sky blue",
+          "sunset hues"
+        ],
+        "atmosphere": [
+          "mediterranean",
+          "picturesque",
+          "serene"
+        ],
         "banned": []
       }
     },
-    "v2-1768394817652-90gkbgrnt": {
-      "id": "v2-1768394817652-90gkbgrnt",
+    "v2-1768466685306-li0rpn72x": {
+      "id": "v2-1768466685306-li0rpn72x",
       "type": "location",
-      "name": "Zero Day Festival Entrance",
-      "slug": "zero-day-festival-entrance",
+      "name": "The Twilit Tower Residence",
+      "slug": "the-twilit-tower-residence",
       "spaceType": "exterior",
-      "description": "The bustling, decorated entrance to the Zero Day Festival, alive with music and crowds under the warm afternoon sun.",
+      "description": "A distinctive, multi-storied building with whitewashed, textured walls, featuring numerous arched windows, some with intricate grilles. A prominent tower is topped with a green and white patterned dome. Vibrant purple bougainvillea cascades down one side, and the entrance is marked by a wide archway decorated with blue and white tiles. Palm trees surround the building.",
       "dna": {
         "essence": [
-          "festival atmosphere",
-          "tropical setting"
+          "Moorish tower",
+          "bougainvillea trellis"
         ],
         "formsAndMaterials": [
-          "temporary structures",
-          "vibrant banners",
-          "jungle foliage integration"
+          "intricate grilles",
+          "blue and white tiles",
+          "domed roof"
         ],
         "colorAndLight": [
-          "dynamic festival lighting",
-          "sun-dappled path"
+          "warm glow from within",
+          "soft street lighting"
         ],
         "atmosphere": [
-          "energetic",
-          "joyful",
-          "enchanting"
+          "inviting",
+          "elegant",
+          "exotic"
         ],
         "banned": []
       },
-      "primaryMedia": "media-1768394821323-gw133g32i"
+      "primaryMedia": "media-1768466689478-tp5fvg7zg"
     },
-    "v2-1768394868245-ly9ndx04p": {
-      "id": "v2-1768394868245-ly9ndx04p",
+    "v2-1768466715099-rhy4ou8ql": {
+      "id": "v2-1768466715099-rhy4ou8ql",
       "type": "container",
-      "name": "Zero Day Festival",
-      "slug": "zero-day-festival",
-      "description": "The vibrant and immersive grounds of the Zero Day Festival, a celebration of music and culture set against a tropical backdrop.",
+      "name": "The Twilit Tower Residence",
+      "slug": "the-twilit-tower-residence",
+      "description": "A distinguished, multi-story dwelling characterized by its textured, whitewashed walls, punctuated by arched windows and a striking green and white domed tower. Vibrant floral cascades and tile-adorned entrance add to its exotic charm, set amidst lush palm trees.",
       "forbiddenTransformations": [
-        "The festival grounds appearing sterile or lacking in decorative elements.",
-        "The jungle foliage being absent or not integrated with the festival structures.",
-        "The atmosphere becoming subdued or devoid of energy.",
-        "The color palette shifting away from warm yellows, oranges, and blues."
+        "exterior view visible",
+        "clear sky visible through windows",
+        "direct sunlight",
+        "tropical foliage inside",
+        "outdoor furniture",
+        "beach or ocean elements"
       ],
-      "parentId": "v2-1768394817652-90gkbgrnt"
+      "parentId": "v2-1768466685306-li0rpn72x"
     },
-    "v2-1768394868245-8wu1um70s": {
-      "id": "v2-1768394868245-8wu1um70s",
+    "v2-1768466715099-vw6g7wsj7": {
+      "id": "v2-1768466715099-vw6g7wsj7",
       "type": "space",
-      "name": "Festival Main Area",
-      "slug": "festival-main-area",
-      "description": "The heart of the Zero Day Festival, alive with the sounds of music, colorful decorations, and a lively throng of festival-goers.",
-      "spaceType": "semi-enclosed",
-      "dna": {
-        "essence": [
-          "tropical celebration",
-          "Mayan-inspired artistry",
-          "vibrant communal gathering"
-        ],
-        "formsAndMaterials": [
-          "fabric banners",
-          "wood framework",
-          "integrated jungle flora"
-        ],
-        "colorAndLight": [
-          "warm yellows, oranges, blues",
-          "sun-dappled, dynamic festival lighting"
-        ],
-        "atmosphere": [
-          "joyful",
-          "energetic",
-          "enchanting"
-        ],
-        "banned": [
-          "stark modern architecture",
-          "monochromatic color schemes",
-          "overly industrial materials"
-        ]
-      },
-      "promptLayers": {
-        "background": "Distant structures of temporary festival stages and vendor stalls, adorned with vibrant, patterned banners in warm yellows, oranges, and deep blues, interspersed with lush, artfully arranged jungle foliage. The canopy above is a lattice of fabric and perhaps some structural elements, allowing dappled sunlight to filter through.",
-        "midground": "The main festival thoroughfares, teeming with people milling about. Elaborate, temporarily erected structures with intricate Mayan-inspired designs are visible. More jungle plants are woven into the decor, creating a sense of organic integration. Paths are worn smooth by foot traffic.",
-        "foreground": "Close-up views of the sun-dappled ground, with fallen palm fronds or bright tropical flowers at the edge of the path. People's feet and legs moving through the space, perhaps a glimpse of colorful festival attire.",
-        "lighting": "Sunlight filtering through gaps in the semi-enclosed canopy, creating dynamic sun-dappled patterns on the ground and structures. The warm hues of the banners and decorations subtly reflect this light. Occasional, softer glow from decorative festival lights might be present, complementing the natural sunlight.",
-        "atmosphere": "A palpable sense of joyous energy and communal celebration. The implied sound of distant music and a happy murmur of voices contribute to the vibrant, enchanting atmosphere within this tropical paradise."
-      },
-      "forbiddenTransformations": [
-        "The canopy overhead becoming a solid, opaque roof, blocking all natural light.",
-        "The vibrant banners being replaced with plain or single-colored fabrics.",
-        "The jungle foliage disappearing or appearing artificial.",
-        "The ground becoming bare concrete or asphalt without any sun-dappling.",
-        "The atmosphere shifting to quiet or somber.",
-        "Modern, minimalist architectural elements intruding into the space."
-      ],
-      "parentId": "v2-1768394868245-ly9ndx04p",
-      "primaryMedia": "media-1768394872979-qxo3tdol8"
-    },
-    "v2-1768395060657-jic50c87g": {
-      "id": "v2-1768395060657-jic50c87g",
-      "type": "space",
-      "name": "Festival Plaza",
-      "slug": "festival-plaza",
-      "description": "The heart of the Zero Day Festival, this expansive open plaza teems with life and color. Intricate decorations and art installations create a dazzling spectacle under the bright afternoon sun.",
-      "spaceType": "outdoor",
-      "dna": {
-        "essence": [
-          "Vibrant Celebration",
-          "Tropical Paradise",
-          "Artistic Expression",
-          "Mayan Influence"
-        ],
-        "formsAndMaterials": [
-          "Temporary Structures",
-          "Vibrant Banners",
-          "Natural Foliage Integration",
-          "Sun-Dappled Ground"
-        ],
-        "colorAndLight": [
-          "Warm Yellows",
-          "Oranges",
-          "Deep Blues",
-          "Brilliant Azure Sky",
-          "Sharp Sunlight",
-          "Sun-Dappled Patterns"
-        ],
-        "atmosphere": [
-          "Energetic",
-          "Joyful",
-          "Enchanting",
-          "Bustling"
-        ],
-        "banned": [
-          "Modern concrete architecture",
-          "Overly stylized futuristic elements",
-          "Dark or muted color palettes",
-          "Heavy industrial machinery"
-        ]
-      },
-      "promptLayers": {
-        "background": "The lush, silhouette of Mayan jungle foliage against a brilliant azure sky. Distant, artfully integrated festival banners peek through the dense greenery.",
-        "midground": "Vibrant temporary structures adorned with warm yellow, orange, and deep blue banners. Intricate Mayan-inspired designs are visible on facades. People mingle and move through the space, creating a dynamic flow.",
-        "foreground": "The sun-dappled ground of the plaza, with hints of colorful festival footwear and stray tropical leaves. The edges of the space blend into more dense jungle foliage.",
-        "lighting": "Bright, direct afternoon sunlight casting sharp, dynamic shadows. Sun-dappled patterns are scattered across the ground and structures, highlighting the vibrant colors.",
-        "atmosphere": "The air hums with the implied sounds of music and cheerful chatter. An overwhelming sense of joyous energy and vibrant celebration permeates the space."
-      },
-      "forbiddenTransformations": [
-        "The plaza becoming enclosed by solid walls or a solid roof.",
-        "The sky becoming obscured or replaced by artificial lighting.",
-        "The vibrant banners and decorations being removed or replaced with drab materials.",
-        "The presence of heavy, permanent architectural structures.",
-        "The jungle foliage being absent or replaced by urban plants.",
-        "The atmosphere shifting to quiet, somber, or monotonous."
-      ],
-      "parentId": "v2-1768394868245-ly9ndx04p",
-      "primaryMedia": "media-1768395064994-anq0f7hk9"
-    },
-    "v2-1768395126483-e28qpdfpb": {
-      "id": "v2-1768395126483-e28qpdfpb",
-      "type": "space",
-      "name": "The Dance Floor Under the Stars",
-      "slug": "the-dance-floor-under-the-stars",
-      "description": "An open-air dance floor nestled amidst the festival grounds, illuminated by the vibrant glow of stage lights and the vast expanse of the night sky.",
-      "spaceType": "outdoor",
-      "dna": {
-        "essence": [
-          "Tropical Celebration",
-          "Night Sky",
-          "Rhythmic Energy"
-        ],
-        "formsAndMaterials": [
-          "Temporary festival structures",
-          "Natural jungle elements",
-          "Densely packed crowd"
-        ],
-        "colorAndLight": [
-          "Vibrant stage lighting",
-          "Deep indigo sky",
-          "Warm reflected hues"
-        ],
-        "atmosphere": [
-          "Exhilarating",
-          "Communal",
-          "Enchanting"
-        ],
-        "banned": [
-          "Overtly modern or utilitarian structures",
-          "Signs of decay or disrepair",
-          "Artificial day lighting",
-          "Silence or lack of implied music"
-        ]
-      },
-      "promptLayers": {
-        "background": "Distant silhouettes of Mayan jungle foliage, now under a vast, star-speckled indigo night sky. Faint, pulsing lights from further festival areas can be seen in the far distance.",
-        "midground": "The main dance floor area, packed with revelers. Large, artfully decorated festival stages with vibrant banners in warm yellows, oranges, and deep blues dominate the midground, casting dynamic, colored light. Jungle foliage is woven through the decorative elements, creating a unique fusion.",
-        "foreground": "The immediate area of the dance floor, showing the energetic movement of festival-goers. The ground might be a mix of packed earth and scattered decorative elements. Hints of stray palm fronds or tropical flowers are still visible at the edges.",
-        "lighting": "A dynamic interplay of vibrant stage lighting in intense hues of blue, purple, and yellow, casting sharp, colored shadows. The overall illumination is energetic and pulsating, contrasting with the deep, natural light of the stars and moon above. Warm hues from nearby banners reflect onto surfaces.",
-        "atmosphere": "Exhilarating and communal. The air thrums with the beat of music and the collective energy of the dancing crowd. It feels magical, a vibrant, pulsating heart of celebration under the celestial canvas."
-      },
-      "forbiddenTransformations": [
-        "The sky becoming obscured by a solid roof or structure",
-        "The vibrant stage lighting being replaced by dim, uniform ambient light",
-        "The crowd dispersing, leaving the dance floor empty",
-        "The integration of jungle foliage disappearing",
-        "The temperature feeling anything other than warm and tropical",
-        "The Mayan art motifs being absent from the festival structures"
-      ],
-      "parentId": "v2-1768394868245-ly9ndx04p",
-      "primaryMedia": "media-1768395130912-bov85t70f"
-    },
-    "v2-1768395804720-24esuvg4s": {
-      "id": "v2-1768395804720-24esuvg4s",
-      "type": "space",
-      "name": "The Chill Out Area",
-      "slug": "the-chill-out-area",
-      "description": "A serene oasis within the festival's energy, this area offers plush seating and ambient sounds. Soft lighting filters through woven canopies, creating a tranquil escape.",
-      "spaceType": "semi-enclosed",
-      "dna": {
-        "essence": [
-          "Tranquil escape",
-          "Tropical comfort",
-          "Ambient relaxation"
-        ],
-        "formsAndMaterials": [
-          "Woven natural fibers",
-          "Soft textiles",
-          "Carved wood accents"
-        ],
-        "colorAndLight": [
-          "Muted warm tones",
-          "Soft, diffused light"
-        ],
-        "atmosphere": [
-          "Calm",
-          "Relaxed",
-          "Restorative"
-        ],
-        "banned": [
-          "Harsh, direct sunlight",
-          "Loud, jarring music",
-          "Sharp, angular furniture",
-          "Overly modern, sterile design"
-        ]
-      },
-      "promptLayers": {
-        "background": "Distant, softly lit festival banners and integrated jungle foliage seen through a patterned, woven canopy overhead. The ceiling is a lattice of bamboo and lush vines.",
-        "midground": "Oversized, comfortable seating arrangements covered in soft, muted textiles. Low tables with intricate, perhaps Mayan-inspired, carvings. Soft ambient lights are integrated into decorative elements.",
-        "foreground": "Plush floor cushions and rugs in warm, earthy tones. The dappled sunlight from the exterior is significantly filtered and softened by the overhead canopy.",
-        "lighting": "Warm, diffused light filters through the woven canopy, creating a soft, ambient glow. Integrated decorative lights provide gentle illumination, avoiding harshness.",
-        "atmosphere": "A palpable sense of calm and ease, a stark contrast to the festival's main areas. The air feels relaxed and inviting, perfect for unwinding."
-      },
-      "forbiddenTransformations": [
-        "The chill out area becoming as loud and crowded as the festival entrance",
-        "The seating being hard and uncomfortable",
-        "The lighting becoming bright and direct, negating the 'chill out' effect",
-        "The materials appearing synthetic or cheap",
-        "The atmosphere turning tense or anxious",
-        "Sky being fully visible, without the filtering canopy",
-        "Visible festival speakers blasting loud music"
-      ],
-      "parentId": "v2-1768394868245-ly9ndx04p",
-      "primaryMedia": "media-1768395816672-1l2732qtg"
-    },
-    "v2-1768397838379-y4bhi8950": {
-      "id": "v2-1768397838379-y4bhi8950",
-      "type": "space",
-      "name": "Oceanfront Chamber",
-      "slug": "oceanfront-chamber",
-      "description": "A cavernous chamber within the ancient ruin, open to the bracing ocean air. Salt spray mists the weathered stones, and the rhythmic crash of waves provides a constant soundtrack.",
-      "spaceType": "semi-enclosed",
-      "dna": {
-        "essence": [
-          "ancient",
-          "oceanic",
-          "weathered",
-          "tropical-archaeology"
-        ],
-        "formsAndMaterials": [
-          "rough-hewn stone",
-          "ancient masonry",
-          "sea-worn surfaces",
-          "open archways"
-        ],
-        "colorAndLight": [
-          "muted earth tones",
-          "oceanic blues and greens",
-          "sun-dappled and sea-mist diffused light"
-        ],
-        "atmosphere": [
-          "mysterious",
-          "timeless",
-          "reverent",
-          "awe-inspiring"
-        ],
-        "banned": [
-          "modern polished surfaces",
-          "electric lighting fixtures",
-          "plastic or synthetic materials",
-          "futuristic architectural elements"
-        ]
-      },
-      "promptLayers": {
-        "background": "Distant, hazy view of the endless azure ocean through large, irregularly shaped openings in the stone walls. The sky above is a brilliant, clear blue. The inner surfaces of the stone walls are visible, showing signs of ancient carving and erosion.",
-        "midground": "The main body of the chamber, characterized by massive, rough-hewn stone blocks forming partial walls and archways. Hints of Mayan-inspired carvings might be subtly visible, worn by time. The floor is uneven, composed of packed earth and scattered pebbles.",
-        "foreground": "Close-up texture of the weathered stone floor and the base of the ancient walls. Small, hardy sea-grasses or hardy tropical plants might be seen growing in crevices. The edge of the open ocean expanse is clearly visible.",
-        "lighting": "Bright, natural sunlight streams in through the open archways and gaps in the stonework, creating dynamic patterns of light and shadow. The light is slightly diffused by sea mist, giving it a soft, ethereal quality. The colors of the ocean and sky are reflected softly on the stone surfaces.",
-        "atmosphere": "A sense of profound peace and timelessness pervades the chamber. The constant, powerful sound of the ocean is both calming and exhilarating. The air is fresh and carries the scent of salt and damp stone, evoking a feeling of discovery and ancient grandeur."
-      },
-      "forbiddenTransformations": [
-        "Adding a solid, modern roof structure.",
-        "Introducing any enclosed, indoor-feeling spaces within this chamber.",
-        "Depicting a perfectly flat, paved floor.",
-        "Showing any signs of electronic devices or modern amenities.",
-        "Filling the openings with glass panels.",
-        "Introducing dense, overhanging jungle foliage directly into the chamber."
-      ],
-      "parentId": "v2-1768394868245-ly9ndx04p",
-      "primaryMedia": "media-1768397842659-p9io888gn"
-    },
-    "v2-1768398872217-67oapys6j": {
-      "id": "v2-1768398872217-67oapys6j",
-      "type": "space",
-      "name": "Festival Beach Shore",
-      "slug": "festival-beach-shore",
-      "description": "A pristine stretch of golden sand, where the Zero Day Festival meets the ocean. The air is alive with the gentle lapping of waves and the distant festival buzz, all under the broad, open sky.",
-      "spaceType": "outdoor",
-      "dna": {
-        "essence": [],
-        "formsAndMaterials": [
-          "soft golden sands",
-          "clear turquoise ocean",
-          "gentle waves",
-          "natural rock formations",
-          "scattered tropical flora",
-          "lightweight festival installations"
-        ],
-        "colorAndLight": [
-          "oceanic blues and greens",
-          "sparkling water reflections",
-          "sun-dappled sand patterns"
-        ],
-        "atmosphere": [
-          "refreshing",
-          "expansive",
-          "serene yet lively"
-        ],
-        "banned": [
-          "industrial structures on the beach",
-          "polluted or murky water",
-          "barren or rocky shorelines without sand",
-          "heavy urban elements",
-          "overcast, stormy, or perpetually dark skies"
-        ]
-      },
-      "promptLayers": {
-        "background": "Distant, deep blue ocean meeting the brilliant azure sky on the horizon, framed by the lush silhouette of Mayan jungle foliage along the coastline. The vastness of the sea emphasizes the natural setting.",
-        "midground": "A wide expanse of sun-warmed golden sand, gently lapped by clear, sparkling turquoise waves. Scattered festivalgoers are enjoying the beach, with some vibrant, temporary festival flags and lightweight structures visible further down the shore, blending seamlessly with the natural beauty.",
-        "foreground": "Close-up details of soft, textured sand, small seashells, and the foamy, translucent edge of incoming waves. Playful footprints might indent the sand, or a few stray tropical flowers could be partially buried near the waterline.",
-        "lighting": "Bright, clear afternoon sunlight bathing the entire scene in a warm, natural glow. The sun casts shimmering highlights on the water's surface and creates soft, dappled patterns on the sand. The light is open and unfiltered, characteristic of a sunny tropical day.",
-        "atmosphere": "An energetic yet profoundly serene blend of joyful festival celebration and the peaceful, refreshing embrace of a tropical beach paradise. The gentle rhythm of the waves provides a calming counterpoint to the distant, lively festival sounds, evoking a sense of tranquil exhilaration."
-      },
-      "forbiddenTransformations": [
-        "Introducing artificial, polluted, or dark, ominous water",
-        "Replacing sandy shores with sharp, barren rocky cliffs or concrete embankments",
-        "Removing the tropical jungle backdrop and replacing it with an urban skyline or desert",
-        "Introducing heavy, permanent commercial structures like high-rise hotels or industrial docks",
-        "Shifting the atmosphere to desolate, eerie, or overtly melancholic",
-        "Incorporating snow, ice, or temperate climate elements",
-        "Eliminating all connections to the festival's vibrant energy and aesthetic"
-      ],
-      "parentId": "v2-1768394868245-ly9ndx04p",
-      "primaryMedia": "media-1768398877023-zuwn4uck0"
-    },
-    "v2-1768399337789-mggdxbo0i": {
-      "id": "v2-1768399337789-mggdxbo0i",
-      "type": "space",
-      "name": "Hidden Jungle Dance Floor",
-      "slug": "hidden-jungle-dance-floor",
-      "description": "A small, intimate dance floor nestled deep within the jungle, partially covered by lush canopies and illuminated by soft, ambient festival lights. The air hums with distant music, creating a secluded and magical party atmosphere.",
-      "spaceType": "semi-enclosed",
-      "dna": {
-        "essence": [
-          "hidden jungle rave",
-          "Mayan-inspired celebration",
-          "enchanted tropical grove"
-        ],
-        "formsAndMaterials": [
-          "organic jungle foliage",
-          "temporary woven structures",
-          "natural earth and stone"
-        ],
-        "colorAndLight": [
-          "vibrant jungle greens and blues",
-          "warm festival oranges and yellows",
-          "dappled, filtered light"
-        ],
-        "atmosphere": [
-          "secluded revelry",
-          "magical discovery",
-          "energetic yet intimate"
-        ],
-        "banned": [
-          "stark, modern architectural elements",
-          "overly manufactured or artificial terrain",
-          "clear, direct overhead sunlight",
-          "signs of decay or abandonment",
-          "heavy machinery or industrial equipment"
-        ]
-      },
-      "promptLayers": {
-        "background": "Thick, overlapping jungle foliage forming a natural canopy, with glimpses of the distant azure sky filtered through dense leaves. Hints of woven festival decorations are subtly integrated into the vegetation.",
-        "midground": "A circular area of packed earth or moss serves as the dance floor, surrounded by vibrant jungle plants and artfully placed, low-profile festival lighting structures that cast warm, colored glows.",
-        "foreground": "The packed earth or moss floor of the dance space, with scattered fallen leaves and small, luminous tropical flowers. The edge of the space might show roots or natural ground cover.",
-        "lighting": "Soft, dappled sunlight filters through the dense jungle canopy, mingling with the warm, colored ambient light from hidden festival lamps, creating a magical, glowing atmosphere.",
-        "atmosphere": "An intimate, enchanting, and energetic party vibe, feeling like a secret discovery within the vibrant jungle."
-      },
-      "forbiddenTransformations": [
-        "Complete removal of jungle foliage",
-        "Replacing the dance floor with open, clear grassland",
-        "Introducing harsh, direct artificial spotlights",
-        "Making the space fully enclosed with solid walls",
-        "Removing all traces of the festival's decorative elements",
-        "Introducing large, imposing architectural structures",
-        "Replacing the ground surface with concrete or asphalt"
-      ],
-      "parentId": "v2-1768394868245-ly9ndx04p",
-      "primaryMedia": "media-1768399342626-j12cuvmui"
-    },
-    "v2-1768399529677-bu2n9iadu": {
-      "id": "v2-1768399529677-bu2n9iadu",
-      "type": "space",
-      "name": "Jungle-Encroached Starship Chamber",
-      "slug": "jungle-encroached-starship-chamber",
-      "description": "You are inside a chamber within the derelict alien spacecraft, where the jungle has aggressively reclaimed the space. Rusty metal hull plates are intertwined with thick vines and moss, and the air is humid and earthy.",
+      "name": "Grand Vestibule",
+      "slug": "grand-vestibule",
+      "description": "You have entered the residence's main entry chamber. The space is defined by smooth, cool tile floors and the continuation of the textured whitewashed walls. An archway leads further into the dwelling, while ornate grilles on nearby windows hint at the architectural style.",
       "spaceType": "indoor",
       "dna": {
         "essence": [
-          "ancient alien technology",
-          "jungle reclamation",
-          "Inca decay",
-          "rusty derelict"
+          "elegant residence",
+          "twilight allure",
+          "coastal exoticism"
         ],
         "formsAndMaterials": [
-          "curved, corroded metal",
-          "organic growth",
-          "stone fragments",
-          "thick vines"
+          "arched openings",
+          "tiled floors",
+          "textured plaster walls",
+          "ornate grilles",
+          "dark wood accents"
         ],
         "colorAndLight": [
-          "muted metallic rust",
-          "deep jungle greens",
-          "earthy browns",
-          "filtered, dim light"
+          "soft twilight palette",
+          "warm interior glow",
+          "ambient dimness"
         ],
         "atmosphere": [
-          "mysterious",
-          "forgotten",
-          "oppressive humidity",
-          "ancient secrets"
+          "inviting",
+          "tranquil",
+          "sophisticated"
         ],
         "banned": [
-          "glowing functional alien lights",
-          "clean, polished surfaces",
-          "visible modern tools",
-          "obvious alien symbols",
-          "sound of active machinery"
+          "glowing crystals",
+          "mechanical parts",
+          "overly futuristic designs",
+          "ancient ruins",
+          "dense jungle foliage"
         ]
       },
       "promptLayers": {
-        "background": "Curved, corroded spaceship hull plates that disappear into darkness, interwoven with thick, dark green jungle vines and moss.",
-        "midground": "A central chamber area with large, rusted alien machinery partially obscured by encroaching vegetation and weathered stone fragments that resemble Inca stonework.",
-        "foreground": "The floor is a mix of damp, decaying organic matter, mossy stone, and patches of rusted metal plating, with roots snaking across the surface.",
-        "lighting": "Dim, filtered light that penetrates through gaps in the hull and dense foliage, casting long, eerie shadows; the dominant light palette is the dull glow of rust and deep greens.",
-        "atmosphere": "Thick, humid, and stagnant, carrying the scent of decay and damp earth; a palpable sense of forgotten history and the overwhelming power of nature's reclamation."
+        "background": "Textured whitewashed plaster walls stretching to a high, unseen ceiling, a prominent archway visible leading deeper into the residence.",
+        "midground": "Ornate metal grilles on recessed arched windows, hints of dark wooden furniture or decorative elements.",
+        "foreground": "Smooth, cool floor tiles in a subtle blue and white pattern, possibly worn from use.",
+        "lighting": "Soft, warm ambient light originating from unseen sources within the residence, casting gentle shadows and highlighting the textured walls.",
+        "atmosphere": "A tranquil and inviting interior ambiance, a sense of serene arrival, echoing the twilight mood outside but contained within."
       },
       "forbiddenTransformations": [
-        "The interior should not appear clean or recently used.",
-        "Any technology should look clearly ancient and non-functional.",
-        "The jungle growth should feel wild and actively consuming the structure.",
-        "No signs of current habitation or recent activity.",
-        "The light should be dim and naturalistic (filtered sunlight, not active alien glow).",
-        "The space should not feel like an accessible or maintained ruin.",
-        "The overall impression should be one of abandonment and decay over millennia."
+        "any view of the outside sky",
+        "direct sunlight",
+        "bright artificial lights",
+        "outdoor plants",
+        "open air",
+        "visible tower dome structure",
+        "tropical jungle elements",
+        "modern minimalist furniture"
       ],
-      "parentId": "v2-1768394868245-ly9ndx04p",
-      "primaryMedia": "media-1768399535709-eqdcu8zcy"
+      "parentId": "v2-1768466715099-rhy4ou8ql",
+      "primaryMedia": "media-1768466721381-f16vj775a"
+    },
+    "v2-1768467668022-jsgz73br6": {
+      "id": "v2-1768467668022-jsgz73br6",
+      "type": "view",
+      "name": "Window to the Right",
+      "slug": "window-to-the-right",
+      "description": "View: The ornate grille of the window, the view outside through the grilles, and the surrounding wall texture.",
+      "parentId": "v2-1768466715099-vw6g7wsj7",
+      "primaryMedia": "media-1768467668022-rftn9i4ha"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "v2-1768394817652-uewrwobpf",
+      "id": "v2-1768466685305-0loyvyf0g",
       "type": "host",
       "children": [
         {
-          "id": "v2-1768394817652-mv408hxgt",
+          "id": "v2-1768466685306-3gcjw1zbs",
           "type": "region",
           "children": [
             {
-              "id": "v2-1768394817652-90gkbgrnt",
+              "id": "v2-1768466685306-li0rpn72x",
               "type": "location",
               "children": [
                 {
-                  "id": "v2-1768394868245-ly9ndx04p",
+                  "id": "v2-1768466715099-rhy4ou8ql",
                   "type": "container",
                   "children": [
                     {
-                      "id": "v2-1768394868245-8wu1um70s",
+                      "id": "v2-1768466715099-vw6g7wsj7",
                       "type": "space",
-                      "children": []
-                    },
-                    {
-                      "id": "v2-1768395060657-jic50c87g",
-                      "type": "space",
-                      "children": []
-                    },
-                    {
-                      "id": "v2-1768395126483-e28qpdfpb",
-                      "type": "space",
-                      "children": []
-                    },
-                    {
-                      "id": "v2-1768395804720-24esuvg4s",
-                      "type": "space",
-                      "children": []
-                    },
-                    {
-                      "id": "v2-1768397838379-y4bhi8950",
-                      "type": "space",
-                      "children": []
-                    },
-                    {
-                      "id": "v2-1768398872217-67oapys6j",
-                      "type": "space",
-                      "children": []
-                    },
-                    {
-                      "id": "v2-1768399337789-mggdxbo0i",
-                      "type": "space",
-                      "children": []
-                    },
-                    {
-                      "id": "v2-1768399529677-bu2n9iadu",
-                      "type": "space",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "v2-1768467668022-jsgz73br6",
+                          "type": "view",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }
@@ -608,6 +231,6 @@
     }
   ],
   "pinnedIds": [
-    "v2-1768394817652-uewrwobpf"
+    "v2-1768466685305-0loyvyf0g"
   ]
 }

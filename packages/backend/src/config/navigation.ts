@@ -10,7 +10,7 @@
  * - category: Command category for grouping (navigation, creation, media)
  */
 
-export type NodeType = 'host' | 'region' | 'location' | 'niche' | 'container' | 'space';
+export type NodeType = 'host' | 'region' | 'location' | 'niche' | 'container' | 'space' | 'view';
 
 export interface SlashCommandConfig {
   requiresNodeType: NodeType[] | null;
@@ -40,6 +40,11 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
   GOTO2: { 
     requiresNodeType: ['space'], 
     description: 'Create sibling space within same container',
+    category: 'navigation'
+  },
+  LOOK: { 
+    requiresNodeType: ['location', 'space', 'view'], 
+    description: 'Change viewpoint within current space (creates view node)',
     category: 'navigation'
   },
   

@@ -31,5 +31,16 @@ export {
   type WorldLocationInteriorResult
 } from './worldLocationInterior';
 
+// LOOK command (camera control within same space)
+export {
+  buildLookPrompt,
+  parseLookResponse,
+  lookDynamic,
+  LOOK_STATIC,
+  type CameraOperation,
+  type LensConfig,
+  type LookResponse
+} from './look';
+
 // Shared prompt sections
 export * from './shared/dnaSchema';

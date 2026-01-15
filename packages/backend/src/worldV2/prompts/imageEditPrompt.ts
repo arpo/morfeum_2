@@ -448,6 +448,50 @@ Prohibitions:
 }
 
 /**
+ * Build image edit prompt for LOOK command (camera movement within same space)
+ * Creates a new view by moving/rotating camera while preserving scene identity.
+ * 
+ * CRITICAL: Edit models need strong change instructions, not preservation-heavy prompts.
+ * The prompt leads with the action and uses minimal preservation language.
+ */
+export function buildLookImageEditPrompt(
+  sourcePromptLayers: ImagePromptLayers,
+  lookResponse: {
+    camera: string;
+    target: string;
+    reveal: string;
+    lens: {
+      focalLength: string;
+      aperture: string;
+      shotDistance: string;
+    };
+  },
+  spaceName: string,
+  weather?: string,
+  timeOfDay?: TimeOfDay
+): string {
+  // Format time of day for display
+  const timeDisplay = timeOfDay ? timeOfDay.replace(/_/g, ' ') : 'daytime';
+  
+  // Determine lighting character based on time
+  const isNight = timeOfDay && ['night', 'midnight', 'dusk'].includes(timeOfDay);
+  const lightingContext = isNight ? 'night lighting' : `${timeDisplay} lighting`;
+
+  // Build a concise, action-focused prompt
+  // IMPORTANT: Lead with the change, minimize preservation language
+  // CRITICAL: Explicitly tell FLUX not to invent new elements
+  return `REFRAME THIS IMAGE:
+
+${lookResponse.camera}
+
+Show ${lookResponse.target} prominently in frame.
+
+Same ${spaceName}, same ${lightingContext}, same style.
+
+IMPORTANT: Only change the camera angle. Do not invent or add new architectural details, fixtures, or objects. Show only what already exists in this scene from a different angle.`;
+}
+
+/**
  * Build image edit prompt for INSPECT2 (zoom/focus on detail)
  * Close-up that preserves style lock
  */

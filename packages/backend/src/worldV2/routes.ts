@@ -13,6 +13,7 @@ import {
   newWorldLocationInteriorHandler,
   goInsideHandler,
   gotoHandler,
+  lookHandler,
   eventsHandler,
   setTimeHandler,
   setWeatherHandler
@@ -53,5 +54,8 @@ router.post('/go-inside', goInsideHandler);
 
 // GOTO2 Command - Create sibling space within same container
 router.post('/goto', gotoHandler);
+
+// LOOK Command - Change viewpoint within same space (creates view node)
+router.post('/look', lookHandler);
 
 export { router as worldV2Router };

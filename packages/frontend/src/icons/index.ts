@@ -35,7 +35,8 @@ export {
   IconExternalLink,
   IconCamera,
   IconArrowBadgeRight,
-  IconSparkles
+  IconSparkles,
+  IconEye
 } from '@tabler/icons-react';
 
 // Icon type for string references

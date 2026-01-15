@@ -92,6 +92,24 @@
   cursor: default;
 }
 
+/* View node styling (camera angles) */
+.viewNode .label {
+  font-style: italic;
+  color: var(--color-text-muted, #94a3b8);
+}
+
+.viewNode .icon {
+  color: var(--color-text-muted, #94a3b8);
+}
+
+.viewNode.selected .label {
+  color: var(--color-primary-text, #60a5fa);
+}
+
+.viewNode.selected .icon {
+  color: var(--color-primary-text, #60a5fa);
+}
+
 .passThrough .label {
   color: var(--color-text-muted, #94a3b8);
 }

@@ -14,6 +14,7 @@ import {
   handleNewWorldLocationInteriorCommand,
   handleGoInsideCommand,
   handleGotoCommand,
+  handleLookCommand,
   handleDisplayCommand,
   handleSetTimeCommand,
   handleSetWeatherCommand
@@ -22,7 +23,7 @@ import {
 // Re-export types
 export type { V2CommandCallbacks, V2CommandResult } from './types';
 
-const V2_COMMANDS = ['NEW_HOST', 'NEW_REGION2', 'NEW_LOCATION2', 'NEW_WORLD_LOCATION', 'NEW_WORLD_LOCATION_INTERIOR', 'GO_INSIDE2', 'GOTO2', 'DISPLAY', 'SET_TIME', 'SET_WEATHER'] as const;
+const V2_COMMANDS = ['NEW_HOST', 'NEW_REGION2', 'NEW_LOCATION2', 'NEW_WORLD_LOCATION', 'NEW_WORLD_LOCATION_INTERIOR', 'GO_INSIDE2', 'GOTO2', 'LOOK', 'DISPLAY', 'SET_TIME', 'SET_WEATHER'] as const;
 
 /**
  * Check if command is a V2 command
@@ -63,6 +64,8 @@ export async function handleV2Command(
       return handleGoInsideCommand(parsedCommand, callbacks, activeEntityId || undefined);
     case 'GOTO2':
       return handleGotoCommand(parsedCommand, callbacks, activeEntityId || undefined);
+    case 'LOOK':
+      return handleLookCommand(parsedCommand, callbacks, activeEntityId || undefined);
     default:
       return { success: false, error: `Unknown V2 command: ${command}` };
   }

@@ -3,7 +3,7 @@ import { useLocationsStore } from '@/store/slices/locations';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useStore } from '@/store';
 import { Tabs, TreeView, TreeItem } from '@/components/ui';
-import { IconWorld, IconMapPin, IconInfoCircle } from '@/icons';
+import { IconWorld, IconMapPin, IconInfoCircle, IconEye } from '@/icons';
 import { findNodeInTree } from '@/utils/treeUtils';
 import { useEntityImages } from '@/hooks';
 import { getPrimaryMediaUrl, getEntityMedia } from '@/services/mediaService';
@@ -108,12 +108,23 @@ export const EntityExplorer: React.FC = () => {
       const info = viewInfo.get(treeNode.id);
       const label = info ? `${baseName} (${info.current}/${info.total})` : baseName;
 
+      // Determine icon based on node type (cast to string for type safety)
+      const typeStr = String(type);
+      const getNodeIcon = (nodeType: string) => {
+        switch (nodeType) {
+          case 'host': return <IconWorld size={16} />;
+          case 'view': return <IconEye size={16} />;
+          default: return <IconMapPin size={16} />;
+        }
+      };
+
       return {
         id: treeNode.id,
         label: label,
-        icon: type === 'host' ? <IconWorld size={16} /> : <IconMapPin size={16} />,
+        icon: getNodeIcon(typeStr),
         image: image,
         isPassThrough: isPassThrough,
+        isView: typeStr === 'view',
         children: treeNode.children?.map(mapNode)
       };
     };
