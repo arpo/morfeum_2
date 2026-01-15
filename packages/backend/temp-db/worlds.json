@@ -124,72 +124,71 @@
       ],
       "parentId": "v2-1768466685306-li0rpn72x"
     },
-    "v2-1768466715099-vw6g7wsj7": {
-      "id": "v2-1768466715099-vw6g7wsj7",
+    "v2-1768470341359-ms46rry3v": {
+      "id": "v2-1768470341359-ms46rry3v",
       "type": "space",
-      "name": "Grand Vestibule",
-      "slug": "grand-vestibule",
-      "description": "You have entered the residence's main entry chamber. The space is defined by smooth, cool tile floors and the continuation of the textured whitewashed walls. An archway leads further into the dwelling, while ornate grilles on nearby windows hint at the architectural style.",
-      "spaceType": "indoor",
+      "name": "The Rooftop Terrace",
+      "slug": "the-rooftop-terrace",
+      "description": "An open-air terrace situated atop The Twilit Tower Residence, offering panoramic views of the twilight cityscape and surrounding coastal mountains. Elegant outdoor seating areas are interspersed with lush potted plants, creating an exclusive urban oasis.",
+      "spaceType": "elevated",
       "dna": {
         "essence": [
-          "elegant residence",
-          "twilight allure",
-          "coastal exoticism"
+          "exotic luxury",
+          "twilight vistas",
+          "urban sanctuary"
         ],
         "formsAndMaterials": [
-          "arched openings",
-          "tiled floors",
-          "textured plaster walls",
-          "ornate grilles",
-          "dark wood accents"
+          "curving architecture",
+          "ceramic tiles",
+          "textured stucco",
+          "glass railings",
+          "dark metal accents"
         ],
         "colorAndLight": [
-          "soft twilight palette",
-          "warm interior glow",
-          "ambient dimness"
+          "soft twilight hues",
+          "warm internal glow",
+          "azure sky",
+          "vibrant purple accents"
         ],
         "atmosphere": [
-          "inviting",
-          "tranquil",
-          "sophisticated"
+          "serene elevation",
+          "exclusive retreat",
+          "panoramic awe"
         ],
         "banned": [
-          "glowing crystals",
-          "mechanical parts",
-          "overly futuristic designs",
-          "ancient ruins",
-          "dense jungle foliage"
+          "visible roof structures",
+          "enclosed walls",
+          "daylight harshness",
+          "ground-level obstructions"
         ]
       },
       "promptLayers": {
-        "background": "Textured whitewashed plaster walls stretching to a high, unseen ceiling, a prominent archway visible leading deeper into the residence.",
-        "midground": "Ornate metal grilles on recessed arched windows, hints of dark wooden furniture or decorative elements.",
-        "foreground": "Smooth, cool floor tiles in a subtle blue and white pattern, possibly worn from use.",
-        "lighting": "Soft, warm ambient light originating from unseen sources within the residence, casting gentle shadows and highlighting the textured walls.",
-        "atmosphere": "A tranquil and inviting interior ambiance, a sense of serene arrival, echoing the twilight mood outside but contained within."
+        "background": "The twilight sky with distant coastal mountains, scattered stars, and the faint glow of the city below.",
+        "midground": "Elegant outdoor seating areas with dark metal frames and plush cushions, interspersed with lush potted plants and architectural elements of the tower's upper level, bordered by clear glass railings.",
+        "foreground": "The polished, dark wood decking of the terrace, with subtle patterns of shadow and light.",
+        "lighting": "Soft ambient twilight fading into the warm, inviting glow from the tower's interior windows, with subtle accent lighting on planters.",
+        "atmosphere": "Tranquil, sophisticated, and breathtaking, with a sense of serene elevation and exclusive comfort."
       },
       "forbiddenTransformations": [
-        "any view of the outside sky",
-        "direct sunlight",
-        "bright artificial lights",
-        "outdoor plants",
-        "open air",
-        "visible tower dome structure",
-        "tropical jungle elements",
-        "modern minimalist furniture"
+        "sky becoming fully dark or midday bright",
+        "mountains disappearing or becoming featureless",
+        "seating becoming utilitarian or out of place",
+        "plants wilting or being replaced",
+        "glass railings becoming opaque or solid",
+        "the terrace floor becoming rough or uneven",
+        "internal light sources becoming absent or flickering"
       ],
       "parentId": "v2-1768466715099-rhy4ou8ql",
-      "primaryMedia": "media-1768466721381-f16vj775a"
+      "primaryMedia": "media-1768470349557-av1856dzz"
     },
-    "v2-1768469935807-7sn5b9q3w": {
-      "id": "v2-1768469935807-7sn5b9q3w",
+    "v2-1768470797151-f9u9d2usv": {
+      "id": "v2-1768470797151-f9u9d2usv",
       "type": "view",
-      "name": "The Grand Ceiling",
-      "slug": "the-grand-ceiling",
-      "description": "View: The intricate details of the grand vestibule's ceiling architecture, any ceiling fixtures, and the upper reaches of the whitewashed walls.",
-      "parentId": "v2-1768466715099-vw6g7wsj7",
-      "primaryMedia": "media-1768469935807-7mb8yp8vs"
+      "name": "The Panorama",
+      "slug": "the-panorama",
+      "description": "View: The expansive distant view of the twilight cityscape and coastal mountains.",
+      "parentId": "v2-1768470341359-ms46rry3v",
+      "primaryMedia": "media-1768470797152-dhyapi7lu"
     }
   },
   "views": {},
@@ -211,11 +210,11 @@
                   "type": "container",
                   "children": [
                     {
-                      "id": "v2-1768466715099-vw6g7wsj7",
+                      "id": "v2-1768470341359-ms46rry3v",
                       "type": "space",
                       "children": [
                         {
-                          "id": "v2-1768469935807-7sn5b9q3w",
+                          "id": "v2-1768470797151-f9u9d2usv",
                           "type": "view",
                           "children": []
                         }

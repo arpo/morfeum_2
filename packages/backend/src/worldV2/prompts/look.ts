@@ -212,6 +212,17 @@ Input: "step back to see the whole room"
   "target": "the room",
   "reveal": "Full room layout, all furniture, doorways, and spatial relationships.",
   "lens": { "focalLength": "24mm", "aperture": "f/8", "shotDistance": "wide" }
+}
+
+### Example 8: See the View FROM a vantage point (panorama focus)
+Input: "see the view from the balcony" or "look at the view from the railing"
+{
+  "viewName": "The Panorama",
+  "operation": "angle_change",
+  "camera": "Position at the edge and look OUTWARD at the distant panorama. Minimize foreground elements (railings, furniture) - the distant vista should dominate at least 80% of the frame. Use 35mm lens, medium shot, f/8.",
+  "target": "the distant panorama beyond",
+  "reveal": "The expansive distant view - cityscape, landscape, horizon, or whatever lies beyond the vantage point.",
+  "lens": { "focalLength": "35mm", "aperture": "f/8", "shotDistance": "medium" }
 }`;
 
 /**
