@@ -52,6 +52,10 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 | `buildEnterImageEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for indoor spaces | `/GO_INSIDE2`, `/GOTO2` |
 | `buildEnterOutdoorEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for outdoor spaces | `/GO_INSIDE2`, `/GOTO2` |
 | `buildEnterSemiEnclosedEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for semi-enclosed spaces (pavilions, gazebos) | `/GO_INSIDE2`, `/GOTO2` |
+| `buildLookPrompt` | [look.ts](../../../worldV2/prompts/look.ts) | LLM generates camera movement instructions for LOOK command | `/LOOK` |
+| `parseLookResponse` | [look.ts](../../../worldV2/prompts/look.ts) | Parse LLM response to LookResponse with camera/lens config | `/LOOK` |
+| `buildLookImageEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for camera reframing (first-person POV) | `/LOOK` |
+| `buildNavigationAssistantPrompt` | [navigationAssistant.ts](../../../worldV2/prompts/navigationAssistant.ts) | Chat assistant prompt for navigation help | Navigation Assistant Panel |
 
 ### Vision & Image Analysis
 
