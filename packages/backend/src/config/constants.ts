@@ -35,3 +35,22 @@ export const AI_MODELS = {
   PROFILE_ENRICHMENT: 'gemini-2.5-flash-lite',
   NAVIGATOR: 'gemini-2.5-flash-lite',
 } as const;
+
+/**
+ * Image Model CSS Class Mapping
+ * Maps AI model names to anonymous CSS class names for styling
+ * Keeps model names private - only class names are sent to frontend
+ */
+export const IMAGE_MODEL_CLASSES: Record<string, string> = {
+  'flux': 'model-a',
+  'fal-flux-2-turbo-edit': 'model-b',
+  // Add more models as needed
+};
+
+/**
+ * Helper to get anonymous class name from model
+ */
+export function getModelClass(model: string | undefined): string | undefined {
+  if (!model) return undefined;
+  return IMAGE_MODEL_CLASSES[model];
+}

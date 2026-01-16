@@ -37,6 +37,7 @@ export interface EntityData {
   entityType?: 'character' | 'location';
   entityPersonality?: string;
   entityImage?: string;
+  imageModelClass?: string;  // Anonymous CSS class based on image generation model
   imagePrompt?: string;
   systemPrompt: string;
   messages: ChatMessage[];
@@ -56,7 +57,7 @@ export interface EntityManagerSlice {
     characterDetails?: CharacterDetails,
     environment?: EnvironmentContext
   ) => void;
-  updateEntityImage: (spawnId: string, imageUrl: string) => void;
+  updateEntityImage: (spawnId: string, imageUrl: string, modelClass?: string) => void;
   updateEntityImagePrompt: (spawnId: string, imagePrompt: string) => void;
   updateEntitySystemPrompt: (spawnId: string, systemPrompt: string) => void;
   updateEntityProfile: (spawnId: string, deepProfile: DeepProfile) => void;

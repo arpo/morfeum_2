@@ -68,11 +68,15 @@ export const createEntityManagerSlice: StateCreator<EntitySlices, [], [], Entity
     });
   },
 
-  updateEntityImage: (spawnId: string, imageUrl: string) => {
+  updateEntityImage: (spawnId: string, imageUrl: string, modelClass?: string) => {
     set((state) => {
       const entity = state.entities.get(spawnId);
       if (!entity || entity.entityImage === imageUrl) return state;
-      return { entities: updateEntity(state.entities, spawnId, { entityImage: imageUrl }) };
+      const updates: Partial<EntityData> = { entityImage: imageUrl };
+      if (modelClass) {
+        updates.imageModelClass = modelClass;
+      }
+      return { entities: updateEntity(state.entities, spawnId, updates) };
     });
   },
 

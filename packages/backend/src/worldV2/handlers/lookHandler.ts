@@ -14,7 +14,7 @@
 
 import { Request, Response } from 'express';
 import { asyncHandler } from '../../middleware/errorHandler';
-import { HTTP_STATUS, AI_MODELS } from '../../config';
+import { HTTP_STATUS, AI_MODELS, getModelClass } from '../../config';
 import { generateText, editImage, hasMzooData } from '../../services/mzoo';
 import { buildLookPrompt, parseLookResponse } from '../prompts/look';
 import { buildLookImageEditPrompt } from '../prompts/imageEditPrompt';
@@ -351,7 +351,9 @@ export const lookHandler = asyncHandler(async (req: Request, res: Response) => {
 
       await storageService.saveWorlds(worldsData);
 
-      // Send completion
+      // Send completion with modelClass (not actual model name for privacy)
+      const modelClass = getModelClass('fal-flux-2-turbo-edit');
+      
       sendCompletion(operationId, {
         message: 'View created successfully',
         view: {
@@ -360,10 +362,12 @@ export const lookHandler = asyncHandler(async (req: Request, res: Response) => {
           type: viewNode.type,
           description: viewNode.description,
           operation: lookResponse.operation,
-          target: lookResponse.target
+          target: lookResponse.target,
+          primaryMedia: mediaEntry.id
         },
         imageUrl,
-        mediaId: mediaEntry.id
+        mediaId: mediaEntry.id,
+        modelClass
       });
 
     } catch (error) {

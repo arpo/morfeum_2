@@ -71,3 +71,24 @@
 .characterPersonality {
   composes: entityDescription from '../shared/EntityPanelShared.module.css';
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Model-specific image enhancement classes
+   Applied to images to adjust color/saturation for different AI models
+   Uses kebab-case class names (e.g., 'model-b') from backend
+   
+   Filter VALUES are defined in @/styles/model-filters.module.css (single source of truth)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Model A - primary/reference model - no enhancement needed */
+.model-a {
+  filter: var(--filter-model-a);
+}
+
+/* Model B - needs enhancement to match Model A vibrancy */
+.model-b {
+  filter: var(--filter-model-b);
+}
+
+/* Future models: add .model-c, .model-d etc.
+   Filter values are defined in @/styles/model-filters.module.css */

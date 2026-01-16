@@ -5,6 +5,7 @@
 export interface EntityPanelBaseState {
   activeChat: string | null;
   entityImage: string | null;
+  imageModelClass: string | null;  // Anonymous CSS class based on image generation model
   entityName: string | null;
   entityPersonality: string | null;
   deepProfile: Record<string, any> | null;

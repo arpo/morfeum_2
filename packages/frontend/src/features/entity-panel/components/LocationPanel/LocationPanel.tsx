@@ -9,6 +9,8 @@ import { IconInfoCircle, IconMaximize, IconX, IconDeviceFloppy } from '@/icons';
 import { LocationInfoModal } from '../../../chat/components/LocationInfoModal';
 import { useLocationPanel } from './useLocationPanel';
 import styles from './LocationPanel.module.css';
+// Import to ensure CSS variables are loaded
+import '@/styles/model-filters.module.css';
 
 export function LocationPanel() {
   const { state, handlers } = useLocationPanel();
@@ -43,7 +45,7 @@ export function LocationPanel() {
           <img 
             src={state.entityImage} 
             alt={state.entityName || 'Location'}
-            className={styles.locationHeaderImage}
+            className={`${styles.locationHeaderImage}${state.imageModelClass ? ` ${styles[state.imageModelClass]}` : ''}`}
             onLoad={() => setImageLoading(false)}
           />
         )}
@@ -105,7 +107,7 @@ export function LocationPanel() {
           <img 
             src={currentImageUrl} 
             alt={state.entityName || 'Location'}
-            className={styles.fullscreenImage}
+            className={`${styles.fullscreenImage}${state.imageModelClass ? ` ${styles[state.imageModelClass]}` : ''}`}
             onClick={(e) => e.stopPropagation()}
           />
         </div>,

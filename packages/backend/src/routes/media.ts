@@ -5,6 +5,25 @@
 
 import { Router, Request, Response, NextFunction } from 'express';
 import { mediaService } from '../services/media';
+import { getModelClass } from '../config/constants';
+
+/**
+ * Sanitize media for frontend - replace model with modelClass
+ * This keeps actual model names private
+ */
+function sanitizeMediaForFrontend(media: any): any {
+  if (!media) return media;
+  
+  const sanitized = { ...media };
+  if (sanitized.metadata) {
+    const { model, ...restMetadata } = sanitized.metadata;
+    sanitized.metadata = {
+      ...restMetadata,
+      modelClass: getModelClass(model)
+    };
+  }
+  return sanitized;
+}
 
 const router = Router();
 
@@ -62,7 +81,7 @@ router.get('/bulk', asyncHandler((req, res) => {
   const mediaMap: Record<string, any> = {};
   mediaIds.forEach(id => {
     const media = mediaService.getMediaById(id);
-    if (media) mediaMap[id] = media;
+    if (media) mediaMap[id] = sanitizeMediaForFrontend(media);
   });
   res.json({ success: true, data: mediaMap });
 }));
@@ -83,7 +102,7 @@ router.delete('/by-entities', asyncHandler((req, res) => {
 router.get('/:id', asyncHandler((req, res) => {
   const media = mediaService.getMediaById(req.params.id);
   if (!media) return res.status(404).json({ success: false, error: 'Media not found' });
-  res.json({ success: true, data: media });
+  res.json({ success: true, data: sanitizeMediaForFrontend(media) });
 }));
 
 // GET /api/media/:id/derivatives - Get derivatives

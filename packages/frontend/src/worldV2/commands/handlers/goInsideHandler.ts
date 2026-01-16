@@ -70,9 +70,10 @@ export async function handleGoInsideCommand(
                 id: completedData.space.id,
                 name: completedData.space.name,
                 type: completedData.space.type,
-                primaryMedia: completedData.mediaId
+                primaryMedia: completedData.space.primaryMedia || completedData.mediaId
               },
-              completedData.imageUrl
+              completedData.imageUrl,
+              completedData.modelClass  // Pass modelClass from backend
             );
           } else if (completedData.container) {
             // Fallback to container if space not found
@@ -83,7 +84,8 @@ export async function handleGoInsideCommand(
                 type: completedData.container.type,
                 primaryMedia: completedData.mediaId
               },
-              completedData.imageUrl
+              completedData.imageUrl,
+              completedData.modelClass  // Pass modelClass from backend
             );
           }
           setIsMoving(false);

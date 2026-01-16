@@ -70,9 +70,10 @@ export async function handleLookCommand(
                 id: completedData.view.id,
                 name: completedData.view.name,
                 type: completedData.view.type,
-                primaryMedia: completedData.mediaId
+                primaryMedia: completedData.view.primaryMedia || completedData.mediaId
               },
-              completedData.imageUrl
+              completedData.imageUrl,
+              completedData.modelClass  // Pass modelClass from backend
             );
           }
           setIsMoving(false);

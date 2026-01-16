@@ -56,6 +56,7 @@ export function useEntityPanelBase() {
     activeChat: activeEntity,
     activeChatSession: activeEntitySession,
     entityImage: activeEntitySession?.entityImage || null,
+    imageModelClass: activeEntitySession?.imageModelClass || null,
     entityName: activeEntitySession?.entityName || null,
     entityPersonality: activeEntitySession?.entityPersonality || null,
     deepProfile: activeEntitySession?.deepProfile || null,

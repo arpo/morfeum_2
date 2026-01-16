@@ -14,7 +14,7 @@
 
 import { Request, Response } from 'express';
 import { asyncHandler } from '../../middleware/errorHandler';
-import { HTTP_STATUS, AI_MODELS } from '../../config';
+import { HTTP_STATUS, AI_MODELS, getModelClass } from '../../config';
 import { generateText, generateCachedText, editImage, hasMzooData } from '../../services/mzoo';
 import { buildGoInsidePrompt, goInsideDynamic, parseGoInsideResponse } from '../prompts/goInside';
 import { buildEnterImageEditPrompt, buildEnterOutdoorEditPrompt, buildEnterSemiEnclosedEditPrompt } from '../prompts/imageEditPrompt';
@@ -390,7 +390,9 @@ export const gotoHandler = asyncHandler(async (req: Request, res: Response) => {
 
       await storageService.saveWorlds(worldsData);
 
-      // Send completion
+      // Send completion with modelClass (not actual model name for privacy)
+      const modelClass = getModelClass('fal-flux-2-turbo-edit');
+      
       sendCompletion(operationId, {
         message: 'Sibling space created successfully',
         container: {
@@ -404,10 +406,12 @@ export const gotoHandler = asyncHandler(async (req: Request, res: Response) => {
           name: space.name,
           type: space.type,
           spaceType: space.spaceType,
-          description: space.description
+          description: space.description,
+          primaryMedia: mediaEntry.id
         },
         imageUrl,
-        mediaId: mediaEntry.id
+        mediaId: mediaEntry.id,
+        modelClass
       });
 
     } catch (error) {

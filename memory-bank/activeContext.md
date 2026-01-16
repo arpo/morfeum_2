@@ -426,6 +426,97 @@ User clicks **Copy** button and pastes to dev chat for fine-tuning.
 
 ---
 
+---
+
+## 2026-01-16 - Model Obfuscation & CSS Filter Consolidation ✅
+
+### Problem: Exposing Model Names in Frontend
+
+The frontend was receiving actual AI model names (e.g., `fal-flux-2-turbo-edit`) which:
+1. Exposes implementation details to users
+2. Not needed by frontend (only needs to know which filter to apply)
+3. Would break if model names change
+
+### Solution: Anonymous Model Classes
+
+**Backend Changes:**
+- Added `MODEL_CLASS_MAPPING` in `packages/backend/src/config/constants.ts`
+- Maps actual model names to anonymous classes: `fal-flux-2-turbo-edit` → `model-b`
+- Added `getModelClass(model)` function for consistent mapping
+- Updated `/api/media/bulk` and `/api/media/:id` to return `modelClass` instead of `model`
+- All V2 handlers (LOOK, GO_INSIDE2, GOTO2) now send `modelClass` in completion data
+
+**Frontend Changes:**
+- `entityManagerSlice.ts` stores `imageModelClass` on entities
+- `entitySessionLoader.ts` reads `modelClass` from media cache for existing entities
+- `sessionManager.ts` passes `modelClass` through for new entities
+- `WorldView` and `LocationPanel` apply CSS filters based on `imageModelClass`
+
+### CSS Filter Consolidation
+
+**Problem:** Filter definitions were duplicated in two CSS files.
+
+**Solution:** Created single source of truth using CSS custom properties.
+
+**New File: `packages/frontend/src/styles/model-filters.module.css`**
+```css
+:root {
+  --filter-model-a: none;
+  --filter-model-b: saturate(1.25) contrast(1.15) brightness(1.05);
+}
+```
+
+**Updated Files:**
+- `WorldView.module.css` - Uses `filter: var(--filter-model-b);`
+- `LocationPanel.module.css` - Uses `filter: var(--filter-model-b);`
+- Both components import the shared CSS file
+
+**To add new models:**
+1. Add mapping in backend `MODEL_CLASS_MAPPING`
+2. Add CSS variable in `model-filters.module.css`
+3. Add CSS class in component CSS files referencing the variable
+
+### Data Flow
+
+```
+Backend:
+  media.json stores actual model: "fal-flux-2-turbo-edit"
+                ↓
+  /api/media/bulk sanitizes → modelClass: "model-b"
+                ↓
+Frontend:
+  mediaCacheSlice stores metadata.modelClass
+                ↓
+  entitySessionLoader reads from cache
+                ↓
+  updateEntityImage(id, url, modelClass) → entity.imageModelClass
+                ↓
+  WorldView/LocationPanel applies styles[imageModelClass]
+                ↓
+  CSS: .model-b canvas { filter: var(--filter-model-b); }
+```
+
+### Files Modified
+
+**Backend:**
+- `config/constants.ts` - Added MODEL_CLASS_MAPPING, getModelClass()
+- `routes/media.ts` - Added sanitizeMediaForFrontend()
+- `worldV2/handlers/lookHandler.ts` - Sends modelClass in completion
+- `worldV2/handlers/goInsideHandler.ts` - Sends modelClass in completion
+- `worldV2/handlers/gotoHandler.ts` - Sends modelClass in completion
+
+**Frontend:**
+- `store/slices/entityManagerSlice.ts` - Stores imageModelClass
+- `utils/entitySessionLoader.ts` - Reads modelClass from cache for existing entities
+- `utils/entity/sessionManager.ts` - Passes modelClass for new entities
+- `styles/model-filters.module.css` - NEW: CSS custom properties
+- `WorldView/WorldView.module.css` - Uses CSS variables
+- `LocationPanel/LocationPanel.module.css` - Uses CSS variables
+- `WorldView/WorldView.tsx` - Imports shared CSS
+- `LocationPanel/LocationPanel.tsx` - Imports shared CSS
+
+---
+
 ## Next Steps
 
 - [x] Fix "tower inside tower" bug
@@ -435,5 +526,7 @@ User clicks **Copy** button and pastes to dev chat for fine-tuning.
 - [x] Time/weather enforcement (v1.8)
 - [x] GOTO2 navigation (sibling spaces)
 - [x] Navigation Assistant chat panel
+- [x] Model obfuscation (hide actual model names from frontend)
+- [x] CSS filter consolidation (single source of truth)
 - [ ] Future: Add season support to Host node
 - [ ] Future: GOTO (legacy system move between locations)

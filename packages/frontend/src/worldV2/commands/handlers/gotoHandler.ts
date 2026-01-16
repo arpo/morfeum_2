@@ -70,9 +70,10 @@ export async function handleGotoCommand(
                 id: completedData.space.id,
                 name: completedData.space.name,
                 type: completedData.space.type,
-                primaryMedia: completedData.mediaId
+                primaryMedia: completedData.space.primaryMedia || completedData.mediaId
               },
-              completedData.imageUrl
+              completedData.imageUrl,
+              completedData.modelClass  // Pass modelClass from backend
             );
           }
           setIsMoving(false);

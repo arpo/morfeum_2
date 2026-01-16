@@ -83,7 +83,8 @@ export async function reloadAndSetActive(entityId: string): Promise<void> {
  */
 export async function reloadAndCreateSession(
   nodeData: { id: string; name: string; type: string; primaryMedia?: string },
-  imageUrl?: string
+  imageUrl?: string,
+  modelClass?: string
 ): Promise<void> {
   await useLocationsStore.getState().loadFromBackend();
   
@@ -93,7 +94,8 @@ export async function reloadAndCreateSession(
     name: nodeData.name,
     type: 'location',
     primaryMedia: nodeData.primaryMedia,
-    imageUrl
+    imageUrl,
+    modelClass  // Pass modelClass from backend (already mapped to anonymous class name)
   });
 }
 

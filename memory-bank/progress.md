@@ -187,6 +187,29 @@ prompts/
 
 ---
 
+---
+
+## 2026-01-16 - Model Obfuscation & CSS Consolidation ✅
+
+Implemented model name obfuscation and CSS filter consolidation.
+
+**Problem:** Frontend received actual AI model names, exposing implementation details.
+
+**Solution:**
+- Backend maps model names to anonymous classes: `fal-flux-2-turbo-edit` → `model-b`
+- `/api/media/bulk` returns `modelClass` instead of `model`
+- V2 handlers (LOOK, GO_INSIDE2, GOTO2) send `modelClass` in completion
+- CSS filters use CSS custom properties for single source of truth
+
+**Files:**
+- `config/constants.ts` - MODEL_CLASS_MAPPING, getModelClass()
+- `routes/media.ts` - sanitizeMediaForFrontend()
+- `styles/model-filters.module.css` - CSS custom properties
+- `entitySessionLoader.ts` - Loads modelClass for existing entities
+- `WorldView`, `LocationPanel` - Apply filter classes
+
+---
+
 ## Known Issues 🐛
 
 - Bundle size warning (865KB)

@@ -1,0 +1,37 @@
+/**
+ * Model-specific Image Filter Variables
+ * 
+ * Centralized CSS filter values for different AI image generation models.
+ * These anonymous class names (model-a, model-b, etc.) map to actual model names
+ * on the backend, keeping model identities private from the frontend.
+ * 
+ * SINGLE SOURCE OF TRUTH: All filter values are defined here as CSS custom properties.
+ * Component CSS files reference these variables to avoid duplication.
+ * 
+ * Usage in component CSS:
+ *   .model-b { filter: var(--filter-model-b); }
+ *   .model-b canvas { filter: var(--filter-model-b); }
+ */
+
+:root {
+  /* Model A - primary/reference model - no enhancement needed */
+  --filter-model-a: none;
+  
+  /* Model B - needs enhancement to match Model A vibrancy */
+  --filter-model-b: saturate(1.25) contrast(1.05) brightness(1.05);
+  
+  /* Future models can be added here:
+  --filter-model-c: ...;
+  --filter-model-d: ...;
+  --filter-model-e: ...;
+  */
+}
+
+/* Direct application classes for simple cases (e.g., img elements) */
+.model-a {
+  filter: var(--filter-model-a);
+}
+
+.model-b {
+  filter: var(--filter-model-b);
+}

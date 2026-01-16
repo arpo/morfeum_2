@@ -14,6 +14,7 @@ export interface EntitySessionData {
   primaryMedia?: string;  // ID reference to media.json
   imageUrl?: string;      // Direct URL (from pipeline)
   imagePrompt?: string;
+  modelClass?: string;    // Anonymous CSS class from backend (e.g., 'model-b')
 }
 
 /**
@@ -39,16 +40,25 @@ export function createEntitySession(
 
   // If we have a direct imageUrl (from pipeline), add to cache and use it
   if (data.imageUrl && data.primaryMedia) {
-    // Add to cache for future SYNC lookups
+    // Add to cache for future SYNC lookups (include modelClass in metadata)
     const addToCache = useMediaCacheStore.getState().addToCache;
-    addToCache(data.primaryMedia, data.imageUrl);
-    store.updateEntityImage(data.id, data.imageUrl);
+    addToCache(data.primaryMedia, data.imageUrl, { 
+      metadata: { modelClass: data.modelClass } 
+    });
+    
+    // Use modelClass directly from completion data (already mapped by backend)
+    store.updateEntityImage(data.id, data.imageUrl, data.modelClass);
   } else if (data.primaryMedia) {
     // SYNC lookup from cache - no async!
     const getMediaUrl = useMediaCacheStore.getState().getMediaUrl;
+    const getMediaData = useMediaCacheStore.getState().getMediaData;
     const cachedUrl = getMediaUrl(data.primaryMedia);
     if (cachedUrl) {
-      store.updateEntityImage(data.id, cachedUrl);
+      // Get modelClass from media cache metadata (already mapped by backend /api/media/bulk)
+      const mediaData = getMediaData(data.primaryMedia);
+      const modelClass = mediaData?.metadata?.modelClass;
+      
+      store.updateEntityImage(data.id, cachedUrl, modelClass);
     }
   }
 

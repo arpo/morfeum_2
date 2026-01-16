@@ -10,7 +10,7 @@ import { useMediaCacheStore } from '@/store/slices/mediaCacheSlice';
 
 export interface EntitySessionCallbacks {
   createEntity: (id: string, seed: any, type: 'location' | 'character') => void;
-  updateEntityImage: (id: string, imageUrl: string) => void;
+  updateEntityImage: (id: string, imageUrl: string, modelClass?: string) => void;
   updateEntityProfile: (id: string, profile: any) => void;
 }
 
@@ -80,9 +80,13 @@ export function createEntitySessionsForNodes(
     // Update with image if available
     // SYNC lookup from cache - no async!
     const getMediaUrl = useMediaCacheStore.getState().getMediaUrl;
+    const getMediaData = useMediaCacheStore.getState().getMediaData;
     const imageUrl = getMediaUrl(node.primaryMedia);
     if (imageUrl) {
-      updateEntityImage(nodeId, imageUrl);
+      // Get modelClass from media cache metadata (already mapped by backend /api/media/bulk)
+      const mediaData = getMediaData(node.primaryMedia);
+      const modelClass = mediaData?.metadata?.modelClass;
+      updateEntityImage(nodeId, imageUrl, modelClass);
     }
     
     // Just pass through the node's DNA directly - it already has everything

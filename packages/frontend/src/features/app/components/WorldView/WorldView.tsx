@@ -3,6 +3,8 @@ import { useWorldViewLogic } from './useWorldViewLogic';
 import { WORLD_VIEW_3D_CONFIG } from '@/config';
 import { IconChevronLeft, IconChevronRight } from '@/icons';
 import styles from './WorldView.module.css';
+// Import to ensure CSS variables are loaded
+import '@/styles/model-filters.module.css';
 
 // Target aspect ratio (16:9)
 const TARGET_ASPECT_RATIO = 16 / 9;
@@ -17,7 +19,8 @@ export function WorldView() {
     currentViewIndex,
     goToPreviousView,
     goToNextView,
-    goToView
+    goToView,
+    imageModelClass
   } = useWorldViewLogic();
   const [letterboxHeight, setLetterboxHeight] = useState(0);
   
@@ -71,7 +74,8 @@ export function WorldView() {
       )}
       <div 
         ref={containerRef} 
-        className={`${styles.canvas} ${!isLoading && hasImage ? styles.loaded : ''}`}
+        className={`${styles.canvas} ${!isLoading && hasImage ? styles.loaded : ''}${imageModelClass ? ` ${styles[imageModelClass]}` : ''}`}
+        data-model-class={imageModelClass || 'none'}
       />
       
       {/* Letterbox bars to enforce 16:9 aspect ratio */}

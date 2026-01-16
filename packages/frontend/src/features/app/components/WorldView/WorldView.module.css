@@ -193,3 +193,24 @@
   background: white;
   border-color: white;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   Model-specific image enhancement classes
+   Applied to canvas container to adjust color/saturation for different AI models
+   Uses kebab-case class names (e.g., 'model-b') from backend
+   
+   Filter VALUES are defined in @/styles/model-filters.module.css (single source of truth)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Model A - primary/reference model - no enhancement needed */
+.model-a canvas {
+  filter: var(--filter-model-a);
+}
+
+/* Model B - needs enhancement to match Model A vibrancy */
+.model-b canvas {
+  filter: var(--filter-model-b);
+}
+
+/* Future models: add .model-c canvas, .model-d canvas etc.
+   Filter values are defined in @/styles/model-filters.module.css */

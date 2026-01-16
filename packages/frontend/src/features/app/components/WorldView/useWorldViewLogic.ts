@@ -43,6 +43,9 @@ export function useWorldViewLogic() {
   // Get active entity session
   const activeEntitySession = activeEntity ? entities.get(activeEntity) : null;
   const canShowViews = !!activeEntitySession;
+  
+  // Get image model class for CSS styling (e.g., 'model-b' for saturation adjustments)
+  const imageModelClass = activeEntitySession?.imageModelClass || null;
 
   // Fetch views for all entity types
   const fetchViews = useCallback(async () => {
@@ -389,6 +392,8 @@ export function useWorldViewLogic() {
     goToPreviousView,
     goToNextView,
     goToView,
-    refreshViews: fetchViews
+    refreshViews: fetchViews,
+    // Model-specific styling
+    imageModelClass
   };
 }
