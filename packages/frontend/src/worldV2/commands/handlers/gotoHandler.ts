@@ -11,7 +11,7 @@ import {
   validationError,
   handleCommandError,
   registerSpawn,
-  reloadAndSetActive,
+  reloadAndCreateSession,
   createErrorHandler
 } from '../utils/commandUtils';
 
@@ -63,9 +63,17 @@ export async function handleGotoCommand(
         data.eventsUrl,
         `/GOTO2 ${text}`,
         async (completedData: any) => {
-          // Set the new space node as active (it has the image)
+          // Create entity session with image - displays image immediately
           if (completedData.space) {
-            await reloadAndSetActive(completedData.space.id);
+            await reloadAndCreateSession(
+              {
+                id: completedData.space.id,
+                name: completedData.space.name,
+                type: completedData.space.type,
+                primaryMedia: completedData.mediaId
+              },
+              completedData.imageUrl
+            );
           }
           setIsMoving(false);
         },

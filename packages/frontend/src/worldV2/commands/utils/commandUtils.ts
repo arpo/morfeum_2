@@ -6,6 +6,7 @@
 
 import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locations';
+import { createEntitySession } from '@/utils/entity/sessionManager';
 import type { V2CommandCallbacks, V2CommandResult } from '../types';
 
 /**
@@ -74,6 +75,26 @@ export function registerSpawn(
 export async function reloadAndSetActive(entityId: string): Promise<void> {
   await useLocationsStore.getState().loadFromBackend();
   useStore.getState().setActiveEntity(entityId);
+}
+
+/**
+ * Reload locations from backend and create entity session with image
+ * This properly displays the image immediately after node creation
+ */
+export async function reloadAndCreateSession(
+  nodeData: { id: string; name: string; type: string; primaryMedia?: string },
+  imageUrl?: string
+): Promise<void> {
+  await useLocationsStore.getState().loadFromBackend();
+  
+  // Create entity session with image - this ensures the image displays immediately
+  createEntitySession(useStore.getState(), {
+    id: nodeData.id,
+    name: nodeData.name,
+    type: 'location',
+    primaryMedia: nodeData.primaryMedia,
+    imageUrl
+  });
 }
 
 /**

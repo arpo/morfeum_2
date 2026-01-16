@@ -385,6 +385,154 @@
       ],
       "parentId": "v2-1768490299097-vzxtcwdch",
       "primaryMedia": "media-1768508393267-4g5nfd3bb"
+    },
+    "v2-1768566151345-5715p5wv8": {
+      "id": "v2-1768566151345-5715p5wv8",
+      "type": "space",
+      "name": "Main Dining Chamber",
+      "slug": "main-dining-chamber",
+      "description": "You are now in the main dining chamber, a circular room carved directly into the massive trunk and branches of an ancient tree. Warm light spills from organic-shaped windows and woven lanterns, illuminating the natural wood surfaces and the vibrant, eclectic decor.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "arboreal",
+          "organic",
+          "whimsical",
+          "rustic"
+        ],
+        "formsAndMaterials": [
+          "carved wood",
+          "natural curves",
+          "woven textures",
+          "living tree"
+        ],
+        "colorAndLight": [
+          "warm amber and earth tones",
+          "soft, indirect lighting"
+        ],
+        "atmosphere": [
+          "cozy",
+          "enchanted",
+          "intimate"
+        ],
+        "banned": [
+          "stark white walls",
+          "exposed steel beams",
+          "fluorescent lighting",
+          "geometric modernity",
+          "visible roots on interior surfaces"
+        ]
+      },
+      "promptLayers": {
+        "background": "The curving, naturally formed interior walls of the tree trunk and branches, seamlessly integrated with carved wooden shelves holding artisanal pottery and dried flora. Woven lanterns hang from thicker boughs overhead.",
+        "midground": "Round wooden tables with mismatched chairs, some carved directly from smaller branches. Soft, textured cushions on seating. Passes into smaller nooks or private dining alcoves are visible.",
+        "foreground": "The polished, smooth wooden floor, possibly with inlaid patterns of leaves or vines. Close-up of a carved wooden table leg with subtle bark texture. Perhaps a small potted plant native to the tree's ecosystem.",
+        "lighting": "Soft, warm amber light from woven lanterns and organic-shaped windows, mimicking the sunset glow, casting gentle shadows and highlighting the natural wood grain. No direct sky light visible.",
+        "atmosphere": "A feeling of being embraced by the ancient tree, a warm, intimate, and slightly magical ambiance. The air is calm and inviting, with the subtle scent of wood and faint floral notes."
+      },
+      "forbiddenTransformations": [
+        "The dining chamber appearing as a hollowed-out shell without evidence of tree growth.",
+        "Walls being perfectly flat or geometrically precise.",
+        "The presence of visible plumbing or electrical conduits.",
+        "Any indication of being a separate structure built onto the tree.",
+        "A lack of natural light sources or overly harsh artificial lighting.",
+        "Rendered as a standard rectangular room.",
+        "Any glass structures or balconies within this space.",
+        "The introduction of modern technology like screens or speakers."
+      ],
+      "parentId": "v2-1768490299097-vzxtcwdch",
+      "primaryMedia": "media-1768566156840-74taafu6v"
+    },
+    "v2-1768566604001-r1qry10r9": {
+      "id": "v2-1768566604001-r1qry10r9",
+      "type": "space",
+      "name": "Treetop Balcony",
+      "slug": "treetop-balcony",
+      "description": "An open-air balcony situated high within the lush canopy, offering a breathtaking, expansive view of the surrounding landscape and the distant ocean.",
+      "spaceType": "elevated",
+      "dna": {
+        "essence": [
+          "elevated viewpoint",
+          "natural immersion",
+          "tropical canopy"
+        ],
+        "formsAndMaterials": [
+          "natural wood",
+          "open air",
+          "foliage"
+        ],
+        "colorAndLight": [
+          "dappled sunlight",
+          "vibrant greens",
+          "twilight hues"
+        ],
+        "atmosphere": [
+          "serene",
+          "panoramic",
+          "secluded"
+        ],
+        "banned": [
+          "visible solid walls",
+          "enclosed ceiling",
+          "underground elements",
+          "modern industrial materials",
+          "artificial structures dominating the view"
+        ]
+      },
+      "promptLayers": {
+        "background": "The expansive twilight sky transitioning from deep purple to soft blue, with the distant silhouette of Isla Perdida and the vast ocean stretching to the horizon.",
+        "midground": "Lush, vibrant green foliage of the surrounding treetops forming a natural frame. Distant glimpses of the ocean through gaps in the leaves.",
+        "foreground": "A weathered wooden railing of the balcony, with a few scattered leaves. The textured, natural wood flooring of the balcony.",
+        "lighting": "Soft, diffused twilight filtering through the dense canopy, creating dappled patterns of light and shadow. The ambient glow from distant lights of the beach bar below.",
+        "atmosphere": "A tranquil and elevated sense of peace, disconnected from the world below, with the sounds of nature and a vast, open perspective."
+      },
+      "forbiddenTransformations": [
+        "The balcony becoming enclosed with walls or a solid roof.",
+        "The view of the ocean and landscape being obstructed by more structures.",
+        "The natural wood elements being replaced by metal or concrete.",
+        "The vibrant foliage losing its color or appearing artificial.",
+        "The space becoming dark and lacking natural light.",
+        "The balcony sinking to ground level.",
+        "The presence of indoor furniture or fixtures."
+      ],
+      "parentId": "v2-1768490299097-vzxtcwdch",
+      "primaryMedia": "media-1768566609936-5wicbwf03"
+    },
+    "v2-1768566681820-oz8drj0f5": {
+      "id": "v2-1768566681820-oz8drj0f5",
+      "type": "view",
+      "name": "Closer Table Detail",
+      "slug": "closer-table-detail",
+      "description": "View: The surface of the table, its carved details, the texture of the wood grain, and any nearby items on its surface like placemats or utensils.",
+      "parentId": "v2-1768566151345-5715p5wv8",
+      "primaryMedia": "media-1768566681821-ugwj1j52l"
+    },
+    "v2-1768566829266-livdagxg4": {
+      "id": "v2-1768566829266-livdagxg4",
+      "type": "view",
+      "name": "The Tree Canopy Above",
+      "slug": "the-tree-canopy-above",
+      "description": "View: The intricate network of branches, boughs, and organic ceiling structure, along with any woven lanterns or organic light sources integrated into the canopy. The natural wood grain and the 'sky' as seen through the canopy.",
+      "parentId": "v2-1768566151345-5715p5wv8",
+      "primaryMedia": "media-1768566829266-m1cbcct7c"
+    },
+    "v2-1768567167098-6usazvd2f": {
+      "id": "v2-1768567167098-6usazvd2f",
+      "type": "view",
+      "name": "Treetop Canopy Above",
+      "slug": "treetop-canopy-above",
+      "description": "View: The intricate network of branches, leaves, and natural textures of the canopy from a direct upward perspective, bathed in dappled twilight.",
+      "parentId": "v2-1768566604001-r1qry10r9",
+      "primaryMedia": "media-1768567167100-vzcs6vq99"
+    },
+    "v2-1768567283024-aqpz6kqrq": {
+      "id": "v2-1768567283024-aqpz6kqrq",
+      "type": "view",
+      "name": "Temple Entrance Detail",
+      "slug": "temple-entrance-detail",
+      "description": "View: Detailed view of the temple entrance - carvings, inscriptions, door materials, and any surrounding architectural features.",
+      "parentId": "v2-1768566604001-r1qry10r9",
+      "primaryMedia": "media-1768567283024-qf987lttk"
     }
   },
   "views": {},
@@ -447,6 +595,38 @@
                       "id": "v2-1768508388023-vb5jyylfx",
                       "type": "space",
                       "children": []
+                    },
+                    {
+                      "id": "v2-1768566151345-5715p5wv8",
+                      "type": "space",
+                      "children": [
+                        {
+                          "id": "v2-1768566681820-oz8drj0f5",
+                          "type": "view",
+                          "children": []
+                        },
+                        {
+                          "id": "v2-1768566829266-livdagxg4",
+                          "type": "view",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "v2-1768566604001-r1qry10r9",
+                      "type": "space",
+                      "children": [
+                        {
+                          "id": "v2-1768567167098-6usazvd2f",
+                          "type": "view",
+                          "children": []
+                        },
+                        {
+                          "id": "v2-1768567283024-aqpz6kqrq",
+                          "type": "view",
+                          "children": []
+                        }
+                      ]
                     }
                   ]
                 }

@@ -11,7 +11,7 @@ import {
   validationError,
   handleCommandError,
   registerSpawn,
-  reloadAndSetActive,
+  reloadAndCreateSession,
   createErrorHandler
 } from '../utils/commandUtils';
 
@@ -63,9 +63,17 @@ export async function handleLookCommand(
         data.eventsUrl,
         `/LOOK ${text}`,
         async (completedData: any) => {
-          // Set the new view node as active (it has the image)
+          // Create entity session with image - displays image immediately
           if (completedData.view) {
-            await reloadAndSetActive(completedData.view.id);
+            await reloadAndCreateSession(
+              {
+                id: completedData.view.id,
+                name: completedData.view.name,
+                type: completedData.view.type,
+                primaryMedia: completedData.mediaId
+              },
+              completedData.imageUrl
+            );
           }
           setIsMoving(false);
         },

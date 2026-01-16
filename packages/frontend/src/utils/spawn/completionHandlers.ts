@@ -105,6 +105,12 @@ export function handleSpawnCompletion(
     // Navigation/niche spawns - handled by custom callback
     // Check for node property OR imageUrl+imagePrompt combo (navigation pipeline signature)
     return handleNavigationCompletion(spawnId, completionData, store);
+  } else if (completionData.space || completionData.container) {
+    // GO_INSIDE2 spawns (space + container format) - handled by custom callback
+    return handleNavigationCompletion(spawnId, completionData, store);
+  } else if (completionData.view) {
+    // LOOK spawns (view format) - handled by custom callback
+    return handleNavigationCompletion(spawnId, completionData, store);
   }
 
   console.warn('[CompletionHandler] Unknown completion type:', completionData);

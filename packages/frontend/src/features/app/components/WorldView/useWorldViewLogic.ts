@@ -247,8 +247,9 @@ export function useWorldViewLogic() {
       
       if (cancelled) return;
       
+      // If new entity has no image, preserve the previous image
+      // Don't update hasImage or clear the current image
       if (!displayImage) {
-        setHasImage(false);
         setIsLoading(false);
         return;
       }

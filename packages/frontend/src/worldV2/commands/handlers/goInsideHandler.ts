@@ -11,7 +11,7 @@ import {
   validationError,
   handleCommandError,
   registerSpawn,
-  reloadAndSetActive,
+  reloadAndCreateSession,
   createErrorHandler
 } from '../utils/commandUtils';
 
@@ -63,12 +63,28 @@ export async function handleGoInsideCommand(
         data.eventsUrl,
         `/GO_INSIDE2 ${text}`,
         async (completedData: any) => {
-          // Set the space node as active (it has the image)
+          // Create entity session with image - displays image immediately
           if (completedData.space) {
-            await reloadAndSetActive(completedData.space.id);
+            await reloadAndCreateSession(
+              {
+                id: completedData.space.id,
+                name: completedData.space.name,
+                type: completedData.space.type,
+                primaryMedia: completedData.mediaId
+              },
+              completedData.imageUrl
+            );
           } else if (completedData.container) {
             // Fallback to container if space not found
-            await reloadAndSetActive(completedData.container.id);
+            await reloadAndCreateSession(
+              {
+                id: completedData.container.id,
+                name: completedData.container.name,
+                type: completedData.container.type,
+                primaryMedia: completedData.mediaId
+              },
+              completedData.imageUrl
+            );
           }
           setIsMoving(false);
         },
