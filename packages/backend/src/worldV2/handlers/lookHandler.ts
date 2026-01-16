@@ -319,10 +319,7 @@ export const lookHandler = asyncHandler(async (req: Request, res: Response) => {
           // We still reference the parent's promptLayers for continuity
           promptLayers: effectiveSourcePromptLayers,
           promptData: {
-            command: 'LOOK',
-            operation: lookResponse.operation,
-            camera: lookResponse.camera,
-            target: lookResponse.target
+            command: 'LOOK'
           },
           model: 'fal-flux-2-turbo-edit',
           width: 1920,

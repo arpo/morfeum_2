@@ -355,9 +355,10 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
         };
       }
 
-      // Always save the new space node
+      // Always save the new space node (exclude promptLayers - stored in media.json only)
+      const { promptLayers: _spacePromptLayers, ...spaceWithoutPromptLayers } = space;
       worldsData.nodes[space.id] = {
-        ...space,
+        ...spaceWithoutPromptLayers,
         parentId: container.id
       };
 

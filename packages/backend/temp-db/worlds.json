@@ -1,733 +1,233 @@
 {
   "nodes": {
-    "v2-1768490207087-01asb38fd": {
-      "id": "v2-1768490207087-01asb38fd",
+    "v2-1768570139518-wodfoikb9": {
+      "id": "v2-1768570139518-wodfoikb9",
       "type": "host",
-      "name": "Isla Perdida",
-      "slug": "isla-perdida",
-      "description": "A tropical island paradise bathed in the warm glow of twilight.",
-      "genre": "Tropical Fantasy",
+      "name": "Whispering Pines National Park",
+      "slug": "whispering-pines-national-park",
+      "description": "A vast national park characterized by dense pine forests, serene lakes, and picturesque mountain vistas.",
+      "genre": "Rural",
       "weather": "clear",
-      "timeOfDay": "dusk",
+      "timeOfDay": "golden_hour",
       "dna": {
         "essence": [
-          "tropical paradise",
-          "vibrant island life",
-          "coastal oasis",
-          "festive atmosphere"
+          "pine forest ecosystem",
+          "tranquil lakes",
+          "mountain landscapes",
+          "idyllic nature"
         ],
         "formsAndMaterials": [
-          "brightly painted wood",
-          "sandy ground",
-          "corrugated metal",
-          "glassware"
+          "tall pine trees",
+          "grassy clearings",
+          "rocky outcrops",
+          "calm water"
         ],
         "colorAndLight": [
-          "deep blue water",
-          "vibrant tropical palette",
-          "warm amber string lights",
-          "fading natural light"
+          "deep forest green",
+          "pine brown",
+          "calm blue",
+          "sunset hues",
+          "pastel sky colors",
+          "warm golden hour light"
         ],
         "atmosphere": [
-          "vibrant",
-          "festive",
-          "lively",
-          "tropical",
-          "inviting",
-          "whimsical",
-          "cheerful",
-          "relaxing"
+          "peaceful",
+          "cozy",
+          "serene",
+          "picturesque",
+          "idyllic",
+          "tranquil",
+          "adventurous"
         ],
         "banned": [
-          "industrial elements",
-          "cold lighting"
+          "urban sprawl",
+          "industrial structures"
         ]
       },
       "spaceType": "exterior"
     },
-    "v2-1768490207087-n5rn1z30c": {
-      "id": "v2-1768490207087-n5rn1z30c",
+    "v2-1768570139519-dzd85q7jr": {
+      "id": "v2-1768570139519-dzd85q7jr",
       "type": "region",
-      "name": "The Shoreline",
-      "slug": "the-shoreline",
-      "description": "The sandy edge of the island where the land meets the vast ocean.",
+      "name": "Lake Serenity Campsite",
+      "slug": "lake-serenity-campsite",
+      "description": "A tranquil lakeside camping site nestled within the dense pine forest, offering stunning views of the lake and mountains.",
       "isPassThrough": false,
       "dna": {
         "essence": [
-          "sandy ground",
-          "ocean proximity",
-          "tree-lined shore"
+          "lakeside camping",
+          "forest immersion",
+          "scenic views"
         ],
         "formsAndMaterials": [
-          "sandy ground",
-          "dark silhouettes of trees"
+          "grassy clearing",
+          "pine trees",
+          "lakeshore"
         ],
         "colorAndLight": [
-          "sandy beige",
-          "deep blue water",
-          "dark sky"
+          "soft glow from string lights",
+          "warm interior glow from camper"
         ],
         "atmosphere": [
-          "serene",
-          "natural"
+          "inviting",
+          "cozy",
+          "adventurous"
         ],
         "banned": []
       }
     },
-    "v2-1768490207087-4wz6spt6g": {
-      "id": "v2-1768490207087-4wz6spt6g",
+    "v2-1768570139519-6q5dhgz4h": {
+      "id": "v2-1768570139519-6q5dhgz4h",
       "type": "location",
-      "name": "The Beach Bar",
-      "slug": "the-beach-bar",
+      "name": "Campsite Clearing",
+      "slug": "campsite-clearing",
       "spaceType": "exterior",
-      "description": "A vibrant tiki bar constructed from brightly painted wooden planks, adorned with string lights and an 'The Beach' sign, situated on sandy ground beside the ocean under a twilight sky.",
+      "description": "A grassy clearing within the pine forest, featuring a white and grey camper van, a stone fire pit with a bright orange flame, Adirondack chairs, a dining table laden with food, and string lights strung between the trees.",
       "dna": {
         "essence": [
-          "tiki bar",
-          "festive signage",
-          "string lights"
+          "camper van",
+          "stone fire pit",
+          "outdoor dining"
         ],
         "formsAndMaterials": [
-          "brightly painted wooden planks",
-          "corrugated metal roof",
-          "wooden roof beams",
-          "teal and orange bar stools",
-          "assortment of bottles and glassware",
-          "oval sign"
+          "white and grey camper van",
+          "stone fire pit",
+          "red and white patterned rug",
+          "Adirondack chairs",
+          "small dining table",
+          "tall pine trees",
+          "string lights"
         ],
         "colorAndLight": [
-          "fuchsia",
-          "purple",
-          "orange",
-          "lime green",
-          "teal",
-          "blue",
-          "warm, festive glow from string lights",
-          "clear bulb lights",
-          "multicolored fairy lights"
+          "bright orange flame",
+          "soft, warm glow from string lights",
+          "warm interior glow from camper van",
+          "pastel-colored sky reflection"
         ],
         "atmosphere": [
-          "vibrant",
-          "festive",
-          "lively",
-          "tropical",
+          "peaceful",
+          "cozy",
           "inviting",
-          "whimsical",
-          "cheerful",
-          "relaxing"
+          "serene",
+          "picturesque",
+          "idyllic",
+          "tranquil"
         ],
         "banned": []
       },
-      "primaryMedia": "media-1768490212592-zvyfl1bil"
+      "primaryMedia": "media-1768570144228-o7bztt2t9"
     },
-    "v2-1768490299097-vzxtcwdch": {
-      "id": "v2-1768490299097-vzxtcwdch",
+    "v2-1768570387855-jtpuqisi1": {
+      "id": "v2-1768570387855-jtpuqisi1",
       "type": "container",
-      "name": "The Beach Bar",
-      "slug": "the-beach-bar",
-      "description": "A vibrant tiki bar constructed from brightly painted wooden planks, adorned with string lights and an 'The Beach' sign, situated on sandy ground beside the ocean under a twilight sky.",
+      "name": "Campsite Caravan",
+      "slug": "campsite-caravan",
+      "description": "A cozy and inviting camper van situated in a picturesque campsite clearing. It serves as a comfortable and self-contained accommodation amidst nature.",
       "forbiddenTransformations": [
-        "The bar being constructed from stone or metal",
-        "The bar having a fully enclosed, solid roof",
-        "The bar appearing in a snowy or desert environment",
-        "The bar lacking any signage or decorative lights",
-        "The bar being a simple, unpainted structure"
+        "Transforming the caravan into a boat.",
+        "Adding futuristic or sci-fi elements.",
+        "Changing the primary color scheme to dark or monochrome.",
+        "Removing the windows or making them opaque.",
+        "Adding signs of disrepair or decay.",
+        "Making the caravan appear significantly larger than it is.",
+        "Adding visible mechanical parts or engines on the exterior."
       ],
-      "parentId": "v2-1768490207087-4wz6spt6g"
+      "parentId": "v2-1768570139519-6q5dhgz4h"
     },
-    "v2-1768490299097-gsp45rniv": {
-      "id": "v2-1768490299097-gsp45rniv",
+    "v2-1768570387855-ki1asiyx9": {
+      "id": "v2-1768570387855-ki1asiyx9",
       "type": "space",
-      "name": "Main Bar Area",
-      "slug": "main-bar-area",
-      "description": "The lively interior of the tiki bar, where colorful wooden planks form the walls and counter. Shelves are stocked with bottles, illuminated by festive string lights, creating a warm and inviting atmosphere.",
-      "spaceType": "semi-enclosed",
-      "dna": {
-        "essence": [
-          "tropical",
-          "festive",
-          "beachfront"
-        ],
-        "formsAndMaterials": [
-          "brightly painted wood planks",
-          "corrugated metal accents",
-          "exposed beams"
-        ],
-        "colorAndLight": [
-          "fuchsia, orange, lime green, teal, with warm amber glow",
-          "festive string lights, soft twilight ambient"
-        ],
-        "atmosphere": [
-          "vibrant",
-          "lively",
-          "tropical getaway"
-        ],
-        "banned": [
-          "brutalist architecture",
-          "neo-gothic elements",
-          "cyberpunk neon",
-          "industrial machinery"
-        ]
-      },
-      "promptLayers": {
-        "background": "The rear wall of the bar, showcasing brightly painted wooden planks and shelves stocked with an array of colorful bottles and glassware. Exposed wooden beams and the underside of the corrugated metal roof are visible.",
-        "midground": "The main counter of the bar, with its curved front of colorful planks. Bar stools are arranged along the counter, partially visible. String lights are draped across the ceiling structure and signage.",
-        "foreground": "The textured, sandy floor of the bar's interior. Close-up details of the brightly painted wooden planks forming the lower facade of the bar.",
-        "lighting": "A warm, inviting glow from numerous strings of clear bulb and multicolored fairy lights. Indirect light reflecting off bottles and polished surfaces. The ambient twilight from outside filters softly through the open sides.",
-        "atmosphere": "Intensely festive and welcoming, with a lively, tropical island vibe. The space feels energetic and cheerful, a cozy escape from the twilight outside."
-      },
-      "forbiddenTransformations": [
-        "The interior being fully enclosed with solid walls and ceiling",
-        "The bar appearing dark and uninviting",
-        "The use of modern, minimalist furniture",
-        "The absence of the signature brightly painted wood",
-        "The lighting becoming harsh or monochromatic",
-        "The bar structure looking like stone or concrete"
-      ],
-      "parentId": "v2-1768490299097-vzxtcwdch",
-      "primaryMedia": "media-1768490304863-pxcaq5y0u"
-    },
-    "v2-1768490378044-0xamkgrwi": {
-      "id": "v2-1768490378044-0xamkgrwi",
-      "type": "view",
-      "name": "The Bar Menu",
-      "slug": "the-bar-menu",
-      "description": "View: The details of the bar menu, including text, any illustrations, and its material texture.",
-      "parentId": "v2-1768490299097-gsp45rniv",
-      "primaryMedia": "media-1768490378045-onpwvxvsd"
-    },
-    "v2-1768490463247-25mabyt7v": {
-      "id": "v2-1768490463247-25mabyt7v",
-      "type": "space",
-      "name": "Outdoor Seating Area",
-      "slug": "outdoor-seating-area",
-      "description": "The open-air seating area directly in front of the bar, comprised of simple seating arranged on the warm sand. You can feel the tropical breeze and see the sky overhead.",
-      "spaceType": "outdoor",
-      "dna": {
-        "essence": [
-          "tropical",
-          "beachfront",
-          "open-air"
-        ],
-        "formsAndMaterials": [
-          "brightly painted wood",
-          "corrugated metal",
-          "sand"
-        ],
-        "colorAndLight": [
-          "fuchsia",
-          "orange",
-          "lime green",
-          "teal",
-          "twilight blue",
-          "warm string lights"
-        ],
-        "atmosphere": [
-          "festive",
-          "lively",
-          "tropical relaxation"
-        ],
-        "banned": [
-          "enclosed structures",
-          "stone architecture",
-          "heavy rain or storms",
-          "overcast skies"
-        ]
-      },
-      "promptLayers": {
-        "background": "The vibrant, colorful facade of The Beach Bar with its wooden planks and corrugated roof, adorned with strings of lights. Distant silhouettes of palm trees on Isla Perdida are visible against the twilight sky.",
-        "midground": "Assorted seating arrangements, including simple wooden chairs and benches, scattered on the sandy ground. The bar's counter and bottles are also visible from this perspective.",
-        "foreground": "Close-up textures of the warm, soft sand with subtle footprints. The base of the bar's brightly painted structure and the legs of the seating are prominent.",
-        "lighting": "Warm, festive glow from overhead string lights and fairy lights, interspersed with the soft, ambient twilight hues of deep purple and blue from the sky.",
-        "atmosphere": "A lively and inviting tropical atmosphere, infused with the cheerful mood of a beachfront celebration. The open air carries the scent of salt and the distant sound of the ocean."
-      },
-      "forbiddenTransformations": [
-        "Adding a solid roof or walls",
-        "Replacing the sand with a paved surface",
-        "Introducing furniture that is not tropical or beach-themed",
-        "Removing the string lights or their festive glow",
-        "Changing the vibrant color palette of the bar",
-        "Blocking the view of the ocean or sky"
-      ],
-      "parentId": "v2-1768490299097-vzxtcwdch",
-      "primaryMedia": "media-1768490469045-l5kyzr5ba"
-    },
-    "v2-1768490520943-g9esf4383": {
-      "id": "v2-1768490520943-g9esf4383",
-      "type": "view",
-      "name": "Sitting in the Sand",
-      "slug": "sitting-in-the-sand",
-      "description": "View: The bar facade and seating arrangements from a low vantage point, emphasizing the sandy ground and the perspective of someone sitting within it.",
-      "parentId": "v2-1768490463247-25mabyt7v",
-      "primaryMedia": "media-1768490520944-4oyif457r"
-    },
-    "v2-1768490550983-eayo9wnnx": {
-      "id": "v2-1768490550983-eayo9wnnx",
-      "type": "view",
-      "name": "The Ocean View",
-      "slug": "the-ocean-view",
-      "description": "View: The vast expanse of the ocean, the horizon line, and the sky above, with minimal foreground elements.",
-      "parentId": "v2-1768490463247-25mabyt7v",
-      "primaryMedia": "media-1768490550983-gplijvpy3"
-    },
-    "v2-1768490598610-bqj4h766m": {
-      "id": "v2-1768490598610-bqj4h766m",
-      "type": "space",
-      "name": "The Toilet",
-      "slug": "the-toilet",
-      "description": "A small, functional cubicle within the Beach Bar, constructed from similar brightly painted wooden planks. It offers a private space for patrons amidst the lively atmosphere.",
+      "name": "Caravan Interior",
+      "slug": "caravan-interior",
+      "description": "The interior of the camper van is a warm and inviting space, featuring compact living quarters. You can see a small kitchenette area, comfortable seating, and sleeping arrangements, all bathed in the soft, ambient light from the exterior string lights and the camper's internal glow.",
       "spaceType": "indoor",
       "dna": {
         "essence": [
-          "tropical",
-          "functional",
-          "enclosed"
-        ],
-        "formsAndMaterials": [
-          "brightly painted wood planks",
-          "corrugated metal (ceiling)",
-          "ceramic (toilet fixture)"
-        ],
-        "colorAndLight": [
-          "fuchsia, orange, lime green, teal, white",
-          "dim, artificial, contained"
-        ],
-        "atmosphere": [
-          "private",
-          "functional",
-          "slightly cramped"
-        ],
-        "banned": [
-          "open sky visible",
-          "ocean view",
-          "sandy floor",
-          "tropical foliage",
-          "full bar setup"
-        ]
-      },
-      "promptLayers": {
-        "background": "The interior walls are clad in brightly painted wooden planks (fuchsia, orange, lime green, teal), meeting a simple corrugated metal ceiling.",
-        "midground": "A white ceramic toilet fixture and a small sink are the primary elements, with a utilitarian lock on the door.",
-        "foreground": "The floor is a simple, possibly slightly worn, linoleum or painted wood surface.",
-        "lighting": "Dim, warm artificial light from a single enclosed fixture, casting shadows and providing functional illumination.",
-        "atmosphere": "Functional, private, and a bit cramped, maintaining the underlying tropical aesthetic in its materials but with a clear utilitarian purpose."
-      },
-      "forbiddenTransformations": [
-        "The walls becoming smooth concrete or plaster.",
-        "The lighting becoming natural or bright.",
-        "The toilet fixture being absent or replaced by furniture.",
-        "The space opening up to the exterior.",
-        "The painted planks being removed or replaced.",
-        "The floor becoming sand or ocean water.",
-        "Any hint of the bar setup inside."
-      ],
-      "parentId": "v2-1768490299097-vzxtcwdch",
-      "primaryMedia": "media-1768490603941-wfawiynj4"
-    },
-    "v2-1768491194068-et37gas15": {
-      "id": "v2-1768491194068-et37gas15",
-      "type": "view",
-      "name": "The Outside View",
-      "slug": "the-outside-view",
-      "description": "View: The corridor outside the toilet, potentially showing other doors, walls, or glimpses of the beach bar's main area. The framing will emphasize the transition from private space to the public environment.",
-      "parentId": "v2-1768490598610-bqj4h766m",
-      "primaryMedia": "media-1768491194069-9m6iomy3f"
-    },
-    "v2-1768508388023-vb5jyylfx": {
-      "id": "v2-1768508388023-vb5jyylfx",
-      "type": "space",
-      "name": "Chill Out Lounge",
-      "slug": "chill-out-lounge",
-      "description": "Nestled amongst swaying palm trees, this relaxed area features colorful sun shades and comfortable seating, bathed in the ambient glow of festive lights. It's a perfect spot to unwind and enjoy the tropical ambiance.",
-      "spaceType": "semi-enclosed",
-      "dna": {
-        "essence": [
-          "tropical relaxation",
-          "beachside chill",
-          "festive twilight"
-        ],
-        "formsAndMaterials": [
-          "fabric sun shades",
-          "natural wood",
-          "wicker",
-          "sand"
-        ],
-        "colorAndLight": [
-          "fuchsia, orange, lime green, teal palette",
-          "dappled, warm, festive lighting"
-        ],
-        "atmosphere": [
-          "relaxed",
-          "tropical",
-          "cozy"
-        ],
-        "banned": [
-          "brutalist architecture",
-          "industrial machinery",
-          "sci-fi elements",
-          "gothic motifs"
-        ]
-      },
-      "promptLayers": {
-        "background": "Swaying palm fronds creating a natural canopy, with glimpses of the twilight sky through gaps in the fabric sun shades. Faint silhouettes of distant palm trees and the ocean horizon.",
-        "midground": "Low, comfortable seating arranged on the sand, possibly woven or wicker furniture, with colorful cushions. Vibrant fabric sun shades creating an overhead canopy with visible beams and support structures.",
-        "foreground": "Soft, fine sand with scattered footprints, leading into the seating area. The base of palm tree trunks and the texture of the woven seating.",
-        "lighting": "Warm, festive glow from strings of clear bulb lights and multicolored fairy lights, casting dappled patterns through the sun shades. Soft ambient twilight filtering from the sky.",
-        "atmosphere": "Tranquil, inviting, and comfortably enclosed by nature and fabric. A sense of being sheltered yet connected to the tropical environment."
-      },
-      "forbiddenTransformations": [
-        "The sun shades becoming solid, opaque roofs",
-        "The palm trees being replaced by generic city trees",
-        "The sand turning into a polished concrete floor",
-        "The colorful lights becoming stark, white LEDs",
-        "The area becoming fully enclosed with glass walls",
-        "The area losing its festive, tropical decor"
-      ],
-      "parentId": "v2-1768490299097-vzxtcwdch",
-      "primaryMedia": "media-1768508393267-4g5nfd3bb"
-    },
-    "v2-1768566151345-5715p5wv8": {
-      "id": "v2-1768566151345-5715p5wv8",
-      "type": "space",
-      "name": "Main Dining Chamber",
-      "slug": "main-dining-chamber",
-      "description": "You are now in the main dining chamber, a circular room carved directly into the massive trunk and branches of an ancient tree. Warm light spills from organic-shaped windows and woven lanterns, illuminating the natural wood surfaces and the vibrant, eclectic decor.",
-      "spaceType": "indoor",
-      "dna": {
-        "essence": [
-          "arboreal",
-          "organic",
-          "whimsical",
-          "rustic"
-        ],
-        "formsAndMaterials": [
-          "carved wood",
-          "natural curves",
-          "woven textures",
-          "living tree"
-        ],
-        "colorAndLight": [
-          "warm amber and earth tones",
-          "soft, indirect lighting"
-        ],
-        "atmosphere": [
           "cozy",
-          "enchanted",
-          "intimate"
-        ],
-        "banned": [
-          "stark white walls",
-          "exposed steel beams",
-          "fluorescent lighting",
-          "geometric modernity",
-          "visible roots on interior surfaces"
-        ]
-      },
-      "promptLayers": {
-        "background": "The curving, naturally formed interior walls of the tree trunk and branches, seamlessly integrated with carved wooden shelves holding artisanal pottery and dried flora. Woven lanterns hang from thicker boughs overhead.",
-        "midground": "Round wooden tables with mismatched chairs, some carved directly from smaller branches. Soft, textured cushions on seating. Passes into smaller nooks or private dining alcoves are visible.",
-        "foreground": "The polished, smooth wooden floor, possibly with inlaid patterns of leaves or vines. Close-up of a carved wooden table leg with subtle bark texture. Perhaps a small potted plant native to the tree's ecosystem.",
-        "lighting": "Soft, warm amber light from woven lanterns and organic-shaped windows, mimicking the sunset glow, casting gentle shadows and highlighting the natural wood grain. No direct sky light visible.",
-        "atmosphere": "A feeling of being embraced by the ancient tree, a warm, intimate, and slightly magical ambiance. The air is calm and inviting, with the subtle scent of wood and faint floral notes."
-      },
-      "forbiddenTransformations": [
-        "The dining chamber appearing as a hollowed-out shell without evidence of tree growth.",
-        "Walls being perfectly flat or geometrically precise.",
-        "The presence of visible plumbing or electrical conduits.",
-        "Any indication of being a separate structure built onto the tree.",
-        "A lack of natural light sources or overly harsh artificial lighting.",
-        "Rendered as a standard rectangular room.",
-        "Any glass structures or balconies within this space.",
-        "The introduction of modern technology like screens or speakers."
-      ],
-      "parentId": "v2-1768490299097-vzxtcwdch",
-      "primaryMedia": "media-1768566156840-74taafu6v"
-    },
-    "v2-1768566604001-r1qry10r9": {
-      "id": "v2-1768566604001-r1qry10r9",
-      "type": "space",
-      "name": "Treetop Balcony",
-      "slug": "treetop-balcony",
-      "description": "An open-air balcony situated high within the lush canopy, offering a breathtaking, expansive view of the surrounding landscape and the distant ocean.",
-      "spaceType": "elevated",
-      "dna": {
-        "essence": [
-          "elevated viewpoint",
-          "natural immersion",
-          "tropical canopy"
+          "compact",
+          "functional",
+          "inviting"
         ],
         "formsAndMaterials": [
-          "natural wood",
-          "open air",
-          "foliage"
+          "curved walls",
+          "wood paneling",
+          "fabric upholstery",
+          "compact fixtures"
         ],
         "colorAndLight": [
-          "dappled sunlight",
-          "vibrant greens",
-          "twilight hues"
+          "warm wood tones",
+          "muted fabric colors",
+          "soft interior lighting",
+          "ambient glow"
         ],
         "atmosphere": [
-          "serene",
-          "panoramic",
-          "secluded"
+          "intimate",
+          "sheltered",
+          "peaceful",
+          "hygge"
         ],
         "banned": [
-          "visible solid walls",
-          "enclosed ceiling",
-          "underground elements",
-          "modern industrial materials",
-          "artificial structures dominating the view"
+          "exposed plumbing",
+          "industrial machinery",
+          "stark concrete",
+          "fluorescent lighting",
+          "unfurnished areas",
+          "visible external environment",
+          "large open spaces"
         ]
       },
-      "promptLayers": {
-        "background": "The expansive twilight sky transitioning from deep purple to soft blue, with the distant silhouette of Isla Perdida and the vast ocean stretching to the horizon.",
-        "midground": "Lush, vibrant green foliage of the surrounding treetops forming a natural frame. Distant glimpses of the ocean through gaps in the leaves.",
-        "foreground": "A weathered wooden railing of the balcony, with a few scattered leaves. The textured, natural wood flooring of the balcony.",
-        "lighting": "Soft, diffused twilight filtering through the dense canopy, creating dappled patterns of light and shadow. The ambient glow from distant lights of the beach bar below.",
-        "atmosphere": "A tranquil and elevated sense of peace, disconnected from the world below, with the sounds of nature and a vast, open perspective."
-      },
       "forbiddenTransformations": [
-        "The balcony becoming enclosed with walls or a solid roof.",
-        "The view of the ocean and landscape being obstructed by more structures.",
-        "The natural wood elements being replaced by metal or concrete.",
-        "The vibrant foliage losing its color or appearing artificial.",
-        "The space becoming dark and lacking natural light.",
-        "The balcony sinking to ground level.",
-        "The presence of indoor furniture or fixtures."
+        "Making the interior feel cavernous or like a large hall.",
+        "Introducing modern or minimalist design aesthetics that clash with cozy.",
+        "Replacing wood paneling with metallic or plastic surfaces.",
+        "Adding bright, harsh, or cold-toned lighting.",
+        "Displaying visible cooking equipment or appliances that are not compact.",
+        "Removing the sense of enclosure and making it feel open to the outside.",
+        "Adding elements that suggest a workshop or industrial space.",
+        "Showing the user's character model in a way that breaks the scale of the interior."
       ],
-      "parentId": "v2-1768490299097-vzxtcwdch",
-      "primaryMedia": "media-1768566609936-5wicbwf03"
+      "parentId": "v2-1768570387855-jtpuqisi1",
+      "primaryMedia": "media-1768570392248-6ta2d8au0"
     },
-    "v2-1768566681820-oz8drj0f5": {
-      "id": "v2-1768566681820-oz8drj0f5",
+    "v2-1768570444674-flksn2ybv": {
+      "id": "v2-1768570444674-flksn2ybv",
       "type": "view",
-      "name": "Closer Table Detail",
-      "slug": "closer-table-detail",
-      "description": "View: The surface of the table, its carved details, the texture of the wood grain, and any nearby items on its surface like placemats or utensils.",
-      "parentId": "v2-1768566151345-5715p5wv8",
-      "primaryMedia": "media-1768566681821-ugwj1j52l"
-    },
-    "v2-1768566829266-livdagxg4": {
-      "id": "v2-1768566829266-livdagxg4",
-      "type": "view",
-      "name": "The Tree Canopy Above",
-      "slug": "the-tree-canopy-above",
-      "description": "View: The intricate network of branches, boughs, and organic ceiling structure, along with any woven lanterns or organic light sources integrated into the canopy. The natural wood grain and the 'sky' as seen through the canopy.",
-      "parentId": "v2-1768566151345-5715p5wv8",
-      "primaryMedia": "media-1768566829266-m1cbcct7c"
-    },
-    "v2-1768567167098-6usazvd2f": {
-      "id": "v2-1768567167098-6usazvd2f",
-      "type": "view",
-      "name": "Treetop Canopy Above",
-      "slug": "treetop-canopy-above",
-      "description": "View: The intricate network of branches, leaves, and natural textures of the canopy from a direct upward perspective, bathed in dappled twilight.",
-      "parentId": "v2-1768566604001-r1qry10r9",
-      "primaryMedia": "media-1768567167100-vzcs6vq99"
-    },
-    "v2-1768567283024-aqpz6kqrq": {
-      "id": "v2-1768567283024-aqpz6kqrq",
-      "type": "view",
-      "name": "Temple Entrance Detail",
-      "slug": "temple-entrance-detail",
-      "description": "View: Detailed view of the temple entrance - carvings, inscriptions, door materials, and any surrounding architectural features.",
-      "parentId": "v2-1768566604001-r1qry10r9",
-      "primaryMedia": "media-1768567283024-qf987lttk"
-    },
-    "v2-1768567971484-zbokmsm5y": {
-      "id": "v2-1768567971484-zbokmsm5y",
-      "type": "view",
-      "name": "The Twilight Sky",
-      "slug": "the-twilight-sky",
-      "description": "View: The twilight sky transitioning from deep purple to soft blue, with the faint outline of Isla Perdida and distant palm trees.",
-      "parentId": "v2-1768490207087-4wz6spt6g",
-      "primaryMedia": "media-1768567971485-fcirfmhnl"
-    },
-    "v2-1768568109711-ff0nnizqd": {
-      "id": "v2-1768568109711-ff0nnizqd",
-      "type": "view",
-      "name": "Beer Bottle Detail",
-      "slug": "beer-bottle-detail",
-      "description": "View: The specific label, branding, and any text or imagery on the beer bottle.",
-      "parentId": "v2-1768490299097-gsp45rniv",
-      "primaryMedia": "media-1768568109711-hpmulqg8b"
-    },
-    "v2-1768568585191-zyadutj7p": {
-      "id": "v2-1768568585191-zyadutj7p",
-      "type": "view",
-      "name": "The Dish from the Kitchen",
-      "slug": "the-dish-from-the-kitchen",
-      "description": "View: Detailed view of the specific dish, its ingredients, presentation, and any accompanying garnishes or plates.",
-      "parentId": "v2-1768490299097-gsp45rniv",
-      "primaryMedia": "media-1768568585191-rq0oit0xi"
-    },
-    "v2-1768569214594-zlafwmph1": {
-      "id": "v2-1768569214594-zlafwmph1",
-      "type": "view",
-      "name": "The Toilet Fixture",
-      "slug": "the-toilet-fixture",
-      "description": "View: The details of the ceramic toilet bowl, seat, lid, and flush mechanism.",
-      "parentId": "v2-1768490598610-bqj4h766m",
-      "primaryMedia": "media-1768569214595-jbve8bv98"
-    },
-    "v2-1768569228024-78vk1k3pf": {
-      "id": "v2-1768569228024-78vk1k3pf",
-      "type": "view",
-      "name": "At the Sink",
-      "slug": "at-the-sink",
-      "description": "View: The white ceramic sink basin, the metallic faucet, soap dispenser (if present), and the textured wooden planks of the wall immediately surrounding the sink.",
-      "parentId": "v2-1768490598610-bqj4h766m",
-      "primaryMedia": "media-1768569228025-xhymky86u"
-    },
-    "v2-1768569288968-emxgczr8f": {
-      "id": "v2-1768569288968-emxgczr8f",
-      "type": "view",
-      "name": "Wider Bar View",
-      "slug": "wider-bar-view",
-      "description": "View: The full extent of the beach bar, the sandy area around it, the ocean, and the sky, providing a broader context of the location.",
-      "parentId": "v2-1768490207087-4wz6spt6g",
-      "primaryMedia": "media-1768569288969-2eew6hwpj"
-    },
-    "v2-1768569350805-4xx7vc6k7": {
-      "id": "v2-1768569350805-4xx7vc6k7",
-      "type": "view",
-      "name": "Above the Bar",
-      "slug": "above-the-bar",
-      "description": "View: An aerial-like perspective of the beach bar, its colorful facade, roof, surrounding sandy area, bar stools, and the ocean beyond.",
-      "parentId": "v2-1768569288968-emxgczr8f",
-      "primaryMedia": "media-1768569350806-zopu4iy9m"
+      "name": "The Table Setting",
+      "slug": "the-table-setting",
+      "description": "View: Detailed view of the food laid out on the table, plates, cutlery, glasses, and any decorative elements, focusing on texture and arrangement.",
+      "parentId": "v2-1768570139519-6q5dhgz4h",
+      "primaryMedia": "media-1768570444675-5bjrjjngq"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "v2-1768490207087-01asb38fd",
+      "id": "v2-1768570139518-wodfoikb9",
       "type": "host",
       "children": [
         {
-          "id": "v2-1768490207087-n5rn1z30c",
+          "id": "v2-1768570139519-dzd85q7jr",
           "type": "region",
           "children": [
             {
-              "id": "v2-1768490207087-4wz6spt6g",
+              "id": "v2-1768570139519-6q5dhgz4h",
               "type": "location",
               "children": [
                 {
-                  "id": "v2-1768490299097-vzxtcwdch",
+                  "id": "v2-1768570387855-jtpuqisi1",
                   "type": "container",
                   "children": [
                     {
-                      "id": "v2-1768490299097-gsp45rniv",
-                      "type": "space",
-                      "children": [
-                        {
-                          "id": "v2-1768490378044-0xamkgrwi",
-                          "type": "view",
-                          "children": []
-                        },
-                        {
-                          "id": "v2-1768568109711-ff0nnizqd",
-                          "type": "view",
-                          "children": []
-                        },
-                        {
-                          "id": "v2-1768568585191-zyadutj7p",
-                          "type": "view",
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "id": "v2-1768490463247-25mabyt7v",
-                      "type": "space",
-                      "children": [
-                        {
-                          "id": "v2-1768490520943-g9esf4383",
-                          "type": "view",
-                          "children": []
-                        },
-                        {
-                          "id": "v2-1768490550983-eayo9wnnx",
-                          "type": "view",
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "id": "v2-1768490598610-bqj4h766m",
-                      "type": "space",
-                      "children": [
-                        {
-                          "id": "v2-1768491194068-et37gas15",
-                          "type": "view",
-                          "children": []
-                        },
-                        {
-                          "id": "v2-1768569214594-zlafwmph1",
-                          "type": "view",
-                          "children": []
-                        },
-                        {
-                          "id": "v2-1768569228024-78vk1k3pf",
-                          "type": "view",
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "id": "v2-1768508388023-vb5jyylfx",
+                      "id": "v2-1768570387855-ki1asiyx9",
                       "type": "space",
                       "children": []
-                    },
-                    {
-                      "id": "v2-1768566151345-5715p5wv8",
-                      "type": "space",
-                      "children": [
-                        {
-                          "id": "v2-1768566681820-oz8drj0f5",
-                          "type": "view",
-                          "children": []
-                        },
-                        {
-                          "id": "v2-1768566829266-livdagxg4",
-                          "type": "view",
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "id": "v2-1768566604001-r1qry10r9",
-                      "type": "space",
-                      "children": [
-                        {
-                          "id": "v2-1768567167098-6usazvd2f",
-                          "type": "view",
-                          "children": []
-                        },
-                        {
-                          "id": "v2-1768567283024-aqpz6kqrq",
-                          "type": "view",
-                          "children": []
-                        }
-                      ]
                     }
                   ]
                 },
                 {
-                  "id": "v2-1768567971484-zbokmsm5y",
+                  "id": "v2-1768570444674-flksn2ybv",
                   "type": "view",
                   "children": []
-                },
-                {
-                  "id": "v2-1768569288968-emxgczr8f",
-                  "type": "view",
-                  "children": [
-                    {
-                      "id": "v2-1768569350805-4xx7vc6k7",
-                      "type": "view",
-                      "children": []
-                    }
-                  ]
                 }
               ]
             }
@@ -737,6 +237,6 @@
     }
   ],
   "pinnedIds": [
-    "v2-1768490207087-01asb38fd"
+    "v2-1768570139518-wodfoikb9"
   ]
 }

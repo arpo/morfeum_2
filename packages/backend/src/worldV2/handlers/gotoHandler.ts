@@ -339,9 +339,10 @@ export const gotoHandler = asyncHandler(async (req: Request, res: Response) => {
       // ═══════════════════════════════════════════════════════════════════════
       sendProgress(operationId, 'saving', 'Saving space...');
 
-      // Save the new space node (container already exists)
+      // Save the new space node (exclude promptLayers - stored in media.json only)
+      const { promptLayers: _spacePromptLayers, ...spaceWithoutPromptLayers } = space;
       worldsData.nodes[space.id] = {
-        ...space,
+        ...spaceWithoutPromptLayers,
         parentId: container.id
       };
 
