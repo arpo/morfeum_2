@@ -201,10 +201,10 @@ export function NavigationAssistantPanel({ onClose, onCommandSuggested }: Naviga
     <DraggablePanel
       title="Navigation Assistant"
       onClose={onClose}
-      initialPosition={{ x: 100, y: 100 }}
-      initialSize={{ width: 420, height: 520 }}
-      minWidth={320}
-      minHeight={400}
+      initialPosition={{ x: 600, y: 300 }}
+      initialSize={{ width: 380, height: 210 }}
+      minWidth={270}
+      minHeight={150}
     >
       <div className={styles.container} data-component="navigation-assistant-panel">
         {/* Clear history button */}
@@ -229,8 +229,7 @@ export function NavigationAssistantPanel({ onClose, onCommandSuggested }: Naviga
                 Navigation Expert
               </div>
               <div className={styles.emptyStateHint}>
-                Ask me how to navigate your world!<br />
-                Try: "How do I look through a window?" or "I want to enter the tower"
+                Ask me how to navigate your world!
               </div>
             </div>
           )}

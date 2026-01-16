@@ -560,6 +560,42 @@
       "description": "View: Detailed view of the specific dish, its ingredients, presentation, and any accompanying garnishes or plates.",
       "parentId": "v2-1768490299097-gsp45rniv",
       "primaryMedia": "media-1768568585191-rq0oit0xi"
+    },
+    "v2-1768569214594-zlafwmph1": {
+      "id": "v2-1768569214594-zlafwmph1",
+      "type": "view",
+      "name": "The Toilet Fixture",
+      "slug": "the-toilet-fixture",
+      "description": "View: The details of the ceramic toilet bowl, seat, lid, and flush mechanism.",
+      "parentId": "v2-1768490598610-bqj4h766m",
+      "primaryMedia": "media-1768569214595-jbve8bv98"
+    },
+    "v2-1768569228024-78vk1k3pf": {
+      "id": "v2-1768569228024-78vk1k3pf",
+      "type": "view",
+      "name": "At the Sink",
+      "slug": "at-the-sink",
+      "description": "View: The white ceramic sink basin, the metallic faucet, soap dispenser (if present), and the textured wooden planks of the wall immediately surrounding the sink.",
+      "parentId": "v2-1768490598610-bqj4h766m",
+      "primaryMedia": "media-1768569228025-xhymky86u"
+    },
+    "v2-1768569288968-emxgczr8f": {
+      "id": "v2-1768569288968-emxgczr8f",
+      "type": "view",
+      "name": "Wider Bar View",
+      "slug": "wider-bar-view",
+      "description": "View: The full extent of the beach bar, the sandy area around it, the ocean, and the sky, providing a broader context of the location.",
+      "parentId": "v2-1768490207087-4wz6spt6g",
+      "primaryMedia": "media-1768569288969-2eew6hwpj"
+    },
+    "v2-1768569350805-4xx7vc6k7": {
+      "id": "v2-1768569350805-4xx7vc6k7",
+      "type": "view",
+      "name": "Above the Bar",
+      "slug": "above-the-bar",
+      "description": "View: An aerial-like perspective of the beach bar, its colorful facade, roof, surrounding sandy area, bar stools, and the ocean beyond.",
+      "parentId": "v2-1768569288968-emxgczr8f",
+      "primaryMedia": "media-1768569350806-zopu4iy9m"
     }
   },
   "views": {},
@@ -625,6 +661,16 @@
                           "id": "v2-1768491194068-et37gas15",
                           "type": "view",
                           "children": []
+                        },
+                        {
+                          "id": "v2-1768569214594-zlafwmph1",
+                          "type": "view",
+                          "children": []
+                        },
+                        {
+                          "id": "v2-1768569228024-78vk1k3pf",
+                          "type": "view",
+                          "children": []
                         }
                       ]
                     },
@@ -671,6 +717,17 @@
                   "id": "v2-1768567971484-zbokmsm5y",
                   "type": "view",
                   "children": []
+                },
+                {
+                  "id": "v2-1768569288968-emxgczr8f",
+                  "type": "view",
+                  "children": [
+                    {
+                      "id": "v2-1768569350805-4xx7vc6k7",
+                      "type": "view",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }

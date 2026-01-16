@@ -16,8 +16,8 @@ export function EntityExplorerPanel({ onClose }: EntityExplorerPanelProps) {
         onClose={onClose}
         initialPosition={position}
         initialSize={size}
-        minWidth={300}
-        minHeight={400}
+        minWidth={200}
+        minHeight={200}
         onPositionChange={setPosition}
         onSizeChange={setSize}
       >

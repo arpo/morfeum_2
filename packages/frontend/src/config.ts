@@ -24,7 +24,7 @@ export const KEYBOARD_SHORTCUTS_DESCRIPTIONS = {
 export const PANEL_CONFIG = {
   ENTITY_EXPLORER: {
     DEFAULT_POSITION: { x: 20, y: 80 },
-    DEFAULT_SIZE: { width: 350, height: 400 },
+    DEFAULT_SIZE: { width: 350, height: 350 },
   },
 } as const;
 
