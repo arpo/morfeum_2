@@ -80,6 +80,8 @@ export function useVoiceInput(options: UseVoiceInputOptions = {}): UseVoiceInput
   const [isSupported, setIsSupported] = useState(false);
   
   const recognitionRef = useRef<SpeechRecognition | null>(null);
+  // Track if we should be listening (for walkie-talkie auto-restart)
+  const shouldBeListeningRef = useRef(false);
 
   // Check if Web Speech API is supported
   useEffect(() => {
@@ -109,9 +111,13 @@ export function useVoiceInput(options: UseVoiceInputOptions = {}): UseVoiceInput
       const recognition = new SpeechRecognition();
       recognitionRef.current = recognition;
 
-      recognition.continuous = false;
+      // Walkie-talkie mode: continuous = true to keep listening through pauses
+      recognition.continuous = true;
       recognition.interimResults = true;
       recognition.lang = lang;
+      
+      // Mark that we intend to keep listening
+      shouldBeListeningRef.current = true;
 
       recognition.onstart = () => {
         setState('listening');
@@ -169,8 +175,20 @@ export function useVoiceInput(options: UseVoiceInputOptions = {}): UseVoiceInput
       };
 
       recognition.onend = () => {
+        // Walkie-talkie mode: auto-restart if we should still be listening
+        // This handles the browser's automatic silence detection
+        if (shouldBeListeningRef.current && recognitionRef.current) {
+          try {
+            recognition.start();
+            return; // Don't reset state, we're continuing
+          } catch (err) {
+            // If restart fails, fall through to idle state
+          }
+        }
+        
         setState('idle');
         recognitionRef.current = null;
+        shouldBeListeningRef.current = false;
       };
 
       recognition.start();
@@ -186,10 +204,19 @@ export function useVoiceInput(options: UseVoiceInputOptions = {}): UseVoiceInput
    * Stop listening for speech
    */
   const stopListening = useCallback(() => {
-    if (recognitionRef.current && state === 'listening') {
-      recognitionRef.current.stop();
+    // Mark that we intentionally want to stop (prevents auto-restart)
+    shouldBeListeningRef.current = false;
+    
+    // Use stop() (not abort()) to get final results before termination
+    if (recognitionRef.current) {
+      try {
+        recognitionRef.current.stop(); // Gracefully stops and delivers final results
+      } catch {
+        // Ignore errors if already stopped
+      }
+      // Don't null the ref or set idle here - let onend handler do it after final results
     }
-  }, [state]);
+  }, []);
 
   /**
    * Clear error message

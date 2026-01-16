@@ -533,6 +533,33 @@
       "description": "View: Detailed view of the temple entrance - carvings, inscriptions, door materials, and any surrounding architectural features.",
       "parentId": "v2-1768566604001-r1qry10r9",
       "primaryMedia": "media-1768567283024-qf987lttk"
+    },
+    "v2-1768567971484-zbokmsm5y": {
+      "id": "v2-1768567971484-zbokmsm5y",
+      "type": "view",
+      "name": "The Twilight Sky",
+      "slug": "the-twilight-sky",
+      "description": "View: The twilight sky transitioning from deep purple to soft blue, with the faint outline of Isla Perdida and distant palm trees.",
+      "parentId": "v2-1768490207087-4wz6spt6g",
+      "primaryMedia": "media-1768567971485-fcirfmhnl"
+    },
+    "v2-1768568109711-ff0nnizqd": {
+      "id": "v2-1768568109711-ff0nnizqd",
+      "type": "view",
+      "name": "Beer Bottle Detail",
+      "slug": "beer-bottle-detail",
+      "description": "View: The specific label, branding, and any text or imagery on the beer bottle.",
+      "parentId": "v2-1768490299097-gsp45rniv",
+      "primaryMedia": "media-1768568109711-hpmulqg8b"
+    },
+    "v2-1768568585191-zyadutj7p": {
+      "id": "v2-1768568585191-zyadutj7p",
+      "type": "view",
+      "name": "The Dish from the Kitchen",
+      "slug": "the-dish-from-the-kitchen",
+      "description": "View: Detailed view of the specific dish, its ingredients, presentation, and any accompanying garnishes or plates.",
+      "parentId": "v2-1768490299097-gsp45rniv",
+      "primaryMedia": "media-1768568585191-rq0oit0xi"
     }
   },
   "views": {},
@@ -559,6 +586,16 @@
                       "children": [
                         {
                           "id": "v2-1768490378044-0xamkgrwi",
+                          "type": "view",
+                          "children": []
+                        },
+                        {
+                          "id": "v2-1768568109711-ff0nnizqd",
+                          "type": "view",
+                          "children": []
+                        },
+                        {
+                          "id": "v2-1768568585191-zyadutj7p",
                           "type": "view",
                           "children": []
                         }
@@ -629,6 +666,11 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "id": "v2-1768567971484-zbokmsm5y",
+                  "type": "view",
+                  "children": []
                 }
               ]
             }

@@ -501,6 +501,102 @@
         "v2-1768567283024-aqpz6kqrq"
       ],
       "parentMedia": "media-1768566609936-5wicbwf03"
+    },
+    "media-1768567971485-fcirfmhnl": {
+      "id": "media-1768567971485-fcirfmhnl",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a9edd/Hc4OIUqAgskTY0YHyFbQQ.jpg",
+      "createdAt": "2026-01-16T12:52:51.485Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nTilt camera dramatically upward so the twilight sky and distant horizon fill most of the frame. Use 24mm lens, wide shot, f/8.\n\nShow the sky prominently - it should fill most of the frame.\n\nSame The Beach Bar, same night lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "The Beach Bar",
+          "description": "A vibrant tiki bar constructed from brightly painted wooden planks, adorned with string lights and an 'The Beach' sign, situated on sandy ground beside the ocean under a twilight sky.",
+          "background": "The vast, calm ocean stretching to the horizon under a clear twilight sky transitioning from deep purple to a soft blue. Silhouettes of distant palm trees are visible on the faint outline of Isla Perdida.",
+          "midground": "The Beach Bar, a vibrantly colorful tiki bar constructed from brightly painted wooden planks in fuchsia, orange, lime green, and teal.  A corrugated metal roof with exposed wooden beams is overhead. An inviting oval sign proclaiming 'The Beach' hangs prominently. Assorted bottles and glassware are visible behind the bar, catching the light. Teal and orange bar stools are arranged on the sandy ground.",
+          "foreground": "Close-up view of the sandy ground with footprints, leading towards the entrance of the bar.  The lower section of the brightly painted wooden planks of the bar facade is clearly visible, showcasing the textures and vibrant colors.  The edges of the teal and orange bar stools are also in the foreground.",
+          "lighting": "A warm, festive glow emanates from strings of clear bulb lights and multicolored fairy lights draped across the bar and signage. The fading twilight sky provides a soft, ambient blue and purple light, creating a clear, sharp contrast with the warm artificial lights.",
+          "atmosphere": "Vibrant, festive, lively, and tropical. The scene is infused with a whimsical and cheerful mood, creating an inviting and relaxing atmosphere. The clear weather allows for crisp details and the distinct interplay of natural twilight and artificial light."
+        },
+        "promptData": {
+          "command": "LOOK",
+          "operation": "angle_change",
+          "camera": "Tilt camera dramatically upward so the twilight sky and distant horizon fill most of the frame. Use 24mm lens, wide shot, f/8.",
+          "target": "the sky"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768567971484-zbokmsm5y"
+      ],
+      "parentMedia": "media-1768490212592-zvyfl1bil"
+    },
+    "media-1768568109711-hpmulqg8b": {
+      "id": "media-1768568109711-hpmulqg8b",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a9eea/QzNAFDBqZVH6B_vVf0BKW.jpg",
+      "createdAt": "2026-01-16T12:55:09.711Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nStep closer to the bar counter and frame a single bottle of beer tightly. Use 85mm lens, close shot, f/2.8, focusing on the label.\n\nShow a bottle of beer prominently - it should fill most of the frame.\n\nSame Main Bar Area, same night lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "Main Bar Area",
+          "description": "The lively interior of the tiki bar, where colorful wooden planks form the walls and counter. Shelves are stocked with bottles, illuminated by festive string lights, creating a warm and inviting atmosphere.",
+          "background": "The rear wall of the bar, showcasing brightly painted wooden planks and shelves stocked with an array of colorful bottles and glassware. Exposed wooden beams and the underside of the corrugated metal roof are visible.",
+          "midground": "The main counter of the bar, with its curved front of colorful planks. Bar stools are arranged along the counter, partially visible. String lights are draped across the ceiling structure and signage.",
+          "foreground": "The textured, sandy floor of the bar's interior. Close-up details of the brightly painted wooden planks forming the lower facade of the bar.",
+          "lighting": "A warm, inviting glow from numerous strings of clear bulb and multicolored fairy lights. Indirect light reflecting off bottles and polished surfaces. The ambient twilight from outside filters softly through the open sides.",
+          "atmosphere": "Intensely festive and welcoming, with a lively, tropical island vibe. The space feels energetic and cheerful, a cozy escape from the twilight outside."
+        },
+        "promptData": {
+          "command": "LOOK",
+          "operation": "zoom_in",
+          "camera": "Step closer to the bar counter and frame a single bottle of beer tightly. Use 85mm lens, close shot, f/2.8, focusing on the label.",
+          "target": "a bottle of beer"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768568109711-ff0nnizqd"
+      ],
+      "parentMedia": "media-1768490304863-pxcaq5y0u"
+    },
+    "media-1768568585191-rq0oit0xi": {
+      "id": "media-1768568585191-rq0oit0xi",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8a9f1a/mQv-7byA4Ychmnvf5sv_k.jpg",
+      "createdAt": "2026-01-16T13:03:05.191Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nMove closer to inspect the specific dish being brought from the kitchen. Frame the dish tightly, ensuring all details are clear. Use 85mm lens, close shot, f/2.8.\n\nShow the nice dish from the kitchen prominently - it should fill most of the frame.\n\nSame Main Bar Area, same night lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "Main Bar Area",
+          "description": "The lively interior of the tiki bar, where colorful wooden planks form the walls and counter. Shelves are stocked with bottles, illuminated by festive string lights, creating a warm and inviting atmosphere.",
+          "background": "The rear wall of the bar, showcasing brightly painted wooden planks and shelves stocked with an array of colorful bottles and glassware. Exposed wooden beams and the underside of the corrugated metal roof are visible.",
+          "midground": "The main counter of the bar, with its curved front of colorful planks. Bar stools are arranged along the counter, partially visible. String lights are draped across the ceiling structure and signage.",
+          "foreground": "The textured, sandy floor of the bar's interior. Close-up details of the brightly painted wooden planks forming the lower facade of the bar.",
+          "lighting": "A warm, inviting glow from numerous strings of clear bulb and multicolored fairy lights. Indirect light reflecting off bottles and polished surfaces. The ambient twilight from outside filters softly through the open sides.",
+          "atmosphere": "Intensely festive and welcoming, with a lively, tropical island vibe. The space feels energetic and cheerful, a cozy escape from the twilight outside."
+        },
+        "promptData": {
+          "command": "LOOK",
+          "operation": "zoom_in",
+          "camera": "Move closer to inspect the specific dish being brought from the kitchen. Frame the dish tightly, ensuring all details are clear. Use 85mm lens, close shot, f/2.8.",
+          "target": "the nice dish from the kitchen"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768568585191-zyadutj7p"
+      ],
+      "parentMedia": "media-1768490304863-pxcaq5y0u"
     }
   }
 }

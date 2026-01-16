@@ -27,6 +27,8 @@ export function NavigationAssistantPanel({ onClose, onCommandSuggested }: Naviga
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const inputValueRef = useRef(inputValue);
+  // Track if shift is held for walkie-talkie mode (must be ref to persist across effect re-runs)
+  const isShiftHeldRef = useRef(false);
   
   // Keep ref in sync with inputValue
   useEffect(() => {
@@ -54,8 +56,6 @@ export function NavigationAssistantPanel({ onClose, onCommandSuggested }: Naviga
 
   // Handle Shift key hold-to-record (only when not in text input)
   useEffect(() => {
-    let isShiftHeld = false;
-
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip if typing in an input
       const target = e.target as HTMLElement;
@@ -66,19 +66,17 @@ export function NavigationAssistantPanel({ onClose, onCommandSuggested }: Naviga
 
       if (isTyping) return;
 
-      // Start recording on Shift hold
-      if (e.key === 'Shift' && !isShiftHeld && !isListening) {
-        isShiftHeld = true;
+      // Start recording on Shift hold (use ref to persist across re-renders)
+      if (e.key === 'Shift' && !isShiftHeldRef.current) {
+        isShiftHeldRef.current = true;
         startListening();
       }
     };
 
     const handleKeyUp = (e: KeyboardEvent) => {
-      if (e.key === 'Shift' && isShiftHeld) {
-        isShiftHeld = false;
-        if (isListening) {
-          stopListening();
-        }
+      if (e.key === 'Shift' && isShiftHeldRef.current) {
+        isShiftHeldRef.current = false;
+        stopListening();
       }
     };
 
@@ -89,7 +87,7 @@ export function NavigationAssistantPanel({ onClose, onCommandSuggested }: Naviga
       window.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('keyup', handleKeyUp);
     };
-  }, [isListening, startListening, stopListening]);
+  }, [startListening, stopListening]);
 
   /**
    * Copy text to clipboard
