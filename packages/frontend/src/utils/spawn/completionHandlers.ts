@@ -74,6 +74,45 @@ export function handleLocationCompletion(
 }
 
 /**
+ * Handle V2 world location completion (NEW_WORLD_LOCATION)
+ * Creates a new world with host + region + location structure
+ */
+export async function handleV2WorldLocationCompletion(
+  _spawnId: string,
+  completionData: any,
+  store: any
+) {
+  const { location, imageUrl } = completionData;
+  
+  if (!location?.id) {
+    console.warn('[CompletionHandler] V2 World Location completion missing location data');
+    return;
+  }
+
+  // Reload from backend to sync the new world tree
+  await useLocationsStore.getState().loadFromBackend();
+
+  // Expand tree to the new location
+  const locationsState = useLocationsStore.getState();
+  const worldTrees = locationsState.worldTrees;
+  
+  // Find the world tree containing this location
+  for (const tree of worldTrees) {
+    expandTreeToNode(tree, location.id, 'entity-explorer-locations');
+  }
+
+  // Create entity session for the new location
+  createEntitySession(store, {
+    id: location.id,
+    name: location.name || 'New Location',
+    type: 'location',
+    atmosphere: 'Generated',
+    primaryMedia: location.primaryMedia,
+    imageUrl
+  });
+}
+
+/**
  * Handle navigation completion (niche creation)
  * Note: Navigation spawns use custom callbacks in useLocationPanel.ts
  * This handler is a no-op since the callback handles node creation
@@ -111,6 +150,9 @@ export function handleSpawnCompletion(
   } else if (completionData.view) {
     // LOOK spawns (view format) - handled by custom callback
     return handleNavigationCompletion(spawnId, completionData, store);
+  } else if (completionData.host && completionData.region && completionData.location) {
+    // V2 NEW_WORLD_LOCATION spawns (host + region + location format)
+    return handleV2WorldLocationCompletion(spawnId, completionData, store);
   }
 
   console.warn('[CompletionHandler] Unknown completion type:', completionData);
