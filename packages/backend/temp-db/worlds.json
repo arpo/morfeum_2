@@ -1,6 +1,290 @@
 {
-  "nodes": {},
+  "nodes": {
+    "v2-1768575198619-wabephn24": {
+      "id": "v2-1768575198619-wabephn24",
+      "type": "host",
+      "name": "Mediterranean Villa Courtyard",
+      "slug": "mediterranean-villa-courtyard",
+      "description": "A sun-drenched, vibrant courtyard of a Mediterranean villa, overflowing with lush greenery and colorful accents.",
+      "genre": "Vibrant Mediterranean",
+      "weather": "clear and sunny",
+      "timeOfDay": "midday",
+      "dna": {
+        "essence": [
+          "vibrant flora",
+          "architectural texture",
+          "eclectic decoration",
+          "dappled light"
+        ],
+        "formsAndMaterials": [
+          "plastered walls",
+          "terracotta tiles",
+          "arched wooden doors",
+          "arched windows",
+          "potted plants",
+          "natural wood"
+        ],
+        "colorAndLight": [
+          "teal green",
+          "terracotta red-brown",
+          "lush green",
+          "sky blue",
+          "turquoise",
+          "warm wood tones",
+          "bright dappled sunlight"
+        ],
+        "atmosphere": [
+          "vibrant",
+          "lush",
+          "cozy",
+          "inviting",
+          "eclectic",
+          "tropical",
+          "peaceful",
+          "colorful"
+        ],
+        "banned": [
+          "monochromatic palettes",
+          "harsh shadows"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1768575198619-2gpeanz09": {
+      "id": "v2-1768575198619-2gpeanz09",
+      "type": "region",
+      "name": "Villa Gardens",
+      "slug": "villa-gardens",
+      "description": "The meticulously cultivated gardens and outdoor living spaces of a Mediterranean villa.",
+      "isPassThrough": false,
+      "dna": {
+        "essence": [
+          "cultivated greenery",
+          "outdoor living"
+        ],
+        "formsAndMaterials": [
+          "stone pathways",
+          "fountains",
+          "arbor structures"
+        ],
+        "colorAndLight": [
+          "rich greens",
+          "earthy browns",
+          "clear sunlight"
+        ],
+        "atmosphere": [
+          "serene",
+          "elegant",
+          "tranquil"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1768575198619-2c4wrgzht": {
+      "id": "v2-1768575198619-2c4wrgzht",
+      "type": "location",
+      "name": "Courtyard Dining Area",
+      "slug": "courtyard-dining-area",
+      "spaceType": "exterior",
+      "description": "A vibrant and lush outdoor courtyard with a teal-green plastered wall, decorative plates, hanging plants, arched doors and window, a terracotta roof, and a rustic wooden dining table set for four.",
+      "dna": {
+        "essence": [
+          "textured plaster",
+          "decorative plates",
+          "hanging plants",
+          "patterned tiles",
+          "floral arrangement"
+        ],
+        "formsAndMaterials": [
+          "textured teal-green plaster",
+          "decorative plates",
+          "hanging potted plants",
+          "arched wooden doors",
+          "arched window with multiple panes",
+          "terracotta tiled roof",
+          "reddish-brown terracotta tiles",
+          "blue and turquoise patterned tiles",
+          "rustic wooden dining table",
+          "chairs with green cushions"
+        ],
+        "colorAndLight": [
+          "vibrant teal green",
+          "terracotta red-brown",
+          "lush green foliage",
+          "sky blue accents",
+          "turquoise accents",
+          "warm wood tones",
+          "dappled sunlight",
+          "intricate shadow patterns"
+        ],
+        "atmosphere": [],
+        "banned": []
+      },
+      "primaryMedia": "media-1768575202835-5lugvhsgd"
+    },
+    "v2-1768575234970-4453f71rl": {
+      "id": "v2-1768575234970-4453f71rl",
+      "type": "container",
+      "name": "Mediterranean Villa",
+      "slug": "mediterranean-villa",
+      "description": "A charming Mediterranean villa, exuding rustic elegance. Its walls are finished in vibrant plaster, adorned with decorative elements and lush greenery. The establishment offers a taste of tranquil provincial life.",
+      "forbiddenTransformations": [
+        "Adding modern industrial elements",
+        "Introducing futuristic technology",
+        "Replacing terracotta tiles with metal roofing",
+        "Removing all plant life",
+        "Painting the walls monochrome",
+        "Adding stark, angular architecture"
+      ],
+      "parentId": "v2-1768575198619-2c4wrgzht"
+    },
+    "v2-1768575234970-5vlsldj3w": {
+      "id": "v2-1768575234970-5vlsldj3w",
+      "type": "space",
+      "name": "Kitchen",
+      "slug": "kitchen",
+      "description": "The heart of the villa's culinary operations. This kitchen blends traditional Mediterranean charm with functional design, featuring exposed beams and artisanal tile work.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "rustic elegance",
+          "artisanal",
+          "Mediterranean warmth"
+        ],
+        "formsAndMaterials": [
+          "exposed wooden beams",
+          "terracotta tiles",
+          "plaster walls",
+          "local stone",
+          "hand-painted ceramics"
+        ],
+        "colorAndLight": [
+          "warm earthy tones",
+          "vibrant teal and blue accents",
+          "filtered natural light"
+        ],
+        "atmosphere": [
+          "inviting",
+          "functional",
+          "historic"
+        ],
+        "banned": [
+          "stainless steel appliances",
+          "fluorescent lighting",
+          "ultra-modern cabinetry",
+          "minimalist design",
+          "chrome fixtures"
+        ]
+      },
+      "forbiddenTransformations": [
+        "Removing exposed wooden beams",
+        "Replacing patterned tiles with plain concrete",
+        "Installing modern, high-gloss cabinetry",
+        "Adding bright, artificial white lighting",
+        "Introducing purely utilitarian, unadorned surfaces",
+        "Painting the walls a sterile, uniform color",
+        "Adding visible electrical conduits"
+      ],
+      "parentId": "v2-1768575234970-4453f71rl",
+      "primaryMedia": "media-1768575240399-sqnrzj9ok",
+      "updatedAt": 1768575297145
+    },
+    "v2-1768575419332-80h0furcv": {
+      "id": "v2-1768575419332-80h0furcv",
+      "type": "space",
+      "name": "Villa Bathroom",
+      "slug": "villa-bathroom",
+      "description": "A private chamber within the villa, featuring teal-green plastered walls, intricate tilework, and rustic wooden accents, offering a serene and enclosed space.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "mediterranean",
+          "rustic",
+          "tranquil",
+          "private"
+        ],
+        "formsAndMaterials": [
+          "arched",
+          "plastered walls",
+          "decorative tiles",
+          "dark wood",
+          "ceramic fixtures"
+        ],
+        "colorAndLight": [
+          "teal green",
+          "terracotta accents",
+          "warm amber",
+          "filtered light"
+        ],
+        "atmosphere": [
+          "serene",
+          "enclosed",
+          "private",
+          "calm"
+        ],
+        "banned": [
+          "visible sky",
+          "open windows",
+          "outdoor furniture",
+          "overly modern fixtures",
+          "fluorescent lighting",
+          "exposed structural elements",
+          "large digital screens"
+        ]
+      },
+      "forbiddenTransformations": [
+        "walls turning into glass",
+        "the ceiling opening to the sky",
+        "modern stainless steel fixtures appearing",
+        "the space becoming flooded with harsh sunlight",
+        "decorations changing to abstract art",
+        "the introduction of soundproof booths or industrial elements",
+        "the floor becoming plain concrete",
+        "visible plumbing or electrical conduits"
+      ],
+      "parentId": "v2-1768575234970-4453f71rl",
+      "primaryMedia": "media-1768575425762-odvdj3g1e",
+      "updatedAt": 1768575444191
+    }
+  },
   "views": {},
-  "worldTrees": [],
-  "pinnedIds": []
+  "worldTrees": [
+    {
+      "id": "v2-1768575198619-wabephn24",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1768575198619-2gpeanz09",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1768575198619-2c4wrgzht",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1768575234970-4453f71rl",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1768575234970-5vlsldj3w",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1768575419332-80h0furcv",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinnedIds": [
+    "v2-1768575198619-wabephn24"
+  ]
 }
