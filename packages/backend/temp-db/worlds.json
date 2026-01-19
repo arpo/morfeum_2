@@ -120,7 +120,8 @@
         "atmosphere": [],
         "banned": []
       },
-      "primaryMedia": "media-1768575202835-5lugvhsgd"
+      "primaryMedia": "media-1768575202835-5lugvhsgd",
+      "updatedAt": 1768575570562
     },
     "v2-1768575234970-4453f71rl": {
       "id": "v2-1768575234970-4453f71rl",
@@ -245,6 +246,868 @@
       "parentId": "v2-1768575234970-4453f71rl",
       "primaryMedia": "media-1768575425762-odvdj3g1e",
       "updatedAt": 1768575444191
+    },
+    "v2-1768575517600-n5lwwih4y": {
+      "id": "v2-1768575517600-n5lwwih4y",
+      "type": "view",
+      "name": "Decorative Plates",
+      "slug": "decorative-plates",
+      "description": "View: Close-up details of the decorative plates, including their patterns, textures, and any imperfections.",
+      "parentId": "v2-1768575198619-2c4wrgzht",
+      "primaryMedia": "media-1768575517601-4n72oxkx1",
+      "updatedAt": 1768575531540
+    },
+    "v2-1768575653180-lyjyj5tru": {
+      "id": "v2-1768575653180-lyjyj5tru",
+      "type": "view",
+      "name": "The Sink Detail",
+      "slug": "the-sink-detail",
+      "description": "View: Close-up details of the ceramic sink basin, including any maker's marks, water stains, or imperfections. The faucet and its immediate mounting area.",
+      "parentId": "v2-1768575419332-80h0furcv",
+      "primaryMedia": "media-1768575653182-8k8zqsymt",
+      "updatedAt": 1768575667944
+    },
+    "v2-1768576024591-u08lem995": {
+      "id": "v2-1768576024591-u08lem995",
+      "type": "space",
+      "name": "Lush Rooftop Terrace",
+      "slug": "lush-rooftop-terrace",
+      "description": "An elevated rooftop terrace overflowing with vibrant greenery, offering panoramic views. Winding pathways, shaded seating areas, and decorative elements create an idyllic retreat above the villa.",
+      "spaceType": "elevated",
+      "dna": {
+        "essence": [
+          "Mediterranean",
+          "Botanical Oasis",
+          "Elevated Sanctuary"
+        ],
+        "formsAndMaterials": [
+          "Terracotta",
+          "Plaster",
+          "Wood",
+          "Abundant Foliage",
+          "Tile Accents"
+        ],
+        "colorAndLight": [
+          "Teal Green",
+          "Terracotta Red-Brown",
+          "Earthy Tones",
+          "Sunny Dappled Light"
+        ],
+        "atmosphere": [
+          "Serene",
+          "Elegant",
+          "Tranquil",
+          "Expansive"
+        ],
+        "banned": [
+          "Glass-heavy modern architecture",
+          "Concrete structures",
+          "Minimalist landscaping",
+          "Overtly urban industrial elements"
+        ]
+      },
+      "forbiddenTransformations": [
+        "Any roofing structure being added",
+        "The introduction of enclosed walls",
+        "Removing the abundant plant life",
+        "Replacing terracotta flooring with modern materials",
+        "Obscuring the open sky view",
+        "Introducing artificial, non-Mediterranean plants",
+        "Adding stark, geometric modern furniture"
+      ],
+      "parentId": "v2-1768575234970-4453f71rl",
+      "primaryMedia": "media-1768576030007-x7mdo6bzw",
+      "updatedAt": 1768576044739
+    },
+    "v2-1768576092103-e9nvydsgr": {
+      "id": "v2-1768576092103-e9nvydsgr",
+      "type": "view",
+      "name": "Terrace Edge Panorama",
+      "slug": "terrace-edge-panorama",
+      "description": "View: The panoramic view beyond the rooftop terrace - distant rolling hills or a serene ocean, the horizon line, and any visible cityscape or landscape.",
+      "parentId": "v2-1768576024591-u08lem995",
+      "primaryMedia": "media-1768576092103-nwflomx9f",
+      "updatedAt": 1768576110298
+    },
+    "v2-1768578673794-mzot12c27": {
+      "id": "v2-1768578673794-mzot12c27",
+      "type": "space",
+      "name": "Spa Treatment Chamber",
+      "slug": "spa-treatment-chamber",
+      "description": "An indoor treatment chamber within the spa, featuring the villa's signature teal-green plastered walls and intricate tilework, creating a peaceful and luxurious atmosphere.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "Mediterranean relaxation",
+          "Villa tranquility",
+          "Soothing waters",
+          "Artisanal spa"
+        ],
+        "formsAndMaterials": [
+          "Arched openings",
+          "Plastered walls",
+          "Patterned tiles",
+          "Rustic wood",
+          "Stone elements"
+        ],
+        "colorAndLight": [
+          "Teal green, terracotta, earthy tones",
+          "Soft, diffused, warm ambient light"
+        ],
+        "atmosphere": [
+          "Calm",
+          "Rejuvenating",
+          "Luxurious",
+          "Serene"
+        ],
+        "banned": [
+          "Industrial metal",
+          "Harsh fluorescent lighting",
+          "Minimalist sterile decor",
+          "Modern digital displays"
+        ]
+      },
+      "forbiddenTransformations": [
+        "Exposing any part of the sky",
+        "Introducing modern spa equipment like electronic massage chairs",
+        "Using bright white or sterile materials",
+        "Adding visible ventilation systems or harsh light fixtures",
+        "Making the space feel cramped or utilitarian",
+        "Replacing the tilework with plain finishes"
+      ],
+      "parentId": "v2-1768575234970-4453f71rl",
+      "primaryMedia": "media-1768578679974-4zwmkesdg",
+      "updatedAt": 1768578740467
+    },
+    "v2-1768578774247-hu7x1e44b": {
+      "id": "v2-1768578774247-hu7x1e44b",
+      "type": "view",
+      "name": "The Treatment Bed Detail",
+      "slug": "the-treatment-bed-detail",
+      "description": "View: The texture of the treatment bed, the weave of the cushions or coverings, any decorative stitching, or subtle wear and tear on the wood.",
+      "parentId": "v2-1768578673794-mzot12c27",
+      "primaryMedia": "media-1768578774248-o3pg2i811",
+      "updatedAt": 1768578798269
+    },
+    "v2-1768578811111-5qhhsfrae": {
+      "id": "v2-1768578811111-5qhhsfrae",
+      "type": "view",
+      "name": "The Wall Detail",
+      "slug": "the-wall-detail",
+      "description": "View: Close-up details of the teal-green plaster texture, the intricate patterns and grout lines of the tilework, and any subtle imperfections or wear.",
+      "parentId": "v2-1768578673794-mzot12c27",
+      "primaryMedia": "media-1768578811112-xzsc5iu6w",
+      "updatedAt": 1768578828655
+    },
+    "v2-1768579478257-89ddh907m": {
+      "id": "v2-1768579478257-89ddh907m",
+      "type": "host",
+      "name": "Barcelona",
+      "slug": "barcelona",
+      "description": "A vibrant coastal city in Spain, renowned for its unique architecture and rich cultural heritage.",
+      "genre": "Urban",
+      "weather": "clear",
+      "timeOfDay": "dusk",
+      "dna": {
+        "essence": [
+          "Catalan modernism",
+          "coastal urbanism",
+          "artistic heritage"
+        ],
+        "formsAndMaterials": [
+          "organic curves",
+          "mosaic tiles",
+          "wrought iron"
+        ],
+        "colorAndLight": [
+          "vibrant mosaic palette",
+          "soft twilight sky",
+          "warm artificial light"
+        ],
+        "atmosphere": [
+          "vibrant",
+          "fantastical",
+          "whimsical",
+          "ornate",
+          "magical",
+          "dreamlike",
+          "architectural",
+          "romantic",
+          "artistic"
+        ],
+        "banned": [
+          "brutalist architecture",
+          "monochromatic schemes"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1768579478257-gwjzumg5i": {
+      "id": "v2-1768579478257-gwjzumg5i",
+      "type": "region",
+      "name": "Eixample",
+      "slug": "eixample",
+      "description": "A central district in Barcelona, known for its grid layout and stunning examples of Modernist architecture.",
+      "isPassThrough": false,
+      "dna": {
+        "essence": [
+          "Modernist architecture",
+          "urban grid"
+        ],
+        "formsAndMaterials": [
+          "grand facades",
+          "intricate detailing"
+        ],
+        "colorAndLight": [
+          "colorful building facades",
+          "street lighting"
+        ],
+        "atmosphere": [
+          "elegant",
+          "architectural",
+          "urban"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1768579478257-f4ta01gof": {
+      "id": "v2-1768579478257-f4ta01gof",
+      "type": "location",
+      "name": "Casa Batlló",
+      "slug": "casa-batllo",
+      "spaceType": "exterior",
+      "description": "The iconic Casa Batlló, designed by Antoni Gaudí, showcasing a vibrant mosaic facade, bone-like columns, and flower-adorned balconies against a pastel twilight sky.",
+      "dna": {
+        "essence": [
+          "trencadís mosaic",
+          "organic facade",
+          "floral motifs"
+        ],
+        "formsAndMaterials": [
+          "mosaic tiles",
+          "bone-like columns",
+          "irregular windows",
+          "scaled roof",
+          "wavy roof"
+        ],
+        "colorAndLight": [
+          "blue",
+          "green",
+          "yellow",
+          "pink",
+          "deep magenta",
+          "fuchsia",
+          "pastel pink",
+          "lavender",
+          "light blue",
+          "golden amber glow"
+        ],
+        "atmosphere": [
+          "vibrant",
+          "fantastical",
+          "whimsical",
+          "ornate",
+          "magical",
+          "dreamlike",
+          "architectural",
+          "romantic",
+          "artistic"
+        ],
+        "banned": [
+          "straight lines",
+          "uniformity"
+        ]
+      },
+      "primaryMedia": "media-1768579482445-dm1tt7g16"
+    },
+    "v2-1768579504165-exu2n8eht": {
+      "id": "v2-1768579504165-exu2n8eht",
+      "type": "container",
+      "name": "Casa Batlló",
+      "slug": "casa-batllo",
+      "description": "An iconic architectural masterpiece by Antoni Gaudí, Casa Batlló is a fantastical building renowned for its organic forms, vibrant mosaic facade, and dreamlike aesthetic. Visitors can explore its unique interior spaces that echo the exterior's organic and whimsical design.",
+      "forbiddenTransformations": [
+        "Adding straight, rigid architectural lines",
+        "Introducing a monochromatic or dull color palette",
+        "Replacing organic curves with geometric shapes",
+        "Simplifying the ornate details and trencadís mosaic",
+        "Introducing harsh, artificial lighting without diffusion",
+        "Creating a sterile or mundane atmosphere"
+      ],
+      "parentId": "v2-1768579478257-f4ta01gof"
+    },
+    "v2-1768579504165-n267m35kx": {
+      "id": "v2-1768579504165-n267m35kx",
+      "type": "space",
+      "name": "Main Hall",
+      "slug": "main-hall",
+      "description": "You are in the main hall of Casa Batlló, a space that immediately envelops you in Gaudí's organic vision. Walls flow like sculpted waves, adorned with the building's signature trencadís mosaics, and the air hums with a gentle, diffused light that hints at the magical world within.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "organic architecture",
+          "Gaudí's fantasy",
+          "mosaic art"
+        ],
+        "formsAndMaterials": [
+          "curving walls",
+          "trencadís mosaic",
+          "polished wood",
+          "sculpted metal"
+        ],
+        "colorAndLight": [
+          "vibrant blues, greens, yellows, pinks",
+          "diffused ambient light"
+        ],
+        "atmosphere": [
+          "dreamlike",
+          "whimsical",
+          "enchanting",
+          "artistic"
+        ],
+        "banned": [
+          "industrial machinery",
+          "stark concrete",
+          "rigid grids",
+          "modern minimalist furniture"
+        ]
+      },
+      "forbiddenTransformations": [
+        "Walls becoming flat and painted",
+        "Replacing mosaics with simple plaster",
+        "Introducing harsh, direct sunlight from above",
+        "Adding visible ceiling beams or structural elements",
+        "Using furniture with sharp, geometric edges",
+        "Making the space feel cold or sterile",
+        "Allowing direct views of the sky"
+      ],
+      "parentId": "v2-1768579504165-exu2n8eht",
+      "primaryMedia": "media-1768579510210-kbe0k96hd",
+      "updatedAt": 1768579530944
+    },
+    "v2-1768579584038-wsna2bz3w": {
+      "id": "v2-1768579584038-wsna2bz3w",
+      "type": "host",
+      "name": "Veridia",
+      "slug": "veridia",
+      "description": "A charming old-world city known for its winding cobblestone streets and vibrantly decorated buildings, nestled against rolling hazy hills.",
+      "genre": "Fantasy",
+      "weather": "partly cloudy",
+      "timeOfDay": "midday",
+      "dna": {
+        "essence": [
+          "artistic architecture",
+          "old-world charm",
+          "vibrant mosaics"
+        ],
+        "formsAndMaterials": [
+          "undulating facades",
+          "cobblestone",
+          "terracotta tiles",
+          "exposed brick",
+          "wood shutters",
+          "decorative circles"
+        ],
+        "colorAndLight": [
+          "sky blue",
+          "sunny yellow",
+          "terracotta orange",
+          "deep red",
+          "muted earth tones",
+          "bright daylight"
+        ],
+        "atmosphere": [
+          "whimsical",
+          "artistic",
+          "charming",
+          "unique",
+          "vibrant",
+          "old-world",
+          "quaint"
+        ],
+        "banned": [
+          "modernist architecture",
+          "steel and glass"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1768579584038-30wskqfr6": {
+      "id": "v2-1768579584038-30wskqfr6",
+      "type": "region",
+      "name": "The Artisan Quarter",
+      "slug": "the-artisan-quarter",
+      "description": "A district of narrow, winding cobblestone streets famous for its uniquely designed buildings covered in vibrant mosaics and traditional architecture.",
+      "isPassThrough": false,
+      "dna": {
+        "essence": [
+          "artisan workshops",
+          "historic streetscape"
+        ],
+        "formsAndMaterials": [
+          "narrow winding streets",
+          "traditional buildings",
+          "terracotta tiled roofs"
+        ],
+        "colorAndLight": [
+          "warm daylight",
+          "shadows"
+        ],
+        "atmosphere": [
+          "bustling",
+          "creative"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1768579584038-gapxxrvdl": {
+      "id": "v2-1768579584038-gapxxrvdl",
+      "type": "location",
+      "name": "Mosaic Marvel Building",
+      "slug": "mosaic-marvel-building",
+      "spaceType": "exterior",
+      "description": "A multi-story building with an organic, undulating facade covered in a vibrant mosaic of irregular shapes and textures in sky blue, sunny yellow, terracotta orange, and deep red. It features numerous windows of various shapes including portholes and rectangular ones with open wooden shutters, and several arched doorways. Decorative circular elements and patches of exposed brick are visible.",
+      "dna": {
+        "essence": [
+          "organic facade",
+          "irregular mosaic"
+        ],
+        "formsAndMaterials": [
+          "various window shapes",
+          "arched doorways",
+          "round portholes",
+          "wooden shutters"
+        ],
+        "colorAndLight": [
+          "bright daylight with subtle shadows"
+        ],
+        "atmosphere": [],
+        "banned": []
+      },
+      "primaryMedia": "media-1768579589474-xufabni3f"
+    },
+    "v2-1768579602404-7megziaip": {
+      "id": "v2-1768579602404-7megziaip",
+      "type": "container",
+      "name": "Mosaic Marvel Building",
+      "slug": "mosaic-marvel-building",
+      "description": "A striking multi-story edifice characterized by its organic, undulating facade. The exterior is adorned with a vibrant mosaic of irregular shapes and textures in sky blue, sunny yellow, terracotta orange, and deep red, punctuated by a variety of windows and arched doorways.",
+      "forbiddenTransformations": [
+        "The building's facade becoming plain or monochromatic",
+        "The mosaic tiles losing their irregular shape or vibrant color",
+        "Windows or doorways disappearing or becoming uniform",
+        "The organic, undulating form of the building being straightened or squared off",
+        "The addition of modern, minimalist architectural elements",
+        "The mosaic tiles appearing flat or lacking texture"
+      ],
+      "parentId": "v2-1768579584038-gapxxrvdl"
+    },
+    "v2-1768579602404-f1y3z1f3p": {
+      "id": "v2-1768579602404-f1y3z1f3p",
+      "type": "space",
+      "name": "Mosaic Vestibule",
+      "slug": "mosaic-vestibule",
+      "description": "You have entered the building's main entry hall. The air is cooler and quieter than outside, with the vibrant mosaic extending onto the inner walls and archways. The space is welcoming, hinting at the creative energies within.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "artisanal",
+          "crafted",
+          "vibrant",
+          "welcoming"
+        ],
+        "formsAndMaterials": [
+          "undulating mosaic",
+          "arched doorways",
+          "smooth plaster",
+          "worn stone"
+        ],
+        "colorAndLight": [
+          "sky blue, sunny yellow, terracotta orange, deep red mosaic",
+          "indirect, ambient light",
+          "soft shadows"
+        ],
+        "atmosphere": [
+          "calm transition",
+          "artistic immersion",
+          "subtle warmth"
+        ],
+        "banned": [
+          "stark white walls",
+          "fluorescent lighting",
+          "minimalist furniture",
+          "unadorned concrete",
+          "metallic surfaces",
+          "glowing screens"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The mosaic pattern on the interior walls becoming uniform or geometric",
+        "The mosaic tiles losing their vibrant color or texture",
+        "The interior space being rendered as a vast, open atrium",
+        "The introduction of modern, sterile materials like polished chrome or glass",
+        "The lighting becoming harsh or overly artificial",
+        "The arched doorways appearing as sharp, modern angles",
+        "The floor becoming a plain, untextured surface"
+      ],
+      "parentId": "v2-1768579602404-7megziaip",
+      "primaryMedia": "media-1768579609639-bf1bu0j57"
+    },
+    "v2-1768579903939-gxcr35yzp": {
+      "id": "v2-1768579903939-gxcr35yzp",
+      "type": "view",
+      "name": "Detail of the Sink",
+      "slug": "detail-of-the-sink",
+      "description": "View: The texture of the sink material (ceramic, stone), the patina of the faucet, any water stains or debris within the basin, and surrounding countertop details.",
+      "parentId": "v2-1768575234970-5vlsldj3w",
+      "primaryMedia": "media-1768579903940-1psigzge1",
+      "updatedAt": 1768579927711
+    },
+    "v2-1768579996798-wu7rzkba9": {
+      "id": "v2-1768579996798-wu7rzkba9",
+      "type": "view",
+      "name": "Through the Window to Lush Greenery",
+      "slug": "through-the-window-to-lush-greenery",
+      "description": "View: The vibrant, lush outdoor scenery - abundant plants, trees, and foliage, seen clearly through the kitchen window.",
+      "parentId": "v2-1768575234970-5vlsldj3w",
+      "primaryMedia": "media-1768579996799-nuvs37umn",
+      "updatedAt": 1768596609017
+    },
+    "v2-1768580052835-jjklrg21f": {
+      "id": "v2-1768580052835-jjklrg21f",
+      "type": "space",
+      "name": "Herb Garden Alcove",
+      "slug": "herb-garden-alcove",
+      "description": "A secluded alcove within the villa's grounds, overflowing with fragrant herbs and lush plants. Stone pathways wind through the greenery, leading to sheltered seating areas bathed in dappled sunlight.",
+      "spaceType": "semi-enclosed",
+      "dna": {
+        "essence": [
+          "Mediterranean garden",
+          "fragrant sanctuary",
+          "hidden alcove"
+        ],
+        "formsAndMaterials": [
+          "stone pathways",
+          "lush foliage",
+          "aromatic herbs",
+          "plastered walls"
+        ],
+        "colorAndLight": [
+          "vibrant greens and earthy tones",
+          "dappled sunlight",
+          "filtered light"
+        ],
+        "atmosphere": [
+          "tranquil",
+          "fragrant",
+          "secluded"
+        ],
+        "banned": [
+          "stark concrete surfaces",
+          "fluorescent lighting",
+          "overly manicured geometric landscaping",
+          "modern sculpture",
+          "plastic artificial plants"
+        ]
+      },
+      "forbiddenTransformations": [
+        "Replacing the naturalistic garden with a formal, geometric layout.",
+        "Removing the scented herbs.",
+        "Introducing artificial lighting that is too harsh or cool-toned.",
+        "Exposing large areas of bare, unadorned plaster walls without greenery.",
+        "Introducing any metallic or overly modern furniture.",
+        "Blocking all natural light, making the space feel like an indoor room.",
+        "Introducing sterile, synthetic-looking materials."
+      ],
+      "parentId": "v2-1768575234970-4453f71rl",
+      "primaryMedia": "media-1768580058282-349jakr5l",
+      "updatedAt": 1768580550756
+    },
+    "v2-1768580508669-yyrx6pa5j": {
+      "id": "v2-1768580508669-yyrx6pa5j",
+      "type": "view",
+      "name": "Looking Down on the Garden",
+      "slug": "looking-down-on-the-garden",
+      "description": "View: An overhead view of the winding stone pathways, dense herb and plant arrangements, and sheltered seating areas within the alcove, revealing the spatial layout of the secluded area.",
+      "parentId": "v2-1768580052835-jjklrg21f",
+      "primaryMedia": "media-1768580508670-hpxhxvno6",
+      "updatedAt": 1768580527763
+    },
+    "v2-1768664604042-sibrrv3nu": {
+      "id": "v2-1768664604042-sibrrv3nu",
+      "type": "host",
+      "name": "Xylos Prime",
+      "slug": "xylos-prime",
+      "description": "A colossal alien city world characterized by organic, jellyfish-like mega-structures and ancient, weathered architecture.",
+      "genre": "Sci-Fi",
+      "weather": "clear",
+      "timeOfDay": "midday",
+      "dna": {
+        "essence": [
+          "colossal alien city",
+          "organic mega-structures",
+          "ancient architecture",
+          "otherworldly"
+        ],
+        "formsAndMaterials": [
+          "organic shapes",
+          "angular buildings",
+          "weathered rock",
+          "fungal growths"
+        ],
+        "colorAndLight": [
+          "light blue",
+          "pale green",
+          "golden yellow",
+          "teal blue",
+          "dark grey",
+          "translucent",
+          "bright, even light"
+        ],
+        "atmosphere": [
+          "futuristic",
+          "alien",
+          "majestic",
+          "colossal",
+          "awe-inspiring",
+          "serene",
+          "mysterious",
+          "tranquil",
+          "otherworldly"
+        ],
+        "banned": [
+          "humanoid architecture",
+          "familiar materials"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1768664604042-id6n5zpr5": {
+      "id": "v2-1768664604042-id6n5zpr5",
+      "type": "region",
+      "name": "Central Nexus",
+      "slug": "central-nexus",
+      "description": "The heart of the colossal alien city, dominated by the Great Jellyfish Nexus.",
+      "isPassThrough": false,
+      "dna": {
+        "essence": [
+          "central hub",
+          "iconic structure"
+        ],
+        "formsAndMaterials": [
+          "organic architecture",
+          "angular flanking buildings"
+        ],
+        "colorAndLight": [
+          "light blue",
+          "golden yellow",
+          "teal blue",
+          "dark grey"
+        ],
+        "atmosphere": [
+          "majestic",
+          "awe-inspiring",
+          "serene"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1768664604043-9kdg1cs2p": {
+      "id": "v2-1768664604043-9kdg1cs2p",
+      "type": "location",
+      "name": "The Great Jellyfish Nexus",
+      "slug": "the-great-jellyfish-nexus",
+      "spaceType": "exterior",
+      "description": "A colossal, organic, jellyfish-like mega-structure, the center of the alien city, with a translucent blue dome and an intricate, cell-textured underside adorned with hundreds of thin tendrils.",
+      "dna": {
+        "essence": [
+          "jellyfish-like mega-structure",
+          "translucent dome",
+          "textured underside",
+          "drooping tendrils"
+        ],
+        "formsAndMaterials": [
+          "organic",
+          "translucent dome",
+          "textured cells",
+          "thin tendrils"
+        ],
+        "colorAndLight": [
+          "light blue",
+          "golden yellow",
+          "bright, even light"
+        ],
+        "atmosphere": [
+          "colossal",
+          "awe-inspiring",
+          "mysterious"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1768664608858-kkv7is76z"
+    },
+    "v2-1768664628294-7zohzlpvw": {
+      "id": "v2-1768664628294-7zohzlpvw",
+      "type": "container",
+      "name": "The Great Jellyfish Nexus",
+      "slug": "the-great-jellyfish-nexus",
+      "description": "The colossal, organic heart of the alien city, a mega-structure designed in the form of a giant jellyfish. It serves as the central hub and a breathtaking testament to advanced, biological alien architecture.",
+      "forbiddenTransformations": [
+        "rendering as a hard, geometric structure",
+        "introducing human-centric architectural elements",
+        "changing the primary blue and gold color palette",
+        "adding visible signs of decay or age",
+        "depicting harsh, directional shadows",
+        "introducing terrestrial flora or fauna"
+      ],
+      "parentId": "v2-1768664604043-9kdg1cs2p"
+    },
+    "v2-1768664628294-4q1sc23un": {
+      "id": "v2-1768664628294-4q1sc23un",
+      "type": "space",
+      "name": "Nexus Interior Chamber",
+      "slug": "nexus-interior-chamber",
+      "description": "You are now inside a vast, bioluminescent chamber within the Nexus. The walls are composed of the same intricate, cell-like organic material as the exterior, glowing with a soft, internal light. Passages and openings lead deeper into the structure, hinting at the complex network within.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "organic alien mega-structure",
+          "bioluminescent",
+          "cellular architecture",
+          "vast interior"
+        ],
+        "formsAndMaterials": [
+          "curved organic walls",
+          "gelatinous membranes",
+          "bioluminescent plating",
+          "smooth, flowing surfaces"
+        ],
+        "colorAndLight": [
+          "soft internal bioluminescence",
+          "translucent blue hues",
+          "golden yellow highlights",
+          "diffused, ambient glow"
+        ],
+        "atmosphere": [
+          "awe-inspiring",
+          "mysterious",
+          "enclosed yet expansive",
+          "tranquil"
+        ],
+        "banned": [
+          "metal grating",
+          "exposed wires",
+          "straight lines",
+          "concrete",
+          "skylights"
+        ]
+      },
+      "forbiddenTransformations": [
+        "introducing sharp angles or rigid geometry",
+        "adding any visible mechanical components",
+        "rendering the walls as opaque or stone-like",
+        "depicting visible sky or external light sources",
+        "introducing signs of dust or debris",
+        "creating a sense of claustrophobia (maintain the vastness)",
+        "using earthly architectural terms like 'columns' or 'arches'"
+      ],
+      "parentId": "v2-1768664628294-7zohzlpvw",
+      "primaryMedia": "media-1768664633538-39mz5zquj"
+    },
+    "v2-1768810553218-4t7s7gydm": {
+      "id": "v2-1768810553218-4t7s7gydm",
+      "type": "space",
+      "name": "Nexus Second Floor Chamber",
+      "slug": "nexus-second-floor-chamber",
+      "description": "You are now on the second floor of the Great Jellyfish Nexus, within a chamber carved into its immense organic structure. The walls pulse with a soft, bioluminescent light, and the air hums with a gentle, resonant frequency.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "organic alien architecture",
+          "bioluminescent interior",
+          "cellular structures"
+        ],
+        "formsAndMaterials": [
+          "smooth, curving bio-matter",
+          "translucent membranes",
+          "gelatinous textures"
+        ],
+        "colorAndLight": [
+          "soft internal blue glow",
+          "warm golden highlights from ambient nexus light",
+          "diffused, indirect illumination"
+        ],
+        "atmosphere": [
+          "ethereal",
+          "calmly humming",
+          "organically enclosed"
+        ],
+        "banned": [
+          "visible concrete or steel",
+          "angular furniture",
+          "electrical conduits",
+          "fluorescent lighting",
+          "obvious structural supports"
+        ]
+      },
+      "forbiddenTransformations": [
+        "Visible sky or exterior through any openings",
+        "Angular, non-organic furniture",
+        "Sharp, straight edges on any surfaces",
+        "Traditional doors or windows",
+        "Evidence of external construction materials",
+        "Sounds other than the soft hum of the Nexus",
+        "Harsh, direct lighting"
+      ],
+      "parentId": "v2-1768664628294-7zohzlpvw",
+      "primaryMedia": "media-1768810559774-0air2l8hb"
+    },
+    "v2-1768813433637-r4s7hc95o": {
+      "id": "v2-1768813433637-r4s7hc95o",
+      "type": "space",
+      "name": "The Ritual Hall",
+      "slug": "the-ritual-hall",
+      "description": "A grand, high-ceilinged hall within The Great Jellyfish Nexus, designed for sacred rituals. The interior echoes the organic, translucent nature of the exterior, creating a luminous and awe-inspiring ceremonial space.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "organic architecture",
+          "alien ritual",
+          "luminous interior"
+        ],
+        "formsAndMaterials": [
+          "curving membranes",
+          "bioluminescent gels",
+          "smooth, iridescent surfaces"
+        ],
+        "colorAndLight": [
+          "soft blues and golds",
+          "internal diffuse glow"
+        ],
+        "atmosphere": [
+          "sacred",
+          "ethereal",
+          "reverent"
+        ],
+        "banned": [
+          "sharp angles",
+          "opaque materials",
+          "visible structural supports",
+          "dust or debris",
+          "electrical conduits"
+        ]
+      },
+      "forbiddenTransformations": [
+        "Introducing any sharp, geometric architectural elements.",
+        "Rendering the walls or ceiling as solid, opaque materials.",
+        "Showing any visible light sources like bulbs or fixtures.",
+        "Allowing the ambient light to become harsh or direct.",
+        "Depicting the space as cluttered or utilitarian.",
+        "Creating any sense of shadow or darkness in the hall.",
+        "Adding familiar religious iconography."
+      ],
+      "parentId": "v2-1768664628294-7zohzlpvw",
+      "primaryMedia": "media-1768813439784-4az2m4opc"
     }
   },
   "views": {},
@@ -268,10 +1131,167 @@
                     {
                       "id": "v2-1768575234970-5vlsldj3w",
                       "type": "space",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "v2-1768579903939-gxcr35yzp",
+                          "type": "view",
+                          "children": []
+                        },
+                        {
+                          "id": "v2-1768579996798-wu7rzkba9",
+                          "type": "view",
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "id": "v2-1768575419332-80h0furcv",
+                      "type": "space",
+                      "children": [
+                        {
+                          "id": "v2-1768575653180-lyjyj5tru",
+                          "type": "view",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "v2-1768576024591-u08lem995",
+                      "type": "space",
+                      "children": [
+                        {
+                          "id": "v2-1768576092103-e9nvydsgr",
+                          "type": "view",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "v2-1768578673794-mzot12c27",
+                      "type": "space",
+                      "children": [
+                        {
+                          "id": "v2-1768578774247-hu7x1e44b",
+                          "type": "view",
+                          "children": []
+                        },
+                        {
+                          "id": "v2-1768578811111-5qhhsfrae",
+                          "type": "view",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "v2-1768580052835-jjklrg21f",
+                      "type": "space",
+                      "children": [
+                        {
+                          "id": "v2-1768580508669-yyrx6pa5j",
+                          "type": "view",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "v2-1768575517600-n5lwwih4y",
+                  "type": "view",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v2-1768579478257-89ddh907m",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1768579478257-gwjzumg5i",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1768579478257-f4ta01gof",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1768579504165-exu2n8eht",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1768579504165-n267m35kx",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v2-1768579584038-wsna2bz3w",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1768579584038-30wskqfr6",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1768579584038-gapxxrvdl",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1768579602404-7megziaip",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1768579602404-f1y3z1f3p",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v2-1768664604042-sibrrv3nu",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1768664604042-id6n5zpr5",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1768664604043-9kdg1cs2p",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1768664628294-7zohzlpvw",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1768664628294-4q1sc23un",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1768810553218-4t7s7gydm",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1768813433637-r4s7hc95o",
                       "type": "space",
                       "children": []
                     }
@@ -285,6 +1305,9 @@
     }
   ],
   "pinnedIds": [
-    "v2-1768575198619-wabephn24"
+    "v2-1768575198619-wabephn24",
+    "v2-1768579478257-89ddh907m",
+    "v2-1768579584038-wsna2bz3w",
+    "v2-1768664604042-sibrrv3nu"
   ]
 }
