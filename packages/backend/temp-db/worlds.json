@@ -292,14 +292,23 @@
       "parentId": "v2-1768923227983-fxg72o138",
       "primaryMedia": "media-1768924989511-lxxqf0nx3"
     },
-    "v2-1768925041671-5g1uoy2l9": {
-      "id": "v2-1768925041671-5g1uoy2l9",
+    "v2-1768925292529-kfynfmwbw": {
+      "id": "v2-1768925292529-kfynfmwbw",
       "type": "view",
-      "name": "Edited: add big crack in the ceiling where you c...",
-      "slug": "edited-add-big-crack-in-the-ceiling-where-you-c",
-      "description": "Edit: add big crack in the ceiling where you can see the sky through",
-      "parentId": "v2-1768924855781-g5iv2aoxw",
-      "primaryMedia": "media-1768925041671-s6og6xe3g"
+      "name": "Edited: add a crack in ceiling where you can see...",
+      "slug": "edited-add-a-crack-in-ceiling-where-you-can-see",
+      "description": "Edit: add a crack in ceiling where you can see the sky through",
+      "parentId": "v2-1768923283043-34pnyj7e2",
+      "primaryMedia": "media-1768925292528-kcmhhq2n9"
+    },
+    "v2-1768925375938-w3zn3609k": {
+      "id": "v2-1768925375938-w3zn3609k",
+      "type": "view",
+      "name": "Edited: make the broken ceiling fall down on the...",
+      "slug": "edited-make-the-broken-ceiling-fall-down-on-the",
+      "description": "Edit: make the broken ceiling fall down on the floor",
+      "parentId": "v2-1768923283043-34pnyj7e2",
+      "primaryMedia": "media-1768925375937-r1zage8ty"
     }
   },
   "views": {},
@@ -338,13 +347,17 @@
                         {
                           "id": "v2-1768924855781-g5iv2aoxw",
                           "type": "view",
-                          "children": [
-                            {
-                              "id": "v2-1768925041671-5g1uoy2l9",
-                              "type": "view",
-                              "children": []
-                            }
-                          ]
+                          "children": []
+                        },
+                        {
+                          "id": "v2-1768925292529-kfynfmwbw",
+                          "type": "view",
+                          "children": []
+                        },
+                        {
+                          "id": "v2-1768925375938-w3zn3609k",
+                          "type": "view",
+                          "children": []
                         }
                       ]
                     },

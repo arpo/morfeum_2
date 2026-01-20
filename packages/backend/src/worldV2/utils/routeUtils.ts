@@ -178,30 +178,39 @@ export function findTreeEntry(tree: any, nodeId: string): any | null {
 /**
  * Create a view node and add it to the world tree
  * Used by both LOOK and EDIT_IMAGE commands
+ * 
+ * When source node is a 'view' type, creates a sibling (same parent) instead of a child.
+ * This prevents nested views and keeps all views as siblings under the same parent.
  */
 export function createViewNode(
   worldsData: any,
-  parentId: string,
+  sourceNodeId: string,
   name: string,
   description: string,
   mediaId: string
 ): ViewNode {
+  // Check if source node is a view - if so, use its parent (create sibling, not child)
+  const sourceNode = worldsData.nodes[sourceNodeId];
+  const effectiveParentId = sourceNode?.type === 'view' && sourceNode?.parentId 
+    ? sourceNode.parentId 
+    : sourceNodeId;
+
   const viewNode: ViewNode = {
     id: generateId(),
     type: 'view',
     name,
     slug: generateSlug(name),
     description,
-    parentId,
+    parentId: effectiveParentId,
     primaryMedia: mediaId
   };
 
   // Add node to nodes collection
   worldsData.nodes[viewNode.id] = viewNode;
 
-  // Add view as child of parent node in tree structure
+  // Add view as child of effective parent node in tree structure
   for (const hostTree of worldsData.worldTrees) {
-    const parentEntry = findTreeEntry(hostTree, parentId);
+    const parentEntry = findTreeEntry(hostTree, effectiveParentId);
     if (parentEntry) {
       if (!parentEntry.children) {
         parentEntry.children = [];

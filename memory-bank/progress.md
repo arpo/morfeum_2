@@ -218,6 +218,39 @@ prompts/
 
 ---
 
+## 2026-01-20 - EDIT_IMAGE Refactor to View Pattern ✅
+
+Refactored `/EDIT_IMAGE` to create view nodes (like `/LOOK`) instead of replacing images.
+
+**Problem:** `/EDIT_IMAGE` replaced the node's `primaryMedia`, losing the original image.
+
+**Solution:**
+- Both `/EDIT_IMAGE` and `/LOOK` now create **view nodes** as children
+- Original node's `primaryMedia` stays unchanged
+- When source is a **view node**, creates **sibling** (not child) to avoid nesting
+
+**Tree Structure:**
+```
+Location A
+├── View 1 (LOOK on Location A)
+└── View 2 (LOOK/EDIT_IMAGE on View 1) ← Sibling
+```
+
+**Shared Utilities (`routeUtils.ts`):**
+- `createViewNode()` - Creates view node, adds to tree
+- `findTreeEntry()` - Finds node in tree structure
+- `generateSlug()` - Creates URL-safe slugs
+- `ViewNode` interface
+
+**Files Modified:**
+- `packages/backend/src/worldV2/utils/routeUtils.ts` - Added shared view utilities
+- `packages/backend/src/worldV2/handlers/lookHandler.ts` - Uses shared utilities
+- `packages/backend/src/worldV2/handlers/editImageHandler.ts` - Creates view nodes
+- `packages/frontend/src/worldV2/commands/handlers/editImageHandler.ts` - Handles view response
+- `packages/frontend/src/features/app/components/WorldView/useWorldViewLogic.ts` - Removed slow crossfade
+
+---
+
 ## 2026-01-16 - Model Obfuscation & CSS Consolidation ✅
 
 Implemented model name obfuscation and CSS filter consolidation.

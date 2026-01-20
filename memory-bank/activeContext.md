@@ -122,6 +122,59 @@ The "2" suffix has been removed - V2 commands now use the clean original names.
 
 ---
 
+## 2026-01-20 - EDIT_IMAGE Refactor to View Pattern ✅
+
+Refactored `/EDIT_IMAGE` to create view nodes (like `/LOOK`) instead of replacing the parent's image.
+
+### Problem
+
+Previously `/EDIT_IMAGE` replaced the node's `primaryMedia`, losing the original image. Users wanted to preserve originals and browse between versions.
+
+### Solution
+
+Both `/EDIT_IMAGE` and `/LOOK` now:
+1. Create a **view node** as a child of the target node
+2. Assign the new/edited image to the view node
+3. Keep the parent node's `primaryMedia` unchanged
+
+### Sibling View Pattern
+
+When running `/EDIT_IMAGE` or `/LOOK` on an existing **view node**, the new view is created as a **sibling** (same parent) instead of a child:
+
+```
+Location A
+├── View 1 (LOOK on Location A)
+└── View 2 (LOOK on View 1) ← Sibling, not child
+```
+
+### Code Changes
+
+**Shared Utilities (`routeUtils.ts`):**
+- `createViewNode()` - Creates view node, adds to tree
+- `findTreeEntry()` - Finds node in tree structure
+- `generateSlug()` - Creates URL-safe slugs
+- `ViewNode` interface
+
+**Backend:**
+- `lookHandler.ts` - Uses shared `createViewNode`
+- `editImageHandler.ts` - Now creates view nodes instead of replacing primaryMedia
+
+**Frontend:**
+- `editImageHandler.ts` - Handles new `view` response from backend
+- `useWorldViewLogic.ts` - Removed slow crossfade on new image generation
+
+### Key Logic (routeUtils.ts)
+
+```typescript
+// Check if source node is a view - if so, create sibling
+const sourceNode = worldsData.nodes[sourceNodeId];
+const effectiveParentId = sourceNode?.type === 'view' && sourceNode?.parentId 
+  ? sourceNode.parentId 
+  : sourceNodeId;
+```
+
+---
+
 ## Next Steps
 
 - [ ] Consider renaming `NEW_REGION2` → `NEW_REGION` (after full V1 cleanup)

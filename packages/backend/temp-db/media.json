@@ -234,13 +234,13 @@
       ],
       "parentMedia": "media-1768923232804-lk3gtncvt"
     },
-    "media-1768925041671-s6og6xe3g": {
-      "id": "media-1768925041671-s6og6xe3g",
+    "media-1768925292528-kcmhhq2n9": {
+      "id": "media-1768925292528-kcmhhq2n9",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b2a58/GZRbGT0gOOEqzG7lnPZX8.jpg",
-      "createdAt": "2026-01-20T16:04:01.671Z",
+      "url": "https://v3b.fal.media/files/b/0a8b2a71/DLZvzXyryLpQvJaOzfgzk.jpg",
+      "createdAt": "2026-01-20T16:08:12.528Z",
       "metadata": {
-        "prompt": "add big crack in the ceiling where you can see the sky through",
+        "prompt": "add a crack in ceiling where you can see the sky through",
         "promptLayers": {
           "name": "Tower Top Chamber",
           "description": "This is a high chamber within one of the citadel's towers, offering a breathtaking panoramic view of the Azure Expanse and the surrounding architecture. The space is bathed in the bright midday sun, highlighting the ornate details of its construction.",
@@ -252,7 +252,7 @@
         },
         "promptData": {
           "command": "EDIT_IMAGE",
-          "editPrompt": "add big crack in the ceiling where you can see the sky through"
+          "editPrompt": "add a crack in ceiling where you can see the sky through"
         },
         "model": "fal-flux-2-turbo-edit",
         "width": 1024,
@@ -261,9 +261,40 @@
         "editedFrom": "media-1768924855780-pshiq7lm3"
       },
       "entityRefs": [
-        "v2-1768925041671-5g1uoy2l9"
+        "v2-1768925292529-kfynfmwbw"
       ],
       "parentMedia": "media-1768924855780-pshiq7lm3"
+    },
+    "media-1768925375937-r1zage8ty": {
+      "id": "media-1768925375937-r1zage8ty",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b2a79/SvHCoV2INpnHWEe-yQqRs.jpg",
+      "createdAt": "2026-01-20T16:09:35.938Z",
+      "metadata": {
+        "prompt": "make the broken ceiling fall down on the floor",
+        "promptLayers": {
+          "name": "Tower Top Chamber",
+          "description": "This is a high chamber within one of the citadel's towers, offering a breathtaking panoramic view of the Azure Expanse and the surrounding architecture. The space is bathed in the bright midday sun, highlighting the ornate details of its construction.",
+          "background": "Interior walls of light-colored stone and reddish-orange brickwork, leading to large, arched windows offering a vast view of the Azure Expanse and distant domed roofs.",
+          "midground": "Ornate stone columns supporting a domed ceiling, with carved architectural detailing and perhaps the suggestion of a celestial map on the inner dome.",
+          "foreground": "Smooth, polished light-colored stone floor, reflecting the light from the windows and the interior ambiance.",
+          "lighting": "Bright, indirect sunlight streaming through the arched windows, illuminating the interior surfaces and casting soft shadows. The warm tones of the stone and brick are accentuated by this light.",
+          "atmosphere": "A sense of serene elevation and majestic grandeur, with the vastness of the sky and sea palpable through the expansive windows. The air feels clear and imbued with ethereal light."
+        },
+        "promptData": {
+          "command": "EDIT_IMAGE",
+          "editPrompt": "make the broken ceiling fall down on the floor"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1024,
+        "height": 576,
+        "aspectRatio": "landscape_16_9",
+        "editedFrom": "media-1768925292528-kcmhhq2n9"
+      },
+      "entityRefs": [
+        "v2-1768925375938-w3zn3609k"
+      ],
+      "parentMedia": "media-1768925292528-kcmhhq2n9"
     }
   }
 }
