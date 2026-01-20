@@ -128,3 +128,92 @@ export function cascadeRegionDNA(region: Region, host: Host): Region & {
     }
   };
 }
+
+// ═══════════════════════════════════════════════════════════════════════════
+// View Node Utilities - Shared between LOOK and EDIT_IMAGE commands
+// ═══════════════════════════════════════════════════════════════════════════
+
+/**
+ * View node structure
+ * Represents a different camera angle or edit of the same physical space
+ */
+export interface ViewNode {
+  id: string;
+  type: 'view';
+  name: string;
+  slug: string;
+  description: string;
+  parentId: string;
+  primaryMedia?: string;
+}
+
+/**
+ * Generate a slug from view name
+ */
+export function generateSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
+/**
+ * Find tree entry for a node (to add children)
+ */
+export function findTreeEntry(tree: any, nodeId: string): any | null {
+  if (tree.id === nodeId) {
+    return tree;
+  }
+
+  if (tree.children) {
+    for (const child of tree.children) {
+      const result = findTreeEntry(child, nodeId);
+      if (result) return result;
+    }
+  }
+
+  return null;
+}
+
+/**
+ * Create a view node and add it to the world tree
+ * Used by both LOOK and EDIT_IMAGE commands
+ */
+export function createViewNode(
+  worldsData: any,
+  parentId: string,
+  name: string,
+  description: string,
+  mediaId: string
+): ViewNode {
+  const viewNode: ViewNode = {
+    id: generateId(),
+    type: 'view',
+    name,
+    slug: generateSlug(name),
+    description,
+    parentId,
+    primaryMedia: mediaId
+  };
+
+  // Add node to nodes collection
+  worldsData.nodes[viewNode.id] = viewNode;
+
+  // Add view as child of parent node in tree structure
+  for (const hostTree of worldsData.worldTrees) {
+    const parentEntry = findTreeEntry(hostTree, parentId);
+    if (parentEntry) {
+      if (!parentEntry.children) {
+        parentEntry.children = [];
+      }
+      parentEntry.children.push({
+        id: viewNode.id,
+        type: 'view',
+        children: []
+      });
+      break;
+    }
+  }
+
+  return viewNode;
+}

@@ -23,7 +23,8 @@ import {
   cleanupPipeline,
   sendProgress,
   sendCompletion,
-  sendError
+  sendError,
+  createViewNode
 } from '../utils/routeUtils';
 
 export const editImageHandler = asyncHandler(async (req: Request, res: Response) => {
@@ -112,13 +113,14 @@ export const editImageHandler = asyncHandler(async (req: Request, res: Response)
       const imageUrl = result.data.images[0].url;
 
       // ═══════════════════════════════════════════════════════════════════════
-      // Stage 3: Save media entry and update node
+      // Stage 3: Save media entry and create view node (like LOOK command)
       // ═══════════════════════════════════════════════════════════════════════
       sendProgress(operationId, 'saving', 'Saving changes...');
 
       // Preserve promptLayers from original media if available
       const originalPromptLayers = currentMedia.metadata?.promptLayers;
 
+      // Create media entry for the edited image
       const mediaEntry = mediaService.createMedia({
         type: 'image',
         url: imageUrl,
@@ -135,16 +137,23 @@ export const editImageHandler = asyncHandler(async (req: Request, res: Response)
           aspectRatio: 'landscape_16_9',
           editedFrom: node.primaryMedia
         },
-        entityRefs: [nodeId],
+        entityRefs: [], // Will be updated after view node creation
         parentMedia: node.primaryMedia
       });
 
-      // Update node with new primaryMedia
-      node.primaryMedia = mediaEntry.id;
-      if ('imageUrl' in node) {
-        (node as any).imageUrl = imageUrl;
-      }
-      worldsData.nodes[nodeId] = node;
+      // Create a view node for the edited image (same pattern as LOOK)
+      // This preserves the original node's image while adding the edit as a child view
+      const viewName = `Edited: ${prompt.slice(0, 40)}${prompt.length > 40 ? '...' : ''}`;
+      const viewNode = createViewNode(
+        worldsData,
+        nodeId,
+        viewName,
+        `Edit: ${prompt}`,
+        mediaEntry.id
+      );
+
+      // Update media entry with view node reference
+      mediaService.updateMedia(mediaEntry.id, { entityRefs: [viewNode.id] });
 
       // Save updated worlds data
       await storageService.saveWorlds(worldsData);
@@ -154,11 +163,16 @@ export const editImageHandler = asyncHandler(async (req: Request, res: Response)
 
       sendCompletion(operationId, {
         message: 'Image edited successfully',
+        view: {
+          id: viewNode.id,
+          name: viewNode.name,
+          type: viewNode.type,
+          primaryMedia: mediaEntry.id
+        },
         node: {
           id: nodeId,
           name: node.name,
-          type: node.type,
-          primaryMedia: mediaEntry.id
+          type: node.type
         },
         imageUrl,
         mediaId: mediaEntry.id,

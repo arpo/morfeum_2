@@ -21,29 +21,17 @@ import { buildLookImageEditPrompt } from '../prompts/imageEditPrompt';
 import { storageService } from '../../services/storage/storageService';
 import mediaService from '../../services/media/mediaService';
 import {
-  generateId,
   generateOperationId,
   setupPipeline,
   cleanupPipeline,
   sendProgress,
   sendCompletion,
-  sendError
+  sendError,
+  createViewNode,
+  type ViewNode
 } from '../utils/routeUtils';
 import type { Host, TimeOfDay } from '../types';
 import type { ImagePromptLayers } from '../display/imagePromptGenerator';
-
-/**
- * View node structure
- * Represents a different camera angle of the same physical space
- */
-export interface ViewNode {
-  id: string;
-  type: 'view';
-  name: string;
-  slug: string;
-  description: string;
-  parentId: string;
-}
 
 /**
  * Find node ancestry chain for context
@@ -125,24 +113,6 @@ function getNodeMediaInfo(worldsData: any, nodeId: string): {
 }
 
 /**
- * Find tree entry for a node (to add children)
- */
-function findTreeEntry(tree: any, nodeId: string): any | null {
-  if (tree.id === nodeId) {
-    return tree;
-  }
-
-  if (tree.children) {
-    for (const child of tree.children) {
-      const result = findTreeEntry(child, nodeId);
-      if (result) return result;
-    }
-  }
-
-  return null;
-}
-
-/**
  * Create fallback promptLayers when source doesn't have them
  */
 function createFallbackPromptLayers(node: any): ImagePromptLayers {
@@ -155,16 +125,6 @@ function createFallbackPromptLayers(node: any): ImagePromptLayers {
     lighting: 'Ambient lighting',
     atmosphere: 'Scene atmosphere'
   };
-}
-
-/**
- * Generate a slug from view name
- */
-function generateSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
 }
 
 export const lookHandler = asyncHandler(async (req: Request, res: Response) => {
@@ -296,20 +256,7 @@ export const lookHandler = asyncHandler(async (req: Request, res: Response) => {
       // ═══════════════════════════════════════════════════════════════════════
       sendProgress(operationId, 'saving', 'Saving view...');
 
-      // Create view node
-      const viewNode: ViewNode = {
-        id: generateId(),
-        type: 'view',
-        name: lookResponse.viewName,
-        slug: generateSlug(lookResponse.viewName),
-        description: `View: ${lookResponse.reveal}`,
-        parentId: nodeId
-      };
-
-      // Save view node
-      worldsData.nodes[viewNode.id] = viewNode;
-
-      // Create media entry for view image
+      // Create media entry for view image (entityRefs will be updated after view node creation)
       const mediaEntry = mediaService.createMedia({
         type: 'image',
         url: imageUrl,
@@ -326,28 +273,21 @@ export const lookHandler = asyncHandler(async (req: Request, res: Response) => {
           height: 1080,
           aspectRatio: 'landscape_16_9'
         },
-        entityRefs: [viewNode.id],
+        entityRefs: [], // Will be updated after view node creation
         parentMedia: sourceMediaId || undefined
       });
 
-      // Update view node with primaryMedia reference
-      (worldsData.nodes[viewNode.id] as any).primaryMedia = mediaEntry.id;
+      // Create view node using shared utility
+      const viewNode = createViewNode(
+        worldsData,
+        nodeId,
+        lookResponse.viewName,
+        `View: ${lookResponse.reveal}`,
+        mediaEntry.id
+      );
 
-      // Update world tree structure - add view as child of current node
-      for (const hostTree of worldsData.worldTrees) {
-        const parentEntry = findTreeEntry(hostTree, nodeId);
-        if (parentEntry) {
-          if (!parentEntry.children) {
-            parentEntry.children = [];
-          }
-          parentEntry.children.push({
-            id: viewNode.id,
-            type: 'view',
-            children: []
-          });
-          break;
-        }
-      }
+      // Update media entry with view node reference
+      mediaService.updateMedia(mediaEntry.id, { entityRefs: [viewNode.id] });
 
       await storageService.saveWorlds(worldsData);
 

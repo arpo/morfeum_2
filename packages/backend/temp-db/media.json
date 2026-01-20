@@ -113,6 +113,157 @@
         "v2-1768923283043-34pnyj7e2"
       ],
       "parentMedia": "media-1768923183779-t2t3qi58v"
+    },
+    "media-1768923528802-sijz28n8n": {
+      "id": "media-1768923528802-sijz28n8n",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b29c0/I3lRQbe9Z4oAghh_9PZe1.png",
+      "createdAt": "2026-01-20T15:38:48.802Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and step into Ocean Dock Entrance.\n\nTarget location:\nA semi-enclosed space within The Celestial Citadel.\n\nCamera:\nHuman eye level, positioned inside the structure/pavilion.\nThe camera has moved past the entrance into the sheltered area.\n\nOrientation:\nFacing into the semi-enclosed space.\nThe entrance is behind the camera.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nWeather: clear and bright\nThe sky visible through gaps and all lighting MUST reflect midday conditions.\n\n\nReveal:\nA partially covered space with sky appropriate for midday glimpsed through gaps.\nThe curved stone bridge with its patterned surface is visible, leading into the citadel. Large, spherical water orbs, reflecting the azure sky, are still present, glowing intensely.\nThe damp, worn stone of the dock is underfoot, with shallow pools of water reflecting the sky. Barnacle-free mooring posts are integrated into the stonework.\n\nPreserve (visual identity and structural continuity):\nThe structure's visual signature:\n* Atmosphere tone: The Celestial Citadel exudes a majestic and ethereal quality, a testament to its intricate design and gravity-defying presence. The clear, bright atmosphere emphasizes its divine nature, a beacon of beauty in the Azure Expanse.\n\nStyle lock:\nMaintain the structure's established aesthetic and materials.\n\nCarry forward (structure and surroundings):\nThe immense stone facade of The Celestial Citadel rises behind you, featuring grand arches and weathered stone blocks. Glimpses of domed roofs can be seen above, catching the bright sunlight.\n\nLighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday, clear and bright conditions.\nThe feeling is one of awe and anticipation, a grand entry point to a majestic structure, with the fresh, bracing air of the ocean mingling with the ethereal aura of the citadel.\n\nPhysical constraints:\nPARTIAL sky visible through framework, lattice, gaps, or open roof sections.\nThe visible sky MUST show midday conditions.\nNOT fully enclosed - some openings to sky are intentional and visible.\nNatural light filters through the structure appropriate for midday.\nThe entrance/arrival point is behind the camera position.\nThe structure provides shelter but is NOT sealed.\n\nProhibitions:\n* The entrance must NOT be visible anywhere in the frame - it is behind the camera\n* Do not show a FULLY enclosed interior with solid ceiling\n* Do not show a FULLY open outdoor space with no structure\n* Do not reinterpret the architectural/structural style\n* No solid walls on all sides\n* No completely sealed roof\n* Do NOT show dark night sky through gaps - this is a DAYTIME scene\n\nFinal constraint:\nShow a sheltered but partially open space at midday where sky is visible through the structure, creating filtered natural light.",
+        "promptLayers": {
+          "name": "Ocean Dock Entrance",
+          "description": "This is the entry point from the ocean side of The Celestial Citadel. You stand on a sturdy, slightly damp stone platform where boats would moor. The scent of salt and the distant cries of seabirds fill the air.",
+          "background": "The immense stone facade of The Celestial Citadel rises behind you, featuring grand arches and weathered stone blocks. Glimpses of domed roofs can be seen above, catching the bright sunlight.",
+          "midground": "The curved stone bridge with its patterned surface is visible, leading into the citadel. Large, spherical water orbs, reflecting the azure sky, are still present, glowing intensely.",
+          "foreground": "The damp, worn stone of the dock is underfoot, with shallow pools of water reflecting the sky. Barnacle-free mooring posts are integrated into the stonework.",
+          "lighting": "Bright, direct sunlight illuminates the scene, with strong highlights and deep, crisp shadows. The water orbs cast an ethereal glow, reflecting the azure expanse.",
+          "atmosphere": "The feeling is one of awe and anticipation, a grand entry point to a majestic structure, with the fresh, bracing air of the ocean mingling with the ethereal aura of the citadel."
+        },
+        "promptData": {
+          "command": "GOTO"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768923518458-drbix64to"
+      ],
+      "parentMedia": "media-1768923183779-t2t3qi58v"
+    },
+    "media-1768924309929-3olebnkik": {
+      "id": "media-1768924309929-3olebnkik",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b2a0e/h5OeeJ4yMYvLJoMaxkYrX.jpg",
+      "createdAt": "2026-01-20T15:51:49.929Z",
+      "metadata": {
+        "prompt": "add a ship in the water",
+        "promptLayers": {
+          "name": "Ocean Dock Entrance",
+          "description": "This is the entry point from the ocean side of The Celestial Citadel. You stand on a sturdy, slightly damp stone platform where boats would moor. The scent of salt and the distant cries of seabirds fill the air.",
+          "background": "The immense stone facade of The Celestial Citadel rises behind you, featuring grand arches and weathered stone blocks. Glimpses of domed roofs can be seen above, catching the bright sunlight.",
+          "midground": "The curved stone bridge with its patterned surface is visible, leading into the citadel. Large, spherical water orbs, reflecting the azure sky, are still present, glowing intensely.",
+          "foreground": "The damp, worn stone of the dock is underfoot, with shallow pools of water reflecting the sky. Barnacle-free mooring posts are integrated into the stonework.",
+          "lighting": "Bright, direct sunlight illuminates the scene, with strong highlights and deep, crisp shadows. The water orbs cast an ethereal glow, reflecting the azure expanse.",
+          "atmosphere": "The feeling is one of awe and anticipation, a grand entry point to a majestic structure, with the fresh, bracing air of the ocean mingling with the ethereal aura of the citadel."
+        },
+        "promptData": {
+          "command": "EDIT_IMAGE",
+          "editPrompt": "add a ship in the water"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1024,
+        "height": 576,
+        "aspectRatio": "landscape_16_9",
+        "editedFrom": "media-1768923528802-sijz28n8n"
+      },
+      "entityRefs": [
+        "v2-1768923518458-drbix64to"
+      ],
+      "parentMedia": "media-1768923528802-sijz28n8n"
+    },
+    "media-1768924855780-pshiq7lm3": {
+      "id": "media-1768924855780-pshiq7lm3",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b2a45/G4HuDAN7tJRhQFn0mbIdY.png",
+      "createdAt": "2026-01-20T16:00:55.780Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nTilt camera dramatically upward to inspect the intricate details of the domed ceiling. The ceiling should fill the majority of the frame. Use 50mm lens, close shot, f/4.\n\nShow the ceiling prominently - it should fill most of the frame.\n\nSame Tower Top Chamber, same midday lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "Tower Top Chamber",
+          "description": "This is a high chamber within one of the citadel's towers, offering a breathtaking panoramic view of the Azure Expanse and the surrounding architecture. The space is bathed in the bright midday sun, highlighting the ornate details of its construction.",
+          "background": "Interior walls of light-colored stone and reddish-orange brickwork, leading to large, arched windows offering a vast view of the Azure Expanse and distant domed roofs.",
+          "midground": "Ornate stone columns supporting a domed ceiling, with carved architectural detailing and perhaps the suggestion of a celestial map on the inner dome.",
+          "foreground": "Smooth, polished light-colored stone floor, reflecting the light from the windows and the interior ambiance.",
+          "lighting": "Bright, indirect sunlight streaming through the arched windows, illuminating the interior surfaces and casting soft shadows. The warm tones of the stone and brick are accentuated by this light.",
+          "atmosphere": "A sense of serene elevation and majestic grandeur, with the vastness of the sky and sea palpable through the expansive windows. The air feels clear and imbued with ethereal light."
+        },
+        "promptData": {
+          "command": "LOOK"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768924855781-g5iv2aoxw"
+      ],
+      "parentMedia": "media-1768923290600-ggmbji38j"
+    },
+    "media-1768924989511-lxxqf0nx3": {
+      "id": "media-1768924989511-lxxqf0nx3",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b2a52/Pd59FlR2olMqf_4vo-VZe.jpg",
+      "createdAt": "2026-01-20T16:03:09.511Z",
+      "metadata": {
+        "prompt": "add a crack in the ceiling",
+        "promptLayers": {
+          "name": "Citadel Antechamber",
+          "description": "You have entered a grand antechamber within the Celestial Citadel. The space is carved from the citadel's light-colored stone, leading deeper into its heart. Intricate architectural details hint at the grandeur of the structure.",
+          "background": "Smooth, pale stone walls curving upwards to a high, vaulted stone ceiling, subtly illuminated.",
+          "midground": "Ornate archways leading to other parts of the citadel, possibly featuring carved motifs consistent with the exterior.",
+          "foreground": "Polished light stone floor, showing the continuity of material from the exterior, with subtle patterns etched into its surface.",
+          "lighting": "Soft, diffused light emanating from unseen sources, echoing the dappled sunlight of the exterior but now enclosed, creating a warm, inviting glow.",
+          "atmosphere": "A sense of awe and tranquility, with the air feeling still and sacred, preserving the ethereal quality of the citadel."
+        },
+        "promptData": {
+          "command": "EDIT_IMAGE",
+          "editPrompt": "add a crack in the ceiling"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1024,
+        "height": 576,
+        "aspectRatio": "landscape_16_9",
+        "editedFrom": "media-1768923232804-lk3gtncvt"
+      },
+      "entityRefs": [
+        "v2-1768924989512-pux4tihah"
+      ],
+      "parentMedia": "media-1768923232804-lk3gtncvt"
+    },
+    "media-1768925041671-s6og6xe3g": {
+      "id": "media-1768925041671-s6og6xe3g",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b2a58/GZRbGT0gOOEqzG7lnPZX8.jpg",
+      "createdAt": "2026-01-20T16:04:01.671Z",
+      "metadata": {
+        "prompt": "add big crack in the ceiling where you can see the sky through",
+        "promptLayers": {
+          "name": "Tower Top Chamber",
+          "description": "This is a high chamber within one of the citadel's towers, offering a breathtaking panoramic view of the Azure Expanse and the surrounding architecture. The space is bathed in the bright midday sun, highlighting the ornate details of its construction.",
+          "background": "Interior walls of light-colored stone and reddish-orange brickwork, leading to large, arched windows offering a vast view of the Azure Expanse and distant domed roofs.",
+          "midground": "Ornate stone columns supporting a domed ceiling, with carved architectural detailing and perhaps the suggestion of a celestial map on the inner dome.",
+          "foreground": "Smooth, polished light-colored stone floor, reflecting the light from the windows and the interior ambiance.",
+          "lighting": "Bright, indirect sunlight streaming through the arched windows, illuminating the interior surfaces and casting soft shadows. The warm tones of the stone and brick are accentuated by this light.",
+          "atmosphere": "A sense of serene elevation and majestic grandeur, with the vastness of the sky and sea palpable through the expansive windows. The air feels clear and imbued with ethereal light."
+        },
+        "promptData": {
+          "command": "EDIT_IMAGE",
+          "editPrompt": "add big crack in the ceiling where you can see the sky through"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1024,
+        "height": 576,
+        "aspectRatio": "landscape_16_9",
+        "editedFrom": "media-1768924855780-pshiq7lm3"
+      },
+      "entityRefs": [
+        "v2-1768925041671-5g1uoy2l9"
+      ],
+      "parentMedia": "media-1768924855780-pshiq7lm3"
     }
   }
 }

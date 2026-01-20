@@ -70,18 +70,10 @@ export function useWorldViewLogic() {
       
       setViews(sortedViews);
       
-      // If new views were added, crossfade to the newest one
+      // If new views were added, just update the index (image already loaded via createEntitySession)
+      // No crossfade needed - the new image is already displayed immediately
       if (sortedViews.length > previousViewCount && sortedViews.length > 0) {
-        const newIndex = sortedViews.length - 1;
-        const newestView = sortedViews[newIndex];
-        
-        setCurrentViewIndex(newIndex);
-        
-        // Crossfade to new view
-        if (rendererRef.current && newestView) {
-          const depthMap = await getDepthMapForMedia(newestView.id);
-          await rendererRef.current.crossfadeTo(newestView.url, depthMap?.url || null, 1.5);
-        }
+        setCurrentViewIndex(sortedViews.length - 1);
       } else if (sortedViews.length > 0 && currentViewIndex < 0) {
         // Initial load - default to newest view without crossfade
         setCurrentViewIndex(sortedViews.length - 1);

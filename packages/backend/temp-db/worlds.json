@@ -221,6 +221,85 @@
       ],
       "parentId": "v2-1768923227983-026pi06aj",
       "primaryMedia": "media-1768923290600-ggmbji38j"
+    },
+    "v2-1768923518458-drbix64to": {
+      "id": "v2-1768923518458-drbix64to",
+      "type": "space",
+      "name": "Ocean Dock Entrance",
+      "slug": "ocean-dock-entrance",
+      "description": "This is the entry point from the ocean side of The Celestial Citadel. You stand on a sturdy, slightly damp stone platform where boats would moor. The scent of salt and the distant cries of seabirds fill the air.",
+      "spaceType": "semi-enclosed",
+      "dna": {
+        "essence": [
+          "citadel access",
+          "maritime connection",
+          "grandeur"
+        ],
+        "formsAndMaterials": [
+          "arches",
+          "stone pathways",
+          "water features",
+          "light-colored stone",
+          "reddish-orange brick"
+        ],
+        "colorAndLight": [
+          "azure sky reflection",
+          "bright midday sun",
+          "shimmering light",
+          "high contrast"
+        ],
+        "atmosphere": [
+          "majestic",
+          "ethereal",
+          "bright",
+          "inviting"
+        ],
+        "banned": [
+          "rusted metal",
+          "barnacles on stone",
+          "grimy or oil-slicked surfaces",
+          "modern shipping equipment",
+          "industrial cranes"
+        ]
+      },
+      "forbiddenTransformations": [
+        "the dock surface becoming made of wood",
+        "the citadel walls appearing to be made of metal",
+        "modern boat moorings being introduced",
+        "any visible pollution or debris from the water",
+        "the water orbs losing their glow",
+        "the citadel facade becoming weathered and grey",
+        "the sky turning overcast or dark"
+      ],
+      "parentId": "v2-1768923227983-026pi06aj",
+      "primaryMedia": "media-1768924309929-3olebnkik"
+    },
+    "v2-1768924855781-g5iv2aoxw": {
+      "id": "v2-1768924855781-g5iv2aoxw",
+      "type": "view",
+      "name": "The Celestial Ceiling",
+      "slug": "the-celestial-ceiling",
+      "description": "View: Detailed carvings, potential celestial patterns, construction materials, and any unique architectural features of the domed ceiling.",
+      "parentId": "v2-1768923283043-34pnyj7e2",
+      "primaryMedia": "media-1768924855780-pshiq7lm3"
+    },
+    "v2-1768924989512-pux4tihah": {
+      "id": "v2-1768924989512-pux4tihah",
+      "type": "view",
+      "name": "Edited: add a crack in the ceiling",
+      "slug": "edited-add-a-crack-in-the-ceiling",
+      "description": "Edit: add a crack in the ceiling",
+      "parentId": "v2-1768923227983-fxg72o138",
+      "primaryMedia": "media-1768924989511-lxxqf0nx3"
+    },
+    "v2-1768925041671-5g1uoy2l9": {
+      "id": "v2-1768925041671-5g1uoy2l9",
+      "type": "view",
+      "name": "Edited: add big crack in the ceiling where you c...",
+      "slug": "edited-add-big-crack-in-the-ceiling-where-you-c",
+      "description": "Edit: add big crack in the ceiling where you can see the sky through",
+      "parentId": "v2-1768924855781-g5iv2aoxw",
+      "primaryMedia": "media-1768925041671-s6og6xe3g"
     }
   },
   "views": {},
@@ -244,10 +323,33 @@
                     {
                       "id": "v2-1768923227983-fxg72o138",
                       "type": "space",
-                      "children": []
+                      "children": [
+                        {
+                          "id": "v2-1768924989512-pux4tihah",
+                          "type": "view",
+                          "children": []
+                        }
+                      ]
                     },
                     {
                       "id": "v2-1768923283043-34pnyj7e2",
+                      "type": "space",
+                      "children": [
+                        {
+                          "id": "v2-1768924855781-g5iv2aoxw",
+                          "type": "view",
+                          "children": [
+                            {
+                              "id": "v2-1768925041671-5g1uoy2l9",
+                              "type": "view",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "v2-1768923518458-drbix64to",
                       "type": "space",
                       "children": []
                     }

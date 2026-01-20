@@ -5,16 +5,14 @@
  * Supports all node types: host, region, location, niche, container, space, view
  */
 
-import { useStore } from '@/store';
-import { useLocationsStore } from '@/store/slices/locations';
 import { clearEntityMediaCache } from '@/services/mediaService';
-import { createEntitySession } from '@/utils/entity/sessionManager';
 import type { ParsedCommand } from '@/features/spawn-input/SpawnInputBar/commandParser';
 import type { V2CommandCallbacks, V2CommandResult } from '../types';
 import {
   validationError,
   handleCommandError,
   registerSpawn,
+  reloadAndCreateSession,
   createErrorHandler
 } from '../utils/commandUtils';
 
@@ -78,21 +76,22 @@ export async function handleEditImageCommand(
         data.eventsUrl,
         `/EDIT_IMAGE ${text.trim()}`,
         async (completedData: any) => {
-          if (completedData.imageUrl) {
-            // Clear media cache for this entity
+          if (completedData.imageUrl && completedData.view) {
+            // Clear media cache for parent entity
             clearEntityMediaCache(activeEntityId!);
 
-            // Reload locations store from backend to get the updated node data
-            await useLocationsStore.getState().loadFromBackend();
-
-            // Update entity session with new image
-            createEntitySession(useStore.getState(), {
-              id: activeEntityId!,
-              name: completedData.node?.name || 'Unknown',
-              type: activeEntityType as any || 'location',
-              primaryMedia: completedData.mediaId,
-              imageUrl: completedData.imageUrl
-            });
+            // Create session for the new VIEW node (same pattern as LOOK)
+            // The edited image is now a child view node, not a replacement
+            await reloadAndCreateSession(
+              {
+                id: completedData.view.id,
+                name: completedData.view.name,
+                type: completedData.view.type,
+                primaryMedia: completedData.view.primaryMedia
+              },
+              completedData.imageUrl,
+              completedData.modelClass
+            );
           }
           setIsMoving(false);
         },
