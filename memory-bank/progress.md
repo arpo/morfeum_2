@@ -1,5 +1,30 @@
 # Progress
 
+## 2026-01-20 - Image Settings Optimization ✅
+
+Optimized Flux 2 Turbo Edit and SeedVR Upscale settings for better image quality.
+
+**Configuration File:** `packages/backend/src/services/mzoo/config/endpoints.ts`
+
+### Flux 2 Turbo Edit Settings
+- `IMAGE_SIZE`: `{ width: 1440, height: 816 }` (custom dimensions, API max 1440px)
+- `OUTPUT_FORMAT`: `png` (better quality for upscaling)
+- Width 1440px = API maximum (256-1440px range)
+- Height 816px = close to 16:9 ratio, divisible by 16
+
+### SeedVR Upscale Settings
+- `UPSCALE_FACTOR`: 2 (2x upscale, ~4 seconds)
+- `NOISE_SCALE`: 0.15 (0.1-0.2 range avoids AI hallucination)
+- `OUTPUT_FORMAT`: `png` (mandatory per pro-tips)
+
+### Pro-Tips Applied
+- **Noise Scale 0.1-0.2**: Higher values cause upscaler to "hallucinate" new details
+- **PNG Mandatory**: Using JPG causes AI to upscale compression artifacts
+- **1088 Rule**: Use heights divisible by 16 (816 in our case) to avoid black bars
+- **2x Upscale**: Faster than 4x (~4s vs ~10s) with good quality
+
+---
+
 ## 2026-01-12 - NEW_WORLD_LOCATION_INTERIOR Command ✅
 
 Created `/NEW_WORLD_LOCATION_INTERIOR` - creates 4-node hierarchy from single concept.

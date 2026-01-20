@@ -1,5 +1,51 @@
 # Active Context
 
+## 2026-01-20 - Image Settings Optimization ✅
+
+Optimized Flux 2 Turbo Edit and SeedVR Upscale settings for better image quality.
+
+### Configuration Changes
+
+**File:** `packages/backend/src/services/mzoo/config/endpoints.ts`
+
+**Flux 2 Turbo Edit (`DEFAULT_IMAGE_EDIT_SETTINGS`):**
+```typescript
+{
+  NUM_IMAGES: 1,
+  IMAGE_SIZE: { width: 1440, height: 816 },  // Max 1440px, 16:9 ratio, ÷16
+  GUIDANCE_SCALE: 2.5,
+  OUTPUT_FORMAT: 'png',  // PNG for quality before upscaling
+  ENABLE_SAFETY_CHECKER: false
+}
+```
+
+**SeedVR Upscale (`DEFAULT_IMAGE_UPSCALE_SETTINGS`):**
+```typescript
+{
+  UPSCALE_MODE: 'factor',
+  UPSCALE_FACTOR: 2,        // 2x upscale (fast, ~4 seconds)
+  TARGET_RESOLUTION: '1080p',
+  NOISE_SCALE: 0.15,        // 0.1-0.2 range avoids hallucination
+  OUTPUT_FORMAT: 'png'      // PNG mandatory for quality
+}
+```
+
+### Key Decisions
+
+| Setting | Value | Reason |
+|---------|-------|--------|
+| Width | 1440px | API max limit (256-1440px) |
+| Height | 816px | Close to 16:9, divisible by 16 |
+| Edit format | PNG | Better quality for upscaling |
+| Upscale factor | 2x | Faster (~4s vs ~10s for 4x) |
+| Noise scale | 0.15 | Sweet spot to avoid AI hallucination |
+| Upscale format | PNG | Mandatory per SeedVR pro-tips |
+
+### The "1088 Rule" (Reference)
+AI models process images in blocks of 8/16 pixels. Heights like 1080 cause artifacts. Use 1088 instead - but our API max is 1440px, so we use 816 (divisible by 16).
+
+---
+
 ## 2026-01-20 - V1 Command Cleanup ✅
 
 Cleaned up old V1 navigation/node creation commands that have been replaced by V2.

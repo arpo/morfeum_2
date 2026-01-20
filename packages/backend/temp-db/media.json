@@ -72,7 +72,7 @@
     "media-1768906716934-szzsmvcu6": {
       "id": "media-1768906716934-szzsmvcu6",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b232f/p0WOkAmtnufZIj0oxx3oA.jpg",
+      "url": "https://v3b.fal.media/files/b/0a8b27f0/3WnoFEzyt4_PBsPlfAGM_.jpg",
       "createdAt": "2026-01-20T10:58:36.934Z",
       "metadata": {
         "prompt": "Action:\nMove the camera forward and step into Main Habitation Chamber.\n\nTarget location:\nInterior space carved inside The Explorer's Outpost.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: GOLDEN HOUR\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect golden hour conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nIntegrated scientific consoles and workstations, some displaying alien star charts or data readouts. Comfortable, modular seating units are arranged in functional clusters. Metallic conduits and life support systems are subtly integrated into the walls.\nThe floor is a seamless, slightly reflective composite material, showing faint patterns of the underlying structure. Small, personal items or scientific tools might be placed on surfaces. A warm, ambient glow emanates from recessed lighting strips along the floor.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: The air is thick with a sense of scientific exploration and awe-inspiring wonder. The alien landscape, bathed in the soft, mystical light of the golden hour and the iridescent mist, evokes a feeling of profound discovery. The geodesic dome, a symbol of human ingenuity, stands as a beacon of knowledge amidst an otherworldly beauty.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nSmooth, curved interior walls of the geodesic dome, composed of interlocking panels. The apex of the dome is lost in soft, diffused overhead lighting, with hints of the structural framework visible beneath the surface.\n\nInterior lighting and atmosphere (MUST MATCH GOLDEN HOUR):\nLighting appropriate for golden hour interior.\nA sense of focused, contained wonder and comfort. The interior feels secure and functional, a stark contrast to the wild alien environment outside, yet still imbued with the pioneering spirit of exploration.\n\nPhysical constraints:\nSolid ceiling above. Fully enclosed interior. No sky visible.\nThe space is carved into the structure's mass — not a void containing the structure.\nThe structure itself is NOT visible as an object from inside.\nIndirect lighting only — light enters through openings not visible in frame.\nThe entrance is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible through ceiling\n* No open roof or atrium to sky\n* No exterior landscape visible\n* No exterior vegetation unless interior description specifies overgrowth/abandoned\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
@@ -91,7 +91,11 @@
         "model": "fal-flux-2-turbo-edit",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 4,
+        "original_url": "https://v3b.fal.media/files/b/0a8b232f/p0WOkAmtnufZIj0oxx3oA.jpg"
       },
       "entityRefs": [
         "v2-1768906710626-k9n0fi46p"
@@ -130,7 +134,7 @@
     "media-1768907048796-865m8478c": {
       "id": "media-1768907048796-865m8478c",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b2350/Q_LBDcknXzaXKmgwCvM5G.jpg",
+      "url": "https://v3b.fal.media/files/b/0a8b27f4/_XRbI-XsAVGRqTqQbfPTz.jpg",
       "createdAt": "2026-01-20T11:04:08.796Z",
       "metadata": {
         "prompt": "REFRAME THIS IMAGE:\n\nMove right up to the window, press close to the glass, and look OUTWARD through it. The exterior world beyond the window should fill the frame. Use 85mm lens, close shot, f/4.\n\nShow the exterior view through the window prominently - it should fill most of the frame.\n\nSame Main Habitation Chamber, same golden hour lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
@@ -149,41 +153,16 @@
         "model": "fal-flux-2-turbo-edit",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 4,
+        "original_url": "https://v3b.fal.media/files/b/0a8b2350/Q_LBDcknXzaXKmgwCvM5G.jpg"
       },
       "entityRefs": [
         "v2-1768907048796-34082rq5q"
       ],
       "parentMedia": "media-1768906716934-szzsmvcu6"
-    },
-    "media-1768910700691-fgg6tgqff": {
-      "id": "media-1768910700691-fgg6tgqff",
-      "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b24be/1KAs8y9JpTEHuXJHGFq92.png",
-      "createdAt": "2026-01-20T12:05:00.691Z",
-      "metadata": {
-        "prompt": "Action:\nMove the camera forward and step into Observation Balcony.\n\nTarget location:\nInterior space carved inside The Explorer's Outpost.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: GOLDEN HOUR\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect golden hour conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nThe geodesic dome structure of The Explorer's Outpost to one side, with its translucent panels and metallic framework. Sleek, organic elements of the station's exterior are visible, reflecting ambient light.\nThe transparent, protective railing of the balcony is close, revealing the drop below and the iridescent flora clinging to the rocky surface of the floating island. The weathered metal decking of the balcony forms the immediate surface.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: The air is thick with a sense of scientific exploration and awe-inspiring wonder. The alien landscape, bathed in the soft, mystical light of the golden hour and the iridescent mist, evokes a feeling of profound discovery. The geodesic dome, a symbol of human ingenuity, stands as a beacon of knowledge amidst an otherworldly beauty.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nVast, star-dusted twilight sky transitioning to deep indigo, with Auriga Prime's twin moons faintly visible and distant jagged alien mountains piercing the horizon. The edge of the floating island drops off into a swirling, nebulae-like void.\n\nInterior lighting and atmosphere (MUST MATCH GOLDEN HOUR):\nLighting appropriate for golden hour interior.\nA sense of scientific exploration and awe-inspiring wonder, with the feeling of being exposed to the vastness of the alien cosmos while still connected to the safety of the outpost.\n\nPhysical constraints:\nOpen to sky above (balcony/terrace). Railing or edge defines the boundary.\nNatural lighting from above and sides.\nThe entrance back into the building is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No interior room appearance\n* No ground-level perspective\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
-        "promptLayers": {
-          "name": "Observation Balcony",
-          "description": "An elevated platform extending from the geodesic dome, offering an unobstructed, open-air view of the alien landscape. The balcony is bordered by a protective, transparent railing, allowing for an immersive experience of the world outside.",
-          "background": "Vast, star-dusted twilight sky transitioning to deep indigo, with Auriga Prime's twin moons faintly visible and distant jagged alien mountains piercing the horizon. The edge of the floating island drops off into a swirling, nebulae-like void.",
-          "midground": "The geodesic dome structure of The Explorer's Outpost to one side, with its translucent panels and metallic framework. Sleek, organic elements of the station's exterior are visible, reflecting ambient light.",
-          "foreground": "The transparent, protective railing of the balcony is close, revealing the drop below and the iridescent flora clinging to the rocky surface of the floating island. The weathered metal decking of the balcony forms the immediate surface.",
-          "lighting": "Warm, saturated golden hour hues cast long, soft shadows. Sunlight filters through the iridescent mist, creating a diffused, dreamlike glow. Subtle reflections of internal station lights catch on the railing and station exterior.",
-          "atmosphere": "A sense of scientific exploration and awe-inspiring wonder, with the feeling of being exposed to the vastness of the alien cosmos while still connected to the safety of the outpost."
-        },
-        "promptData": {
-          "command": "GOTO"
-        },
-        "model": "fal-flux-2-turbo-edit",
-        "width": 1920,
-        "height": 1080,
-        "aspectRatio": "landscape_16_9"
-      },
-      "entityRefs": [
-        "v2-1768910693855-5o6gunpzg"
-      ],
-      "parentMedia": "media-1768906670850-c54u3ep3l"
     }
   }
 }
