@@ -220,6 +220,60 @@
       "description": "View: The world outside seen through the window - the alien landscape, unusual flora, and possibly distant planetary formations.",
       "parentId": "v2-1768906710626-k9n0fi46p",
       "primaryMedia": "media-1768907048796-865m8478c"
+    },
+    "v2-1768910693855-5o6gunpzg": {
+      "id": "v2-1768910693855-5o6gunpzg",
+      "type": "space",
+      "name": "Observation Balcony",
+      "slug": "observation-balcony",
+      "description": "An elevated platform extending from the geodesic dome, offering an unobstructed, open-air view of the alien landscape. The balcony is bordered by a protective, transparent railing, allowing for an immersive experience of the world outside.",
+      "spaceType": "elevated",
+      "dna": {
+        "essence": [
+          "alien vista",
+          "scientific observation",
+          "open air",
+          "geodesic structure"
+        ],
+        "formsAndMaterials": [
+          "geometric framework",
+          "transparent panels",
+          "weathered metal",
+          "alien flora"
+        ],
+        "colorAndLight": [
+          "golden hour hues",
+          "star-dusted twilight",
+          "filtered ambient glow",
+          "internal station lighting reflections"
+        ],
+        "atmosphere": [
+          "awe-inspiring wonder",
+          "profound discovery",
+          "exposed vulnerability",
+          "scientific contemplation"
+        ],
+        "banned": [
+          "enclosed ceilings",
+          "solid walls",
+          "underground elements",
+          "overly familiar terrestrial flora",
+          "urban architecture",
+          "heavy machinery",
+          "dense foliage obscuring the view"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The railing becoming opaque or solid.",
+        "The balcony roof appearing unexpectedly.",
+        "The view of the sky being obstructed by artificial structures.",
+        "The space becoming enclosed by walls or doors.",
+        "The station's exterior appearing damaged or inaccessible from this point.",
+        "The floor becoming soft or muddy, losing its metallic character.",
+        "The edge of the floating island becoming unnaturally flat or featureless."
+      ],
+      "parentId": "v2-1768906710626-mmwcpi4em",
+      "primaryMedia": "media-1768910700691-fgg6tgqff"
     }
   },
   "views": {},
@@ -253,6 +307,11 @@
                     },
                     {
                       "id": "v2-1768906806075-pr4zsad26",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1768910693855-5o6gunpzg",
                       "type": "space",
                       "children": []
                     }

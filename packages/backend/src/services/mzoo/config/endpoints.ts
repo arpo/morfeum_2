@@ -27,16 +27,16 @@ export const DEFAULT_IMAGE_SETTINGS = {
 
 export const DEFAULT_IMAGE_EDIT_SETTINGS = {
   NUM_IMAGES: 1,
-  IMAGE_SIZE: 'landscape_16_9',
+  IMAGE_SIZE: { width: 1440, height: 816 },  // Max 1440px, 16:9 ratio, divisible by 16
   GUIDANCE_SCALE: 2.5,
-  OUTPUT_FORMAT: 'jpeg',
+  OUTPUT_FORMAT: 'png',  // PNG for better quality before upscaling
   ENABLE_SAFETY_CHECKER: false
 };
 
 export const DEFAULT_IMAGE_UPSCALE_SETTINGS = {
   UPSCALE_MODE: 'factor',
-  UPSCALE_FACTOR: 2,
+  UPSCALE_FACTOR: 2,        // 2.0x upscale as recommended
   TARGET_RESOLUTION: '1080p',
-  NOISE_SCALE: 0.1,
-  OUTPUT_FORMAT: 'jpg'
+  NOISE_SCALE: 0.15,        // 0.1-0.2 range to avoid hallucination
+  OUTPUT_FORMAT: 'png'      // PNG mandatory for quality
 };

@@ -155,6 +155,35 @@
         "v2-1768907048796-34082rq5q"
       ],
       "parentMedia": "media-1768906716934-szzsmvcu6"
+    },
+    "media-1768910700691-fgg6tgqff": {
+      "id": "media-1768910700691-fgg6tgqff",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b24be/1KAs8y9JpTEHuXJHGFq92.png",
+      "createdAt": "2026-01-20T12:05:00.691Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and step into Observation Balcony.\n\nTarget location:\nInterior space carved inside The Explorer's Outpost.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: GOLDEN HOUR\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect golden hour conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nThe geodesic dome structure of The Explorer's Outpost to one side, with its translucent panels and metallic framework. Sleek, organic elements of the station's exterior are visible, reflecting ambient light.\nThe transparent, protective railing of the balcony is close, revealing the drop below and the iridescent flora clinging to the rocky surface of the floating island. The weathered metal decking of the balcony forms the immediate surface.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: The air is thick with a sense of scientific exploration and awe-inspiring wonder. The alien landscape, bathed in the soft, mystical light of the golden hour and the iridescent mist, evokes a feeling of profound discovery. The geodesic dome, a symbol of human ingenuity, stands as a beacon of knowledge amidst an otherworldly beauty.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nVast, star-dusted twilight sky transitioning to deep indigo, with Auriga Prime's twin moons faintly visible and distant jagged alien mountains piercing the horizon. The edge of the floating island drops off into a swirling, nebulae-like void.\n\nInterior lighting and atmosphere (MUST MATCH GOLDEN HOUR):\nLighting appropriate for golden hour interior.\nA sense of scientific exploration and awe-inspiring wonder, with the feeling of being exposed to the vastness of the alien cosmos while still connected to the safety of the outpost.\n\nPhysical constraints:\nOpen to sky above (balcony/terrace). Railing or edge defines the boundary.\nNatural lighting from above and sides.\nThe entrance back into the building is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No interior room appearance\n* No ground-level perspective\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
+        "promptLayers": {
+          "name": "Observation Balcony",
+          "description": "An elevated platform extending from the geodesic dome, offering an unobstructed, open-air view of the alien landscape. The balcony is bordered by a protective, transparent railing, allowing for an immersive experience of the world outside.",
+          "background": "Vast, star-dusted twilight sky transitioning to deep indigo, with Auriga Prime's twin moons faintly visible and distant jagged alien mountains piercing the horizon. The edge of the floating island drops off into a swirling, nebulae-like void.",
+          "midground": "The geodesic dome structure of The Explorer's Outpost to one side, with its translucent panels and metallic framework. Sleek, organic elements of the station's exterior are visible, reflecting ambient light.",
+          "foreground": "The transparent, protective railing of the balcony is close, revealing the drop below and the iridescent flora clinging to the rocky surface of the floating island. The weathered metal decking of the balcony forms the immediate surface.",
+          "lighting": "Warm, saturated golden hour hues cast long, soft shadows. Sunlight filters through the iridescent mist, creating a diffused, dreamlike glow. Subtle reflections of internal station lights catch on the railing and station exterior.",
+          "atmosphere": "A sense of scientific exploration and awe-inspiring wonder, with the feeling of being exposed to the vastness of the alien cosmos while still connected to the safety of the outpost."
+        },
+        "promptData": {
+          "command": "GOTO"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768910693855-5o6gunpzg"
+      ],
+      "parentMedia": "media-1768906670850-c54u3ep3l"
     }
   }
 }
