@@ -106,6 +106,121 @@
         "banned": []
       },
       "primaryMedia": "media-1768923183779-t2t3qi58v"
+    },
+    "v2-1768923227983-026pi06aj": {
+      "id": "v2-1768923227983-026pi06aj",
+      "type": "container",
+      "name": "The Celestial Citadel",
+      "slug": "the-celestial-citadel",
+      "description": "A magnificent complex of buildings constructed from pale stone and rich reddish-orange brick, characterized by numerous domed roofs, arched windows, balconies, and soaring towers, all situated above shimmering azure waters. A gracefully curved stone bridge with an intricate surface leads to its entrance.",
+      "forbiddenTransformations": [
+        "The Citadel should not appear as a modern architectural style.",
+        "The Citadel's structures should not be made of materials other than stone and brick.",
+        "The surrounding water should not be depicted as murky or polluted.",
+        "The sky should not be overcast or stormy.",
+        "The Citadel should not appear weathered or dilapidated.",
+        "The spherical water orbs should remain a consistent visual element."
+      ],
+      "parentId": "v2-1768923178594-s0n665hx7"
+    },
+    "v2-1768923227983-fxg72o138": {
+      "id": "v2-1768923227983-fxg72o138",
+      "type": "space",
+      "name": "Citadel Antechamber",
+      "slug": "citadel-antechamber",
+      "description": "You have entered a grand antechamber within the Celestial Citadel. The space is carved from the citadel's light-colored stone, leading deeper into its heart. Intricate architectural details hint at the grandeur of the structure.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "celestial",
+          "architectural grandeur",
+          "divine sanctuary"
+        ],
+        "formsAndMaterials": [
+          "arches",
+          "domes",
+          "light stone",
+          "red brick accents"
+        ],
+        "colorAndLight": [
+          "pale stone palette",
+          "warm brick tones",
+          "indirect, soft illumination"
+        ],
+        "atmosphere": [
+          "majestic",
+          "ethereal",
+          "serene",
+          "sacred"
+        ],
+        "banned": [
+          "grimy textures",
+          "mundane furnishings",
+          "modern technology",
+          "visible sky"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The antechamber should not have exposed brickwork as a primary interior material; it should be stone-focused.",
+        "The ceiling should not be open to the sky or appear as a simple flat surface.",
+        "No visible signs of wear and tear or decay on the stone surfaces.",
+        "The space should not contain furniture incongruous with the citadel's aesthetic (e.g., modern seating).",
+        "There should be no direct sunlight, only reflected or ambient light.",
+        "The space should not feel cramped or utilitarian; it must retain a sense of grandeur."
+      ],
+      "parentId": "v2-1768923227983-026pi06aj",
+      "primaryMedia": "media-1768923232804-lk3gtncvt"
+    },
+    "v2-1768923283043-34pnyj7e2": {
+      "id": "v2-1768923283043-34pnyj7e2",
+      "type": "space",
+      "name": "Tower Top Chamber",
+      "slug": "tower-top-chamber",
+      "description": "This is a high chamber within one of the citadel's towers, offering a breathtaking panoramic view of the Azure Expanse and the surrounding architecture. The space is bathed in the bright midday sun, highlighting the ornate details of its construction.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "celestial architecture",
+          "elevated observatory",
+          "divine craftsmanship"
+        ],
+        "formsAndMaterials": [
+          "domed ceilings",
+          "arched windows",
+          "light-colored stone",
+          "reddish-orange brickwork",
+          "ornate detailing"
+        ],
+        "colorAndLight": [
+          "azure skies",
+          "warm stone tones",
+          "bright midday sun",
+          "dramatic shadow play"
+        ],
+        "atmosphere": [
+          "majestic",
+          "ethereal",
+          "panoramic awe"
+        ],
+        "banned": [
+          "visible sky gaps",
+          "cracked plaster",
+          "dusty surfaces",
+          "modern furniture",
+          "visible external scaffolding"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The view from the windows showing anything other than the Azure Expanse and the citadel's architecture",
+        "Any indication of a ceiling that is not domed or vaulted",
+        "The presence of modern technology or furniture",
+        "Visible signs of wear or damage to the stone or brickwork",
+        "The introduction of any metallic or industrial materials",
+        "A lighting scheme that does not originate from the arched windows",
+        "The space feeling cramped or enclosed despite its height"
+      ],
+      "parentId": "v2-1768923227983-026pi06aj",
+      "primaryMedia": "media-1768923290600-ggmbji38j"
     }
   },
   "views": {},
@@ -121,7 +236,24 @@
             {
               "id": "v2-1768923178594-s0n665hx7",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "v2-1768923227983-026pi06aj",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1768923227983-fxg72o138",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1768923283043-34pnyj7e2",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
