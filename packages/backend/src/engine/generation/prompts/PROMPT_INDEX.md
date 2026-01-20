@@ -47,11 +47,11 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 
 | Prompt | File | Purpose | Used By |
 |--------|------|---------|---------|
-| `buildGoInsidePrompt` | [goInside.ts](../../../worldV2/prompts/goInside.ts) | LLM generates container + space nodes with promptLayers | `/GO_INSIDE2`, `/GOTO2` |
-| `parseGoInsideResponse` | [goInside.ts](../../../worldV2/prompts/goInside.ts) | Parse LLM response to Container + Space nodes | `/GO_INSIDE2`, `/GOTO2` |
-| `buildEnterImageEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for indoor spaces | `/GO_INSIDE2`, `/GOTO2` |
-| `buildEnterOutdoorEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for outdoor spaces | `/GO_INSIDE2`, `/GOTO2` |
-| `buildEnterSemiEnclosedEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for semi-enclosed spaces (pavilions, gazebos) | `/GO_INSIDE2`, `/GOTO2` |
+| `buildGoInsidePrompt` | [goInside.ts](../../../worldV2/prompts/goInside.ts) | LLM generates container + space nodes with promptLayers | `/GO_INSIDE`, `/GOTO` |
+| `parseGoInsideResponse` | [goInside.ts](../../../worldV2/prompts/goInside.ts) | Parse LLM response to Container + Space nodes | `/GO_INSIDE`, `/GOTO` |
+| `buildEnterImageEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for indoor spaces | `/GO_INSIDE`, `/GOTO` |
+| `buildEnterOutdoorEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for outdoor spaces | `/GO_INSIDE`, `/GOTO` |
+| `buildEnterSemiEnclosedEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for semi-enclosed spaces (pavilions, gazebos) | `/GO_INSIDE`, `/GOTO` |
 | `buildLookPrompt` | [look.ts](../../../worldV2/prompts/look.ts) | LLM generates camera movement instructions for LOOK command | `/LOOK` |
 | `parseLookResponse` | [look.ts](../../../worldV2/prompts/look.ts) | Parse LLM response to LookResponse with camera/lens config | `/LOOK` |
 | `buildLookImageEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for camera reframing (first-person POV) | `/LOOK` |
@@ -216,11 +216,11 @@ User command: "/DISPLAY" (on any V2 node)
 
 ---
 
-### V2 Navigation Pipeline (GO_INSIDE2, GOTO2)
+### V2 Navigation Pipeline (GO_INSIDE, GOTO)
 
-**GO_INSIDE2** - Enter a structure/building from a location:
+**GO_INSIDE** - Enter a structure/building from a location:
 ```
-User command: "/GO_INSIDE2 the restaurant" (from location node)
+User command: "/GO_INSIDE the restaurant" (from location node)
     ↓
 ┌─────────────────────────────────────────┐
 │ Step 1: Get source image + promptLayers │
@@ -252,9 +252,9 @@ User command: "/GO_INSIDE2 the restaurant" (from location node)
 └─────────────────────────────────────────┘
 ```
 
-**GOTO2** - Create sibling space from within a container:
+**GOTO** - Create sibling space from within a container:
 ```
-User command: "/GOTO2 the VIP lounge" (from space node)
+User command: "/GOTO the VIP lounge" (from space node)
     ↓
 ┌─────────────────────────────────────────┐
 │ Step 1: Find parent container + location│
@@ -267,7 +267,7 @@ User command: "/GOTO2 the VIP lounge" (from space node)
 └─────────────────────────────────────────┘
     ↓
 ┌─────────────────────────────────────────┐
-│ Steps 3-5: Same as GO_INSIDE2           │
+│ Steps 3-5: Same as GO_INSIDE           │
 │ Reuses same prompts + image edit logic  │
 └─────────────────────────────────────────┘
     ↓
@@ -278,8 +278,8 @@ User command: "/GOTO2 the VIP lounge" (from space node)
 ```
 
 **Files involved:**
-- `worldV2/handlers/goInsideHandler.ts` - GO_INSIDE2 handler
-- `worldV2/handlers/gotoHandler.ts` - GOTO2 handler
+- `worldV2/handlers/goInsideHandler.ts` - GO_INSIDE handler
+- `worldV2/handlers/gotoHandler.ts` - GOTO handler
 - `worldV2/prompts/goInside.ts` - LLM prompt for container + space
 - `worldV2/prompts/imageEditPrompt.ts` - Image edit prompts (3 variants)
 

@@ -141,14 +141,14 @@ export const PIPELINE_STEPS = {
     { id: 'image_generation', name: 'Generating Image', duration: 2500 }
   ],
   
-  /** V2: GO_INSIDE2 - Navigate into a space using image edit */
+  /** V2: GO_INSIDE - Navigate into a space using image edit */
   v2GoInside: [
     { id: 'analyzing', name: 'Analyzing Location', duration: 5000 },
     { id: 'structure', name: 'Creating Entrance Structure', duration: 3000 },
     { id: 'image', name: 'Generating Space View', duration: 5000 }
   ],
   
-  /** V2: GOTO2 - Create sibling space within same container */
+  /** V2: GOTO - Create sibling space within same container */
   v2Goto: [
     { id: 'analyzing', name: 'Analyzing Parent Location', duration: 5000 },
     { id: 'structure', name: 'Creating Sibling Space', duration: 3000 },
@@ -160,6 +160,13 @@ export const PIPELINE_STEPS = {
     { id: 'analyzing', name: 'Analyzing Current View', duration: 2000 },
     { id: 'camera', name: 'Planning Camera Movement', duration: 3000 },
     { id: 'image', name: 'Generating New View', duration: 7000 },
+  ],
+  
+  /** V2: EDIT_IMAGE - Edit existing image with text prompt */
+  v2Edit: [
+    { id: 'loading', name: 'Loading Node Data', duration: 500 },
+    { id: 'editing', name: 'Editing Image', duration: 6000 },
+    { id: 'saving', name: 'Saving Changes', duration: 500 },
   ]
 } as const;
 

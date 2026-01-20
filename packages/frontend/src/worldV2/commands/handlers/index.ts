@@ -13,3 +13,4 @@ export { handleLookCommand } from './lookHandler';
 export { handleDisplayCommand } from './displayHandler';
 export { handleSetTimeCommand } from './setTimeHandler';
 export { handleSetWeatherCommand } from './setWeatherHandler';
+export { handleEditImageCommand } from './editImageHandler';

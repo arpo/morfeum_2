@@ -1,15 +1,15 @@
 /**
- * GOTO2 Route Handler
+ * GOTO Route Handler
  * 
- * Handles the /GOTO2 command for creating sibling spaces within a container.
+ * Handles the /GOTO command for creating sibling spaces within a container.
  * When user is on a space node, this finds the parent container and parent location,
- * then delegates to the same logic as GO_INSIDE2.
+ * then delegates to the same logic as GO_INSIDE.
  * 
  * Flow:
  * 1. Validate current node is a space
  * 2. Find parent container and parent location
  * 3. Use parent location's image as source (not current space)
- * 4. Delegate to GO_INSIDE2 logic (which will find existing container)
+ * 4. Delegate to GO_INSIDE logic (which will find existing container)
  */
 
 import { Request, Response } from 'express';
@@ -190,10 +190,10 @@ export const gotoHandler = asyncHandler(async (req: Request, res: Response) => {
     return;
   }
 
-  // GOTO2 only works from space nodes
+  // GOTO only works from space nodes
   if (currentNode.type !== 'space') {
     res.status(HTTP_STATUS.BAD_REQUEST).json({
-      error: 'GOTO2 can only be used from a space node. Use /GO_INSIDE2 from location nodes.'
+      error: 'GOTO can only be used from a space node. Use /GO_INSIDE from location nodes.'
     });
     return;
   }
@@ -226,7 +226,7 @@ export const gotoHandler = asyncHandler(async (req: Request, res: Response) => {
     data: {
       operationId,
       eventsUrl,
-      command: 'GOTO2'
+      command: 'GOTO'
     }
   });
 
@@ -358,7 +358,7 @@ export const gotoHandler = asyncHandler(async (req: Request, res: Response) => {
             ...space.promptLayers
           },
           promptData: {
-            command: 'GOTO2'
+            command: 'GOTO'
           },
           model: 'fal-flux-2-turbo-edit',
           width: 1920,

@@ -1,7 +1,19 @@
+/**
+ * Creation Commands (V1 - DEPRECATED)
+ * 
+ * V1 creation commands (NEW_WORLD, NEW_REGION, NEW_LOCATION) have been removed.
+ * Use V2 commands instead:
+ * - NEW_WORLD_LOCATION (creates full hierarchy)
+ * - NEW_REGION2
+ * - NEW_LOCATION2
+ * 
+ * This file now only contains helper functions for node creation from navigation.
+ */
+
 import { useStore } from '@/store';
 import { useLocationsStore } from '@/store/slices/locations';
 import { createEntitySession } from '@/utils/entity/sessionManager';
-import { ParsedCommand, getNodeTypeFromCommand, getSpawnEntityType } from './commandParser';
+import type { ParsedCommand } from './commandParser';
 
 interface CreationResult {
   success: boolean;
@@ -15,205 +27,22 @@ interface CreationCallbacks {
 }
 
 /**
- * Handle creation commands (NEW_WORLD, NEW_REGION, NEW_LOCATION)
+ * Handle creation commands (V1 - DEPRECATED)
+ * @deprecated V1 creation commands removed. This function always returns error.
  */
 export async function handleCreationCommand(
-  parsedCommand: ParsedCommand,
-  currentNode: any | undefined,
+  _parsedCommand: ParsedCommand,
+  _currentNode: any | undefined,
   callbacks: CreationCallbacks
 ): Promise<CreationResult> {
-  const { command, text, flags } = parsedCommand;
-  const { setIsMoving, setErrorMessage, setMovementInput } = callbacks;
-
-  setIsMoving(true);
+  const { setErrorMessage, setIsMoving, setMovementInput } = callbacks;
   
-  // NEW_WORLD uses the spawn system (creates full hierarchy from description)
-  if (command === 'NEW_WORLD') {
-    return handleNewWorldCommand(text, callbacks);
-  }
+  setErrorMessage('V1 creation commands removed. Use NEW_WORLD_LOCATION, NEW_REGION2, or NEW_LOCATION2');
+  setTimeout(() => setErrorMessage(null), 5000);
+  setIsMoving(false);
+  setMovementInput('');
   
-  try {
-    const response = await fetch('/api/mzoo/navigation/create-node', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        command,
-        description: text,
-        parentId: currentNode?.id,
-        flags
-      })
-    });
-    
-    const result = await response.json();
-    
-    if (!response.ok) {
-      setErrorMessage(result.error || 'Failed to create node');
-      setTimeout(() => setErrorMessage(null), 5000);
-      setIsMoving(false);
-      setMovementInput('');
-      return { success: false, error: result.error };
-    }
-    
-    const { data } = result;
-    
-    // If there's an events URL, we have a pipeline to monitor
-    if (data.eventsUrl && data.operationId) {
-      const registerExternalSpawn = useStore.getState().registerExternalSpawn;
-      
-      const nodeType = getNodeTypeFromCommand(command);
-      const spawnEntityType = getSpawnEntityType(nodeType);
-      
-      // Capture current node for closure
-      const capturedCurrentNode = currentNode;
-      
-      registerExternalSpawn(
-        data.operationId,
-        data.eventsUrl,
-        `/${command}${text ? ' ' + text : ''}`,
-        spawnEntityType,
-        async (completedData: any) => {
-          if (completedData.node) {
-            await addNodeToStoreAndTree(completedData, capturedCurrentNode);
-          }
-          setIsMoving(false);
-        },
-        (error: any) => {
-          console.error('[creationCommands] Creation error:', error);
-          setIsMoving(false);
-        }
-      );
-      
-      setMovementInput('');
-      return { success: true };
-    }
-    
-    return { success: true };
-  } catch (error) {
-    console.error('[creationCommands] Creation command error:', error);
-    setErrorMessage('Failed to create node');
-    setTimeout(() => setErrorMessage(null), 5000);
-    return { success: false, error: 'Failed to create node' };
-  } finally {
-    if (!flags.backgroundTask) {
-      setIsMoving(false);
-    }
-    setMovementInput('');
-  }
-}
-
-/**
- * Add created node to store and tree structure
- */
-async function addNodeToStoreAndTree(
-  completedData: any,
-  parentNode: any | undefined
-): Promise<void> {
-  const { node, imageUrl } = completedData;
-  
-  // Add node to store
-  const createNodeInStore = useLocationsStore.getState().createNode;
-  createNodeInStore(node);
-  
-  if (node.type !== 'host' && parentNode) {
-    // Add to parent's children
-    const currentWorldTrees = useLocationsStore.getState().worldTrees;
-    const worldTree = currentWorldTrees.find(tree => {
-      const findInTree = (treeNode: any, targetId: string): boolean => {
-        if (treeNode.id === targetId) return true;
-        return treeNode.children?.some((child: any) => findInTree(child, targetId)) || false;
-      };
-      return findInTree(tree, parentNode.id);
-    });
-    
-    if (worldTree) {
-      const addNodeToTree = useLocationsStore.getState().addNodeToTree;
-      addNodeToTree(worldTree.id, parentNode.id, node.id, node.type);
-    }
-  }
-  
-  const saveToBackend = useLocationsStore.getState().saveToBackend;
-  await saveToBackend();
-  
-  // Create entity session
-  createEntitySession(useStore.getState(), {
-    id: node.id,
-    name: node.name,
-    type: 'location',
-    primaryMedia: node.primaryMedia,
-    imageUrl
-  });
-}
-
-/**
- * Handle NEW_WORLD command using spawn system (creates full hierarchy from description)
- * Uses the same endpoint as the Location tab (/api/spawn/location/start)
- */
-async function handleNewWorldCommand(
-  text: string | undefined,
-  callbacks: CreationCallbacks
-): Promise<CreationResult> {
-  const { setIsMoving, setErrorMessage, setMovementInput } = callbacks;
-  
-  if (!text || !text.trim()) {
-    setErrorMessage('Please provide a world description');
-    setTimeout(() => setErrorMessage(null), 5000);
-    setIsMoving(false);
-    setMovementInput('');
-    return { success: false, error: 'No description provided' };
-  }
-
-  try {
-    const response = await fetch('/api/spawn/location/start', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt: text.trim() })
-    });
-    
-    const result = await response.json();
-    
-    if (!response.ok) {
-      setErrorMessage(result.error || 'Failed to create world');
-      setTimeout(() => setErrorMessage(null), 5000);
-      setIsMoving(false);
-      setMovementInput('');
-      return { success: false, error: result.error };
-    }
-    
-    const { data } = result;
-    
-    // Register with spawn system for progress tracking
-    if (data.eventsUrl && data.spawnId) {
-      const startSpawn = useStore.getState().registerExternalSpawn;
-      
-      startSpawn(
-        data.spawnId,
-        data.eventsUrl,
-        `/NEW_WORLD ${text}`,
-        'location',
-        async () => {
-          // World tree completion is handled by the spawn completion handler
-          setIsMoving(false);
-        },
-        (error: any) => {
-          console.error('[creationCommands] NEW_WORLD error:', error);
-          setIsMoving(false);
-        }
-      );
-      
-      setMovementInput('');
-      return { success: true };
-    }
-    
-    setMovementInput('');
-    return { success: true };
-  } catch (error) {
-    console.error('[creationCommands] NEW_WORLD command error:', error);
-    setErrorMessage('Failed to create world');
-    setTimeout(() => setErrorMessage(null), 5000);
-    setIsMoving(false);
-    setMovementInput('');
-    return { success: false, error: 'Failed to create world' };
-  }
+  return { success: false, error: 'V1 commands deprecated' };
 }
 
 /**

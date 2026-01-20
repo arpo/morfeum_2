@@ -143,7 +143,7 @@ function buildProhibitions(spaceType: SpaceType): string {
 }
 
 /**
- * Build image edit prompt for GO_INSIDE2 (entering a new space)
+ * Build image edit prompt for GO_INSIDE (entering a new space)
  * 
  * Follows the proven scene-expert structure that prevents "tower inside tower" bug:
  * - Preserve = visual identity as SURFACE TREATMENT ONLY (not the object itself)
@@ -226,7 +226,7 @@ Show a grounded, enclosed interior that clearly belongs inside this structure an
 
 
 /**
- * Build image edit prompt for GO_INSIDE2 when entering a SEMI-ENCLOSED space
+ * Build image edit prompt for GO_INSIDE when entering a SEMI-ENCLOSED space
  * 
  * Parallel to buildEnterImageEditPrompt but optimized for partial enclosure.
  * Allows sky visibility through gaps, lattice, or partial roofing.
@@ -315,7 +315,7 @@ Show a sheltered but partially open space at ${timeDisplay} where sky is visible
 
 
 /**
- * Build image edit prompt for GO_INSIDE2 when entering an OUTDOOR space
+ * Build image edit prompt for GO_INSIDE when entering an OUTDOOR space
  * 
  * Parallel to buildEnterImageEditPrompt but optimized for outdoor→outdoor transitions.
  * Instead of enclosure assertions, uses open-sky assertions.

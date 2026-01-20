@@ -16,6 +16,8 @@ export interface SlashCommandConfig {
   requiresNodeType: NodeType[] | null;
   /** If true, command is blocked on pass-through regions */
   blockedOnPassThrough?: boolean;
+  /** If true, command is hidden from dropdown but backend still works */
+  hidden?: boolean;
   description: string;
   category: 'navigation' | 'creation' | 'media';
 }
@@ -23,21 +25,11 @@ export interface SlashCommandConfig {
 export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
   // Navigation commands
   GO_INSIDE: { 
-    requiresNodeType: ['location', 'niche'], 
-    description: 'Enter a location or niche (infinite depth)',
-    category: 'navigation'
-  },
-  GO_INSIDE2: { 
     requiresNodeType: ['location', 'space'], 
-    description: 'Enter a space using image edit (V2 style lock)',
+    description: 'Enter a space (V2 navigation)',
     category: 'navigation'
   },
   GOTO: { 
-    requiresNodeType: ['niche', 'location'], 
-    description: 'Navigate to a specific place',
-    category: 'navigation'
-  },
-  GOTO2: { 
     requiresNodeType: ['space'], 
     description: 'Create sibling space within same container',
     category: 'navigation'
@@ -54,11 +46,6 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
     description: 'Create a new world (V2 simplified DNA)',
     category: 'creation'
   },
-  NEW_WORLD: { 
-    requiresNodeType: null, 
-    description: 'Create a new world from description',
-    category: 'creation'
-  },
   NEW_WORLD_LOCATION: { 
     requiresNodeType: null, 
     description: 'Create world with Host + Region + Location + Image',
@@ -69,19 +56,9 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
     description: 'Create interior location inside current location (requires location selected)',
     category: 'creation'
   },
-  NEW_REGION: { 
-    requiresNodeType: ['host'], 
-    description: 'Create region in current host',
-    category: 'creation'
-  },
   NEW_REGION2: { 
     requiresNodeType: ['host'], 
     description: 'Create region in current host (V2 simplified DNA)',
-    category: 'creation'
-  },
-  NEW_LOCATION: { 
-    requiresNodeType: ['region'], 
-    description: 'Create location in current region',
     category: 'creation'
   },
   NEW_LOCATION2: { 
@@ -91,19 +68,13 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
   },
   
   // Media commands
-  VIEW: { 
-    requiresNodeType: ['host', 'region', 'location', 'niche'], 
-    blockedOnPassThrough: true,  // Pass-through regions have no unique visual
-    description: 'Generate image for current node',
-    category: 'media'
-  },
   DISPLAY: { 
     requiresNodeType: ['host', 'region', 'location'], 
     description: 'Generate image for V2 node (supports --populate)',
     category: 'media'
   },
   EDIT_IMAGE: { 
-    requiresNodeType: ['host', 'region', 'location', 'niche'], 
+    requiresNodeType: ['host', 'region', 'location', 'niche', 'container', 'space', 'view'], 
     blockedOnPassThrough: true,
     description: 'Edit current image with a prompt (e.g., change to winter)',
     category: 'media'
@@ -121,12 +92,12 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
   
   // Character creation commands
   CREATE_CHARACTER_REAL: {
-    requiresNodeType: ['location', 'niche'],
+    requiresNodeType: ['location', 'niche', 'space'],
     description: 'Create a realistic human character',
     category: 'creation'
   },
   CREATE_CHARACTER_UNREAL: {
-    requiresNodeType: ['location', 'niche'],
+    requiresNodeType: ['location', 'niche', 'space'],
     description: 'Create a fantastical character',
     category: 'creation'
   }
@@ -165,6 +136,8 @@ export function getAvailableCommands(
 ): string[] {
   return Object.entries(SLASH_COMMANDS)
     .filter(([_, config]) => {
+      // Skip hidden commands (V1 commands kept for backward compatibility)
+      if (config.hidden) return false;
       // Command with null requiresNodeType is always available
       if (config.requiresNodeType === null) return true;
       // If no current node, only show commands that don't require a node

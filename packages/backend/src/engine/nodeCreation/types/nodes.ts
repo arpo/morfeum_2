@@ -14,7 +14,7 @@ import type { NodeDNA } from '../../hierarchyAnalysis/types';
 /**
  * Valid node types in the hierarchy
  * Host → Region → Location → Niche
- * V2 additions: container, space (for GO_INSIDE2 navigation), view (for LOOK command)
+ * V2 additions: container, space (for GO_INSIDE navigation), view (for LOOK command)
  */
 export type NodeType = 'host' | 'region' | 'location' | 'niche' | 'container' | 'space' | 'view';
 

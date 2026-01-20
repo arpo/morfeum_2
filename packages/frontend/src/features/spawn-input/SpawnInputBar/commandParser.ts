@@ -62,17 +62,19 @@ export function parseCommandInput(input: string): ParsedCommand {
 }
 
 /**
- * Check if command is a creation command
+ * Check if command is a creation command (V1 - deprecated)
+ * @deprecated V1 commands removed - use V2 commands (NEW_WORLD_LOCATION, NEW_REGION2, NEW_LOCATION2)
  */
 export function isCreationCommand(command: string): boolean {
-  return ['NEW_WORLD', 'NEW_REGION', 'NEW_LOCATION'].includes(command);
+  return false; // V1 commands removed
 }
 
 /**
- * Check if command is a media command
+ * Check if command is a media command (V1 - deprecated)
+ * @deprecated VIEW replaced by DISPLAY
  */
 export function isMediaCommand(command: string): boolean {
-  return command === 'VIEW';
+  return false; // VIEW command removed
 }
 
 /**
@@ -93,14 +95,10 @@ export function isNavigationCommand(command: string): boolean {
 
 /**
  * Get node type from creation command
+ * @deprecated V1 commands removed
  */
 export function getNodeTypeFromCommand(command: string): string {
-  const nodeTypeMap: Record<string, string> = {
-    NEW_WORLD: 'host',
-    NEW_REGION: 'region',
-    NEW_LOCATION: 'location'
-  };
-  return nodeTypeMap[command] || 'location';
+  return 'location';
 }
 
 /**

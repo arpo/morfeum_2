@@ -4,7 +4,7 @@
  * Compiles DNA into style lock text for image prompts.
  * Simple: DNA in → style lock out. No additions, no assumptions.
  * 
- * NOTE: For navigation (GO_INSIDE2), we now use promptLayers instead of DNA-based style locks.
+ * NOTE: For navigation (GO_INSIDE), we now use promptLayers instead of DNA-based style locks.
  * See: imageEditPrompt.ts for the promptLayers-based approach.
  * The functions here are still used for initial image generation.
  */

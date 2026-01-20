@@ -182,7 +182,7 @@ ${CHAT_IMPERSONATION_STATIC}
 
 /**
  * Cache Group 5: V2 Navigation (~2,000 tokens)
- * Used for: GO_INSIDE2, GOTO2 commands (V2 system)
+ * Used for: GO_INSIDE, GOTO commands (V2 system)
  * Note: Separate from morfeum-navigation which is for V1 (will be deprecated)
  */
 export const CACHE_V2_NAVIGATION = `

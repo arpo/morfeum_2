@@ -1,5 +1,5 @@
 /**
- * GO_INSIDE2 Prompt
+ * GO_INSIDE Prompt
  * 
  * Generates container + space nodes when entering a new area.
  * Always creates 2 nodes:
@@ -69,7 +69,7 @@ export interface SpaceNode {
 }
 
 /**
- * Static content for GO_INSIDE2 prompt - CACHEABLE
+ * Static content for GO_INSIDE prompt - CACHEABLE
  * Contains all rules, schemas, and output format that don't change per request.
  * ~1200 tokens - exported for use in morfeum-v2-navigation cache group.
  */
@@ -260,7 +260,7 @@ Return ONLY valid JSON with this exact structure:
 ❌ Using "atrium" for indoor spaces (implies central void - use "hall" or "chamber")`;
 
 /**
- * Build DYNAMIC content for GO_INSIDE2 prompt
+ * Build DYNAMIC content for GO_INSIDE prompt
  * Contains only the context-specific parts (parent location, target, promptLayers)
  * Used with generateCachedText() for efficient caching.
  * 

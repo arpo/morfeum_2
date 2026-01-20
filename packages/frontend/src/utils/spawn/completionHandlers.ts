@@ -145,7 +145,7 @@ export function handleSpawnCompletion(
     // Check for node property OR imageUrl+imagePrompt combo (navigation pipeline signature)
     return handleNavigationCompletion(spawnId, completionData, store);
   } else if (completionData.space || completionData.container) {
-    // GO_INSIDE2 spawns (space + container format) - handled by custom callback
+    // GO_INSIDE spawns (space + container format) - handled by custom callback
     return handleNavigationCompletion(spawnId, completionData, store);
   } else if (completionData.view) {
     // LOOK spawns (view format) - handled by custom callback

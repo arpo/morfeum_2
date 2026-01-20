@@ -1,5 +1,5 @@
 /**
- * GOTO2 Command Handler
+ * GOTO Command Handler
  * 
  * Creates a sibling space within the same container.
  * Only available when standing on a space node.
@@ -26,14 +26,14 @@ export async function handleGotoCommand(
   if (!text || !text.trim()) {
     return validationError(
       callbacks,
-      'Please provide a target (e.g., /GOTO2 the VIP lounge)'
+      'Please provide a target (e.g., /GOTO the VIP lounge)'
     );
   }
 
   if (!activeNodeId) {
     return validationError(
       callbacks,
-      'Please select a space node first before using /GOTO2'
+      'Please select a space node first before using /GOTO'
     );
   }
 
@@ -61,7 +61,7 @@ export async function handleGotoCommand(
       registerSpawn(
         data.operationId,
         data.eventsUrl,
-        `/GOTO2 ${text}`,
+        `/GOTO ${text}`,
         async (completedData: any) => {
           // Create entity session with image - displays image immediately
           if (completedData.space) {

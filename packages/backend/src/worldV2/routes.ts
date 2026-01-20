@@ -17,7 +17,8 @@ import {
   eventsHandler,
   setTimeHandler,
   setWeatherHandler,
-  navigationAssistantHandler
+  navigationAssistantHandler,
+  editImageHandler
 } from './handlers';
 import { displayHandler } from './display';
 
@@ -50,10 +51,10 @@ router.post('/set-time', setTimeHandler);
 // SET_WEATHER Command - Update host weather
 router.post('/set-weather', setWeatherHandler);
 
-// GO_INSIDE2 Command - Navigate into a space using image edit
+// GO_INSIDE Command - Navigate into a space using image edit
 router.post('/go-inside', goInsideHandler);
 
-// GOTO2 Command - Create sibling space within same container
+// GOTO Command - Create sibling space within same container
 router.post('/goto', gotoHandler);
 
 // LOOK Command - Change viewpoint within same space (creates view node)
@@ -61,5 +62,8 @@ router.post('/look', lookHandler);
 
 // Navigation Assistant Chat - AI help for navigation commands
 router.post('/navigation-assistant/chat', navigationAssistantHandler);
+
+// EDIT_IMAGE Command - Edit existing node image with text prompt
+router.post('/edit-image', editImageHandler);
 
 export { router as worldV2Router };

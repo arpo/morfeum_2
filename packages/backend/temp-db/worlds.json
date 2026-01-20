@@ -1,122 +1,264 @@
 {
   "nodes": {
-    "v2-1768904962078-83v6qt3wa": {
-      "id": "v2-1768904962078-83v6qt3wa",
+    "v2-1768906665251-ib69m7ql4": {
+      "id": "v2-1768906665251-ib69m7ql4",
       "type": "host",
-      "name": "Aethelburg",
-      "slug": "aethelburg",
-      "description": "A surreal, ancient city suspended in a vast, serene sky.",
-      "genre": "Fantasy",
-      "weather": "clear with fluffy white clouds",
-      "timeOfDay": "midday",
+      "name": "Auriga Prime",
+      "slug": "auriga-prime",
+      "description": "A vibrant alien planet with bioluminescent flora, floating islands, and crystalline rock formations.",
+      "genre": "Sci-Fi",
+      "weather": "mild with a gentle, iridescent mist",
+      "timeOfDay": "golden_hour",
       "dna": {
         "essence": [
-          "ancient architecture",
-          "surreal landscapes",
-          "floating structures",
-          "celestial bodies"
+          "organic alien landscapes",
+          "bioluminescent",
+          "floating islands",
+          "crystalline structures",
+          "Roger Dean inspiration"
         ],
         "formsAndMaterials": [
-          "domes",
-          "arches",
-          "towers",
-          "sandstone blocks",
-          "reddish-orange brick"
+          "curving organic shapes",
+          "translucent crystalline",
+          "vibrant flora",
+          "smooth rock"
         ],
         "colorAndLight": [
-          "light beige",
-          "sandstone",
-          "reddish-orange",
-          "sky blue",
-          "white",
-          "pale cream",
-          "transparent blue",
-          "bright even daylight",
-          "soft shadows"
+          "vibrant blues and greens",
+          "iridescent highlights",
+          "soft, diffused light",
+          "bioluminescent glow"
         ],
         "atmosphere": [
-          "surreal",
+          "whimsical",
           "fantastical",
-          "ancient",
-          "dreamlike",
-          "mysterious",
-          "majestic",
           "serene",
           "otherworldly"
         ],
         "banned": [
-          "modern technology",
-          "gritty realism"
+          "harsh geometric shapes",
+          "industrial materials",
+          "monochromatic palettes"
         ]
       },
       "spaceType": "exterior"
     },
-    "v2-1768904962078-73jlg05do": {
-      "id": "v2-1768904962078-73jlg05do",
+    "v2-1768906665251-9skqj0xyr": {
+      "id": "v2-1768906665251-9skqj0xyr",
       "type": "region",
       "name": "The Sky-Archipelago",
       "slug": "the-sky-archipelago",
-      "description": "The primary district of the floating city, characterized by stacked buildings and celestial phenomena.",
+      "description": "A collection of large, floating islands connected by organic bridges, teeming with exotic alien life.",
       "isPassThrough": false,
       "dna": {
         "essence": [
-          "stacked architecture",
-          "celestial proximity"
+          "floating landmasses",
+          "interconnected ecosystems"
         ],
         "formsAndMaterials": [
-          "intertwined buildings",
-          "balconies"
+          "rocky outcrops",
+          "vine bridges",
+          "exotic plant life"
         ],
-        "colorAndLight": [],
-        "atmosphere": [],
+        "colorAndLight": [
+          "emerald green foliage",
+          "sky blue"
+        ],
+        "atmosphere": [
+          "majestic",
+          "airy"
+        ],
         "banned": []
       }
     },
-    "v2-1768904962078-lq50sex3t": {
-      "id": "v2-1768904962078-lq50sex3t",
+    "v2-1768906665251-k1p1s3e4f": {
+      "id": "v2-1768906665251-k1p1s3e4f",
       "type": "location",
-      "name": "The Celestial Bridge",
-      "slug": "the-celestial-bridge",
+      "name": "The Explorer's Outpost",
+      "slug": "the-explorers-outpost",
       "spaceType": "exterior",
-      "description": "An arched bridge at the base of the floating city, supporting large transparent spheres reflecting celestial maps, with a serene blue body of water visible in the distance.",
+      "description": "A geodesic dome station nestled on the edge of a floating island, with large panoramic windows revealing the alien landscape.",
       "dna": {
         "essence": [
-          "large spherical objects",
-          "map reflections"
+          "geodesic dome",
+          "observation station"
         ],
         "formsAndMaterials": [
-          "arched bridge",
-          "transparent blue spheres",
-          "cracked moon-like sphere",
-          "plain sphere"
+          "translucent dome panels",
+          "metal framework",
+          "organic docking bay"
         ],
         "colorAndLight": [
-          "pale cream spheres",
-          "reflection of a world map"
+          "glowing internal lights",
+          "reflected ambient light"
         ],
         "atmosphere": [
-          "contemplative",
-          "vistas"
+          "scientific",
+          "awe-inspiring"
         ],
         "banned": []
       },
-      "primaryMedia": "media-1768904965817-6gfz2o7kp"
+      "primaryMedia": "media-1768906670850-c54u3ep3l"
+    },
+    "v2-1768906710626-mmwcpi4em": {
+      "id": "v2-1768906710626-mmwcpi4em",
+      "type": "container",
+      "name": "The Explorer's Outpost",
+      "slug": "the-explorers-outpost",
+      "description": "A geodesic dome station perched on the edge of a floating island, offering panoramic views of an alien world. It serves as a hub for scientific research and exploration.",
+      "forbiddenTransformations": [
+        "Removing the geodesic dome structure entirely",
+        "Replacing the alien landscape with a generic terrestrial environment",
+        "Adding medieval or fantasy architectural elements",
+        "Introducing modern Earth-based vehicles or technology",
+        "Changing the sky to a clear blue daytime sky",
+        "Removing the mist and flora from the exterior"
+      ],
+      "parentId": "v2-1768906665251-k1p1s3e4f"
+    },
+    "v2-1768906710626-k9n0fi46p": {
+      "id": "v2-1768906710626-k9n0fi46p",
+      "type": "space",
+      "name": "Main Habitation Chamber",
+      "slug": "main-habitation-chamber",
+      "description": "The central, enclosed living and working space within the geodesic dome. Warm lights emanate from integrated panels, illuminating scientific equipment and comfortable furnishings.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "scientific exploration",
+          "futuristic habitation",
+          "alien frontier"
+        ],
+        "formsAndMaterials": [
+          "geodesic framework",
+          "translucent panels",
+          "smooth composite surfaces",
+          "metallic accents"
+        ],
+        "colorAndLight": [
+          "warm internal glow",
+          "soft amber and gold hues",
+          "filtered ambient light"
+        ],
+        "atmosphere": [
+          "cozy scientific sanctuary",
+          "functional yet inviting"
+        ],
+        "banned": [
+          "exposed earth or rock",
+          "ancient ruins",
+          "organic, growing structures",
+          "visible sky or stars"
+        ]
+      },
+      "forbiddenTransformations": [
+        "Exposing the raw exterior alien landscape or sky directly",
+        "Introducing visible cracks or damage to the dome structure",
+        "Replacing scientific equipment with domestic furniture",
+        "Allowing harsh, direct sunlight to enter the chamber",
+        "Adding dirt, dust, or organic overgrowth within the chamber",
+        "Making the interior feel cavernous or exposed",
+        "Using overly bright or sterile white lighting"
+      ],
+      "parentId": "v2-1768906710626-mmwcpi4em",
+      "primaryMedia": "media-1768906716934-szzsmvcu6"
+    },
+    "v2-1768906806075-pr4zsad26": {
+      "id": "v2-1768906806075-pr4zsad26",
+      "type": "space",
+      "name": "Observation Chamber",
+      "slug": "observation-chamber",
+      "description": "This chamber offers a breathtaking, curved perspective of the alien vista through the dome's reinforced, transparent panels. It is a space designed for focused viewing and data collection.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "scientific exploration",
+          "advanced technology",
+          "alien vista",
+          "contained environment"
+        ],
+        "formsAndMaterials": [
+          "geodesic framework",
+          "transparent composite panels",
+          "smooth metallic surfaces",
+          "integrated data displays"
+        ],
+        "colorAndLight": [
+          "warm internal glow",
+          "filtered ambient light",
+          "subtle data screen luminescence"
+        ],
+        "atmosphere": [
+          "focused contemplation",
+          "scientific awe",
+          "controlled environment"
+        ],
+        "banned": [
+          "exposed natural rock",
+          "rustic or medieval furnishings",
+          "visible gaps to the sky",
+          "organic plant life within the chamber"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The transparent dome panels should not become opaque or covered in moss.",
+        "The internal structure should not be rendered as rough-hewn rock or exposed to the open sky.",
+        "The chamber should not contain any signs of natural flora or fauna from the alien landscape.",
+        "The advanced technological elements should not be replaced with primitive or antique designs.",
+        "The lighting should remain soft and integrated, not resembling natural sunlight or open flames.",
+        "The overall shape of the chamber should adhere to the geodesic dome's interior curvature, not become a standard rectangular room.",
+        "The view through the panels should remain consistent with the exterior alien landscape and sky."
+      ],
+      "parentId": "v2-1768906710626-mmwcpi4em",
+      "primaryMedia": "media-1768906812868-akqulxbsl"
+    },
+    "v2-1768907048796-34082rq5q": {
+      "id": "v2-1768907048796-34082rq5q",
+      "type": "view",
+      "name": "Through the Window",
+      "slug": "through-the-window",
+      "description": "View: The world outside seen through the window - the alien landscape, unusual flora, and possibly distant planetary formations.",
+      "parentId": "v2-1768906710626-k9n0fi46p",
+      "primaryMedia": "media-1768907048796-865m8478c"
     }
   },
   "views": {},
   "worldTrees": [
     {
-      "id": "v2-1768904962078-83v6qt3wa",
+      "id": "v2-1768906665251-ib69m7ql4",
       "type": "host",
       "children": [
         {
-          "id": "v2-1768904962078-73jlg05do",
+          "id": "v2-1768906665251-9skqj0xyr",
           "type": "region",
           "children": [
             {
-              "id": "v2-1768904962078-lq50sex3t",
+              "id": "v2-1768906665251-k1p1s3e4f",
               "type": "location",
-              "children": []
+              "children": [
+                {
+                  "id": "v2-1768906710626-mmwcpi4em",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1768906710626-k9n0fi46p",
+                      "type": "space",
+                      "children": [
+                        {
+                          "id": "v2-1768907048796-34082rq5q",
+                          "type": "view",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "v2-1768906806075-pr4zsad26",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -124,6 +266,6 @@
     }
   ],
   "pinnedIds": [
-    "v2-1768904962078-83v6qt3wa"
+    "v2-1768906665251-ib69m7ql4"
   ]
 }

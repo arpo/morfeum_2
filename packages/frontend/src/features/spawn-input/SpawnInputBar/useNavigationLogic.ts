@@ -10,7 +10,7 @@ import { handleNavigationCommand } from './navigationCommands';
 import { isV2Command, handleV2Command } from '@/worldV2';
 
 /** Commands that support enhancement (navigable elements, furnishing) */
-const ENHANCEABLE_COMMANDS = ['GO_INSIDE', 'GOTO', 'NEW_LOCATION'];
+const ENHANCEABLE_COMMANDS = ['GO_INSIDE', 'GOTO'];
 
 /**
  * Get default argument for navigation commands based on node data
@@ -100,8 +100,8 @@ export function useNavigationLogic() {
     // Get current node (may be undefined for NEW_WORLD)
     let currentNode: ReturnType<typeof getNode> | undefined = undefined;
 
-    // For NEW_WORLD, NEW_HOST, and NEW_WORLD_LOCATION, we don't need an active entity
-    if (command !== 'NEW_WORLD' && command !== 'NEW_HOST' && command !== 'NEW_WORLD_LOCATION') {
+    // For NEW_HOST and NEW_WORLD_LOCATION, we don't need an active entity
+    if (command !== 'NEW_HOST' && command !== 'NEW_WORLD_LOCATION') {
       const activeEntityId = useStore.getState().activeEntity;
       if (!activeEntityId) {
         console.warn('[useNavigationLogic] No active entity');

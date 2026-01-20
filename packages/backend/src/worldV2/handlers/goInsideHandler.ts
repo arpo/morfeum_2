@@ -1,7 +1,7 @@
 /**
- * GO_INSIDE2 Route Handler
+ * GO_INSIDE Route Handler
  * 
- * Handles the /GO_INSIDE2 command for navigating into a new space.
+ * Handles the /GO_INSIDE command for navigating into a new space.
  * Creates container + space nodes and generates an edited image.
  * 
  * Flow:
@@ -215,7 +215,7 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
     data: {
       operationId,
       eventsUrl,
-      command: 'GO_INSIDE2'
+      command: 'GO_INSIDE'
     }
   });
 
@@ -379,7 +379,7 @@ export const goInsideHandler = asyncHandler(async (req: Request, res: Response) 
           // Minimal promptData - only what's useful for debugging/auditing
           // All other info derivable via entityRefs + parentMedia + worlds.json
           promptData: {
-            command: 'GO_INSIDE2'
+            command: 'GO_INSIDE'
           },
           model: 'fal-flux-2-turbo-edit',
           width: 1920,

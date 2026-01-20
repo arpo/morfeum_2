@@ -95,23 +95,24 @@ Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = i
 | `/DISPLAY` | Generate image via LLM layers | ✅ |
 | `/SET_TIME` | Set time of day for world | ✅ |
 | `/SET_WEATHER` | Set weather conditions for world | ✅ |
-| `/GO_INSIDE2` | Enter structures (image edit) | ✅ |
-| `/GOTO2` | Create sibling space in container | ✅ |
+| `/GO_INSIDE` | Enter structures (image edit) | ✅ |
+| `/GOTO` | Create sibling space in container | ✅ |
 | `/LOOK` | Camera control within same space | ✅ |
-| **Navigation Assistant** | In-app chat for command help | ✅ NEW |
+| `/EDIT_IMAGE` | Edit existing image with prompt | ✅ |
+| **Navigation Assistant** | In-app chat for command help | ✅ |
 
 ### Phase 5-6: Navigation ✅ COMPLETE
 
-- [x] GO_INSIDE2 - Enter structures/buildings ← COMPLETE (v1.8)
+- [x] GO_INSIDE - Enter structures/buildings ← COMPLETE (v1.8)
   - Three prompt builders: indoor, outdoor, semi-enclosed
   - spaceType detection (indoor/outdoor/semi-enclosed/underground/elevated)
   - Time/weather enforcement (MANDATORY section in prompts)
   - 13 test scenarios passed
   - **Description Preservation**: Navigation Assistant preserves full user descriptions
-- [x] GOTO2 - Create sibling spaces within container ← COMPLETE
+- [x] GOTO - Create sibling spaces within container ← COMPLETE
   - Only available from space nodes (`requiresNodeType: ['space']`)
   - Uses parent location's image (not current space)
-  - Reuses GO_INSIDE2 LLM prompt + image edit logic
+  - Reuses GO_INSIDE LLM prompt + image edit logic
 - [x] LOOK - Camera control within same space ← COMPLETE (v3 with "see the view from")
   - Creates view nodes (camera angles, not locations)
   - 5 operation types: angle_change, traversal, zoom_in, zoom_out, **immersion**
@@ -120,7 +121,7 @@ Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = i
   - **Immersion v3**: "see the view from X" pattern (canonical)
     - ✅ `/LOOK see the view from the toilet` - camera AT position, looking outward
     - ❌ `/LOOK sit on the toilet` - broken (shows toilet in front)
-  - **Spatial boundaries**: Use `/GO_INSIDE2` for background→enter transitions
+  - **Spatial boundaries**: Use `/GO_INSIDE` for background→enter transitions
   - First-person POV enforced (no visible body/hands/feet)
   - Duplicate object prohibition added to prevent model adding extras
   - Best practices guide: `docs/look-command-best-practices.md`
@@ -129,7 +130,7 @@ Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = i
   - Command suggestions with insert button
   - `/bug` command for developer reports
   - Context-aware (passes node ID, image prompt)
-  - **GO_INSIDE2 guidance**: Preserves full descriptive details from user
+  - **GO_INSIDE guidance**: Preserves full descriptive details from user
 - [ ] Remove old system
 
 ---
@@ -176,14 +177,17 @@ prompts/
 
 ## What's Left 🚧
 
-- [x] GO_INSIDE2 navigation ← COMPLETE (v1.8)
-- [x] GOTO2 navigation (sibling spaces) ← COMPLETE
+- [x] GO_INSIDE navigation ← COMPLETE (v1.8)
+- [x] GOTO navigation (sibling spaces) ← COMPLETE
 - [x] LOOK command (camera control) ← COMPLETE
 - [x] Navigation Assistant chat panel ← COMPLETE
-- [ ] Remove old system
+- [x] V1 command cleanup (2026-01-20)
+  - Removed: NEW_WORLD, NEW_REGION, NEW_LOCATION, VIEW
+  - Renamed: GO_INSIDE2 → GO_INSIDE, GOTO2 → GOTO
 - [ ] Character spawn caching test
 - [ ] Bundle size optimization
 - [ ] Future: Season support for Host node
+- [ ] Future: Rename NEW_REGION2 → NEW_REGION, NEW_LOCATION2 → NEW_LOCATION
 
 ---
 
@@ -198,7 +202,7 @@ Implemented model name obfuscation and CSS filter consolidation.
 **Solution:**
 - Backend maps model names to anonymous classes: `fal-flux-2-turbo-edit` → `model-b`
 - `/api/media/bulk` returns `modelClass` instead of `model`
-- V2 handlers (LOOK, GO_INSIDE2, GOTO2) send `modelClass` in completion
+- V2 handlers (LOOK, GO_INSIDE, GOTO) send `modelClass` in completion
 - CSS filters use CSS custom properties for single source of truth
 
 **Files:**

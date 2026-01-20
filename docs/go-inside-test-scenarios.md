@@ -1,4 +1,4 @@
-# GO_INSIDE2 Test Scenarios
+# GO_INSIDE Test Scenarios
 
 ## Validation Criteria
 1. No structure inside itself
@@ -15,71 +15,71 @@
 ### 1. Sci-Fi Tower (megastructure, metal, angular)
 ```
 /NEW_WORLD_LOCATION The Chronos Pillar - A towering sci-fi spire of metallic panels and glowing energy conduits, angular geometry piercing the sky
-/GO_INSIDE2 Command Nexus
+/GO_INSIDE Command Nexus
 ```
 - [x] Pass
 
 ### 2. Egyptian Pyramid (megastructure, stone, ancient)
 ```
 /NEW_WORLD_LOCATION The Obsidian Pyramid - An Egyptian dark fantasy pyramid of black volcanic glass with gold hieroglyphs, torch-lit at dusk
-/GO_INSIDE2 Chamber of Whispers
+/GO_INSIDE Chamber of Whispers
 ```
 - [x] Pass
 
 ### 3. Small Cottage (tiny, cozy, organic)
 ```
 /NEW_WORLD_LOCATION Weathered Fisherman's Cottage - Whitewashed stone walls, weathered blue shutters, thatched roof, coastal cliff setting
-/GO_INSIDE2 Main Room
+/GO_INSIDE Main Room
 ```
 - [x] Pass (v1.0: exterior plants leaking → fixed in v1.1)
 
 ### 4. Spaceship (vehicle, hull, industrial)
 ```
 /NEW_WORLD_LOCATION Stellar Freighter Vagrant - Battered hull plating, cargo containers mag-locked to exterior, industrial spaceship aesthetic
-/GO_INSIDE2 Cargo Hold
+/GO_INSIDE Cargo Hold
 ```
 - [X] Pass
 
 ### 5. Natural Cave (formation, underground, crystal)
 ```
 /NEW_WORLD_LOCATION Crystal Cave Mouth - Jagged amethyst crystal formations, purple-blue glow, mineral deposits framing dark entrance
-/GO_INSIDE2 Inner Grotto
+/GO_INSIDE Inner Grotto
 ```
 - [x] Pass
 
 ### 6. Medieval Tower (historical, stone, vertical)
 ```
 /NEW_WORLD_LOCATION Medieval Castle Tower - Grey stone walls, crenellated battlements, narrow arrow slits, misty highlands
-/GO_INSIDE2 Armory
+/GO_INSIDE Armory
 ```
 - [x] Pass
 
 ### 7. Glass Building (modern, transparent, reflective)
 ```
 /NEW_WORLD_LOCATION Glass Office Tower - Floor-to-ceiling glass curtain wall, steel frame, reflective facade, city skyline
-/GO_INSIDE2 Server Room
+/GO_INSIDE Server Room
 ```
 - [x] Pass
 
 ### 8. Organic Alien (bio-mechanical, curved, living)
 ```
 /NEW_WORLD_LOCATION Alien Dropship - Bio-mechanical hull, chitinous armor plates, pulsing organic veins, landed in clearing
-/GO_INSIDE2 Troop Bay
+/GO_INSIDE Troop Bay
 ```
 - [x] Pass
 
 ### 9. Fantasy Skull (bone, whimsical, converted)
 ```
 /NEW_WORLD_LOCATION Dragon's Skull Lair - Massive dragon skull converted to dwelling, bone architecture, ominous volcanic setting
-/GO_INSIDE2 Treasure Hoard
+/GO_INSIDE Treasure Hoard
 ```
 - [x] Pass
 
 ### 10. Hollow Tree (natural, wood, mystical)
 ```
 /NEW_WORLD_LOCATION Ancient Hollow Tree - Massive gnarled trunk, moss-covered bark, mystical aura, forest primeval
-/GO_INSIDE2 Root Chamber
-/GO_INSIDE2 top terrace in the treetop with view over the forest canopy
+/GO_INSIDE Root Chamber
+/GO_INSIDE top terrace in the treetop with view over the forest canopy
 ```
 - [x] Pass
 
@@ -90,21 +90,21 @@
 ### 11. City Park (outdoor area, landscaped)
 ```
 /NEW_WORLD_LOCATION Victoria Park - A gated city park with ornate iron gates, tree-lined paths, Victorian lamp posts, manicured gardens
-/GO_INSIDE2 The Central Lawn
+/GO_INSIDE The Central Lawn
 ```
 - [x] Pass
 
 ### 12. Festival Grounds (outdoor event, semi-enclosed structure)
 ```
 /NEW_WORLD_LOCATION Burning Man - Black Rock Desert playa with massive art installations, dust storms, neon-lit structures at night
-/GO_INSIDE2 The Temple of Gratitude
+/GO_INSIDE The Temple of Gratitude
 ```
 - [x] Pass (v1.6: semi-enclosed works - sky visible through framework)
 
 ### 13. Botanical Gardens (outdoor area, landscaped)
 ```
 /NEW_WORLD_LOCATION The Botanical Gardens - Victorian glasshouses, manicured flowerbeds, hedge mazes, ornamental fountains
-/GO_INSIDE2 The Rose Garden
+/GO_INSIDE The Rose Garden
 ```
 - [x] Pass
 

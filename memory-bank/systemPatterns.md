@@ -235,7 +235,7 @@ Use `promptLayers` stored in media metadata instead of cascaded DNA for image ed
 ```
 Source Image (has promptLayers in media.metadata)
     ↓
-GO_INSIDE2: Read source promptLayers
+GO_INSIDE: Read source promptLayers
     ↓
 LLM generates interior promptLayers (inherits visual signature)
     ↓
@@ -269,7 +269,7 @@ Edit prompts follow the `scene-prompt-expert-using-edit-model` skill format:
 - `imageEditPrompt.ts` - Builds scene-expert formatted prompts
 
 ### When to Use
-- **Image editing (GO_INSIDE2)**: Use promptLayers (preserves visual signature)
+- **Image editing (GO_INSIDE)**: Use promptLayers (preserves visual signature)
 - **Image generation (NEW_WORLD_LOCATION)**: Use DNA cascade (gives regional character)
 
 ---

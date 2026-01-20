@@ -1,5 +1,5 @@
 /**
- * GO_INSIDE2 Command Handler
+ * GO_INSIDE Command Handler
  * 
  * Navigates into a space using image edit with style lock.
  * Creates container + space nodes and generates an edited image.
@@ -26,14 +26,14 @@ export async function handleGoInsideCommand(
   if (!text || !text.trim()) {
     return validationError(
       callbacks,
-      'Please provide a target (e.g., /GO_INSIDE2 the restaurant)'
+      'Please provide a target (e.g., /GO_INSIDE the restaurant)'
     );
   }
 
   if (!activeNodeId) {
     return validationError(
       callbacks,
-      'Please select a location first before using /GO_INSIDE2'
+      'Please select a location first before using /GO_INSIDE'
     );
   }
 
@@ -61,7 +61,7 @@ export async function handleGoInsideCommand(
       registerSpawn(
         data.operationId,
         data.eventsUrl,
-        `/GO_INSIDE2 ${text}`,
+        `/GO_INSIDE ${text}`,
         async (completedData: any) => {
           // Create entity session with image - displays image immediately
           if (completedData.space) {
