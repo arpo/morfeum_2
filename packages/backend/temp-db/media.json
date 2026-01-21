@@ -565,7 +565,7 @@
     "media-1768983129357-vqr977652": {
       "id": "media-1768983129357-vqr977652",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b4108/WyPKJCyc-9gUd1seZSXRk.png",
+      "url": "https://v3b.fal.media/files/b/0a8b43e9/C2vTnA5n_HwaS_qfPBWeB.jpg",
       "createdAt": "2026-01-21T08:12:09.357Z",
       "metadata": {
         "prompt": "Action:\nMove the camera forward and step into Submerged Tunnel Chamber.\n\nTarget location:\nInterior space carved inside The Coral Pod.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect midday conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nThe narrow tunnel is partially filled with still, murky water that reflects the dim light. Remnants of what might have been wiring or piping are visible, corroded and encrusted. A circular opening to another chamber is visible further down the tunnel on the left.\nThe floor is uneven stone, perpetually damp and covered in a fine silt and patches of soft, green moss. Water laps gently at your feet, creating small, disturbed ripples. Scattered, waterlogged debris from the pod's original furnishings are visible.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: A profound sense of 'nostalgic' abandonment permeates the scene. The 'derelict' state of the Coral Pod, combined with the quiet, clear weather, evokes a feeling of forgotten grandeur and a past life. The absence of any 'bustling activity' and the 'pristine structures' reinforces the isolation and decay. The colors are muted, dominated by the blues and greys of the sea and weathered materials, with the occasional vibrant, yet faded, pop of the red rug, enhancing the melancholic beauty.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nThe curved, rough-hewn walls of the tunnel recede into the gloom, heavily coated in slick, dark algae and patches of small, clinging marine life. Stalactite-like formations of calcified residue drip from the partial ceiling.\n\nInterior lighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday interior.\nA palpable sense of dampness and isolation pervades the space. The air is heavy and still, carrying the faint scent of brine and decay. The enclosed, water-filled tunnel evokes a feeling of being deep within a forgotten aquatic tomb.\n\nPhysical constraints:\nSolid ceiling above. Fully enclosed interior. No sky visible.\nThe space is carved into the structure's mass — not a void containing the structure.\nThe structure itself is NOT visible as an object from inside.\nIndirect lighting only — light enters through openings not visible in frame.\nThe entrance is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible through ceiling\n* No open roof or atrium to sky\n* No exterior landscape visible\n* No exterior vegetation unless interior description specifies overgrowth/abandoned\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
@@ -584,17 +584,24 @@
         "model": "fal-flux-2-turbo-edit",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 4
       },
       "entityRefs": [
         "v2-1768983122290-f1lhmewzv"
       ],
-      "parentMedia": "media-1768982662930-x8mqkoh49"
+      "parentMedia": "media-1768982662930-x8mqkoh49",
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b4108/WyPKJCyc-9gUd1seZSXRk.png",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b43e9/C2vTnA5n_HwaS_qfPBWeB.jpg"
+      }
     },
     "media-1768983321354-h8j41xtu9": {
       "id": "media-1768983321354-h8j41xtu9",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b411c/jSTDkxcRcZqWHXscyiBPc.png",
+      "url": "https://v3b.fal.media/files/b/0a8b43f8/_4JivXcrPw-hSZ3XtCcyt.jpg",
       "createdAt": "2026-01-21T08:15:21.354Z",
       "metadata": {
         "prompt": "REFRAME THIS IMAGE:\n\nMove up to the round window on the left, press close to the glass, and look OUTWARD through it. The ocean vista beyond the window should fill the frame. Use 85mm lens, close shot, f/4.\n\nShow the ocean vista through the round window prominently - it should fill most of the frame.\n\nSame The Red Bed Detail, same midday lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
@@ -613,12 +620,19 @@
         "model": "fal-flux-2-turbo-edit",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 4
       },
       "entityRefs": [
         "v2-1768983321356-14u2g40b4"
       ],
-      "parentMedia": "media-1768982821545-w5hj8d8er"
+      "parentMedia": "media-1768982821545-w5hj8d8er",
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b411c/jSTDkxcRcZqWHXscyiBPc.png",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b43f8/_4JivXcrPw-hSZ3XtCcyt.jpg"
+      }
     }
   }
 }

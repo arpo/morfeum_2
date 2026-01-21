@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
-import { IconChevronDown, IconTrash, IconArrowBadgeRight } from '@/icons';
+import { IconChevronDown, IconTrash, IconArrowBadgeRight, IconLoader2 } from '@/icons';
 import { InlineConfirm } from '@/components/ui/InlineConfirm';
 import { useLocationsStore } from '@/store/slices/locations';
+import { useStore } from '@/store';
 import styles from './TreeView.module.css';
 
 export interface TreeItem {
@@ -16,6 +17,8 @@ export interface TreeItem {
   isPassThrough?: boolean;
   /** True for view nodes (camera angles within a space) - styled with italic text */
   isView?: boolean;
+  /** True if the node has an upscaled image version */
+  isUpscaled?: boolean;
 }
 
 interface TreeViewProps {
@@ -49,6 +52,10 @@ const TreeViewContext = createContext<TreeViewContextType>({
 
 const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth = 0 }) => {
   const { expandedIds, toggleExpansion, onDelete } = useContext(TreeViewContext);
+  
+  // Check if this node is being upscaled
+  const upscalingEntityIds = useStore(state => state.upscalingEntityIds);
+  const isUpscaling = upscalingEntityIds.has(item.id);
   
   // Use context state if available (persistence), otherwise fallback to local prop or default
   const isExpanded = expandedIds.has(item.id) || (item.isExpanded && !expandedIds.size && !window.localStorage.getItem('tree_expanded'));  
@@ -95,6 +102,18 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
             <img src={item.image} alt={item.label} className={styles.thumbnail} />
           ) : (
             <span className={styles.icon}>{item.icon}</span>
+          )}
+          {/* Upscaling spinner overlay */}
+          {isUpscaling && (
+            <div className={styles.upscalingOverlay}>
+              <IconLoader2 size={12} className={styles.upscalingSpinner} />
+            </div>
+          )}
+          {/* HD badge for upscaled images */}
+          {item.isUpscaled && !isUpscaling && (
+            <div className={styles.hdBadge} title="Upscaled (4x)">
+              HD
+            </div>
           )}
         </div>
 

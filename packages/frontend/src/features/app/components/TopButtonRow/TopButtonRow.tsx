@@ -112,18 +112,14 @@ export function TopButtonRow({
         </Button>
       )}
 
-      {/* Upscale image button */}
+      {/* Upscale image button - spinner is shown in tree view on the node */}
       <Button
         onClick={onUpscaleImage}
         className={styles.button}
         disabled={depthMapDisabled || isUpscaling}
         aria-label="Upscale image (4x)"
       >
-        {isUpscaling ? (
-          <IconLoader2 size={20} className={styles.spinner} />
-        ) : (
-          <IconMaximize size={20} />
-        )}
+        <IconMaximize size={20} />
       </Button>
 
       {/* Show display mode button only when depth map exists */}

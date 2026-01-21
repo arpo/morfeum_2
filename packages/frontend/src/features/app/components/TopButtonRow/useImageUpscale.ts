@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { getMedia, clearMediaCache } from '@/services/mediaService';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useLocationsStore } from '@/store/slices/locations';
+import { useStore } from '@/store';
 
 interface UpscaleResult {
   success: boolean;
@@ -10,8 +11,12 @@ interface UpscaleResult {
 }
 
 export function useImageUpscale() {
-  const [isUpscaling, setIsUpscaling] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  
+  // Use store for per-entity upscaling state
+  const startUpscaling = useStore(state => state.startUpscaling);
+  const finishUpscaling = useStore(state => state.finishUpscaling);
+  const upscalingEntityIds = useStore(state => state.upscalingEntityIds);
 
   const upscaleImage = async (
     entityId: string,
@@ -20,7 +25,7 @@ export function useImageUpscale() {
   ): Promise<UpscaleResult> => {
     console.log('🚀 [Upscale] FUNCTION CALLED!', { entityId, primaryMediaId, entityType });
     
-    setIsUpscaling(true);
+    startUpscaling(entityId);
     setError(null);
 
     try {
@@ -34,7 +39,7 @@ export function useImageUpscale() {
       if (!mediaItem || !mediaItem.url) {
         const errorMsg = 'Failed to fetch primary media';
         setError(errorMsg);
-        setIsUpscaling(false);
+        finishUpscaling(entityId);
         return { success: false, error: errorMsg };
       }
 
@@ -61,7 +66,7 @@ export function useImageUpscale() {
         const errorMsg = `Upscale API failed: ${upscaleResponse.status} - ${errorBody}`;
         console.error('🚀 [Upscale] API error:', errorMsg);
         setError(errorMsg);
-        setIsUpscaling(false);
+        finishUpscaling(entityId);
         return { success: false, error: errorMsg };
       }
 
@@ -76,7 +81,7 @@ export function useImageUpscale() {
       if (!upscaledUrl) {
         const errorMsg = 'No upscaled image URL in response';
         setError(errorMsg);
-        setIsUpscaling(false);
+        finishUpscaling(entityId);
         return { success: false, error: errorMsg };
       }
 
@@ -100,7 +105,7 @@ export function useImageUpscale() {
           const errorMsg = `Failed to store original URL: ${originalResponse.status}`;
           console.error('🎨 [Upscale] Failed to store original:', errorMsg);
           setError(errorMsg);
-          setIsUpscaling(false);
+          finishUpscaling(entityId);
           return { success: false, error: errorMsg };
         }
       }
@@ -121,7 +126,7 @@ export function useImageUpscale() {
         const errorMsg = `Failed to store upscaled URL: ${upscaledResponse.status} - ${errorBody}`;
         console.error('🎨 [Upscale] Failed to store upscaled:', errorMsg);
         setError(errorMsg);
-        setIsUpscaling(false);
+        finishUpscaling(entityId);
         return { success: false, error: errorMsg };
       }
 
@@ -146,7 +151,7 @@ export function useImageUpscale() {
         const errorMsg = `Failed to update display URL: ${updateResponse.status} - ${errorBody}`;
         console.error('🎨 [Upscale] PUT failed:', errorMsg);
         setError(errorMsg);
-        setIsUpscaling(false);
+        finishUpscaling(entityId);
         return { success: false, error: errorMsg };
       }
 
@@ -178,7 +183,7 @@ export function useImageUpscale() {
         useLocationsStore.getState().updateNode(entityId, updateData);
       }
 
-      setIsUpscaling(false);
+      finishUpscaling(entityId);
       return {
         success: true,
         upscaledUrl
@@ -187,15 +192,23 @@ export function useImageUpscale() {
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : 'Unknown error';
       setError(errorMsg);
-      setIsUpscaling(false);
+      finishUpscaling(entityId);
       console.error('Image upscale error:', err);
       return { success: false, error: errorMsg };
     }
   };
 
+  // Check if any entity is upscaling (for backward compatibility)
+  const isUpscaling = upscalingEntityIds.size > 0;
+  
+  // Check if a specific entity is upscaling
+  const isEntityUpscaling = (entityId: string) => upscalingEntityIds.has(entityId);
+
   return {
     upscaleImage,
     isUpscaling,
+    isEntityUpscaling,
+    upscalingEntityIds,
     error
   };
 }

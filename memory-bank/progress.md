@@ -15,6 +15,9 @@
 - ✅ Media URL variants system (upscaled + depth maps)
 - ✅ Model name obfuscation + CSS filter consolidation
 - ✅ NEW_LOCATION2 → NEW_LOCATION rename
+- ✅ Progressive image loading (original → upscaled crossfade)
+- ✅ Per-node upscaling state with tree view spinners
+- ✅ HD badge for upscaled nodes in tree view
 
 ---
 

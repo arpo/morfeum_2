@@ -4,9 +4,10 @@ import type { StateCreator } from 'zustand';
 import { createEntityManagerSlice, type EntityManagerSlice } from './slices/entityManagerSlice';
 import { createEntityUISlice, type EntityUISlice } from './slices/entityUISlice';
 import { createSpawnSlice, type SpawnSlice } from './slices/spawnSlice';
+import { createMediaSlice, type MediaSlice } from './slices/mediaSlice';
 
 // Combined store interface
-export interface CombinedStore extends EntityManagerSlice, EntityUISlice, SpawnSlice {
+export interface CombinedStore extends EntityManagerSlice, EntityUISlice, SpawnSlice, MediaSlice {
   // Theme is handled by separate useThemeStore for persistence
 }
 
@@ -22,6 +23,9 @@ export const useStore = create<CombinedStore>()(
       
       // Spawn slice
       ...createSpawnSlice(...a),
+      
+      // Media slice (upscaling state)
+      ...createMediaSlice(...a),
     }),
     {
       name: 'morfeum-store',

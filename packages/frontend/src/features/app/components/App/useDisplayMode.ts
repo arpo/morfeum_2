@@ -29,7 +29,10 @@ export function useDisplayMode() {
   const isCharacter = activeEntitySession?.entityType === 'character';
   
   const { generateDepthMap, isGenerating: depthMapGenerating } = useDepthMapLogic();
-  const { upscaleImage, isUpscaling } = useImageUpscale();
+  const { upscaleImage, isEntityUpscaling } = useImageUpscale();
+  
+  // Check if current entity is being upscaled
+  const isCurrentEntityUpscaling = activeEntity ? isEntityUpscaling(activeEntity) : false;
 
   // Get primary media ID for current entity
   const getPrimaryMediaId = useCallback(() => {
@@ -79,8 +82,7 @@ export function useDisplayMode() {
     const entityType = isCharacter ? 'character' : 'location';
     await upscaleImage(activeEntity, primaryMediaId, entityType);
     
-    // Trigger image refresh
-    window.dispatchEvent(new CustomEvent('imageUpscaled'));
+    // Note: imageUpscaled event is already dispatched by useImageUpscale hook with proper detail
   }, [activeEntity, getPrimaryMediaId, isCharacter, upscaleImage]);
 
   const handleDisplayModeChange = useCallback((mode: DisplayMode) => {
@@ -133,7 +135,7 @@ export function useDisplayMode() {
     hasDepthMap,
     depthMapGenerating,
     depthMapDisabled,
-    isUpscaling,
+    isUpscaling: isCurrentEntityUpscaling,
     handleGenerateDepthMap,
     handleUpscaleImage,
     handleDisplayModeChange,

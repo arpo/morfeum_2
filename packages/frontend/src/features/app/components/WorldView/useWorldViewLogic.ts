@@ -2,11 +2,13 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import { useStore } from '@/store';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useLocationsStore } from '@/store/slices/locations';
-import { getDepthMapForMedia, clearMediaCache } from '@/services/mediaService';
+import { getDepthMapForMedia, clearMediaCache, getMediaWithUrls } from '@/services/mediaService';
 import { WorldViewRenderer } from './WorldViewRenderer';
 
 interface DisplayImage {
   src: string;
+  originalSrc: string | null;
+  upscaledSrc: string | null;
   depthSrc: string | null;
   alt: string;
   mediaId: string | null;
@@ -60,6 +62,8 @@ export function useWorldViewLogic() {
     if (spawnWithImage) {
       return {
         src: spawnWithImage.imageUrl!,
+        originalSrc: null,
+        upscaledSrc: null,
         depthSrc: null, // No depth map during generation
         alt: `Generating ${spawnWithImage.prompt}...`,
         mediaId: null
@@ -70,17 +74,23 @@ export function useWorldViewLogic() {
     if (activeEntitySession?.entityImage) {
       const primaryMediaId = getPrimaryMediaId();
       let depthSrc: string | null = null;
+      let originalSrc: string | null = null;
+      let upscaledSrc: string | null = null;
       
-      // Try to find depth map for this media
+      // Get all URL variants for progressive loading
       if (primaryMediaId) {
-        const depthMap = await getDepthMapForMedia(primaryMediaId);
-        if (depthMap?.url) {
-          depthSrc = depthMap.url;
+        const mediaUrls = await getMediaWithUrls(primaryMediaId);
+        if (mediaUrls) {
+          originalSrc = mediaUrls.originalUrl;
+          upscaledSrc = mediaUrls.upscaledUrl;
+          depthSrc = mediaUrls.depthMapUrl;
         }
       }
       
       return {
         src: activeEntitySession.entityImage,
+        originalSrc,
+        upscaledSrc,
         depthSrc,
         alt: activeEntitySession.entityName || 'Entity',
         mediaId: primaryMediaId
@@ -116,7 +126,7 @@ export function useWorldViewLogic() {
     }
   }, [getPrimaryMediaId]);
 
-  // Load image into renderer
+  // Load image into renderer with progressive loading (original → upscaled)
   useEffect(() => {
     let cancelled = false;
     
@@ -134,21 +144,53 @@ export function useWorldViewLogic() {
       
       setHasImage(true);
       
+      // Determine which image to load first (prefer original for faster initial display)
+      const initialSrc = displayImage.originalSrc || displayImage.src;
+      const hasUpscaled = displayImage.upscaledSrc && displayImage.upscaledSrc !== initialSrc;
+      
       // Only reload if image changed
-      if (displayImage.src !== currentImageRef.current) {
+      if (initialSrc !== currentImageRef.current) {
         setIsLoading(true);
-        currentImageRef.current = displayImage.src;
+        currentImageRef.current = initialSrc;
         currentDepthRef.current = displayImage.depthSrc;
         
         if (rendererRef.current) {
           try {
-            await rendererRef.current.load(displayImage.src, displayImage.depthSrc);
-          } catch (error) {
+            // Load original/initial image first
+            await rendererRef.current.load(initialSrc, displayImage.depthSrc);
+            setIsLoading(false);
+            
+            if (cancelled) return;
+            
+            // If upscaled version exists, preload and crossfade to it
+            if (hasUpscaled && displayImage.upscaledSrc) {
+              const upscaledUrl = displayImage.upscaledSrc;
+              
+              // Preload upscaled image in background
+              const preloadImage = new Image();
+              preloadImage.onload = async () => {
+                if (cancelled || !rendererRef.current) return;
+                
+                // Only crossfade if we're still showing the same original image
+                if (currentImageRef.current === initialSrc) {
+                  try {
+                    await rendererRef.current.crossfadeTo(upscaledUrl, displayImage.depthSrc, 0.5);
+                    currentImageRef.current = upscaledUrl;
+                    console.log('[WorldView] Upscaled image now visible');
+                  } catch {
+                    // Crossfade failed - silently ignore, original is still displayed
+                  }
+                }
+              };
+              preloadImage.src = upscaledUrl;
+            }
+          } catch {
             // Image load failed - silently ignore
+            setIsLoading(false);
           }
+        } else {
+          setIsLoading(false);
         }
-        
-        setIsLoading(false);
       } else if (displayImage.depthSrc !== currentDepthRef.current && displayImage.depthSrc) {
         // Same image but new depth map
         currentDepthRef.current = displayImage.depthSrc;
@@ -185,6 +227,41 @@ export function useWorldViewLogic() {
     window.addEventListener('depthMapGenerated', handleDepthMapGenerated);
     return () => window.removeEventListener('depthMapGenerated', handleDepthMapGenerated);
   }, [checkForDepthMap]);
+
+  // Listen for image upscaled events - crossfade to the new upscaled image
+  useEffect(() => {
+    const handleImageUpscaled = async (event: Event) => {
+      const customEvent = event as CustomEvent<{ entityId: string; newUrl: string; primaryMediaId: string }>;
+      const entityId = customEvent.detail?.entityId;
+      const newUrl = customEvent.detail?.newUrl;
+      
+      // Only react if this is the active entity
+      if (!entityId || entityId !== activeEntity || !rendererRef.current || !newUrl) return;
+      
+      console.log('[WorldView] Image upscaled event received, crossfading to:', newUrl);
+      
+      // Preload the upscaled image before crossfading
+      const preloadImage = new Image();
+      preloadImage.onload = async () => {
+        if (!rendererRef.current) return;
+        
+        try {
+          await rendererRef.current.crossfadeTo(newUrl, currentDepthRef.current, 0.5);
+          currentImageRef.current = newUrl;
+          console.log('[WorldView] Crossfade to upscaled image complete');
+        } catch (err) {
+          console.error('[WorldView] Failed to crossfade to upscaled image:', err);
+        }
+      };
+      preloadImage.onerror = () => {
+        console.error('[WorldView] Failed to preload upscaled image:', newUrl);
+      };
+      preloadImage.src = newUrl;
+    };
+    
+    window.addEventListener('imageUpscaled', handleImageUpscaled);
+    return () => window.removeEventListener('imageUpscaled', handleImageUpscaled);
+  }, [activeEntity]);
 
   // Listen for display mode changes
   useEffect(() => {

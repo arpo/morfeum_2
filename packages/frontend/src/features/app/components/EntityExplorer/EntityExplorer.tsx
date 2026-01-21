@@ -6,7 +6,7 @@ import { Tabs, TreeView, TreeItem } from '@/components/ui';
 import { IconWorld, IconMapPin, IconInfoCircle, IconEye } from '@/icons';
 import { findNodeInTree } from '@/utils/treeUtils';
 import { useEntityImages } from '@/hooks';
-import { getPrimaryMediaUrl, getEntityMedia } from '@/services/mediaService';
+import { getPrimaryMediaUrl, getEntityMedia, getMedia } from '@/services/mediaService';
 
 export const EntityExplorer: React.FC = () => {
   // Data Stores - Locations
@@ -20,6 +20,8 @@ export const EntityExplorer: React.FC = () => {
   
   // Track view counts and current indices for all entities
   const [viewInfo, setViewInfo] = useState<Map<string, { current: number; total: number }>>(new Map());
+  // Track which entities have upscaled images
+  const [upscaledIds, setUpscaledIds] = useState<Set<string>>(new Set());
   const [, forceUpdate] = useState(0);
   
   // Helper to recursively collect all tree nodes
@@ -44,10 +46,11 @@ export const EntityExplorer: React.FC = () => {
   // Preload all images using the new media system
   const imageMap = useEntityImages(allEntities);
   
-  // Fetch view counts for all entities
+  // Fetch view counts and upscaled status for all entities
   useEffect(() => {
-    const fetchViewCounts = async () => {
+    const fetchEntityInfo = async () => {
       const newViewInfo = new Map<string, { current: number; total: number }>();
+      const newUpscaledIds = new Set<string>();
       
       for (const entity of allEntities) {
         try {
@@ -58,16 +61,44 @@ export const EntityExplorer: React.FC = () => {
             // Default to showing last (newest) view
             newViewInfo.set(entity.id, { current: imageCount, total: imageCount });
           }
+          
+          // Check if entity has upscaled primary media
+          if (entity.primaryMedia) {
+            const primaryMediaItem = await getMedia(entity.primaryMedia);
+            if (primaryMediaItem?.urls?.upscaled) {
+              newUpscaledIds.add(entity.id);
+            }
+          }
         } catch (error) {
           // Ignore errors
         }
       }
       
       setViewInfo(newViewInfo);
+      setUpscaledIds(newUpscaledIds);
     };
     
-    fetchViewCounts();
+    fetchEntityInfo();
   }, [allEntities]);
+
+  // Listen for imageUpscaled events to update the HD badge immediately
+  useEffect(() => {
+    const handleImageUpscaled = (event: Event) => {
+      const customEvent = event as CustomEvent<{ entityId: string }>;
+      const entityId = customEvent.detail?.entityId;
+      
+      if (!entityId) return;
+      
+      setUpscaledIds(prev => {
+        const newSet = new Set(prev);
+        newSet.add(entityId);
+        return newSet;
+      });
+    };
+    
+    window.addEventListener('imageUpscaled', handleImageUpscaled);
+    return () => window.removeEventListener('imageUpscaled', handleImageUpscaled);
+  }, []);
   
   // Listen for view index changes
   useEffect(() => {
@@ -125,6 +156,7 @@ export const EntityExplorer: React.FC = () => {
         image: image,
         isPassThrough: isPassThrough,
         isView: typeStr === 'view',
+        isUpscaled: upscaledIds.has(treeNode.id),
         children: treeNode.children?.map(mapNode)
       };
     };
@@ -161,11 +193,12 @@ export const EntityExplorer: React.FC = () => {
           label: label,
           icon: node.type === 'host' ? <IconWorld size={16} /> : <IconMapPin size={16} />,
           image: imageMap.get(node.id) || undefined,
+          isUpscaled: upscaledIds.has(node.id),
           children: undefined // No children known
         };
       })
       .filter(Boolean) as TreeItem[];
-  }, [worldTrees, locationNodes, locationPinnedIds, imageMap, viewInfo]);
+  }, [worldTrees, locationNodes, locationPinnedIds, imageMap, viewInfo, upscaledIds]);
 
   const characterTreeData = useMemo(() => {
     return characterPinnedIds
@@ -181,9 +214,10 @@ export const EntityExplorer: React.FC = () => {
           label: label,
           icon: <IconInfoCircle size={16} />,
           image: imageMap.get(char.id) || undefined,
+          isUpscaled: upscaledIds.has(char.id),
         };
       });
-  }, [characterMap, characterPinnedIds, imageMap, viewInfo]);
+  }, [characterMap, characterPinnedIds, imageMap, viewInfo, upscaledIds]);
   
   // Delete action
   const deleteNodeWithChildren = useLocationsStore(state => state.deleteNodeWithChildren);

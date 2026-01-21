@@ -258,6 +258,167 @@ All V2 commands now use clean names without "2" suffix:
 
 ---
 
+## 2026-01-21 - Progressive Image Loading & Upscale Improvements ✅
+
+Enhanced the image upscaling experience with progressive loading (original → upscaled crossfade) and per-node upscaling state.
+
+### Progressive Image Loading
+
+**Problem:** When viewing entities with upscaled images, only the upscaled version was shown, causing slow initial load times (4x larger files).
+
+**Solution:** Show low-res original first, then crossfade to upscaled version when loaded:
+
+**Frontend:**
+- `useWorldViewLogic.ts`:
+  - Uses `getMediaWithUrls()` to fetch both original and upscaled URLs
+  - Loads `originalUrl` first for fast display
+  - Preloads `upscaledUrl` in background
+  - Crossfades to upscaled when ready (0.5s transition)
+  - Only crossfades if still showing the same original image
+
+**mediaService.ts:**
+- Added `getMediaWithUrls()` helper returning `{ originalUrl, upscaledUrl, displayUrl, depthMapUrl }`
+
+### Per-Node Upscaling State
+
+**Problem:** Upscale button spinner showed globally - couldn't upscale multiple nodes simultaneously, and unclear which node was being processed.
+
+**Solution:** Track upscaling state per entity with visual feedback in tree view:
+
+**Store (`packages/frontend/src/store/`):**
+- `slices/mediaSlice.ts` - NEW slice tracking `upscalingEntityIds: Set<string>`
+- Actions: `startUpscaling(entityId)`, `finishUpscaling(entityId)`
+- Combined into main store via `index.ts`
+
+**Upscale Logic:**
+- `useImageUpscale.ts`:
+  - Changed from local `useState` to store-based tracking
+  - Returns `isEntityUpscaling(entityId)` to check specific entity
+  - All success/error paths call `finishUpscaling(entityId)`
+
+**Button State:**
+- `useDisplayMode.ts` - Now checks `isEntityUpscaling(activeEntity)` only
+- `TopButtonRow.tsx` - Removed spinner from button (now just icon)
+- Button only disabled when **current** entity is upscaling
+
+**Tree View Indicators:**
+- `TreeView.tsx`:
+  - Checks `upscalingEntityIds.has(item.id)` for each node
+  - Shows spinner overlay on thumbnail while upscaling
+  - CSS: Semi-transparent black overlay with white/black fading spinner
+
+**CSS (`TreeView.module.css`):**
+```css
+.upscalingOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.upscalingSpinner {
+  animation: spinFade 1s linear infinite;
+}
+```
+
+### Upscaled Image Crossfade Event
+
+**Problem:** After upscaling finished, WorldView didn't crossfade to the new upscaled image.
+
+**Solution:** Added `imageUpscaled` event handling in WorldView:
+
+**useImageUpscale.ts:**
+- Dispatches event with detail: `{ entityId, newUrl, primaryMediaId }`
+
+**useWorldViewLogic.ts:**
+- Listens for `imageUpscaled` event
+- Only processes if event is for active entity
+- Preloads upscaled image
+- Crossfades when loaded (0.5s transition)
+
+**useDisplayMode.ts:**
+- Removed redundant event dispatch (was causing null errors)
+
+### HD Badge for Upscaled Nodes
+
+**Problem:** No visual indicator showing which nodes have upscaled versions available.
+
+**Solution:** Small "HD" badge in bottom-right corner of tree thumbnails:
+
+**TreeView:**
+- `TreeView.tsx`:
+  - Added `isUpscaled?: boolean` to `TreeItem` interface
+  - Shows HD badge when `item.isUpscaled && !isUpscaling`
+  
+**EntityExplorer:**
+- `EntityExplorer.tsx`:
+  - Tracks `upscaledIds: Set<string>` state
+  - Fetches upscaled status on load by checking `media.urls?.upscaled`
+  - Listens for `imageUpscaled` events to immediately show badge
+  - Passes `isUpscaled` to all tree items (locations & characters)
+
+**CSS (`TreeView.module.css`):**
+```css
+.hdBadge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 7px;
+  font-weight: 700;
+  padding: 1px 2px;
+  background-color: rgba(59, 130, 246, 0.9);
+  color: white;
+  border-radius: 2px 0 var(--radius-sm) 0;
+}
+```
+
+**mediaService.ts:**
+- Added `isMediaUpscaled(mediaId)` helper function
+
+### User Experience Flow
+
+1. **Select node with upscaled image:**
+   - Original loads instantly (fast, small file)
+   - Upscaled crossfades in smoothly after loading
+
+2. **Click upscale on Node A:**
+   - Spinner appears on Node A's thumbnail
+   - Upscale button disabled for Node A
+
+3. **Switch to Node B:**
+   - Upscale button enabled (Node B not upscaling)
+   - Can start upscaling Node B while A finishes
+
+4. **Upscaling completes:**
+   - Spinner removed from thumbnail
+   - HD badge appears in corner
+   - WorldView crossfades to upscaled image
+
+### Files Modified
+
+**Store:**
+- `packages/frontend/src/store/slices/mediaSlice.ts` - NEW
+- `packages/frontend/src/store/index.ts` - Added mediaSlice
+
+**Upscaling:**
+- `packages/frontend/src/features/app/components/TopButtonRow/useImageUpscale.ts` - Store integration
+- `packages/frontend/src/features/app/components/App/useDisplayMode.ts` - Per-entity check, removed redundant event
+- `packages/frontend/src/features/app/components/TopButtonRow/TopButtonRow.tsx` - Removed spinner from button
+
+**WorldView:**
+- `packages/frontend/src/features/app/components/WorldView/useWorldViewLogic.ts` - Progressive loading + event handling
+
+**Tree View:**
+- `packages/frontend/src/components/ui/TreeView/TreeView.tsx` - Spinner overlay + HD badge
+- `packages/frontend/src/components/ui/TreeView/TreeView.module.css` - Spinner & badge styles
+
+**Entity Explorer:**
+- `packages/frontend/src/features/app/components/EntityExplorer/EntityExplorer.tsx` - Upscaled tracking
+
+**Services:**
+- `packages/frontend/src/services/mediaService.ts` - `getMediaWithUrls()`, `isMediaUpscaled()`
+
+---
+
 ## Next Steps
 
 - [ ] Consider renaming `NEW_REGION2` → `NEW_REGION` (after confirming no region type variants needed)

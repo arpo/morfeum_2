@@ -113,6 +113,29 @@ export async function getMediaUrl(mediaId: string | null | undefined): Promise<s
 }
 
 /**
+ * Get media with all URL variants (original, upscaled, display)
+ * Used for progressive image loading - show original first, then fade to upscaled
+ */
+export async function getMediaWithUrls(mediaId: string | null | undefined): Promise<{
+  originalUrl: string | null;
+  upscaledUrl: string | null;
+  displayUrl: string | null;
+  depthMapUrl: string | null;
+} | null> {
+  if (!mediaId) return null;
+  
+  const media = await getMedia(mediaId);
+  if (!media) return null;
+  
+  return {
+    originalUrl: media.urls?.original || null,
+    upscaledUrl: media.urls?.upscaled || null,
+    displayUrl: media.url || null,
+    depthMapUrl: media.urls?.depthMap || null
+  };
+}
+
+/**
  * Get primary media for an entity
  * Entities now have a primaryMedia field that references a media ID
  */
@@ -213,6 +236,16 @@ export async function getDepthMapForMedia(mediaId: string): Promise<MediaItem | 
   } catch (error) {
     return null;
   }
+}
+
+/**
+ * Check if a media item has been upscaled
+ */
+export async function isMediaUpscaled(mediaId: string | null | undefined): Promise<boolean> {
+  if (!mediaId) return false;
+  
+  const media = await getMedia(mediaId);
+  return !!(media?.urls?.upscaled);
 }
 
 /**
