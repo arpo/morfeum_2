@@ -141,6 +141,11 @@ export class WorldViewRenderer {
   }
 
   async load(imageUrl: string, depthUrl?: string | null): Promise<void> {
+    // Clean up any active crossfade before loading new image
+    if (this.crossfadeState.isActive) {
+      this.crossfadeState = cleanupCrossfade(this.crossfadeState, this.scene, null);
+    }
+
     const textureLoader = new THREE.TextureLoader();
     const imageTexture = await textureLoader.loadAsync(imageUrl);
     
@@ -309,6 +314,10 @@ export class WorldViewRenderer {
         this.postProcessor
       );
 
+      // Clear canvas before rendering to prevent old pixels from persisting
+      // (preserveDrawingBuffer: true + scissor test can leave artifacts)
+      this.renderer.clear();
+      
       // Render with or without post-processing
       if (this.postProcessor && this.postProcessor.isEnabled()) {
         this.postProcessor.render(this.renderer, this.scene, this.camera);
@@ -353,8 +362,40 @@ export class WorldViewRenderer {
   }
 
   private cleanupMesh(): void {
-    if (this.mesh) { this.scene.remove(this.mesh); this.mesh.geometry.dispose(); }
-    if (this.material) this.material.dispose();
+    // Clean up stereo scene first (to prevent orphaned stereo meshes)
+    this.stereoState = cleanupStereoScene(this.stereoState);
+    
+    // Clean up main mesh and material
+    if (this.mesh) { 
+      this.scene.remove(this.mesh); 
+      this.mesh.geometry.dispose(); 
+      this.mesh = null;
+    }
+    if (this.material) {
+      this.material.dispose();
+      this.material = null;
+    }
+    
+    // Comprehensive cleanup: remove any remaining mesh objects from scene
+    // This catches any orphaned meshes that weren't properly tracked
+    this.scene.children.forEach((child) => {
+      if (child instanceof THREE.Mesh) {
+        this.scene.remove(child);
+        if (child.geometry) child.geometry.dispose();
+        if (child.material) {
+          if (Array.isArray(child.material)) {
+            child.material.forEach(m => m.dispose());
+          } else {
+            child.material.dispose();
+          }
+        }
+      }
+    });
+    
+    // Clear the canvas buffer immediately to remove any residual pixels
+    // This is critical because preserveDrawingBuffer: true keeps old pixels
+    // and scissor test only renders to a portion of the canvas
+    this.renderer.clear();
   }
 
   hasDepthMap(): boolean { return this.material?.uniforms.meshDepth.value > 0; }
