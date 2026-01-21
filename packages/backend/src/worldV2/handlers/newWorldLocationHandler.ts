@@ -186,7 +186,8 @@ export const newWorldLocationHandler = asyncHandler(async (req: Request, res: Re
 
       const imageUrl = imageResult.data.images[0].url;
 
-      // Create media entry
+      // Create media entry with minimal promptData
+      // All node data (name, type, DNA, hierarchy) is available via entityRefs + worlds.json
       const mediaEntry = mediaService.createMedia({
         type: 'image',
         url: imageUrl,
@@ -194,15 +195,7 @@ export const newWorldLocationHandler = asyncHandler(async (req: Request, res: Re
           prompt: imagePrompt,
           promptLayers,
           promptData: {
-            nodeType: 'location',
-            nodeId: location.id,
-            nodeName: location.name,
-            hostId: host.id,
-            hostName: host.name,
-            regionId: region.id,
-            regionName: region.name,
-            populate: false,
-            dna: location.dna
+            command: 'NEW_WORLD_LOCATION'
           },
           model: 'flux',
           width: 1920,
