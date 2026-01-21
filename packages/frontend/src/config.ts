@@ -118,6 +118,26 @@ export const UPSCALE_CONFIG = {
 } as const;
 
 /**
+ * Video Loop Configuration
+ * Settings for the video loop overlay crossfade effect
+ */
+export const VIDEO_LOOP_CONFIG = {
+  /** Crossfade duration in milliseconds - used for both lead time and CSS transition */
+  CROSSFADE_DURATION_MS: 600,
+} as const;
+
+/**
+ * API Configuration
+ */
+export const API_CONFIG = {
+  /** Backend API base URL (empty string uses same origin) */
+  BACKEND_URL: '',
+  
+  /** Video proxy endpoint */
+  VIDEO_PROXY_PATH: '/api/proxy/video',
+} as const;
+
+/**
  * Application Settings
  * Add other app-wide configuration here as needed
  */

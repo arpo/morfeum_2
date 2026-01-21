@@ -28,6 +28,7 @@ export function useWorldViewLogic() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const currentImageRef = useRef<string | null>(null);
   const currentDepthRef = useRef<string | null>(null);
+  const currentVideoRef = useRef<string | null>(null);
   
   const [isLoading, setIsLoading] = useState(true);
   const [hasImage, setHasImage] = useState(false);
@@ -155,9 +156,6 @@ export function useWorldViewLogic() {
       const initialSrc = displayImage.originalSrc || displayImage.src;
       const hasUpscaled = displayImage.upscaledSrc && displayImage.upscaledSrc !== initialSrc;
       
-      // Update video URL for overlay
-      setVideoUrl(displayImage.videoSrc);
-      
       // Only reload if image changed
       if (initialSrc !== currentImageRef.current) {
         setIsLoading(true);
@@ -208,6 +206,12 @@ export function useWorldViewLogic() {
         if (rendererRef.current) {
           await rendererRef.current.updateDepthMap(displayImage.depthSrc);
         }
+      }
+      
+      // Update video URL for overlay component
+      if (displayImage.videoSrc !== currentVideoRef.current) {
+        currentVideoRef.current = displayImage.videoSrc;
+        setVideoUrl(displayImage.videoSrc);
       }
     }
     
@@ -273,9 +277,9 @@ export function useWorldViewLogic() {
     return () => window.removeEventListener('imageUpscaled', handleImageUpscaled);
   }, [activeEntity]);
 
-  // Listen for video generated events
+  // Listen for video generated events - update video URL for overlay
   useEffect(() => {
-    const handleVideoGenerated = async (event: Event) => {
+    const handleVideoGenerated = (event: Event) => {
       const customEvent = event as CustomEvent<{ entityId: string; videoUrl: string; primaryMediaId: string }>;
       const entityId = customEvent.detail?.entityId;
       const newVideoUrl = customEvent.detail?.videoUrl;
@@ -284,6 +288,7 @@ export function useWorldViewLogic() {
       if (!entityId || entityId !== activeEntity || !newVideoUrl) return;
       
       console.log('[WorldView] Video generated event received:', newVideoUrl);
+      currentVideoRef.current = newVideoUrl;
       setVideoUrl(newVideoUrl);
     };
     

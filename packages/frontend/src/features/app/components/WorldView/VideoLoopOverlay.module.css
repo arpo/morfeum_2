@@ -1,0 +1,55 @@
+/* VideoLoopOverlay CSS */
+/* Dual-video overlay for seamless loop crossfade */
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity 0.5s ease-out;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Active video - fully visible */
+.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Inactive video - hidden */
+.inactive {
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Fading out - transitioning from visible to hidden */
+.fadingOut {
+  opacity: 0;
+  z-index: 2;
+}
+
+/* Fading in - transitioning from hidden to visible */
+.fadingIn {
+  opacity: 1;
+  z-index: 1;
+}

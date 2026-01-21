@@ -4,7 +4,7 @@
  */
 
 import * as THREE from 'three';
-import { WORLD_VIEW_3D_CONFIG } from '@/config';
+import { WORLD_VIEW_3D_CONFIG, API_CONFIG } from '@/config';
 import { createDepthShaderMaterial } from './shaders';
 import { loadDepthMapData, createDepthGeometry, scaleMeshToFit } from './geometry';
 import { StereoState, createStereoState, setupStereoScene, cleanupStereoScene } from './stereoRenderer';
@@ -77,6 +77,11 @@ export class WorldViewRenderer {
   // Crossfade state
   private crossfadeState: CrossfadeState = createCrossfadeState();
 
+  // Video state
+  private videoElement: HTMLVideoElement | null = null;
+  private videoTexture: THREE.VideoTexture | null = null;
+  private isShowingVideo: boolean = false;
+
   constructor(options: WorldViewRendererOptions) {
     this.container = options.container;
     this.focus = options.focus ?? WORLD_VIEW_3D_CONFIG.FOCUS;
@@ -145,6 +150,9 @@ export class WorldViewRenderer {
     if (this.crossfadeState.isActive) {
       this.crossfadeState = cleanupCrossfade(this.crossfadeState, this.scene, null);
     }
+    
+    // Clean up video when loading new image
+    this.cleanupVideo();
 
     const textureLoader = new THREE.TextureLoader();
     const imageTexture = await textureLoader.loadAsync(imageUrl);
@@ -169,6 +177,9 @@ export class WorldViewRenderer {
     if (!this.mesh || !this.material) {
       return this.load(imageUrl, depthUrl);
     }
+    
+    // Clean up video when crossfading to new image
+    this.cleanupVideo();
 
     const textureLoader = new THREE.TextureLoader();
     const newTexture = await textureLoader.loadAsync(imageUrl);
@@ -401,6 +412,131 @@ export class WorldViewRenderer {
   hasDepthMap(): boolean { return this.material?.uniforms.meshDepth.value > 0; }
 
   /**
+   * Load a video and crossfade to it
+   * @param videoUrl - Video URL to load
+   * @param duration - Transition duration in seconds (default 0.5s)
+   */
+  async loadVideo(videoUrl: string, duration: number = 0.5): Promise<void> {
+    if (!this.mesh || !this.material) {
+      return;
+    }
+
+    // Transform external video URL to proxy URL for CORS support
+    const proxyUrl = `${API_CONFIG.BACKEND_URL}${API_CONFIG.VIDEO_PROXY_PATH}?url=${encodeURIComponent(videoUrl)}`;
+    console.log('[WorldViewRenderer] Loading video through proxy:', proxyUrl);
+
+    // Create video element
+    const video = document.createElement('video');
+    video.crossOrigin = 'anonymous';
+    video.loop = true;
+    video.muted = true;
+    video.playsInline = true;
+    video.autoplay = true;
+    video.src = proxyUrl;
+
+    // Wait for video to be ready (use canplay instead of onloadeddata for faster startup)
+    await new Promise<void>((resolve, reject) => {
+      video.oncanplay = () => resolve();
+      video.onerror = () => reject(new Error('Failed to load video'));
+      video.load();
+    });
+
+    // Start playback
+    await video.play();
+
+    // Create video texture
+    const videoTexture = new THREE.VideoTexture(video);
+    videoTexture.minFilter = THREE.LinearFilter;
+    videoTexture.magFilter = THREE.LinearFilter;
+    videoTexture.format = THREE.RGBAFormat;
+
+    // Store references
+    this.cleanupVideo(); // Clean up any existing video first
+    this.videoElement = video;
+    this.videoTexture = videoTexture;
+
+    // Crossfade to video texture
+    if (this.material) {
+      // Start crossfade with current mesh/material
+      this.crossfadeState = startCrossfade(
+        this.crossfadeState,
+        this.mesh!,
+        this.material,
+        duration
+      );
+
+      // Create new mesh with video texture
+      const currentTexture = this.material.uniforms.map.value;
+      this.mesh = null;
+      this.material = null;
+
+      // Create flat mesh with video texture (videos don't use depth displacement)
+      this.cleanupMeshOnly();
+      const geometry = new THREE.PlaneGeometry(this.imageAspectRatio, 1);
+      this.material = createDepthShaderMaterial(videoTexture, this.focus, 0);
+      this.mesh = new THREE.Mesh(geometry, this.material);
+      this.scaleMesh();
+      this.scene.add(this.mesh);
+
+      // Prepare new material for fade-in
+      prepareNewMaterialForFadeIn(this.material as THREE.ShaderMaterial);
+      
+      this.isShowingVideo = true;
+    }
+  }
+
+  /**
+   * Crossfade from video back to image
+   * @param imageUrl - Image URL to crossfade to
+   * @param depthUrl - Optional depth map URL
+   * @param duration - Transition duration in seconds (default 0.5s)
+   */
+  async crossfadeFromVideo(imageUrl: string, depthUrl?: string | null, duration: number = 0.5): Promise<void> {
+    // Use regular crossfade, it will clean up video
+    await this.crossfadeTo(imageUrl, depthUrl, duration);
+  }
+
+  /**
+   * Check if currently showing video
+   */
+  isVideoActive(): boolean {
+    return this.isShowingVideo && this.videoElement !== null;
+  }
+
+  /**
+   * Clean up video resources
+   */
+  private cleanupVideo(): void {
+    if (this.videoElement) {
+      this.videoElement.pause();
+      this.videoElement.src = '';
+      this.videoElement.load();
+      this.videoElement = null;
+    }
+    if (this.videoTexture) {
+      this.videoTexture.dispose();
+      this.videoTexture = null;
+    }
+    this.isShowingVideo = false;
+  }
+
+  /**
+   * Clean up mesh only (without clearing canvas - for video transition)
+   */
+  private cleanupMeshOnly(): void {
+    this.stereoState = cleanupStereoScene(this.stereoState);
+    if (this.mesh) { 
+      this.scene.remove(this.mesh); 
+      this.mesh.geometry.dispose(); 
+      this.mesh = null;
+    }
+    if (this.material) {
+      this.material.dispose();
+      this.material = null;
+    }
+  }
+
+  /**
    * Set particle preset (dust, snow, rain, fireflies)
    */
   setParticlePreset(preset: string): void {
@@ -534,6 +670,7 @@ export class WorldViewRenderer {
 
   dispose(): void {
     if (this.animationId !== null) cancelAnimationFrame(this.animationId);
+    this.cleanupVideo();
     this.cleanupMesh();
     this.stereoState = cleanupStereoScene(this.stereoState);
     if (this.particleSystem) {

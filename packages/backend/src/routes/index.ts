@@ -11,6 +11,7 @@ import { spawnRouter } from './spawn';
 import storageRouter from './storage';
 import mediaRouter from './media';
 import trainingDataRouter from './trainingData';
+import videoProxyRouter from './videoProxy';
 import { validateMzooApiKey } from '../middleware/mzooAuth';
 import { worldV2Router } from '../worldV2';
 
@@ -36,6 +37,9 @@ export const configureRoutes = (app: any): void => {
   // Training data routes (for AI model training)
   app.use(`${API_ROUTES.ROOT}/training-data`, trainingDataRouter);
   
+  // Video proxy routes (for CORS-enabled video streaming)
+  app.use(`${API_ROUTES.ROOT}/proxy`, videoProxyRouter);
+  
   // ============================================
   // V2 World System Routes
   // TODO: Remove when V2 is stable and old system is removed
@@ -49,7 +53,7 @@ export const configureRoutes = (app: any): void => {
 /**
  * Export individual routers for testing or modular use
  */
-export { apiRouter, healthRouter, mzooRouter, spawnRouter, storageRouter, mediaRouter, trainingDataRouter };
+export { apiRouter, healthRouter, mzooRouter, spawnRouter, storageRouter, mediaRouter, trainingDataRouter, videoProxyRouter };
 
 /**
  * Get all available routes information

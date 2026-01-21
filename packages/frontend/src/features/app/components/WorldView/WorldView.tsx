@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { useWorldViewLogic } from './useWorldViewLogic';
+import { VideoLoopOverlay } from './VideoLoopOverlay';
 import { WORLD_VIEW_3D_CONFIG } from '@/config';
 import styles from './WorldView.module.css';
 // Import to ensure CSS variables are loaded
@@ -68,17 +69,11 @@ export function WorldView() {
         data-model-class={imageModelClass || 'none'}
       />
       
-      {/* Video overlay when video loop is available */}
-      {videoUrl && (
-        <video
-          className={styles.videoOverlay}
-          src={videoUrl}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-      )}
+      {/* Video loop overlay with seamless crossfade */}
+      <VideoLoopOverlay 
+        videoUrl={videoUrl} 
+        isVisible={!!videoUrl && hasImage && !isLoading}
+      />
       
       {/* Letterbox bars to enforce 16:9 aspect ratio */}
       {letterboxEnabled && letterboxHeight > 0 && (
