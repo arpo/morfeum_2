@@ -221,6 +221,107 @@ Users now navigate between views using the world tree structure (clicking nodes)
 
 ---
 
+---
+
+## 2026-01-21 - Media URL Variants System ✅
+
+Refactored media management to store upscaled images and depth maps as URL variants on the same media entry instead of creating separate entries.
+
+### Problem
+
+Previously:
+- Upscaling an image **replaced** the original URL (stored old URL only in metadata)
+- Creating depth maps created **separate media entries** with `type: 'depth-map'` and `parentMedia` link
+- This fragmented related media across multiple entries
+
+### Solution
+
+Added `urls` object to store all variants on the same media node:
+
+```typescript
+interface MediaItem {
+  id: string;
+  type: 'image' | 'video';
+  url: string;                    // Active/display URL (original or upscaled)
+  urls?: {
+    original?: string;            // Original generated image
+    upscaled?: string;            // Upscaled version
+    depthMap?: string;            // Depth map
+  };
+}
+```
+
+### Implementation
+
+**Backend (`packages/backend/`):**
+
+1. **types.ts** - Added `urls` object to `MediaItem` interface
+2. **mediaService.ts** - Added `addUrlVariant()` method:
+   ```typescript
+   addUrlVariant(id: string, variant: 'original' | 'upscaled' | 'depthMap', url: string)
+   ```
+3. **routes/media.ts** - Added POST `/api/media/:id/url-variant` endpoint
+
+**Frontend (`packages/frontend/`):**
+
+1. **services/mediaService.ts**:
+   - Updated `MediaItem` interface to match backend
+   - Modified `getDepthMapForMedia()` to read from `urls.depthMap` instead of searching for separate entries
+
+2. **useImageUpscale.ts** (image upscaling):
+   - Stores original URL in `urls.original` (if not already stored)
+   - Stores upscaled URL in `urls.upscaled`
+   - Updates display `url` to show upscaled version
+   - Removed `original_url` from metadata
+
+3. **useDepthMapLogic.ts** (depth map generation):
+   - Stores depth map URL in `urls.depthMap` via new API endpoint
+   - No longer creates separate `type: 'depth-map'` entries
+   - Returns `primaryMediaId` as `mediaId` for compatibility
+
+### Result
+
+**Before:**
+```json
+{
+  "media-original": { "url": "original.jpg" },
+  "media-upscaled": { "url": "upscaled.jpg", "parentMedia": "media-original" },
+  "media-depthmap": { "type": "depth-map", "url": "depth.png", "parentMedia": "media-original" }
+}
+```
+
+**After:**
+```json
+{
+  "media-original": {
+    "url": "upscaled.jpg",
+    "urls": {
+      "original": "original.jpg",
+      "upscaled": "upscaled.jpg",
+      "depthMap": "depth.png"
+    }
+  }
+}
+```
+
+All related URLs now live on the same node, making the structure cleaner and easier to manage.
+
+### Files Modified
+
+**Backend:**
+- `packages/backend/src/services/media/types.ts` - Added `urls` interface
+- `packages/backend/src/services/media/mediaService.ts` - Added `addUrlVariant()`
+- `packages/backend/src/routes/media.ts` - Added URL variant endpoint
+
+**Frontend:**
+- `packages/frontend/src/services/mediaService.ts` - Updated interface and `getDepthMapForMedia()`
+- `packages/frontend/src/features/app/components/TopButtonRow/useImageUpscale.ts` - Store variants
+- `packages/frontend/src/features/app/components/TopButtonRow/useDepthMapLogic.ts` - Store depth map as variant
+
+**Compatibility:** WorldView and other components work seamlessly through the updated `getDepthMapForMedia()` function.
+
+---
+
 ## Next Steps
 
 - [ ] Consider renaming `NEW_REGION2` → `NEW_REGION` (after full V1 cleanup)

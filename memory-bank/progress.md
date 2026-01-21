@@ -272,6 +272,37 @@ Implemented model name obfuscation and CSS filter consolidation.
 
 ---
 
+---
+
+## 2026-01-21 - Media URL Variants System ✅
+
+Refactored media management to store upscaled images and depth maps as URL variants on the same media entry.
+
+**Problem:** Upscaling replaced original URLs; depth maps created separate entries with `type: 'depth-map'`.
+
+**Solution:** Added `urls` object to `MediaItem`:
+```typescript
+urls?: {
+  original?: string;    // Original generated image
+  upscaled?: string;    // Upscaled version
+  depthMap?: string;    // Depth map
+}
+```
+
+**Backend Changes:**
+- `types.ts` - Added `urls` interface to `MediaItem`
+- `mediaService.ts` - Added `addUrlVariant(id, variant, url)` method
+- `routes/media.ts` - Added POST `/api/media/:id/url-variant` endpoint
+
+**Frontend Changes:**
+- `mediaService.ts` - Updated interface, modified `getDepthMapForMedia()` to read from `urls.depthMap`
+- `useImageUpscale.ts` - Stores original in `urls.original`, upscaled in `urls.upscaled`, updates display `url`
+- `useDepthMapLogic.ts` - Stores depth map in `urls.depthMap` instead of creating separate entry
+
+**Result:** All related URLs (original, upscaled, depth map) now stored on single media node instead of fragmented across multiple entries.
+
+---
+
 ## Known Issues 🐛
 
 - Bundle size warning (865KB)
