@@ -170,9 +170,17 @@ export function useWorldViewLogic() {
         
         if (rendererRef.current) {
           try {
+            // Pause particles during load for better performance
+            rendererRef.current.setParticlesEnabled(false);
+            
             // Load original/initial image first
             await rendererRef.current.load(initialSrc, displayImage.depthSrc);
             setIsLoading(false);
+            
+            // Re-enable particles only for still images (no video)
+            if (!hasVideo) {
+              rendererRef.current.setParticlesEnabled(true);
+            }
             
             if (cancelled) return;
             
@@ -197,13 +205,14 @@ export function useWorldViewLogic() {
                 preloadImage.onload = async () => {
                   if (cancelled || !rendererRef.current) return;
                   
-                  // Only crossfade if we're still showing the same original image
+                  // Only swap if we're still showing the same original image
                   if (currentImageRef.current === initialSrc) {
                     try {
-                      await rendererRef.current.crossfadeTo(upscaledUrl, displayImage.depthSrc, 0.5);
+                      // Instant swap - no crossfade for cleaner transitions
+                      await rendererRef.current.load(upscaledUrl, displayImage.depthSrc);
                       currentImageRef.current = upscaledUrl;
                     } catch {
-                      // Crossfade failed - silently ignore, original is still displayed
+                      // Load failed - silently ignore, original is still displayed
                     }
                   }
                 };
@@ -265,7 +274,7 @@ export function useWorldViewLogic() {
     return () => window.removeEventListener('depthMapGenerated', handleDepthMapGenerated);
   }, [checkForDepthMap]);
 
-  // Listen for image upscaled events - crossfade to the new upscaled image
+  // Listen for image upscaled events - instant swap to upscaled image
   useEffect(() => {
     const handleImageUpscaled = async (event: Event) => {
       const customEvent = event as CustomEvent<{ entityId: string; newUrl: string; primaryMediaId: string }>;
@@ -275,23 +284,18 @@ export function useWorldViewLogic() {
       // Only react if this is the active entity
       if (!entityId || entityId !== activeEntity || !rendererRef.current || !newUrl) return;
       
-      console.log('[WorldView] Image upscaled event received, crossfading to:', newUrl);
-      
-      // Preload the upscaled image before crossfading
+      // Preload the upscaled image before swapping
       const preloadImage = new Image();
       preloadImage.onload = async () => {
         if (!rendererRef.current) return;
         
         try {
-          await rendererRef.current.crossfadeTo(newUrl, currentDepthRef.current, 0.5);
+          // Instant swap - no crossfade for cleaner transitions
+          await rendererRef.current.load(newUrl, currentDepthRef.current);
           currentImageRef.current = newUrl;
-          console.log('[WorldView] Crossfade to upscaled image complete');
-        } catch (err) {
-          console.error('[WorldView] Failed to crossfade to upscaled image:', err);
+        } catch {
+          // Load failed - silently ignore
         }
-      };
-      preloadImage.onerror = () => {
-        console.error('[WorldView] Failed to preload upscaled image:', newUrl);
       };
       preloadImage.src = newUrl;
     };
@@ -310,7 +314,9 @@ export function useWorldViewLogic() {
       // Only react if this is the active entity
       if (!entityId || entityId !== activeEntity || !newVideoUrl) return;
       
-      console.log('[WorldView] Video generated event received:', newVideoUrl);
+      // Disable particles when video starts (video has its own motion)
+      rendererRef.current?.setParticlesEnabled(false);
+      
       currentVideoRef.current = newVideoUrl;
       setVideoUrl(newVideoUrl);
     };

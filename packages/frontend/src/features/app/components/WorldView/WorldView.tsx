@@ -58,14 +58,10 @@ export function WorldView() {
 
   return (
     <div className={styles.container} data-component="world-view">
-      {isLoading && (
-        <div className={styles.skeleton}>
-          <div className={styles.skeletonBreathing} />
-        </div>
-      )}
+      {/* Canvas is always visible - no skeleton, no fade animation */}
       <div 
         ref={containerRef} 
-        className={`${styles.canvas} ${!isLoading && hasImage ? styles.loaded : ''}${imageModelClass ? ` ${styles[imageModelClass]}` : ''}`}
+        className={`${styles.canvas}${imageModelClass ? ` ${styles[imageModelClass]}` : ''}`}
         data-model-class={imageModelClass || 'none'}
       />
       

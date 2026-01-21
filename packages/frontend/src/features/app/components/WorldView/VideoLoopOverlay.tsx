@@ -150,7 +150,7 @@ export function VideoLoopOverlay({ videoUrl, isVisible, onFadeComplete }: VideoL
 
   return (
     <div 
-      className={`${styles.container} ${isVisible && isLoaded ? styles.visible : styles.hidden}`}
+      className={styles.container}
       data-component="video-loop-overlay"
     >
       <video

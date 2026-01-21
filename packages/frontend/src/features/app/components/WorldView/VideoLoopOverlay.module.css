@@ -9,15 +9,7 @@
   height: 100%;
   z-index: 2;
   pointer-events: none;
-  transition: opacity 0.5s ease-out;
-}
-
-.visible {
-  opacity: 1;
-}
-
-.hidden {
-  opacity: 0;
+  /* No fade transition on container - instant show/hide for node transitions */
 }
 
 .video {
