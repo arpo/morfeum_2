@@ -122,6 +122,20 @@ router.put('/:id', asyncHandler((req, res) => {
   res.json({ success: true, data: updatedMedia });
 }));
 
+// POST /api/media/:id/url-variant - Add or update URL variant
+router.post('/:id/url-variant', asyncHandler((req, res) => {
+  const { variant, url } = req.body;
+  if (!variant || !url) {
+    return res.status(400).json({ success: false, error: 'Missing required fields: variant, url' });
+  }
+  if (!['original', 'upscaled', 'depthMap'].includes(variant)) {
+    return res.status(400).json({ success: false, error: 'Invalid variant. Must be: original, upscaled, or depthMap' });
+  }
+  const updatedMedia = mediaService.addUrlVariant(req.params.id, variant as 'original' | 'upscaled' | 'depthMap', url);
+  if (!updatedMedia) return res.status(404).json({ success: false, error: 'Media not found' });
+  res.json({ success: true, data: updatedMedia });
+}));
+
 // POST /api/media/:id/entity-refs - Add entity reference
 router.post('/:id/entity-refs', asyncHandler((req, res) => {
   const { entityId } = req.body;

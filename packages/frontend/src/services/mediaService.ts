@@ -7,7 +7,7 @@
 interface MediaItem {
   id: string;
   type: 'image' | 'video' | 'depth-map' | 'normal-map' | 'transition';
-  url: string;
+  url: string;                    // Active/display URL (original or upscaled)
   createdAt: string;
   metadata?: {
     prompt?: string;
@@ -24,6 +24,12 @@ interface MediaItem {
     frameCount: number;
     fps: number;
     duration: number;
+  };
+  // All URL variants for this media (flat structure)
+  urls?: {
+    original?: string;            // Original generated image
+    upscaled?: string;            // Upscaled version
+    depthMap?: string;            // Depth map
   };
 }
 
@@ -182,28 +188,28 @@ export async function deleteMediaByEntityRefs(entityIds: string[]): Promise<bool
 
 /**
  * Get depth map associated with a media item
- * Depth maps have type 'depth-map' and parentMedia linking to the original
+ * Returns a MediaItem-like object with the depth map URL from urls.depthMap
  */
 export async function getDepthMapForMedia(mediaId: string): Promise<MediaItem | null> {
   if (!mediaId) return null;
 
   try {
-    // Fetch all media and find depth map with this parent
-    const response = await fetch('/api/media');
+    // Fetch the media item
+    const media = await getMedia(mediaId);
     
-    if (!response.ok) {
+    if (!media || !media.urls?.depthMap) {
       return null;
     }
 
-    const result = await response.json();
-    const allMedia = result.data || result.media || {};
-    
-    // Find depth map that references this media as parent
-    const depthMap = Object.values(allMedia).find((item: any) => 
-      item.type === 'depth-map' && item.parentMedia === mediaId
-    ) as MediaItem | undefined;
-
-    return depthMap || null;
+    // Return a MediaItem-like object with the depth map URL
+    // This maintains compatibility with existing code that expects a MediaItem
+    return {
+      ...media,
+      id: `${mediaId}-depthmap`,
+      type: 'depth-map',
+      url: media.urls.depthMap,
+      parentMedia: mediaId
+    } as MediaItem;
   } catch (error) {
     return null;
   }

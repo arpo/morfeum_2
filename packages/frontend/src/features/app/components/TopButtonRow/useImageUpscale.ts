@@ -84,30 +84,66 @@ export function useImageUpscale() {
       console.log('🎨 [Upscale] Original image URL:', mediaItem.url);
       console.log('🎨 [Upscale] Updating media ID:', primaryMediaId);
 
-      // Step 4: Update the media item with the new upscaled URL
-      const updatePayload = {
-        url: upscaledUrl,
-        metadata: {
-          ...mediaItem.metadata,
-          upscaled: true,
-          upscale_factor: 4,
-          original_url: mediaItem.url
+      // Step 4a: Store original URL if not already stored
+      if (!mediaItem.urls?.original) {
+        console.log('🎨 [Upscale] Storing original URL variant');
+        const originalResponse = await fetch(`/api/media/${primaryMediaId}/url-variant`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            variant: 'original',
+            url: mediaItem.url
+          })
+        });
+
+        if (!originalResponse.ok) {
+          const errorMsg = `Failed to store original URL: ${originalResponse.status}`;
+          console.error('🎨 [Upscale] Failed to store original:', errorMsg);
+          setError(errorMsg);
+          setIsUpscaling(false);
+          return { success: false, error: errorMsg };
         }
-      };
+      }
 
-      console.log('🎨 [Upscale] PUT request payload:', JSON.stringify(updatePayload, null, 2));
+      // Step 4b: Store upscaled URL as variant
+      console.log('🎨 [Upscale] Storing upscaled URL variant');
+      const upscaledResponse = await fetch(`/api/media/${primaryMediaId}/url-variant`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          variant: 'upscaled',
+          url: upscaledUrl
+        })
+      });
 
+      if (!upscaledResponse.ok) {
+        const errorBody = await upscaledResponse.text();
+        const errorMsg = `Failed to store upscaled URL: ${upscaledResponse.status} - ${errorBody}`;
+        console.error('🎨 [Upscale] Failed to store upscaled:', errorMsg);
+        setError(errorMsg);
+        setIsUpscaling(false);
+        return { success: false, error: errorMsg };
+      }
+
+      // Step 4c: Update the display URL to show upscaled version
       const updateResponse = await fetch(`/api/media/${primaryMediaId}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(updatePayload)
+        body: JSON.stringify({
+          url: upscaledUrl,
+          metadata: {
+            ...mediaItem.metadata,
+            upscaled: true,
+            upscale_factor: 4
+          }
+        })
       });
 
       console.log('🎨 [Upscale] PUT response status:', updateResponse.status, updateResponse.statusText);
 
       if (!updateResponse.ok) {
         const errorBody = await updateResponse.text();
-        const errorMsg = `Failed to update media: ${updateResponse.status} - ${errorBody}`;
+        const errorMsg = `Failed to update display URL: ${updateResponse.status} - ${errorBody}`;
         console.error('🎨 [Upscale] PUT failed:', errorMsg);
         setError(errorMsg);
         setIsUpscaling(false);

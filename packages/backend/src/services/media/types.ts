@@ -32,7 +32,7 @@ export interface RelatedMedia {
 export interface MediaItem {
   id: string;
   type: MediaType;
-  url: string;
+  url: string;               // Active/display URL (original or upscaled)
   createdAt: string;
   metadata: MediaMetadata;
   entityRefs: string[];      // Entity IDs that reference this media
@@ -40,6 +40,12 @@ export interface MediaItem {
   relatedMedia?: RelatedMedia;
   // For transition videos only
   transitionSequence?: string[]; // Array of media IDs in sequence
+  // All URL variants for this media (flat structure)
+  urls?: {
+    original?: string;       // Original generated image
+    upscaled?: string;       // Upscaled version
+    depthMap?: string;       // Depth map
+  };
 }
 
 export interface MediaDatabase {

@@ -386,7 +386,7 @@
     "media-1768982662930-x8mqkoh49": {
       "id": "media-1768982662930-x8mqkoh49",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b40da/Fm82bmDhNRREuvnNhqTUx.jpg",
+      "url": "https://v3b.fal.media/files/b/0a8b4193/LvbTezsOAhSEmMnh45f0L.jpg",
       "createdAt": "2026-01-21T08:04:22.931Z",
       "metadata": {
         "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nThe Coral Pod. A large, partially submerged cylindrical module, encrusted with rocks and marine life, featuring circular openings revealing its derelict interior with remnants of furniture.\n\nSTYLE LOCK — NON-NEGOTIABLE:\n\nIdentity:\n* weathered facade\n* overgrown crevices\n\nMaterials:\n* rusty metal ladder\n* wooden debris\n* red rug\n* cushions\n\nColor & Light:\n* soft, diffused light through openings\n\nAtmosphere:\n* nostalgic\n* abandoned\n\nBanned:\n* bustling activity\n* pristine structures\n\nSCENE LAYERS:\n- Background: The muted, blue-grey expanse of the calm, clear midday sea stretches out behind the Coral Pod, with the distant, hazy silhouettes of other derelict structures in the Sunken District hinting at the vastness of Aethelgard's submerged city.\n- Midground: The Coral Pod itself dominates the midground, a massive, cylindrical structure emerging from the water. Its 'weathered facade' is heavily 'encrusted with rocks and marine life', giving it a barnacle-covered, organic appearance. Circular openings, dark and cavernous, punctuate the structure, offering tantalizing glimpses of its 'derelict interior' (though the focus is exterior). A 'rusty metal ladder' clings precariously to one side, leading up towards an unseen upper level. Scattered 'wooden debris' floats around its base in the shallow, clear water. A splash of unexpected color comes from a tattered 'red rug' partially submerged near the entrance, adorned with faded 'cushions'.\n- Foreground: The 'street-level' perspective places us close to the water's edge. The 'overgrown crevices' of the Coral Pod's lower sections are visible, teeming with small sea plants and algae. Ripples from the calm water gently lap at the base of the module. The sandy, water-worn ground of the Sunken District's submerged 'street' is implied, with perhaps a few more scattered pieces of 'wooden debris'. The camera's '25-30° tilt up' emphasizes the imposing scale of the Coral Pod above.\n\nLIGHTING: The 'midday' sun casts a 'soft, diffused light' across the entire scene. Sunlight penetrates the circular openings, creating subtle, ethereal glows within the dark recesses of the Coral Pod, hinting at the 'soft, diffused light through openings' without revealing the interior details. The clear, calm weather ensures no harsh shadows, creating a gentle illumination that highlights the textures of the marine life and weathered metal. The overall light is bright but not glaring, with a slight underwater quality due to the proximity to the sea.\nATMOSPHERE: A profound sense of 'nostalgic' abandonment permeates the scene. The 'derelict' state of the Coral Pod, combined with the quiet, clear weather, evokes a feeling of forgotten grandeur and a past life. The absence of any 'bustling activity' and the 'pristine structures' reinforces the isolation and decay. The colors are muted, dominated by the blues and greys of the sea and weathered materials, with the occasional vibrant, yet faded, pop of the red rug, enhancing the melancholic beauty.\n\n[SPACE:] EXTERIOR - OUTSIDE view of the building/location\n[ENVIRONMENT:] clear and calm, midday\n[CAMERA:] camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context\n[LENS:] 12-24mm ultra-wide lens, elevated perspective, expansive framing\n[LIGHT:] directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions\n\n[NEG:] interior, indoor, inside room, indoor scene\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE: humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
@@ -432,11 +432,19 @@
         "model": "flux",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-a",
+        "upscaled": true,
+        "upscale_factor": 4
       },
       "entityRefs": [
         "v2-1768982657910-kycxgo3wj"
-      ]
+      ],
+      "urls": {
+        "depthMap": "https://v3b.fal.media/files/b/0a8b418c/cIe5o9z22EtVhyEkLkgBg_957ff545082e4c6da59f12facbc248ad.png",
+        "original": "https://v3b.fal.media/files/b/0a8b40da/Fm82bmDhNRREuvnNhqTUx.jpg",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b4193/LvbTezsOAhSEmMnh45f0L.jpg"
+      }
     },
     "media-1768982712491-kc4fxcmx0": {
       "id": "media-1768982712491-kc4fxcmx0",

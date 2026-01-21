@@ -157,6 +157,31 @@ class MediaService {
   }
 
   /**
+   * Add or update a URL variant for a media item
+   */
+  addUrlVariant(id: string, variant: 'original' | 'upscaled' | 'depthMap', url: string): MediaItem | null {
+    const db = this.readMediaDB();
+    const media = db.media[id];
+
+    if (!media) {
+      return null;
+    }
+
+    // Initialize urls object if it doesn't exist
+    if (!media.urls) {
+      media.urls = {};
+    }
+
+    // Add or update the variant
+    media.urls[variant] = url;
+
+    db.media[id] = media;
+    this.writeMediaDB(db);
+
+    return media;
+  }
+
+  /**
    * Add entity reference to media
    */
   addEntityRef(mediaId: string, entityId: string): MediaItem | null {
