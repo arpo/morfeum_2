@@ -30,6 +30,7 @@ interface MediaItem {
     original?: string;            // Original generated image
     upscaled?: string;            // Upscaled version
     depthMap?: string;            // Depth map
+    video?: string;               // Video loop
   };
 }
 
@@ -121,6 +122,7 @@ export async function getMediaWithUrls(mediaId: string | null | undefined): Prom
   upscaledUrl: string | null;
   displayUrl: string | null;
   depthMapUrl: string | null;
+  videoUrl: string | null;
 } | null> {
   if (!mediaId) return null;
   
@@ -131,7 +133,8 @@ export async function getMediaWithUrls(mediaId: string | null | undefined): Prom
     originalUrl: media.urls?.original || null,
     upscaledUrl: media.urls?.upscaled || null,
     displayUrl: media.url || null,
-    depthMapUrl: media.urls?.depthMap || null
+    depthMapUrl: media.urls?.depthMap || null,
+    videoUrl: media.urls?.video || null
   };
 }
 

@@ -1,350 +1,5 @@
 {
   "nodes": {
-    "v2-1768923178594-5x2m1y17v": {
-      "id": "v2-1768923178594-5x2m1y17v",
-      "type": "host",
-      "name": "Aethelgard",
-      "slug": "aethelgard",
-      "description": "A serene and dreamlike realm where gravity-defying cities float above tranquil, cerulean waters, bathed in perpetual bright daylight.",
-      "genre": "Fantastical",
-      "weather": "clear and bright",
-      "timeOfDay": "midday",
-      "dna": {
-        "essence": [
-          "fantastical architecture",
-          "gravity-defying structures",
-          "serene landscapes",
-          "dreamlike atmosphere"
-        ],
-        "formsAndMaterials": [
-          "light-colored stone",
-          "reddish-orange brickwork",
-          "domed roofs",
-          "arched windows",
-          "towers",
-          "stone bridge",
-          "glass orbs"
-        ],
-        "colorAndLight": [
-          "bright daylight",
-          "blue-green water",
-          "clear blue sky",
-          "white clouds",
-          "terracotta red domes",
-          "pale cracked sphere",
-          "reddish-brown sphere",
-          "defined shadows"
-        ],
-        "atmosphere": [
-          "serene",
-          "majestic",
-          "dreamlike",
-          "fantastical",
-          "calm"
-        ],
-        "banned": [
-          "industrial elements",
-          "darkness",
-          "urban sprawl"
-        ]
-      },
-      "spaceType": "exterior"
-    },
-    "v2-1768923178594-wi31ko5ff": {
-      "id": "v2-1768923178594-wi31ko5ff",
-      "type": "region",
-      "name": "The Azure Expanse",
-      "slug": "the-azure-expanse",
-      "description": "A vast, tranquil body of blue-green water upon which the floating city of Aethelgard is built.",
-      "isPassThrough": false,
-      "dna": {
-        "essence": [
-          "calm waters",
-          "open vista"
-        ],
-        "formsAndMaterials": [
-          "smooth water surface",
-          "gentle ripples"
-        ],
-        "colorAndLight": [
-          "blue-green hues",
-          "reflecting sky"
-        ],
-        "atmosphere": [
-          "tranquil",
-          "vast"
-        ],
-        "banned": []
-      }
-    },
-    "v2-1768923178594-s0n665hx7": {
-      "id": "v2-1768923178594-s0n665hx7",
-      "type": "location",
-      "name": "The Celestial Citadel",
-      "slug": "the-celestial-citadel",
-      "spaceType": "exterior",
-      "description": "An intricately designed stack of buildings, crafted from light-colored stone and reddish-orange brickwork, with numerous domed roofs, arched windows, balconies, and tall towers, soaring above the azure waters. A curved stone bridge with patterned surface extends outwards, and two large, spherical, clear blue glass orbs filled with water are featured beneath an arch and on the bridge.",
-      "dna": {
-        "essence": [
-          "intricate stacking of buildings",
-          "gravity-defying support"
-        ],
-        "formsAndMaterials": [
-          "domed terracotta roofs",
-          "arched doorways",
-          "balconies",
-          "patterned bridge surface"
-        ],
-        "colorAndLight": [
-          "glowing water orbs",
-          "shadow play from towers"
-        ],
-        "atmosphere": [
-          "majestic presence",
-          "ethereal quality"
-        ],
-        "banned": []
-      },
-      "primaryMedia": "media-1768923183779-t2t3qi58v",
-      "updatedAt": 1768991159492
-    },
-    "v2-1768923227983-026pi06aj": {
-      "id": "v2-1768923227983-026pi06aj",
-      "type": "container",
-      "name": "The Celestial Citadel",
-      "slug": "the-celestial-citadel",
-      "description": "A magnificent complex of buildings constructed from pale stone and rich reddish-orange brick, characterized by numerous domed roofs, arched windows, balconies, and soaring towers, all situated above shimmering azure waters. A gracefully curved stone bridge with an intricate surface leads to its entrance.",
-      "forbiddenTransformations": [
-        "The Citadel should not appear as a modern architectural style.",
-        "The Citadel's structures should not be made of materials other than stone and brick.",
-        "The surrounding water should not be depicted as murky or polluted.",
-        "The sky should not be overcast or stormy.",
-        "The Citadel should not appear weathered or dilapidated.",
-        "The spherical water orbs should remain a consistent visual element."
-      ],
-      "parentId": "v2-1768923178594-s0n665hx7"
-    },
-    "v2-1768923227983-fxg72o138": {
-      "id": "v2-1768923227983-fxg72o138",
-      "type": "space",
-      "name": "Citadel Antechamber",
-      "slug": "citadel-antechamber",
-      "description": "You have entered a grand antechamber within the Celestial Citadel. The space is carved from the citadel's light-colored stone, leading deeper into its heart. Intricate architectural details hint at the grandeur of the structure.",
-      "spaceType": "indoor",
-      "dna": {
-        "essence": [
-          "celestial",
-          "architectural grandeur",
-          "divine sanctuary"
-        ],
-        "formsAndMaterials": [
-          "arches",
-          "domes",
-          "light stone",
-          "red brick accents"
-        ],
-        "colorAndLight": [
-          "pale stone palette",
-          "warm brick tones",
-          "indirect, soft illumination"
-        ],
-        "atmosphere": [
-          "majestic",
-          "ethereal",
-          "serene",
-          "sacred"
-        ],
-        "banned": [
-          "grimy textures",
-          "mundane furnishings",
-          "modern technology",
-          "visible sky"
-        ]
-      },
-      "forbiddenTransformations": [
-        "The antechamber should not have exposed brickwork as a primary interior material; it should be stone-focused.",
-        "The ceiling should not be open to the sky or appear as a simple flat surface.",
-        "No visible signs of wear and tear or decay on the stone surfaces.",
-        "The space should not contain furniture incongruous with the citadel's aesthetic (e.g., modern seating).",
-        "There should be no direct sunlight, only reflected or ambient light.",
-        "The space should not feel cramped or utilitarian; it must retain a sense of grandeur."
-      ],
-      "parentId": "v2-1768923227983-026pi06aj",
-      "primaryMedia": "media-1768923232804-lk3gtncvt",
-      "updatedAt": 1768991186311
-    },
-    "v2-1768923283043-34pnyj7e2": {
-      "id": "v2-1768923283043-34pnyj7e2",
-      "type": "space",
-      "name": "Tower Top Chamber",
-      "slug": "tower-top-chamber",
-      "description": "This is a high chamber within one of the citadel's towers, offering a breathtaking panoramic view of the Azure Expanse and the surrounding architecture. The space is bathed in the bright midday sun, highlighting the ornate details of its construction.",
-      "spaceType": "indoor",
-      "dna": {
-        "essence": [
-          "celestial architecture",
-          "elevated observatory",
-          "divine craftsmanship"
-        ],
-        "formsAndMaterials": [
-          "domed ceilings",
-          "arched windows",
-          "light-colored stone",
-          "reddish-orange brickwork",
-          "ornate detailing"
-        ],
-        "colorAndLight": [
-          "azure skies",
-          "warm stone tones",
-          "bright midday sun",
-          "dramatic shadow play"
-        ],
-        "atmosphere": [
-          "majestic",
-          "ethereal",
-          "panoramic awe"
-        ],
-        "banned": [
-          "visible sky gaps",
-          "cracked plaster",
-          "dusty surfaces",
-          "modern furniture",
-          "visible external scaffolding"
-        ]
-      },
-      "forbiddenTransformations": [
-        "The view from the windows showing anything other than the Azure Expanse and the citadel's architecture",
-        "Any indication of a ceiling that is not domed or vaulted",
-        "The presence of modern technology or furniture",
-        "Visible signs of wear or damage to the stone or brickwork",
-        "The introduction of any metallic or industrial materials",
-        "A lighting scheme that does not originate from the arched windows",
-        "The space feeling cramped or enclosed despite its height"
-      ],
-      "parentId": "v2-1768923227983-026pi06aj",
-      "primaryMedia": "media-1768923290600-ggmbji38j",
-      "updatedAt": 1768997315208
-    },
-    "v2-1768923518458-drbix64to": {
-      "id": "v2-1768923518458-drbix64to",
-      "type": "space",
-      "name": "Ocean Dock Entrance",
-      "slug": "ocean-dock-entrance",
-      "description": "This is the entry point from the ocean side of The Celestial Citadel. You stand on a sturdy, slightly damp stone platform where boats would moor. The scent of salt and the distant cries of seabirds fill the air.",
-      "spaceType": "semi-enclosed",
-      "dna": {
-        "essence": [
-          "citadel access",
-          "maritime connection",
-          "grandeur"
-        ],
-        "formsAndMaterials": [
-          "arches",
-          "stone pathways",
-          "water features",
-          "light-colored stone",
-          "reddish-orange brick"
-        ],
-        "colorAndLight": [
-          "azure sky reflection",
-          "bright midday sun",
-          "shimmering light",
-          "high contrast"
-        ],
-        "atmosphere": [
-          "majestic",
-          "ethereal",
-          "bright",
-          "inviting"
-        ],
-        "banned": [
-          "rusted metal",
-          "barnacles on stone",
-          "grimy or oil-slicked surfaces",
-          "modern shipping equipment",
-          "industrial cranes"
-        ]
-      },
-      "forbiddenTransformations": [
-        "the dock surface becoming made of wood",
-        "the citadel walls appearing to be made of metal",
-        "modern boat moorings being introduced",
-        "any visible pollution or debris from the water",
-        "the water orbs losing their glow",
-        "the citadel facade becoming weathered and grey",
-        "the sky turning overcast or dark"
-      ],
-      "parentId": "v2-1768923227983-026pi06aj",
-      "primaryMedia": "media-1768924309929-3olebnkik",
-      "updatedAt": 1768997377083
-    },
-    "v2-1768924855781-g5iv2aoxw": {
-      "id": "v2-1768924855781-g5iv2aoxw",
-      "type": "view",
-      "name": "The Celestial Ceiling",
-      "slug": "the-celestial-ceiling",
-      "description": "View: Detailed carvings, potential celestial patterns, construction materials, and any unique architectural features of the domed ceiling.",
-      "parentId": "v2-1768923283043-34pnyj7e2",
-      "primaryMedia": "media-1768924855780-pshiq7lm3"
-    },
-    "v2-1768924989512-pux4tihah": {
-      "id": "v2-1768924989512-pux4tihah",
-      "type": "view",
-      "name": "Edited: add a crack in the ceiling",
-      "slug": "edited-add-a-crack-in-the-ceiling",
-      "description": "Edit: add a crack in the ceiling",
-      "parentId": "v2-1768923227983-fxg72o138",
-      "primaryMedia": "media-1768924989511-lxxqf0nx3",
-      "updatedAt": 1768997287958
-    },
-    "v2-1768925468085-5wdhw34p9": {
-      "id": "v2-1768925468085-5wdhw34p9",
-      "type": "view",
-      "name": "Edited: the ceiling start to crack",
-      "slug": "edited-the-ceiling-start-to-crack",
-      "description": "Edit: the ceiling start to crack",
-      "parentId": "v2-1768923283043-34pnyj7e2",
-      "primaryMedia": "media-1768925468084-49a0r76jk"
-    },
-    "v2-1768942669683-xto80pph9": {
-      "id": "v2-1768942669683-xto80pph9",
-      "type": "view",
-      "name": "The Celestial Map Detail",
-      "slug": "the-celestial-map-detail",
-      "description": "View: Intricate details of the celestial map, including individual celestial bodies, cosmic patterns, fine carving work, and the textures of the ceiling material.",
-      "parentId": "v2-1768923283043-34pnyj7e2",
-      "primaryMedia": "media-1768942669682-igr8wkvut",
-      "updatedAt": 1768997350342
-    },
-    "v2-1768942716279-8mmyj98xb": {
-      "id": "v2-1768942716279-8mmyj98xb",
-      "type": "view",
-      "name": "South America on the Map",
-      "slug": "south-america-on-the-map",
-      "description": "View: Detailed cartography of South America on the map, including coastlines, mountain ranges, rivers, and any inscribed names or symbols.",
-      "parentId": "v2-1768923283043-34pnyj7e2",
-      "primaryMedia": "media-1768942716277-504x12iwx",
-      "updatedAt": 1768991214802
-    },
-    "v2-1768943076504-f731r8nmj": {
-      "id": "v2-1768943076504-f731r8nmj",
-      "type": "view",
-      "name": "High Citadel View",
-      "slug": "high-citadel-view",
-      "description": "View: A sweeping aerial panorama of the Celestial Citadel, showcasing its entire structure, domed roofs, towers, the curved bridge, and the surrounding azure waters.",
-      "parentId": "v2-1768923178594-s0n665hx7",
-      "primaryMedia": "media-1768943076502-r8egsm7eh"
-    },
-    "v2-1768943225981-w3p0gtjy3": {
-      "id": "v2-1768943225981-w3p0gtjy3",
-      "type": "view",
-      "name": "Edited: set to night time, add glowing lights li...",
-      "slug": "edited-set-to-night-time-add-glowing-lights-li",
-      "description": "Edit: set to night time, add glowing lights like fires lightning up the citadel",
-      "parentId": "v2-1768923178594-s0n665hx7",
-      "primaryMedia": "media-1768943225978-g2pjdl0ig",
-      "updatedAt": 1768991246239
-    },
     "v2-1768982657910-1okyeaq7g": {
       "id": "v2-1768982657910-1okyeaq7g",
       "type": "host",
@@ -353,7 +8,7 @@
       "description": "A world where forgotten aquatic metropolises slowly succumb to the embrace of the ocean, creating a serene yet melancholic beauty.",
       "genre": "Post-Apocalyptic Aquatic",
       "weather": "clear and calm",
-      "timeOfDay": "night",
+      "timeOfDay": "midday",
       "dna": {
         "essence": [
           "decaying aquatic architecture",
@@ -648,7 +303,7 @@
       "description": "View: The vast expanse of the ocean, waves, and the horizon seen through the round window.",
       "parentId": "v2-1768982703786-6qh62zsw8",
       "primaryMedia": "media-1768983321354-h8j41xtu9",
-      "updatedAt": 1768990643392
+      "updatedAt": 1769000743221
     },
     "v2-1768998173936-bdo0iuih9": {
       "id": "v2-1768998173936-bdo0iuih9",
@@ -659,86 +314,829 @@
       "parentId": "v2-1768982657910-kycxgo3wj",
       "primaryMedia": "media-1768998173934-xj5pie0wh",
       "updatedAt": 1768998191504
+    },
+    "v2-1769001194585-haq8chi7q": {
+      "id": "v2-1769001194585-haq8chi7q",
+      "type": "host",
+      "name": "Isla Encantada",
+      "slug": "isla-encantada",
+      "description": "A tropical island known for its breathtaking sunsets and vibrant celebrations.",
+      "genre": "Tropical Fantasy",
+      "weather": "clear with light breeze",
+      "timeOfDay": "night",
+      "dna": {
+        "essence": [
+          "tropical paradise",
+          "vibrant celebration",
+          "sunset spectacle",
+          "communal joy"
+        ],
+        "formsAndMaterials": [
+          "palm trees",
+          "sandy beaches",
+          "calm ocean",
+          "paper lanterns",
+          "bonfire"
+        ],
+        "colorAndLight": [
+          "vivid oranges and yellows",
+          "golden glow",
+          "brilliant orange sun",
+          "shimmering water",
+          "warm lantern light",
+          "dark silhouettes"
+        ],
+        "atmosphere": [
+          "festive",
+          "relaxed",
+          "joyful",
+          "communal",
+          "warm"
+        ],
+        "banned": [
+          "stormy weather",
+          "industrial structures"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1769001194585-bokhbh8q1": {
+      "id": "v2-1769001194585-bokhbh8q1",
+      "type": "region",
+      "name": "Sunset Cove",
+      "slug": "sunset-cove",
+      "description": "The primary beach area of Isla Encantada, renowned for its spectacular sunsets and lively beach parties.",
+      "isPassThrough": false,
+      "dna": {
+        "essence": [
+          "prime beach location",
+          "party hub"
+        ],
+        "formsAndMaterials": [
+          "soft sand",
+          "gentle waves",
+          "palm tree grove"
+        ],
+        "colorAndLight": [
+          "intense horizon colors",
+          "golden water reflection"
+        ],
+        "atmosphere": [
+          "energetic",
+          "celebratory"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1769001194585-z3ukd8rz5": {
+      "id": "v2-1769001194585-z3ukd8rz5",
+      "type": "location",
+      "name": "The Bonfire Gathering",
+      "slug": "the-bonfire-gathering",
+      "spaceType": "exterior",
+      "description": "A lively beach scene at sunset, centered around a crackling bonfire, with illuminated paper lanterns strung between palm trees and numerous people enjoying the communal celebration.",
+      "dna": {
+        "essence": [
+          "bonfire focus",
+          "lantern illumination",
+          "crowded beach"
+        ],
+        "formsAndMaterials": [
+          "crackling bonfire",
+          "illuminated paper lanterns",
+          "surfboards on sand"
+        ],
+        "colorAndLight": [
+          "bright bonfire flames",
+          "orange and warm lantern glow",
+          "deep blue and gray sky"
+        ],
+        "atmosphere": [],
+        "banned": []
+      },
+      "primaryMedia": "media-1769001198799-ax9vn2n34"
+    },
+    "v2-1769001254122-hmrrosr3c": {
+      "id": "v2-1769001254122-hmrrosr3c",
+      "type": "container",
+      "name": "The Beach Bar",
+      "slug": "the-beach-bar",
+      "description": "A rustic, open-air bar nestled amidst palm trees on Sunset Cove beach. It serves as a relaxed hub for the bonfire gathering, offering refreshing drinks and a place to socialize.",
+      "forbiddenTransformations": [
+        "The bar should not be depicted as a fully enclosed building.",
+        "The bar should retain its connection to the beach environment, not feel isolated.",
+        "The bar should not have modern, sleek architecture that clashes with the natural setting.",
+        "The bar should not be too large or a multi-story structure.",
+        "The bar's interior should not be dimly lit or feel like a nightclub."
+      ],
+      "parentId": "v2-1769001194585-z3ukd8rz5"
+    },
+    "v2-1769001254122-cf467byeu": {
+      "id": "v2-1769001254122-cf467byeu",
+      "type": "space",
+      "name": "The Bar Counter",
+      "slug": "the-bar-counter",
+      "description": "You are standing at the polished wooden counter of the beach bar. Behind you, drinks are being prepared, and the sounds of the beach party drift in.",
+      "spaceType": "semi-enclosed",
+      "dna": {
+        "essence": [
+          "tropical retreat",
+          "beachside casual",
+          "communal warmth"
+        ],
+        "formsAndMaterials": [
+          "natural wood",
+          "woven textures",
+          "open lattice"
+        ],
+        "colorAndLight": [
+          "warm amber and sunset orange",
+          "filtered and dappled sunlight"
+        ],
+        "atmosphere": [
+          "relaxed",
+          "inviting",
+          "social"
+        ],
+        "banned": [
+          "concrete and steel",
+          "harsh fluorescent lighting",
+          "formal dining setting",
+          "modernist design",
+          "exclusionary architecture"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The bar counter should not be enclosed by solid walls.",
+        "The sky should be visible through the roof structure or open sides.",
+        "The materials should remain natural and rustic, avoiding synthetic or polished finishes.",
+        "The lighting should be warm and natural, not artificial or cold.",
+        "The bar should not appear to be a separate, detached building, but integrated with the beach.",
+        "The scale should remain intimate and suitable for a beach gathering.",
+        "No doors or windows that would suggest a completely sealed interior."
+      ],
+      "parentId": "v2-1769001254122-hmrrosr3c",
+      "primaryMedia": "media-1769001260604-ezsn3hcoh"
+    },
+    "v2-1769001376666-v9k14vrl2": {
+      "id": "v2-1769001376666-v9k14vrl2",
+      "type": "space",
+      "name": "Dance, Bonfire, DJ Booth",
+      "slug": "dance-bonfire-dj-booth",
+      "description": "You are now in the heart of the gathering, a vibrant space where a powerful bonfire crackles energetically. A DJ booth is set up nearby, pulsing with music, and a designated area invites dancing, all under a canopy of illuminated paper lanterns and the twilight sky.",
+      "spaceType": "semi-enclosed",
+      "dna": {
+        "essence": [
+          "beach party",
+          "communal fire",
+          "sunset celebration",
+          "electronic music"
+        ],
+        "formsAndMaterials": [
+          "organic bonfire",
+          "natural sand",
+          "tattered paper lanterns",
+          "temporary wooden DJ booth",
+          "tropical palm trees"
+        ],
+        "colorAndLight": [
+          "warm orange and yellow from fire and lanterns",
+          "deep blues and grays of twilight sky",
+          "amber and magenta sunset hues",
+          "flickering, dynamic lighting"
+        ],
+        "atmosphere": [
+          "energetic",
+          "celebratory",
+          "communal",
+          "pulsating rhythm"
+        ],
+        "banned": [
+          "heavy stone architecture",
+          "medieval banners",
+          "sci-fi technology",
+          "industrial machinery",
+          "winter landscapes",
+          "formal attire",
+          "silent, still environment"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The sky becoming completely dark and starless",
+        "The bonfire flames diminishing or becoming still",
+        "The paper lanterns going dark",
+        "The DJ booth becoming silent or non-functional",
+        "The music abruptly stopping",
+        "The sand turning into concrete or grass",
+        "The palm trees being replaced by evergreens",
+        "The overall atmosphere becoming somber or melancholic"
+      ],
+      "parentId": "v2-1769001254122-hmrrosr3c",
+      "primaryMedia": "media-1769001383118-o92elm1z5"
+    },
+    "v2-1769001552866-bwm8qluel": {
+      "id": "v2-1769001552866-bwm8qluel",
+      "type": "space",
+      "name": "Chill Out Area Among the Palms",
+      "slug": "chill-out-area-among-the-palms",
+      "description": "Nestled amongst the palm trees, this area offers a tranquil respite from the main bonfire. Sculptural art pieces are subtly illuminated by soft, glowing lights, providing a serene and artistic ambiance.",
+      "spaceType": "semi-enclosed",
+      "dna": {
+        "essence": [
+          "tropical oasis",
+          "artistic sanctuary",
+          "communal gathering",
+          "sunset glow"
+        ],
+        "formsAndMaterials": [
+          "organic curves",
+          "smooth sculptural forms",
+          "natural wood",
+          "fibrous materials",
+          "palm fronds"
+        ],
+        "colorAndLight": [
+          "warm oranges and yellows",
+          "deep blues and purples",
+          "soft, ambient glow",
+          "dappled light"
+        ],
+        "atmosphere": [
+          "relaxed",
+          "intimate",
+          "artistic",
+          "calm"
+        ],
+        "banned": [
+          "blinding neon lights",
+          "industrial metal structures",
+          "stark, minimalist designs",
+          "heavy, gothic ornamentation",
+          "any elements of overt technology"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The space becoming fully enclosed and dark like a cave",
+        "Losing the natural element of palm trees and sand",
+        "The art sculptures becoming overtly mechanical or digital",
+        "The lighting becoming harsh or fluorescent",
+        "The sky becoming completely obscured, making it feel fully indoor",
+        "Introduction of heavy, Victorian-era furniture",
+        "Rendering the space as a sterile, modern gallery"
+      ],
+      "parentId": "v2-1769001254122-hmrrosr3c",
+      "primaryMedia": "media-1769001559296-btmb8n0rr"
+    },
+    "v2-1769001686321-g468sr0bq": {
+      "id": "v2-1769001686321-g468sr0bq",
+      "type": "host",
+      "name": "Xylosian Desert",
+      "slug": "xylosian-desert",
+      "description": "An alien desert planet where a colossal, glowing orange celestial body dominates the twilight sky, casting an otherworldly and serene atmosphere.",
+      "genre": "Sci-Fi",
+      "weather": "clear with atmospheric glow",
+      "timeOfDay": "midday",
+      "dna": {
+        "essence": [
+          "alien desert landscape",
+          "colossal celestial body",
+          "biomorphic architecture",
+          "serene atmosphere"
+        ],
+        "formsAndMaterials": [
+          "organic architecture",
+          "biomorphic shapes",
+          "smooth stone",
+          "sandy terrain"
+        ],
+        "colorAndLight": [
+          "deep starry blue",
+          "vibrant orange-red horizon",
+          "glowing orange celestial body",
+          "warm interior glow"
+        ],
+        "atmosphere": [
+          "serene",
+          "otherworldly",
+          "inviting",
+          "vast",
+          "arid"
+        ],
+        "banned": [
+          "traditional desert fauna",
+          "humanoid architecture"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1769001686321-rce3rtcp7": {
+      "id": "v2-1769001686321-rce3rtcp7",
+      "type": "region",
+      "name": "The Great Archway",
+      "slug": "the-great-archway",
+      "description": "The area surrounding the massive, futuristic structure nestled into rocky outcrops.",
+      "isPassThrough": false,
+      "dna": {
+        "essence": [
+          "rocky outcrops",
+          "sandy terrain",
+          "worn path"
+        ],
+        "formsAndMaterials": [
+          "sandy ground",
+          "rocky outcrops",
+          "shrub-like vegetation",
+          "small rocks",
+          "worn sand path"
+        ],
+        "colorAndLight": [
+          "muted sandy tones",
+          "contrasting celestial light"
+        ],
+        "atmosphere": [
+          "arid",
+          "expansive",
+          "welcoming"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1769001686321-nkk66l8ek": {
+      "id": "v2-1769001686321-nkk66l8ek",
+      "type": "location",
+      "name": "Biomorphic Structure Entrance",
+      "slug": "biomorphic-structure-entrance",
+      "spaceType": "exterior",
+      "description": "The base of a massive, biomorphic futuristic structure with an arched entrance. Spindly spires and rounded appendages extend from its body. Large, rounded windows glow with warm orange light.",
+      "dna": {
+        "essence": [
+          "biomorphic architecture",
+          "glowing windows",
+          "arched entrance"
+        ],
+        "formsAndMaterials": [
+          "main biomorphic body",
+          "spindly spires",
+          "rounded appendages",
+          "large rounded windows",
+          "arched entrance"
+        ],
+        "colorAndLight": [
+          "light blue and green main body",
+          "warm orange interior glow"
+        ],
+        "atmosphere": [
+          "inviting",
+          "organic",
+          "futuristic"
+        ],
+        "banned": [
+          "sharp edges",
+          "industrial materials"
+        ]
+      },
+      "primaryMedia": "media-1769001691401-tzumzj3zp"
+    },
+    "v2-1769001710805-eyoyfg375": {
+      "id": "v2-1769001710805-eyoyfg375",
+      "type": "container",
+      "name": "Biomorphic Habitation Spire",
+      "slug": "biomorphic-habitation-spire",
+      "description": "A colossal, organic skyscraper that resembles a living organism. Its curved surfaces and bioluminescent windows suggest advanced, symbiotic architecture. This is the main entry point into its internal systems.",
+      "forbiddenTransformations": [
+        "The structure transforming into a traditional rectangular building",
+        "The organic curves being replaced by sharp geometric angles",
+        "The exterior losing its bioluminescent glow",
+        "The entrance becoming a simple, flat doorway"
+      ],
+      "parentId": "v2-1769001686321-nkk66l8ek"
+    },
+    "v2-1769001710805-gi5h0pon2": {
+      "id": "v2-1769001710805-gi5h0pon2",
+      "type": "space",
+      "name": "Central Biodome Chamber",
+      "slug": "central-biodome-chamber",
+      "description": "You are inside a vast, domed chamber. The interior walls pulse with soft, organic light, mirroring the exterior's bioluminescent glow. Lush, alien flora spills from integrated planters, creating a living, breathing environment.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "organic futurism",
+          "symbiotic architecture",
+          "living interior"
+        ],
+        "formsAndMaterials": [
+          "biomorphic curves",
+          "glowing bio-luminescent panels",
+          "integrated organic matter"
+        ],
+        "colorAndLight": [
+          "soft internal luminescence",
+          "warm orange and green palette",
+          "diffused ambient glow"
+        ],
+        "atmosphere": [
+          "serene",
+          "welcoming",
+          "connected to nature"
+        ],
+        "banned": [
+          "harsh fluorescent lighting",
+          "visible mechanical components",
+          "sharp industrial edges",
+          "stark minimalist design"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The dome collapsing or showing a view of the sky",
+        "Visible structural supports or beams",
+        "The introduction of traditional furniture or seating",
+        "The flora becoming wilted or artificial",
+        "The light becoming harsh or directional",
+        "The space becoming cramped or angular"
+      ],
+      "parentId": "v2-1769001710805-eyoyfg375",
+      "primaryMedia": "media-1769001717484-3ttr9nlmj"
+    },
+    "v2-1769001756536-r4xquuopa": {
+      "id": "v2-1769001756536-r4xquuopa",
+      "type": "space",
+      "name": "Inner Sanctum",
+      "slug": "inner-sanctum",
+      "description": "This enclosed chamber is a marvel of biomorphic design, dominated by cascading water features. Walls seem to flow and curve, with numerous small waterfalls and pools integrated into the structure, creating a lush, water-filled environment.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "organic technology",
+          "integrated nature",
+          "bioluminescent water"
+        ],
+        "formsAndMaterials": [
+          "curving biomorphic walls",
+          "smooth, iridescent internal surfaces",
+          "living water systems"
+        ],
+        "colorAndLight": [
+          "shifting blues and greens",
+          "warm orange interior accents",
+          "luminescent water glow"
+        ],
+        "atmosphere": [
+          "tranquil",
+          "serene",
+          "harmonious"
+        ],
+        "banned": [
+          "straight lines",
+          "harsh edges",
+          "mechanical components",
+          "dry surfaces",
+          "artificial, sterile lighting"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The water appearing stagnant or dirty.",
+        "The waterfalls looking artificial or manufactured.",
+        "The walls becoming angular or flat.",
+        "Any visible pipes or mechanical water systems.",
+        "The interior lighting becoming stark or white.",
+        "The space feeling sterile or devoid of organic elements.",
+        "The overall atmosphere becoming noisy or chaotic."
+      ],
+      "parentId": "v2-1769001710805-eyoyfg375",
+      "primaryMedia": "media-1769001763364-p9cu64l3z"
+    },
+    "v2-1769002800808-x4w0f559t": {
+      "id": "v2-1769002800808-x4w0f559t",
+      "type": "host",
+      "name": "Azure Coast",
+      "slug": "azure-coast",
+      "description": "A tranquil tropical paradise with pristine white sandy beaches, crystal-clear turquoise waters, and vibrant, sun-drenched skies.",
+      "genre": "Tropical",
+      "weather": "clear and sunny",
+      "timeOfDay": "midday",
+      "dna": {
+        "essence": [
+          "tropical paradise",
+          "serene relaxation",
+          "natural beauty",
+          "coastal architecture"
+        ],
+        "formsAndMaterials": [
+          "organic rounded corners",
+          "textured white walls",
+          "warm wood",
+          "potted plants",
+          "woven materials"
+        ],
+        "colorAndLight": [
+          "white sand",
+          "turquoise ocean",
+          "clear blue sky",
+          "dappled sunlight",
+          "warm wood tones"
+        ],
+        "atmosphere": [
+          "serene",
+          "relaxed",
+          "tropical",
+          "inviting",
+          "natural"
+        ],
+        "banned": [
+          "urban elements",
+          "harsh geometric shapes"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1769002800808-tp3meeumh": {
+      "id": "v2-1769002800808-tp3meeumh",
+      "type": "region",
+      "name": "Pristine Beach",
+      "slug": "pristine-beach",
+      "description": "A wide stretch of immaculate white sand bordering the calm, turquoise ocean.",
+      "isPassThrough": false,
+      "dna": {
+        "essence": [
+          "secluded beach",
+          "calm waters",
+          "natural light"
+        ],
+        "formsAndMaterials": [
+          "fine white sand",
+          "scattered leaves",
+          "small scattered plants"
+        ],
+        "colorAndLight": [
+          "bright sunlight",
+          "gentle ocean reflections",
+          "shadows from trees"
+        ],
+        "atmosphere": [
+          "peaceful",
+          "sun-drenched"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1769002800808-efgte5rtq": {
+      "id": "v2-1769002800808-efgte5rtq",
+      "type": "location",
+      "name": "Seaside Sanctuary",
+      "slug": "seaside-sanctuary",
+      "spaceType": "exterior",
+      "description": "A quaint, two-story white beach house with organic, rounded corners and textured walls, featuring warm wooden frames and porthole windows. A spacious balcony with plants and a canopy extends from the second floor.",
+      "dna": {
+        "essence": [
+          "beach house architecture",
+          "balcony with plants"
+        ],
+        "formsAndMaterials": [
+          "two-story structure",
+          "rounded corners",
+          "textured white walls",
+          "wooden frames",
+          "porthole windows",
+          "wooden balcony",
+          "potted plants",
+          "fabric canopy",
+          "glass door",
+          "small wooden table",
+          "wicker chair",
+          "fluffy cushion"
+        ],
+        "colorAndLight": [
+          "warm wood accents",
+          "sunlit balcony",
+          "dappled shadows"
+        ],
+        "atmosphere": [
+          "cozy interior reveal",
+          "inviting entrance"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1769002805002-15v3jiel3"
+    },
+    "v2-1769002826298-2h2qn5v5u": {
+      "id": "v2-1769002826298-2h2qn5v5u",
+      "type": "container",
+      "name": "Seaside Sanctuary",
+      "slug": "seaside-sanctuary",
+      "description": "A charming, two-story white beach house with organic, rounded forms and textured walls. It features warm wooden accents and unique porthole windows, offering a serene retreat by the azure coast.",
+      "forbiddenTransformations": [
+        "Introducing sharp, geometric architectural elements.",
+        "Adding metallic or industrial materials.",
+        "Depicting a dense urban environment or cityscape.",
+        "Showing overcast skies or harsh, unnatural lighting.",
+        "Introducing any signs of decay or disrepair."
+      ],
+      "parentId": "v2-1769002800808-efgte5rtq"
+    },
+    "v2-1769002826298-d7mmbgahz": {
+      "id": "v2-1769002826298-d7mmbgahz",
+      "type": "space",
+      "name": "Balcony",
+      "slug": "balcony",
+      "description": "You are on the spacious wooden balcony of the Seaside Sanctuary. Potted plants create a lush border, and a soft fabric canopy offers partial shade, while the azure coast and clear sky are visible beyond.",
+      "spaceType": "elevated",
+      "dna": {
+        "essence": [
+          "coastal retreat",
+          "organic architecture",
+          "tranquil vista"
+        ],
+        "formsAndMaterials": [
+          "rounded forms",
+          "textured white walls",
+          "warm wood",
+          "fabric canopy"
+        ],
+        "colorAndLight": [
+          "azure blues",
+          "warm whites",
+          "natural wood tones",
+          "bright midday sun",
+          "dappled shade"
+        ],
+        "atmosphere": [
+          "serene",
+          "inviting",
+          "airy",
+          "connected to nature"
+        ],
+        "banned": [
+          "chrome and glass skyscrapers",
+          "heavy industrial machinery",
+          "overly ornate Victorian detailing",
+          "harsh neon lighting",
+          "barren, rocky outcrops"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The sky becoming obscured by clouds or smog.",
+        "The wooden elements appearing as cold, sterile metal.",
+        "The potted plants wilting or being replaced by artificial ones.",
+        "The canopy being removed, exposing the entire balcony to harsh sun.",
+        "Any intrusive elements like antennas or air conditioning units."
+      ],
+      "parentId": "v2-1769002826298-2h2qn5v5u",
+      "primaryMedia": "media-1769002832808-y7rn9cbvb"
+    },
+    "v2-1769003023417-tixggzu8m": {
+      "id": "v2-1769003023417-tixggzu8m",
+      "type": "space",
+      "name": "Master Bedroom",
+      "slug": "master-bedroom",
+      "description": "A cozy and serene master bedroom, carved into the serene structure of the beach house. Light gently filters in, illuminating the space with a warm, inviting glow.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "coastal retreat",
+          "organic comfort",
+          "tranquil haven"
+        ],
+        "formsAndMaterials": [
+          "rounded corners",
+          "textured white walls",
+          "warm wood accents",
+          "porthole window"
+        ],
+        "colorAndLight": [
+          "soft whites",
+          "natural wood tones",
+          "azure accents",
+          "filtered sunlight"
+        ],
+        "atmosphere": [
+          "serene",
+          "inviting",
+          "calm",
+          "restful"
+        ],
+        "banned": [
+          "stark modernism",
+          "industrial materials",
+          "overly ornate details",
+          "visible plumbing or electrical conduits",
+          "sharp, aggressive angles",
+          "cluttered surfaces",
+          "harsh artificial lighting"
+        ]
+      },
+      "forbiddenTransformations": [
+        "Rendering any part of the exterior sky or sea within the room.",
+        "Introducing visible structural beams or sharp architectural edges.",
+        "Adding any industrial or utilitarian elements.",
+        "Depicting the room as overly bright or harsh.",
+        "Introducing clutter or a sense of disarray.",
+        "Changing the organic, rounded forms of the walls.",
+        "Showing any visible door or window hardware that is overtly modern or metallic."
+      ],
+      "parentId": "v2-1769002826298-2h2qn5v5u",
+      "primaryMedia": "media-1769003029700-4cmae832x"
+    },
+    "v2-1769003102070-i04szikkx": {
+      "id": "v2-1769003102070-i04szikkx",
+      "type": "space",
+      "name": "Second Floor Balcony",
+      "slug": "second-floor-balcony",
+      "description": "You step onto the spacious second-floor balcony, an open-air extension of the beach house. Potted plants spill over the wooden railings, and a soft fabric canopy provides dappled shade.",
+      "spaceType": "elevated",
+      "dna": {
+        "essence": [
+          "coastal retreat",
+          "organic architecture",
+          "breezy comfort"
+        ],
+        "formsAndMaterials": [
+          "rounded forms",
+          "textured white plaster",
+          "warm wood",
+          "fabric canopy"
+        ],
+        "colorAndLight": [
+          "azure and white palette",
+          "bright midday sun",
+          "dappled shade"
+        ],
+        "atmosphere": [
+          "serene",
+          "inviting",
+          "relaxed"
+        ],
+        "banned": [
+          "gritty urban textures",
+          "industrial steel",
+          "neon lights",
+          "blistering heat",
+          "barren rock formations"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The balcony being enclosed by solid walls",
+        "The presence of a solid roof extending over the entire space",
+        "The view of the sky being completely obstructed",
+        "The addition of angular, modern furniture",
+        "The appearance of metallic railings or structures",
+        "The space feeling cramped or claustrophobic",
+        "The removal of the potted plants"
+      ],
+      "parentId": "v2-1769002826298-2h2qn5v5u",
+      "primaryMedia": "media-1769003108599-lggq3ezp9"
+    },
+    "v2-1769003476267-ldv3cvm07": {
+      "id": "v2-1769003476267-ldv3cvm07",
+      "type": "space",
+      "name": "Main Hall",
+      "slug": "main-hall",
+      "description": "You've entered the main hall of the Seaside Sanctuary. This large, welcoming space is filled with natural light and offers a cozy, new-age ambiance. A comfortable sofa invites relaxation, and the open layout hints at further interconnected rooms with views of the surrounding coast.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "coastal retreat",
+          "new age",
+          "organic design",
+          "tranquil"
+        ],
+        "formsAndMaterials": [
+          "rounded corners",
+          "textured white walls",
+          "warm wood accents",
+          "natural fabrics"
+        ],
+        "colorAndLight": [
+          "light, airy palette",
+          "sunlit",
+          "soft shadows"
+        ],
+        "atmosphere": [
+          "serene",
+          "inviting",
+          "harmonious"
+        ],
+        "banned": [
+          "sharp edges",
+          "dark, oppressive colors",
+          "heavy ornamentation",
+          "cluttered spaces"
+        ]
+      },
+      "forbiddenTransformations": [
+        "making the walls perfectly flat and sharp-edged",
+        "introducing dark or overly saturated colors",
+        "adding metal or industrial-looking furniture",
+        "filling the space with heavy, ornate objects",
+        "blocking the natural light",
+        "introducing visible electrical outlets or modern technology",
+        "making the room feel cramped or cluttered"
+      ],
+      "parentId": "v2-1769002826298-2h2qn5v5u",
+      "primaryMedia": "media-1769003483455-myxr2gm7j"
     }
   },
   "views": {},
   "worldTrees": [
-    {
-      "id": "v2-1768923178594-5x2m1y17v",
-      "type": "host",
-      "children": [
-        {
-          "id": "v2-1768923178594-wi31ko5ff",
-          "type": "region",
-          "children": [
-            {
-              "id": "v2-1768923178594-s0n665hx7",
-              "type": "location",
-              "children": [
-                {
-                  "id": "v2-1768923227983-026pi06aj",
-                  "type": "container",
-                  "children": [
-                    {
-                      "id": "v2-1768923227983-fxg72o138",
-                      "type": "space",
-                      "children": [
-                        {
-                          "id": "v2-1768924989512-pux4tihah",
-                          "type": "view",
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "id": "v2-1768923283043-34pnyj7e2",
-                      "type": "space",
-                      "children": [
-                        {
-                          "id": "v2-1768924855781-g5iv2aoxw",
-                          "type": "view",
-                          "children": []
-                        },
-                        {
-                          "id": "v2-1768925468085-5wdhw34p9",
-                          "type": "view",
-                          "children": []
-                        },
-                        {
-                          "id": "v2-1768942669683-xto80pph9",
-                          "type": "view",
-                          "children": []
-                        },
-                        {
-                          "id": "v2-1768942716279-8mmyj98xb",
-                          "type": "view",
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "id": "v2-1768923518458-drbix64to",
-                      "type": "space",
-                      "children": []
-                    }
-                  ]
-                },
-                {
-                  "id": "v2-1768943076504-f731r8nmj",
-                  "type": "view",
-                  "children": []
-                },
-                {
-                  "id": "v2-1768943225981-w3p0gtjy3",
-                  "type": "view",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     {
       "id": "v2-1768982657910-1okyeaq7g",
       "type": "host",
@@ -798,10 +1196,129 @@
           ]
         }
       ]
+    },
+    {
+      "id": "v2-1769001194585-haq8chi7q",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1769001194585-bokhbh8q1",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1769001194585-z3ukd8rz5",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1769001254122-hmrrosr3c",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1769001254122-cf467byeu",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1769001376666-v9k14vrl2",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1769001552866-bwm8qluel",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v2-1769001686321-g468sr0bq",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1769001686321-rce3rtcp7",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1769001686321-nkk66l8ek",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1769001710805-eyoyfg375",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1769001710805-gi5h0pon2",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1769001756536-r4xquuopa",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v2-1769002800808-x4w0f559t",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1769002800808-tp3meeumh",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1769002800808-efgte5rtq",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1769002826298-2h2qn5v5u",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1769002826298-d7mmbgahz",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1769003023417-tixggzu8m",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1769003102070-i04szikkx",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1769003476267-ldv3cvm07",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "v2-1768923178594-5x2m1y17v",
-    "v2-1768982657910-1okyeaq7g"
+    "v2-1768982657910-1okyeaq7g",
+    "v2-1769001194585-haq8chi7q",
+    "v2-1769001686321-g468sr0bq",
+    "v2-1769002800808-x4w0f559t"
   ]
 }

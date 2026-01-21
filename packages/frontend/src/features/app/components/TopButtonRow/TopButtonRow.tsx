@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui';
-import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere, IconExternalLink, IconCamera, IconCheck, IconBookmark, IconMaximize } from '@/icons';
+import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere, IconExternalLink, IconCamera, IconCheck, IconBookmark, IconMaximize, IconVideo } from '@/icons';
 import { UPSCALE_CONFIG } from '@/config';
 import styles from './TopButtonRow.module.css';
 
@@ -18,6 +18,7 @@ interface TopButtonRowProps {
   onOpenSavedEntities: () => void;
   onGenerateDepthMap: () => void;
   onUpscaleImage: () => void;
+  onGenerateVideo: () => void;
   onDisplayModeChange: (mode: DisplayMode) => void;
   onSaveTrainingData: () => void;
   isCharacter: boolean;
@@ -26,6 +27,7 @@ interface TopButtonRowProps {
   depthMapDisabled: boolean;
   depthMapGenerating: boolean;
   isUpscaling: boolean;
+  isGeneratingVideo: boolean;
   displayMode: DisplayMode;
   hasDepthMap: boolean;
   trainingSaving: boolean;
@@ -39,6 +41,7 @@ export function TopButtonRow({
   onOpenSavedEntities,
   onGenerateDepthMap,
   onUpscaleImage,
+  onGenerateVideo,
   onDisplayModeChange,
   onSaveTrainingData,
   isCharacter,
@@ -47,6 +50,7 @@ export function TopButtonRow({
   depthMapDisabled,
   depthMapGenerating,
   isUpscaling,
+  isGeneratingVideo,
   displayMode,
   hasDepthMap,
   trainingSaving,
@@ -98,7 +102,7 @@ export function TopButtonRow({
       )}
 
       {/* Show generate depth map button only when no depth map exists */}
-      {!hasDepthMap && (
+      {/* {!hasDepthMap && (
         <Button
           onClick={onGenerateDepthMap}
           className={styles.button}
@@ -111,7 +115,7 @@ export function TopButtonRow({
             <IconStack2 size={20} />
           )}
         </Button>
-      )}
+      )} */}
 
       {/* Upscale image button - spinner is shown in tree view on the node */}
       <Button
@@ -121,6 +125,20 @@ export function TopButtonRow({
         aria-label={`Upscale image (${UPSCALE_CONFIG.FACTOR}x)`}
       >
         <IconMaximize size={20} />
+      </Button>
+
+      {/* Generate video loop button */}
+      <Button
+        onClick={onGenerateVideo}
+        className={styles.button}
+        disabled={depthMapDisabled || isGeneratingVideo}
+        aria-label="Generate video loop"
+      >
+        {isGeneratingVideo ? (
+          <IconLoader2 size={20} className={styles.spinner} />
+        ) : (
+          <IconVideo size={20} />
+        )}
       </Button>
 
       {/* Show display mode button only when depth map exists */}
@@ -136,7 +154,7 @@ export function TopButtonRow({
       )}
 
       {/* Open external display window (WorldView only, no UI) */}
-      <Button
+      {/* <Button
         onClick={() => {
           const url = `${window.location.origin}${window.location.pathname}#view`;
           window.open(url, 'external-view', 'width=1920,height=1080,menubar=no,toolbar=no,location=no,status=no');
@@ -145,7 +163,7 @@ export function TopButtonRow({
         aria-label="Open external display"
       >
         <IconExternalLink size={20} />
-      </Button>
+      </Button> */}
 
       {/* Save training data (image + description) */}
       <Button

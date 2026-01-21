@@ -10,6 +10,7 @@ interface DisplayImage {
   originalSrc: string | null;
   upscaledSrc: string | null;
   depthSrc: string | null;
+  videoSrc: string | null;
   alt: string;
   mediaId: string | null;
 }
@@ -30,6 +31,7 @@ export function useWorldViewLogic() {
   
   const [isLoading, setIsLoading] = useState(true);
   const [hasImage, setHasImage] = useState(false);
+  const [videoUrl, setVideoUrl] = useState<string | null>(null);
 
   // Get active entity session
   const activeEntitySession = activeEntity ? entities.get(activeEntity) : null;
@@ -65,6 +67,7 @@ export function useWorldViewLogic() {
         originalSrc: null,
         upscaledSrc: null,
         depthSrc: null, // No depth map during generation
+        videoSrc: null,
         alt: `Generating ${spawnWithImage.prompt}...`,
         mediaId: null
       };
@@ -77,6 +80,8 @@ export function useWorldViewLogic() {
       let originalSrc: string | null = null;
       let upscaledSrc: string | null = null;
       
+      let videoSrc: string | null = null;
+      
       // Get all URL variants for progressive loading
       if (primaryMediaId) {
         const mediaUrls = await getMediaWithUrls(primaryMediaId);
@@ -84,6 +89,7 @@ export function useWorldViewLogic() {
           originalSrc = mediaUrls.originalUrl;
           upscaledSrc = mediaUrls.upscaledUrl;
           depthSrc = mediaUrls.depthMapUrl;
+          videoSrc = mediaUrls.videoUrl;
         }
       }
       
@@ -92,6 +98,7 @@ export function useWorldViewLogic() {
         originalSrc,
         upscaledSrc,
         depthSrc,
+        videoSrc,
         alt: activeEntitySession.entityName || 'Entity',
         mediaId: primaryMediaId
       };
@@ -147,6 +154,9 @@ export function useWorldViewLogic() {
       // Determine which image to load first (prefer original for faster initial display)
       const initialSrc = displayImage.originalSrc || displayImage.src;
       const hasUpscaled = displayImage.upscaledSrc && displayImage.upscaledSrc !== initialSrc;
+      
+      // Update video URL for overlay
+      setVideoUrl(displayImage.videoSrc);
       
       // Only reload if image changed
       if (initialSrc !== currentImageRef.current) {
@@ -263,6 +273,24 @@ export function useWorldViewLogic() {
     return () => window.removeEventListener('imageUpscaled', handleImageUpscaled);
   }, [activeEntity]);
 
+  // Listen for video generated events
+  useEffect(() => {
+    const handleVideoGenerated = async (event: Event) => {
+      const customEvent = event as CustomEvent<{ entityId: string; videoUrl: string; primaryMediaId: string }>;
+      const entityId = customEvent.detail?.entityId;
+      const newVideoUrl = customEvent.detail?.videoUrl;
+      
+      // Only react if this is the active entity
+      if (!entityId || entityId !== activeEntity || !newVideoUrl) return;
+      
+      console.log('[WorldView] Video generated event received:', newVideoUrl);
+      setVideoUrl(newVideoUrl);
+    };
+    
+    window.addEventListener('videoGenerated', handleVideoGenerated);
+    return () => window.removeEventListener('videoGenerated', handleVideoGenerated);
+  }, [activeEntity]);
+
   // Listen for display mode changes
   useEffect(() => {
     const handleDisplayModeChanged = (event: Event) => {
@@ -289,6 +317,7 @@ export function useWorldViewLogic() {
     checkForDepthMap,
     isLoading,
     hasImage,
+    videoUrl,
     rendererRef,
     // Model-specific styling
     imageModelClass

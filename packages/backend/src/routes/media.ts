@@ -128,10 +128,10 @@ router.post('/:id/url-variant', asyncHandler((req, res) => {
   if (!variant || !url) {
     return res.status(400).json({ success: false, error: 'Missing required fields: variant, url' });
   }
-  if (!['original', 'upscaled', 'depthMap'].includes(variant)) {
-    return res.status(400).json({ success: false, error: 'Invalid variant. Must be: original, upscaled, or depthMap' });
+  if (!['original', 'upscaled', 'depthMap', 'video'].includes(variant)) {
+    return res.status(400).json({ success: false, error: 'Invalid variant. Must be: original, upscaled, depthMap, or video' });
   }
-  const updatedMedia = mediaService.addUrlVariant(req.params.id, variant as 'original' | 'upscaled' | 'depthMap', url);
+  const updatedMedia = mediaService.addUrlVariant(req.params.id, variant as 'original' | 'upscaled' | 'depthMap' | 'video', url);
   if (!updatedMedia) return res.status(404).json({ success: false, error: 'Media not found' });
   res.json({ success: true, data: updatedMedia });
 }));

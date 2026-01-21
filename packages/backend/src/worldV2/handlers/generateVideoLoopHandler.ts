@@ -1,0 +1,243 @@
+/**
+ * Generate Video Loop Handler
+ * 
+ * Creates a seamless video loop from the current image using scene context.
+ * 
+ * Flow:
+ * 1. Get node and media data
+ * 2. Build video prompt using LLM based on scene context (weather, atmosphere, etc.)
+ * 3. Call video generation API with prompt + image
+ * 4. Save video URL to media entry
+ */
+
+import { Request, Response } from 'express';
+import { asyncHandler } from '../../middleware/errorHandler';
+import { HTTP_STATUS } from '../../config';
+import { generateVideo, generateText } from '../../services/mzoo';
+import { storageService } from '../../services/storage/storageService';
+import mediaService from '../../services/media/mediaService';
+import { PipelineHelper } from '../../engine/pipelines/shared/pipelineHelpers';
+import {
+  generateOperationId,
+  setupPipeline,
+  cleanupPipeline
+} from '../utils/routeUtils';
+
+/**
+ * Find host node by walking up the tree from any node
+ */
+function findHostForNode(worldsData: any, nodeId: string): any | null {
+  const node = worldsData.nodes[nodeId];
+  if (!node) return null;
+  if (node.type === 'host') return node;
+
+  if (node.type === 'view' && node.parentId) {
+    return findHostForNode(worldsData, node.parentId);
+  }
+
+  for (const hostTree of worldsData.worldTrees) {
+    if (findNodeInTree(hostTree, nodeId)) {
+      return worldsData.nodes[hostTree.id];
+    }
+  }
+  return null;
+}
+
+function findNodeInTree(tree: any, nodeId: string): boolean {
+  if (tree.id === nodeId) return true;
+  if (tree.children) {
+    for (const child of tree.children) {
+      if (findNodeInTree(child, nodeId)) return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * Build the LLM prompt to generate a video loop description
+ */
+function buildVideoPromptSystemPrompt(): string {
+  return `You are a video prompt specialist. Your task is to create brief, effective prompts for generating seamless video loops from static images.
+
+RULES:
+1. Camera MUST remain FIXED (no camera movement)
+2. Focus on subtle, natural ambient motion that can loop seamlessly
+3. Keep prompts concise (1-2 sentences max)
+4. Describe ONLY the motion, not the static scene
+
+MOTION TYPES BY ELEMENT:
+- Water: gentle ripples, waves rolling, reflections shimmering
+- Sky/clouds: slow drift, subtle color shifts at sunset/sunrise
+- Foliage: leaves rustling, branches swaying gently in breeze
+- Fire/flames: flickering flames, dancing firelight
+- Rain: drops falling, splashing in puddles, streaking down surfaces
+- Snow: flakes drifting down slowly
+- Fog/mist: swirling gently, drifting across scene
+- Light: rays shifting, shadows moving slightly, light filtering through
+- Fabric/curtains: gentle billowing, fabric rippling
+- Particles: dust motes floating, embers drifting
+
+OUTPUT FORMAT:
+Provide ONLY the video prompt, no explanations or preambles.`;
+}
+
+function buildVideoPromptUserPrompt(context: {
+  nodeName: string;
+  nodeDescription?: string;
+  timeOfDay?: string;
+  weather?: string;
+  atmosphere?: string;
+  environment?: string;
+  imagePrompt?: string;
+}): string {
+  const parts = [`Scene: ${context.nodeName}`];
+  
+  if (context.nodeDescription) parts.push(`Description: ${context.nodeDescription}`);
+  if (context.environment) parts.push(`Environment: ${context.environment}`);
+  if (context.timeOfDay) parts.push(`Time: ${context.timeOfDay.replace(/_/g, ' ')}`);
+  if (context.weather) parts.push(`Weather: ${context.weather}`);
+  if (context.atmosphere) parts.push(`Atmosphere: ${context.atmosphere}`);
+  if (context.imagePrompt) parts.push(`Image prompt: ${context.imagePrompt}`);
+  
+  parts.push('\nCreate a brief video loop prompt describing subtle ambient motion for this scene.');
+  
+  return parts.join('\n');
+}
+
+export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: Response) => {
+  const { nodeId, primaryMediaId } = req.body as { nodeId: string; primaryMediaId: string };
+
+  if (!nodeId || !primaryMediaId) {
+    res.status(HTTP_STATUS.BAD_REQUEST).json({
+      error: 'Missing required fields: nodeId, primaryMediaId'
+    });
+    return;
+  }
+
+  const apiKey = (req as any).mzooApiKey;
+  if (!apiKey) {
+    res.status(HTTP_STATUS.UNAUTHORIZED).json({
+      error: 'Missing API key'
+    });
+    return;
+  }
+
+  const operationId = generateOperationId('videoloop');
+  const eventsUrl = setupPipeline(operationId, 'videoLoop');
+
+  res.status(HTTP_STATUS.OK).json({
+    data: {
+      operationId,
+      eventsUrl,
+      command: 'GENERATE_VIDEO_LOOP'
+    }
+  });
+
+  (async () => {
+    const pipeline = new PipelineHelper(operationId, 'GENERATE_VIDEO_LOOP', 'videoLoop');
+    
+    try {
+      pipeline.started('Starting video loop generation...');
+
+      // ═══════════════════════════════════════════════════════════════════════
+      // Stage 1: Analyze scene context
+      // ═══════════════════════════════════════════════════════════════════════
+      pipeline.startStage('analyzing', 'Analyzing scene context...');
+
+      const worldsData = await storageService.loadWorlds();
+      if (!worldsData || !worldsData.nodes) {
+        throw new Error('No worlds data found in storage');
+      }
+
+      const node = worldsData.nodes[nodeId];
+      if (!node) {
+        throw new Error(`Node not found: ${nodeId}`);
+      }
+
+      const media = mediaService.getMediaById(primaryMediaId);
+      if (!media || !media.url) {
+        throw new Error('Media not found or has no URL');
+      }
+
+      // Get host for time/weather
+      const host = findHostForNode(worldsData, nodeId);
+      
+      // Extract context from node DNA
+      const nodeDNA = node.dna || {};
+      const semantic = nodeDNA.semantic || {};
+
+      const context = {
+        nodeName: node.name,
+        nodeDescription: node.description,
+        timeOfDay: host?.timeOfDay,
+        weather: host?.weather,
+        atmosphere: semantic.atmosphere,
+        environment: semantic.environment,
+        imagePrompt: media.metadata?.prompt
+      };
+
+      pipeline.completeStage('analyzing', 'Scene context analyzed');
+
+      // ═══════════════════════════════════════════════════════════════════════
+      // Stage 2: Generate video prompt using LLM
+      // ═══════════════════════════════════════════════════════════════════════
+      pipeline.startStage('prompting', 'Building video prompt...');
+
+      const systemPrompt = buildVideoPromptSystemPrompt();
+      const userPrompt = buildVideoPromptUserPrompt(context);
+
+      const textResult = await generateText(
+        apiKey,
+        [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: userPrompt }
+        ],
+        'gemini-2.5-flash'
+      );
+
+      if (textResult.error || !textResult.data?.text) {
+        throw new Error(textResult.error || 'Failed to generate video prompt');
+      }
+
+      const videoPrompt = textResult.data.text.trim();
+      pipeline.completeStage('prompting', `Prompt: ${videoPrompt.slice(0, 50)}...`);
+
+      // ═══════════════════════════════════════════════════════════════════════
+      // Stage 3: Generate video (22-35 seconds)
+      // ═══════════════════════════════════════════════════════════════════════
+      pipeline.startStage('generating', 'Generating video loop (this may take 30+ seconds)...');
+
+      const videoResult = await generateVideo(apiKey, videoPrompt, {
+        inputImage: media.url,
+        cameraFixed: true,
+        duration: 5,
+        aspectRatio: '16:9',
+        resolution: '480p'
+      });
+
+      if (videoResult.error || !videoResult.data?.videoURL) {
+        throw new Error(videoResult.error || 'Failed to generate video');
+      }
+
+      const videoUrl = videoResult.data.videoURL;
+
+      // Save video URL to media entry
+      mediaService.addUrlVariant(primaryMediaId, 'video', videoUrl);
+      
+      pipeline.completeStage('generating', 'Video generated');
+
+      // Send completion
+      pipeline.completed('Video loop generated successfully', {
+        nodeId,
+        primaryMediaId,
+        videoUrl,
+        videoPrompt
+      });
+
+    } catch (error) {
+      pipeline.error(error instanceof Error ? error : new Error(String(error)));
+    } finally {
+      cleanupPipeline(operationId);
+    }
+  })();
+});

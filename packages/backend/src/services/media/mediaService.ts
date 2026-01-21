@@ -159,7 +159,7 @@ class MediaService {
   /**
    * Add or update a URL variant for a media item
    */
-  addUrlVariant(id: string, variant: 'original' | 'upscaled' | 'depthMap', url: string): MediaItem | null {
+  addUrlVariant(id: string, variant: 'original' | 'upscaled' | 'depthMap' | 'video', url: string): MediaItem | null {
     const db = this.readMediaDB();
     const media = db.media[id];
 

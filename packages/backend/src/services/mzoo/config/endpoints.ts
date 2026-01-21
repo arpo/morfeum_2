@@ -10,7 +10,8 @@ export const ENDPOINTS = {
   IMAGE_GENERATION: `${MZOO_API_BASE}/ai/fal-flux-srpo/generate`,
   IMAGE_EDIT: `${MZOO_API_BASE}/ai/fal-flux-2-turbo-edit/edit`,
   IMAGE_UPSCALE: `${MZOO_API_BASE}/ai/seedvr-upscale-image/upscale`,
-  DEPTH_MAP: `${MZOO_API_BASE}/ai/fal-depth-anything-v2/process`
+  DEPTH_MAP: `${MZOO_API_BASE}/ai/fal-depth-anything-v2/process`,
+  VIDEO_GENERATION: `${MZOO_API_BASE}/ai/seedance-1-fast/generate`
 };
 
 export const DEFAULT_MODELS = {
@@ -39,4 +40,15 @@ export const DEFAULT_IMAGE_UPSCALE_SETTINGS = {
   TARGET_RESOLUTION: '1080p',
   NOISE_SCALE: 0.15,        // 0.1-0.2 range to avoid hallucination
   OUTPUT_FORMAT: 'png'      // PNG mandatory for quality
+};
+
+export const DEFAULT_VIDEO_SETTINGS = {
+  PROVIDER: 'atlascloud',
+  ASPECT_RATIO: '16:9',
+  RESOLUTION: '480p',
+  DURATION: 5,
+  FPS: 24,
+  CAMERA_FIXED: true,       // Fixed camera for seamless loops
+  OUTPUT_FORMAT: 'mp4',
+  OUTPUT_QUALITY: 85
 };

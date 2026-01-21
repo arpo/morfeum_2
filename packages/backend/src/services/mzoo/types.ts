@@ -127,3 +127,22 @@ export interface ImageUpscaleResponse {
     output_format: string;
   };
 }
+
+export interface VideoGenerationRequest {
+  provider?: 'atlascloud' | 'runware';
+  positivePrompt: string;
+  negativePrompt?: string;
+  inputImage?: string;
+  aspectRatio?: '16:9' | '9:16' | '1:1';
+  resolution?: '480p' | '720p';
+  size?: string;
+  duration?: number;
+  fps?: number;
+  cameraFixed?: boolean;
+  outputFormat?: 'mp4';
+  outputQuality?: number;
+}
+
+export interface VideoGenerationResponse {
+  videoURL: string;
+}

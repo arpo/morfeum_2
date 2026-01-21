@@ -39,7 +39,8 @@ export {
   IconEye,
   IconCompass,
   IconMicrophone,
-  IconPlayerStop
+  IconPlayerStop,
+  IconVideo
 } from '@tabler/icons-react';
 
 // Icon type for string references

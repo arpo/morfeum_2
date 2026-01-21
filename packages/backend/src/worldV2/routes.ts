@@ -19,7 +19,8 @@ import {
   setWeatherHandler,
   navigationAssistantHandler,
   editImageHandler,
-  redrawHandler
+  redrawHandler,
+  generateVideoLoopHandler
 } from './handlers';
 import { displayHandler } from './display';
 
@@ -69,5 +70,8 @@ router.post('/edit-image', editImageHandler);
 
 // REDRAW Command - Transform scene to current host conditions (wrapper around editImage)
 router.post('/redraw', redrawHandler);
+
+// GENERATE_VIDEO_LOOP - Create seamless ambient motion video from image
+router.post('/generate-video-loop', generateVideoLoopHandler);
 
 export { router as worldV2Router };

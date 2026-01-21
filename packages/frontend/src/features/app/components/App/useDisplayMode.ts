@@ -9,6 +9,7 @@ import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useLocationsStore } from '@/store/slices/locations';
 import { useDepthMapLogic } from '@/features/app/components/TopButtonRow/useDepthMapLogic';
 import { useImageUpscale } from '@/features/app/components/TopButtonRow/useImageUpscale';
+import { useVideoLoop } from '@/features/app/components/TopButtonRow/useVideoLoop';
 import { getDepthMapForMedia, clearMediaCache } from '@/services/mediaService';
 import type { DisplayMode } from '@/features/app/components/TopButtonRow/TopButtonRow';
 
@@ -30,9 +31,13 @@ export function useDisplayMode() {
   
   const { generateDepthMap, isGenerating: depthMapGenerating } = useDepthMapLogic();
   const { upscaleImage, isEntityUpscaling } = useImageUpscale();
+  const { generateVideoLoop, isEntityGenerating: isEntityGeneratingVideo } = useVideoLoop();
   
   // Check if current entity is being upscaled
   const isCurrentEntityUpscaling = activeEntity ? isEntityUpscaling(activeEntity) : false;
+  
+  // Check if current entity is generating video
+  const isCurrentEntityGeneratingVideo = activeEntity ? isEntityGeneratingVideo(activeEntity) : false;
 
   // Get primary media ID for current entity
   const getPrimaryMediaId = useCallback(() => {
@@ -85,6 +90,18 @@ export function useDisplayMode() {
     // Note: imageUpscaled event is already dispatched by useImageUpscale hook with proper detail
   }, [activeEntity, getPrimaryMediaId, isCharacter, upscaleImage]);
 
+  const handleGenerateVideo = useCallback(async () => {
+    if (!activeEntity) return;
+    
+    const primaryMediaId = getPrimaryMediaId();
+    if (!primaryMediaId) {
+      console.warn('No primary media found for entity:', activeEntity);
+      return;
+    }
+    
+    await generateVideoLoop(activeEntity, primaryMediaId);
+  }, [activeEntity, getPrimaryMediaId, generateVideoLoop]);
+
   const handleDisplayModeChange = useCallback((mode: DisplayMode) => {
     setDisplayMode(mode);
     localStorage.setItem('displayMode', mode);
@@ -136,8 +153,10 @@ export function useDisplayMode() {
     depthMapGenerating,
     depthMapDisabled,
     isUpscaling: isCurrentEntityUpscaling,
+    isGeneratingVideo: isCurrentEntityGeneratingVideo,
     handleGenerateDepthMap,
     handleUpscaleImage,
+    handleGenerateVideo,
     handleDisplayModeChange,
   };
 }

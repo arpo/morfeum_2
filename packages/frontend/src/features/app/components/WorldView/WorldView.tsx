@@ -14,6 +14,7 @@ export function WorldView() {
     initRenderer, 
     isLoading, 
     hasImage,
+    videoUrl,
     imageModelClass
   } = useWorldViewLogic();
   const [letterboxHeight, setLetterboxHeight] = useState(0);
@@ -66,6 +67,18 @@ export function WorldView() {
         className={`${styles.canvas} ${!isLoading && hasImage ? styles.loaded : ''}${imageModelClass ? ` ${styles[imageModelClass]}` : ''}`}
         data-model-class={imageModelClass || 'none'}
       />
+      
+      {/* Video overlay when video loop is available */}
+      {videoUrl && (
+        <video
+          className={styles.videoOverlay}
+          src={videoUrl}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      )}
       
       {/* Letterbox bars to enforce 16:9 aspect ratio */}
       {letterboxEnabled && letterboxHeight > 0 && (

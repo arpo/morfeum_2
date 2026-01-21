@@ -39,6 +39,7 @@ export function App() {
     depthMapGenerating,
     depthMapDisabled,
     isUpscaling,
+    isGeneratingVideo,
     trainingSaving,
     trainingSaved,
     
@@ -58,6 +59,7 @@ export function App() {
     handleOpenChat,
     handleGenerateDepthMap,
     handleUpscaleImage,
+    handleGenerateVideo,
     handleDisplayModeChange,
     handleSaveTrainingData,
     toggleEntityExplorerPanel,
@@ -87,6 +89,7 @@ export function App() {
             onOpenSavedEntities={() => setIsSavedEntitiesModalOpen(true)}
             onGenerateDepthMap={handleGenerateDepthMap}
             onUpscaleImage={handleUpscaleImage}
+            onGenerateVideo={handleGenerateVideo}
             onDisplayModeChange={handleDisplayModeChange}
             onSaveTrainingData={handleSaveTrainingData}
             isCharacter={isCharacter}
@@ -95,6 +98,7 @@ export function App() {
             depthMapDisabled={depthMapDisabled}
             depthMapGenerating={depthMapGenerating}
             isUpscaling={isUpscaling}
+            isGeneratingVideo={isGeneratingVideo}
             displayMode={displayMode}
             hasDepthMap={hasDepthMap}
             trainingSaving={trainingSaving}

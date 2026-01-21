@@ -45,6 +45,7 @@ export interface MediaItem {
     original?: string;       // Original generated image
     upscaled?: string;       // Upscaled version
     depthMap?: string;       // Depth map
+    video?: string;          // Video loop
   };
 }
 
