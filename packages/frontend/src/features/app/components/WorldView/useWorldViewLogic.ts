@@ -31,6 +31,7 @@ export function useWorldViewLogic() {
   const currentDepthRef = useRef<string | null>(null);
   const currentVideoRef = useRef<string | null>(null);
   const upscaledPreloadTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const upscaledCrossfadeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   
   const [isLoading, setIsLoading] = useState(true);
   const [hasImage, setHasImage] = useState(false);
@@ -162,6 +163,16 @@ export function useWorldViewLogic() {
       const hasVideo = !!displayImage.videoSrc;
       const hasUpscaled = !hasVideo && displayImage.upscaledSrc && displayImage.upscaledSrc !== initialSrc;
       
+      // DEBUG: Trace upscaled image loading decision
+      console.log('[WorldView] Image loading decision:', {
+        hasVideo,
+        hasUpscaled,
+        videoSrc: displayImage.videoSrc,
+        upscaledSrc: displayImage.upscaledSrc,
+        initialSrc,
+        upscaledDifferent: displayImage.upscaledSrc !== initialSrc
+      });
+      
       // Only reload if image changed
       if (initialSrc !== currentImageRef.current) {
         setIsLoading(true);
@@ -180,7 +191,10 @@ export function useWorldViewLogic() {
             // Re-enable particles only for still images (no video)
             if (!hasVideo) {
               rendererRef.current.setParticlesEnabled(true);
+              // Signal that content is ready for transition overlay to fade out
+              window.dispatchEvent(new CustomEvent('worldViewContentReady'));
             }
+            // For nodes with video, don't signal ready yet - wait for videoLoopReady event
             
             if (cancelled) return;
             
@@ -202,19 +216,36 @@ export function useWorldViewLogic() {
                 
                 // Preload upscaled image in background
                 const preloadImage = new Image();
-                preloadImage.onload = async () => {
+                preloadImage.onload = () => {
                   if (cancelled || !rendererRef.current) return;
                   
-                  // Only swap if we're still showing the same original image
-                  if (currentImageRef.current === initialSrc) {
-                    try {
-                      // Instant swap - no crossfade for cleaner transitions
-                      await rendererRef.current.load(upscaledUrl, displayImage.depthSrc);
-                      currentImageRef.current = upscaledUrl;
-                    } catch {
-                      // Load failed - silently ignore, original is still displayed
-                    }
+                  // Only crossfade if we're still showing the same original image
+                  if (currentImageRef.current !== initialSrc) return;
+                  
+                  // Clear any existing crossfade timeout
+                  if (upscaledCrossfadeTimeoutRef.current) {
+                    clearTimeout(upscaledCrossfadeTimeoutRef.current);
+                    upscaledCrossfadeTimeoutRef.current = null;
                   }
+                  
+                  // Wait before starting crossfade to let system settle
+                  upscaledCrossfadeTimeoutRef.current = setTimeout(async () => {
+                    if (cancelled || !rendererRef.current) return;
+                    if (currentImageRef.current !== initialSrc) return;
+                    
+                    try {
+                      // Smooth crossfade from original to upscaled (slower duration)
+                      await rendererRef.current.crossfadeTo(
+                        upscaledUrl, 
+                        displayImage.depthSrc, 
+                        IMAGE_LOADING_CONFIG.UPSCALED_CROSSFADE_DURATION_S
+                      );
+                      currentImageRef.current = upscaledUrl;
+                      console.log('[WorldView] High-res image crossfade complete:', upscaledUrl);
+                    } catch {
+                      // Crossfade failed - silently ignore, original is still displayed
+                    }
+                  }, IMAGE_LOADING_CONFIG.UPSCALED_CROSSFADE_DELAY_MS);
                 };
                 preloadImage.src = upscaledUrl;
               }, IMAGE_LOADING_CONFIG.UPSCALED_PRELOAD_DELAY_MS);
@@ -246,10 +277,14 @@ export function useWorldViewLogic() {
     
     return () => {
       cancelled = true;
-      // Clear upscaled preload timeout on node change
+      // Clear all upscaled-related timeouts on node change
       if (upscaledPreloadTimeoutRef.current) {
         clearTimeout(upscaledPreloadTimeoutRef.current);
         upscaledPreloadTimeoutRef.current = null;
+      }
+      if (upscaledCrossfadeTimeoutRef.current) {
+        clearTimeout(upscaledCrossfadeTimeoutRef.current);
+        upscaledCrossfadeTimeoutRef.current = null;
       }
     };
   }, [getDisplayImage]);
@@ -274,9 +309,11 @@ export function useWorldViewLogic() {
     return () => window.removeEventListener('depthMapGenerated', handleDepthMapGenerated);
   }, [checkForDepthMap]);
 
-  // Listen for image upscaled events - instant swap to upscaled image
+  // Listen for image upscaled events - crossfade to upscaled image
   useEffect(() => {
-    const handleImageUpscaled = async (event: Event) => {
+    let crossfadeTimeout: NodeJS.Timeout | null = null;
+    
+    const handleImageUpscaled = (event: Event) => {
       const customEvent = event as CustomEvent<{ entityId: string; newUrl: string; primaryMediaId: string }>;
       const entityId = customEvent.detail?.entityId;
       const newUrl = customEvent.detail?.newUrl;
@@ -284,24 +321,43 @@ export function useWorldViewLogic() {
       // Only react if this is the active entity
       if (!entityId || entityId !== activeEntity || !rendererRef.current || !newUrl) return;
       
-      // Preload the upscaled image before swapping
+      // Preload the upscaled image before crossfading
       const preloadImage = new Image();
-      preloadImage.onload = async () => {
+      preloadImage.onload = () => {
         if (!rendererRef.current) return;
         
-        try {
-          // Instant swap - no crossfade for cleaner transitions
-          await rendererRef.current.load(newUrl, currentDepthRef.current);
-          currentImageRef.current = newUrl;
-        } catch {
-          // Load failed - silently ignore
+        // Clear any existing crossfade timeout
+        if (crossfadeTimeout) {
+          clearTimeout(crossfadeTimeout);
         }
+        
+        // Wait briefly before starting crossfade to let system settle
+        crossfadeTimeout = setTimeout(async () => {
+          if (!rendererRef.current) return;
+          
+          try {
+            // Smooth crossfade to upscaled image (use configurable duration)
+            await rendererRef.current.crossfadeTo(
+              newUrl, 
+              currentDepthRef.current, 
+              IMAGE_LOADING_CONFIG.UPSCALED_CROSSFADE_DURATION_S
+            );
+            currentImageRef.current = newUrl;
+          } catch {
+            // Crossfade failed - silently ignore
+          }
+        }, IMAGE_LOADING_CONFIG.UPSCALED_CROSSFADE_DELAY_MS);
       };
       preloadImage.src = newUrl;
     };
     
     window.addEventListener('imageUpscaled', handleImageUpscaled);
-    return () => window.removeEventListener('imageUpscaled', handleImageUpscaled);
+    return () => {
+      window.removeEventListener('imageUpscaled', handleImageUpscaled);
+      if (crossfadeTimeout) {
+        clearTimeout(crossfadeTimeout);
+      }
+    };
   }, [activeEntity]);
 
   // Listen for video generated events - update video URL for overlay
@@ -314,6 +370,16 @@ export function useWorldViewLogic() {
       // Only react if this is the active entity
       if (!entityId || entityId !== activeEntity || !newVideoUrl) return;
       
+      // Cancel any pending upscaled preload/crossfade - video covers the image
+      if (upscaledPreloadTimeoutRef.current) {
+        clearTimeout(upscaledPreloadTimeoutRef.current);
+        upscaledPreloadTimeoutRef.current = null;
+      }
+      if (upscaledCrossfadeTimeoutRef.current) {
+        clearTimeout(upscaledCrossfadeTimeoutRef.current);
+        upscaledCrossfadeTimeoutRef.current = null;
+      }
+      
       // Disable particles when video starts (video has its own motion)
       rendererRef.current?.setParticlesEnabled(false);
       
@@ -324,6 +390,17 @@ export function useWorldViewLogic() {
     window.addEventListener('videoGenerated', handleVideoGenerated);
     return () => window.removeEventListener('videoGenerated', handleVideoGenerated);
   }, [activeEntity]);
+
+  // Listen for video loop ready - signal content ready for overlay fade-out
+  useEffect(() => {
+    const handleVideoLoopReady = () => {
+      // Forward to transition overlay system
+      window.dispatchEvent(new CustomEvent('worldViewContentReady'));
+    };
+    
+    window.addEventListener('videoLoopReady', handleVideoLoopReady);
+    return () => window.removeEventListener('videoLoopReady', handleVideoLoopReady);
+  }, []);
 
   // Listen for display mode changes
   useEffect(() => {

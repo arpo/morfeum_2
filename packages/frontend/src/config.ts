@@ -69,7 +69,7 @@ export const WORLD_VIEW_3D_CONFIG = {
   EASING: 0.5,
   
   /** Mesh resolution - higher = more detailed depth geometry (performance impact) */
-  MESH_RESOLUTION: 2048 *2,
+  MESH_RESOLUTION: 1024,
   
   /** Letterbox - black bars at top/bottom to enforce 16:9 aspect ratio */
   LETTERBOX: {
@@ -124,6 +124,10 @@ export const UPSCALE_CONFIG = {
 export const IMAGE_LOADING_CONFIG = {
   /** Delay before starting upscaled image preload (ms) - allows node transition to complete first */
   UPSCALED_PRELOAD_DELAY_MS: 1000,
+  /** Delay after preload completes before starting crossfade (ms) - lets system settle */
+  UPSCALED_CROSSFADE_DELAY_MS: 500,
+  /** Crossfade duration from original to upscaled (seconds) - slow for smooth transition */
+  UPSCALED_CROSSFADE_DURATION_S: 1.5,
 } as const;
 
 /**
@@ -133,6 +137,17 @@ export const IMAGE_LOADING_CONFIG = {
 export const VIDEO_LOOP_CONFIG = {
   /** Crossfade duration in milliseconds - used for both lead time and CSS transition */
   CROSSFADE_DURATION_MS: 600,
+} as const;
+
+/**
+ * Node Transition Overlay Configuration
+ * Settings for the cinematic black overlay during node transitions
+ */
+export const TRANSITION_OVERLAY_CONFIG = {
+  /** Overlay fade-in duration (ms) - how long to fade to black */
+  FADE_IN_MS: 400,
+  /** Overlay fade-out duration (ms) - how long to reveal new scene */
+  FADE_OUT_MS: 600,
 } as const;
 
 /**

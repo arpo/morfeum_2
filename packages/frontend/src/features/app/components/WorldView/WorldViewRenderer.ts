@@ -185,7 +185,7 @@ export class WorldViewRenderer {
     const newTexture = await textureLoader.loadAsync(imageUrl);
     const newAspectRatio = newTexture.image.width / newTexture.image.height;
 
-    // Start crossfade with old mesh/material
+    // Start crossfade with old mesh/material (keep old mesh in scene!)
     this.crossfadeState = startCrossfade(
       this.crossfadeState,
       this.mesh,
@@ -193,19 +193,33 @@ export class WorldViewRenderer {
       duration
     );
 
-    // Create new mesh
+    // Clear references but DON'T call cleanupMesh - old mesh stays in scene for crossfade
     this.mesh = null;
     this.material = null;
     this.imageAspectRatio = newAspectRatio;
     this.updateScissorDimensions();
 
+    // Create new mesh WITHOUT cleanup (use inline creation to avoid cleanupMesh call)
     if (depthUrl) {
-      await this.createMeshWithDepth(newTexture, depthUrl);
+      const depthData = await loadDepthMapData(depthUrl);
+      const geometry = createDepthGeometry(depthData, {
+        imageAspectRatio: this.imageAspectRatio,
+        meshResolution: this.meshResolution,
+        meshDepth: this.meshDepth
+      });
+      this.material = createDepthShaderMaterial(newTexture, this.focus, this.meshDepth);
+      this.mesh = new THREE.Mesh(geometry, this.material);
+      this.scaleMesh();
+      this.scene.add(this.mesh);
     } else {
-      this.createFlatMesh(newTexture);
+      const geometry = new THREE.PlaneGeometry(this.imageAspectRatio, 1);
+      this.material = createDepthShaderMaterial(newTexture, this.focus, 0);
+      this.mesh = new THREE.Mesh(geometry, this.material);
+      this.scaleMesh();
+      this.scene.add(this.mesh);
     }
 
-    // Prepare new material for fade-in
+    // Prepare new material for fade-in (start transparent, fade to opaque)
     if (this.material) {
       prepareNewMaterialForFadeIn(this.material as THREE.ShaderMaterial);
     }

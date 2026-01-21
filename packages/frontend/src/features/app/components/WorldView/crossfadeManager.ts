@@ -50,6 +50,8 @@ export function startCrossfade(
 
 /**
  * Update crossfade animation
+ * Uses "fade over" approach: old mesh stays at full opacity while new mesh fades IN over it.
+ * This prevents the "fade through gray" effect that happens with dual opacity fading.
  * @returns Updated state and whether crossfade is complete
  */
 export function updateCrossfade(
@@ -68,12 +70,13 @@ export function updateCrossfade(
     ? 2 * progress * progress
     : 1 - Math.pow(-2 * progress + 2, 2) / 2;
 
-  // Update opacities
+  // Keep old mesh at FULL OPACITY - it acts as the background
+  // Only fade IN the new mesh over it - this creates a true crossfade
   if (state.material?.uniforms?.opacity) {
-    state.material.uniforms.opacity.value = 1 - eased;
+    state.material.uniforms.opacity.value = 1.0; // Keep at full opacity
   }
   if (newMaterial?.uniforms?.opacity) {
-    newMaterial.uniforms.opacity.value = eased;
+    newMaterial.uniforms.opacity.value = eased; // Fade in new image over old
   }
 
   const complete = progress >= 1;

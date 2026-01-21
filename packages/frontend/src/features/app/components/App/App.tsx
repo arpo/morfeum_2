@@ -14,7 +14,9 @@ import { SavedEntitiesModal } from '@/features/saved-entities/SavedEntitiesModal
 import { EntityExplorerPanel } from '@/features/app/components/EntityExplorer/EntityExplorerPanel';
 import { TopButtonRow } from '@/features/app/components/TopButtonRow';
 import { WorldView } from '@/features/app/components/WorldView/WorldView';
+import { TransitionOverlay } from './TransitionOverlay';
 import { useAppLogic } from './useAppLogic';
+import { useNodeTransition } from './useNodeTransition';
 import { useStore } from '@/store';
 import styles from './App.module.css';
 
@@ -23,6 +25,13 @@ export function App() {
   const navigationAssistantOpen = useStore(state => state.navigationAssistantOpen);
   const closeNavigationAssistant = useStore(state => state.closeNavigationAssistant);
   const setNavigationInput = useStore(state => state.setNavigationInput);
+
+  // Node transition overlay state
+  const { 
+    isTransitioning, 
+    onOverlayFadedIn, 
+    onOverlayFadedOut 
+  } = useNodeTransition();
 
   // Handle command suggested by navigation assistant
   const handleCommandSuggested = (command: string) => {
@@ -70,6 +79,13 @@ export function App() {
     <div className={styles.container}>
       {/* Fullscreen World View (Background) */}
       <WorldView />
+      
+      {/* Cinematic transition overlay - dip to black between nodes */}
+      <TransitionOverlay 
+        isTransitioning={isTransitioning}
+        onFadedIn={onOverlayFadedIn}
+        onFadedOut={onOverlayFadedOut}
+      />
       
       {/* Focus mode hint */}
       {focusModeEnabled && (

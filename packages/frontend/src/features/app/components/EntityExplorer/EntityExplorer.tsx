@@ -7,6 +7,7 @@ import { IconWorld, IconMapPin, IconInfoCircle, IconEye } from '@/icons';
 import { findNodeInTree } from '@/utils/treeUtils';
 import { useEntityImages } from '@/hooks';
 import { getPrimaryMediaUrl, getEntityMedia, getMedia } from '@/services/mediaService';
+import { requestNodeTransition } from '@/utils/nodeTransition';
 
 export const EntityExplorer: React.FC = () => {
   // Data Stores - Locations
@@ -239,8 +240,10 @@ export const EntityExplorer: React.FC = () => {
     const id = item.id;
     
     const state = useStore.getState();
-    if (!state.entities.get(id)) {
-      // Create session
+    const existingEntity = state.entities.get(id);
+    
+    if (!existingEntity) {
+      // Create session for new entity
       if (type === 'location') {
         // Fetch full node data
         const node = useLocationsStore.getState().getNode(id);
@@ -278,9 +281,16 @@ export const EntityExplorer: React.FC = () => {
           updateEntityProfile(id, char.details as any);
         }
       }
+      // For new entities, just set directly (no overlay needed - content loading anyway)
+      setActiveEntity(id);
+    } else if (existingEntity.entityImage) {
+      // Entity exists with image - use cinematic transition overlay
+      requestNodeTransition(id);
+    } else {
+      // Entity exists but no image yet - direct switch
+      setActiveEntity(id);
     }
     
-    setActiveEntity(id);
     localStorage.setItem('lastActiveEntityId', id);
   }, [createEntity, setActiveEntity, updateEntityImage, updateEntityProfile]);
 

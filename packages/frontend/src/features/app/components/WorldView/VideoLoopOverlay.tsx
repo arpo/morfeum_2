@@ -104,7 +104,13 @@ export function VideoLoopOverlay({ videoUrl, isVisible, onFadeComplete }: VideoL
     // Start playing video A when ready
     const handleCanPlay = () => {
       setIsLoaded(true);
-      videoA.play().catch(() => {});
+      videoA.play().then(() => {
+        // Signal that video is playing and ready for overlay to fade out
+        // Add small delay to let video stabilize
+        setTimeout(() => {
+          window.dispatchEvent(new CustomEvent('videoLoopReady'));
+        }, 150);
+      }).catch(() => {});
     };
 
     videoA.addEventListener('canplay', handleCanPlay, { once: true });

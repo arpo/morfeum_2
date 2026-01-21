@@ -1,0 +1,38 @@
+/* TransitionOverlay - Cinematic black overlay for node transitions */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 1000; /* Above WorldView and all other content */
+  pointer-events: none;
+}
+
+/* Hidden state - fully transparent, no interaction */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Fading in - animating to black */
+.fadingIn {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--fade-in-duration) ease-in;
+}
+
+/* Fully visible - solid black */
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Fading out - revealing new content */
+.fadingOut {
+  opacity: 0;
+  visibility: visible;
+  transition: opacity var(--fade-out-duration) ease-out;
+}
