@@ -36,6 +36,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
   const getNode = useLocationsStore(state => state.getNode);
   const currentNode = activeEntityId ? getNode(activeEntityId) : null;
   const currentNodeType = currentNode?.type as 'host' | 'region' | 'location' | 'niche' | null;
+  const hasPrimaryMedia = currentNode?.primaryMedia ? true : false;
   
   // Get spawn input state from store
   const isMinimized = useStore(state => state.spawnInputMinimized);
@@ -185,6 +186,7 @@ export function SpawnInputBar({ onOpenSavedEntities }: SpawnInputBarProps) {
                 onChange={navigation.handlers.setMovementInput}
                 commands={NAVIGATION_COMMANDS}
                 currentNodeType={currentNodeType}
+                hasPrimaryMedia={hasPrimaryMedia}
                 onInvalidCommand={navigation.handlers.handleInvalidCommand}
                 onKeyPress={(e: KeyboardEvent<HTMLInputElement>) => {
                   if (e.key === 'Enter' && !navigation.state.isMoving) {

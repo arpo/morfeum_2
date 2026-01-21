@@ -1,5 +1,5 @@
 /**
- * NEW_LOCATION2 Command Handler
+ * NEW_LOCATION Command Handler
  */
 
 import type { ParsedCommand } from '@/features/spawn-input/SpawnInputBar/commandParser';
@@ -25,7 +25,7 @@ export async function handleNewLocationCommand(
   if (activeEntityType !== 'region') {
     return validationError(
       callbacks,
-      'NEW_LOCATION2 can only be used when focused on a region node'
+      'NEW_LOCATION can only be used when focused on a region node'
     );
   }
 
@@ -39,7 +39,7 @@ export async function handleNewLocationCommand(
   if (!text || !text.trim()) {
     return validationError(
       callbacks,
-      'Please provide a location concept (e.g., /NEW_LOCATION2 The old cathedral)'
+      'Please provide a location concept (e.g., /NEW_LOCATION The old cathedral)'
     );
   }
 
@@ -67,7 +67,7 @@ export async function handleNewLocationCommand(
       registerSpawn(
         data.operationId,
         data.eventsUrl,
-        `/NEW_LOCATION2 ${text}`,
+        `/NEW_LOCATION ${text}`,
         async (completedData: any) => {
           if (completedData.location) {
             await reloadAndSetActive(completedData.location.id);

@@ -24,7 +24,7 @@ import {
 // Re-export types
 export type { V2CommandCallbacks, V2CommandResult } from './types';
 
-const V2_COMMANDS = ['NEW_HOST', 'NEW_REGION2', 'NEW_LOCATION2', 'NEW_WORLD_LOCATION', 'NEW_WORLD_LOCATION_INTERIOR', 'GO_INSIDE', 'GOTO', 'LOOK', 'DISPLAY', 'SET_TIME', 'SET_WEATHER', 'EDIT_IMAGE'] as const;
+const V2_COMMANDS = ['NEW_HOST', 'NEW_REGION2', 'NEW_LOCATION', 'NEW_WORLD_LOCATION', 'NEW_WORLD_LOCATION_INTERIOR', 'GO_INSIDE', 'GOTO', 'LOOK', 'DISPLAY', 'SET_TIME', 'SET_WEATHER', 'EDIT_IMAGE'] as const;
 
 /**
  * Check if command is a V2 command
@@ -53,7 +53,7 @@ export async function handleV2Command(
       return handleNewWorldLocationInteriorCommand(parsedCommand, callbacks);
     case 'NEW_REGION2':
       return handleNewRegionCommand(parsedCommand, callbacks, activeEntityId, activeEntityType);
-    case 'NEW_LOCATION2':
+    case 'NEW_LOCATION':
       return handleNewLocationCommand(parsedCommand, callbacks, activeEntityId, activeEntityType);
     case 'DISPLAY':
       return handleDisplayCommand(parsedCommand, callbacks, activeEntityId, activeEntityType);

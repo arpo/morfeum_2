@@ -14,6 +14,7 @@ interface SlashCommandInputProps {
   onChange: (value: string) => void;
   commands: readonly string[];
   currentNodeType?: NodeType | null;
+  hasPrimaryMedia?: boolean;
   placeholder?: string;
   disabled?: boolean;
   onKeyPress?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
@@ -27,6 +28,7 @@ export function SlashCommandInput({
   onChange,
   commands,
   currentNodeType = null,
+  hasPrimaryMedia = false,
   placeholder,
   disabled,
   onKeyPress,
@@ -57,8 +59,8 @@ export function SlashCommandInput({
 
   // Get contextually available commands based on current node type
   const availableCommands = useMemo(() => {
-    return getAvailableCommands(currentNodeType);
-  }, [currentNodeType]);
+    return getAvailableCommands(currentNodeType, false, hasPrimaryMedia);
+  }, [currentNodeType, hasPrimaryMedia]);
 
   /**
    * Validate if the current input contains a valid command

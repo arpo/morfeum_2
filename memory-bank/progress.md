@@ -1,108 +1,20 @@
 # Progress
 
-## 2026-01-20 - Image Settings Optimization ✅
+## Recent Completed Work (2026-01)
 
-Optimized Flux 2 Turbo Edit and SeedVR Upscale settings for better image quality.
-
-**Configuration File:** `packages/backend/src/services/mzoo/config/endpoints.ts`
-
-### Flux 2 Turbo Edit Settings
-- `IMAGE_SIZE`: `{ width: 1440, height: 816 }` (custom dimensions, API max 1440px)
-- `OUTPUT_FORMAT`: `png` (better quality for upscaling)
-- Width 1440px = API maximum (256-1440px range)
-- Height 816px = close to 16:9 ratio, divisible by 16
-
-### SeedVR Upscale Settings
-- `UPSCALE_FACTOR`: 2 (2x upscale, ~4 seconds)
-- `NOISE_SCALE`: 0.15 (0.1-0.2 range avoids AI hallucination)
-- `OUTPUT_FORMAT`: `png` (mandatory per pro-tips)
-
-### Pro-Tips Applied
-- **Noise Scale 0.1-0.2**: Higher values cause upscaler to "hallucinate" new details
-- **PNG Mandatory**: Using JPG causes AI to upscale compression artifacts
-- **1088 Rule**: Use heights divisible by 16 (816 in our case) to avoid black bars
-- **2x Upscale**: Faster than 4x (~4s vs ~10s) with good quality
-
----
-
-## 2026-01-12 - NEW_WORLD_LOCATION_INTERIOR Command ✅
-
-Created `/NEW_WORLD_LOCATION_INTERIOR` - creates 4-node hierarchy from single concept.
-
-**Creates:** `Host → Region → Exterior Location → Interior Location` + interior image
-
-**Usage:**
-```
-/NEW_WORLD_LOCATION_INTERIOR the kitchen of a pub in Camden in London
-```
-
-**Pattern:** Same as `/NEW_WORLD_LOCATION` but 4 nodes instead of 3. Single LLM call generates all nodes.
-
-**Files:**
-- NEW: `prompts/worldLocationInterior.ts`, `handlers/newWorldLocationInteriorHandler.ts` (backend)
-- NEW: `commands/handlers/newWorldLocationInteriorHandler.ts` (frontend)
-- UPDATED: routes, indexes, pipelineConfig, navigation.ts
-
----
-
-## 2026-01-12 - MZOO Vision API Updated ✅
-
-Simplified vision API to use new mzoo endpoint with internal caching.
-
-**Changes:**
-- Response: `analysis` instead of `text`
-- Caching: Now internal to mzoo (no client-side cache management)
-- Code: `cachedVisionAnalysis.ts` simplified from ~120 to ~55 lines
-
-**Files:**
-- `packages/backend/src/services/mzoo/types.ts` - Updated `VisionAnalysisResponse`
-- `packages/backend/src/services/mzoo/services/cachedVisionAnalysis.ts` - Simplified
-
----
-
-## 2026-01-12 - NEW_WORLD_LOCATION Single LLM Call ✅
-
-Refactored `/NEW_WORLD_LOCATION` from 4 LLM calls to 1 for performance.
-
-**Before:** Categorization → Host → Region → Location (4 calls)
-**After:** worldLocationFull (1 call) → all 3 nodes at once
-
-**Modular Architecture:**
-- `shared/dnaSchema.ts` - Shared prompt sections (DNA_SCHEMA, HOST_RULES, etc.)
-- `worldLocationFull.ts` - Combined prompt using shared sections
-
----
-
-## 2026-01-12 - Weather & Time Commands ✅
-
-Added `/SET_TIME` and `/SET_WEATHER` slash commands.
-
-**Commands:**
-- `/SET_TIME <time>` - pre_dawn, dawn, morning, midday, afternoon, golden_hour, sunset, dusk, night, midnight
-- `/SET_WEATHER <description>` - Free text
-
-**Architecture:** Stored on host node, cascaded to children during `/DISPLAY` image generation.
-
----
-
-## 2026-01-12 - V2 Code Cleanup ✅
-
-- `promptBuilder.ts`: ~265 → ~70 lines (removed dead code)
-- `v2Commands.ts` (Frontend): 1 file → 8 files
-- `routes.ts` (Backend): 1 file → 7 files
-
----
-
-## 2026-01-13 - DNA Cascading Fix ✅
-
-Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = inherit, non-empty = REPLACE.
-
-**Files Modified:**
-- `promptBuilder.ts` - Fixed `mergeDNAArrays`
-- `goInside.ts` - Improved delta DNA enforcement
-- `goInsideHandler.ts` - Updated DNA handling
-
-**Note:** `promptBuilder.ts` has duplicate functions (`cascadeDNA` + `getMergedDNA`) - can consolidate later.
+- ✅ Image settings optimization (Flux 2 Turbo Edit + SeedVR Upscale)
+- ✅ NEW_WORLD_LOCATION_INTERIOR command (4-node hierarchy)
+- ✅ MZOO Vision API update (internal caching)
+- ✅ NEW_WORLD_LOCATION single LLM call optimization
+- ✅ Weather & time commands (/SET_TIME, /SET_WEATHER)
+- ✅ V2 code cleanup and modularization
+- ✅ DNA cascading fix (CSS-style inheritance)
+- ✅ V1 command cleanup (removed OLD commands, renamed V2 commands)
+- ✅ EDIT_IMAGE refactor to view pattern
+- ✅ ViewSlider/slideshow component removal (278 lines)
+- ✅ Media URL variants system (upscaled + depth maps)
+- ✅ Model name obfuscation + CSS filter consolidation
+- ✅ NEW_LOCATION2 → NEW_LOCATION rename
 
 ---
 
@@ -114,9 +26,9 @@ Fixed DNA inheritance to follow CSS-style (per fundamentals.md): empty array = i
 |---------|-------------|--------|
 | `/NEW_HOST` | Create world with DNA | ✅ |
 | `/NEW_REGION2` | Create region (delta DNA) | ✅ |
-| `/NEW_LOCATION2` | Create location (delta DNA) | ✅ |
+| `/NEW_LOCATION` | Create location (delta DNA) | ✅ |
 | `/NEW_WORLD_LOCATION` | Create Host+Region+Location (3 nodes) | ✅ |
-| `/NEW_WORLD_LOCATION_INTERIOR` | Create Host+Region+Exterior+Interior (4 nodes) | ✅ NEW |
+| `/NEW_WORLD_LOCATION_INTERIOR` | Create Host+Region+Exterior+Interior (4 nodes) | ✅ |
 | `/DISPLAY` | Generate image via LLM layers | ✅ |
 | `/SET_TIME` | Set time of day for world | ✅ |
 | `/SET_WEATHER` | Set weather conditions for world | ✅ |
@@ -211,8 +123,9 @@ prompts/
   - Renamed: GO_INSIDE2 → GO_INSIDE, GOTO2 → GOTO
 - [ ] Character spawn caching test
 - [ ] Bundle size optimization
+- [x] NEW_LOCATION2 → NEW_LOCATION rename (2026-01-21) ← COMPLETE
 - [ ] Future: Season support for Host node
-- [ ] Future: Rename NEW_REGION2 → NEW_REGION, NEW_LOCATION2 → NEW_LOCATION
+- [ ] Future: Rename NEW_REGION2 → NEW_REGION
 
 ---
 

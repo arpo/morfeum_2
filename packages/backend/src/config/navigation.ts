@@ -61,7 +61,7 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
     description: 'Create region in current host (V2 simplified DNA)',
     category: 'creation'
   },
-  NEW_LOCATION2: { 
+  NEW_LOCATION: { 
     requiresNodeType: ['region'], 
     description: 'Create location in current region (V2 simplified DNA)',
     category: 'creation'
@@ -129,15 +129,19 @@ export type CommandFlag = typeof COMMAND_FLAGS[keyof typeof COMMAND_FLAGS];
  * Get available commands for a given node type
  * @param currentNodeType - Type of current node
  * @param isPassThrough - True if current node is a pass-through region
+ * @param hasPrimaryMedia - True if current node already has an image (primaryMedia)
  */
 export function getAvailableCommands(
   currentNodeType: NodeType | null,
-  isPassThrough: boolean = false
+  isPassThrough: boolean = false,
+  hasPrimaryMedia: boolean = false
 ): string[] {
   return Object.entries(SLASH_COMMANDS)
-    .filter(([_, config]) => {
+    .filter(([name, config]) => {
       // Skip hidden commands (V1 commands kept for backward compatibility)
       if (config.hidden) return false;
+      // Hide DISPLAY command if node already has primaryMedia
+      if (name === 'DISPLAY' && hasPrimaryMedia) return false;
       // Command with null requiresNodeType is always available
       if (config.requiresNodeType === null) return true;
       // If no current node, only show commands that don't require a node

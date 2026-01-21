@@ -1,113 +1,12 @@
 # Active Context
 
-## 2026-01-20 - Image Settings Optimization ✅
-
-Optimized Flux 2 Turbo Edit and SeedVR Upscale settings for better image quality.
-
-### Configuration Changes
-
-**File:** `packages/backend/src/services/mzoo/config/endpoints.ts`
-
-**Flux 2 Turbo Edit (`DEFAULT_IMAGE_EDIT_SETTINGS`):**
-```typescript
-{
-  NUM_IMAGES: 1,
-  IMAGE_SIZE: { width: 1440, height: 816 },  // Max 1440px, 16:9 ratio, ÷16
-  GUIDANCE_SCALE: 2.5,
-  OUTPUT_FORMAT: 'png',  // PNG for quality before upscaling
-  ENABLE_SAFETY_CHECKER: false
-}
-```
-
-**SeedVR Upscale (`DEFAULT_IMAGE_UPSCALE_SETTINGS`):**
-```typescript
-{
-  UPSCALE_MODE: 'factor',
-  UPSCALE_FACTOR: 2,        // 2x upscale (fast, ~4 seconds)
-  TARGET_RESOLUTION: '1080p',
-  NOISE_SCALE: 0.15,        // 0.1-0.2 range avoids hallucination
-  OUTPUT_FORMAT: 'png'      // PNG mandatory for quality
-}
-```
-
-### Key Decisions
-
-| Setting | Value | Reason |
-|---------|-------|--------|
-| Width | 1440px | API max limit (256-1440px) |
-| Height | 816px | Close to 16:9, divisible by 16 |
-| Edit format | PNG | Better quality for upscaling |
-| Upscale factor | 2x | Faster (~4s vs ~10s for 4x) |
-| Noise scale | 0.15 | Sweet spot to avoid AI hallucination |
-| Upscale format | PNG | Mandatory per SeedVR pro-tips |
-
-### The "1088 Rule" (Reference)
-AI models process images in blocks of 8/16 pixels. Heights like 1080 cause artifacts. Use 1088 instead - but our API max is 1440px, so we use 816 (divisible by 16).
-
----
-
-## 2026-01-20 - V1 Command Cleanup ✅
-
-Cleaned up old V1 navigation/node creation commands that have been replaced by V2.
-
-### Commands Removed (Complete Deletion)
-
-| V1 Command | V2 Replacement | Status |
-|------------|----------------|--------|
-| `NEW_WORLD` | `NEW_WORLD_LOCATION` | DELETED |
-| `NEW_REGION` | `NEW_REGION2` | DELETED |
-| `NEW_LOCATION` | `NEW_LOCATION2` | DELETED |
-| `VIEW` | `DISPLAY` | DELETED |
-
-### Commands Renamed (V2 → Clean Names)
-
-| Old Name | New Name | Description |
-|----------|----------|-------------|
-| `GO_INSIDE2` | `GO_INSIDE` | Enter a space (V2 navigation) |
-| `GOTO2` | `GOTO` | Create sibling space within same container |
-
-The "2" suffix has been removed - V2 commands now use the clean original names.
-
-### Files Modified
-
-**Backend:**
-- `packages/backend/src/config/navigation.ts` - Removed V1 commands, renamed V2 commands
-- `packages/backend/src/worldV2/routes.ts` - Updated comments
-- `packages/backend/src/worldV2/handlers/goInsideHandler.ts` - Updated references
-- `packages/backend/src/worldV2/handlers/gotoHandler.ts` - Updated references
-- `packages/backend/src/worldV2/prompts/goInside.ts` - Updated references
-- `packages/backend/src/worldV2/prompts/imageEditPrompt.ts` - Updated references
-- `packages/backend/src/worldV2/prompts/navigationAssistant.ts` - Updated references
-- `packages/backend/src/worldV2/utils/styleLockCompiler.ts` - Updated comments
-- `packages/backend/src/engine/pipelines/shared/pipelineConfig.ts` - Updated comments
-- `packages/backend/src/engine/generation/prompts/cacheContent/index.ts` - Updated comments
-- `packages/backend/src/engine/nodeCreation/types/nodes.ts` - Updated comments
-
-**Frontend:**
-- `packages/frontend/src/worldV2/commands/index.ts` - Updated V2_COMMANDS array
-- `packages/frontend/src/worldV2/commands/handlers/goInsideHandler.ts` - Updated references
-- `packages/frontend/src/worldV2/commands/handlers/gotoHandler.ts` - Updated references
-- `packages/frontend/src/features/spawn-input/SpawnInputBar/commandParser.ts` - Deprecated V1 functions
-- `packages/frontend/src/features/spawn-input/SpawnInputBar/useNavigationLogic.ts` - Removed V1 references
-- `packages/frontend/src/features/spawn-input/SpawnInputBar/creationCommands.ts` - Deprecated V1 handler
-- `packages/frontend/src/features/spawn-input/SpawnInputBar/mediaCommands.ts` - Deprecated VIEW handler
-- `packages/frontend/src/utils/spawn/completionHandlers.ts` - Updated comments
-
-**Documentation:**
-- `memory-bank/systemPatterns.md` - Updated command names
-- `memory-bank/progress.md` - Updated command names
-- `packages/backend/src/engine/generation/prompts/PROMPT_INDEX.md` - Updated command names
-- `docs/go-inside-test-scenarios.md` - Updated command names
-
----
-
 ## Current Available Commands
 
 | Command | Category | Description |
 |---------|----------|-------------|
 | `/NEW_HOST` | Creation | Create world with DNA |
 | `/NEW_REGION2` | Creation | Create region (delta DNA) |
-| `/NEW_LOCATION2` | Creation | Create location (delta DNA) |
+| `/NEW_LOCATION` | Creation | Create location (delta DNA) |
 | `/NEW_WORLD_LOCATION` | Creation | Create Host+Region+Location (3 nodes) |
 | `/NEW_WORLD_LOCATION_INTERIOR` | Creation | Create Host+Region+Exterior+Interior (4 nodes) |
 | `/GO_INSIDE` | Navigation | Enter a space (V2 navigation) |
@@ -322,8 +221,44 @@ All related URLs now live on the same node, making the structure cleaner and eas
 
 ---
 
+## 2026-01-21 - NEW_LOCATION2 → NEW_LOCATION Rename ✅
+
+Completed the rename of `/NEW_LOCATION2` to `/NEW_LOCATION` for consistency with other V2 commands.
+
+### Commands Renamed
+
+| Old Name | New Name | Status |
+|----------|----------|--------|
+| `NEW_LOCATION2` | `NEW_LOCATION` | ✅ COMPLETE |
+
+### Files Modified
+
+**Backend:**
+- `packages/backend/src/config/navigation.ts` - Updated command name, description, and blockedOnPassThrough condition
+- `packages/backend/src/worldV2/handlers/newLocationHandler.ts` - Updated handler comments and command field
+
+**Frontend:**
+- `packages/frontend/src/worldV2/commands/index.ts` - Updated V2_COMMANDS array and case statement
+- `packages/frontend/src/worldV2/commands/handlers/newLocationHandler.ts` - Updated:
+  - Handler documentation comment
+  - Error messages (validation messages)
+  - Example usage text in error messages
+  - Spawn registration call command string
+
+### Current Command Names
+
+All V2 commands now use clean names without "2" suffix:
+- ✅ `/NEW_HOST`
+- ✅ `/NEW_REGION2` (still has "2" to distinguish from future region types)
+- ✅ `/NEW_LOCATION` (renamed from NEW_LOCATION2)
+- ✅ `/GO_INSIDE` (renamed from GO_INSIDE2)
+- ✅ `/GOTO` (renamed from GOTO2)
+- ✅ `/LOOK`
+- ✅ `/DISPLAY`
+
+---
+
 ## Next Steps
 
-- [ ] Consider renaming `NEW_REGION2` → `NEW_REGION` (after full V1 cleanup)
-- [ ] Consider renaming `NEW_LOCATION2` → `NEW_LOCATION` (after full V1 cleanup)
+- [ ] Consider renaming `NEW_REGION2` → `NEW_REGION` (after confirming no region type variants needed)
 - [ ] Future: Add season support to Host node
