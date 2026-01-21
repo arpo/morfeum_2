@@ -3,7 +3,7 @@
     "media-1768923183779-t2t3qi58v": {
       "id": "media-1768923183779-t2t3qi58v",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b299e/NLvqBtz49Yveue6orYVY1.jpg",
+      "url": "https://v3b.fal.media/files/b/0a8b442b/AA-4SYTlkyXuIceo89VZZ.jpg",
       "createdAt": "2026-01-20T15:33:03.779Z",
       "metadata": {
         "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nThe Celestial Citadel. An intricately designed stack of buildings, crafted from light-colored stone and reddish-orange brickwork, with numerous domed roofs, arched windows, balconies, and tall towers, soaring above the azure waters. A curved stone bridge with patterned surface extends outwards, and two large, spherical, clear blue glass orbs filled with water are featured beneath an arch and on the bridge.\n\nSTYLE LOCK — NON-NEGOTIABLE:\n\nIdentity:\n* intricate stacking of buildings\n* gravity-defying support\n\nMaterials:\n* domed terracotta roofs\n* arched doorways\n* balconies\n* patterned bridge surface\n\nColor & Light:\n* glowing water orbs\n* shadow play from towers\n\nAtmosphere:\n* majestic presence\n* ethereal quality\n\nBanned:\n* industrial elements\n* darkness\n* urban sprawl\n\nSCENE LAYERS:\n- Background: The vast, shimmering Azure Expanse stretches to the horizon, its clear, bright waters reflecting the midday sun. In the distance, the sky is a vibrant, cloudless azure.\n- Midground: The Celestial Citadel dominates the midground, an intricate stack of buildings crafted from light-colored stone and reddish-orange brickwork. Numerous domed terracotta roofs, arched windows, and ornate balconies create a sense of immense verticality. Tall, slender towers pierce the sky, casting dramatic shadow play onto the structures below. A grand, curved stone bridge with a distinctly patterned surface extends outwards from the citadel, seemingly floating above the water.\n- Foreground: At the base of the citadel, where the bridge begins its arc, two large, spherical, clear blue glass orbs filled with water are prominently featured. One rests beneath a majestic archway, while the other is positioned on the patterned surface of the bridge. The base of the citadel shows its imposing facade, hinting at the grandeur within.\n\nLIGHTING: The midday sun casts sharp, bright light, creating high contrast and illuminating the architectural details. The glowing water orbs shimmer intensely, reflecting the azure sky and the citadel's stonework. Shadow play from the tall towers adds depth and a sense of drama to the scene.\nATMOSPHERE: The Celestial Citadel exudes a majestic and ethereal quality, a testament to its intricate design and gravity-defying presence. The clear, bright atmosphere emphasizes its divine nature, a beacon of beauty in the Azure Expanse.\n\n[SPACE:] EXTERIOR - OUTSIDE view of the building/location\n[ENVIRONMENT:] clear and bright, midday\n[CAMERA:] camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context\n[LENS:] 12-24mm ultra-wide lens, elevated perspective, expansive framing\n[LIGHT:] directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions\n\n[NEG:] interior, indoor, inside room, indoor scene\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE: humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
@@ -50,16 +50,23 @@
         "model": "flux",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-a",
+        "upscaled": true,
+        "upscale_factor": 2
       },
       "entityRefs": [
         "v2-1768923178594-s0n665hx7"
-      ]
+      ],
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b299e/NLvqBtz49Yveue6orYVY1.jpg",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b442b/AA-4SYTlkyXuIceo89VZZ.jpg"
+      }
     },
     "media-1768923232804-lk3gtncvt": {
       "id": "media-1768923232804-lk3gtncvt",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b29a3/uuUNn1ZPPGk_ckexH_Gbt.png",
+      "url": "https://v3b.fal.media/files/b/0a8b442e/_SfHi6EeVhjSB8k9B84WK.jpg",
       "createdAt": "2026-01-20T15:33:52.804Z",
       "metadata": {
         "prompt": "Action:\nMove the camera forward and step into Citadel Antechamber.\n\nTarget location:\nInterior space carved inside The Celestial Citadel.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect midday conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nOrnate archways leading to other parts of the citadel, possibly featuring carved motifs consistent with the exterior.\nPolished light stone floor, showing the continuity of material from the exterior, with subtle patterns etched into its surface.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: The Celestial Citadel exudes a majestic and ethereal quality, a testament to its intricate design and gravity-defying presence. The clear, bright atmosphere emphasizes its divine nature, a beacon of beauty in the Azure Expanse.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nSmooth, pale stone walls curving upwards to a high, vaulted stone ceiling, subtly illuminated.\n\nInterior lighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday interior.\nA sense of awe and tranquility, with the air feeling still and sacred, preserving the ethereal quality of the citadel.\n\nPhysical constraints:\nSolid ceiling above. Fully enclosed interior. No sky visible.\nThe space is carved into the structure's mass — not a void containing the structure.\nThe structure itself is NOT visible as an object from inside.\nIndirect lighting only — light enters through openings not visible in frame.\nThe entrance is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible through ceiling\n* No open roof or atrium to sky\n* No exterior landscape visible\n* No exterior vegetation unless interior description specifies overgrowth/abandoned\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
@@ -78,17 +85,24 @@
         "model": "fal-flux-2-turbo-edit",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 2
       },
       "entityRefs": [
         "v2-1768923227983-fxg72o138"
       ],
-      "parentMedia": "media-1768923183779-t2t3qi58v"
+      "parentMedia": "media-1768923183779-t2t3qi58v",
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b29a3/uuUNn1ZPPGk_ckexH_Gbt.png",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b442e/_SfHi6EeVhjSB8k9B84WK.jpg"
+      }
     },
     "media-1768923290600-ggmbji38j": {
       "id": "media-1768923290600-ggmbji38j",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b29a9/ewmScfLnPsoANGzc3oJbM.png",
+      "url": "https://v3b.fal.media/files/b/0a8b4693/9plCBJNw-kFI8qe48Ow2y.jpg",
       "createdAt": "2026-01-20T15:34:50.600Z",
       "metadata": {
         "prompt": "Action:\nMove the camera forward and step into Tower Top Chamber.\n\nTarget location:\nInterior space carved inside The Celestial Citadel.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect midday conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nOrnate stone columns supporting a domed ceiling, with carved architectural detailing and perhaps the suggestion of a celestial map on the inner dome.\nSmooth, polished light-colored stone floor, reflecting the light from the windows and the interior ambiance.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: The Celestial Citadel exudes a majestic and ethereal quality, a testament to its intricate design and gravity-defying presence. The clear, bright atmosphere emphasizes its divine nature, a beacon of beauty in the Azure Expanse.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nInterior walls of light-colored stone and reddish-orange brickwork, leading to large, arched windows offering a vast view of the Azure Expanse and distant domed roofs.\n\nInterior lighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday interior.\nA sense of serene elevation and majestic grandeur, with the vastness of the sky and sea palpable through the expansive windows. The air feels clear and imbued with ethereal light.\n\nPhysical constraints:\nSolid ceiling above. Fully enclosed interior. No sky visible.\nThe space is carved into the structure's mass — not a void containing the structure.\nThe structure itself is NOT visible as an object from inside.\nIndirect lighting only — light enters through openings not visible in frame.\nThe entrance is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible through ceiling\n* No open roof or atrium to sky\n* No exterior landscape visible\n* No exterior vegetation unless interior description specifies overgrowth/abandoned\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
@@ -107,12 +121,19 @@
         "model": "fal-flux-2-turbo-edit",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 2
       },
       "entityRefs": [
         "v2-1768923283043-34pnyj7e2"
       ],
-      "parentMedia": "media-1768923183779-t2t3qi58v"
+      "parentMedia": "media-1768923183779-t2t3qi58v",
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b29a9/ewmScfLnPsoANGzc3oJbM.png",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b4693/9plCBJNw-kFI8qe48Ow2y.jpg"
+      }
     },
     "media-1768923528802-sijz28n8n": {
       "id": "media-1768923528802-sijz28n8n",
@@ -146,7 +167,7 @@
     "media-1768924309929-3olebnkik": {
       "id": "media-1768924309929-3olebnkik",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b2a0e/h5OeeJ4yMYvLJoMaxkYrX.jpg",
+      "url": "https://v3b.fal.media/files/b/0a8b4699/1nmOzO8g-ov_8B5cRJEsA.jpg",
       "createdAt": "2026-01-20T15:51:49.929Z",
       "metadata": {
         "prompt": "add a ship in the water",
@@ -167,12 +188,19 @@
         "width": 1024,
         "height": 576,
         "aspectRatio": "landscape_16_9",
-        "editedFrom": "media-1768923528802-sijz28n8n"
+        "editedFrom": "media-1768923528802-sijz28n8n",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 2
       },
       "entityRefs": [
         "v2-1768923518458-drbix64to"
       ],
-      "parentMedia": "media-1768923528802-sijz28n8n"
+      "parentMedia": "media-1768923528802-sijz28n8n",
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b2a0e/h5OeeJ4yMYvLJoMaxkYrX.jpg",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b4699/1nmOzO8g-ov_8B5cRJEsA.jpg"
+      }
     },
     "media-1768924855780-pshiq7lm3": {
       "id": "media-1768924855780-pshiq7lm3",
@@ -206,7 +234,7 @@
     "media-1768924989511-lxxqf0nx3": {
       "id": "media-1768924989511-lxxqf0nx3",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b2a52/Pd59FlR2olMqf_4vo-VZe.jpg",
+      "url": "https://v3b.fal.media/files/b/0a8b4690/sp7X6Pn6tutGqOhSh1jeU.jpg",
       "createdAt": "2026-01-20T16:03:09.511Z",
       "metadata": {
         "prompt": "add a crack in the ceiling",
@@ -227,12 +255,19 @@
         "width": 1024,
         "height": 576,
         "aspectRatio": "landscape_16_9",
-        "editedFrom": "media-1768923232804-lk3gtncvt"
+        "editedFrom": "media-1768923232804-lk3gtncvt",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 2
       },
       "entityRefs": [
         "v2-1768924989512-pux4tihah"
       ],
-      "parentMedia": "media-1768923232804-lk3gtncvt"
+      "parentMedia": "media-1768923232804-lk3gtncvt",
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b2a52/Pd59FlR2olMqf_4vo-VZe.jpg",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b4690/sp7X6Pn6tutGqOhSh1jeU.jpg"
+      }
     },
     "media-1768925468084-49a0r76jk": {
       "id": "media-1768925468084-49a0r76jk",
@@ -268,7 +303,7 @@
     "media-1768942669682-igr8wkvut": {
       "id": "media-1768942669682-igr8wkvut",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b313a/IH1KBVDn6eeA1YZEHjjAr.png",
+      "url": "https://v3b.fal.media/files/b/0a8b4696/n974MAdHSuf0odOeNFo4h.jpg",
       "createdAt": "2026-01-20T20:57:49.682Z",
       "metadata": {
         "prompt": "REFRAME THIS IMAGE:\n\nMove dramatically closer to the detailed carvings of the celestial map on the domed ceiling, framing it tightly to fill the view. Use 85mm lens, close shot, f/2.8.\n\nShow the map in the ceiling prominently - it should fill most of the frame.\n\nSame The Celestial Ceiling, same midday lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
@@ -287,17 +322,24 @@
         "model": "fal-flux-2-turbo-edit",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 2
       },
       "entityRefs": [
         "v2-1768942669683-xto80pph9"
       ],
-      "parentMedia": "media-1768924855780-pshiq7lm3"
+      "parentMedia": "media-1768924855780-pshiq7lm3",
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b313a/IH1KBVDn6eeA1YZEHjjAr.png",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b4696/n974MAdHSuf0odOeNFo4h.jpg"
+      }
     },
     "media-1768942716277-504x12iwx": {
       "id": "media-1768942716277-504x12iwx",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b313f/un-s5RqSuxrUNi2objvWf.png",
+      "url": "https://v3b.fal.media/files/b/0a8b4431/yLT24pxZs41Joek3nc9QT.jpg",
       "createdAt": "2026-01-20T20:58:36.277Z",
       "metadata": {
         "prompt": "REFRAME THIS IMAGE:\n\nMove closer to the celestial map, focusing on the region representing South America, until it fills the frame. Use 85mm lens, close shot, f/2.8.\n\nShow South America on the celestial map prominently - it should fill most of the frame.\n\nSame The Celestial Map Detail, same midday lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
@@ -316,12 +358,19 @@
         "model": "fal-flux-2-turbo-edit",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 2
       },
       "entityRefs": [
         "v2-1768942716279-8mmyj98xb"
       ],
-      "parentMedia": "media-1768942669682-igr8wkvut"
+      "parentMedia": "media-1768942669682-igr8wkvut",
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b313f/un-s5RqSuxrUNi2objvWf.png",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b4431/yLT24pxZs41Joek3nc9QT.jpg"
+      }
     },
     "media-1768943076502-r8egsm7eh": {
       "id": "media-1768943076502-r8egsm7eh",
@@ -355,7 +404,7 @@
     "media-1768943225978-g2pjdl0ig": {
       "id": "media-1768943225978-g2pjdl0ig",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b3172/icn30qTu2qiClU0LK4Eip.jpg",
+      "url": "https://v3b.fal.media/files/b/0a8b4434/YrIJ4xPZGbAk90kGwhJBG.jpg",
       "createdAt": "2026-01-20T21:07:05.978Z",
       "metadata": {
         "prompt": "set to night time, add glowing lights like fires lightning up the citadel",
@@ -376,12 +425,19 @@
         "width": 1024,
         "height": 576,
         "aspectRatio": "landscape_16_9",
-        "editedFrom": "media-1768943076502-r8egsm7eh"
+        "editedFrom": "media-1768943076502-r8egsm7eh",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 2
       },
       "entityRefs": [
         "v2-1768943225981-w3p0gtjy3"
       ],
-      "parentMedia": "media-1768943076502-r8egsm7eh"
+      "parentMedia": "media-1768943076502-r8egsm7eh",
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b3172/icn30qTu2qiClU0LK4Eip.jpg",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b4434/YrIJ4xPZGbAk90kGwhJBG.jpg"
+      }
     },
     "media-1768982662930-x8mqkoh49": {
       "id": "media-1768982662930-x8mqkoh49",
@@ -449,7 +505,7 @@
     "media-1768982712491-kc4fxcmx0": {
       "id": "media-1768982712491-kc4fxcmx0",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b40df/JsGeTSQ4VBOKRR73SKRJj.png",
+      "url": "https://v3b.fal.media/files/b/0a8b442a/GTaJyePsJESl924dxmIO9.jpg",
       "createdAt": "2026-01-21T08:05:12.491Z",
       "metadata": {
         "prompt": "Action:\nMove the camera forward and step into Main Chamber.\n\nTarget location:\nInterior space carved inside The Coral Pod.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect midday conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nRemnants of waterlogged furniture, such as a decaying couch with sodden cushions and a rusted metal table, are scattered across the chamber floor.\nA damp, uneven floor partially covered in fine silt and patches of marine growth. Small puddles of stagnant water reflect the dim light.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: A profound sense of 'nostalgic' abandonment permeates the scene. The 'derelict' state of the Coral Pod, combined with the quiet, clear weather, evokes a feeling of forgotten grandeur and a past life. The absence of any 'bustling activity' and the 'pristine structures' reinforces the isolation and decay. The colors are muted, dominated by the blues and greys of the sea and weathered materials, with the occasional vibrant, yet faded, pop of the red rug, enhancing the melancholic beauty.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nCurved, dark interior walls heavily encrusted with barnacles, algae, and mineral deposits, meeting a low, unseen ceiling obscured by shadows.\n\nInterior lighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday interior.\nA heavy, oppressive atmosphere of dampness and decay. The air feels still and cold, with the subtle, constant sound of dripping water and distant, muffled echoes from the sea.\n\nPhysical constraints:\nSolid ceiling above. Fully enclosed interior. No sky visible.\nThe space is carved into the structure's mass — not a void containing the structure.\nThe structure itself is NOT visible as an object from inside.\nIndirect lighting only — light enters through openings not visible in frame.\nThe entrance is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible through ceiling\n* No open roof or atrium to sky\n* No exterior landscape visible\n* No exterior vegetation unless interior description specifies overgrowth/abandoned\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
@@ -468,17 +524,24 @@
         "model": "fal-flux-2-turbo-edit",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 2
       },
       "entityRefs": [
         "v2-1768982703786-6qh62zsw8"
       ],
-      "parentMedia": "media-1768982662930-x8mqkoh49"
+      "parentMedia": "media-1768982662930-x8mqkoh49",
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b40df/JsGeTSQ4VBOKRR73SKRJj.png",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b442a/GTaJyePsJESl924dxmIO9.jpg"
+      }
     },
     "media-1768982821545-w5hj8d8er": {
       "id": "media-1768982821545-w5hj8d8er",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b40ea/OnM8O6ZWmrzjCwCB4DT09.png",
+      "url": "https://v3b.fal.media/files/b/0a8b4427/d4AN4ZmD6CW-3v-peVYk1.jpg",
       "createdAt": "2026-01-21T08:07:01.545Z",
       "metadata": {
         "prompt": "REFRAME THIS IMAGE:\n\nStep closer and frame the red bed tightly. Use 85mm lens, close shot, f/4.\n\nShow the red bed prominently - it should fill most of the frame.\n\nSame Main Chamber, same midday lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
@@ -497,12 +560,19 @@
         "model": "fal-flux-2-turbo-edit",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 2
       },
       "entityRefs": [
         "v2-1768982821546-nrgs8t5e5"
       ],
-      "parentMedia": "media-1768982712491-kc4fxcmx0"
+      "parentMedia": "media-1768982712491-kc4fxcmx0",
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b40ea/OnM8O6ZWmrzjCwCB4DT09.png",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b4427/d4AN4ZmD6CW-3v-peVYk1.jpg"
+      }
     },
     "media-1768982937796-wc6cmqsoz": {
       "id": "media-1768982937796-wc6cmqsoz",
@@ -646,6 +716,47 @@
       "urls": {
         "original": "https://v3b.fal.media/files/b/0a8b411c/jSTDkxcRcZqWHXscyiBPc.png",
         "upscaled": "https://v3b.fal.media/files/b/0a8b43f8/_4JivXcrPw-hSZ3XtCcyt.jpg"
+      }
+    },
+    "media-1768998173934-xj5pie0wh": {
+      "id": "media-1768998173934-xj5pie0wh",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b46eb/meEayHg5IDPtqWc2-dwJU.jpg",
+      "createdAt": "2026-01-21T12:22:53.935Z",
+      "metadata": {
+        "prompt": "Transform this scene to night lighting conditions with clear and calm weather . lights from city in the distance",
+        "promptLayers": {
+          "name": "The Coral Pod",
+          "description": "A large, partially submerged cylindrical module, encrusted with rocks and marine life, featuring circular openings revealing its derelict interior with remnants of furniture.",
+          "background": "The muted, blue-grey expanse of the calm, clear midday sea stretches out behind the Coral Pod, with the distant, hazy silhouettes of other derelict structures in the Sunken District hinting at the vastness of Aethelgard's submerged city.",
+          "midground": "The Coral Pod itself dominates the midground, a massive, cylindrical structure emerging from the water. Its 'weathered facade' is heavily 'encrusted with rocks and marine life', giving it a barnacle-covered, organic appearance. Circular openings, dark and cavernous, punctuate the structure, offering tantalizing glimpses of its 'derelict interior' (though the focus is exterior). A 'rusty metal ladder' clings precariously to one side, leading up towards an unseen upper level. Scattered 'wooden debris' floats around its base in the shallow, clear water. A splash of unexpected color comes from a tattered 'red rug' partially submerged near the entrance, adorned with faded 'cushions'.",
+          "foreground": "The 'street-level' perspective places us close to the water's edge. The 'overgrown crevices' of the Coral Pod's lower sections are visible, teeming with small sea plants and algae. Ripples from the calm water gently lap at the base of the module. The sandy, water-worn ground of the Sunken District's submerged 'street' is implied, with perhaps a few more scattered pieces of 'wooden debris'. The camera's '25-30° tilt up' emphasizes the imposing scale of the Coral Pod above.",
+          "lighting": "The 'midday' sun casts a 'soft, diffused light' across the entire scene. Sunlight penetrates the circular openings, creating subtle, ethereal glows within the dark recesses of the Coral Pod, hinting at the 'soft, diffused light through openings' without revealing the interior details. The clear, calm weather ensures no harsh shadows, creating a gentle illumination that highlights the textures of the marine life and weathered metal. The overall light is bright but not glaring, with a slight underwater quality due to the proximity to the sea.",
+          "atmosphere": "A profound sense of 'nostalgic' abandonment permeates the scene. The 'derelict' state of the Coral Pod, combined with the quiet, clear weather, evokes a feeling of forgotten grandeur and a past life. The absence of any 'bustling activity' and the 'pristine structures' reinforces the isolation and decay. The colors are muted, dominated by the blues and greys of the sea and weathered materials, with the occasional vibrant, yet faded, pop of the red rug, enhancing the melancholic beauty."
+        },
+        "promptData": {
+          "command": "REDRAW",
+          "editPrompt": "Transform this scene to night lighting conditions with clear and calm weather . lights from city in the distance",
+          "timeOfDay": "night",
+          "weather": "clear and calm",
+          "trailingCommand": "lights from city in the distance"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1024,
+        "height": 576,
+        "aspectRatio": "landscape_16_9",
+        "editedFrom": "media-1768982937796-wc6cmqsoz",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 2
+      },
+      "entityRefs": [
+        "v2-1768998173936-bdo0iuih9"
+      ],
+      "parentMedia": "media-1768982937796-wc6cmqsoz",
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b46e9/k_d6Vun_lZkA_1RVs8D39.jpg",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b46eb/meEayHg5IDPtqWc2-dwJU.jpg"
       }
     }
   }

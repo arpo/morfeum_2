@@ -18,6 +18,9 @@
 - ✅ Progressive image loading (original → upscaled crossfade)
 - ✅ Per-node upscaling state with tree view spinners
 - ✅ HD badge for upscaled nodes in tree view
+- ✅ /REDRAW command (wrapper around EDIT_IMAGE)
+- ✅ Wrapper commands documentation (`docs/wrapper-commands.md`)
+- ✅ PipelineHelper refactor for editImageHandler/redrawHandler
 
 ---
 
@@ -39,6 +42,7 @@
 | `/GOTO` | Create sibling space in container | ✅ |
 | `/LOOK` | Camera control within same space | ✅ |
 | `/EDIT_IMAGE` | Edit existing image with prompt | ✅ |
+| `/REDRAW` | Redraw scene with host time/weather | ✅ |
 | **Navigation Assistant** | In-app chat for command help | ✅ |
 
 ### Phase 5-6: Navigation ✅ COMPLETE
@@ -91,6 +95,8 @@ handlers/
 ├── navigationAssistantHandler.ts  ← NEW
 ├── setTimeHandler.ts
 ├── setWeatherHandler.ts
+├── editImageHandler.ts
+├── redrawHandler.ts        ← NEW (wrapper command)
 └── eventsHandler.ts
 ```
 

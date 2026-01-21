@@ -18,13 +18,14 @@ import {
   handleDisplayCommand,
   handleSetTimeCommand,
   handleSetWeatherCommand,
-  handleEditImageCommand
+  handleEditImageCommand,
+  handleRedrawCommand
 } from './handlers';
 
 // Re-export types
 export type { V2CommandCallbacks, V2CommandResult } from './types';
 
-const V2_COMMANDS = ['NEW_HOST', 'NEW_REGION2', 'NEW_LOCATION', 'NEW_WORLD_LOCATION', 'NEW_WORLD_LOCATION_INTERIOR', 'GO_INSIDE', 'GOTO', 'LOOK', 'DISPLAY', 'SET_TIME', 'SET_WEATHER', 'EDIT_IMAGE'] as const;
+const V2_COMMANDS = ['NEW_HOST', 'NEW_REGION2', 'NEW_LOCATION', 'NEW_WORLD_LOCATION', 'NEW_WORLD_LOCATION_INTERIOR', 'GO_INSIDE', 'GOTO', 'LOOK', 'DISPLAY', 'SET_TIME', 'SET_WEATHER', 'EDIT_IMAGE', 'REDRAW'] as const;
 
 /**
  * Check if command is a V2 command
@@ -69,6 +70,8 @@ export async function handleV2Command(
       return handleLookCommand(parsedCommand, callbacks, activeEntityId || undefined);
     case 'EDIT_IMAGE':
       return handleEditImageCommand(parsedCommand, callbacks, activeEntityId, activeEntityType);
+    case 'REDRAW':
+      return handleRedrawCommand(parsedCommand, callbacks, activeEntityId, activeEntityType);
     default:
       return { success: false, error: `Unknown V2 command: ${command}` };
   }

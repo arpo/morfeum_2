@@ -164,9 +164,7 @@ export const PIPELINE_STEPS = {
   
   /** V2: EDIT_IMAGE - Edit existing image with text prompt */
   v2Edit: [
-    { id: 'loading', name: 'Loading Node Data', duration: 500 },
-    { id: 'editing', name: 'Editing Image', duration: 6000 },
-    { id: 'saving', name: 'Saving Changes', duration: 500 },
+    { id: 'editing', name: 'Editing Image', duration: 6500 },
   ]
 } as const;
 

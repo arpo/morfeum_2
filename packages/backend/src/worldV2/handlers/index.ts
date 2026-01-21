@@ -15,3 +15,4 @@ export { setTimeHandler } from './setTimeHandler';
 export { setWeatherHandler } from './setWeatherHandler';
 export { navigationAssistantHandler } from './navigationAssistantHandler';
 export { editImageHandler } from './editImageHandler';
+export { redrawHandler } from './redrawHandler';

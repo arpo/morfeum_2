@@ -16,6 +16,7 @@
 | `/SET_TIME` | Media | Set time of day for world |
 | `/SET_WEATHER` | Media | Set weather conditions |
 | `/EDIT_IMAGE` | Media | Edit existing image with prompt |
+| `/REDRAW` | Media | Redraw scene with current time/weather |
 | `/CREATE_CHARACTER_REAL` | Creation | Create realistic character |
 | `/CREATE_CHARACTER_UNREAL` | Creation | Create fantastical character |
 
@@ -419,7 +420,65 @@ Enhanced the image upscaling experience with progressive loading (original → u
 
 ---
 
+## 2026-01-21 - REDRAW Command & Wrapper Pattern ✅
+
+Added `/REDRAW` command as a **wrapper command** around `/EDIT_IMAGE`. Also documented the wrapper command pattern for future commands.
+
+### What is a Wrapper Command?
+
+A **wrapper command** takes simple input and builds a specific prompt based on context, then delegates to a **backbone command**:
+
+- **Backbone commands** (do heavy lifting): `/EDIT_IMAGE`, `/LOOK`
+- **Wrapper commands** (convenience): `/REDRAW`, future: `/SEASON`, `/DAMAGE`, `/ZOOM`
+
+### /REDRAW Implementation
+
+**How it works:**
+1. Backend finds parent host → gets `timeOfDay` + `weather`
+2. Builds prompt: "Transform this scene to {time} lighting conditions with {weather} weather"
+3. Generates descriptive view name: "Night view", "Stormy dusk", etc.
+4. Delegates to same editImage pipeline as `/EDIT_IMAGE`
+5. Creates view node (non-destructive)
+
+**Usage:**
+```
+/REDRAW                    → Uses host's timeOfDay + weather
+/REDRAW add dramatic fog   → Conditions + custom instructions
+```
+
+### Files Created/Modified
+
+**Backend:**
+- `handlers/redrawHandler.ts` - NEW wrapper handler
+- `handlers/editImageHandler.ts` - Refactored to use PipelineHelper
+- `handlers/index.ts` - Export redrawHandler
+- `routes.ts` - Added `/api/v2/redraw` route
+- `config/navigation.ts` - Added REDRAW command config
+
+**Frontend:**
+- `commands/handlers/redrawHandler.ts` - NEW thin wrapper
+- `commands/handlers/index.ts` - Export
+- `commands/index.ts` - Added to V2_COMMANDS + switch
+
+**Documentation:**
+- `docs/wrapper-commands.md` - NEW comprehensive guide for creating wrapper commands
+
+### Handler Refactoring
+
+Both handlers now use `PipelineHelper` for proper elapsed time output:
+```
+[EDIT_IMAGE] completed in 5.40s
+  Stage Timings:
+    - Loading: 0.05s
+    - Editing: 5.23s
+    - Saving: 0.12s
+  Total: 5.40s
+```
+
+---
+
 ## Next Steps
 
 - [ ] Consider renaming `NEW_REGION2` → `NEW_REGION` (after confirming no region type variants needed)
 - [ ] Future: Add season support to Host node
+- [ ] Future wrapper commands: `/SEASON`, `/DAMAGE`, `/POPULATE`, `/ZOOM`, `/AERIAL`

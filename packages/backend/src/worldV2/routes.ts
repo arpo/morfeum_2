@@ -18,7 +18,8 @@ import {
   setTimeHandler,
   setWeatherHandler,
   navigationAssistantHandler,
-  editImageHandler
+  editImageHandler,
+  redrawHandler
 } from './handlers';
 import { displayHandler } from './display';
 
@@ -65,5 +66,8 @@ router.post('/navigation-assistant/chat', navigationAssistantHandler);
 
 // EDIT_IMAGE Command - Edit existing node image with text prompt
 router.post('/edit-image', editImageHandler);
+
+// REDRAW Command - Transform scene to current host conditions (wrapper around editImage)
+router.post('/redraw', redrawHandler);
 
 export { router as worldV2Router };

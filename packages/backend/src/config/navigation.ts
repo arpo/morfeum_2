@@ -89,6 +89,12 @@ export const SLASH_COMMANDS: Record<string, SlashCommandConfig> = {
     description: 'Set weather conditions for the world (e.g., heavy rain, foggy)',
     category: 'media'
   },
+  REDRAW: { 
+    requiresNodeType: ['host', 'region', 'location', 'niche', 'container', 'space', 'view'], 
+    blockedOnPassThrough: true,
+    description: 'Redraw scene with current time/weather conditions',
+    category: 'media'
+  },
   
   // Character creation commands
   CREATE_CHARACTER_REAL: {
