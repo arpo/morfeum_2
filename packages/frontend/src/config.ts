@@ -107,6 +107,17 @@ export const WORLD_VIEW_3D_CONFIG = {
 } as const;
 
 /**
+ * Image Upscaling Configuration
+ */
+export const UPSCALE_CONFIG = {
+  /** Upscale multiplier (2x, 4x, etc.) */
+  FACTOR: 2,
+  
+  /** Noise scale for upscaling (0.0 = no noise, 1.0 = max noise) */
+  NOISE_SCALE: 0.1,
+} as const;
+
+/**
  * Application Settings
  * Add other app-wide configuration here as needed
  */

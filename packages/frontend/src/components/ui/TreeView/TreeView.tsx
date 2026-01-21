@@ -3,6 +3,7 @@ import { IconChevronDown, IconTrash, IconArrowBadgeRight, IconLoader2 } from '@/
 import { InlineConfirm } from '@/components/ui/InlineConfirm';
 import { useLocationsStore } from '@/store/slices/locations';
 import { useStore } from '@/store';
+import { UPSCALE_CONFIG } from '@/config';
 import styles from './TreeView.module.css';
 
 export interface TreeItem {
@@ -111,7 +112,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
           )}
           {/* HD badge for upscaled images */}
           {item.isUpscaled && !isUpscaling && (
-            <div className={styles.hdBadge} title="Upscaled (4x)">
+            <div className={styles.hdBadge} title={`Upscaled (${UPSCALE_CONFIG.FACTOR}x)`}>
               HD
             </div>
           )}

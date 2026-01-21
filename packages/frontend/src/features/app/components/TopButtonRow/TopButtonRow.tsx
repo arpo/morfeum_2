@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui';
 import { IconLayoutSidebar, IconInfoCircle, IconMessageCircle, IconStack2, IconLoader2, Icon3dCubeSphere, IconExternalLink, IconCamera, IconCheck, IconBookmark, IconMaximize } from '@/icons';
+import { UPSCALE_CONFIG } from '@/config';
 import styles from './TopButtonRow.module.css';
 
 export type DisplayMode = '2d' | 'full' | 'hsbs';
@@ -117,7 +118,7 @@ export function TopButtonRow({
         onClick={onUpscaleImage}
         className={styles.button}
         disabled={depthMapDisabled || isUpscaling}
-        aria-label="Upscale image (4x)"
+        aria-label={`Upscale image (${UPSCALE_CONFIG.FACTOR}x)`}
       >
         <IconMaximize size={20} />
       </Button>

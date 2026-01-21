@@ -3,6 +3,7 @@ import { getMedia, clearMediaCache } from '@/services/mediaService';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useLocationsStore } from '@/store/slices/locations';
 import { useStore } from '@/store';
+import { UPSCALE_CONFIG } from '@/config';
 
 interface UpscaleResult {
   success: boolean;
@@ -53,8 +54,8 @@ export function useImageUpscale() {
         body: JSON.stringify({
           inputImage: mediaItem.url,
           upscale_mode: 'factor',
-          upscale_factor: 4,
-          noise_scale: 0.1,
+          upscale_factor: UPSCALE_CONFIG.FACTOR,
+          noise_scale: UPSCALE_CONFIG.NOISE_SCALE,
           output_format: 'jpg'
         })
       });
@@ -139,7 +140,7 @@ export function useImageUpscale() {
           metadata: {
             ...mediaItem.metadata,
             upscaled: true,
-            upscale_factor: 4
+            upscale_factor: UPSCALE_CONFIG.FACTOR
           }
         })
       });
