@@ -9,7 +9,7 @@ import { Button, LoadingSpinner, DraggablePanel } from '@/components/ui';
 import { IconCompass, IconTrash, IconArrowBadgeRight, IconCopy, IconCheck, IconMicrophone, IconPlayerStop, IconLoader2 } from '@/icons';
 import { useNavigationAssistant } from './useNavigationAssistant';
 import { useVoiceInput } from '@/hooks';
-import styles from './NavigationAssistantPanel.module.css';
+import styles from './styles';
 import type { NavigationAssistantPanelProps } from './types';
 
 export function NavigationAssistantPanel({ onClose, onCommandSuggested }: NavigationAssistantPanelProps) {

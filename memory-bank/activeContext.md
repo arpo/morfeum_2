@@ -175,6 +175,52 @@ const effectiveParentId = sourceNode?.type === 'view' && sourceNode?.parentId
 
 ---
 
+## 2026-01-21 - ViewSlider/Slideshow Component Removal ✅
+
+Removed the legacy ViewSlider component that allowed navigating between multiple image views with arrow buttons and dot indicators.
+
+### Problem
+
+The slideshow UI was a leftover from when `/EDIT_IMAGE` replaced images. Now that both `/EDIT_IMAGE` and `/LOOK` create view nodes in the tree, the slideshow UI conflicts with the tree-based navigation model.
+
+### What Was Removed
+
+**WorldView.tsx (118 → 85 lines, -33 lines):**
+- ❌ Arrow button imports (`IconChevronLeft`, `IconChevronRight`)
+- ❌ View state from hook (`views`, `currentViewIndex`, navigation functions)
+- ❌ Navigation control variables (`showNavigation`, `canGoPrevious`, `canGoNext`)
+- ❌ Entire navigation JSX block (~30 lines of arrow buttons and dot indicators)
+
+**useWorldViewLogic.ts (391 → 219 lines, -172 lines):**
+- ❌ `MediaView` interface
+- ❌ View state (`views`, `currentViewIndex`, `canShowViews`)
+- ❌ `fetchViews()` - loaded all media for entity
+- ❌ `goToPreviousView()`, `goToNextView()`, `goToView()` - navigation callbacks
+- ❌ Keyboard navigation useEffect (ArrowLeft/ArrowRight)
+- ❌ Image generation events useEffect (refreshed view list)
+- ❌ Unused imports (`useMemo`, `getEntityMedia`, `clearEntityMediaCache`)
+
+**WorldView.module.css (215 → 142 lines, -73 lines):**
+- ❌ `.arrowButton` styles (positioned buttons with backdrop blur)
+- ❌ `.arrowLeft` and `.arrowRight` positioning
+- ❌ `.viewDots` container (bottom-centered indicator bar)
+- ❌ `.viewDot` and `.viewDotActive` indicator styles
+
+### Impact
+
+**Total: 278 lines removed**
+
+Users now navigate between views using the world tree structure (clicking nodes) instead of arrow buttons. This aligns with the hierarchical view model where views are proper nodes in the tree.
+
+### Current State
+
+- WorldView displays only the active entity's primary image
+- No slideshow controls overlay the image
+- Navigation happens through the entity tree UI
+- View nodes are visible in the tree as children of their parent locations
+
+---
+
 ## Next Steps
 
 - [ ] Consider renaming `NEW_REGION2` → `NEW_REGION` (after full V1 cleanup)

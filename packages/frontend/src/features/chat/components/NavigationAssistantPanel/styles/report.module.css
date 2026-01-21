@@ -1,0 +1,63 @@
+/**
+ * Navigation Assistant Panel - Developer Report Block Styles
+ */
+
+.reportBlock {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin: var(--spacing-sm) 0;
+  overflow: hidden;
+}
+
+.reportHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--color-primary);
+  color: white;
+}
+
+.reportTitle {
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  transition: background 0.2s;
+}
+
+.copyButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.copyButton.copied {
+  background: var(--color-success);
+}
+
+.reportContent {
+  padding: var(--spacing-sm);
+  margin: 0;
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  overflow-x: auto;
+  background: var(--color-bg);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.reportContent code {
+  background: none;
+  padding: 0;
+}

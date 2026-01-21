@@ -234,13 +234,13 @@
       ],
       "parentMedia": "media-1768923232804-lk3gtncvt"
     },
-    "media-1768925292528-kcmhhq2n9": {
-      "id": "media-1768925292528-kcmhhq2n9",
+    "media-1768925468084-49a0r76jk": {
+      "id": "media-1768925468084-49a0r76jk",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b2a71/DLZvzXyryLpQvJaOzfgzk.jpg",
-      "createdAt": "2026-01-20T16:08:12.528Z",
+      "url": "https://v3b.fal.media/files/b/0a8b2a82/WRE9zo6jbs6RdEXyQVms1.jpg",
+      "createdAt": "2026-01-20T16:11:08.084Z",
       "metadata": {
-        "prompt": "add a crack in ceiling where you can see the sky through",
+        "prompt": "the ceiling start to crack",
         "promptLayers": {
           "name": "Tower Top Chamber",
           "description": "This is a high chamber within one of the citadel's towers, offering a breathtaking panoramic view of the Azure Expanse and the surrounding architecture. The space is bathed in the bright midday sun, highlighting the ornate details of its construction.",
@@ -252,7 +252,7 @@
         },
         "promptData": {
           "command": "EDIT_IMAGE",
-          "editPrompt": "add a crack in ceiling where you can see the sky through"
+          "editPrompt": "the ceiling start to crack"
         },
         "model": "fal-flux-2-turbo-edit",
         "width": 1024,
@@ -261,17 +261,17 @@
         "editedFrom": "media-1768924855780-pshiq7lm3"
       },
       "entityRefs": [
-        "v2-1768925292529-kfynfmwbw"
+        "v2-1768925468085-5wdhw34p9"
       ],
       "parentMedia": "media-1768924855780-pshiq7lm3"
     },
-    "media-1768925375937-r1zage8ty": {
-      "id": "media-1768925375937-r1zage8ty",
+    "media-1768942669682-igr8wkvut": {
+      "id": "media-1768942669682-igr8wkvut",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b2a79/SvHCoV2INpnHWEe-yQqRs.jpg",
-      "createdAt": "2026-01-20T16:09:35.938Z",
+      "url": "https://v3b.fal.media/files/b/0a8b313a/IH1KBVDn6eeA1YZEHjjAr.png",
+      "createdAt": "2026-01-20T20:57:49.682Z",
       "metadata": {
-        "prompt": "make the broken ceiling fall down on the floor",
+        "prompt": "REFRAME THIS IMAGE:\n\nMove dramatically closer to the detailed carvings of the celestial map on the domed ceiling, framing it tightly to fill the view. Use 85mm lens, close shot, f/2.8.\n\nShow the map in the ceiling prominently - it should fill most of the frame.\n\nSame The Celestial Ceiling, same midday lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
         "promptLayers": {
           "name": "Tower Top Chamber",
           "description": "This is a high chamber within one of the citadel's towers, offering a breathtaking panoramic view of the Azure Expanse and the surrounding architecture. The space is bathed in the bright midday sun, highlighting the ornate details of its construction.",
@@ -282,19 +282,335 @@
           "atmosphere": "A sense of serene elevation and majestic grandeur, with the vastness of the sky and sea palpable through the expansive windows. The air feels clear and imbued with ethereal light."
         },
         "promptData": {
+          "command": "LOOK"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768942669683-xto80pph9"
+      ],
+      "parentMedia": "media-1768924855780-pshiq7lm3"
+    },
+    "media-1768942716277-504x12iwx": {
+      "id": "media-1768942716277-504x12iwx",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b313f/un-s5RqSuxrUNi2objvWf.png",
+      "createdAt": "2026-01-20T20:58:36.277Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nMove closer to the celestial map, focusing on the region representing South America, until it fills the frame. Use 85mm lens, close shot, f/2.8.\n\nShow South America on the celestial map prominently - it should fill most of the frame.\n\nSame The Celestial Map Detail, same midday lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "Tower Top Chamber",
+          "description": "This is a high chamber within one of the citadel's towers, offering a breathtaking panoramic view of the Azure Expanse and the surrounding architecture. The space is bathed in the bright midday sun, highlighting the ornate details of its construction.",
+          "background": "Interior walls of light-colored stone and reddish-orange brickwork, leading to large, arched windows offering a vast view of the Azure Expanse and distant domed roofs.",
+          "midground": "Ornate stone columns supporting a domed ceiling, with carved architectural detailing and perhaps the suggestion of a celestial map on the inner dome.",
+          "foreground": "Smooth, polished light-colored stone floor, reflecting the light from the windows and the interior ambiance.",
+          "lighting": "Bright, indirect sunlight streaming through the arched windows, illuminating the interior surfaces and casting soft shadows. The warm tones of the stone and brick are accentuated by this light.",
+          "atmosphere": "A sense of serene elevation and majestic grandeur, with the vastness of the sky and sea palpable through the expansive windows. The air feels clear and imbued with ethereal light."
+        },
+        "promptData": {
+          "command": "LOOK"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768942716279-8mmyj98xb"
+      ],
+      "parentMedia": "media-1768942669682-igr8wkvut"
+    },
+    "media-1768943076502-r8egsm7eh": {
+      "id": "media-1768943076502-r8egsm7eh",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b3163/td1trzNJpwOPuByvjEbhp.png",
+      "createdAt": "2026-01-20T21:04:36.502Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nTilt the camera dramatically upward, then ascend rapidly to gain a high, aerial perspective looking down upon the entire Celestial Citadel. The citadel and its immediate surroundings should fill the frame from this elevated viewpoint. Use 24mm lens, wide shot, f/8.\n\nShow the Celestial Citadel from high above prominently - it should fill most of the frame.\n\nSame The Celestial Citadel, same midday lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "The Celestial Citadel",
+          "description": "An intricately designed stack of buildings, crafted from light-colored stone and reddish-orange brickwork, with numerous domed roofs, arched windows, balconies, and tall towers, soaring above the azure waters. A curved stone bridge with patterned surface extends outwards, and two large, spherical, clear blue glass orbs filled with water are featured beneath an arch and on the bridge.",
+          "background": "The vast, shimmering Azure Expanse stretches to the horizon, its clear, bright waters reflecting the midday sun. In the distance, the sky is a vibrant, cloudless azure.",
+          "midground": "The Celestial Citadel dominates the midground, an intricate stack of buildings crafted from light-colored stone and reddish-orange brickwork. Numerous domed terracotta roofs, arched windows, and ornate balconies create a sense of immense verticality. Tall, slender towers pierce the sky, casting dramatic shadow play onto the structures below. A grand, curved stone bridge with a distinctly patterned surface extends outwards from the citadel, seemingly floating above the water.",
+          "foreground": "At the base of the citadel, where the bridge begins its arc, two large, spherical, clear blue glass orbs filled with water are prominently featured. One rests beneath a majestic archway, while the other is positioned on the patterned surface of the bridge. The base of the citadel shows its imposing facade, hinting at the grandeur within.",
+          "lighting": "The midday sun casts sharp, bright light, creating high contrast and illuminating the architectural details. The glowing water orbs shimmer intensely, reflecting the azure sky and the citadel's stonework. Shadow play from the tall towers adds depth and a sense of drama to the scene.",
+          "atmosphere": "The Celestial Citadel exudes a majestic and ethereal quality, a testament to its intricate design and gravity-defying presence. The clear, bright atmosphere emphasizes its divine nature, a beacon of beauty in the Azure Expanse."
+        },
+        "promptData": {
+          "command": "LOOK"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768943076504-f731r8nmj"
+      ],
+      "parentMedia": "media-1768923183779-t2t3qi58v"
+    },
+    "media-1768943225978-g2pjdl0ig": {
+      "id": "media-1768943225978-g2pjdl0ig",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b3172/icn30qTu2qiClU0LK4Eip.jpg",
+      "createdAt": "2026-01-20T21:07:05.978Z",
+      "metadata": {
+        "prompt": "set to night time, add glowing lights like fires lightning up the citadel",
+        "promptLayers": {
+          "name": "The Celestial Citadel",
+          "description": "An intricately designed stack of buildings, crafted from light-colored stone and reddish-orange brickwork, with numerous domed roofs, arched windows, balconies, and tall towers, soaring above the azure waters. A curved stone bridge with patterned surface extends outwards, and two large, spherical, clear blue glass orbs filled with water are featured beneath an arch and on the bridge.",
+          "background": "The vast, shimmering Azure Expanse stretches to the horizon, its clear, bright waters reflecting the midday sun. In the distance, the sky is a vibrant, cloudless azure.",
+          "midground": "The Celestial Citadel dominates the midground, an intricate stack of buildings crafted from light-colored stone and reddish-orange brickwork. Numerous domed terracotta roofs, arched windows, and ornate balconies create a sense of immense verticality. Tall, slender towers pierce the sky, casting dramatic shadow play onto the structures below. A grand, curved stone bridge with a distinctly patterned surface extends outwards from the citadel, seemingly floating above the water.",
+          "foreground": "At the base of the citadel, where the bridge begins its arc, two large, spherical, clear blue glass orbs filled with water are prominently featured. One rests beneath a majestic archway, while the other is positioned on the patterned surface of the bridge. The base of the citadel shows its imposing facade, hinting at the grandeur within.",
+          "lighting": "The midday sun casts sharp, bright light, creating high contrast and illuminating the architectural details. The glowing water orbs shimmer intensely, reflecting the azure sky and the citadel's stonework. Shadow play from the tall towers adds depth and a sense of drama to the scene.",
+          "atmosphere": "The Celestial Citadel exudes a majestic and ethereal quality, a testament to its intricate design and gravity-defying presence. The clear, bright atmosphere emphasizes its divine nature, a beacon of beauty in the Azure Expanse."
+        },
+        "promptData": {
           "command": "EDIT_IMAGE",
-          "editPrompt": "make the broken ceiling fall down on the floor"
+          "editPrompt": "set to night time, add glowing lights like fires lightning up the citadel"
         },
         "model": "fal-flux-2-turbo-edit",
         "width": 1024,
         "height": 576,
         "aspectRatio": "landscape_16_9",
-        "editedFrom": "media-1768925292528-kcmhhq2n9"
+        "editedFrom": "media-1768943076502-r8egsm7eh"
       },
       "entityRefs": [
-        "v2-1768925375938-w3zn3609k"
+        "v2-1768943225981-w3p0gtjy3"
       ],
-      "parentMedia": "media-1768925292528-kcmhhq2n9"
+      "parentMedia": "media-1768943076502-r8egsm7eh"
+    },
+    "media-1768982662930-x8mqkoh49": {
+      "id": "media-1768982662930-x8mqkoh49",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b40da/Fm82bmDhNRREuvnNhqTUx.jpg",
+      "createdAt": "2026-01-21T08:04:22.931Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nThe Coral Pod. A large, partially submerged cylindrical module, encrusted with rocks and marine life, featuring circular openings revealing its derelict interior with remnants of furniture.\n\nSTYLE LOCK — NON-NEGOTIABLE:\n\nIdentity:\n* weathered facade\n* overgrown crevices\n\nMaterials:\n* rusty metal ladder\n* wooden debris\n* red rug\n* cushions\n\nColor & Light:\n* soft, diffused light through openings\n\nAtmosphere:\n* nostalgic\n* abandoned\n\nBanned:\n* bustling activity\n* pristine structures\n\nSCENE LAYERS:\n- Background: The muted, blue-grey expanse of the calm, clear midday sea stretches out behind the Coral Pod, with the distant, hazy silhouettes of other derelict structures in the Sunken District hinting at the vastness of Aethelgard's submerged city.\n- Midground: The Coral Pod itself dominates the midground, a massive, cylindrical structure emerging from the water. Its 'weathered facade' is heavily 'encrusted with rocks and marine life', giving it a barnacle-covered, organic appearance. Circular openings, dark and cavernous, punctuate the structure, offering tantalizing glimpses of its 'derelict interior' (though the focus is exterior). A 'rusty metal ladder' clings precariously to one side, leading up towards an unseen upper level. Scattered 'wooden debris' floats around its base in the shallow, clear water. A splash of unexpected color comes from a tattered 'red rug' partially submerged near the entrance, adorned with faded 'cushions'.\n- Foreground: The 'street-level' perspective places us close to the water's edge. The 'overgrown crevices' of the Coral Pod's lower sections are visible, teeming with small sea plants and algae. Ripples from the calm water gently lap at the base of the module. The sandy, water-worn ground of the Sunken District's submerged 'street' is implied, with perhaps a few more scattered pieces of 'wooden debris'. The camera's '25-30° tilt up' emphasizes the imposing scale of the Coral Pod above.\n\nLIGHTING: The 'midday' sun casts a 'soft, diffused light' across the entire scene. Sunlight penetrates the circular openings, creating subtle, ethereal glows within the dark recesses of the Coral Pod, hinting at the 'soft, diffused light through openings' without revealing the interior details. The clear, calm weather ensures no harsh shadows, creating a gentle illumination that highlights the textures of the marine life and weathered metal. The overall light is bright but not glaring, with a slight underwater quality due to the proximity to the sea.\nATMOSPHERE: A profound sense of 'nostalgic' abandonment permeates the scene. The 'derelict' state of the Coral Pod, combined with the quiet, clear weather, evokes a feeling of forgotten grandeur and a past life. The absence of any 'bustling activity' and the 'pristine structures' reinforces the isolation and decay. The colors are muted, dominated by the blues and greys of the sea and weathered materials, with the occasional vibrant, yet faded, pop of the red rug, enhancing the melancholic beauty.\n\n[SPACE:] EXTERIOR - OUTSIDE view of the building/location\n[ENVIRONMENT:] clear and calm, midday\n[CAMERA:] camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context\n[LENS:] 12-24mm ultra-wide lens, elevated perspective, expansive framing\n[LIGHT:] directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions\n\n[NEG:] interior, indoor, inside room, indoor scene\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE: humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "promptLayers": {
+          "name": "The Coral Pod",
+          "description": "A large, partially submerged cylindrical module, encrusted with rocks and marine life, featuring circular openings revealing its derelict interior with remnants of furniture.",
+          "background": "The muted, blue-grey expanse of the calm, clear midday sea stretches out behind the Coral Pod, with the distant, hazy silhouettes of other derelict structures in the Sunken District hinting at the vastness of Aethelgard's submerged city.",
+          "midground": "The Coral Pod itself dominates the midground, a massive, cylindrical structure emerging from the water. Its 'weathered facade' is heavily 'encrusted with rocks and marine life', giving it a barnacle-covered, organic appearance. Circular openings, dark and cavernous, punctuate the structure, offering tantalizing glimpses of its 'derelict interior' (though the focus is exterior). A 'rusty metal ladder' clings precariously to one side, leading up towards an unseen upper level. Scattered 'wooden debris' floats around its base in the shallow, clear water. A splash of unexpected color comes from a tattered 'red rug' partially submerged near the entrance, adorned with faded 'cushions'.",
+          "foreground": "The 'street-level' perspective places us close to the water's edge. The 'overgrown crevices' of the Coral Pod's lower sections are visible, teeming with small sea plants and algae. Ripples from the calm water gently lap at the base of the module. The sandy, water-worn ground of the Sunken District's submerged 'street' is implied, with perhaps a few more scattered pieces of 'wooden debris'. The camera's '25-30° tilt up' emphasizes the imposing scale of the Coral Pod above.",
+          "lighting": "The 'midday' sun casts a 'soft, diffused light' across the entire scene. Sunlight penetrates the circular openings, creating subtle, ethereal glows within the dark recesses of the Coral Pod, hinting at the 'soft, diffused light through openings' without revealing the interior details. The clear, calm weather ensures no harsh shadows, creating a gentle illumination that highlights the textures of the marine life and weathered metal. The overall light is bright but not glaring, with a slight underwater quality due to the proximity to the sea.",
+          "atmosphere": "A profound sense of 'nostalgic' abandonment permeates the scene. The 'derelict' state of the Coral Pod, combined with the quiet, clear weather, evokes a feeling of forgotten grandeur and a past life. The absence of any 'bustling activity' and the 'pristine structures' reinforces the isolation and decay. The colors are muted, dominated by the blues and greys of the sea and weathered materials, with the occasional vibrant, yet faded, pop of the red rug, enhancing the melancholic beauty."
+        },
+        "promptData": {
+          "nodeType": "location",
+          "nodeId": "v2-1768982657910-kycxgo3wj",
+          "nodeName": "The Coral Pod",
+          "hostId": "v2-1768982657910-1okyeaq7g",
+          "hostName": "Aethelgard",
+          "regionId": "v2-1768982657910-ekjgh6oro",
+          "regionName": "The Sunken District",
+          "populate": false,
+          "dna": {
+            "essence": [
+              "weathered facade",
+              "overgrown crevices"
+            ],
+            "formsAndMaterials": [
+              "rusty metal ladder",
+              "wooden debris",
+              "red rug",
+              "cushions"
+            ],
+            "colorAndLight": [
+              "soft, diffused light through openings"
+            ],
+            "atmosphere": [
+              "nostalgic",
+              "abandoned"
+            ],
+            "banned": []
+          }
+        },
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768982657910-kycxgo3wj"
+      ]
+    },
+    "media-1768982712491-kc4fxcmx0": {
+      "id": "media-1768982712491-kc4fxcmx0",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b40df/JsGeTSQ4VBOKRR73SKRJj.png",
+      "createdAt": "2026-01-21T08:05:12.491Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and step into Main Chamber.\n\nTarget location:\nInterior space carved inside The Coral Pod.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect midday conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nRemnants of waterlogged furniture, such as a decaying couch with sodden cushions and a rusted metal table, are scattered across the chamber floor.\nA damp, uneven floor partially covered in fine silt and patches of marine growth. Small puddles of stagnant water reflect the dim light.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: A profound sense of 'nostalgic' abandonment permeates the scene. The 'derelict' state of the Coral Pod, combined with the quiet, clear weather, evokes a feeling of forgotten grandeur and a past life. The absence of any 'bustling activity' and the 'pristine structures' reinforces the isolation and decay. The colors are muted, dominated by the blues and greys of the sea and weathered materials, with the occasional vibrant, yet faded, pop of the red rug, enhancing the melancholic beauty.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nCurved, dark interior walls heavily encrusted with barnacles, algae, and mineral deposits, meeting a low, unseen ceiling obscured by shadows.\n\nInterior lighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday interior.\nA heavy, oppressive atmosphere of dampness and decay. The air feels still and cold, with the subtle, constant sound of dripping water and distant, muffled echoes from the sea.\n\nPhysical constraints:\nSolid ceiling above. Fully enclosed interior. No sky visible.\nThe space is carved into the structure's mass — not a void containing the structure.\nThe structure itself is NOT visible as an object from inside.\nIndirect lighting only — light enters through openings not visible in frame.\nThe entrance is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible through ceiling\n* No open roof or atrium to sky\n* No exterior landscape visible\n* No exterior vegetation unless interior description specifies overgrowth/abandoned\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
+        "promptLayers": {
+          "name": "Main Chamber",
+          "description": "The primary interior space of the Coral Pod, a cylindrical chamber carved into the module. Marine growth has crept inward, and remnants of furniture lie scattered, hinting at its former purpose.",
+          "background": "Curved, dark interior walls heavily encrusted with barnacles, algae, and mineral deposits, meeting a low, unseen ceiling obscured by shadows.",
+          "midground": "Remnants of waterlogged furniture, such as a decaying couch with sodden cushions and a rusted metal table, are scattered across the chamber floor.",
+          "foreground": "A damp, uneven floor partially covered in fine silt and patches of marine growth. Small puddles of stagnant water reflect the dim light.",
+          "lighting": "Soft, diffused light filtering in from the exterior openings, casting long, dim shadows. Occasional faint bioluminescent glows from marine life clinging to the walls provide an eerie illumination.",
+          "atmosphere": "A heavy, oppressive atmosphere of dampness and decay. The air feels still and cold, with the subtle, constant sound of dripping water and distant, muffled echoes from the sea."
+        },
+        "promptData": {
+          "command": "GO_INSIDE"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768982703786-6qh62zsw8"
+      ],
+      "parentMedia": "media-1768982662930-x8mqkoh49"
+    },
+    "media-1768982821545-w5hj8d8er": {
+      "id": "media-1768982821545-w5hj8d8er",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b40ea/OnM8O6ZWmrzjCwCB4DT09.png",
+      "createdAt": "2026-01-21T08:07:01.545Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nStep closer and frame the red bed tightly. Use 85mm lens, close shot, f/4.\n\nShow the red bed prominently - it should fill most of the frame.\n\nSame Main Chamber, same midday lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "Main Chamber",
+          "description": "The primary interior space of the Coral Pod, a cylindrical chamber carved into the module. Marine growth has crept inward, and remnants of furniture lie scattered, hinting at its former purpose.",
+          "background": "Curved, dark interior walls heavily encrusted with barnacles, algae, and mineral deposits, meeting a low, unseen ceiling obscured by shadows.",
+          "midground": "Remnants of waterlogged furniture, such as a decaying couch with sodden cushions and a rusted metal table, are scattered across the chamber floor.",
+          "foreground": "A damp, uneven floor partially covered in fine silt and patches of marine growth. Small puddles of stagnant water reflect the dim light.",
+          "lighting": "Soft, diffused light filtering in from the exterior openings, casting long, dim shadows. Occasional faint bioluminescent glows from marine life clinging to the walls provide an eerie illumination.",
+          "atmosphere": "A heavy, oppressive atmosphere of dampness and decay. The air feels still and cold, with the subtle, constant sound of dripping water and distant, muffled echoes from the sea."
+        },
+        "promptData": {
+          "command": "LOOK"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768982821546-nrgs8t5e5"
+      ],
+      "parentMedia": "media-1768982712491-kc4fxcmx0"
+    },
+    "media-1768982937796-wc6cmqsoz": {
+      "id": "media-1768982937796-wc6cmqsoz",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b40f5/gTGL49eAW1SS56JcDcAiT.png",
+      "createdAt": "2026-01-21T08:08:57.796Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nTilt camera dramatically upward from its current position towards the roof of the Coral Pod, revealing the expansive view from its highest point. Use 35mm lens, wide shot, f/8.\n\nShow the panoramic view from the roof prominently - it should fill most of the frame.\n\nSame The Coral Pod, same midday lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "The Coral Pod",
+          "description": "A large, partially submerged cylindrical module, encrusted with rocks and marine life, featuring circular openings revealing its derelict interior with remnants of furniture.",
+          "background": "The muted, blue-grey expanse of the calm, clear midday sea stretches out behind the Coral Pod, with the distant, hazy silhouettes of other derelict structures in the Sunken District hinting at the vastness of Aethelgard's submerged city.",
+          "midground": "The Coral Pod itself dominates the midground, a massive, cylindrical structure emerging from the water. Its 'weathered facade' is heavily 'encrusted with rocks and marine life', giving it a barnacle-covered, organic appearance. Circular openings, dark and cavernous, punctuate the structure, offering tantalizing glimpses of its 'derelict interior' (though the focus is exterior). A 'rusty metal ladder' clings precariously to one side, leading up towards an unseen upper level. Scattered 'wooden debris' floats around its base in the shallow, clear water. A splash of unexpected color comes from a tattered 'red rug' partially submerged near the entrance, adorned with faded 'cushions'.",
+          "foreground": "The 'street-level' perspective places us close to the water's edge. The 'overgrown crevices' of the Coral Pod's lower sections are visible, teeming with small sea plants and algae. Ripples from the calm water gently lap at the base of the module. The sandy, water-worn ground of the Sunken District's submerged 'street' is implied, with perhaps a few more scattered pieces of 'wooden debris'. The camera's '25-30° tilt up' emphasizes the imposing scale of the Coral Pod above.",
+          "lighting": "The 'midday' sun casts a 'soft, diffused light' across the entire scene. Sunlight penetrates the circular openings, creating subtle, ethereal glows within the dark recesses of the Coral Pod, hinting at the 'soft, diffused light through openings' without revealing the interior details. The clear, calm weather ensures no harsh shadows, creating a gentle illumination that highlights the textures of the marine life and weathered metal. The overall light is bright but not glaring, with a slight underwater quality due to the proximity to the sea.",
+          "atmosphere": "A profound sense of 'nostalgic' abandonment permeates the scene. The 'derelict' state of the Coral Pod, combined with the quiet, clear weather, evokes a feeling of forgotten grandeur and a past life. The absence of any 'bustling activity' and the 'pristine structures' reinforces the isolation and decay. The colors are muted, dominated by the blues and greys of the sea and weathered materials, with the occasional vibrant, yet faded, pop of the red rug, enhancing the melancholic beauty."
+        },
+        "promptData": {
+          "command": "LOOK"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768982937797-afryp70gk"
+      ],
+      "parentMedia": "media-1768982662930-x8mqkoh49"
+    },
+    "media-1768983083789-ynlzbhxzc": {
+      "id": "media-1768983083789-ynlzbhxzc",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b4104/j30mrWzdKdk3TNkcHV--F.png",
+      "createdAt": "2026-01-21T08:11:23.789Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and step into Submerged Chamber.\n\nTarget location:\nInterior space carved inside The Coral Pod.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect midday conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nPartially submerged, rotted wooden furniture, waterlogged cushions with faded patterns, and scattered debris coated in sediment.\nA floor of packed silt and sand, with patches of faint, phosphorescent growth, and the gentle lapping of unseen water against the lower walls.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: A profound sense of 'nostalgic' abandonment permeates the scene. The 'derelict' state of the Coral Pod, combined with the quiet, clear weather, evokes a feeling of forgotten grandeur and a past life. The absence of any 'bustling activity' and the 'pristine structures' reinforces the isolation and decay. The colors are muted, dominated by the blues and greys of the sea and weathered materials, with the occasional vibrant, yet faded, pop of the red rug, enhancing the melancholic beauty.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nCurved, rust-stained metal walls, extensively covered in barnacles and algae, meeting a low, water-damaged ceiling.\n\nInterior lighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday interior.\nA heavy, damp atmosphere that feels deeply enclosed and isolated from the surface world, carrying a sense of forgotten time and decay.\n\nPhysical constraints:\nSolid rock/earth ceiling above. Fully enclosed underground space. No sky, no exterior openings.\nThe space is carved into the mass — not a void or cavern containing structures.\nIndirect or artificial lighting only.\nThe entrance passage is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible\n* No surface-level features\n* No central pillar/spire structure\n* No atrium or void to surface\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
+        "promptLayers": {
+          "name": "Submerged Chamber",
+          "description": "You have entered a sealed, submerged chamber within the Coral Pod. The air is heavy and still, with the faint sound of water pressure. Remnants of past habitation are visible, muted by the aquatic environment.",
+          "background": "Curved, rust-stained metal walls, extensively covered in barnacles and algae, meeting a low, water-damaged ceiling.",
+          "midground": "Partially submerged, rotted wooden furniture, waterlogged cushions with faded patterns, and scattered debris coated in sediment.",
+          "foreground": "A floor of packed silt and sand, with patches of faint, phosphorescent growth, and the gentle lapping of unseen water against the lower walls.",
+          "lighting": "Dim, ambient light filtered through the dense structure and any minute breaches, with a faint, ethereal glow from bioluminescent organisms on the walls.",
+          "atmosphere": "A heavy, damp atmosphere that feels deeply enclosed and isolated from the surface world, carrying a sense of forgotten time and decay."
+        },
+        "promptData": {
+          "command": "GOTO"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768983077644-c92am5kir"
+      ],
+      "parentMedia": "media-1768982662930-x8mqkoh49"
+    },
+    "media-1768983129357-vqr977652": {
+      "id": "media-1768983129357-vqr977652",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b4108/WyPKJCyc-9gUd1seZSXRk.png",
+      "createdAt": "2026-01-21T08:12:09.357Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and step into Submerged Tunnel Chamber.\n\nTarget location:\nInterior space carved inside The Coral Pod.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect midday conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nThe narrow tunnel is partially filled with still, murky water that reflects the dim light. Remnants of what might have been wiring or piping are visible, corroded and encrusted. A circular opening to another chamber is visible further down the tunnel on the left.\nThe floor is uneven stone, perpetually damp and covered in a fine silt and patches of soft, green moss. Water laps gently at your feet, creating small, disturbed ripples. Scattered, waterlogged debris from the pod's original furnishings are visible.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: A profound sense of 'nostalgic' abandonment permeates the scene. The 'derelict' state of the Coral Pod, combined with the quiet, clear weather, evokes a feeling of forgotten grandeur and a past life. The absence of any 'bustling activity' and the 'pristine structures' reinforces the isolation and decay. The colors are muted, dominated by the blues and greys of the sea and weathered materials, with the occasional vibrant, yet faded, pop of the red rug, enhancing the melancholic beauty.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nThe curved, rough-hewn walls of the tunnel recede into the gloom, heavily coated in slick, dark algae and patches of small, clinging marine life. Stalactite-like formations of calcified residue drip from the partial ceiling.\n\nInterior lighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday interior.\nA palpable sense of dampness and isolation pervades the space. The air is heavy and still, carrying the faint scent of brine and decay. The enclosed, water-filled tunnel evokes a feeling of being deep within a forgotten aquatic tomb.\n\nPhysical constraints:\nSolid ceiling above. Fully enclosed interior. No sky visible.\nThe space is carved into the structure's mass — not a void containing the structure.\nThe structure itself is NOT visible as an object from inside.\nIndirect lighting only — light enters through openings not visible in frame.\nThe entrance is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible through ceiling\n* No open roof or atrium to sky\n* No exterior landscape visible\n* No exterior vegetation unless interior description specifies overgrowth/abandoned\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
+        "promptLayers": {
+          "name": "Submerged Tunnel Chamber",
+          "description": "You've entered a narrow, cylindrical tunnel carved into the Coral Pod's structure. Water laps at the floor, and the walls are slick with algae and encrusted with small shells. The tunnel leads deeper into the derelict module, hinting at further forgotten spaces.",
+          "background": "The curved, rough-hewn walls of the tunnel recede into the gloom, heavily coated in slick, dark algae and patches of small, clinging marine life. Stalactite-like formations of calcified residue drip from the partial ceiling.",
+          "midground": "The narrow tunnel is partially filled with still, murky water that reflects the dim light. Remnants of what might have been wiring or piping are visible, corroded and encrusted. A circular opening to another chamber is visible further down the tunnel on the left.",
+          "foreground": "The floor is uneven stone, perpetually damp and covered in a fine silt and patches of soft, green moss. Water laps gently at your feet, creating small, disturbed ripples. Scattered, waterlogged debris from the pod's original furnishings are visible.",
+          "lighting": "Soft, diffused light filters in from openings further within the structure, imbued with a blue-green oceanic hue. There is no direct sunlight, only the ambient, watery glow characteristic of a submerged environment. The darkness in the recesses is profound.",
+          "atmosphere": "A palpable sense of dampness and isolation pervades the space. The air is heavy and still, carrying the faint scent of brine and decay. The enclosed, water-filled tunnel evokes a feeling of being deep within a forgotten aquatic tomb."
+        },
+        "promptData": {
+          "command": "GOTO"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768983122290-f1lhmewzv"
+      ],
+      "parentMedia": "media-1768982662930-x8mqkoh49"
+    },
+    "media-1768983321354-h8j41xtu9": {
+      "id": "media-1768983321354-h8j41xtu9",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b411c/jSTDkxcRcZqWHXscyiBPc.png",
+      "createdAt": "2026-01-21T08:15:21.354Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nMove up to the round window on the left, press close to the glass, and look OUTWARD through it. The ocean vista beyond the window should fill the frame. Use 85mm lens, close shot, f/4.\n\nShow the ocean vista through the round window prominently - it should fill most of the frame.\n\nSame The Red Bed Detail, same midday lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "Main Chamber",
+          "description": "The primary interior space of the Coral Pod, a cylindrical chamber carved into the module. Marine growth has crept inward, and remnants of furniture lie scattered, hinting at its former purpose.",
+          "background": "Curved, dark interior walls heavily encrusted with barnacles, algae, and mineral deposits, meeting a low, unseen ceiling obscured by shadows.",
+          "midground": "Remnants of waterlogged furniture, such as a decaying couch with sodden cushions and a rusted metal table, are scattered across the chamber floor.",
+          "foreground": "A damp, uneven floor partially covered in fine silt and patches of marine growth. Small puddles of stagnant water reflect the dim light.",
+          "lighting": "Soft, diffused light filtering in from the exterior openings, casting long, dim shadows. Occasional faint bioluminescent glows from marine life clinging to the walls provide an eerie illumination.",
+          "atmosphere": "A heavy, oppressive atmosphere of dampness and decay. The air feels still and cold, with the subtle, constant sound of dripping water and distant, muffled echoes from the sea."
+        },
+        "promptData": {
+          "command": "LOOK"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1768983321356-14u2g40b4"
+      ],
+      "parentMedia": "media-1768982821545-w5hj8d8er"
     }
   }
 }

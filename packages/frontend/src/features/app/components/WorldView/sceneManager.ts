@@ -2,7 +2,7 @@ import type { ParticleSystem } from './effects/particles';
 import type { PostProcessorSystem, ColorEffects } from './effects/postprocessors';
 import { getScenePreset, ScenePresetConfig } from './effects/scenes';
 
-interface SceneState {
+export interface SceneState {
   currentScene: ScenePresetConfig | null;
   timers: { windGust: number; lightning: number };
 }
