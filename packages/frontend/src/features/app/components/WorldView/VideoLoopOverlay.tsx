@@ -142,35 +142,11 @@ export function VideoLoopOverlay({ videoUrl, isVisible, onFadeComplete }: VideoL
     };
   }, [activeVideo, isFading, triggerCrossfade]);
 
-  // Handle visibility changes (node transitions) - optimize performance
-  useEffect(() => {
-    const videoA = videoARef.current;
-    const videoB = videoBRef.current;
-    
-    if (!isVisible) {
-      // Immediately pause both videos to reduce GPU/CPU load during fade-out
-      if (videoA) videoA.pause();
-      if (videoB) videoB.pause();
-      
-      // After fade-out completes, clear video sources to free memory
-      const timer = setTimeout(() => {
-        if (videoA) {
-          videoA.src = '';
-          videoA.load();
-        }
-        if (videoB) {
-          videoB.src = '';
-          videoB.load();
-        }
-        setIsLoaded(false);
-        onFadeComplete?.();
-      }, CSS_TRANSITION_DURATION);
-      
-      return () => clearTimeout(timer);
-    }
-  }, [isVisible, onFadeComplete]);
-
-  if (!videoUrl) return null;
+  // When not visible, immediately remove from DOM to eliminate all overhead
+  // No fade-out transition - instant removal for better node transition performance
+  if (!videoUrl || !isVisible) {
+    return null;
+  }
 
   return (
     <div 

@@ -118,6 +118,15 @@ export const UPSCALE_CONFIG = {
 } as const;
 
 /**
+ * Image Loading Configuration
+ * Settings for progressive image loading behavior
+ */
+export const IMAGE_LOADING_CONFIG = {
+  /** Delay before starting upscaled image preload (ms) - allows node transition to complete first */
+  UPSCALED_PRELOAD_DELAY_MS: 1000,
+} as const;
+
+/**
  * Video Loop Configuration
  * Settings for the video loop overlay crossfade effect
  */

@@ -4,6 +4,7 @@ import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useLocationsStore } from '@/store/slices/locations';
 import { getDepthMapForMedia, clearMediaCache, getMediaWithUrls } from '@/services/mediaService';
 import { WorldViewRenderer } from './WorldViewRenderer';
+import { IMAGE_LOADING_CONFIG } from '@/config';
 
 interface DisplayImage {
   src: string;
@@ -29,6 +30,7 @@ export function useWorldViewLogic() {
   const currentImageRef = useRef<string | null>(null);
   const currentDepthRef = useRef<string | null>(null);
   const currentVideoRef = useRef<string | null>(null);
+  const upscaledPreloadTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   
   const [isLoading, setIsLoading] = useState(true);
   const [hasImage, setHasImage] = useState(false);
@@ -154,7 +156,11 @@ export function useWorldViewLogic() {
       
       // Determine which image to load first (prefer original for faster initial display)
       const initialSrc = displayImage.originalSrc || displayImage.src;
-      const hasUpscaled = displayImage.upscaledSrc && displayImage.upscaledSrc !== initialSrc;
+      
+      // Skip upscaled image loading if video exists - video covers the image anyway
+      // This reduces concurrent loading overhead during node transitions
+      const hasVideo = !!displayImage.videoSrc;
+      const hasUpscaled = !hasVideo && displayImage.upscaledSrc && displayImage.upscaledSrc !== initialSrc;
       
       // Only reload if image changed
       if (initialSrc !== currentImageRef.current) {
@@ -170,27 +176,39 @@ export function useWorldViewLogic() {
             
             if (cancelled) return;
             
-            // If upscaled version exists, preload and crossfade to it
+            // If upscaled version exists, delay preload to allow node transition to complete
             if (hasUpscaled && displayImage.upscaledSrc) {
               const upscaledUrl = displayImage.upscaledSrc;
               
-              // Preload upscaled image in background
-              const preloadImage = new Image();
-              preloadImage.onload = async () => {
+              // Clear any existing timeout before setting a new one
+              if (upscaledPreloadTimeoutRef.current) {
+                clearTimeout(upscaledPreloadTimeoutRef.current);
+              }
+              
+              // Delay upscaled preload to reduce load during node transitions
+              upscaledPreloadTimeoutRef.current = setTimeout(() => {
                 if (cancelled || !rendererRef.current) return;
                 
-                // Only crossfade if we're still showing the same original image
-                if (currentImageRef.current === initialSrc) {
-                  try {
-                    await rendererRef.current.crossfadeTo(upscaledUrl, displayImage.depthSrc, 0.5);
-                    currentImageRef.current = upscaledUrl;
-                    console.log('[WorldView] Upscaled image now visible');
-                  } catch {
-                    // Crossfade failed - silently ignore, original is still displayed
+                // Only start preload if we're still showing the same original image
+                if (currentImageRef.current !== initialSrc) return;
+                
+                // Preload upscaled image in background
+                const preloadImage = new Image();
+                preloadImage.onload = async () => {
+                  if (cancelled || !rendererRef.current) return;
+                  
+                  // Only crossfade if we're still showing the same original image
+                  if (currentImageRef.current === initialSrc) {
+                    try {
+                      await rendererRef.current.crossfadeTo(upscaledUrl, displayImage.depthSrc, 0.5);
+                      currentImageRef.current = upscaledUrl;
+                    } catch {
+                      // Crossfade failed - silently ignore, original is still displayed
+                    }
                   }
-                }
-              };
-              preloadImage.src = upscaledUrl;
+                };
+                preloadImage.src = upscaledUrl;
+              }, IMAGE_LOADING_CONFIG.UPSCALED_PRELOAD_DELAY_MS);
             }
           } catch {
             // Image load failed - silently ignore
@@ -219,6 +237,11 @@ export function useWorldViewLogic() {
     
     return () => {
       cancelled = true;
+      // Clear upscaled preload timeout on node change
+      if (upscaledPreloadTimeoutRef.current) {
+        clearTimeout(upscaledPreloadTimeoutRef.current);
+        upscaledPreloadTimeoutRef.current = null;
+      }
     };
   }, [getDisplayImage]);
 
