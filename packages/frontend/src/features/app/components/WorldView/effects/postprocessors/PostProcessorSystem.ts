@@ -18,6 +18,14 @@ export interface ColorEffects {
   desaturate: number;    // 0-1 grayscale amount
 }
 
+// Model filter settings (for AI model alignment)
+export interface ModelFilters {
+  saturation: number;    // Saturation multiplier (1.0 = no change)
+  contrast: number;      // Contrast multiplier (1.0 = no change)
+  brightness: number;    // Brightness multiplier (1.0 = no change)
+  gamma: number;         // Gamma correction (1.0 = no change)
+}
+
 const DEFAULT_COLOR_EFFECTS: ColorEffects = {
   vignette: 0,
   tint: { r: 1, g: 1, b: 1 },
@@ -25,6 +33,13 @@ const DEFAULT_COLOR_EFFECTS: ColorEffects = {
   bloom: 0,
   lightning: 0,
   desaturate: 0,
+};
+
+const DEFAULT_MODEL_FILTERS: ModelFilters = {
+  saturation: 1.0,
+  contrast: 1.0,
+  brightness: 1.0,
+  gamma: 1.0,
 };
 
 export class PostProcessorSystem {
@@ -35,6 +50,7 @@ export class PostProcessorSystem {
   private camera: THREE.OrthographicCamera;
   private config: PostProcessorConfig;
   private colorEffects: ColorEffects;
+  private modelFilters: ModelFilters;
   private time: number = 0;
   private lightningTimer: number = 0;
 
@@ -43,6 +59,7 @@ export class PostProcessorSystem {
     // Clone config and override enabled state
     this.config = { ...presetConfig, enabled };
     this.colorEffects = { ...DEFAULT_COLOR_EFFECTS };
+    this.modelFilters = { ...DEFAULT_MODEL_FILTERS };
 
     // Create render target to capture scene
     this.renderTarget = new THREE.WebGLRenderTarget(width, height, {
@@ -67,6 +84,11 @@ export class PostProcessorSystem {
         bloom: { value: 0 },
         lightning: { value: 0 },
         desaturate: { value: 0 },
+        // Model filters (base color correction)
+        saturation: { value: 1.0 },
+        contrast: { value: 1.0 },
+        brightness: { value: 1.0 },
+        gamma: { value: 1.0 },
       },
       vertexShader: postProcessorVertexShader,
       fragmentShader: postProcessorFragmentShader,
@@ -159,6 +181,16 @@ export class PostProcessorSystem {
   }
 
   /**
+   * Update model filter uniforms
+   */
+  private updateModelFilterUniforms(): void {
+    this.material.uniforms.saturation.value = this.modelFilters.saturation;
+    this.material.uniforms.contrast.value = this.modelFilters.contrast;
+    this.material.uniforms.brightness.value = this.modelFilters.brightness;
+    this.material.uniforms.gamma.value = this.modelFilters.gamma;
+  }
+
+  /**
    * Enable/disable effect
    */
   setEnabled(enabled: boolean): void {
@@ -233,6 +265,66 @@ export class PostProcessorSystem {
   resetColorEffects(): void {
     this.colorEffects = { ...DEFAULT_COLOR_EFFECTS };
     this.updateColorUniforms();
+  }
+
+  // ===== Model Filter Methods (for AI model alignment) =====
+
+  /**
+   * Set saturation (1.0 = no change, <1 = desaturated, >1 = more saturated)
+   */
+  setSaturation(saturation: number): void {
+    this.modelFilters.saturation = Math.max(0, saturation);
+    this.material.uniforms.saturation.value = this.modelFilters.saturation;
+  }
+
+  /**
+   * Set contrast (1.0 = no change, <1 = lower contrast, >1 = higher contrast)
+   */
+  setContrast(contrast: number): void {
+    this.modelFilters.contrast = Math.max(0, contrast);
+    this.material.uniforms.contrast.value = this.modelFilters.contrast;
+  }
+
+  /**
+   * Set brightness (1.0 = no change, <1 = darker, >1 = brighter)
+   */
+  setBrightness(brightness: number): void {
+    this.modelFilters.brightness = Math.max(0, brightness);
+    this.material.uniforms.brightness.value = this.modelFilters.brightness;
+  }
+
+  /**
+   * Set gamma correction (1.0 = no change, 2.2 = standard gamma)
+   */
+  setGamma(gamma: number): void {
+    this.modelFilters.gamma = Math.max(0.1, gamma);
+    this.material.uniforms.gamma.value = this.modelFilters.gamma;
+  }
+
+  /**
+   * Apply model filter preset (for AI model alignment)
+   */
+  setModelFilters(filters: Partial<ModelFilters>): void {
+    if (filters.saturation !== undefined) this.modelFilters.saturation = filters.saturation;
+    if (filters.contrast !== undefined) this.modelFilters.contrast = filters.contrast;
+    if (filters.brightness !== undefined) this.modelFilters.brightness = filters.brightness;
+    if (filters.gamma !== undefined) this.modelFilters.gamma = filters.gamma;
+    this.updateModelFilterUniforms();
+  }
+
+  /**
+   * Reset model filters to defaults (no correction)
+   */
+  resetModelFilters(): void {
+    this.modelFilters = { ...DEFAULT_MODEL_FILTERS };
+    this.updateModelFilterUniforms();
+  }
+
+  /**
+   * Get current model filters (for image capture)
+   */
+  getModelFilters(): ModelFilters {
+    return { ...this.modelFilters };
   }
 
   /**

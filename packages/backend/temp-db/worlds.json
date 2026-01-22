@@ -215,6 +215,167 @@
       ],
       "parentId": "v2-1769077916459-81m6ipeci",
       "primaryMedia": "media-1769080707908-wf615wx31"
+    },
+    "v2-1769083689173-o8vmzra0q": {
+      "id": "v2-1769083689173-o8vmzra0q",
+      "type": "host",
+      "name": "Evergreen Hills",
+      "slug": "evergreen-hills",
+      "description": "A serene and adventurous landscape of towering evergreen trees on sun-drenched hillsides overlooking hazy valleys.",
+      "genre": "Fantasy",
+      "weather": "clear and sunny",
+      "timeOfDay": "golden_hour",
+      "dna": {
+        "essence": [
+          "treehouse complex",
+          "sun-drenched hillside",
+          "hazy valley",
+          "tranquil adventure"
+        ],
+        "formsAndMaterials": [
+          "tall evergreen trees",
+          "light wooden shingle siding",
+          "dark wood",
+          "curved metal roof",
+          "arching wooden bridges",
+          "suspended rope bridges",
+          "central platform",
+          "vibrant green grass",
+          "long dark shadows",
+          "white concrete bowl-shaped structure",
+          "wooden deck",
+          "hot tub"
+        ],
+        "colorAndLight": [
+          "muted distant hills",
+          "vibrant green",
+          "long dark shadows",
+          "golden light"
+        ],
+        "atmosphere": [
+          "tranquil",
+          "adventurous",
+          "serene",
+          "evocative"
+        ],
+        "banned": [
+          "urban sprawl",
+          "industrial noise"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1769083689173-utxzpsm86": {
+      "id": "v2-1769083689173-utxzpsm86",
+      "type": "region",
+      "name": "Sun-Drenched Slope",
+      "slug": "sun-drenched-slope",
+      "description": "A hillside within Evergreen Hills, characterized by tall evergreen trees and a distant hazy valley view.",
+      "isPassThrough": false,
+      "dna": {
+        "essence": [
+          "elevated view",
+          "natural landscape"
+        ],
+        "formsAndMaterials": [
+          "tall evergreen trees",
+          "vibrant green grass"
+        ],
+        "colorAndLight": [
+          "long dark shadows",
+          "golden light"
+        ],
+        "atmosphere": [
+          "tranquil",
+          "adventurous"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1769083689173-6q34j8iup": {
+      "id": "v2-1769083689173-6q34j8iup",
+      "type": "location",
+      "name": "Elaborate Treehouse Complex",
+      "slug": "elaborate-treehouse-complex",
+      "spaceType": "exterior",
+      "description": "An elaborate treehouse complex with two distinct dwellings connected by bridges, featuring a larger shingled house and a smaller rustic house, a central platform, and a wooden deck with a hot tub at the base.",
+      "dna": {
+        "essence": [
+          "connected dwellings",
+          "elevated living"
+        ],
+        "formsAndMaterials": [
+          "light wooden shingle siding",
+          "numerous windows",
+          "dark wood",
+          "curved metal roof",
+          "arching wooden stairway bridge",
+          "suspended rope bridge",
+          "central platform",
+          "wooden deck",
+          "hot tub"
+        ],
+        "colorAndLight": [
+          "golden light casting long shadows"
+        ],
+        "atmosphere": [
+          "cozy",
+          "adventurous",
+          "secluded"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1769083694255-qf44xlvun"
+    },
+    "v2-1769083727319-2m5r1vosd": {
+      "id": "v2-1769083727319-2m5r1vosd",
+      "type": "container",
+      "name": "Elaborate Treehouse Complex",
+      "slug": "elaborate-treehouse-complex",
+      "description": "An intricate network of elevated dwellings nestled high in ancient evergreen trees, featuring a larger shingled house and a smaller rustic house, all connected by various wooden bridges. A central platform offers panoramic views, while a wooden deck with a hot tub sits invitingly at the complex's base.",
+      "forbiddenTransformations": [
+        "Transforming the evergreen trees into deciduous trees or barren pines.",
+        "Adding urban structures or modern steel architecture to the complex.",
+        "Changing the golden hour lighting to harsh midday sun or nighttime.",
+        "Removing the connecting bridges or the central viewing platform.",
+        "Introducing non-wooden or non-natural building materials (e.g., plastic, concrete) for the structures.",
+        "Flattening the rolling hills or removing the dense evergreen canopy.",
+        "Altering the rustic, hand-built aesthetic of the dwellings to sleek, manufactured designs."
+      ],
+      "parentId": "v2-1769083689173-6q34j8iup"
+    },
+    "v2-1769083727319-pg2lvcoeb": {
+      "id": "v2-1769083727319-pg2lvcoeb",
+      "type": "space",
+      "name": "Main Living Chamber",
+      "slug": "main-living-chamber",
+      "description": "The primary living space within the larger treehouse dwelling, characterized by its warm wooden interior and expansive windows offering filtered views of the surrounding evergreen canopy. This chamber serves as a cozy, elevated retreat, blending comfort with the adventurous spirit of arboreal living.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [],
+        "formsAndMaterials": [],
+        "colorAndLight": [],
+        "atmosphere": [],
+        "banned": [
+          "futuristic technology integration",
+          "barren minimalist decor",
+          "industrial metal elements",
+          "chaotic cluttered spaces",
+          "stark white artificial lighting"
+        ]
+      },
+      "forbiddenTransformations": [
+        "Introducing harsh, artificial overhead fluorescent lighting.",
+        "Replacing the natural wood interior with cold concrete or metallic surfaces.",
+        "Adding visible external structural elements or a central void/atrium within the room.",
+        "Decorating with futuristic, sterile, or overly minimalist furniture.",
+        "Removing the sense of being elevated and surrounded by nature.",
+        "Altering the warm, golden hour interior light to a stark, cold daylight or a dark, unlit interior.",
+        "Introducing highly contrasting or neon color palettes to the decor."
+      ],
+      "parentId": "v2-1769083727319-2m5r1vosd",
+      "primaryMedia": "media-1769083732102-7izh0t8kp",
+      "updatedAt": 1769084176812
     }
   },
   "views": {},
@@ -252,9 +413,39 @@
           ]
         }
       ]
+    },
+    {
+      "id": "v2-1769083689173-o8vmzra0q",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1769083689173-utxzpsm86",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1769083689173-6q34j8iup",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1769083727319-2m5r1vosd",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1769083727319-pg2lvcoeb",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
-    "v2-1769077325691-1lbrqw217"
+    "v2-1769077325691-1lbrqw217",
+    "v2-1769083689173-o8vmzra0q"
   ]
 }

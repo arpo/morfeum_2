@@ -5,10 +5,15 @@ import { createEntityManagerSlice, type EntityManagerSlice } from './slices/enti
 import { createEntityUISlice, type EntityUISlice } from './slices/entityUISlice';
 import { createSpawnSlice, type SpawnSlice } from './slices/spawnSlice';
 import { createMediaSlice, type MediaSlice } from './slices/mediaSlice';
+import type { WorldViewRenderer } from '@/features/app/components/WorldView/WorldViewRenderer';
 
 // Combined store interface
 export interface CombinedStore extends EntityManagerSlice, EntityUISlice, SpawnSlice, MediaSlice {
   // Theme is handled by separate useThemeStore for persistence
+  
+  // WorldView renderer reference (for image capture, etc.)
+  worldViewRendererRef: WorldViewRenderer | null;
+  setWorldViewRendererRef: (renderer: WorldViewRenderer | null) => void;
 }
 
 // Create the store with slices
@@ -26,6 +31,10 @@ export const useStore = create<CombinedStore>()(
       
       // Media slice (upscaling state)
       ...createMediaSlice(...a),
+      
+      // WorldView renderer reference
+      worldViewRendererRef: null,
+      setWorldViewRendererRef: (renderer) => a[0]({ worldViewRendererRef: renderer }),
     }),
     {
       name: 'morfeum-store',

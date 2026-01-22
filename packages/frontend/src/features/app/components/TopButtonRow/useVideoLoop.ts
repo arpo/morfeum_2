@@ -6,10 +6,11 @@
 import { useCallback } from 'react';
 import { useTimedProgress } from '@/hooks';
 import { clearMediaItem } from '@/services/mediaService';
+import type { WorldViewRenderer } from '@/features/app/components/WorldView/WorldViewRenderer';
 
 const VIDEO_DURATION_MS = 30000; // 30 seconds expected duration
 
-export function useVideoLoop() {
+export function useVideoLoop(rendererRef?: React.RefObject<WorldViewRenderer | null>) {
   const { start, stop, cancel, isRunning } = useTimedProgress();
 
   const generateVideoLoop = useCallback(async (
@@ -30,12 +31,41 @@ export function useVideoLoop() {
     start(entityId, VIDEO_DURATION_MS, 'video');
 
     try {
-      // Call the backend API
-      const response = await fetch('/api/v2/generate-video-loop', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nodeId: entityId, primaryMediaId })
-      });
+      // Capture filtered image from canvas if renderer is available
+      let filteredImageBlob: Blob | null = null;
+      if (rendererRef?.current) {
+        try {
+          filteredImageBlob = await rendererRef.current.captureFilteredImage('jpeg', 0.92);
+          if (!filteredImageBlob) {
+            console.warn('[useVideoLoop] Failed to capture filtered image, using original');
+          }
+        } catch (error) {
+          console.warn('[useVideoLoop] Error capturing filtered image:', error);
+        }
+      }
+
+      // Prepare request with filtered image if available
+      let response: Response;
+      
+      if (filteredImageBlob) {
+        // Send as multipart/form-data with filtered image
+        const formData = new FormData();
+        formData.append('nodeId', entityId);
+        formData.append('primaryMediaId', primaryMediaId);
+        formData.append('filteredImage', filteredImageBlob, 'filtered.jpg');
+        
+        response = await fetch('/api/v2/generate-video-loop', {
+          method: 'POST',
+          body: formData
+        });
+      } else {
+        // Fallback to JSON request without filtered image
+        response = await fetch('/api/v2/generate-video-loop', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ nodeId: entityId, primaryMediaId })
+        });
+      }
 
       if (!response.ok) {
         const errorData = await response.json();

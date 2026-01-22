@@ -3,7 +3,7 @@
  * Handles display mode state, depth map checking, and generation
  */
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useStore } from '@/store';
 import { useCharactersStore } from '@/store/slices/charactersSlice';
 import { useLocationsStore } from '@/store/slices/locations';
@@ -12,6 +12,7 @@ import { useImageUpscale } from '@/features/app/components/TopButtonRow/useImage
 import { useVideoLoop } from '@/features/app/components/TopButtonRow/useVideoLoop';
 import { getDepthMapForMedia, clearMediaCache } from '@/services/mediaService';
 import type { DisplayMode } from '@/features/app/components/TopButtonRow/TopButtonRow';
+import type { WorldViewRenderer } from '@/features/app/components/WorldView/WorldViewRenderer';
 
 // BroadcastChannel for syncing external display windows
 const externalViewChannel = typeof BroadcastChannel !== 'undefined' 
@@ -29,9 +30,18 @@ export function useDisplayMode() {
   const activeEntitySession = activeEntity ? entities.get(activeEntity) : null;
   const isCharacter = activeEntitySession?.entityType === 'character';
   
+  // Get rendererRef from WorldView via store (set by WorldView component)
+  const worldViewRendererRef = useStore(state => state.worldViewRendererRef);
+  const rendererRef = useRef<WorldViewRenderer | null>(worldViewRendererRef);
+  
+  // Update ref when store value changes
+  useEffect(() => {
+    rendererRef.current = worldViewRendererRef;
+  }, [worldViewRendererRef]);
+  
   const { generateDepthMap, isGenerating: depthMapGenerating } = useDepthMapLogic();
   const { upscaleImage, isEntityUpscaling } = useImageUpscale();
-  const { generateVideoLoop, isEntityGenerating: isEntityGeneratingVideo } = useVideoLoop();
+  const { generateVideoLoop, isEntityGenerating: isEntityGeneratingVideo } = useVideoLoop(rendererRef);
   
   // Check if current entity is being upscaled
   const isCurrentEntityUpscaling = activeEntity ? isEntityUpscaling(activeEntity) : false;

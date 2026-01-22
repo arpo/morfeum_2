@@ -131,6 +131,9 @@ export function useWorldViewLogic() {
     
     rendererRef.current = new WorldViewRenderer({ container });
     containerRef.current = container;
+    
+    // Store renderer ref in global store for access by other components (e.g., video generation)
+    useStore.getState().setWorldViewRendererRef(rendererRef.current);
   }, []);
 
   // Check for new depth map (called after depth map generation)
@@ -186,8 +189,8 @@ export function useWorldViewLogic() {
             // Pause particles during load for better performance
             rendererRef.current.setParticlesEnabled(false);
             
-            // Load original/initial image first
-            await rendererRef.current.load(initialSrc, displayImage.depthSrc);
+            // Load original/initial image first (with model class for filtering)
+            await rendererRef.current.load(initialSrc, displayImage.depthSrc, imageModelClass);
             setIsLoading(false);
             
             // Re-enable particles only for still images (no video)
@@ -240,7 +243,8 @@ export function useWorldViewLogic() {
                       await rendererRef.current.crossfadeTo(
                         upscaledUrl, 
                         displayImage.depthSrc, 
-                        IMAGE_LOADING_CONFIG.UPSCALED_CROSSFADE_DURATION_S
+                        IMAGE_LOADING_CONFIG.UPSCALED_CROSSFADE_DURATION_S,
+                        imageModelClass
                       );
                       currentImageRef.current = upscaledUrl;
                     } catch {
@@ -264,6 +268,8 @@ export function useWorldViewLogic() {
         
         if (rendererRef.current) {
           await rendererRef.current.updateDepthMap(displayImage.depthSrc);
+          // Re-apply model filters in case they were lost
+          rendererRef.current.load(currentImageRef.current!, displayImage.depthSrc, imageModelClass);
         }
       }
       
@@ -335,7 +341,8 @@ export function useWorldViewLogic() {
             await rendererRef.current.crossfadeTo(
               newUrl, 
               currentDepthRef.current, 
-              IMAGE_LOADING_CONFIG.UPSCALED_CROSSFADE_DURATION_S
+              IMAGE_LOADING_CONFIG.UPSCALED_CROSSFADE_DURATION_S,
+              imageModelClass
             );
             currentImageRef.current = newUrl;
           } catch {
@@ -409,6 +416,9 @@ export function useWorldViewLogic() {
     return () => {
       rendererRef.current?.dispose();
       rendererRef.current = null;
+      
+      // Clear renderer ref from store
+      useStore.getState().setWorldViewRendererRef(null);
     };
   }, []);
 

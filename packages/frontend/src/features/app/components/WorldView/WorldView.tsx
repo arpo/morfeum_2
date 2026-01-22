@@ -3,8 +3,6 @@ import { useWorldViewLogic } from './useWorldViewLogic';
 import { VideoLoopOverlay } from './VideoLoopOverlay';
 import { WORLD_VIEW_3D_CONFIG } from '@/config';
 import styles from './WorldView.module.css';
-// Import to ensure CSS variables are loaded
-import '@/styles/model-filters.module.css';
 
 // Target aspect ratio (16:9)
 const TARGET_ASPECT_RATIO = 16 / 9;
@@ -61,7 +59,7 @@ export function WorldView() {
       {/* Canvas is always visible - no skeleton, no fade animation */}
       <div 
         ref={containerRef} 
-        className={`${styles.canvas}${imageModelClass ? ` ${styles[imageModelClass]}` : ''}`}
+        className={styles.canvas}
         data-model-class={imageModelClass || 'none'}
       />
       

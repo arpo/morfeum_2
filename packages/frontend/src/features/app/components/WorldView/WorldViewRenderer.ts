@@ -20,6 +20,7 @@ import {
   updateSceneEffects,
   colorEffectMethods
 } from './sceneManager';
+import { getModelFilterPreset, modelRequiresFiltering } from './effects/postprocessors/modelFilters';
 import {
   CrossfadeState,
   createCrossfadeState,
@@ -81,6 +82,9 @@ export class WorldViewRenderer {
   private videoElement: HTMLVideoElement | null = null;
   private videoTexture: THREE.VideoTexture | null = null;
   private isShowingVideo: boolean = false;
+
+  // Current image model class for filtering
+  private currentImageModelClass: string | null = null;
 
   constructor(options: WorldViewRendererOptions) {
     this.container = options.container;
@@ -145,7 +149,7 @@ export class WorldViewRenderer {
     this.particleSystem.createMesh(this.scene);
   }
 
-  async load(imageUrl: string, depthUrl?: string | null): Promise<void> {
+  async load(imageUrl: string, depthUrl?: string | null, imageModelClass?: string | null): Promise<void> {
     // Clean up any active crossfade before loading new image
     if (this.crossfadeState.isActive) {
       this.crossfadeState = cleanupCrossfade(this.crossfadeState, this.scene, null);
@@ -165,6 +169,9 @@ export class WorldViewRenderer {
     } else {
       this.createFlatMesh(imageTexture);
     }
+
+    // Apply model filters if needed
+    this.applyModelFilters(imageModelClass);
   }
 
   /**
@@ -172,8 +179,9 @@ export class WorldViewRenderer {
    * @param imageUrl - New image URL
    * @param depthUrl - Optional depth map URL
    * @param duration - Transition duration in seconds (default 1.5s)
+   * @param imageModelClass - Optional model class for filtering
    */
-  async crossfadeTo(imageUrl: string, depthUrl?: string | null, duration: number = 1.5): Promise<void> {
+  async crossfadeTo(imageUrl: string, depthUrl?: string | null, duration: number = 1.5, imageModelClass?: string | null): Promise<void> {
     if (!this.mesh || !this.material) {
       return this.load(imageUrl, depthUrl);
     }
@@ -223,6 +231,9 @@ export class WorldViewRenderer {
     if (this.material) {
       prepareNewMaterialForFadeIn(this.material as THREE.ShaderMaterial);
     }
+
+    // Apply model filters if needed
+    this.applyModelFilters(imageModelClass);
   }
 
   /**
@@ -680,6 +691,59 @@ export class WorldViewRenderer {
       );
       this.postProcessor.setIntensity(0); // No displacement by default
     }
+  }
+
+  /**
+   * Apply model-specific color filters based on image model class
+   */
+  private applyModelFilters(imageModelClass?: string | null): void {
+    this.currentImageModelClass = imageModelClass || null;
+    
+    // Ensure post-processor exists for model filtering
+    this.ensurePostProcessor();
+
+    const filterPreset = getModelFilterPreset(imageModelClass);
+    
+    if (filterPreset && this.postProcessor) {
+      // Apply model-specific filters
+      this.postProcessor.setModelFilters(filterPreset);
+    } else if (this.postProcessor) {
+      // Reset to default (no filtering)
+      this.postProcessor.resetModelFilters();
+    }
+  }
+
+  /**
+   * Capture the current filtered image from the canvas
+   * Returns a blob of the filtered image for video generation
+   */
+  async captureFilteredImage(format: 'png' | 'jpeg' = 'jpeg', quality: number = 0.92): Promise<Blob | null> {
+    if (!this.renderer || !this.renderer.domElement) {
+      return null;
+    }
+
+    // Ensure we have a frame rendered with filters applied
+    return new Promise((resolve) => {
+      try {
+        this.renderer.domElement.toBlob(
+          (blob) => {
+            resolve(blob);
+          },
+          `image/${format}`,
+          quality
+        );
+      } catch (error) {
+        console.error('[WorldViewRenderer] Failed to capture filtered image:', error);
+        resolve(null);
+      }
+    });
+  }
+
+  /**
+   * Get current image model class (for debugging/info)
+   */
+  getCurrentImageModelClass(): string | null {
+    return this.currentImageModelClass;
   }
 
   dispose(): void {

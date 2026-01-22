@@ -29,6 +29,12 @@ export const postProcessorFragmentShader = `
   uniform float lightning;     // 0-1 lightning flash
   uniform float desaturate;    // 0-1 desaturation amount
   
+  // Model filter uniforms (for AI model alignment)
+  uniform float saturation;    // Saturation multiplier (1.0 = no change)
+  uniform float contrast;      // Contrast multiplier (1.0 = no change)
+  uniform float brightness;    // Brightness multiplier (1.0 = no change)
+  uniform float gamma;         // Gamma correction (1.0 = no change, 2.2 = standard)
+  
   varying vec2 vUv;
   
   // Simplex noise for organic distortion
@@ -160,6 +166,27 @@ export const postProcessorFragmentShader = `
     return mix(color, vec3(gray), strength);
   }
   
+  // Apply saturation adjustment
+  vec3 applySaturation(vec3 color, float saturation) {
+    float gray = dot(color, vec3(0.299, 0.587, 0.114));
+    return mix(vec3(gray), color, saturation);
+  }
+  
+  // Apply contrast adjustment
+  vec3 applyContrast(vec3 color, float contrast) {
+    return (color - 0.5) * contrast + 0.5;
+  }
+  
+  // Apply brightness adjustment
+  vec3 applyBrightness(vec3 color, float brightness) {
+    return color * brightness;
+  }
+  
+  // Apply gamma correction
+  vec3 applyGamma(vec3 color, float gamma) {
+    return pow(color, vec3(1.0 / gamma));
+  }
+  
   void main() {
     vec2 displacement = vec2(0.0);
     
@@ -180,7 +207,21 @@ export const postProcessorFragmentShader = `
     
     vec3 color = texture2D(tDiffuse, distortedUv).rgb;
     
-    // Apply color effects in order
+    // Apply model filters FIRST (base color correction)
+    if (brightness != 1.0) {
+      color = applyBrightness(color, brightness);
+    }
+    if (contrast != 1.0) {
+      color = applyContrast(color, contrast);
+    }
+    if (saturation != 1.0) {
+      color = applySaturation(color, saturation);
+    }
+    if (gamma != 1.0) {
+      color = applyGamma(color, gamma);
+    }
+    
+    // Apply artistic color effects after base correction
     if (desaturate > 0.0) {
       color = applyDesaturate(color, desaturate);
     }
