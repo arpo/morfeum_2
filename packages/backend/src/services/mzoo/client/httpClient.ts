@@ -25,9 +25,22 @@ export async function mzooPost<TRequest, TResponse>(
     });
     
     if (!response.ok) {
+      // Try to get error details from response body
+      let errorMessage = `HTTP error! status: ${response.status}`;
+      try {
+        const errorBody = await response.json();
+        if (errorBody.error) {
+          errorMessage = `${errorMessage} - ${errorBody.error}`;
+        } else if (errorBody.message) {
+          errorMessage = `${errorMessage} - ${errorBody.message}`;
+        }
+      } catch {
+        // Response body not JSON, use default error message
+      }
+      console.error('[MZOO HTTP] Request failed:', errorMessage);
       return {
         status: response.status,
-        error: `HTTP error! status: ${response.status}`
+        error: errorMessage
       };
     }
     

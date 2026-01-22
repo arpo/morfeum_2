@@ -24,6 +24,7 @@ import {
   cleanupPipeline
 } from '../utils/routeUtils';
 import multer from 'multer';
+import { uploadVideoToR2Background } from '../../services/r2Storage';
 
 /**
  * Find host node by walking up the tree from any node
@@ -165,14 +166,9 @@ export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: R
         throw new Error('Media not found or has no URL');
       }
 
-      // Handle filtered image if provided
-      let imageUrlToUse = media.url;
-
-      if (req.file) {
-        // Convert filtered image buffer to base64 data URL
-        const base64 = req.file.buffer.toString('base64');
-        imageUrlToUse = `data:image/jpeg;base64,${base64}`;
-      }
+      // Always use original media URL for video generation
+      // (MZOO API doesn't support base64 data URLs, only HTTP URLs)
+      const imageUrlToUse = media.url;
 
       // Check if this is a character (ID starts with 'char-')
       const isCharacter = nodeId.startsWith('char-');
@@ -269,13 +265,20 @@ export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: R
 
       const videoUrl = videoResult.data.videoURL;
 
-      // Save video URL and prompt to media entry
+      // Save video URL and prompt to media entry (replicate URL first for immediate display)
       mediaService.addUrlVariant(primaryMediaId, 'video', videoUrl);
       mediaService.updateMedia(primaryMediaId, {
         metadata: { videoPrompt: enhancedPrompt }
       });
       
       pipeline.completeStage('generating', 'Video generated');
+
+      // Start background task to upload video to R2 for permanent storage
+      // This runs fire-and-forget - client gets response immediately with replicate URL
+      // When R2 upload completes, media.urls.video is updated to R2 URL
+      uploadVideoToR2Background(videoUrl, primaryMediaId, apiKey).catch(err => {
+        console.error('[VideoLoop] R2 background upload failed:', err);
+      });
 
       // Send completion
       pipeline.completed('Video loop generated successfully', {

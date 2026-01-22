@@ -96,6 +96,13 @@ export function VideoLoopOverlay({ videoUrl, isVisible, onFadeComplete }: VideoL
     setIsFading(false);
     setIsLoaded(false);
 
+    // Timeout fallback - if video doesn't load within 10 seconds, signal ready anyway
+    // This prevents users from being stuck with black overlay forever
+    const timeoutId = setTimeout(() => {
+      console.warn('[VideoLoopOverlay] Video load timeout - signaling ready anyway');
+      window.dispatchEvent(new CustomEvent(WORLD_VIEW_EVENTS.VIDEO_LOOP_READY));
+    }, 10000);
+
     // Load video in both elements
     videoA.src = videoUrl;
     videoB.src = videoUrl;
@@ -104,6 +111,7 @@ export function VideoLoopOverlay({ videoUrl, isVisible, onFadeComplete }: VideoL
 
     // Start playing video A when ready
     const handleCanPlay = () => {
+      clearTimeout(timeoutId);
       setIsLoaded(true);
       videoA.play().then(() => {
         // Signal that video is playing and ready for overlay to fade out
@@ -111,13 +119,29 @@ export function VideoLoopOverlay({ videoUrl, isVisible, onFadeComplete }: VideoL
         setTimeout(() => {
           window.dispatchEvent(new CustomEvent(WORLD_VIEW_EVENTS.VIDEO_LOOP_READY));
         }, 150);
-      }).catch(() => {});
+      }).catch(() => {
+        // Play failed - signal ready anyway so overlay fades out
+        console.warn('[VideoLoopOverlay] Video play failed - signaling ready anyway');
+        window.dispatchEvent(new CustomEvent(WORLD_VIEW_EVENTS.VIDEO_LOOP_READY));
+      });
+    };
+
+    // Handle video load errors - signal ready so overlay fades out
+    const handleError = (e: Event) => {
+      clearTimeout(timeoutId);
+      console.error('[VideoLoopOverlay] Video load error:', e);
+      // Signal ready anyway so the black overlay fades out
+      // User will see the static image instead of being stuck
+      window.dispatchEvent(new CustomEvent(WORLD_VIEW_EVENTS.VIDEO_LOOP_READY));
     };
 
     videoA.addEventListener('canplay', handleCanPlay, { once: true });
+    videoA.addEventListener('error', handleError, { once: true });
 
     return () => {
+      clearTimeout(timeoutId);
       videoA.removeEventListener('canplay', handleCanPlay);
+      videoA.removeEventListener('error', handleError);
     };
   }, [videoUrl]);
 
