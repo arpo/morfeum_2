@@ -13,6 +13,11 @@ export interface ShaderUniforms {
   meshDepth: { value: number };
   sensitivity: { value: number };
   opacity: { value: number };
+  // Model filter uniforms (for AI model color alignment)
+  saturation: { value: number };
+  contrast: { value: number };
+  brightness: { value: number };
+  gamma: { value: number };
 }
 
 /**
@@ -29,7 +34,12 @@ export function createShaderUniforms(
     focus: { value: focus },
     meshDepth: { value: meshDepth },
     sensitivity: { value: 0.5 },
-    opacity: { value: 1.0 }
+    opacity: { value: 1.0 },
+    // Default model filters (no correction)
+    saturation: { value: 1.0 },
+    contrast: { value: 1.0 },
+    brightness: { value: 1.0 },
+    gamma: { value: 1.0 }
   };
 }
 
@@ -77,17 +87,106 @@ export function getVertexShader(): string {
 }
 
 /**
- * Fragment shader - simple texture sampling
+ * Fragment shader - texture sampling with color correction
  */
 export function getFragmentShader(): string {
   return `
     uniform sampler2D map;
     uniform float opacity;
+    uniform float saturation;
+    uniform float contrast;
+    uniform float brightness;
+    uniform float gamma;
+    
     varying vec2 vUv;
+
+    // Convert RGB to HSL
+    vec3 rgb2hsl(vec3 color) {
+      float maxC = max(max(color.r, color.g), color.b);
+      float minC = min(min(color.r, color.g), color.b);
+      float delta = maxC - minC;
+      
+      float h = 0.0;
+      float s = 0.0;
+      float l = (maxC + minC) / 2.0;
+      
+      if (delta > 0.0) {
+        s = l < 0.5 ? delta / (maxC + minC) : delta / (2.0 - maxC - minC);
+        
+        if (maxC == color.r) {
+          h = (color.g - color.b) / delta + (color.g < color.b ? 6.0 : 0.0);
+        } else if (maxC == color.g) {
+          h = (color.b - color.r) / delta + 2.0;
+        } else {
+          h = (color.r - color.g) / delta + 4.0;
+        }
+        h /= 6.0;
+      }
+      
+      return vec3(h, s, l);
+    }
+
+    // Convert HSL to RGB
+    vec3 hsl2rgb(vec3 hsl) {
+      float h = hsl.x;
+      float s = hsl.y;
+      float l = hsl.z;
+      
+      float c = (1.0 - abs(2.0 * l - 1.0)) * s;
+      float x = c * (1.0 - abs(mod(h * 6.0, 2.0) - 1.0));
+      float m = l - c / 2.0;
+      
+      vec3 rgb;
+      if (h < 1.0/6.0) {
+        rgb = vec3(c, x, 0.0);
+      } else if (h < 2.0/6.0) {
+        rgb = vec3(x, c, 0.0);
+      } else if (h < 3.0/6.0) {
+        rgb = vec3(0.0, c, x);
+      } else if (h < 4.0/6.0) {
+        rgb = vec3(0.0, x, c);
+      } else if (h < 5.0/6.0) {
+        rgb = vec3(x, 0.0, c);
+      } else {
+        rgb = vec3(c, 0.0, x);
+      }
+      
+      return rgb + m;
+    }
+
+    // Apply saturation adjustment
+    vec3 applySaturation(vec3 color, float sat) {
+      vec3 hsl = rgb2hsl(color);
+      hsl.y *= sat;
+      return hsl2rgb(hsl);
+    }
+
+    // Apply contrast adjustment
+    vec3 applyContrast(vec3 color, float cont) {
+      return (color - 0.5) * cont + 0.5;
+    }
+
+    // Apply brightness adjustment
+    vec3 applyBrightness(vec3 color, float bright) {
+      return color * bright;
+    }
+
+    // Apply gamma correction
+    vec3 applyGamma(vec3 color, float g) {
+      return pow(color, vec3(1.0 / g));
+    }
 
     void main() {
       vec4 texColor = texture2D(map, vUv);
-      gl_FragColor = vec4(texColor.rgb, texColor.a * opacity);
+      vec3 color = texColor.rgb;
+      
+      // Apply model-specific color corrections in order
+      color = applyContrast(color, contrast);
+      color = applySaturation(color, saturation);
+      color = applyBrightness(color, brightness);
+      color = applyGamma(color, gamma);
+      
+      gl_FragColor = vec4(color, texColor.a * opacity);
     }
   `;
 }

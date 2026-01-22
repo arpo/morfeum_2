@@ -428,10 +428,8 @@ export class WorldViewRenderer {
       }
     });
     
-    // Clear the canvas buffer immediately to remove any residual pixels
-    // This is critical because preserveDrawingBuffer: true keeps old pixels
-    // and scissor test only renders to a portion of the canvas
-    this.renderer.clear();
+    // Note: Don't call renderer.clear() here - the animation loop handles clearing before each frame
+    // Calling clear() here causes black screen during node transitions when post-processor is active
   }
 
   hasDepthMap(): boolean { return this.material?.uniforms.meshDepth.value > 0; }
@@ -695,21 +693,27 @@ export class WorldViewRenderer {
 
   /**
    * Apply model-specific color filters based on image model class
+   * Applies filters directly to depth shader uniforms (single pass, efficient)
    */
   private applyModelFilters(imageModelClass?: string | null): void {
     this.currentImageModelClass = imageModelClass || null;
     
-    // Ensure post-processor exists for model filtering
-    this.ensurePostProcessor();
+    if (!this.material) return;
 
     const filterPreset = getModelFilterPreset(imageModelClass);
     
-    if (filterPreset && this.postProcessor) {
-      // Apply model-specific filters
-      this.postProcessor.setModelFilters(filterPreset);
-    } else if (this.postProcessor) {
+    if (filterPreset) {
+      // Apply model-specific filters to depth shader uniforms
+      this.material.uniforms.saturation.value = filterPreset.saturation;
+      this.material.uniforms.contrast.value = filterPreset.contrast;
+      this.material.uniforms.brightness.value = filterPreset.brightness;
+      this.material.uniforms.gamma.value = filterPreset.gamma;
+    } else {
       // Reset to default (no filtering)
-      this.postProcessor.resetModelFilters();
+      this.material.uniforms.saturation.value = 1.0;
+      this.material.uniforms.contrast.value = 1.0;
+      this.material.uniforms.brightness.value = 1.0;
+      this.material.uniforms.gamma.value = 1.0;
     }
   }
 
