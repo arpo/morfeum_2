@@ -477,6 +477,104 @@ Both handlers now use `PipelineHelper` for proper elapsed time output:
 
 ---
 
+## 2026-01-21 - Crossfade & Video Overlay Timing Improvements ✅
+
+Fixed crossfade artifacts and improved video loop overlay timing for seamless node transitions.
+
+### Crossfade Gray Gap Fix
+
+**Problem:** During image crossfades, a gray gap appeared between the old and new images.
+
+**Root Cause:** In `WorldViewRenderer.ts`, the `crossfadeTo()` method was calling `createMeshWithDepth()`/`createFlatMesh()`, which internally called `cleanupMesh()`. This removed **ALL meshes** from the scene, including the old mesh that needed to stay visible during the crossfade.
+
+**Solution:** Inline mesh creation in `crossfadeTo()` without calling cleanup functions:
+
+```typescript
+// Before: Called createMeshWithDepth() which removed all meshes
+await this.createMeshWithDepth(newTexture, depthUrl);
+
+// After: Create mesh inline, keep old mesh in scene
+if (depthUrl) {
+  const depthData = await loadDepthMapData(depthUrl);
+  const geometry = createDepthGeometry(depthData, {...});
+  this.material = createDepthShaderMaterial(newTexture, this.focus, this.meshDepth);
+  this.mesh = new THREE.Mesh(geometry, this.material);
+  this.scaleMesh();
+  this.scene.add(this.mesh);
+}
+```
+
+**Result:** Old mesh stays at opacity 1.0 while new mesh fades 0 → 1, creating seamless crossfade with no gray gap.
+
+### High-Res Crossfade Logging
+
+Added console logging to confirm high-res image crossfade completion:
+
+```javascript
+console.log('[WorldView] High-res image crossfade complete:', upscaledUrl);
+```
+
+Also added debug logging for image loading decisions:
+```javascript
+console.log('[WorldView] Image loading decision:', {
+  hasVideo,
+  hasUpscaled,
+  videoSrc,
+  upscaledSrc,
+  initialSrc,
+  upscaledDifferent
+});
+```
+
+### Video-Aware Overlay Timing
+
+**Problem:** When navigating to nodes with video loops, the black transition overlay faded out before the video started playing, causing a visible jump as the video initialized.
+
+**Solution:** Delay overlay fade-out until video is ready:
+
+1. **VideoLoopOverlay.tsx:**
+   - Emits `videoLoopReady` event 150ms after video starts playing
+   - Delay allows video to stabilize before revealing
+
+2. **useWorldViewLogic.ts:**
+   - For nodes with video: Don't emit `worldViewContentReady` immediately
+   - Listen for `videoLoopReady` event and forward it as `worldViewContentReady`
+   - For nodes without video: Emit `worldViewContentReady` immediately (unchanged)
+
+**Flow for Video Nodes:**
+```
+1. Image loads → Overlay stays black
+2. Video starts playing → Wait 150ms
+3. videoLoopReady event → worldViewContentReady event
+4. Overlay fades out → Video already playing smoothly
+```
+
+**Flow for Non-Video Nodes:**
+```
+1. Image loads → worldViewContentReady event
+2. Overlay fades out immediately (unchanged)
+```
+
+### Files Modified
+
+**Crossfade Fix:**
+- `packages/frontend/src/features/app/components/WorldView/WorldViewRenderer.ts`
+  - Modified `crossfadeTo()` method to create mesh inline
+
+**Logging:**
+- `packages/frontend/src/features/app/components/WorldView/useWorldViewLogic.ts`
+  - Added debug logging for image loading decisions
+  - Added high-res crossfade completion log
+
+**Video Timing:**
+- `packages/frontend/src/features/app/components/WorldView/VideoLoopOverlay.tsx`
+  - Emit `videoLoopReady` event after video starts playing
+- `packages/frontend/src/features/app/components/WorldView/useWorldViewLogic.ts`
+  - Conditional `worldViewContentReady` emission based on video presence
+  - Added listener for `videoLoopReady` event
+
+---
+
 ## Next Steps
 
 - [ ] Consider renaming `NEW_REGION2` → `NEW_REGION` (after confirming no region type variants needed)

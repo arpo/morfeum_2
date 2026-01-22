@@ -738,6 +738,108 @@
       "urls": {
         "video": "https://ark-content-generation-ap-southeast-1.tos-ap-southeast-1.volces.com/seedance-1-0-pro-fast/02176900351821800000000000000000000ffffc0a88025e8d423.mp4?X-Tos-Algorithm=TOS4-HMAC-SHA256&X-Tos-Credential=AKLTYWJkZTExNjA1ZDUyNDc3YzhjNTM5OGIyNjBhNDcyOTQ%2F20260121%2Fap-southeast-1%2Ftos%2Frequest&X-Tos-Date=20260121T135221Z&X-Tos-Expires=86400&X-Tos-Signature=8903ff7eb05038bca0175b897d4c5ad693c31cad408bead142de544ca1a97f39&X-Tos-SignedHeaders=host"
       }
+    },
+    "media-1769012703010-41r8wp9tj": {
+      "id": "media-1769012703010-41r8wp9tj",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b4c96/uKiVEVu4-RkGzQarjSGTo.jpg",
+      "createdAt": "2026-01-21T16:25:03.010Z",
+      "metadata": {
+        "prompt": "add shark in the water,",
+        "promptLayers": {
+          "name": "The Coral Pod",
+          "description": "A large, partially submerged cylindrical module, encrusted with rocks and marine life, featuring circular openings revealing its derelict interior with remnants of furniture.",
+          "background": "The muted, blue-grey expanse of the calm, clear midday sea stretches out behind the Coral Pod, with the distant, hazy silhouettes of other derelict structures in the Sunken District hinting at the vastness of Aethelgard's submerged city.",
+          "midground": "The Coral Pod itself dominates the midground, a massive, cylindrical structure emerging from the water. Its 'weathered facade' is heavily 'encrusted with rocks and marine life', giving it a barnacle-covered, organic appearance. Circular openings, dark and cavernous, punctuate the structure, offering tantalizing glimpses of its 'derelict interior' (though the focus is exterior). A 'rusty metal ladder' clings precariously to one side, leading up towards an unseen upper level. Scattered 'wooden debris' floats around its base in the shallow, clear water. A splash of unexpected color comes from a tattered 'red rug' partially submerged near the entrance, adorned with faded 'cushions'.",
+          "foreground": "The 'street-level' perspective places us close to the water's edge. The 'overgrown crevices' of the Coral Pod's lower sections are visible, teeming with small sea plants and algae. Ripples from the calm water gently lap at the base of the module. The sandy, water-worn ground of the Sunken District's submerged 'street' is implied, with perhaps a few more scattered pieces of 'wooden debris'. The camera's '25-30° tilt up' emphasizes the imposing scale of the Coral Pod above.",
+          "lighting": "The 'midday' sun casts a 'soft, diffused light' across the entire scene. Sunlight penetrates the circular openings, creating subtle, ethereal glows within the dark recesses of the Coral Pod, hinting at the 'soft, diffused light through openings' without revealing the interior details. The clear, calm weather ensures no harsh shadows, creating a gentle illumination that highlights the textures of the marine life and weathered metal. The overall light is bright but not glaring, with a slight underwater quality due to the proximity to the sea.",
+          "atmosphere": "A profound sense of 'nostalgic' abandonment permeates the scene. The 'derelict' state of the Coral Pod, combined with the quiet, clear weather, evokes a feeling of forgotten grandeur and a past life. The absence of any 'bustling activity' and the 'pristine structures' reinforces the isolation and decay. The colors are muted, dominated by the blues and greys of the sea and weathered materials, with the occasional vibrant, yet faded, pop of the red rug, enhancing the melancholic beauty."
+        },
+        "promptData": {
+          "command": "EDIT_IMAGE",
+          "editPrompt": "add shark in the water,"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1024,
+        "height": 576,
+        "aspectRatio": "landscape_16_9",
+        "editedFrom": "media-1768982937796-wc6cmqsoz"
+      },
+      "entityRefs": [
+        "v2-1769012703011-q8y0esdwt"
+      ],
+      "parentMedia": "media-1768982937796-wc6cmqsoz",
+      "urls": {
+        "video": "https://ark-content-generation-ap-southeast-1.tos-ap-southeast-1.volces.com/seedance-1-0-pro-fast/02176901271462000000000000000000000ffffc0a88025ffef70.mp4?X-Tos-Algorithm=TOS4-HMAC-SHA256&X-Tos-Credential=AKLTYWJkZTExNjA1ZDUyNDc3YzhjNTM5OGIyNjBhNDcyOTQ%2F20260121%2Fap-southeast-1%2Ftos%2Frequest&X-Tos-Date=20260121T162536Z&X-Tos-Expires=86400&X-Tos-Signature=f16bc7302b85b87e135d61b788170be0ec4e3ff1f247846f100b6d223e1ffbfc&X-Tos-SignedHeaders=host"
+      }
+    },
+    "media-1769012861561-j5pwkdgmt": {
+      "id": "media-1769012861561-j5pwkdgmt",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b4ca6/ikhWYokRuLW_PNeT72YUL.jpg",
+      "createdAt": "2026-01-21T16:27:41.561Z",
+      "metadata": {
+        "prompt": "add a big alien monster",
+        "promptLayers": {
+          "name": "Inner Sanctum",
+          "description": "This enclosed chamber is a marvel of biomorphic design, dominated by cascading water features. Walls seem to flow and curve, with numerous small waterfalls and pools integrated into the structure, creating a lush, water-filled environment.",
+          "background": "Curving biomorphic walls that merge seamlessly into a smooth, iridescent ceiling, with more distant waterfalls disappearing into the soft orange glow.",
+          "midground": "Integrated water channels and small, cascading waterfalls flowing along the walls, with shallow pools reflecting the ambient light.",
+          "foreground": "A polished, slightly damp floor with gentle, sculpted drainage channels, and the base of a nearby water feature.",
+          "lighting": "Soft, diffused ambient light originating from within the water features and subtle, integrated bioluminescent panels, casting a warm orange and soft blue-green hue.",
+          "atmosphere": "A sense of profound tranquility and organic integration, with the constant, gentle sound of flowing water."
+        },
+        "promptData": {
+          "command": "EDIT_IMAGE",
+          "editPrompt": "add a big alien monster"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1024,
+        "height": 576,
+        "aspectRatio": "landscape_16_9",
+        "editedFrom": "media-1769001763364-p9cu64l3z"
+      },
+      "entityRefs": [
+        "v2-1769012861563-6z5tu68py"
+      ],
+      "parentMedia": "media-1769001763364-p9cu64l3z",
+      "urls": {
+        "video": "https://ark-content-generation-ap-southeast-1.tos-ap-southeast-1.volces.com/seedance-1-0-pro-fast/02176901287395000000000000000000000ffffc0a88025944a7d.mp4?X-Tos-Algorithm=TOS4-HMAC-SHA256&X-Tos-Credential=AKLTYWJkZTExNjA1ZDUyNDc3YzhjNTM5OGIyNjBhNDcyOTQ%2F20260121%2Fap-southeast-1%2Ftos%2Frequest&X-Tos-Date=20260121T162814Z&X-Tos-Expires=86400&X-Tos-Signature=a692a8c9518f5f71506003140dcb4c51e585c907f62f34cc6234b2c7a1b2670f&X-Tos-SignedHeaders=host"
+      }
+    },
+    "media-1769014319958-6w2z6trak": {
+      "id": "media-1769014319958-6w2z6trak",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b4d37/XjrV81j5G8pSC-sN9j4dA.jpg",
+      "createdAt": "2026-01-21T16:51:59.958Z",
+      "metadata": {
+        "prompt": "add a hot women in the bed",
+        "promptLayers": {
+          "name": "Master Bedroom",
+          "description": "A cozy and serene master bedroom, carved into the serene structure of the beach house. Light gently filters in, illuminating the space with a warm, inviting glow.",
+          "background": "Softly curved textured white walls seamlessly meeting a subtly sloped ceiling finished with warm wood panels. The hint of a porthole window frame is visible.",
+          "midground": "A comfortable bed with light, airy linens is the focal point. Beside it, a small wooden nightstand with a softly glowing lamp, reflecting the house's organic design.",
+          "foreground": "A plush, light-colored rug covers a portion of the smooth, light wood flooring. The edge of a comfortable armchair with a fluffy cushion is visible, echoing the balcony's comfort.",
+          "lighting": "Gentle, diffused light filtering in, as if from distant windows, creating a warm and inviting ambiance. Soft ambient light sources from bedside lamps add to the coziness.",
+          "atmosphere": "A sense of deep peace and restful tranquility pervades the room. The air feels calm and still, a perfect sanctuary for relaxation."
+        },
+        "promptData": {
+          "command": "EDIT_IMAGE",
+          "editPrompt": "add a hot women in the bed"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1024,
+        "height": 576,
+        "aspectRatio": "landscape_16_9",
+        "editedFrom": "media-1769003029700-4cmae832x"
+      },
+      "entityRefs": [
+        "v2-1769014319960-yt3j7udt7"
+      ],
+      "parentMedia": "media-1769003029700-4cmae832x",
+      "urls": {
+        "video": "https://ark-content-generation-ap-southeast-1.tos-ap-southeast-1.volces.com/seedance-1-0-pro-fast/02176901433301700000000000000000000ffffc0a880255116c1.mp4?X-Tos-Algorithm=TOS4-HMAC-SHA256&X-Tos-Credential=AKLTYWJkZTExNjA1ZDUyNDc3YzhjNTM5OGIyNjBhNDcyOTQ%2F20260121%2Fap-southeast-1%2Ftos%2Frequest&X-Tos-Date=20260121T165233Z&X-Tos-Expires=86400&X-Tos-Signature=90929090d9fcad5eb1a4b24571a80f9187aa75cf07603c39c33bacc3a990d57d&X-Tos-SignedHeaders=host"
+      }
     }
   }
 }

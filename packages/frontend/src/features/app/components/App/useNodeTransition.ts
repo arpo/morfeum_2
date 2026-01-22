@@ -10,6 +10,7 @@
 
 import { useState, useCallback, useRef, useEffect } from 'react';
 import { useStore } from '@/store';
+import { WORLD_VIEW_EVENTS } from '@/utils/events';
 
 interface UseNodeTransitionReturn {
   /** Whether a transition is in progress (overlay should be active) */
@@ -97,8 +98,8 @@ export function useNodeTransition(): UseNodeTransitionReturn {
       onContentReady();
     };
     
-    window.addEventListener('worldViewContentReady', handleContentReady);
-    return () => window.removeEventListener('worldViewContentReady', handleContentReady);
+    window.addEventListener(WORLD_VIEW_EVENTS.CONTENT_READY, handleContentReady);
+    return () => window.removeEventListener(WORLD_VIEW_EVENTS.CONTENT_READY, handleContentReady);
   }, [onContentReady]);
 
   // Listen for transition requests from other components (via custom event)
@@ -111,8 +112,8 @@ export function useNodeTransition(): UseNodeTransitionReturn {
       }
     };
     
-    window.addEventListener('requestNodeTransition', handleTransitionRequest);
-    return () => window.removeEventListener('requestNodeTransition', handleTransitionRequest);
+    window.addEventListener(WORLD_VIEW_EVENTS.REQUEST_NODE_TRANSITION, handleTransitionRequest);
+    return () => window.removeEventListener(WORLD_VIEW_EVENTS.REQUEST_NODE_TRANSITION, handleTransitionRequest);
   }, [requestTransition]);
 
   return {

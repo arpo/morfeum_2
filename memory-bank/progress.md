@@ -21,6 +21,9 @@
 - ✅ /REDRAW command (wrapper around EDIT_IMAGE)
 - ✅ Wrapper commands documentation (`docs/wrapper-commands.md`)
 - ✅ PipelineHelper refactor for editImageHandler/redrawHandler
+- ✅ Crossfade gray gap fix (inline mesh creation)
+- ✅ High-res image crossfade logging
+- ✅ Video-aware overlay timing (wait for video playback)
 
 ---
 

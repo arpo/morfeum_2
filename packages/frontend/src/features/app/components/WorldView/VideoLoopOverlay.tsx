@@ -6,6 +6,7 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { VIDEO_LOOP_CONFIG } from '@/config';
+import { WORLD_VIEW_EVENTS } from '@/utils/events';
 import styles from './VideoLoopOverlay.module.css';
 
 interface VideoLoopOverlayProps {
@@ -108,7 +109,7 @@ export function VideoLoopOverlay({ videoUrl, isVisible, onFadeComplete }: VideoL
         // Signal that video is playing and ready for overlay to fade out
         // Add small delay to let video stabilize
         setTimeout(() => {
-          window.dispatchEvent(new CustomEvent('videoLoopReady'));
+          window.dispatchEvent(new CustomEvent(WORLD_VIEW_EVENTS.VIDEO_LOOP_READY));
         }, 150);
       }).catch(() => {});
     };
