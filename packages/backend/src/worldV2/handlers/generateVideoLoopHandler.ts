@@ -150,55 +150,62 @@ export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: R
       // ═══════════════════════════════════════════════════════════════════════
       pipeline.startStage('analyzing', 'Analyzing scene context...');
 
-      const worldsData = await storageService.loadWorlds();
-      if (!worldsData || !worldsData.nodes) {
-        throw new Error('No worlds data found in storage');
-      }
-
-      const node = worldsData.nodes[nodeId];
-      if (!node) {
-        throw new Error(`Node not found: ${nodeId}`);
-      }
-
+      // Check media first (needed for both characters and locations)
       const media = mediaService.getMediaById(primaryMediaId);
       if (!media || !media.url) {
         throw new Error('Media not found or has no URL');
       }
 
-      // Get host for time/weather
-      const host = findHostForNode(worldsData, nodeId);
-      
-      // Extract context from node DNA
-      const nodeDNA = node.dna || {};
-      const semantic = nodeDNA.semantic || {};
-
-      const context = {
-        nodeName: node.name,
-        nodeDescription: node.description,
-        timeOfDay: host?.timeOfDay,
-        weather: host?.weather,
-        atmosphere: semantic.atmosphere,
-        environment: semantic.environment,
-        imagePrompt: media.metadata?.prompt
-      };
-
-      pipeline.completeStage('analyzing', 'Scene context analyzed');
-
-      // ═══════════════════════════════════════════════════════════════════════
-      // Stage 2: Generate video prompt
-      // ═══════════════════════════════════════════════════════════════════════
-      pipeline.startStage('prompting', 'Building video prompt...');
+      // Check if this is a character (ID starts with 'char-')
+      const isCharacter = nodeId.startsWith('char-');
 
       let enhancedPrompt: string;
 
-      // Check if this is a character entity (from characters.json, not a world node)
-      const isCharacter = !worldsData.nodes[nodeId]; // Characters are not in worldsData.nodes
-
       if (isCharacter) {
-        // Use fixed character video prompt
+        // ═══════════════════════════════════════════════════════════════════════
+        // CHARACTER PATH: Use fixed prompt, skip world node lookup
+        // ═══════════════════════════════════════════════════════════════════════
+        pipeline.completeStage('analyzing', 'Character detected');
+        pipeline.startStage('prompting', 'Building video prompt...');
+        
         enhancedPrompt = CHARACTER_VIDEO_PROMPT;
         pipeline.completeStage('prompting', 'Using character video prompt');
       } else {
+        // ═══════════════════════════════════════════════════════════════════════
+        // LOCATION PATH: Load world data and generate prompt via LLM
+        // ═══════════════════════════════════════════════════════════════════════
+        const worldsData = await storageService.loadWorlds();
+        if (!worldsData || !worldsData.nodes) {
+          throw new Error('No worlds data found in storage');
+        }
+
+        const node = worldsData.nodes[nodeId];
+        if (!node) {
+          throw new Error(`Node not found: ${nodeId}`);
+        }
+
+        // Get host for time/weather
+        const host = findHostForNode(worldsData, nodeId);
+        
+        // Extract context from node DNA
+        const nodeDNA = node.dna || {};
+        const semantic = nodeDNA.semantic || {};
+
+        const context = {
+          nodeName: node.name,
+          nodeDescription: node.description,
+          timeOfDay: host?.timeOfDay,
+          weather: host?.weather,
+          atmosphere: semantic.atmosphere,
+          environment: semantic.environment,
+          imagePrompt: media.metadata?.prompt
+        };
+
+        pipeline.completeStage('analyzing', 'Scene context analyzed');
+
+        // Generate video prompt via LLM
+        pipeline.startStage('prompting', 'Building video prompt...');
+        
         // Generate location-specific prompt using LLM
         const systemPrompt = buildVideoPromptSystemPrompt();
         const userPrompt = buildVideoPromptUserPrompt(context);
@@ -222,7 +229,7 @@ export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: R
         enhancedPrompt = `${videoPrompt}. ${DEFAULT_VIDEO_SETTINGS.PROMPT_SUFFIX}`;
         
         pipeline.completeStage('prompting', `Prompt: ${videoPrompt.slice(0, 50)}...`);
-      }
+      } // End of location path
 
       // ═══════════════════════════════════════════════════════════════════════
       // Stage 3: Generate video (22-35 seconds)

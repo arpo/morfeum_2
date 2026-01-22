@@ -575,6 +575,140 @@ console.log('[WorldView] Image loading decision:', {
 
 ---
 
+---
+
+## 2026-01-22 - Video Progress System & Character Video Fix ✅
+
+Simplified video generation progress tracking with a shared time-based animation hook and fixed character video generation.
+
+### Shared Time-Based Progress Hook
+
+**Problem:** Video and upscale operations had complex stage-based progress tracking (analyzing → prompting → generating) that required SSE events from backend. This was verbose, difficult to maintain, and not accurate since actual timing varied.
+
+**Solution:** Created `useTimedProgress` hook that animates from 0% → 95% over expected duration, then jumps to 100% when operation completes:
+
+**Frontend (`packages/frontend/src/hooks/`):**
+- `useTimedProgress.ts` - NEW shared hook
+  - Takes `entityId`, `durationMs`, and `operation` type
+  - Uses `easeInOutCubic` for smooth acceleration/deceleration
+  - Animates 0% → 95% over duration, stops at 95% if taking longer
+  - `stop()` method jumps to 100% when operation completes
+  - `cancel()` for error cleanup
+  - `isRunning(entityId)` to check specific entity status
+
+**Hook Usage:**
+```typescript
+const { start, stop, cancel, isRunning } = useTimedProgress();
+
+// Start 30-second animation for video
+start(entityId, 30000, 'video');
+
+// When operation completes
+stop(entityId);  // Jumps to 100%, shows briefly, then removes
+```
+
+**Simplified Hooks:**
+- `useVideoLoop.ts` - Reduced from ~150 to ~100 lines
+  - Removed all SSE stage event tracking
+  - Uses shared hook with 30 second duration
+  - Just starts animation, waits for completion event
+
+- `useImageUpscale.ts` - Reduced from ~200 to ~170 lines
+  - Removed manual progress steps (10%, 20%, 50%, etc.)
+  - Uses shared hook with 10 second duration
+  - Same simple pattern as video
+
+**Backend:**
+- `pipelineConfig.ts` - Removed `videoLoop` pipeline definition (no longer needed)
+- `generateVideoLoopHandler.ts` - Changed to use generic `v2Edit` pipeline type
+
+### Character Video Generation Fix
+
+**Problem:** Generating videos for characters failed with "Node not found" error because the handler tried to find characters in `worldsData.nodes`, but characters are stored in separate `characters.json` file.
+
+**Solution:** Check if ID starts with `char-` before world data lookup:
+
+**Backend (`packages/backend/src/worldV2/handlers/`):**
+- `generateVideoLoopHandler.ts` - Reordered logic:
+  ```typescript
+  // Check if character first
+  const isCharacter = nodeId.startsWith('char-');
+  
+  if (isCharacter) {
+    // Use fixed CHARACTER_VIDEO_PROMPT
+    enhancedPrompt = CHARACTER_VIDEO_PROMPT;
+  } else {
+    // Load world data and generate prompt via LLM
+    const worldsData = await storageService.loadWorlds();
+    const node = worldsData.nodes[nodeId];
+    // ... generate context-aware prompt
+  }
+  ```
+
+### Progress Bar UI Improvements
+
+**Problem:** Progress bar was positioned inside the tiny 24x24px thumbnail, making it barely visible.
+
+**Solution:** Moved progress bar to span full width of tree node row:
+
+**Frontend (`packages/frontend/src/components/ui/TreeView/`):**
+- `TreeView.tsx` - Moved progress bar JSX from `.mediaContainer` to `.itemContent`
+- `TreeView.module.css`:
+  - Added `position: relative` to `.itemContent`
+  - Progress bar now positioned at bottom of full row
+  - Height reduced from 3px to 2px per user request
+  - Video badge changed from purple to dark gray: `rgba(60, 60, 60, 0.9)`
+
+**Before:**
+```
+[▼] [tiny-img + tiny-progress] Node Name
+```
+
+**After:**
+```
+[▼] [tiny-img] Node Name
+└─────────────────────────────────────────┘
+   └── Progress bar spans full row width
+```
+
+### Animation Behavior
+
+```
+Start → 0%
+During operation → 0% ─easing─→ 95%
+If takes >expected time → stays at 95%
+On completion → jumps to 100%
+After 500ms → progress bar removed
+```
+
+### Files Modified
+
+**Shared Hook:**
+- `packages/frontend/src/hooks/useTimedProgress.ts` - NEW
+- `packages/frontend/src/hooks/index.ts` - Export
+
+**Simplified Hooks:**
+- `packages/frontend/src/features/app/components/TopButtonRow/useVideoLoop.ts`
+- `packages/frontend/src/features/app/components/TopButtonRow/useImageUpscale.ts`
+
+**Backend:**
+- `packages/backend/src/engine/pipelines/shared/pipelineConfig.ts` - Removed videoLoop
+- `packages/backend/src/worldV2/handlers/generateVideoLoopHandler.ts` - Character fix
+
+**UI:**
+- `packages/frontend/src/components/ui/TreeView/TreeView.tsx` - Progress bar position
+- `packages/frontend/src/components/ui/TreeView/TreeView.module.css` - Progress bar & badge styles
+
+### Result
+
+- Much cleaner, more maintainable progress tracking
+- Same smooth eased animation for both video and upscale
+- Character video generation now works correctly
+- Progress bar clearly visible spanning full node width
+- Subtle dark gray video badge instead of bright purple
+
+---
+
 ## Next Steps
 
 - [ ] Consider renaming `NEW_REGION2` → `NEW_REGION` (after confirming no region type variants needed)

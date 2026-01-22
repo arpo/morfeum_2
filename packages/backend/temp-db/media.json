@@ -115,12 +115,73 @@
         "model": "fal-flux-2-turbo-edit",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "videoPrompt": "Subtle shifts in the ambient light cause faint patterns of light and shadow to gently drift across the polished surfaces and geometric floor lines.. Camera remains completely still. Cinematic seamless loop. seamless loop. Fixed camera"
       },
       "entityRefs": [
         "v2-1769080702061-58jfekxtl"
       ],
-      "parentMedia": "media-1769077330484-wxx5tlrr0"
+      "parentMedia": "media-1769077330484-wxx5tlrr0",
+      "urls": {
+        "video": "https://replicate.delivery/xezq/3ODGj7r88Bo9HtVv4PQsuAj1xc5mVx6qKHNMh0WBvf9qz9fVA/tmpgh6b7miu.mp4"
+      }
+    },
+    "media-1769081035648-yka3ne171": {
+      "id": "media-1769081035648-yka3ne171",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b6746/CZXFfo3s7IcaY4o1dq4Cp.jpg",
+      "createdAt": "2026-01-22T11:23:55.648Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nHalf portrait of Unit 734, facing the camera directly with steady, reflective eye contact, rendered with crisp focus and a gentle background bokeh. The Central Pillar Observation Deck stretches behind, a vast expanse of gleaming chrome and reinforced crystalline panels reflecting a nebulae-filled twilight sky. Unit 734's sleek, mirror-polished chrome form is perfectly integrated, its surface mirroring the awe-inspiring cosmic vista. The fiber optic and durasteel suit, shifting between deep indigo and metallic silver with pulsing blue circuitry, contours its androgenous shape. Holographic geometric patterns swirl on its chest and limbs, casting a soft, internal blue luminescence that subtly illuminates its metallic skin. The air around it carries a cool, sterile hum, a palpable sense of silent processing power. The overall mood is contemplative, a solitary observer dwarfed by the immensity of the universe.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024,
+        "videoPrompt": "A calm, presence. Natural eye contact. No speech, no lip movement, no mouth articulation of any kind. The subject feels alive: subtle breathing (gentle chest rise and fall), soft blinking, and minimal head micro-movements. Example: head tilting to the side very slightly now and then, looking around subtly. Light wind softly moving hair strands. Performance feels natural and film-like, as if in a quiet movie moment. Camera remains completely still. Cinematic seamless loop. seamless loop. Fixed camera with mid or close framing."
+      },
+      "entityRefs": [
+        "char-1769081035647-gdrizsq5i"
+      ],
+      "urls": {
+        "video": "https://replicate.delivery/xezq/ky3D2Ogni56ZOhrdebfFEZlFpdk0Hx7NXVBkowZiFVmfc3fXB/tmpjfeub5ab.mp4"
+      }
+    },
+    "media-1769081869150-ij3jdropp": {
+      "id": "media-1769081869150-ij3jdropp",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b679c/C6U5XcLIjpQMzunazpt4e.jpg",
+      "createdAt": "2026-01-22T11:37:49.150Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nThe Great Construct. A region dominated by the colossal, abstract futuristic structure, serving as a hub of industrial exploration.\n\nSTYLE LOCK — NON-NEGOTIABLE:\n\nIdentity:\n* mega-structure focus\n* industrial zone\n\nMaterials:\n* white platforms\n* textured conduits\n\nColor & Light:\n* bright ambient light\n\nAtmosphere:\n* industrial\n* exploratory\n\nBanned:\n* organic forms\n* natural landscapes\n\nSCENE LAYERS:\n- Background: The vast, hazy horizon of Nova Prime, hinting at distant, less developed industrial sectors under a brilliant sky.\n- Midground: The immense, sprawling 'Great Construct' itself, a labyrinth of interconnected white platforms and towering, abstract geometric forms. Intricate networks of textured conduits snake across its surface, some pulsing with faint internal light, connecting vast modules and functional areas.\n- Foreground: The uppermost sections of the 'Great Construct', revealing a complex tapestry of white platforms and their textured conduit systems. Glimpses of the deep recesses and connecting pathways between these uppermost levels are visible, all viewed from the specified elevated angle.\n\nLIGHTING: Sharp, bright ambient light casting crisp, defined shadows from the structural elements. The midday sun illuminates the white platforms with an intense glare, creating high contrast against the darker, textured conduits. No diffusion, reflecting a clear sky.\nATMOSPHERE: A stark, high-tech industrial environment, imbued with a sense of ongoing, large-scale exploration and development. The clean lines and functional design emphasize the purpose-driven nature of the construct. The overall mood is one of sterile efficiency and immense scale.\n\n\n[ENVIRONMENT:] bright, clear daylight, midday\n[CAMERA:] elevated oblique, aerial 45° tilt, wide composition with centered framing, layered depth with foreground elements\n[LENS:] 16-35mm wide-angle lens, centered perspective\n[LIGHT:] diffused key with parallax through haze, environmental motion (mist, wind, smoke)\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE: humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "promptLayers": {
+          "name": "The Great Construct",
+          "description": "A region dominated by the colossal, abstract futuristic structure, serving as a hub of industrial exploration.",
+          "background": "The vast, hazy horizon of Nova Prime, hinting at distant, less developed industrial sectors under a brilliant sky.",
+          "midground": "The immense, sprawling 'Great Construct' itself, a labyrinth of interconnected white platforms and towering, abstract geometric forms. Intricate networks of textured conduits snake across its surface, some pulsing with faint internal light, connecting vast modules and functional areas.",
+          "foreground": "The uppermost sections of the 'Great Construct', revealing a complex tapestry of white platforms and their textured conduit systems. Glimpses of the deep recesses and connecting pathways between these uppermost levels are visible, all viewed from the specified elevated angle.",
+          "lighting": "Sharp, bright ambient light casting crisp, defined shadows from the structural elements. The midday sun illuminates the white platforms with an intense glare, creating high contrast against the darker, textured conduits. No diffusion, reflecting a clear sky.",
+          "atmosphere": "A stark, high-tech industrial environment, imbued with a sense of ongoing, large-scale exploration and development. The clean lines and functional design emphasize the purpose-driven nature of the construct. The overall mood is one of sterile efficiency and immense scale."
+        },
+        "promptData": {
+          "command": "DISPLAY",
+          "populate": false
+        },
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-a",
+        "upscaled": true,
+        "upscale_factor": 2,
+        "videoPrompt": "Subtle depth mist gently swirls and drifts between the colossal structures, subtly catching and diffusing the bright ambient light.. Camera remains completely still. Cinematic seamless loop. seamless loop. Fixed camera"
+      },
+      "entityRefs": [
+        "v2-1769077325691-0mnz2i52j"
+      ],
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b679a/gr9kmkXrOV3uSCLELiqJ4.jpg",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b679c/C6U5XcLIjpQMzunazpt4e.jpg",
+        "video": "https://replicate.delivery/xezq/izIkIeuduqymE6ZZ8d3iqa9Uw4meUX2a0zdgcH7uCjQT57frA/tmpxbp03sy2.mp4"
+      }
     }
   }
 }

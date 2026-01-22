@@ -109,18 +109,6 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
           ) : (
             <span className={styles.icon}>{item.icon}</span>
           )}
-          {/* Progress bar at bottom for upscaling/video generation */}
-          {isProcessing && mediaProgress && (
-            <div className={styles.progressBar}>
-              <div 
-                className={styles.progressFill} 
-                style={{ 
-                  width: `${mediaProgress.progress}%`,
-                  background: `hsl(${270 - (mediaProgress.progress * 0.3)}deg, 70%, 60%)`
-                }}
-              />
-            </div>
-          )}
           {/* HD badge for upscaled images */}
           {item.isUpscaled && !isProcessing && (
             <div className={styles.hdBadge} title={`Upscaled (${UPSCALE_CONFIG.FACTOR}x)`}>
@@ -156,6 +144,19 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
               confirmTitle="Confirm delete"
               cancelTitle="Cancel"
               iconSize={14}
+            />
+          </div>
+        )}
+
+        {/* Progress bar at bottom of full node row */}
+        {isProcessing && mediaProgress && (
+          <div className={styles.progressBar}>
+            <div 
+              className={styles.progressFill} 
+              style={{ 
+                width: `${mediaProgress.progress}%`,
+                background: `hsl(${270 - (mediaProgress.progress * 0.3)}deg, 70%, 60%)`
+              }}
             />
           </div>
         )}
