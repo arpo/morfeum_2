@@ -51,19 +51,20 @@
         "model": "flux",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "videoPrompt": "Subtle shifts in the midday light cause sharp shadows to slowly crawl across the platform and immense pillar, while faint dust motes drift gently in the luminous air.. Camera remains completely still. Cinematic seamless loop. seamless loop. Fixed camera"
       },
       "entityRefs": [
         "v2-1769077325691-av2zb43gv"
       ],
       "urls": {
-        
+        "video": "https://pub-1a94f502e4c04d268342cf995350b848.r2.dev/dev/morfeum/videos-loops/media-1769077330484-wxx5tlrr0.mp4"
       }
     },
     "media-1769077923275-mnm9zv7jq": {
       "id": "media-1769077923275-mnm9zv7jq",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b6610/xhGDgOs8ZY_cjOvWtnhJP.png",
+      "url": "https://v3b.fal.media/files/b/0a8b6b81/MVfIfeEzZ0QoSP4Bhh6jT.jpg",
       "createdAt": "2026-01-22T10:32:03.275Z",
       "metadata": {
         "prompt": "Action:\nMove the camera forward and step into Main Concourse Hall.\n\nTarget location:\nInterior space carved inside The Central Pillar Observation Deck.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect midday conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nBroad, open walkways with deep blue safety barriers. Large, holographic display terminals project navigational information and service announcements. Smooth, polished composite floors reflect the ambient light. Arches and doorways leading to other sections of the concourse are visible.\nThe pristine, reflective polished composite floor in the immediate foreground, showing subtle reflections of the overhead lighting and nearby architectural elements. The edge of a deep blue safety barrier is visible.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: Awe-inspiring and contemplative. The sheer scale of the central pillar inspires wonder, while the clean design of the observation deck encourages quiet reflection on the marvel of its construction.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nSeamless, curved composite walls with integrated, softly glowing blue and white luminescent panels. The far background features towering architectural supports that echo the main pillar's design, rendered in polished metallic composites, with subtle orange-red trim.\n\nInterior lighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday interior.\nA sense of controlled energy and smooth transit flow. The enclosed space feels vast yet organized, with a calm efficiency that encourages movement.\n\nPhysical constraints:\nSolid ceiling above. Fully enclosed interior. No sky visible.\nThe space is carved into the structure's mass — not a void containing the structure.\nThe structure itself is NOT visible as an object from inside.\nIndirect lighting only — light enters through openings not visible in frame.\nThe entrance is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible through ceiling\n* No open roof or atrium to sky\n* No exterior landscape visible\n* No exterior vegetation unless interior description specifies overgrowth/abandoned\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
@@ -82,21 +83,24 @@
         "model": "fal-flux-2-turbo-edit",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
-        
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 2
       },
       "entityRefs": [
         "v2-1769077916459-g2jzkbf3p"
       ],
       "parentMedia": "media-1769077330484-wxx5tlrr0",
       "urls": {
-        
+        "original": "https://v3b.fal.media/files/b/0a8b6610/xhGDgOs8ZY_cjOvWtnhJP.png",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b6b81/MVfIfeEzZ0QoSP4Bhh6jT.jpg"
       }
     },
     "media-1769080707908-wf615wx31": {
       "id": "media-1769080707908-wf615wx31",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b6726/sKbnHLmCncpsJwY5lFKU9.png",
+      "url": "https://v3b.fal.media/files/b/0a8b6b85/E3vMup3WfZavK82lUoQiH.jpg",
       "createdAt": "2026-01-22T11:18:27.908Z",
       "metadata": {
         "prompt": "Action:\nMove the camera forward and step into Second Floor Indoor Balcony.\n\nTarget location:\nInterior space carved inside The Central Pillar Observation Deck.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect midday conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nA polished metal railing with deep blue accent strips demarcates the edge of the balcony, offering a controlled view into the vast interior engineering of the pillar's core.\nA pristine, white composite floor with faint, embedded orange-red luminous lines tracing geometric patterns, reflecting the controlled lighting.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: Awe-inspiring and contemplative. The sheer scale of the central pillar inspires wonder, while the clean design of the observation deck encourages quiet reflection on the marvel of its construction.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nSmooth, seamless composite walls in muted grays and whites, meeting a subtly lit, artificial ceiling panel that diffuses light uniformly.\n\nInterior lighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday interior.\nAn atmosphere of serene, internal observation, a sense of being enveloped by immense, controlled technology.\n\nPhysical constraints:\nSolid ceiling above. Fully enclosed interior. No sky visible.\nThe space is carved into the structure's mass — not a void containing the structure.\nThe structure itself is NOT visible as an object from inside.\nIndirect lighting only — light enters through openings not visible in frame.\nThe entrance is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible through ceiling\n* No open roof or atrium to sky\n* No exterior landscape visible\n* No exterior vegetation unless interior description specifies overgrowth/abandoned\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
@@ -115,15 +119,18 @@
         "model": "fal-flux-2-turbo-edit",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
-        
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-b",
+        "upscaled": true,
+        "upscale_factor": 2
       },
       "entityRefs": [
         "v2-1769080702061-58jfekxtl"
       ],
       "parentMedia": "media-1769077330484-wxx5tlrr0",
       "urls": {
-        
+        "original": "https://v3b.fal.media/files/b/0a8b6726/sKbnHLmCncpsJwY5lFKU9.png",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b6b85/E3vMup3WfZavK82lUoQiH.jpg"
       }
     },
     "media-1769081035648-yka3ne171": {
@@ -136,14 +143,11 @@
         "model": "FLUX",
         "width": 1024,
         "height": 1024
-        
       },
       "entityRefs": [
         "char-1769081035647-gdrizsq5i"
       ],
-      "urls": {
-        
-      }
+      "urls": {}
     },
     "media-1769081869150-ij3jdropp": {
       "id": "media-1769081869150-ij3jdropp",
@@ -172,7 +176,6 @@
         "modelClass": "model-a",
         "upscaled": false,
         "upscale_factor": 2
-        
       },
       "entityRefs": [
         "v2-1769077325691-0mnz2i52j"
@@ -184,7 +187,7 @@
     "media-1769082088831-sttc3b1xz": {
       "id": "media-1769082088831-sttc3b1xz",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b67b0/kWcKHiB7H-hdpSDMeneFy.jpg",
+      "url": "https://v3b.fal.media/files/b/0a8b6b7d/akZMUn8zsXmPHam432Y1b.jpg",
       "createdAt": "2026-01-22T11:41:28.831Z",
       "metadata": {
         "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nNova Prime. A futuristic world characterized by colossal, abstract structures and advanced technology under vibrant skies.\n\nSTYLE LOCK — NON-NEGOTIABLE:\n\nIdentity:\n* colossal architecture\n* abstract futurism\n* industrial complexity\n* advanced technology\n\nMaterials:\n* incomplete circular segments\n* cylindrical sections\n* exposed piping\n* fractured plating\n* textured surfaces\n\nColor & Light:\n* vibrant turquoise sky\n* bright white\n* vivid orange-red\n* deep blue\n* contrasting colors\n\nAtmosphere:\n* awe-inspiring\n* contemplative\n* exploratory\n* industrial\n* immense\n\nBanned:\n* organic forms\n* natural landscapes\n\nSCENE LAYERS:\n- Background: The background layer showcases the vastness of Nova Prime's sky, a vibrant turquoise canvas stretching to the horizon, with the distant glow of a bright, clear midday sun.\n- Midground: The midground is dominated by colossal, abstract structures of advanced technology. Imagine immense, incomplete circular segments and cylindrical sections interlocking and rising, interspersed with the subtle glint of exposed piping and fractured plating. These structures create a complex, industrial tapestry viewed from satellite height, appearing as intricate patterns rather than individual buildings. Vivid orange-red and deep blue hues are present in the metallic finishes and energy conduits of these abstract architectural forms.\n- Foreground: The foreground, still from a high aerial perspective, reveals more of the intricate industrial complexity. Textured surfaces of fractured plating and metallic components form the immediate visual elements, but always at a scale consistent with an aerial view. Streets, if present, are mere distant lines or thin channels, devoid of any street-level detail. The dominant colors here are bright white elements within the structures, contrasting with the deep blues and orange-reds of the overall palette.\n\nLIGHTING: Bright, clear daylight from a midday sun illuminates Nova Prime. The lighting is sharp and direct, creating strong contrasts across the architectural forms and highlighting the varied textured surfaces. Shadows are well-defined, emphasizing the geometric nature of the abstract futurism and industrial complexity. The vibrant turquoise sky is bathed in this bright, intense light.\nATMOSPHERE: The atmosphere is awe-inspiring and contemplative, evoking a sense of exploratory wonder at the immense scale and advanced technology of Nova Prime. The industrial complexity contributes to a feeling of ceaseless activity and intricate design, all under the vast, bright skies.\n\n\n[ENVIRONMENT:] bright, clear daylight, midday\n[CAMERA:] elevated oblique, aerial 45° tilt, wide composition with centered framing, layered depth with foreground elements\n[LENS:] 16-35mm wide-angle lens, centered perspective\n[LIGHT:] diffused key with parallax through haze, environmental motion (mist, wind, smoke)\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE: humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
@@ -204,14 +207,17 @@
         "model": "flux",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
-        
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-a",
+        "upscaled": true,
+        "upscale_factor": 2
       },
       "entityRefs": [
         "v2-1769077325691-1lbrqw217"
       ],
       "urls": {
-        
+        "original": "https://v3b.fal.media/files/b/0a8b67b0/kWcKHiB7H-hdpSDMeneFy.jpg",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b6b7d/akZMUn8zsXmPHam432Y1b.jpg"
       }
     },
     "media-1769082372670-bj5bljtd9": {
@@ -224,14 +230,11 @@
         "model": "FLUX",
         "width": 1024,
         "height": 1024
-        
       },
       "entityRefs": [
         "char-1769082372669-x9ueaug6x"
       ],
-      "urls": {
-        
-      }
+      "urls": {}
     },
     "media-1769083694255-qf44xlvun": {
       "id": "media-1769083694255-qf44xlvun",
@@ -256,7 +259,6 @@
         "width": 1920,
         "height": 1080,
         "aspectRatio": "landscape_16_9"
-        
       },
       "entityRefs": [
         "v2-1769083689173-6q34j8iup"
@@ -297,6 +299,22 @@
         "original": "https://v3b.fal.media/files/b/0a8b6855/Zcwsg4cK4vUQ_92Fi1DJ5.png",
         "upscaled": "https://v3b.fal.media/files/b/0a8b6881/U66N8atj1Bn2LikQTTov7.jpg"
       }
+    },
+    "media-1769091454532-6th2h3poc": {
+      "id": "media-1769091454532-6th2h3poc",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b6b58/Wq2deh94tbFDkl2jFa0Cj.jpg",
+      "createdAt": "2026-01-22T14:17:34.532Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nHalf portrait of Unit 734, facing forward with direct, unblinking crystalline eyes, its polished chrome and glass form catching the reflected light of the Central Pillar Observation Deck's exterior. The vast, awe-inspiring expanse of the surrounding cosmic vista is a softly blurred bokeh in the background, hinting at the immensity of space beyond the deck's railing. Soft, directional starlight enhances the smooth surfaces of its metallic body and the clarity of its glass segments, revealing a faint internal glow. Its pose is still, its detached demeanor subtly integrated into the contemplative atmosphere of the cosmic observation point.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1769091454532-sxvd0jjbv"
+      ],
+      "urls": {}
     }
   }
 }

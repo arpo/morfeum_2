@@ -59,7 +59,30 @@ function findNodeInTree(tree: any, nodeId: string): boolean {
 /**
  * Character video prompt (fixed, not LLM-generated)
  */
-const CHARACTER_VIDEO_PROMPT = `A calm, presence. Natural eye contact. No speech, no lip movement, no mouth articulation of any kind. The subject feels alive: subtle breathing (gentle chest rise and fall), soft blinking, and minimal head micro-movements. Example: head tilting to the side very slightly now and then, looking around subtly. Light wind softly moving hair strands. Performance feels natural and film-like, as if in a quiet movie moment. Camera remains completely still. Cinematic seamless loop. seamless loop. Fixed camera with mid or close framing.`;
+const CHARACTER_VIDEO_PROMPT = `A silent character, waiting in place. Calm, focused presence.
+No speech. No lip, mouth, or vocal movement of any kind.
+
+Preserve the character exactly as given.
+Do not add eyes, facial features, limbs, details, symbols, creatures, particles, or any elements that do not already exist on the character.
+
+The character performs natural, cinematic acting using the body it already has:
+subtle head tilts and slow head turns, gentle shifts of the upper body, small arm or appendage movements, relaxed posture adjustments, slight weight transfers.
+Motion feels organic, expressive, and intentional — never rigid, robotic, or frozen.
+
+The character’s attention remains directed toward the camera at all times.
+Head movement is allowed, but focus and engagement stay with the viewer.
+The character may tilt or angle the head slightly, but does not look away or disengage.
+
+If the character has hair or loose elements, a light wind softly moves hair strands and clothing.
+
+Awareness and attention are conveyed through controlled movement and presence, not through added features.
+
+The performance feels like a quiet movie moment where the character is present and waiting, aware of being watched.
+
+Environment remains unchanged.
+Camera completely still. Fixed tripod shot.
+Mid or close framing.
+Cinematic seamless loop with no visible start or end.`;
 
 /**
  * Build the LLM prompt to generate a video loop description for locations

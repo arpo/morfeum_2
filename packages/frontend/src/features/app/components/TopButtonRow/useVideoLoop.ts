@@ -6,9 +6,8 @@
 import { useCallback } from 'react';
 import { useTimedProgress } from '@/hooks';
 import { clearMediaItem } from '@/services/mediaService';
+import { VIDEO_LOOP_CONFIG } from '@/config';
 import type { WorldViewRenderer } from '@/features/app/components/WorldView/WorldViewRenderer';
-
-const VIDEO_DURATION_MS = 30000; // 30 seconds expected duration
 
 export function useVideoLoop(rendererRef?: React.RefObject<WorldViewRenderer | null>) {
   const { start, stop, cancel, isRunning } = useTimedProgress();
@@ -27,8 +26,8 @@ export function useVideoLoop(rendererRef?: React.RefObject<WorldViewRenderer | n
       return;
     }
 
-    // Start time-based progress animation (0% → 95% over 30 seconds)
-    start(entityId, VIDEO_DURATION_MS, 'video');
+    // Start time-based progress animation (0% → 95% over expected duration)
+    start(entityId, VIDEO_LOOP_CONFIG.EXPECTED_GENERATION_DURATION_MS, 'video');
 
     try {
       // Capture filtered image from canvas if renderer is available

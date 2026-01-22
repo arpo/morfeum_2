@@ -9,6 +9,7 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 | Category | Count | Primary Location |
 |----------|-------|------------------|
 | **V2 World System** | 10 | `worldV2/prompts/`, `worldV2/display/` |
+| **Video Generation** | 2 | `worldV2/handlers/` |
 | Vision/Analysis | 2 | `shared/`, `characters/` |
 | Character Generation | 5 | `characters/` |
 | Navigation/Intent | 3 | `navigation/` |
@@ -56,6 +57,53 @@ A comprehensive reference of all prompts used in Morfeum, their locations, and h
 | `parseLookResponse` | [look.ts](../../../worldV2/prompts/look.ts) | Parse LLM response to LookResponse with camera/lens config | `/LOOK` |
 | `buildLookImageEditPrompt` | [imageEditPrompt.ts](../../../worldV2/prompts/imageEditPrompt.ts) | Build FLUX edit prompt for camera reframing (first-person POV) | `/LOOK` |
 | `buildNavigationAssistantPrompt` | [navigationAssistant.ts](../../../worldV2/prompts/navigationAssistant.ts) | Chat assistant prompt for navigation help | Navigation Assistant Panel |
+
+### Video Generation (Video Loops)
+
+| Prompt | File | Purpose | Used By |
+|--------|------|---------|---------| 
+| `CHARACTER_VIDEO_PROMPT` | [generateVideoLoopHandler.ts](../../../worldV2/handlers/generateVideoLoopHandler.ts) | Fixed prompt for character video loops - cinematic acting, no added features | `/GENERATE_VIDEO_LOOP` (characters) |
+| `buildVideoPromptSystemPrompt` | [generateVideoLoopHandler.ts](../../../worldV2/handlers/generateVideoLoopHandler.ts) | System prompt for LLM to generate location video loop descriptions | `/GENERATE_VIDEO_LOOP` (locations) |
+| `buildVideoPromptUserPrompt` | [generateVideoLoopHandler.ts](../../../worldV2/handlers/generateVideoLoopHandler.ts) | User prompt with scene context (weather, atmosphere, time) | `/GENERATE_VIDEO_LOOP` (locations) |
+
+**Character Video Prompt (Fixed):**
+```
+A silent character, waiting in place. Calm, focused presence.
+No speech. No lip, mouth, or vocal movement of any kind.
+
+Preserve the character exactly as given.
+Do not add eyes, facial features, limbs, details, symbols, creatures, particles, 
+or any elements that do not already exist on the character.
+
+The character performs natural, cinematic acting using the body it already has:
+subtle head tilts and slow head turns, gentle shifts of the upper body, 
+small arm or appendage movements, relaxed posture adjustments, slight weight transfers.
+Motion feels organic, expressive, and intentional — never rigid, robotic, or frozen.
+
+Awareness and attention are conveyed only through movement and orientation, 
+not through added features.
+
+The performance feels like a quiet movie moment where the character is present 
+and waiting, with restrained but believable motion.
+
+Environment remains unchanged.
+Camera completely still. Fixed tripod shot.
+Mid or close framing.
+Cinematic seamless loop with no visible start or end.
+```
+
+**Location Video Motion Types:**
+- Water: gentle ripples, waves rolling, reflections shimmering
+- Sky/clouds: slow drift, subtle color shifts
+- Foliage: leaves rustling, branches swaying
+- Fire/flames: flickering, dancing firelight
+- Rain/Snow: falling, drifting
+- Fog/mist: swirling, drifting
+- Light: rays shifting, shadows moving
+- Fabric: gentle billowing, rippling
+- Particles: dust motes, embers
+
+---
 
 ### Vision & Image Analysis
 

@@ -137,6 +137,8 @@ export const IMAGE_LOADING_CONFIG = {
 export const VIDEO_LOOP_CONFIG = {
   /** Crossfade duration in milliseconds - used for both lead time and CSS transition */
   CROSSFADE_DURATION_MS: 600,
+  /** Expected video generation duration in milliseconds - for progress bar animation */
+  EXPECTED_GENERATION_DURATION_MS: 35000,
 } as const;
 
 /**
