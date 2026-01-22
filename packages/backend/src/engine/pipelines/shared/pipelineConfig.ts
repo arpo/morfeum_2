@@ -165,13 +165,6 @@ export const PIPELINE_STEPS = {
   /** V2: EDIT_IMAGE - Edit existing image with text prompt */
   v2Edit: [
     { id: 'editing', name: 'Editing Image', duration: 6500 },
-  ],
-  
-  /** Video loop generation - creates seamless ambient motion video */
-  videoLoop: [
-    { id: 'analyzing', name: 'Analyzing Scene', duration: 1000 },
-    { id: 'prompting', name: 'Building Prompt', duration: 2000 },
-    { id: 'generating', name: 'Generating Video', duration: 30000 }
   ]
 } as const;
 

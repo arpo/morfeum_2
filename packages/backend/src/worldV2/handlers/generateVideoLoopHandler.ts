@@ -129,7 +129,7 @@ export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: R
   }
 
   const operationId = generateOperationId('videoloop');
-  const eventsUrl = setupPipeline(operationId, 'videoLoop');
+  const eventsUrl = setupPipeline(operationId, 'v2Edit'); // Use simple pipeline type
 
   res.status(HTTP_STATUS.OK).json({
     data: {
@@ -140,7 +140,7 @@ export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: R
   });
 
   (async () => {
-    const pipeline = new PipelineHelper(operationId, 'GENERATE_VIDEO_LOOP', 'videoLoop');
+    const pipeline = new PipelineHelper(operationId, 'GENERATE_VIDEO_LOOP', 'v2Edit'); // Use simple pipeline type
     
     try {
       pipeline.started('Starting video loop generation...');

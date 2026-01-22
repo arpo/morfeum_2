@@ -93,38 +93,34 @@
         "video": "https://replicate.delivery/xezq/eQqh0K4n3r29MK94YxqKyGnPlCf93SR6KXNuRe5je2PfKZffKA/tmpm9yqw0kj.mp4"
       }
     },
-    "media-1769079540903-5enb8gbdj": {
-      "id": "media-1769079540903-5enb8gbdj",
+    "media-1769080707908-wf615wx31": {
+      "id": "media-1769080707908-wf615wx31",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b66b2/d0dh8mdjCPeb59fEKUtiG.png",
-      "createdAt": "2026-01-22T10:59:00.903Z",
+      "url": "https://v3b.fal.media/files/b/0a8b6726/sKbnHLmCncpsJwY5lFKU9.png",
+      "createdAt": "2026-01-22T11:18:27.908Z",
       "metadata": {
-        "prompt": "REFRAME THIS IMAGE:\n\nMove closer to the display panel until it fills most of the frame. Use 85mm lens, close shot, f/2.8.\n\nShow the display panel prominently - it should fill most of the frame.\n\nSame Main Concourse Hall, same midday lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "prompt": "Action:\nMove the camera forward and step into Second Floor Indoor Balcony.\n\nTarget location:\nInterior space carved inside The Central Pillar Observation Deck.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect midday conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nA polished metal railing with deep blue accent strips demarcates the edge of the balcony, offering a controlled view into the vast interior engineering of the pillar's core.\nA pristine, white composite floor with faint, embedded orange-red luminous lines tracing geometric patterns, reflecting the controlled lighting.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: Awe-inspiring and contemplative. The sheer scale of the central pillar inspires wonder, while the clean design of the observation deck encourages quiet reflection on the marvel of its construction.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nSmooth, seamless composite walls in muted grays and whites, meeting a subtly lit, artificial ceiling panel that diffuses light uniformly.\n\nInterior lighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday interior.\nAn atmosphere of serene, internal observation, a sense of being enveloped by immense, controlled technology.\n\nPhysical constraints:\nSolid ceiling above. Fully enclosed interior. No sky visible.\nThe space is carved into the structure's mass — not a void containing the structure.\nThe structure itself is NOT visible as an object from inside.\nIndirect lighting only — light enters through openings not visible in frame.\nThe entrance is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible through ceiling\n* No open roof or atrium to sky\n* No exterior landscape visible\n* No exterior vegetation unless interior description specifies overgrowth/abandoned\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
         "promptLayers": {
-          "name": "Main Concourse Hall",
-          "description": "The primary interior space of the Stellar Concourse, a vast hall characterized by soaring ceilings and polished surfaces. Luminescent panels and integrated displays guide travelers through the bustling hub.",
-          "background": "Seamless, curved composite walls with integrated, softly glowing blue and white luminescent panels. The far background features towering architectural supports that echo the main pillar's design, rendered in polished metallic composites, with subtle orange-red trim.",
-          "midground": "Broad, open walkways with deep blue safety barriers. Large, holographic display terminals project navigational information and service announcements. Smooth, polished composite floors reflect the ambient light. Arches and doorways leading to other sections of the concourse are visible.",
-          "foreground": "The pristine, reflective polished composite floor in the immediate foreground, showing subtle reflections of the overhead lighting and nearby architectural elements. The edge of a deep blue safety barrier is visible.",
-          "lighting": "Soft, diffused internal ambient light emanating from luminescent panels and architectural elements, casting a cool, even glow. Accent lighting in vivid orange-red highlights structural lines and directional signage.",
-          "atmosphere": "A sense of controlled energy and smooth transit flow. The enclosed space feels vast yet organized, with a calm efficiency that encourages movement."
+          "name": "Second Floor Indoor Balcony",
+          "description": "This enclosed space offers a unique vantage point from within the colossal central pillar. While an interior balcony, it maintains the structure's technological aesthetic with polished surfaces and subtle ambient lighting.",
+          "background": "Smooth, seamless composite walls in muted grays and whites, meeting a subtly lit, artificial ceiling panel that diffuses light uniformly.",
+          "midground": "A polished metal railing with deep blue accent strips demarcates the edge of the balcony, offering a controlled view into the vast interior engineering of the pillar's core.",
+          "foreground": "A pristine, white composite floor with faint, embedded orange-red luminous lines tracing geometric patterns, reflecting the controlled lighting.",
+          "lighting": "Soft, indirect, cool-toned ambient light emanates from ceiling panels and integrated light strips, with occasional warm pulses of orange-red light from structural indicators.",
+          "atmosphere": "An atmosphere of serene, internal observation, a sense of being enveloped by immense, controlled technology."
         },
         "promptData": {
-          "command": "LOOK"
+          "command": "GOTO"
         },
         "model": "fal-flux-2-turbo-edit",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9",
-        "videoPrompt": "Faint dust motes slowly drift and swirl in the air directly in front of the illuminated display panel.. Camera remains completely still. Cinematic seamless loop. seamless loop. Fixed camera"
+        "aspectRatio": "landscape_16_9"
       },
       "entityRefs": [
-        "v2-1769079540905-duulvq6ko"
+        "v2-1769080702061-58jfekxtl"
       ],
-      "parentMedia": "media-1769077923275-mnm9zv7jq",
-      "urls": {
-        "video": "https://replicate.delivery/xezq/wGflxjpod4RMcSXFic4znZUKWOQpcXbf8zIL0xOPfgCap2fXB/tmpw33t3zdo.mp4"
-      }
+      "parentMedia": "media-1769077330484-wxx5tlrr0"
     }
   }
 }

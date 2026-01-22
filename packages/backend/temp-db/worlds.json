@@ -166,14 +166,52 @@
       "parentId": "v2-1769077916459-81m6ipeci",
       "primaryMedia": "media-1769077923275-mnm9zv7jq"
     },
-    "v2-1769079540905-duulvq6ko": {
-      "id": "v2-1769079540905-duulvq6ko",
-      "type": "view",
-      "name": "The Display Panel",
-      "slug": "the-display-panel",
-      "description": "View: Detailed information and graphics presented on the display panel, including text, icons, and any interactive elements.",
-      "parentId": "v2-1769077916459-g2jzkbf3p",
-      "primaryMedia": "media-1769079540903-5enb8gbdj"
+    "v2-1769080702061-58jfekxtl": {
+      "id": "v2-1769080702061-58jfekxtl",
+      "type": "space",
+      "name": "Second Floor Indoor Balcony",
+      "slug": "second-floor-indoor-balcony",
+      "description": "This enclosed space offers a unique vantage point from within the colossal central pillar. While an interior balcony, it maintains the structure's technological aesthetic with polished surfaces and subtle ambient lighting.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "technological marvel",
+          "urban scale",
+          "internal structure"
+        ],
+        "formsAndMaterials": [
+          "geometric composites",
+          "polished metal",
+          "hardened polymers"
+        ],
+        "colorAndLight": [
+          "vivid orange-red accents",
+          "deep blue detailing",
+          "controlled ambient glow"
+        ],
+        "atmosphere": [
+          "contemplative introspection",
+          "internal awe",
+          "man-made grandeur"
+        ],
+        "banned": [
+          "visible stars",
+          "natural rock formations",
+          "any suggestion of organic life",
+          "worn or dilapidated textures",
+          "external weather phenomena"
+        ]
+      },
+      "forbiddenTransformations": [
+        "Introducing any windows that show the outside sky.",
+        "Allowing natural light sources to penetrate the space.",
+        "Showing any signs of damage, wear, or organic growth.",
+        "Adding furniture or decor not consistent with high-tech sterile environments.",
+        "Revealing the exterior construction or any hint of weather.",
+        "Creating large open voids that expose the full height of the structure; maintain the feeling of an enclosed space."
+      ],
+      "parentId": "v2-1769077916459-81m6ipeci",
+      "primaryMedia": "media-1769080707908-wf615wx31"
     }
   },
   "views": {},
@@ -197,13 +235,12 @@
                     {
                       "id": "v2-1769077916459-g2jzkbf3p",
                       "type": "space",
-                      "children": [
-                        {
-                          "id": "v2-1769079540905-duulvq6ko",
-                          "type": "view",
-                          "children": []
-                        }
-                      ]
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1769080702061-58jfekxtl",
+                      "type": "space",
+                      "children": []
                     }
                   ]
                 }

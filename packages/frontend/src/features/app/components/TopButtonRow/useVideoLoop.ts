@@ -1,22 +1,16 @@
 /**
  * Video Loop Hook
- * Handles video loop generation state and API calls with progress tracking
+ * Handles video loop generation with time-based progress animation
  */
 
 import { useCallback } from 'react';
-import { useStore } from '@/store';
+import { useTimedProgress } from '@/hooks';
 import { clearMediaItem } from '@/services/mediaService';
 
+const VIDEO_DURATION_MS = 30000; // 30 seconds expected duration
+
 export function useVideoLoop() {
-  // Use store for progress tracking
-  const startMediaOperation = useStore(state => state.startMediaOperation);
-  const updateMediaProgress = useStore(state => state.updateMediaProgress);
-  const finishMediaOperation = useStore(state => state.finishMediaOperation);
-  const isEntityGeneratingVideo = useStore(state => state.isEntityGeneratingVideo);
-  
-  const isEntityGenerating = useCallback((entityId: string) => {
-    return isEntityGeneratingVideo(entityId);
-  }, [isEntityGeneratingVideo]);
+  const { start, stop, cancel, isRunning } = useTimedProgress();
 
   const generateVideoLoop = useCallback(async (
     entityId: string,
@@ -27,13 +21,13 @@ export function useVideoLoop() {
       return;
     }
 
-    if (isEntityGeneratingVideo(entityId)) {
+    if (isRunning(entityId)) {
       console.warn('[useVideoLoop] Already generating video for this entity');
       return;
     }
 
-    startMediaOperation(entityId, 'video');
-    updateMediaProgress(entityId, 0);
+    // Start time-based progress animation (0% → 95% over 30 seconds)
+    start(entityId, VIDEO_DURATION_MS, 'video');
 
     try {
       // Call the backend API
@@ -51,27 +45,15 @@ export function useVideoLoop() {
       const result = await response.json();
       const { eventsUrl } = result.data;
 
-      // Listen for SSE events
+      // Listen for completion via SSE
       return new Promise<void>((resolve, reject) => {
         const eventSource = new EventSource(eventsUrl);
-        
-        // Track progress based on stage events
-        eventSource.addEventListener('stage', (event) => {
-          const data = JSON.parse(event.data);
-          // Map stages to progress: analyzing (20%), prompting (40%), generating (80%)
-          if (data.stage === 'analyzing') {
-            updateMediaProgress(entityId, 20);
-          } else if (data.stage === 'prompting') {
-            updateMediaProgress(entityId, 40);
-          } else if (data.stage === 'generating') {
-            updateMediaProgress(entityId, 80);
-          }
-        });
 
         eventSource.addEventListener('completed', (event) => {
           const data = JSON.parse(event.data);
           
-          updateMediaProgress(entityId, 100);
+          // Stop animation and jump to 100%
+          stop(entityId);
           
           // Clear media cache to get fresh data
           clearMediaItem(primaryMediaId);
@@ -87,8 +69,6 @@ export function useVideoLoop() {
           }));
 
           eventSource.close();
-          // Small delay to show 100% before removing progress bar
-          setTimeout(() => finishMediaOperation(entityId), 500);
           resolve();
         });
 
@@ -106,24 +86,24 @@ export function useVideoLoop() {
           }
 
           eventSource.close();
-          finishMediaOperation(entityId);
+          cancel(entityId);
           reject(new Error(errorMessage));
         });
 
         eventSource.onerror = () => {
           eventSource.close();
-          finishMediaOperation(entityId);
+          cancel(entityId);
           reject(new Error('Connection lost during video generation'));
         };
       });
     } catch (error) {
-      finishMediaOperation(entityId);
+      cancel(entityId);
       throw error;
     }
-  }, [startMediaOperation, updateMediaProgress, finishMediaOperation, isEntityGeneratingVideo]);
+  }, [start, stop, cancel, isRunning]);
 
   return {
     generateVideoLoop,
-    isEntityGenerating
+    isEntityGenerating: isRunning
   };
 }
