@@ -18,7 +18,7 @@ export async function generateVideo(
   apiKey: string,
   positivePrompt: string,
   options: {
-    provider?: 'atlascloud' | 'runware';
+    provider?: 'atlascloud' | 'runware' | 'replicate';
     negativePrompt?: string;
     inputImage?: string;
     aspectRatio?: '16:9' | '9:16' | '1:1';

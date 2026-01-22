@@ -14,6 +14,7 @@ import { Request, Response } from 'express';
 import { asyncHandler } from '../../middleware/errorHandler';
 import { HTTP_STATUS } from '../../config';
 import { generateVideo, generateText } from '../../services/mzoo';
+import { DEFAULT_VIDEO_SETTINGS } from '../../services/mzoo/config/endpoints';
 import { storageService } from '../../services/storage/storageService';
 import mediaService from '../../services/media/mediaService';
 import { PipelineHelper } from '../../engine/pipelines/shared/pipelineHelpers';
@@ -200,6 +201,10 @@ export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: R
       }
 
       const videoPrompt = textResult.data.text.trim();
+      
+      // Enhance prompt with fixed camera instructions from config
+      const enhancedPrompt = `${videoPrompt}. ${DEFAULT_VIDEO_SETTINGS.PROMPT_SUFFIX}`;
+      
       pipeline.completeStage('prompting', `Prompt: ${videoPrompt.slice(0, 50)}...`);
 
       // ═══════════════════════════════════════════════════════════════════════
@@ -207,12 +212,13 @@ export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: R
       // ═══════════════════════════════════════════════════════════════════════
       pipeline.startStage('generating', 'Generating video loop (this may take 30+ seconds)...');
 
-      const videoResult = await generateVideo(apiKey, videoPrompt, {
+      const videoResult = await generateVideo(apiKey, enhancedPrompt, {
         inputImage: media.url,
-        cameraFixed: true,
-        duration: 5,
-        aspectRatio: '16:9',
-        resolution: '480p'
+        cameraFixed: DEFAULT_VIDEO_SETTINGS.CAMERA_FIXED,
+        negativePrompt: DEFAULT_VIDEO_SETTINGS.NEGATIVE_PROMPT,
+        duration: DEFAULT_VIDEO_SETTINGS.DURATION,
+        aspectRatio: DEFAULT_VIDEO_SETTINGS.ASPECT_RATIO,
+        resolution: DEFAULT_VIDEO_SETTINGS.RESOLUTION
       });
 
       if (videoResult.error || !videoResult.data?.videoURL) {

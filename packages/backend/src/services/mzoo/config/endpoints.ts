@@ -43,12 +43,15 @@ export const DEFAULT_IMAGE_UPSCALE_SETTINGS = {
 };
 
 export const DEFAULT_VIDEO_SETTINGS = {
-  PROVIDER: 'atlascloud',
-  ASPECT_RATIO: '16:9',
-  RESOLUTION: '480p',
+  PROVIDER: 'replicate' as const,
+  ASPECT_RATIO: '16:9' as const,
+  RESOLUTION: '480p' as const,
   DURATION: 5,
   FPS: 24,
   CAMERA_FIXED: true,       // Fixed camera for seamless loops
-  OUTPUT_FORMAT: 'mp4',
-  OUTPUT_QUALITY: 85
+  OUTPUT_FORMAT: 'mp4' as const,
+  OUTPUT_QUALITY: 85,
+  // Prompt enhancements for fixed camera seamless loops
+  PROMPT_SUFFIX: 'Camera remains completely still. Cinematic seamless loop. seamless loop. Fixed camera',
+  NEGATIVE_PROMPT: 'no dolly, no panning, no zooming'
 };

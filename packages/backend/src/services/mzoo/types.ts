@@ -129,7 +129,7 @@ export interface ImageUpscaleResponse {
 }
 
 export interface VideoGenerationRequest {
-  provider?: 'atlascloud' | 'runware';
+  provider?: 'atlascloud' | 'runware' | 'replicate';
   positivePrompt: string;
   negativePrompt?: string;
   inputImage?: string;
