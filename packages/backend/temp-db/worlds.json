@@ -1,6 +1,220 @@
 {
-  "nodes": {},
+  "nodes": {
+    "v2-1769077325691-1lbrqw217": {
+      "id": "v2-1769077325691-1lbrqw217",
+      "type": "host",
+      "name": "Nova Prime",
+      "slug": "nova-prime",
+      "description": "A futuristic world characterized by colossal, abstract structures and advanced technology under vibrant skies.",
+      "genre": "Sci-Fi",
+      "weather": "bright, clear daylight",
+      "timeOfDay": "midday",
+      "dna": {
+        "essence": [
+          "colossal architecture",
+          "abstract futurism",
+          "industrial complexity",
+          "advanced technology"
+        ],
+        "formsAndMaterials": [
+          "incomplete circular segments",
+          "cylindrical sections",
+          "exposed piping",
+          "fractured plating",
+          "textured surfaces"
+        ],
+        "colorAndLight": [
+          "vibrant turquoise sky",
+          "bright white",
+          "vivid orange-red",
+          "deep blue",
+          "contrasting colors"
+        ],
+        "atmosphere": [
+          "awe-inspiring",
+          "contemplative",
+          "exploratory",
+          "industrial",
+          "immense"
+        ],
+        "banned": [
+          "organic forms",
+          "natural landscapes"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1769077325691-0mnz2i52j": {
+      "id": "v2-1769077325691-0mnz2i52j",
+      "type": "region",
+      "name": "The Great Construct",
+      "slug": "the-great-construct",
+      "description": "A region dominated by the colossal, abstract futuristic structure, serving as a hub of industrial exploration.",
+      "isPassThrough": false,
+      "dna": {
+        "essence": [
+          "mega-structure focus",
+          "industrial zone"
+        ],
+        "formsAndMaterials": [
+          "white platforms",
+          "textured conduits"
+        ],
+        "colorAndLight": [
+          "bright ambient light"
+        ],
+        "atmosphere": [
+          "industrial",
+          "exploratory"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1769077325691-av2zb43gv": {
+      "id": "v2-1769077325691-av2zb43gv",
+      "type": "location",
+      "name": "The Central Pillar Observation Deck",
+      "slug": "the-central-pillar-observation-deck",
+      "spaceType": "exterior",
+      "description": "A white platform at the base of the colossal central pillar, offering a view of the immense, intricate structure.",
+      "dna": {
+        "essence": [
+          "observation point",
+          "scale contrast"
+        ],
+        "formsAndMaterials": [
+          "white platform",
+          "internal detailing",
+          "exposed piping"
+        ],
+        "colorAndLight": [
+          "vivid orange-red highlights",
+          "deep blue accents"
+        ],
+        "atmosphere": [
+          "awe-inspiring",
+          "contemplative"
+        ],
+        "banned": [
+          "natural elements"
+        ]
+      },
+      "primaryMedia": "media-1769077330484-wxx5tlrr0"
+    },
+    "v2-1769077916459-81m6ipeci": {
+      "id": "v2-1769077916459-81m6ipeci",
+      "type": "container",
+      "name": "The Stellar Concourse",
+      "slug": "the-stellar-concourse",
+      "description": "A nexus of transport and public services within Nova Prime, the Stellar Concourse is a marvel of integrated urban design. It serves as a gateway for citizens and visitors, offering access to transit hubs and essential amenities.",
+      "forbiddenTransformations": [
+        "Introducing organic or natural elements like plants, soil, or water features.",
+        "Adding historical or aged architectural styles incongruous with high-tech design.",
+        "Introducing elements that suggest weather or natural atmospheric conditions.",
+        "Depicting signs of decay, rust, or damage to the pristine surfaces.",
+        "Including any signage or elements that suggest a medieval or fantasy genre.",
+        "Adding vehicles or transport systems that are not futuristic or sleek."
+      ],
+      "parentId": "v2-1769077325691-av2zb43gv"
+    },
+    "v2-1769077916459-g2jzkbf3p": {
+      "id": "v2-1769077916459-g2jzkbf3p",
+      "type": "space",
+      "name": "Main Concourse Hall",
+      "slug": "main-concourse-hall",
+      "description": "The primary interior space of the Stellar Concourse, a vast hall characterized by soaring ceilings and polished surfaces. Luminescent panels and integrated displays guide travelers through the bustling hub.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "high-tech",
+          "interstellar transit",
+          "urban nexus"
+        ],
+        "formsAndMaterials": [
+          "geometric shapes",
+          "polished composites",
+          "luminescent panels",
+          "brushed metals"
+        ],
+        "colorAndLight": [
+          "cool blues and whites",
+          "vivid orange-red accents",
+          "internal ambient illumination"
+        ],
+        "atmosphere": [
+          "efficient",
+          "orderly",
+          "futuristic"
+        ],
+        "banned": [
+          "victorian architecture",
+          "gothic arches",
+          "cobblestone floors",
+          "ancient ruins",
+          "organic growth"
+        ]
+      },
+      "forbiddenTransformations": [
+        "Visible sky or exterior elements.",
+        "Exposed brick, wood, or rough-hewn stone textures.",
+        "Natural light sources like windows or skylights.",
+        "Visible ventilation shafts or conduits.",
+        "Any elements suggesting a domestic or residential space.",
+        "Decorations or art that are not integrated into the architectural design.",
+        "Visible signs of wear and tear on surfaces."
+      ],
+      "parentId": "v2-1769077916459-81m6ipeci",
+      "primaryMedia": "media-1769077923275-mnm9zv7jq"
+    },
+    "v2-1769079540905-duulvq6ko": {
+      "id": "v2-1769079540905-duulvq6ko",
+      "type": "view",
+      "name": "The Display Panel",
+      "slug": "the-display-panel",
+      "description": "View: Detailed information and graphics presented on the display panel, including text, icons, and any interactive elements.",
+      "parentId": "v2-1769077916459-g2jzkbf3p",
+      "primaryMedia": "media-1769079540903-5enb8gbdj"
+    }
+  },
   "views": {},
-  "worldTrees": [],
-  "pinnedIds": []
+  "worldTrees": [
+    {
+      "id": "v2-1769077325691-1lbrqw217",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1769077325691-0mnz2i52j",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1769077325691-av2zb43gv",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1769077916459-81m6ipeci",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1769077916459-g2jzkbf3p",
+                      "type": "space",
+                      "children": [
+                        {
+                          "id": "v2-1769079540905-duulvq6ko",
+                          "type": "view",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pinnedIds": [
+    "v2-1769077325691-1lbrqw217"
+  ]
 }

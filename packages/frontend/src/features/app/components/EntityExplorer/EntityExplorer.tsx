@@ -23,6 +23,8 @@ export const EntityExplorer: React.FC = () => {
   const [viewInfo, setViewInfo] = useState<Map<string, { current: number; total: number }>>(new Map());
   // Track which entities have upscaled images
   const [upscaledIds, setUpscaledIds] = useState<Set<string>>(new Set());
+  // Track which entities have video loops
+  const [videoIds, setVideoIds] = useState<Set<string>>(new Set());
   const [, forceUpdate] = useState(0);
   
   // Helper to recursively collect all tree nodes
@@ -47,11 +49,12 @@ export const EntityExplorer: React.FC = () => {
   // Preload all images using the new media system
   const imageMap = useEntityImages(allEntities);
   
-  // Fetch view counts and upscaled status for all entities
+  // Fetch view counts, upscaled status, and video status for all entities
   useEffect(() => {
     const fetchEntityInfo = async () => {
       const newViewInfo = new Map<string, { current: number; total: number }>();
       const newUpscaledIds = new Set<string>();
+      const newVideoIds = new Set<string>();
       
       for (const entity of allEntities) {
         try {
@@ -63,11 +66,14 @@ export const EntityExplorer: React.FC = () => {
             newViewInfo.set(entity.id, { current: imageCount, total: imageCount });
           }
           
-          // Check if entity has upscaled primary media
+          // Check if entity has upscaled primary media or video
           if (entity.primaryMedia) {
             const primaryMediaItem = await getMedia(entity.primaryMedia);
             if (primaryMediaItem?.urls?.upscaled) {
               newUpscaledIds.add(entity.id);
+            }
+            if (primaryMediaItem?.urls?.video) {
+              newVideoIds.add(entity.id);
             }
           }
         } catch (error) {
@@ -77,6 +83,7 @@ export const EntityExplorer: React.FC = () => {
       
       setViewInfo(newViewInfo);
       setUpscaledIds(newUpscaledIds);
+      setVideoIds(newVideoIds);
     };
     
     fetchEntityInfo();
@@ -99,6 +106,25 @@ export const EntityExplorer: React.FC = () => {
     
     window.addEventListener('imageUpscaled', handleImageUpscaled);
     return () => window.removeEventListener('imageUpscaled', handleImageUpscaled);
+  }, []);
+
+  // Listen for videoGenerated events to update the video badge immediately
+  useEffect(() => {
+    const handleVideoGenerated = (event: Event) => {
+      const customEvent = event as CustomEvent<{ entityId: string }>;
+      const entityId = customEvent.detail?.entityId;
+      
+      if (!entityId) return;
+      
+      setVideoIds(prev => {
+        const newSet = new Set(prev);
+        newSet.add(entityId);
+        return newSet;
+      });
+    };
+    
+    window.addEventListener('videoGenerated', handleVideoGenerated);
+    return () => window.removeEventListener('videoGenerated', handleVideoGenerated);
   }, []);
   
   // Listen for view index changes
@@ -158,6 +184,7 @@ export const EntityExplorer: React.FC = () => {
         isPassThrough: isPassThrough,
         isView: typeStr === 'view',
         isUpscaled: upscaledIds.has(treeNode.id),
+        hasVideo: videoIds.has(treeNode.id),
         children: treeNode.children?.map(mapNode)
       };
     };
@@ -195,11 +222,12 @@ export const EntityExplorer: React.FC = () => {
           icon: node.type === 'host' ? <IconWorld size={16} /> : <IconMapPin size={16} />,
           image: imageMap.get(node.id) || undefined,
           isUpscaled: upscaledIds.has(node.id),
+          hasVideo: videoIds.has(node.id),
           children: undefined // No children known
         };
       })
       .filter(Boolean) as TreeItem[];
-  }, [worldTrees, locationNodes, locationPinnedIds, imageMap, viewInfo, upscaledIds]);
+  }, [worldTrees, locationNodes, locationPinnedIds, imageMap, viewInfo, upscaledIds, videoIds]);
 
   const characterTreeData = useMemo(() => {
     return characterPinnedIds
@@ -216,9 +244,10 @@ export const EntityExplorer: React.FC = () => {
           icon: <IconInfoCircle size={16} />,
           image: imageMap.get(char.id) || undefined,
           isUpscaled: upscaledIds.has(char.id),
+          hasVideo: videoIds.has(char.id),
         };
       });
-  }, [characterMap, characterPinnedIds, imageMap, viewInfo, upscaledIds]);
+  }, [characterMap, characterPinnedIds, imageMap, viewInfo, upscaledIds, videoIds]);
   
   // Delete action
   const deleteNodeWithChildren = useLocationsStore(state => state.deleteNodeWithChildren);

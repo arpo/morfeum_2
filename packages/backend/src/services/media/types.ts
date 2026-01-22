@@ -10,6 +10,7 @@ export type MediaType = 'image' | 'video';
 export interface MediaMetadata {
   prompt: string;
   originalPrompt?: string;  // User's original input before enhancement
+  videoPrompt?: string;     // Prompt used to generate video loop
   model: string;
   width?: number;
   height?: number;

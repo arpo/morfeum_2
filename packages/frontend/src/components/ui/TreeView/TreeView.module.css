@@ -72,33 +72,22 @@
   position: relative;
 }
 
-/* Upscaling spinner overlay */
-.upscalingOverlay {
+/* Progress bar for upscaling/video generation */
+.progressBar {
   position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: var(--radius-sm, 4px);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  border-radius: 0 0 var(--radius-sm, 4px) var(--radius-sm, 4px);
 }
 
-.upscalingSpinner {
-  animation: spinFade 1s linear infinite;
-}
-
-@keyframes spinFade {
-  0% {
-    transform: rotate(0deg);
-    color: rgba(255, 255, 255, 0.9);
-  }
-  50% {
-    color: rgba(0, 0, 0, 0.7);
-  }
-  100% {
-    transform: rotate(360deg);
-    color: rgba(255, 255, 255, 0.9);
-  }
+.progressFill {
+  height: 100%;
+  transition: width 0.2s ease-out;
+  box-shadow: 0 0 4px rgba(168, 85, 247, 0.5);
 }
 
 /* HD badge for upscaled images */
@@ -114,6 +103,20 @@
   color: white;
   border-radius: 2px 0 var(--radius-sm, 4px) 0;
   letter-spacing: 0.02em;
+}
+
+/* Video badge for nodes with video loops */
+.videoBadge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px;
+  background-color: rgba(168, 85, 247, 0.9);
+  color: white;
+  border-radius: var(--radius-sm, 4px) 0 2px 0;
 }
 
 .thumbnail {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
-import { IconChevronDown, IconTrash, IconArrowBadgeRight, IconLoader2 } from '@/icons';
+import { IconChevronDown, IconTrash, IconArrowBadgeRight, IconVideo } from '@/icons';
 import { InlineConfirm } from '@/components/ui/InlineConfirm';
 import { useLocationsStore } from '@/store/slices/locations';
 import { useStore } from '@/store';
@@ -20,6 +20,8 @@ export interface TreeItem {
   isView?: boolean;
   /** True if the node has an upscaled image version */
   isUpscaled?: boolean;
+  /** True if the node has a video loop */
+  hasVideo?: boolean;
 }
 
 interface TreeViewProps {
@@ -54,12 +56,15 @@ const TreeViewContext = createContext<TreeViewContextType>({
 const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth = 0 }) => {
   const { expandedIds, toggleExpansion, onDelete } = useContext(TreeViewContext);
   
-  // Check if this node is being upscaled
-  const upscalingEntityIds = useStore(state => state.upscalingEntityIds);
-  const isUpscaling = upscalingEntityIds.has(item.id);
+  // Get media progress from store - subscribe directly to mediaProgress Map for reactivity
+  const mediaProgress = useStore(state => {
+    const progress = state.mediaProgress.get(item.id);
+    return progress;
+  });
+  const isProcessing = !!mediaProgress;
   
   // Use context state if available (persistence), otherwise fallback to local prop or default
-  const isExpanded = expandedIds.has(item.id) || (item.isExpanded && !expandedIds.size && !window.localStorage.getItem('tree_expanded'));  
+  const isExpanded = expandedIds.has(item.id) || (item.isExpanded && !expandedIds.size && !window.localStorage.getItem('tree_expanded'));
   
   const hasChildren = item.children && item.children.length > 0;
   const isSelected = selectedId === item.id;
@@ -104,16 +109,28 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
           ) : (
             <span className={styles.icon}>{item.icon}</span>
           )}
-          {/* Upscaling spinner overlay */}
-          {isUpscaling && (
-            <div className={styles.upscalingOverlay}>
-              <IconLoader2 size={12} className={styles.upscalingSpinner} />
+          {/* Progress bar at bottom for upscaling/video generation */}
+          {isProcessing && mediaProgress && (
+            <div className={styles.progressBar}>
+              <div 
+                className={styles.progressFill} 
+                style={{ 
+                  width: `${mediaProgress.progress}%`,
+                  background: `hsl(${270 - (mediaProgress.progress * 0.3)}deg, 70%, 60%)`
+                }}
+              />
             </div>
           )}
           {/* HD badge for upscaled images */}
-          {item.isUpscaled && !isUpscaling && (
+          {item.isUpscaled && !isProcessing && (
             <div className={styles.hdBadge} title={`Upscaled (${UPSCALE_CONFIG.FACTOR}x)`}>
               HD
+            </div>
+          )}
+          {/* Video badge for nodes with video loops */}
+          {item.hasVideo && !isProcessing && (
+            <div className={styles.videoBadge} title="Has video loop">
+              <IconVideo size={10} />
             </div>
           )}
         </div>

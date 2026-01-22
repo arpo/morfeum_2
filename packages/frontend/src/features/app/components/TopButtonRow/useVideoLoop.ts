@@ -1,30 +1,22 @@
 /**
  * Video Loop Hook
- * Handles video loop generation state and API calls
+ * Handles video loop generation state and API calls with progress tracking
  */
 
-import { useState, useCallback } from 'react';
+import { useCallback } from 'react';
 import { useStore } from '@/store';
 import { clearMediaItem } from '@/services/mediaService';
 
 export function useVideoLoop() {
-  const [generatingEntityIds, setGeneratingEntityIds] = useState<Set<string>>(new Set());
-
-  const startGenerating = useCallback((entityId: string) => {
-    setGeneratingEntityIds(prev => new Set(prev).add(entityId));
-  }, []);
-
-  const finishGenerating = useCallback((entityId: string) => {
-    setGeneratingEntityIds(prev => {
-      const next = new Set(prev);
-      next.delete(entityId);
-      return next;
-    });
-  }, []);
-
+  // Use store for progress tracking
+  const startMediaOperation = useStore(state => state.startMediaOperation);
+  const updateMediaProgress = useStore(state => state.updateMediaProgress);
+  const finishMediaOperation = useStore(state => state.finishMediaOperation);
+  const isEntityGeneratingVideo = useStore(state => state.isEntityGeneratingVideo);
+  
   const isEntityGenerating = useCallback((entityId: string) => {
-    return generatingEntityIds.has(entityId);
-  }, [generatingEntityIds]);
+    return isEntityGeneratingVideo(entityId);
+  }, [isEntityGeneratingVideo]);
 
   const generateVideoLoop = useCallback(async (
     entityId: string,
@@ -35,12 +27,13 @@ export function useVideoLoop() {
       return;
     }
 
-    if (generatingEntityIds.has(entityId)) {
+    if (isEntityGeneratingVideo(entityId)) {
       console.warn('[useVideoLoop] Already generating video for this entity');
       return;
     }
 
-    startGenerating(entityId);
+    startMediaOperation(entityId, 'video');
+    updateMediaProgress(entityId, 0);
 
     try {
       // Call the backend API
@@ -61,9 +54,24 @@ export function useVideoLoop() {
       // Listen for SSE events
       return new Promise<void>((resolve, reject) => {
         const eventSource = new EventSource(eventsUrl);
+        
+        // Track progress based on stage events
+        eventSource.addEventListener('stage', (event) => {
+          const data = JSON.parse(event.data);
+          // Map stages to progress: analyzing (20%), prompting (40%), generating (80%)
+          if (data.stage === 'analyzing') {
+            updateMediaProgress(entityId, 20);
+          } else if (data.stage === 'prompting') {
+            updateMediaProgress(entityId, 40);
+          } else if (data.stage === 'generating') {
+            updateMediaProgress(entityId, 80);
+          }
+        });
 
         eventSource.addEventListener('completed', (event) => {
           const data = JSON.parse(event.data);
+          
+          updateMediaProgress(entityId, 100);
           
           // Clear media cache to get fresh data
           clearMediaItem(primaryMediaId);
@@ -79,7 +87,8 @@ export function useVideoLoop() {
           }));
 
           eventSource.close();
-          finishGenerating(entityId);
+          // Small delay to show 100% before removing progress bar
+          setTimeout(() => finishMediaOperation(entityId), 500);
           resolve();
         });
 
@@ -97,25 +106,24 @@ export function useVideoLoop() {
           }
 
           eventSource.close();
-          finishGenerating(entityId);
+          finishMediaOperation(entityId);
           reject(new Error(errorMessage));
         });
 
         eventSource.onerror = () => {
           eventSource.close();
-          finishGenerating(entityId);
+          finishMediaOperation(entityId);
           reject(new Error('Connection lost during video generation'));
         };
       });
     } catch (error) {
-      finishGenerating(entityId);
+      finishMediaOperation(entityId);
       throw error;
     }
-  }, [generatingEntityIds, startGenerating, finishGenerating]);
+  }, [startMediaOperation, updateMediaProgress, finishMediaOperation, isEntityGeneratingVideo]);
 
   return {
     generateVideoLoop,
-    isEntityGenerating,
-    generatingEntityIds
+    isEntityGenerating
   };
 }

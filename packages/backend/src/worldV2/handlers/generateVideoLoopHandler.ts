@@ -55,7 +55,12 @@ function findNodeInTree(tree: any, nodeId: string): boolean {
 }
 
 /**
- * Build the LLM prompt to generate a video loop description
+ * Character video prompt (fixed, not LLM-generated)
+ */
+const CHARACTER_VIDEO_PROMPT = `A calm, presence. Natural eye contact. No speech, no lip movement, no mouth articulation of any kind. The subject feels alive: subtle breathing (gentle chest rise and fall), soft blinking, and minimal head micro-movements. Example: head tilting to the side very slightly now and then, looking around subtly. Light wind softly moving hair strands. Performance feels natural and film-like, as if in a quiet movie moment. Camera remains completely still. Cinematic seamless loop. seamless loop. Fixed camera with mid or close framing.`;
+
+/**
+ * Build the LLM prompt to generate a video loop description for locations
  */
 function buildVideoPromptSystemPrompt(): string {
   return `You are a video prompt specialist. Your task is to create brief, effective prompts for generating seamless video loops from static images.
@@ -180,32 +185,44 @@ export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: R
       pipeline.completeStage('analyzing', 'Scene context analyzed');
 
       // ═══════════════════════════════════════════════════════════════════════
-      // Stage 2: Generate video prompt using LLM
+      // Stage 2: Generate video prompt
       // ═══════════════════════════════════════════════════════════════════════
       pipeline.startStage('prompting', 'Building video prompt...');
 
-      const systemPrompt = buildVideoPromptSystemPrompt();
-      const userPrompt = buildVideoPromptUserPrompt(context);
+      let enhancedPrompt: string;
 
-      const textResult = await generateText(
-        apiKey,
-        [
-          { role: 'system', content: systemPrompt },
-          { role: 'user', content: userPrompt }
-        ],
-        'gemini-2.5-flash'
-      );
+      // Check if this is a character entity (from characters.json, not a world node)
+      const isCharacter = !worldsData.nodes[nodeId]; // Characters are not in worldsData.nodes
 
-      if (textResult.error || !textResult.data?.text) {
-        throw new Error(textResult.error || 'Failed to generate video prompt');
+      if (isCharacter) {
+        // Use fixed character video prompt
+        enhancedPrompt = CHARACTER_VIDEO_PROMPT;
+        pipeline.completeStage('prompting', 'Using character video prompt');
+      } else {
+        // Generate location-specific prompt using LLM
+        const systemPrompt = buildVideoPromptSystemPrompt();
+        const userPrompt = buildVideoPromptUserPrompt(context);
+
+        const textResult = await generateText(
+          apiKey,
+          [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: userPrompt }
+          ],
+          'gemini-2.5-flash'
+        );
+
+        if (textResult.error || !textResult.data?.text) {
+          throw new Error(textResult.error || 'Failed to generate video prompt');
+        }
+
+        const videoPrompt = textResult.data.text.trim();
+        
+        // Enhance prompt with fixed camera instructions from config
+        enhancedPrompt = `${videoPrompt}. ${DEFAULT_VIDEO_SETTINGS.PROMPT_SUFFIX}`;
+        
+        pipeline.completeStage('prompting', `Prompt: ${videoPrompt.slice(0, 50)}...`);
       }
-
-      const videoPrompt = textResult.data.text.trim();
-      
-      // Enhance prompt with fixed camera instructions from config
-      const enhancedPrompt = `${videoPrompt}. ${DEFAULT_VIDEO_SETTINGS.PROMPT_SUFFIX}`;
-      
-      pipeline.completeStage('prompting', `Prompt: ${videoPrompt.slice(0, 50)}...`);
 
       // ═══════════════════════════════════════════════════════════════════════
       // Stage 3: Generate video (22-35 seconds)
@@ -227,8 +244,11 @@ export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: R
 
       const videoUrl = videoResult.data.videoURL;
 
-      // Save video URL to media entry
+      // Save video URL and prompt to media entry
       mediaService.addUrlVariant(primaryMediaId, 'video', videoUrl);
+      mediaService.updateMedia(primaryMediaId, {
+        metadata: { videoPrompt: enhancedPrompt }
+      });
       
       pipeline.completeStage('generating', 'Video generated');
 
@@ -237,7 +257,7 @@ export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: R
         nodeId,
         primaryMediaId,
         videoUrl,
-        videoPrompt
+        videoPrompt: enhancedPrompt
       });
 
     } catch (error) {

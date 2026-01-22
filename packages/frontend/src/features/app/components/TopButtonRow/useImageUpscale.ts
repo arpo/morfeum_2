@@ -14,9 +14,10 @@ interface UpscaleResult {
 export function useImageUpscale() {
   const [error, setError] = useState<string | null>(null);
   
-  // Use store for per-entity upscaling state
-  const startUpscaling = useStore(state => state.startUpscaling);
-  const finishUpscaling = useStore(state => state.finishUpscaling);
+  // Use store for per-entity upscaling state with progress tracking
+  const startMediaOperation = useStore(state => state.startMediaOperation);
+  const updateMediaProgress = useStore(state => state.updateMediaProgress);
+  const finishMediaOperation = useStore(state => state.finishMediaOperation);
   const upscalingEntityIds = useStore(state => state.upscalingEntityIds);
 
   const upscaleImage = async (
@@ -26,11 +27,12 @@ export function useImageUpscale() {
   ): Promise<UpscaleResult> => {
     console.log('🚀 [Upscale] FUNCTION CALLED!', { entityId, primaryMediaId, entityType });
     
-    startUpscaling(entityId);
+    startMediaOperation(entityId, 'upscaling');
     setError(null);
 
     try {
       console.log('🚀 [Upscale] Fetching media item...');
+      updateMediaProgress(entityId, 10);
       
       // Step 1: Get the primary media item to get its URL
       const mediaItem = await getMedia(primaryMediaId);
@@ -40,13 +42,14 @@ export function useImageUpscale() {
       if (!mediaItem || !mediaItem.url) {
         const errorMsg = 'Failed to fetch primary media';
         setError(errorMsg);
-        finishUpscaling(entityId);
+        finishMediaOperation(entityId);
         return { success: false, error: errorMsg };
       }
 
       // Step 2: Call the upscale API
       console.log('🚀 [Upscale] Calling upscale API...');
       console.log('🚀 [Upscale] Input image:', mediaItem.url);
+      updateMediaProgress(entityId, 20);
       
       const upscaleResponse = await fetch('/api/mzoo/navigation/upscale-image', {
         method: 'POST',
@@ -67,13 +70,14 @@ export function useImageUpscale() {
         const errorMsg = `Upscale API failed: ${upscaleResponse.status} - ${errorBody}`;
         console.error('🚀 [Upscale] API error:', errorMsg);
         setError(errorMsg);
-        finishUpscaling(entityId);
+        finishMediaOperation(entityId);
         return { success: false, error: errorMsg };
       }
 
       console.log('🚀 [Upscale] Parsing JSON response...');
       const upscaleResult = await upscaleResponse.json();
       console.log('🚀 [Upscale] Full API response:', upscaleResult);
+      updateMediaProgress(entityId, 50);
       
       // Step 3: Extract the upscaled image URL from response
       // API returns data.images array, not data.image
@@ -82,13 +86,14 @@ export function useImageUpscale() {
       if (!upscaledUrl) {
         const errorMsg = 'No upscaled image URL in response';
         setError(errorMsg);
-        finishUpscaling(entityId);
+        finishMediaOperation(entityId);
         return { success: false, error: errorMsg };
       }
 
       console.log('🎨 [Upscale] Upscaled image URL:', upscaledUrl);
       console.log('🎨 [Upscale] Original image URL:', mediaItem.url);
       console.log('🎨 [Upscale] Updating media ID:', primaryMediaId);
+      updateMediaProgress(entityId, 60);
 
       // Step 4a: Store original URL if not already stored
       if (!mediaItem.urls?.original) {
@@ -106,10 +111,12 @@ export function useImageUpscale() {
           const errorMsg = `Failed to store original URL: ${originalResponse.status}`;
           console.error('🎨 [Upscale] Failed to store original:', errorMsg);
           setError(errorMsg);
-          finishUpscaling(entityId);
+          finishMediaOperation(entityId);
           return { success: false, error: errorMsg };
         }
       }
+      
+      updateMediaProgress(entityId, 70);
 
       // Step 4b: Store upscaled URL as variant
       console.log('🎨 [Upscale] Storing upscaled URL variant');
@@ -127,9 +134,11 @@ export function useImageUpscale() {
         const errorMsg = `Failed to store upscaled URL: ${upscaledResponse.status} - ${errorBody}`;
         console.error('🎨 [Upscale] Failed to store upscaled:', errorMsg);
         setError(errorMsg);
-        finishUpscaling(entityId);
+        finishMediaOperation(entityId);
         return { success: false, error: errorMsg };
       }
+      
+      updateMediaProgress(entityId, 80);
 
       // Step 4c: Update the display URL to show upscaled version
       const updateResponse = await fetch(`/api/media/${primaryMediaId}`, {
@@ -152,12 +161,13 @@ export function useImageUpscale() {
         const errorMsg = `Failed to update display URL: ${updateResponse.status} - ${errorBody}`;
         console.error('🎨 [Upscale] PUT failed:', errorMsg);
         setError(errorMsg);
-        finishUpscaling(entityId);
+        finishMediaOperation(entityId);
         return { success: false, error: errorMsg };
       }
 
       const updateResult = await updateResponse.json();
       console.log('🎨 [Upscale] PUT success! Updated media:', updateResult);
+      updateMediaProgress(entityId, 90);
 
       // Step 5: Clear media cache to force fresh fetch
       clearMediaCache();
@@ -184,7 +194,10 @@ export function useImageUpscale() {
         useLocationsStore.getState().updateNode(entityId, updateData);
       }
 
-      finishUpscaling(entityId);
+      updateMediaProgress(entityId, 100);
+      // Small delay to show 100% before removing progress bar
+      setTimeout(() => finishMediaOperation(entityId), 500);
+      
       return {
         success: true,
         upscaledUrl
@@ -193,7 +206,7 @@ export function useImageUpscale() {
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : 'Unknown error';
       setError(errorMsg);
-      finishUpscaling(entityId);
+      finishMediaOperation(entityId);
       console.error('Image upscale error:', err);
       return { success: false, error: errorMsg };
     }
