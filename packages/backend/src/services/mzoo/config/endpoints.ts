@@ -47,6 +47,7 @@ export const DEFAULT_VIDEO_SETTINGS = {
   ASPECT_RATIO: '16:9' as const,
   RESOLUTION: '480p' as const,
   DURATION: 5,
+  CHARACTER_DURATION: 7,
   FPS: 24,
   CAMERA_FIXED: true,       // Fixed camera for seamless loops
   OUTPUT_FORMAT: 'mp4' as const,

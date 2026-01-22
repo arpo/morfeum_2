@@ -109,8 +109,8 @@ const TreeNode: React.FC<TreeNodeProps> = ({ item, onSelect, selectedId, depth =
           ) : (
             <span className={styles.icon}>{item.icon}</span>
           )}
-          {/* HD badge for upscaled images */}
-          {item.isUpscaled && !isProcessing && (
+          {/* HD badge for upscaled images - hidden when video exists */}
+          {item.isUpscaled && !item.hasVideo && !isProcessing && (
             <div className={styles.hdBadge} title={`Upscaled (${UPSCALE_CONFIG.FACTOR}x)`}>
               HD
             </div>

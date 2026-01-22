@@ -59,25 +59,25 @@ function findNodeInTree(tree: any, nodeId: string): boolean {
 /**
  * Character video prompt (fixed, not LLM-generated)
  */
-const CHARACTER_VIDEO_PROMPT = `A silent character, waiting in place. Calm, focused presence.
+const CHARACTER_VIDEO_PROMPT = `A silent character, listening attentively in place. Calm, grounded presence.
 No speech. No lip, mouth, or vocal movement of any kind.
 
 Preserve the character exactly as given.
 Do not add eyes, facial features, limbs, details, symbols, creatures, particles, or any elements that do not already exist on the character.
 
 The character performs natural, cinematic acting using the body it already has:
-subtle head tilts and slow head turns, gentle shifts of the upper body, small arm or appendage movements, relaxed posture adjustments, slight weight transfers.
-Motion feels organic, expressive, and intentional — never rigid, robotic, or frozen.
+subtle head tilts, very small head turns, gentle shifts of the upper body, small arm or appendage movements, relaxed posture adjustments, slight weight transfers.
+Motion feels organic, expressive, and intentional — never rigid, robotic, frozen, or exaggerated.
 
-The character’s attention remains directed toward the camera at all times.
-Head movement is allowed, but focus and engagement stay with the viewer.
-The character may tilt or angle the head slightly, but does not look away or disengage.
+The character’s focus remains on the camera throughout the clip.
+The character is aware of and engaged with the viewer, but without staring or intensity.
+Head tilts and micro-movements occur around a stable camera-facing focus, not away from it.
 
 If the character has hair or loose elements, a light wind softly moves hair strands and clothing.
 
-Awareness and attention are conveyed through controlled movement and presence, not through added features.
+Awareness and attention are conveyed through calm, controlled movement and presence, not through added features.
 
-The performance feels like a quiet movie moment where the character is present and waiting, aware of being watched.
+The performance feels like a quiet movie moment where the character is listening, present, and attentive.
 
 Environment remains unchanged.
 Camera completely still. Fixed tripod shot.
@@ -277,7 +277,7 @@ export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: R
         inputImage: imageUrlToUse,
         cameraFixed: DEFAULT_VIDEO_SETTINGS.CAMERA_FIXED,
         negativePrompt: DEFAULT_VIDEO_SETTINGS.NEGATIVE_PROMPT,
-        duration: DEFAULT_VIDEO_SETTINGS.DURATION,
+        duration: isCharacter ? DEFAULT_VIDEO_SETTINGS.CHARACTER_DURATION : DEFAULT_VIDEO_SETTINGS.DURATION,
         aspectRatio: DEFAULT_VIDEO_SETTINGS.ASPECT_RATIO,
         resolution: DEFAULT_VIDEO_SETTINGS.RESOLUTION
       });
