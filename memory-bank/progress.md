@@ -24,6 +24,12 @@
 - ✅ Crossfade gray gap fix (inline mesh creation)
 - ✅ High-res image crossfade logging
 - ✅ Video-aware overlay timing (wait for video playback)
+- ✅ Shared time-based progress hook (useTimedProgress)
+- ✅ Character video generation fix (detect char- prefix)
+- ✅ Progress bar UI improvements (full-width, 2px height)
+- ✅ Shader-based model filter system for video generation
+- ✅ Canvas capture with filtered output (captureFilteredImage)
+- ✅ Base64 data URL for filtered image video generation
 
 ---
 

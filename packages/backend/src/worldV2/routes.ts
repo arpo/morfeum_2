@@ -20,7 +20,8 @@ import {
   navigationAssistantHandler,
   editImageHandler,
   redrawHandler,
-  generateVideoLoopHandler
+  generateVideoLoopHandler,
+  generateVideoLoopMiddleware
 } from './handlers';
 import { displayHandler } from './display';
 
@@ -72,6 +73,7 @@ router.post('/edit-image', editImageHandler);
 router.post('/redraw', redrawHandler);
 
 // GENERATE_VIDEO_LOOP - Create seamless ambient motion video from image
-router.post('/generate-video-loop', generateVideoLoopHandler);
+// Accepts both JSON and multipart/form-data (with optional filtered image)
+router.post('/generate-video-loop', generateVideoLoopMiddleware, generateVideoLoopHandler);
 
 export { router as worldV2Router };

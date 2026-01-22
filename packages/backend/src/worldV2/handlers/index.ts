@@ -16,4 +16,4 @@ export { setWeatherHandler } from './setWeatherHandler';
 export { navigationAssistantHandler } from './navigationAssistantHandler';
 export { editImageHandler } from './editImageHandler';
 export { redrawHandler } from './redrawHandler';
-export { generateVideoLoopHandler } from './generateVideoLoopHandler';
+export { generateVideoLoopHandler, generateVideoLoopMiddleware } from './generateVideoLoopHandler';

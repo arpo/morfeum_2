@@ -23,6 +23,7 @@ import {
   setupPipeline,
   cleanupPipeline
 } from '../utils/routeUtils';
+import multer from 'multer';
 
 /**
  * Find host node by walking up the tree from any node
@@ -110,8 +111,16 @@ function buildVideoPromptUserPrompt(context: {
   return parts.join('\n');
 }
 
+// Configure multer for in-memory storage
+const upload = multer({ storage: multer.memoryStorage() });
+
+// Middleware to handle both JSON and multipart/form-data
+export const generateVideoLoopMiddleware = upload.single('filteredImage');
+
 export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: Response) => {
-  const { nodeId, primaryMediaId } = req.body as { nodeId: string; primaryMediaId: string };
+  // Support both JSON and multipart/form-data
+  const nodeId = req.body.nodeId as string;
+  const primaryMediaId = req.body.primaryMediaId as string;
 
   if (!nodeId || !primaryMediaId) {
     res.status(HTTP_STATUS.BAD_REQUEST).json({
@@ -154,6 +163,15 @@ export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: R
       const media = mediaService.getMediaById(primaryMediaId);
       if (!media || !media.url) {
         throw new Error('Media not found or has no URL');
+      }
+
+      // Handle filtered image if provided
+      let imageUrlToUse = media.url;
+
+      if (req.file) {
+        // Convert filtered image buffer to base64 data URL
+        const base64 = req.file.buffer.toString('base64');
+        imageUrlToUse = `data:image/jpeg;base64,${base64}`;
       }
 
       // Check if this is a character (ID starts with 'char-')
@@ -237,7 +255,7 @@ export const generateVideoLoopHandler = asyncHandler(async (req: Request, res: R
       pipeline.startStage('generating', 'Generating video loop (this may take 30+ seconds)...');
 
       const videoResult = await generateVideo(apiKey, enhancedPrompt, {
-        inputImage: media.url,
+        inputImage: imageUrlToUse,
         cameraFixed: DEFAULT_VIDEO_SETTINGS.CAMERA_FIXED,
         negativePrompt: DEFAULT_VIDEO_SETTINGS.NEGATIVE_PROMPT,
         duration: DEFAULT_VIDEO_SETTINGS.DURATION,

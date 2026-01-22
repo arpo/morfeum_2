@@ -709,6 +709,123 @@ After 500ms → progress bar removed
 
 ---
 
+## 2026-01-22 - Shader-Based Model Filter System ✅
+
+Implemented GPU-accelerated color grading filters for AI model alignment, with filtered canvas capture for video generation.
+
+### Problem
+
+Different AI image generation models produce images with varying color characteristics (saturation, contrast, brightness). Previously used CSS filters (`saturate(1.2) contrast(1.2)`), but:
+- CSS filters don't apply to canvas-generated videos
+- Videos showed different color grading than display
+- Resulted in inconsistent visual experience
+
+### Solution: Shader-Based Filtering
+
+Moved color correction from CSS to WebGL shaders, allowing filters to be "baked in" to the rendered canvas output that gets captured for video generation.
+
+**1. Shader System (`PostProcessorSystem.ts`)**
+- Added GLSL color grading functions to fragment shader:
+  - `applyContrast(color, contrast)` - Contrast adjustment
+  - `applySaturation(color, saturation)` - HSL saturation
+  - `applyGamma(color, gamma)` - Gamma correction
+  - `applyBrightness(color, brightness)` - Brightness multiplier
+- New `ModelFilters` interface: `saturation`, `contrast`, `brightness`, `gamma`
+- Filters applied during WebGL rendering (GPU-accelerated)
+
+**2. Model Filter Presets (`modelFilters.ts`)**
+```typescript
+'model-a': { saturation: 1.0, contrast: 1.0, brightness: 1.0, gamma: 1.0 },
+'model-b': { saturation: 1.2, contrast: 1.2, brightness: 0.9, gamma: 1.0 }
+```
+
+**3. Auto-Apply in WorldViewRenderer**
+- `load()` and `crossfadeTo()` now accept `imageModelClass` parameter
+- Automatically applies correct filter preset based on model class
+- Filters persist across all image operations
+
+**4. Canvas Capture for Video Generation**
+- Added `captureFilteredImage()` method to `WorldViewRenderer`
+- Returns JPEG blob of filtered canvas output
+- Quality: 0.92, ~0.3-0.5s capture time
+
+**5. Video Generation Integration**
+
+**Frontend (`useVideoLoop.ts`):**
+- Captures filtered canvas before sending to backend
+- Sends as `multipart/form-data` with JPEG blob
+- Falls back to JSON if capture fails
+
+**Backend (`generateVideoLoopHandler.ts`):**
+- Accepts `filteredImage` file upload via multer
+- Converts buffer to base64 data URL: `data:image/jpeg;base64,...`
+- Uses filtered image instead of original for video generation
+- No temp files needed (cleaner than file-based approach)
+
+**6. Store Integration**
+- Added `worldViewRendererRef` to Zustand store
+- WorldView stores renderer reference on initialization
+- useDisplayMode passes renderer to useVideoLoop
+
+### Bug Fixes
+
+**Double-Filtering Issue:**
+- CSS class was still being applied to canvas element
+- This caused filters to apply twice (1.2 × 1.2 = 1.44 saturation)
+- **Fix:** Removed `className={styles[imageModelClass]}` from canvas
+- Now only shader-based filters are applied
+
+**Base64 Conversion Fix:**
+- Initial implementation saved filtered image to temp file
+- Passed file path to API: `/tmp/morfeum-filtered-xxx.jpg`
+- API couldn't access local file path → HTTP 500 error
+- **Fix:** Convert buffer directly to base64 data URL
+- No temp files needed, cleaner implementation
+
+### System Flow
+
+```
+1. User clicks "Generate Video"
+2. Frontend captures filtered canvas → JPEG blob (0.3-0.5s)
+3. Sends multipart/form-data:
+   - nodeId (string)
+   - primaryMediaId (string)
+   - filteredImage (JPEG blob)
+4. Backend converts to base64: data:image/jpeg;base64,...
+5. Sends to video API with base64 image
+6. Video generated with filters applied ✨
+```
+
+### Files Created/Modified
+
+**Frontend:**
+- `features/app/components/WorldView/effects/postprocessors/shaders.ts` - Color grading GLSL functions
+- `features/app/components/WorldView/effects/postprocessors/PostProcessorSystem.ts` - ModelFilters interface and methods
+- `features/app/components/WorldView/effects/postprocessors/modelFilters.ts` - NEW preset configuration
+- `features/app/components/WorldView/WorldViewRenderer.ts` - Added `captureFilteredImage()`, auto-apply filters
+- `features/app/components/WorldView/useWorldViewLogic.ts` - Pass `imageModelClass` to renderer
+- `features/app/components/WorldView/WorldView.tsx` - Removed CSS filter class application
+- `features/app/components/TopButtonRow/useVideoLoop.ts` - Capture and send filtered image
+- `features/app/components/App/useDisplayMode.ts` - Pass rendererRef to useVideoLoop
+- `store/index.ts` - Added `worldViewRendererRef` and setter
+- `styles/model-filters.module.css` - Now documentation only (not used)
+
+**Backend:**
+- `worldV2/handlers/generateVideoLoopHandler.ts` - Accept multipart, convert to base64
+- `worldV2/routes.ts` - Added multer middleware to route
+- `worldV2/handlers/index.ts` - Export middleware
+- Installed `multer` + `@types/multer`
+
+### Benefits
+
+✅ **Consistency** - Display and video output match exactly  
+✅ **GPU Accelerated** - Fast, real-time filtering  
+✅ **More Control** - Gamma, per-channel adjustments (not possible with CSS)  
+✅ **Clean Implementation** - No temp files, no double-filtering  
+✅ **Minimal Overhead** - Canvas capture adds ~0.3-0.5s to video generation
+
+---
+
 ## Next Steps
 
 - [ ] Consider renaming `NEW_REGION2` → `NEW_REGION` (after confirming no region type variants needed)
