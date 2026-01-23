@@ -328,7 +328,8 @@
         ],
         "banned": []
       },
-      "primaryMedia": "media-1769083694255-qf44xlvun"
+      "primaryMedia": "media-1769083694255-qf44xlvun",
+      "updatedAt": 1769097288495
     },
     "v2-1769083727319-2m5r1vosd": {
       "id": "v2-1769083727319-2m5r1vosd",
@@ -379,6 +380,290 @@
       "parentId": "v2-1769083727319-2m5r1vosd",
       "primaryMedia": "media-1769083732102-7izh0t8kp",
       "updatedAt": 1769084176812
+    },
+    "v2-1769097358814-wynj55k2v": {
+      "id": "v2-1769097358814-wynj55k2v",
+      "type": "space",
+      "name": "Upper Deck Balcony",
+      "slug": "upper-deck-balcony",
+      "description": "An open-air wooden balcony extending from the upper levels of the treehouse complex, offering an elevated perspective of the surrounding evergreen hills. The space is furnished with comfortable seating and is partially shaded by the tree canopy above.",
+      "spaceType": "elevated",
+      "dna": {
+        "essence": [
+          "elevated seclusion",
+          "natural retreat",
+          "adventurous escape"
+        ],
+        "formsAndMaterials": [
+          "natural wood",
+          "organic curves",
+          "smooth planks",
+          "rope accents"
+        ],
+        "colorAndLight": [
+          "warm amber sunlight",
+          "deep evergreen shadows",
+          "golden hour glow"
+        ],
+        "atmosphere": [
+          "cozy",
+          "secluded",
+          "adventurous",
+          "inviting"
+        ],
+        "banned": [
+          "industrial materials",
+          "glass railings",
+          "modern urban elements",
+          "overly manicured landscaping"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The balcony should not be enclosed by walls or a roof.",
+        "Sky views must remain unobstructed or filtered only by natural foliage.",
+        "The railing should be natural wood or rope, not modern materials.",
+        "The surrounding tree trunks and branches should be prominent.",
+        "No interior furniture should be present that breaks the outdoor feel.",
+        "The view should not be of an urban environment.",
+        "The space should feel integrated with the treehouse structure."
+      ],
+      "parentId": "v2-1769083727319-2m5r1vosd",
+      "primaryMedia": "media-1769097365178-csp8ecmxs"
+    },
+    "v2-1769097950519-haa3o3f9j": {
+      "id": "v2-1769097950519-haa3o3f9j",
+      "type": "space",
+      "name": "Top Roof Terrace",
+      "slug": "top-roof-terrace",
+      "description": "An open-air terrace located at the highest accessible point of the Central Pillar. It offers breathtaking panoramic views of the sprawling Nova Prime cityscape under the bright midday sun.",
+      "spaceType": "elevated",
+      "dna": {
+        "essence": [
+          "hyper-advanced metropolis",
+          "architectural marvel",
+          "urban panorama"
+        ],
+        "formsAndMaterials": [
+          "smooth composite plating",
+          "gleaming metal alloys",
+          "transparent polymer barriers"
+        ],
+        "colorAndLight": [
+          "bright white",
+          "vivid orange-red accents",
+          "deep blue accents",
+          "harsh midday sunlight"
+        ],
+        "atmosphere": [
+          "exhilarating",
+          "vast perspective",
+          "technological sublime"
+        ],
+        "banned": [
+          "dirt",
+          "grime",
+          "vegetation not part of approved design",
+          "visible weather effects",
+          "ancient ruins",
+          "organic erosion"
+        ]
+      },
+      "forbiddenTransformations": [
+        "any view of the sky being obscured by clouds",
+        "any visible rain or atmospheric precipitation",
+        "any natural plant life not explicitly integrated into architectural design",
+        "any signs of wear, tear, or dirt on surfaces",
+        "any introduction of non-architectural elements",
+        "depicting any stars or lunar bodies",
+        "showing any indication of being underground or enclosed",
+        "introducing organic textures that are not part of the polished composite"
+      ],
+      "parentId": "v2-1769077916459-81m6ipeci",
+      "primaryMedia": "media-1769097957860-c778wce7j"
+    },
+    "v2-1769098491394-cq300jdiv": {
+      "id": "v2-1769098491394-cq300jdiv",
+      "type": "host",
+      "name": "Portofino",
+      "slug": "portofino",
+      "description": "A charming seaside town on the Italian Riviera, known for its colorful buildings, picturesque harbor, and vibrant atmosphere.",
+      "genre": "Coastal",
+      "weather": "clear and sunny",
+      "timeOfDay": "midday",
+      "dna": {
+        "essence": [
+          "coastal charm",
+          "Mediterranean life",
+          "picturesque scenery"
+        ],
+        "formsAndMaterials": [
+          "pastel colored buildings",
+          "terracotta roofs",
+          "cobblestone streets"
+        ],
+        "colorAndLight": [
+          "bright daylight",
+          "azure blue sea",
+          "lush green trees",
+          "vibrant floral accents"
+        ],
+        "atmosphere": [
+          "charming",
+          "picturesque",
+          "vibrant",
+          "tranquil"
+        ],
+        "banned": [
+          "heavy industry",
+          "futuristic elements"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1769098491394-2yaequ3om": {
+      "id": "v2-1769098491394-2yaequ3om",
+      "type": "region",
+      "name": "Seaside Promenade",
+      "slug": "seaside-promenade",
+      "description": "The lively promenade area of Portofino, lined with cafes, shops, and offering stunning views of the ocean.",
+      "isPassThrough": false,
+      "dna": {
+        "essence": [
+          "seaside dining",
+          "ocean views"
+        ],
+        "formsAndMaterials": [
+          "stone walls",
+          "wooden terraces",
+          "thatched roofs"
+        ],
+        "colorAndLight": [
+          "turquoise ocean",
+          "bright daylight"
+        ],
+        "atmosphere": [
+          "lively",
+          "airy"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1769098491394-19jxn4d90": {
+      "id": "v2-1769098491394-19jxn4d90",
+      "type": "location",
+      "name": "Seaside Cafe Terrace",
+      "slug": "seaside-cafe-terrace",
+      "spaceType": "exterior",
+      "description": "A charming cafe terrace overlooking the turquoise ocean and lush green trees. Features a rustic thatched roof, wooden beams, decorative lights, a stone wall with shells and a vintage lamp, a bright blue service window stocked with provisions, wooden tables, chairs, and a breakfast bar.",
+      "dna": {
+        "essence": [
+          "outdoor dining",
+          "sea views",
+          "rustic decor"
+        ],
+        "formsAndMaterials": [
+          "thatched roof",
+          "wooden beams",
+          "stone wall",
+          "decorative shells",
+          "vintage lamp",
+          "bright blue service window",
+          "wine bottles",
+          "glasses",
+          "plates",
+          "wooden tables",
+          "chairs",
+          "light blue wooden floor",
+          "wicker chairs",
+          "woven rug",
+          "green vines",
+          "red flowers"
+        ],
+        "colorAndLight": [
+          "bright daylight",
+          "turquoise ocean",
+          "lush green trees",
+          "decorative lights",
+          "vibrant color accents"
+        ],
+        "atmosphere": [
+          "charming",
+          "picturesque",
+          "tranquil",
+          "sun-drenched"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1769098495152-c6ms0q87n"
+    },
+    "v2-1769098598343-z2gczgstk": {
+      "id": "v2-1769098598343-z2gczgstk",
+      "type": "container",
+      "name": "Seaside Cafe",
+      "slug": "seaside-cafe",
+      "description": "A charming seaside cafe offering delightful views of the turquoise ocean and Portofino's colorful buildings. It features a rustic design with a thatched roof, wooden elements, and a welcoming atmosphere perfect for relaxed dining.",
+      "forbiddenTransformations": [
+        "rendering the cafe as overly modern or industrial",
+        "removing the thatched roof element",
+        "depicting a stormy or overcast sky",
+        "changing the primary architectural materials",
+        "introducing elements of a bustling metropolis",
+        "making the ocean appear murky or polluted"
+      ],
+      "parentId": "v2-1769098491394-19jxn4d90"
+    },
+    "v2-1769098598343-93f7braav": {
+      "id": "v2-1769098598343-93f7braav",
+      "type": "space",
+      "name": "Cafe Bar",
+      "slug": "cafe-bar",
+      "description": "You have entered the cafe's bar area. The space is enclosed, featuring the same rustic wooden beams and stone wall as the terrace, now serving as interior surfaces. A bright blue service counter is positioned here, stocked with refreshments, and illuminated by soft, ambient light.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "seaside charm",
+          "rustic elegance",
+          "coastal retreat"
+        ],
+        "formsAndMaterials": [
+          "curved service counter",
+          "exposed wooden beams",
+          "stone walls with shell accents",
+          "light blue painted wood",
+          "wicker seating"
+        ],
+        "colorAndLight": [
+          "turquoise and ocean blues",
+          "warm wood tones",
+          "sun-kissed whites and creams",
+          "soft, indirect lighting",
+          "warm ambient glow"
+        ],
+        "atmosphere": [
+          "cozy",
+          "inviting",
+          "relaxed",
+          "intimate"
+        ],
+        "banned": [
+          "harsh fluorescent lighting",
+          "chrome and stainless steel",
+          "minimalist sterile design",
+          "dark, oppressive interiors",
+          "any suggestion of a busy, loud city bar"
+        ]
+      },
+      "forbiddenTransformations": [
+        "rendering the interior as overly modern or minimalist",
+        "removing the blue service counter",
+        "making the lighting harsh or sterile",
+        "adding elements that don't fit a rustic seaside theme",
+        "depicting the space as overly large or cavernous",
+        "showing visible sky or open-air elements",
+        "using materials like concrete or raw metal"
+      ],
+      "parentId": "v2-1769098598343-z2gczgstk",
+      "primaryMedia": "media-1769098604739-y81zdz5od"
     }
   },
   "views": {},
@@ -406,6 +691,11 @@
                     },
                     {
                       "id": "v2-1769080702061-58jfekxtl",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1769097950519-haa3o3f9j",
                       "type": "space",
                       "children": []
                     }
@@ -437,6 +727,40 @@
                       "id": "v2-1769083727319-pg2lvcoeb",
                       "type": "space",
                       "children": []
+                    },
+                    {
+                      "id": "v2-1769097358814-wynj55k2v",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v2-1769098491394-cq300jdiv",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1769098491394-2yaequ3om",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1769098491394-19jxn4d90",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1769098598343-z2gczgstk",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1769098598343-93f7braav",
+                      "type": "space",
+                      "children": []
                     }
                   ]
                 }
@@ -449,6 +773,7 @@
   ],
   "pinnedIds": [
     "v2-1769077325691-1lbrqw217",
-    "v2-1769083689173-o8vmzra0q"
+    "v2-1769083689173-o8vmzra0q",
+    "v2-1769098491394-cq300jdiv"
   ]
 }

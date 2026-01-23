@@ -16,7 +16,7 @@ export const ENDPOINTS = {
 
 export const DEFAULT_MODELS = {
   TEXT: 'gemini-2.5-flash',
-  VISION: 'gemini-2.5-flash',
+  VISION: 'gemini-2.5-flash-lite',
   IMAGE: 'fal-flux-srpo'
 };
 

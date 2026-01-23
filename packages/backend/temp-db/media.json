@@ -247,7 +247,7 @@
     "media-1769083694255-qf44xlvun": {
       "id": "media-1769083694255-qf44xlvun",
       "type": "image",
-      "url": "https://v3b.fal.media/files/b/0a8b6851/sAX1IZXcNcXjDKxI6DViO.jpg",
+      "url": "https://v3b.fal.media/files/b/0a8b6da0/JYGbxs4HDrR-pUhzP9HOq.jpg",
       "createdAt": "2026-01-22T12:08:14.255Z",
       "metadata": {
         "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nElaborate Treehouse Complex. An elaborate treehouse complex with two distinct dwellings connected by bridges, featuring a larger shingled house and a smaller rustic house, a central platform, and a wooden deck with a hot tub at the base.\n\nSTYLE LOCK — NON-NEGOTIABLE:\n\nIdentity:\n* connected dwellings\n* elevated living\n\nMaterials:\n* light wooden shingle siding\n* numerous windows\n* dark wood\n* curved metal roof\n* arching wooden stairway bridge\n* suspended rope bridge\n* central platform\n* wooden deck\n* hot tub\n\nColor & Light:\n* golden light casting long shadows\n\nAtmosphere:\n* cozy\n* adventurous\n* secluded\n\nBanned:\n* urban sprawl\n* industrial noise\n\nSCENE LAYERS:\n- Background: Evergreen Hills rolling gently under a clear, vast sky bathed in the warm, diffused glow of the golden hour. The distant slopes are a tapestry of deep greens from mature evergreen trees, with hints of softer hues where sunlight catches lighter foliage. Long, softened shadows stretch across the landscape, emphasizing the rolling topography.\n- Midground: The elaborate treehouse complex is nestled amongst towering, ancient evergreen trees on a sun-drenched slope. The larger, light wooden shingle-sided dwelling is prominently visible, its numerous windows reflecting the golden light. Connecting to it is a smaller, rustic dwelling constructed of dark wood, accessed by an arching wooden stairway bridge that winds organically around a tree trunk. A suspended rope bridge, taut and inviting, links the two structures further, leading to a central platform offering a birds-eye view of the surroundings. The deep green of the evergreen canopy provides a natural, secluded frame for the complex.\n- Foreground: At the base of the treehouse complex, a welcoming wooden deck juts out, partially obscured by the lower branches of the trees. A steaming, dark wooden hot tub is a focal point on this deck, its surface reflecting the warm, golden light and emitting a gentle wisp of steam, hinting at its cozy and inviting nature. The texture of the dark wood of the deck and the hot tub, along with the rough bark of the nearby tree trunks, are clearly defined in the low-angled sunlight.\n\nLIGHTING: Golden hour sunlight streams through the evergreen canopy, casting long, dramatic shadows that stretch and deepen across the scene. The light is warm and intense, highlighting the textures of the wood shingle siding, the dark wood elements, and the foliage. Light glints off the numerous windows of the treehouse dwellings and the surface of the hot tub. The overall effect is a luminous, warm, and inviting glow that emphasizes the secluded and adventurous atmosphere.\nATMOSPHERE: A profound sense of cozy seclusion permeates the scene, enhanced by the warm, enveloping golden light and the natural, untouched surroundings. The architectural design of the treehouse complex, with its connected dwellings and elevated living spaces, evokes a feeling of adventurous escape. The steam rising from the hot tub and the inviting bridges contribute to an atmosphere of warmth and readiness for enjoyment in this hidden, sun-drenched haven.\n\n[SPACE:] EXTERIOR - OUTSIDE view of the building/location\n[ENVIRONMENT:] clear and sunny, golden hour\n[CAMERA:] camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context\n[LENS:] 12-24mm ultra-wide lens, elevated perspective, expansive framing\n[LIGHT:] directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions\n\n[NEG:] interior, indoor, inside room, indoor scene\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE: humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
@@ -266,11 +266,20 @@
         "model": "flux",
         "width": 1920,
         "height": 1080,
-        "aspectRatio": "landscape_16_9"
+        "aspectRatio": "landscape_16_9",
+        "modelClass": "model-a",
+        "upscaled": true,
+        "upscale_factor": 2,
+        "videoPrompt": "Gentle wisps of steam curl and dissipate from the hot tub as subtle shifts of golden light and shadow play across the treehouses and deck, filtering through the gently swaying evergreen branches.. Camera remains completely still. Cinematic seamless loop. seamless loop. Fixed camera"
       },
       "entityRefs": [
         "v2-1769083689173-6q34j8iup"
-      ]
+      ],
+      "urls": {
+        "original": "https://v3b.fal.media/files/b/0a8b6851/sAX1IZXcNcXjDKxI6DViO.jpg",
+        "upscaled": "https://v3b.fal.media/files/b/0a8b6da0/JYGbxs4HDrR-pUhzP9HOq.jpg",
+        "video": "https://pub-1a94f502e4c04d268342cf995350b848.r2.dev/dev/morfeum/videos-loops/media-1769083694255-qf44xlvun.mp4"
+      }
     },
     "media-1769083732102-7izh0t8kp": {
       "id": "media-1769083732102-7izh0t8kp",
@@ -297,7 +306,8 @@
         "aspectRatio": "landscape_16_9",
         "modelClass": "model-b",
         "upscaled": true,
-        "upscale_factor": 2
+        "upscale_factor": 2,
+        "videoPrompt": "Golden light softly shifts across the wooden interior, as a gentle fire flickers in the hearth.. Camera remains completely still. Cinematic seamless loop. seamless loop. Fixed camera"
       },
       "entityRefs": [
         "v2-1769083727319-pg2lvcoeb"
@@ -305,7 +315,8 @@
       "parentMedia": "media-1769083694255-qf44xlvun",
       "urls": {
         "original": "https://v3b.fal.media/files/b/0a8b6855/Zcwsg4cK4vUQ_92Fi1DJ5.png",
-        "upscaled": "https://v3b.fal.media/files/b/0a8b6881/U66N8atj1Bn2LikQTTov7.jpg"
+        "upscaled": "https://v3b.fal.media/files/b/0a8b6881/U66N8atj1Bn2LikQTTov7.jpg",
+        "video": "https://pub-1a94f502e4c04d268342cf995350b848.r2.dev/dev/morfeum/videos-loops/media-1769083732102-7izh0t8kp.mp4"
       }
     },
     "media-1769091454532-6th2h3poc": {
@@ -344,6 +355,175 @@
       ],
       "urls": {
         "video": "https://pub-1a94f502e4c04d268342cf995350b848.r2.dev/dev/morfeum/videos-loops/media-1769093026929-5yd3ckfv1.mp4"
+      }
+    },
+    "media-1769097365178-csp8ecmxs": {
+      "id": "media-1769097365178-csp8ecmxs",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b6da8/VO1F37y4xMxWKLNP0UT47.png",
+      "createdAt": "2026-01-22T15:56:05.178Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and step into Upper Deck Balcony.\n\nTarget location:\nInterior space carved inside Elaborate Treehouse Complex.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: GOLDEN HOUR\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect golden hour conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nThe connected structures of the treehouse complex are partially visible, offering views of wooden shingle siding and rustic dark wood elements. Tree trunks and dense evergreen foliage surround the space.\nThe textured surface of the wooden deck, with details of the wood grain and possibly a small section of a tree trunk visible at the edge. Comfortable, rustic seating might be present.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: A profound sense of cozy seclusion permeates the scene, enhanced by the warm, enveloping golden light and the natural, untouched surroundings. The architectural design of the treehouse complex, with its connected dwellings and elevated living spaces, evokes a feeling of adventurous escape. The steam rising from the hot tub and the inviting bridges contribute to an atmosphere of warmth and readiness for enjoyment in this hidden, sun-drenched haven.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nDistant rolling evergreen hills bathed in golden hour light, with long shadows stretching across the landscape. The vast, clear sky is visible overhead.\n\nInterior lighting and atmosphere (MUST MATCH GOLDEN HOUR):\nLighting appropriate for golden hour interior.\nA profound sense of cozy seclusion and an adventurous feeling of being high above the world, with the warmth of the golden hour creating an inviting and tranquil escape.\n\nPhysical constraints:\nOpen to sky above (balcony/terrace). Railing or edge defines the boundary.\nNatural lighting from above and sides.\nThe entrance back into the building is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No interior room appearance\n* No ground-level perspective\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
+        "promptLayers": {
+          "name": "Upper Deck Balcony",
+          "description": "An open-air wooden balcony extending from the upper levels of the treehouse complex, offering an elevated perspective of the surrounding evergreen hills. The space is furnished with comfortable seating and is partially shaded by the tree canopy above.",
+          "background": "Distant rolling evergreen hills bathed in golden hour light, with long shadows stretching across the landscape. The vast, clear sky is visible overhead.",
+          "midground": "The connected structures of the treehouse complex are partially visible, offering views of wooden shingle siding and rustic dark wood elements. Tree trunks and dense evergreen foliage surround the space.",
+          "foreground": "The textured surface of the wooden deck, with details of the wood grain and possibly a small section of a tree trunk visible at the edge. Comfortable, rustic seating might be present.",
+          "lighting": "Warm, diffused golden hour sunlight streams in from above and to the sides, creating dappled light and shadow patterns on the wooden surfaces. The light is bright but softened by the evergreen canopy.",
+          "atmosphere": "A profound sense of cozy seclusion and an adventurous feeling of being high above the world, with the warmth of the golden hour creating an inviting and tranquil escape."
+        },
+        "promptData": {
+          "command": "GOTO"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9",
+        "videoPrompt": "Golden light filters through the tree canopy, subtly shifting and casting slow, dancing shadows across the wooden surfaces, while nearby leaves gently rustle in an unseen breeze.. Camera remains completely still. Cinematic seamless loop. seamless loop. Fixed camera"
+      },
+      "entityRefs": [
+        "v2-1769097358814-wynj55k2v"
+      ],
+      "parentMedia": "media-1769083694255-qf44xlvun",
+      "urls": {
+        "video": "https://pub-1a94f502e4c04d268342cf995350b848.r2.dev/dev/morfeum/videos-loops/media-1769097365178-csp8ecmxs.mp4"
+      }
+    },
+    "media-1769097589757-55kfrn96u": {
+      "id": "media-1769097589757-55kfrn96u",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b6dbe/Ry-BnpQ8P0TTQ2JIZUc7Y.jpg",
+      "createdAt": "2026-01-22T15:59:49.757Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nHalf portrait of Maya Solis facing the camera directly, with steady eye contact and her face in crisp focus, framed slightly off-center against a backdrop of a sprawling, intricately constructed treehouse complex. The treehouse is made of weathered, reclaimed wood, with rope bridges connecting various platforms and lush green vines weaving through its structure, bathed in the warm, dappled light of a secluded forest clearing. Maya, with her fair, lightly tanned skin and dusting of freckles, has her long, sun-bleached blonde hair in a messy braid, her bright hazel eyes conveying a grounded calm. She wears a deep emerald green woven halterneck bikini top with macrame detail and light-wash denim shorts with frayed hems. The depth of field is natural with gentle bokeh behind her, emphasizing her warm and inviting presence, as if she's a natural part of this cozy, adventurous, and secluded treetop haven.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024,
+        "videoPrompt": "A silent character, listening attentively in place. Calm, grounded presence.\nNo speech. No lip, mouth, or vocal movement of any kind.\n\nPreserve the character exactly as given.\nDo not add eyes, facial features, limbs, details, symbols, creatures, particles, or any elements that do not already exist on the character.\n\nThe character performs natural, cinematic acting using the body it already has:\nsubtle head tilts, very small head turns, gentle shifts of the upper body, small arm or appendage movements, relaxed posture adjustments, slight weight transfers.\nMotion feels organic, expressive, and intentional — never rigid, robotic, frozen, or exaggerated.\n\nThe character’s focus remains on the camera throughout the clip.\nThe character is aware of and engaged with the viewer, but without staring or intensity.\nHead tilts and micro-movements occur around a stable camera-facing focus, not away from it.\n\nIf the character has hair or loose elements, a light wind softly moves hair strands and clothing.\n\nAwareness and attention are conveyed through calm, controlled movement and presence, not through added features.\n\nThe performance feels like a quiet movie moment where the character is listening, present, and attentive.\n\nEnvironment remains unchanged.\nCamera completely still. Fixed tripod shot.\nMid or close framing.\nCinematic seamless loop with no visible start or end."
+      },
+      "entityRefs": [
+        "char-1769097589754-sugyift2x"
+      ],
+      "urls": {
+        "video": "https://pub-1a94f502e4c04d268342cf995350b848.r2.dev/dev/morfeum/videos-loops/media-1769097589757-55kfrn96u.mp4"
+      }
+    },
+    "media-1769097794938-qr3xike17": {
+      "id": "media-1769097794938-qr3xike17",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b6dd2/OHIfDoFh8xVMiOJs1tANZ.jpg",
+      "createdAt": "2026-01-22T16:03:14.938Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nHalf portrait of Cipher, its polished chrome face a mirror reflecting the awe-inspiring, contemplative vista of the Central Pillar Observation Deck. The holographic circuit board patterns beneath its surface pulse with a faint cerulean light, subtly shifting to capture the expansive, star-dusted sky of the exterior. Its gaze is steady and direct, the cerulean energy lines visible at its temples and jawline shimmering softly. The background of the observation deck, with its sleek, metallic railings and distant nebulae, is rendered with a gentle bokeh, emphasizing Cipher's keen, observant focus. Soft, ambient starlight illuminates its form, highlighting the smooth, seamless plating and the quiet hum of latent energy that emanates from it, unifying the scene with a sense of ancient, ever-present awareness.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024,
+        "videoPrompt": "A silent character, listening attentively in place. Calm, grounded presence.\nNo speech. No lip, mouth, or vocal movement of any kind.\n\nPreserve the character exactly as given.\nDo not add eyes, facial features, limbs, details, symbols, creatures, particles, or any elements that do not already exist on the character.\n\nThe character performs natural, cinematic acting using the body it already has:\nsubtle head tilts, very small head turns, gentle shifts of the upper body, small arm or appendage movements, relaxed posture adjustments, slight weight transfers.\nMotion feels organic, expressive, and intentional — never rigid, robotic, frozen, or exaggerated.\n\nThe character’s focus remains on the camera throughout the clip.\nThe character is aware of and engaged with the viewer, but without staring or intensity.\nHead tilts and micro-movements occur around a stable camera-facing focus, not away from it.\n\nIf the character has hair or loose elements, a light wind softly moves hair strands and clothing.\n\nAwareness and attention are conveyed through calm, controlled movement and presence, not through added features.\n\nThe performance feels like a quiet movie moment where the character is listening, present, and attentive.\n\nEnvironment remains unchanged.\nCamera completely still. Fixed tripod shot.\nMid or close framing.\nCinematic seamless loop with no visible start or end."
+      },
+      "entityRefs": [
+        "char-1769097794936-24vebcs4i"
+      ],
+      "urls": {
+        "video": "https://pub-1a94f502e4c04d268342cf995350b848.r2.dev/dev/morfeum/videos-loops/media-1769097794938-qr3xike17.mp4"
+      }
+    },
+    "media-1769097957860-c778wce7j": {
+      "id": "media-1769097957860-c778wce7j",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b6de3/Qpj59CfUHaypfbZyIrX23.png",
+      "createdAt": "2026-01-22T16:05:57.860Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and step into Top Roof Terrace.\n\nTarget location:\nInterior space carved inside The Central Pillar Observation Deck.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect midday conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nTransparent polymer safety barriers, clean white decking, integrated seating areas with minimalist design, structural elements of the pillar's peak subtly visible\nSmooth, bright white composite decking, subtle integration of orange-red and deep blue accent lines along the terrace edge\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: Awe-inspiring and contemplative. The sheer scale of the central pillar inspires wonder, while the clean design of the observation deck encourages quiet reflection on the marvel of its construction.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nVast, detailed cityscape of Nova Prime stretching to the horizon, clear blue sky above with no clouds\n\nInterior lighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday interior.\nExhilarating sense of height and openness, clean and precise technological aesthetic, quiet hum of the distant city\n\nPhysical constraints:\nOpen to sky above (balcony/terrace). Railing or edge defines the boundary.\nNatural lighting from above and sides.\nThe entrance back into the building is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No interior room appearance\n* No ground-level perspective\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
+        "promptLayers": {
+          "name": "Top Roof Terrace",
+          "description": "An open-air terrace located at the highest accessible point of the Central Pillar. It offers breathtaking panoramic views of the sprawling Nova Prime cityscape under the bright midday sun.",
+          "background": "Vast, detailed cityscape of Nova Prime stretching to the horizon, clear blue sky above with no clouds",
+          "midground": "Transparent polymer safety barriers, clean white decking, integrated seating areas with minimalist design, structural elements of the pillar's peak subtly visible",
+          "foreground": "Smooth, bright white composite decking, subtle integration of orange-red and deep blue accent lines along the terrace edge",
+          "lighting": "Direct, intense midday sunlight reflecting off white surfaces and metallic accents, creating sharp shadows. Ambient city light.",
+          "atmosphere": "Exhilarating sense of height and openness, clean and precise technological aesthetic, quiet hum of the distant city"
+        },
+        "promptData": {
+          "command": "GOTO"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9",
+        "videoPrompt": "Subtle shifts in ambient light slowly sweep across the pristine surfaces, causing gentle shadow play on the integrated seating and structural elements.. Camera remains completely still. Cinematic seamless loop. seamless loop. Fixed camera"
+      },
+      "entityRefs": [
+        "v2-1769097950519-haa3o3f9j"
+      ],
+      "parentMedia": "media-1769077330484-wxx5tlrr0",
+      "urls": {
+        "video": "https://pub-1a94f502e4c04d268342cf995350b848.r2.dev/dev/morfeum/videos-loops/media-1769097957860-c778wce7j.mp4"
+      }
+    },
+    "media-1769098495152-c6ms0q87n": {
+      "id": "media-1769098495152-c6ms0q87n",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b6e19/Se7MBKCP-oi5TqVGqNd8y.jpg",
+      "createdAt": "2026-01-22T16:14:55.152Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nSeaside Cafe Terrace. A charming cafe terrace overlooking the turquoise ocean and lush green trees. Features a rustic thatched roof, wooden beams, decorative lights, a stone wall with shells and a vintage lamp, a bright blue service window stocked with provisions, wooden tables, chairs, and a breakfast bar.\n\nSTYLE LOCK — NON-NEGOTIABLE:\n\nIdentity:\n* outdoor dining\n* sea views\n* rustic decor\n\nMaterials:\n* thatched roof\n* wooden beams\n* stone wall\n* decorative shells\n* vintage lamp\n* bright blue service window\n* wine bottles\n* glasses\n* plates\n* wooden tables\n* chairs\n* light blue wooden floor\n* wicker chairs\n* woven rug\n* green vines\n* red flowers\n\nColor & Light:\n* bright daylight\n* turquoise ocean\n* lush green trees\n* decorative lights\n* vibrant color accents\n\nAtmosphere:\n* charming\n* picturesque\n* tranquil\n* sun-drenched\n\nBanned:\n* heavy industry\n* futuristic elements\n\nSCENE LAYERS:\n- Background: The deep, clear turquoise ocean stretches to the horizon, meeting a bright, cloudless sky. Lush green trees and distant, colorful buildings of Portofino provide a vibrant backdrop to the scene.\n- Midground: The charming Seaside Cafe Terrace itself is the main focus. A rustic thatched roof is supported by visible wooden beams. A stone wall, adorned with decorative shells and a vintage lamp, forms part of the structure. A bright blue service window, fully stocked with wine bottles, glasses, and plates, is prominent.  Wooden tables and chairs are arranged invitingly.\n- Foreground: Closer to the viewer are more details of the cafe's outdoor dining setup. A breakfast bar with wicker chairs and a woven rug.  Wooden tables with place settings.  The light blue wooden floor is visible underfoot.  Green vines with pops of red flowers cascade along the edges of the terrace.\n\nLIGHTING: Bright daylight floods the scene, creating a sun-drenched atmosphere. The sunlight reflects off the turquoise ocean, casting a warm glow. Decorative lights, though likely not illuminated at midday, add to the charming ambiance and will be rendered as subtle accents.\nATMOSPHERE: Charming and picturesque, with a tranquil, sun-drenched mood. The overall feeling is one of relaxed seaside dining.\n\n[SPACE:] EXTERIOR - OUTSIDE view of the building/location\n[ENVIRONMENT:] clear and sunny, midday\n[CAMERA:] camera positioned on approach path with elevated perspective, 25-30° downward tilt, ultra-wide view capturing entrance within broader environmental context, entrance visible but not dominating frame, extensive surroundings visible, layered depth from immediate foreground through distant background, balanced composition showing full architectural context\n[LENS:] 12-24mm ultra-wide lens, elevated perspective, expansive framing\n[LIGHT:] directional natural light with atmospheric haze, environmental motion (wind-blown mist, drifting clouds, shifting shadows), parallax depth through weather conditions\n\n[NEG:] interior, indoor, inside room, indoor scene\n\n[FILTER: NoLivingSubjects] DON'T INCLUDE: humans, people, faces, characters, animals, creatures, silhouettes, bodies, watermark, signature.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "promptLayers": {
+          "name": "Seaside Cafe Terrace",
+          "description": "A charming cafe terrace overlooking the turquoise ocean and lush green trees. Features a rustic thatched roof, wooden beams, decorative lights, a stone wall with shells and a vintage lamp, a bright blue service window stocked with provisions, wooden tables, chairs, and a breakfast bar.",
+          "background": "The deep, clear turquoise ocean stretches to the horizon, meeting a bright, cloudless sky. Lush green trees and distant, colorful buildings of Portofino provide a vibrant backdrop to the scene.",
+          "midground": "The charming Seaside Cafe Terrace itself is the main focus. A rustic thatched roof is supported by visible wooden beams. A stone wall, adorned with decorative shells and a vintage lamp, forms part of the structure. A bright blue service window, fully stocked with wine bottles, glasses, and plates, is prominent.  Wooden tables and chairs are arranged invitingly.",
+          "foreground": "Closer to the viewer are more details of the cafe's outdoor dining setup. A breakfast bar with wicker chairs and a woven rug.  Wooden tables with place settings.  The light blue wooden floor is visible underfoot.  Green vines with pops of red flowers cascade along the edges of the terrace.",
+          "lighting": "Bright daylight floods the scene, creating a sun-drenched atmosphere. The sunlight reflects off the turquoise ocean, casting a warm glow. Decorative lights, though likely not illuminated at midday, add to the charming ambiance and will be rendered as subtle accents.",
+          "atmosphere": "Charming and picturesque, with a tranquil, sun-drenched mood. The overall feeling is one of relaxed seaside dining."
+        },
+        "promptData": {
+          "command": "NEW_WORLD_LOCATION"
+        },
+        "model": "flux",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9",
+        "videoPrompt": "Gentle waves lap the turquoise ocean, causing sunlight to shimmer across the surface. Lush leaves and vines sway softly, creating subtle shifts in light and shadow across the terrace.. Camera remains completely still. Cinematic seamless loop. seamless loop. Fixed camera"
+      },
+      "entityRefs": [
+        "v2-1769098491394-19jxn4d90"
+      ],
+      "urls": {
+        "video": "https://pub-1a94f502e4c04d268342cf995350b848.r2.dev/dev/morfeum/videos-loops/media-1769098495152-c6ms0q87n.mp4"
+      }
+    },
+    "media-1769098604739-y81zdz5od": {
+      "id": "media-1769098604739-y81zdz5od",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a8b6e24/bhEpZb1AsH9Cqj4qT143t.png",
+      "createdAt": "2026-01-22T16:16:44.739Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and step into Cafe Bar.\n\nTarget location:\nInterior space carved inside Seaside Cafe Terrace.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect midday conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nThe prominent bright blue service counter, stocked with wine bottles, glasses, and plates. Wicker stools are pulled up to a breakfast bar section. Visible wooden beams overhead.\nThe light blue wooden floor, with hints of a woven rug and place settings if still present from the bar seating area.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: Charming and picturesque, with a tranquil, sun-drenched mood. The overall feeling is one of relaxed seaside dining.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nInterior walls constructed from the same shell-adorned stone and rustic wooden beams, meeting a simple, enclosed ceiling without direct sky visibility.\n\nInterior lighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday interior.\nA continuation of the charming, relaxed seaside mood, now in a cozy, enclosed setting. The atmosphere is intimate and welcoming, shielded from the direct sun but retaining its warmth.\n\nPhysical constraints:\nSolid ceiling above. Fully enclosed interior. No sky visible.\nThe space is carved into the structure's mass — not a void containing the structure.\nThe structure itself is NOT visible as an object from inside.\nIndirect lighting only — light enters through openings not visible in frame.\nThe entrance is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible through ceiling\n* No open roof or atrium to sky\n* No exterior landscape visible\n* No exterior vegetation unless interior description specifies overgrowth/abandoned\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
+        "promptLayers": {
+          "name": "Cafe Bar",
+          "description": "You have entered the cafe's bar area. The space is enclosed, featuring the same rustic wooden beams and stone wall as the terrace, now serving as interior surfaces. A bright blue service counter is positioned here, stocked with refreshments, and illuminated by soft, ambient light.",
+          "background": "Interior walls constructed from the same shell-adorned stone and rustic wooden beams, meeting a simple, enclosed ceiling without direct sky visibility.",
+          "midground": "The prominent bright blue service counter, stocked with wine bottles, glasses, and plates. Wicker stools are pulled up to a breakfast bar section. Visible wooden beams overhead.",
+          "foreground": "The light blue wooden floor, with hints of a woven rug and place settings if still present from the bar seating area.",
+          "lighting": "Soft, indirect lighting emanates from decorative lamps and perhaps subtle interior fixtures, casting a warm ambient glow that complements the sun-drenched tones from outside.",
+          "atmosphere": "A continuation of the charming, relaxed seaside mood, now in a cozy, enclosed setting. The atmosphere is intimate and welcoming, shielded from the direct sun but retaining its warmth."
+        },
+        "promptData": {
+          "command": "GO_INSIDE"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9",
+        "videoPrompt": "Subtle shifts in the filtered midday light illuminate floating dust motes and gently move ambient shadows across the rustic stone and wooden surfaces.. Camera remains completely still. Cinematic seamless loop. seamless loop. Fixed camera"
+      },
+      "entityRefs": [
+        "v2-1769098598343-93f7braav"
+      ],
+      "parentMedia": "media-1769098495152-c6ms0q87n",
+      "urls": {
+        "video": "https://pub-1a94f502e4c04d268342cf995350b848.r2.dev/dev/morfeum/videos-loops/media-1769098604739-y81zdz5od.mp4"
       }
     }
   }
