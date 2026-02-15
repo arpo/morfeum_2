@@ -36,6 +36,11 @@ export interface CharacterVisualData {
   personality?: string;
 }
 
+export interface EnvironmentConditions {
+  weather?: string;
+  timeOfDay?: string;
+}
+
 /**
  * Shot type descriptions for the LLM
  */
@@ -62,16 +67,17 @@ CRITICAL RULES:
 4. If an ACTION is specified, show the character performing that action naturally
 5. Keep the artistic style consistent with the location
 6. Specify the character's position and how they interact with the space
+7. If ENVIRONMENT CONDITIONS are provided (weather, time of day), reflect them in lighting, shadows, atmosphere, and character appearance
 
 SHOT TYPE GUIDELINES:
 ${Object.entries(SHOT_TYPE_GUIDELINES).map(([type, desc]) => `- ${type}: ${desc}`).join('\n')}
 
 STRUCTURE YOUR OUTPUT:
 1. Start with camera/composition direction based on shot type
-2. Describe the environment visually
+2. Describe the environment visually (incorporating weather/time of day if provided)
 3. Integrate the character INTO that scene
 4. If action specified, describe the action naturally
-5. End with atmosphere/mood that unifies everything
+5. End with atmosphere/mood that unifies everything (lighting should match time of day)
 
 Output ONLY the final prompt. No explanations, no markdown, no quotes.`;
 
@@ -79,7 +85,8 @@ const buildUserPrompt = (
   character: CharacterVisualData,
   locationImagePrompt: string,
   shotType: ShotType,
-  action?: string
+  action?: string,
+  environment?: EnvironmentConditions
 ): string => {
   let prompt = `CHARACTER DESCRIPTION:
 Name: ${character.name}
@@ -89,9 +96,20 @@ ${character.presence ? `Presence/Aura: ${character.presence}` : ''}
 ${character.personality ? `Demeanor: ${character.personality}` : ''}
 
 LOCATION SCENE (maintain its visual style):
-${locationImagePrompt}
+${locationImagePrompt}`;
 
-SHOT TYPE: ${shotType}
+  // Add environment conditions if provided
+  if (environment?.weather || environment?.timeOfDay) {
+    prompt += `\n\nENVIRONMENT CONDITIONS:`;
+    if (environment.timeOfDay) {
+      prompt += `\nTime of Day: ${environment.timeOfDay.replace(/_/g, ' ')} - lighting and shadows must reflect this`;
+    }
+    if (environment.weather) {
+      prompt += `\nWeather: ${environment.weather} - atmosphere and visibility must reflect this`;
+    }
+  }
+
+  prompt += `\n\nSHOT TYPE: ${shotType}
 ${SHOT_TYPE_GUIDELINES[shotType]}`;
 
   if (action) {
@@ -112,6 +130,7 @@ Show ${character.name} ${action}. Make this action look natural and integrated w
  * @param shotType - How to frame the shot (camera angle/composition)
  * @param apiKey - MZOO API key
  * @param action - Optional action/pose for the character
+ * @param environment - Optional environment conditions (weather, time of day) from host
  * @returns Optimized FLUX prompt with character integrated into scene
  */
 export async function composeCharacterScenePrompt(
@@ -119,9 +138,10 @@ export async function composeCharacterScenePrompt(
   locationContext: string,
   shotType: ShotType,
   apiKey: string,
-  action?: string
+  action?: string,
+  environment?: EnvironmentConditions
 ): Promise<string> {
-  const userPrompt = buildUserPrompt(character, locationContext, shotType, action);
+  const userPrompt = buildUserPrompt(character, locationContext, shotType, action, environment);
 
   const result = await mzooService.generateText(
     apiKey,

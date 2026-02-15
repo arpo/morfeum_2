@@ -15,12 +15,14 @@
 import { AI_MODELS } from '../../../config/constants';
 import * as mzooService from '../../../services/mzoo';
 import mediaService from '../../../services/media/mediaService';
+import { storageService } from '../../../services/storage/storageService';
 import type { NavigationDecision, NavigationContext } from '../types';
 import type { CharacterType } from '../../generation/prompts/characters/characterPromptEngineering';
 import { getCharacterPromptEngineer } from '../../generation/prompts/characters/characterPromptEngineering';
 import { 
   composeCharacterScenePrompt,
-  getDefaultShotTypeForCharacterCreation 
+  getDefaultShotTypeForCharacterCreation,
+  EnvironmentConditions
 } from '../../generation/prompts/characters/composeCharacterScenePrompt';
 import {
   generateCharacterSeed,
@@ -31,6 +33,66 @@ import { generateImage } from '../../pipelines/shared/imageGeneration';
 import { applyMorfeumStyle } from '../../generation/shared/applyMorfeumStyle';
 import { saveAndPinEntity, buildCharacterEntity } from '../../pipelines/shared/entityPersistence';
 import { PipelineHelper } from '../../pipelines/shared/pipelineHelpers';
+
+/**
+ * Recursively search for a node in a tree entry and return the host ID
+ */
+function findHostForNode(
+  treeEntry: any,
+  targetId: string,
+  hostId: string
+): string | null {
+  if (treeEntry.id === targetId) {
+    return hostId;
+  }
+  
+  for (const child of treeEntry.children || []) {
+    const result = findHostForNode(child, targetId, hostId);
+    if (result) {
+      return result;
+    }
+  }
+  
+  return null;
+}
+
+/**
+ * Get the host's weather and timeOfDay for a given node
+ */
+async function getHostEnvironmentConditions(nodeId: string): Promise<EnvironmentConditions | undefined> {
+  try {
+    const worldsData = await storageService.loadWorlds();
+    if (!worldsData) return undefined;
+    
+    // Check if the node itself is a host
+    const node = worldsData.nodes?.[nodeId];
+    if (node?.type === 'host') {
+      return {
+        weather: node.weather,
+        timeOfDay: node.timeOfDay
+      };
+    }
+    
+    // Search through world trees to find which host this node belongs to
+    for (const hostTree of worldsData.worldTrees || []) {
+      const hostId = findHostForNode(hostTree, nodeId, hostTree.id);
+      if (hostId) {
+        const host = worldsData.nodes?.[hostId];
+        if (host) {
+          return {
+            weather: host.weather,
+            timeOfDay: host.timeOfDay
+          };
+        }
+      }
+    }
+    
+    return undefined;
+  } catch (error) {
+    console.error('[CreateCharacterPipeline] Failed to get host environment:', error);
+    return undefined;
+  }
+}
 
 /**
  * Get the node's original image prompt from its primaryMedia
@@ -128,6 +190,9 @@ export async function runCreateCharacterPipeline(
     // Use half_portrait for initial character creation (character identity image)
     const shotType = getDefaultShotTypeForCharacterCreation(); // 'half_portrait'
     
+    // Get host environment conditions (weather, time of day)
+    const environmentConditions = await getHostEnvironmentConditions(locationId);
+    
     // ALWAYS use LLM scene composer - no fallback concatenation
     const scenePrompt = await composeCharacterScenePrompt(
       {
@@ -139,8 +204,9 @@ export async function runCreateCharacterPipeline(
       },
       locationContext,
       shotType,
-      apiKey
-      // No action for initial character creation - natural pose
+      apiKey,
+      undefined, // No action for initial character creation - natural pose
+      environmentConditions // Pass host's weather and time of day
     );
     
     console.log('[CreateCharacterPipeline] LLM composed scene prompt');

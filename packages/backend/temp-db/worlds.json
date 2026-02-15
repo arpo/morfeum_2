@@ -664,6 +664,817 @@
       ],
       "parentId": "v2-1769098598343-z2gczgstk",
       "primaryMedia": "media-1769098604739-y81zdz5od"
+    },
+    "v2-1769218648212-p3xqvbv41": {
+      "id": "v2-1769218648212-p3xqvbv41",
+      "type": "host",
+      "name": "Xylos Prime",
+      "slug": "xylos-prime",
+      "description": "A desolate alien planet with stark beauty, characterized by vast sandy plains, jagged rock formations, and a vibrant orange sky. Advanced structures hint at a forgotten civilization.",
+      "genre": "Sci-Fi",
+      "weather": "clear with light dust",
+      "timeOfDay": "golden_hour",
+      "dna": {
+        "essence": [
+          "desolate alien landscape",
+          "futuristic spires",
+          "advanced robotics",
+          "stark beauty"
+        ],
+        "formsAndMaterials": [
+          "metallic orb",
+          "segmented metallic bodies",
+          "rocky formations",
+          "sandy plains",
+          "golden plating"
+        ],
+        "colorAndLight": [
+          "vibrant orange sky",
+          "pale large moon",
+          "warm golden hues",
+          "long shadows",
+          "light blue helmet",
+          "dark visor lenses"
+        ],
+        "atmosphere": [
+          "desolate",
+          "awe-inspiring",
+          "melancholic",
+          "mysterious",
+          "futuristic"
+        ],
+        "banned": [
+          "lush vegetation",
+          "water bodies",
+          "organic architecture"
+        ]
+      },
+      "spaceType": "exterior"
+    },
+    "v2-1769218648212-07z9nvwmo": {
+      "id": "v2-1769218648212-07z9nvwmo",
+      "type": "region",
+      "name": "The Obsidian Plains",
+      "slug": "the-obsidian-plains",
+      "description": "A vast, sandy expanse dotted with snow-dusted inclines and jagged rocky formations. Futuristic spires pierce the horizon, hinting at a distant city.",
+      "isPassThrough": false,
+      "dna": {
+        "essence": [
+          "sandy snow-dusted incline",
+          "jagged rocky formations",
+          "distant city spires"
+        ],
+        "formsAndMaterials": [
+          "sand",
+          "rock",
+          "snow dust",
+          "futuristic spires"
+        ],
+        "colorAndLight": [
+          "orange sky",
+          "pale moon",
+          "golden hues",
+          "long shadows"
+        ],
+        "atmosphere": [
+          "desolate",
+          "expansive",
+          "eerie"
+        ],
+        "banned": []
+      }
+    },
+    "v2-1769218648212-2skcbof68": {
+      "id": "v2-1769218648212-2skcbof68",
+      "type": "location",
+      "name": "The Guardian's Vigil",
+      "slug": "the-guardians-vigil",
+      "spaceType": "exterior",
+      "description": "A slender, golden-plated robot stands on a sandy, snow-dusted incline, its helmet a light blue with dark visor-like lenses. A dark, flowing cape drapes over its segmented, metallic body. Behind it, a large, metallic orb-like structure looms.",
+      "dna": {
+        "essence": [
+          "slender robot",
+          "orb-like structure",
+          "advanced mechanical construction"
+        ],
+        "formsAndMaterials": [
+          "golden plating",
+          "metallic segmented body",
+          "light blue helmet",
+          "dark visor lenses",
+          "dark flowing cape",
+          "metallic orb"
+        ],
+        "colorAndLight": [
+          "warm golden hues",
+          "light blue accents"
+        ],
+        "atmosphere": [
+          "sentinel",
+          "observant",
+          "lonely"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1769218652624-mx70y6v8f"
+    },
+    "v2-1769341049874-ir24roa3a": {
+      "id": "v2-1769341049874-ir24roa3a",
+      "type": "host",
+      "name": "Metropolis",
+      "slug": "metropolis",
+      "description": "A sprawling coastal metropolis where sleek modern skyscrapers, timeless old European buildings, and organic architectural elements coexist harmoniously. The city stretches along the coastline with wide promenades, organic piers, and futuristic marinas. Vertical gardens and green roofs integrate nature into the urban fabric.",
+      "genre": "Urban",
+      "weather": "clear and sunny",
+      "timeOfDay": "golden_hour",
+      "dna": {
+        "essence": [
+          "fusion of nature and design",
+          "harmonious elegance",
+          "creativity"
+        ],
+        "formsAndMaterials": [
+          "aerodynamic structures",
+          "glass and steel towers",
+          "cobbled streets",
+          "stone buildings",
+          "bioluminescent plants"
+        ],
+        "colorAndLight": [
+          "perpetual golden hour glow",
+          "amber and honey tones",
+          "neon accents",
+          "softly glowing LED strips"
+        ],
+        "atmosphere": [
+          "welcoming and inclusive",
+          "dynamic and serene",
+          "peaceful, immersive soundscape"
+        ],
+        "banned": [
+          "cyberpunk neon",
+          "fantasy magic props"
+        ]
+      },
+      "spaceType": "exterior",
+      "primaryMedia": "media-1769341063015-hzsnpwind"
+    },
+    "v2-1769341618426-pny8r2ixh": {
+      "id": "v2-1769341618426-pny8r2ixh",
+      "type": "region",
+      "name": "Metropolis Artist Quarter",
+      "slug": "metropolis-artist-quarter",
+      "description": "A vibrant district where creativity flourishes amidst the city's elegant architecture, bathed in the warm light of the golden hour.",
+      "dna": {
+        "essence": [
+          "artistic expression",
+          "vibrant culture"
+        ],
+        "formsAndMaterials": [
+          "open-air galleries",
+          "sculptural installations",
+          "mural-adorned walls"
+        ],
+        "colorAndLight": [
+          "vivid, saturated hues",
+          "projected art displays"
+        ],
+        "atmosphere": [
+          "energetic buzz",
+          "inspiring ambiance"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1769341626570-qajwyeeqh"
+    },
+    "v2-1769341645559-co5dybxtp": {
+      "id": "v2-1769341645559-co5dybxtp",
+      "type": "region",
+      "name": "Metropolis Marina",
+      "slug": "metropolis-marina",
+      "description": "A vibrant marina district where the city's energy meets the calming allure of the water.",
+      "dna": {
+        "essence": [],
+        "formsAndMaterials": [
+          "sleek yachts",
+          "modern piers",
+          "waterfront promenades",
+          "docks",
+          "glass-enclosed cafes"
+        ],
+        "colorAndLight": [
+          "shimmering water reflections",
+          "blue and silver hues",
+          "evening light on the water"
+        ],
+        "atmosphere": [
+          "lively and social",
+          "gentle lapping of waves",
+          "scent of salt air"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1769341653327-q2fbf63qe"
+    },
+    "v2-1769341685676-5s6x780p0": {
+      "id": "v2-1769341685676-5s6x780p0",
+      "type": "location",
+      "name": "Golden Hour Cafe",
+      "slug": "golden-hour-cafe",
+      "spaceType": "exterior",
+      "description": "A charming cafe nestled within the Metropolis Artist Quarter, bathed in the warm glow of the golden hour, offering a perfect spot to soak in the vibrant culture and artistic expression.",
+      "dna": {
+        "essence": [
+          "culinary delights"
+        ],
+        "formsAndMaterials": [
+          "outdoor seating",
+          "decorative planters",
+          "artistic signage"
+        ],
+        "colorAndLight": [
+          "warm ambient lighting",
+          "sun-dappled surfaces"
+        ],
+        "atmosphere": [
+          "relaxed conversation",
+          "pleasant aromas"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1769341695775-brmxukqdy"
+    },
+    "v2-1769341707033-lefitonps": {
+      "id": "v2-1769341707033-lefitonps",
+      "type": "location",
+      "name": "Metropolis Marina Cafe",
+      "slug": "metropolis-marina-cafe",
+      "spaceType": "exterior",
+      "description": "A stylish cafe nestled within the vibrant Metropolis Marina, offering stunning views of the sleek yachts and the golden hour light glinting off the water.",
+      "dna": {
+        "essence": [],
+        "formsAndMaterials": [
+          "glass-enclosed cafes"
+        ],
+        "colorAndLight": [
+          "golden hour",
+          "shimmering water reflections"
+        ],
+        "atmosphere": [
+          "lively and social",
+          "gentle lapping of waves",
+          "scent of salt air"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1769341715695-8fzabjdj6"
+    },
+    "v2-1769342046533-a1tx2n2av": {
+      "id": "v2-1769342046533-a1tx2n2av",
+      "type": "host",
+      "name": "Metropolis",
+      "slug": "metropolis",
+      "description": "A sprawling coastal metropolis where sleek modern skyscrapers, timeless old European buildings, and organic architectural elements coexist in harmonious elegance. The city stretches along the coastline, where the sea meets the land in a perfect fusion of nature and design. The skyline is marked by tall, aerodynamic structures with soft, flowing curves inspired by nature. Vertical gardens climb the sides of these buildings. Cobbled streets, arched stone bridges, and historic facades are seamlessly integrated with modern structures. Pedestrian skybridges, designed with smooth curves, connect shopping centers, cafés, and art museums. Wide promenades wind along the coastline, their curves mimicking the natural lines of the shore. Smooth, organic piers stretch into the crystal-clear water, while futuristic marinas float effortlessly on the surface. The city's most iconic landmark, The Halo Spire, towers above the skyline—a sleek, twisting structure that spirals upwards with the grace of a tree trunk or seashell. Surrounding it, modern buildings with organic lines and rooftop infinity pools bask in the golden light.",
+      "genre": "Urban",
+      "weather": "Clear and sunny",
+      "timeOfDay": "golden_hour",
+      "dna": {
+        "essence": [
+          "harmonious coexistence",
+          "nature-integrated architecture",
+          "fluid design"
+        ],
+        "formsAndMaterials": [
+          "aerodynamic structures",
+          "organic curves",
+          "sleek glass and steel",
+          "stone buildings",
+          "vertical gardens"
+        ],
+        "colorAndLight": [
+          "golden hour glow",
+          "amber and honey tones",
+          "reflecting sky and sea"
+        ],
+        "atmosphere": [
+          "elegant",
+          "serene",
+          "dynamic"
+        ],
+        "banned": [
+          "cyberpunk neon"
+        ]
+      },
+      "spaceType": "exterior",
+      "primaryMedia": "media-1769342261499-sd5ljj94l"
+    },
+    "v2-1769342068854-3itmhtdh0": {
+      "id": "v2-1769342068854-3itmhtdh0",
+      "type": "region",
+      "name": "Metropolis - Artist Quarter",
+      "slug": "metropolis-artist-quarter",
+      "description": "An urban artist quarter bathed in the warm glow of the golden hour, featuring fluid architecture and vibrant, yet serene, atmospheric qualities.",
+      "dna": {
+        "essence": [
+          "artistic expression",
+          "creative inspiration",
+          "bohemian spirit"
+        ],
+        "formsAndMaterials": [
+          "sculptural facades",
+          "textured plaster",
+          "exposed brick",
+          "artisanal metalwork"
+        ],
+        "colorAndLight": [
+          "warm, saturated hues",
+          "dappled sunlight",
+          "studio lamp glow"
+        ],
+        "atmosphere": [
+          "vibrant",
+          "intimate",
+          "inspiring"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1769342273692-oas8mbluh"
+    },
+    "v2-1769342113629-w7sc9a4bm": {
+      "id": "v2-1769342113629-w7sc9a4bm",
+      "type": "region",
+      "name": "Neon Strip",
+      "slug": "neon-strip",
+      "description": "A vibrant district of clubs, restaurants, and entertainment venues, bathed in the warm glow of the golden hour.",
+      "dna": {
+        "essence": [
+          "vibrant nightlife",
+          "social gathering hub",
+          "celebratory atmosphere"
+        ],
+        "formsAndMaterials": [
+          "modern architecture",
+          "expansive glass facades",
+          "polished concrete",
+          "metallic accents"
+        ],
+        "colorAndLight": [
+          "warm ambient lighting",
+          "vibrant pops of color",
+          "contrasting shadows"
+        ],
+        "atmosphere": [
+          "energetic",
+          "luxurious",
+          "exciting"
+        ],
+        "banned": [
+          "cyberpunk neon"
+        ]
+      },
+      "primaryMedia": "media-1769342293556-50kq7hrmx"
+    },
+    "v2-1769342150916-yii6cztcb": {
+      "id": "v2-1769342150916-yii6cztcb",
+      "type": "region",
+      "name": "Central Park",
+      "slug": "central-park",
+      "description": "A vibrant city park in Metropolis, bathed in the warm glow of the golden hour.",
+      "dna": {
+        "essence": [
+          "tranquil escape",
+          "public gathering space",
+          "urban oasis"
+        ],
+        "formsAndMaterials": [
+          "winding paths",
+          "open lawns",
+          "mature trees",
+          "manicured flower beds",
+          "stone benches"
+        ],
+        "colorAndLight": [
+          "warm sunlight",
+          " dappled shade",
+          "vibrant greens and floral hues"
+        ],
+        "atmosphere": [
+          "peaceful",
+          "lively",
+          "refreshing"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1769342310254-ye9g4rnhc"
+    },
+    "v2-1769342350853-y7yz4l09a": {
+      "id": "v2-1769342350853-y7yz4l09a",
+      "type": "region",
+      "name": "Metropolis Marina",
+      "slug": "metropolis-marina",
+      "description": "A vibrant and bustling marina district within Metropolis, bathed in the warm hues of the golden hour.",
+      "dna": {
+        "essence": [
+          "vibrant activity",
+          "aquatic leisure"
+        ],
+        "formsAndMaterials": [
+          "yacht docks",
+          "maritime architecture",
+          "polished wood",
+          "brushed metal"
+        ],
+        "colorAndLight": [
+          "sparkling water reflections",
+          "warm sunset palette"
+        ],
+        "atmosphere": [
+          "lively",
+          "sophisticated",
+          "inviting"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1769342358785-uheg66p2m"
+    },
+    "v2-1769342395455-i2ao6jjzo": {
+      "id": "v2-1769342395455-i2ao6jjzo",
+      "type": "location",
+      "name": "The Palette Cafe",
+      "slug": "the-palette-cafe",
+      "spaceType": "exterior",
+      "description": "A charming outdoor cafe nestled in the heart of the Artist Quarter, bathed in the warm glow of the golden hour. Murals and sculptures adorn the walls, creating an inspiring and intimate atmosphere.",
+      "dna": {
+        "essence": [
+          "artisanal coffee",
+          "culinary arts",
+          "social gathering"
+        ],
+        "formsAndMaterials": [
+          "wrought iron furniture",
+          "hanging planters",
+          "terracotta tiles"
+        ],
+        "colorAndLight": [
+          "golden hour light",
+          "soft ambient lighting",
+          "vibrant mural accents"
+        ],
+        "atmosphere": [
+          "lively chatter",
+          "aroma of coffee and pastries",
+          "artistic inspiration"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1769342428742-52nzcfhd5"
+    },
+    "v2-1769342399582-rthu3bcwu": {
+      "id": "v2-1769342399582-rthu3bcwu",
+      "type": "location",
+      "name": "Neon Strip Cafe",
+      "slug": "neon-strip-cafe",
+      "spaceType": "exterior",
+      "description": "A stylish cafe situated on the vibrant Neon Strip, bathed in the warm glow of the golden hour.",
+      "dna": {
+        "essence": [
+          "culinary destination",
+          "chic gathering spot"
+        ],
+        "formsAndMaterials": [
+          "sleek design",
+          "outdoor seating"
+        ],
+        "colorAndLight": [
+          "soft golden hour light",
+          "illuminated signage"
+        ],
+        "atmosphere": [
+          "inviting",
+          "sophisticated"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1769342437659-6kco2amu6"
+    },
+    "v2-1769342404177-cyqyz5z98": {
+      "id": "v2-1769342404177-cyqyz5z98",
+      "type": "location",
+      "name": "Metropolis Marina Cafe",
+      "slug": "metropolis-marina-cafe",
+      "spaceType": "exterior",
+      "description": "A chic open-air cafe overlooking the bustling Metropolis Marina, bathed in the warm glow of the golden hour. Enjoy refreshing drinks and light bites with stunning views of sleek yachts and the city skyline.",
+      "dna": {
+        "essence": [
+          "vibrant activity",
+          "aquatic leisure",
+          "culinary experience"
+        ],
+        "formsAndMaterials": [
+          "yacht docks",
+          "maritime architecture",
+          "polished wood",
+          "brushed metal",
+          "outdoor seating",
+          "cafe tables"
+        ],
+        "colorAndLight": [
+          "sparkling water reflections",
+          "warm sunset palette",
+          "soft ambient lighting"
+        ],
+        "atmosphere": [
+          "lively",
+          "sophisticated",
+          "inviting",
+          "relaxed"
+        ],
+        "banned": [
+          "cyberpunk neon"
+        ]
+      },
+      "primaryMedia": "media-1769342453909-53rirg8v0"
+    },
+    "v2-1769342415310-q9azses8y": {
+      "id": "v2-1769342415310-q9azses8y",
+      "type": "location",
+      "name": "Central Park Cafe",
+      "slug": "central-park-cafe",
+      "spaceType": "exterior",
+      "description": "A charming cafe nestled within the vibrant Central Park, offering a delightful culinary experience amidst the golden hour glow. Enjoy light bites and refreshing beverages on outdoor seating surrounded by the park's natural beauty.",
+      "dna": {
+        "essence": [
+          "culinary destination"
+        ],
+        "formsAndMaterials": [
+          "outdoor seating",
+          "cafe tables",
+          "parasols"
+        ],
+        "colorAndLight": [
+          "golden hour sunlight",
+          "soft ambient lighting"
+        ],
+        "atmosphere": [
+          "social",
+          "relaxed",
+          "inviting"
+        ],
+        "banned": []
+      },
+      "primaryMedia": "media-1769342446645-3moqetkp3"
+    },
+    "v2-1769342484943-9k5jnfx8n": {
+      "id": "v2-1769342484943-9k5jnfx8n",
+      "type": "container",
+      "name": "The Palette Cafe",
+      "slug": "the-palette-cafe",
+      "description": "A charming outdoor cafe situated in the heart of the Artist Quarter. Its exterior is a canvas of vibrant murals and sculptures, promising an inspiring and intimate atmosphere for patrons.",
+      "forbiddenTransformations": [
+        "Transforming the cafe into a sterile, modern chain restaurant.",
+        "Removing the artistic murals and sculptures from the exterior.",
+        "Replacing the terracotta tiles with concrete or asphalt.",
+        "Altering the golden hour lighting to a harsh, artificial daylight.",
+        "Introducing overtly commercial signage that clashes with the artistic theme.",
+        "Making the cafe appear neglected or abandoned.",
+        "Adding elements of industrial or utilitarian design."
+      ],
+      "parentId": "v2-1769342395455-i2ao6jjzo"
+    },
+    "v2-1769342484943-b90sxm075": {
+      "id": "v2-1769342484943-b90sxm075",
+      "type": "space",
+      "name": "Cafe Interior",
+      "slug": "cafe-interior",
+      "description": "The interior of The Palette Cafe, continuing the artistic theme with walls adorned by captivating artwork and subtle lighting. Comfortable seating arrangements invite patrons to linger and enjoy the creative ambiance.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "artistic sanctuary",
+          "culinary inspiration",
+          "cozy haven"
+        ],
+        "formsAndMaterials": [
+          "plaster walls",
+          "dark wood accents",
+          "terracotta tile flooring"
+        ],
+        "colorAndLight": [
+          "warm amber and earthy tones",
+          "soft, indirect lighting"
+        ],
+        "atmosphere": [
+          "creative and intimate",
+          "inviting and inspiring"
+        ],
+        "banned": [
+          "harsh fluorescent lighting",
+          "minimalist or sterile decor",
+          "visible ductwork or industrial elements",
+          "overly modern or abstract art that clashes with murals",
+          "neon signs"
+        ]
+      },
+      "forbiddenTransformations": [
+        "Replacing the artwork on the walls with blank canvases or generic posters.",
+        "Introducing harsh, overhead fluorescent lighting.",
+        "Removing the terracotta tile flooring in favor of a different material.",
+        "Making the furniture overly modern or uncomfortable.",
+        "Transforming the space into a loud, bustling bar.",
+        "Adding visible kitchen equipment or service counters that break the artistic immersion.",
+        "Introducing cold or sterile color palettes."
+      ],
+      "parentId": "v2-1769342484943-9k5jnfx8n",
+      "primaryMedia": "media-1769342506880-gx8f7vg45"
+    },
+    "v2-1769342526312-8hljm7dng": {
+      "id": "v2-1769342526312-8hljm7dng",
+      "type": "container",
+      "name": "Neon Strip Cafe",
+      "slug": "neon-strip-cafe",
+      "description": "A stylish and sophisticated cafe located on the vibrant Neon Strip. Known for its chic ambiance and delightful culinary offerings, it's a prime spot to unwind and soak in the city's atmosphere.",
+      "forbiddenTransformations": [
+        "The cafe interior being overly dark or dingy.",
+        "Excessive or harsh neon signage overwhelming the interior.",
+        "Visible grime or decay on surfaces.",
+        "The space feeling cramped or claustrophobic.",
+        "Any elements that suggest a dive bar rather than a chic cafe.",
+        "The presence of visible trash or discarded items."
+      ],
+      "parentId": "v2-1769342399582-rthu3bcwu"
+    },
+    "v2-1769342526312-jttypispa": {
+      "id": "v2-1769342526312-jttypispa",
+      "type": "space",
+      "name": "Cafe Interior",
+      "slug": "cafe-interior",
+      "description": "The main interior of the Neon Strip Cafe, featuring a modern and elegant design. Polished surfaces reflect the warm, ambient lighting, creating an inviting and comfortable atmosphere.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "sophisticated urban",
+          "modern elegance",
+          "warm glow"
+        ],
+        "formsAndMaterials": [
+          "sleek lines",
+          "polished surfaces",
+          "dark wood",
+          "brushed metal"
+        ],
+        "colorAndLight": [
+          "warm amber and gold palette",
+          "soft diffused lighting"
+        ],
+        "atmosphere": [
+          "inviting",
+          "chic",
+          "relaxed"
+        ],
+        "banned": [
+          "overly bright or garish neon",
+          "gritty textures",
+          "exposed industrial pipes",
+          "Victorian or retro elements"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The interior walls being rough or unfinished concrete.",
+        "The ceiling being exposed ductwork or bare industrial lighting.",
+        "The floor being worn, dirty, or covered in patterned tiles.",
+        "Harsh, direct overhead lighting.",
+        "The color palette shifting to cool blues or stark whites.",
+        "Visible signs of wear and tear on furniture or surfaces.",
+        "The presence of overtly 'cyberpunk' technology or holographic displays.",
+        "The space feeling overly loud or chaotic."
+      ],
+      "parentId": "v2-1769342526312-8hljm7dng",
+      "primaryMedia": "media-1769342537680-w24lvwk8c"
+    },
+    "v2-1769342554074-bt1gm01d1": {
+      "id": "v2-1769342554074-bt1gm01d1",
+      "type": "container",
+      "name": "Central Park Cafe",
+      "slug": "central-park-cafe",
+      "description": "A charming cafe nestled within the vibrant Central Park, offering a delightful culinary experience amidst the golden hour glow. Enjoy light bites and refreshing beverages on outdoor seating surrounded by the park's natural beauty.",
+      "forbiddenTransformations": [
+        "The cafe should not appear as a crumbling ruin.",
+        "The cafe's facade should not be modern glass and steel.",
+        "The surrounding park elements should not be replaced with urban grit.",
+        "The golden hour lighting should not be replaced by harsh midday sun or nighttime darkness.",
+        "The cafe's exterior should not become overly commercial or fast-food like."
+      ],
+      "parentId": "v2-1769342415310-q9azses8y"
+    },
+    "v2-1769342554074-6c1ot8lc0": {
+      "id": "v2-1769342554074-6c1ot8lc0",
+      "type": "space",
+      "name": "Cafe Interior",
+      "slug": "cafe-interior",
+      "description": "The cozy interior of the Central Park Cafe, offering a warm and inviting atmosphere. You can see the main seating area, the counter, and glimpses of the park through the windows.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "urban oasis",
+          "charming retreat",
+          "golden hour comfort"
+        ],
+        "formsAndMaterials": [
+          "classic cafe architecture",
+          "dark wood accents",
+          "glass windows"
+        ],
+        "colorAndLight": [
+          "warm amber and golden hues",
+          "soft, indirect ambient lighting"
+        ],
+        "atmosphere": [
+          "cozy",
+          "inviting",
+          "social"
+        ],
+        "banned": [
+          "fluorescent lighting",
+          "stark minimalist decor",
+          "industrial machinery",
+          "excessive chrome"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The interior should not become stark or empty.",
+        "The windows should not be opaque or blocked.",
+        "The lighting should remain warm and indirect, not harsh or sterile.",
+        "The decor should not shift to modern or industrial styles.",
+        "The view of the park through the windows should not be obscured.",
+        "The cafe should not feel overly crowded or chaotic.",
+        "The wood and warm tones should not be replaced with cold materials like metal or concrete."
+      ],
+      "parentId": "v2-1769342554074-bt1gm01d1",
+      "primaryMedia": "media-1769342563511-lrnmo5plh"
+    },
+    "v2-1769342572922-qzu0qu9qv": {
+      "id": "v2-1769342572922-qzu0qu9qv",
+      "type": "container",
+      "name": "Metropolis Marina Cafe",
+      "slug": "metropolis-marina-cafe",
+      "description": "A chic open-air establishment where the vibrant energy of the Metropolis Marina meets refined culinary offerings. Patrons can enjoy a sophisticated dining experience with breathtaking views of sleek yachts and the iconic city skyline, especially during the captivating golden hour.",
+      "forbiddenTransformations": [
+        "The cafe interior becomes a dimly lit, basement-like space.",
+        "The interior loses all connection to its marina setting, with no visible water or boat elements.",
+        "The sophisticated, modern aesthetic is replaced with a rustic or nautical theme.",
+        "The warm golden hour lighting is replaced by harsh, artificial fluorescent lighting.",
+        "The cafe interior features no seating or dining areas."
+      ],
+      "parentId": "v2-1769342404177-cyqyz5z98"
+    },
+    "v2-1769342572922-16tb26b7s": {
+      "id": "v2-1769342572922-16tb26b7s",
+      "type": "space",
+      "name": "Cafe Interior",
+      "slug": "cafe-interior",
+      "description": "The interior of the Metropolis Marina Cafe, offering a chic and inviting space. Walls clad in polished dark wood and brushed metal reflect the warm, ambient light, while large windows offer glimpses of the bustling marina outside. Smooth, dark flooring provides a sophisticated foundation.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "maritime sophistication",
+          "urban chic",
+          "golden hour glow"
+        ],
+        "formsAndMaterials": [
+          "sleek lines",
+          "brushed metal",
+          "polished dark wood",
+          "large glass panes"
+        ],
+        "colorAndLight": [
+          "warm amber and gold palette",
+          "soft indirect illumination",
+          "reflections"
+        ],
+        "atmosphere": [
+          "sophisticated leisure",
+          "inviting elegance",
+          "connected to the marina"
+        ],
+        "banned": [
+          "exposed rough concrete",
+          "flashing neon signs",
+          "industrial machinery",
+          "overgrown plants"
+        ]
+      },
+      "forbiddenTransformations": [
+        "The interior walls become bare concrete or brick.",
+        "The polished dark wood is replaced with rough, unfinished lumber.",
+        "The brushed metal elements are absent or replaced with cheap plastic.",
+        "The large windows are removed, making the space feel completely cut off from the marina.",
+        "The warm, golden hour lighting is replaced with cool, blue, or sterile white light.",
+        "The sophisticated seating is replaced with utilitarian or uncomfortable furniture.",
+        "The space becomes overly cluttered with excessive maritime decor.",
+        "The interior features visible plumbing or exposed electrical conduits."
+      ],
+      "parentId": "v2-1769342572922-qzu0qu9qv",
+      "primaryMedia": "media-1769342580933-jwbcwkmpg"
     }
   },
   "views": {},
@@ -769,11 +1580,157 @@
           ]
         }
       ]
+    },
+    {
+      "id": "v2-1769218648212-p3xqvbv41",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1769218648212-07z9nvwmo",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1769218648212-2skcbof68",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v2-1769341049874-ir24roa3a",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1769341618426-pny8r2ixh",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1769341685676-5s6x780p0",
+              "type": "location",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "v2-1769341645559-co5dybxtp",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1769341707033-lefitonps",
+              "type": "location",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "v2-1769342046533-a1tx2n2av",
+      "type": "host",
+      "children": [
+        {
+          "id": "v2-1769342068854-3itmhtdh0",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1769342395455-i2ao6jjzo",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1769342484943-9k5jnfx8n",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1769342484943-b90sxm075",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "v2-1769342113629-w7sc9a4bm",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1769342399582-rthu3bcwu",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1769342526312-8hljm7dng",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1769342526312-jttypispa",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "v2-1769342150916-yii6cztcb",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1769342415310-q9azses8y",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1769342554074-bt1gm01d1",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1769342554074-6c1ot8lc0",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "v2-1769342350853-y7yz4l09a",
+          "type": "region",
+          "children": [
+            {
+              "id": "v2-1769342404177-cyqyz5z98",
+              "type": "location",
+              "children": [
+                {
+                  "id": "v2-1769342572922-qzu0qu9qv",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1769342572922-16tb26b7s",
+                      "type": "space",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
     "v2-1769077325691-1lbrqw217",
     "v2-1769083689173-o8vmzra0q",
-    "v2-1769098491394-cq300jdiv"
+    "v2-1769098491394-cq300jdiv",
+    "v2-1769218648212-p3xqvbv41",
+    "v2-1769341049874-ir24roa3a",
+    "v2-1769342046533-a1tx2n2av"
   ]
 }

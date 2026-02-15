@@ -34,8 +34,34 @@ interface DisplayRequest {
 }
 
 /**
+ * Recursively search for a node in a tree entry and return the path
+ * Returns { found: true, regionId } if found, with regionId being the first region in the path
+ */
+function findNodeRecursive(
+  treeEntry: any,
+  targetId: string,
+  regionId?: string
+): { found: boolean; regionId?: string } {
+  if (treeEntry.id === targetId) {
+    return { found: true, regionId };
+  }
+  
+  for (const child of treeEntry.children || []) {
+    // Track the first region we encounter going down
+    const nextRegionId = child.type === 'region' ? child.id : regionId;
+    const result = findNodeRecursive(child, targetId, nextRegionId);
+    if (result.found) {
+      return result;
+    }
+  }
+  
+  return { found: false };
+}
+
+/**
  * Find a node and its parent chain in the world tree structure
  * V2 nodes are stored in worldsData.nodes with tree structure in worldsData.worldTrees
+ * Supports arbitrary depth: host → region → location → container → space → ...
  */
 function findNodeInTree(
   worldsData: any,
@@ -52,49 +78,49 @@ function findNodeInTree(
     return null;
   }
   
-  const nodeType = node.type as 'host' | 'region' | 'location' | 'node';
+  const nodeType = node.type as 'host' | 'region' | 'location' | 'container' | 'space' | 'node';
   
   // If it's a host, we're done
   if (nodeType === 'host') {
     return { node: node as Host, nodeType: 'host', host: node as Host };
   }
   
-  // For region or location, we need to find the parent chain via worldTrees
+  // For any other node type, we need to find the parent chain via worldTrees
+  // Use recursive search to handle arbitrary depth
   for (const hostTree of worldsData.worldTrees || []) {
     const host = worldsData.nodes?.[hostTree.id] as Host;
     if (!host) continue;
     
-    // Check if this is the region we're looking for
-    if (nodeType === 'region') {
-      const regionEntry = hostTree.children?.find((child: any) => child.id === nodeId);
-      if (regionEntry) {
-        return { node: node as Region, nodeType: 'region', host, region: node as Region };
-      }
+    // Check if this is the host itself
+    if (hostTree.id === nodeId) {
+      return { node: node as Host, nodeType: 'host', host };
     }
     
-    // Check for location within regions
-    if (nodeType === 'location' || nodeType === 'node') {
-      for (const regionEntry of hostTree.children || []) {
-        const region = worldsData.nodes?.[regionEntry.id] as Region;
-        if (!region) continue;
-        
-        const locationEntry = regionEntry.children?.find((child: any) => child.id === nodeId);
-        if (locationEntry) {
-          return { node: node as WorldNode, nodeType: 'node', host, region };
-        }
+    // Recursively search for the node in this host's tree
+    const searchResult = findNodeRecursive(hostTree, nodeId);
+    
+    if (searchResult.found) {
+      // Found the node in this host's tree
+      const region = searchResult.regionId 
+        ? worldsData.nodes?.[searchResult.regionId] as Region 
+        : undefined;
+      
+      if (nodeType === 'region') {
+        return { node: node as Region, nodeType: 'region', host, region: node as Region };
       }
+      
+      // For location, container, space, or any deeper node type
+      return { node: node as WorldNode, nodeType: 'node', host, region };
     }
   }
   
-  // Node exists but not in tree (orphan) - return what we have
+  // Node exists but not in tree (orphan) - return what we have without host/region
   if (nodeType === 'region') {
     return { node: node as Region, nodeType: 'region' };
   }
-  if (nodeType === 'location' || nodeType === 'node') {
-    return { node: node as WorldNode, nodeType: 'node' };
-  }
   
-  return null;
+  // Treat all other types as 'node' for image generation purposes
+  return { node: node as WorldNode, nodeType: 'node' };
 }
 
 export async function displayHandler(req: Request, res: Response): Promise<void> {
