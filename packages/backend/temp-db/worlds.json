@@ -3433,6 +3433,1014 @@
       ],
       "searchDesc": "Serene fantasy rooftop bar with abstract industrial design, warm oranges, rusts, and purple flora.",
       "slug": "the-rooftop-terrace"
+    },
+    "loc-1773219449294-5a3flmw60": {
+      "id": "loc-1773219449294-5a3flmw60",
+      "type": "host",
+      "name": "City of Grand Arcades",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Monumental architecture, towering building facades with numerous windows, grand archways, city skylines.",
+        "colorsAndLighting": "Warm gold lighting, stone and brick colors.",
+        "atmosphere": "Sprawling, monumental, vibrant.",
+        "materials": "Stone, brick, wrought iron.",
+        "mood": "Historic, permanent, grand.",
+        "sounds": "Distant city hum, traffic, faint echoes.",
+        "primary_surfaces": "Stone and brick facades",
+        "secondary_surfaces": "Wrought iron, glass windows",
+        "accent_features": "Grand archways, distant landmarks",
+        "dominant": "Stone and brick architecture",
+        "secondary": "Towering facades",
+        "accent": "Grand archways",
+        "ambient": "Distant city hum",
+        "genre": "Urban Fantasy",
+        "architectural_tone": "Monumental, historic",
+        "cultural_tone": "Metropolitan, cultured",
+        "palette_bias": "Earthy tones with metallic accents",
+        "flora_base": "Limited urban greenery, potted plants",
+        "fauna_base": "Pigeons, city wildlife"
+      },
+      "description": "A sprawling metropolis characterized by monumental architecture and vibrant street life. This grand city offers a sense of history and endless discovery.",
+      "searchDesc": "Monumental architecture and vibrant street life define this sprawling metropolis.",
+      "slug": "city-of-grand-arcades",
+      "structure": {
+        "spatialLayout": "Vast urban sprawl, interconnected districts, grand public spaces."
+      },
+      "primaryMedia": "media-1773219497131-7r97l8bzl"
+    },
+    "9793fb42-3476-4f5e-8368-c86f3b62a5bc": {
+      "id": "9793fb42-3476-4f5e-8368-c86f3b62a5bc",
+      "type": "region",
+      "name": "The Artisan's Quarter",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Charming courtyards with unique shops, neighborhood architecture characterized by multi-storied buildings and ornate details.",
+        "colorsAndLighting": "Warm gold lighting, vibrant splashes of color from flora.",
+        "atmosphere": "Lively, convivial, inviting.",
+        "materials": "Brick, stone, wrought iron, wicker, wood.",
+        "mood": "Convivial warmth, inviting relaxation, social.",
+        "sounds": "Lively conversations, clinking glasses, distant city hum.",
+        "primary_surfaces": "Brick walls, stone facades.",
+        "secondary_surfaces": "Wrought iron details, wooden tables, wicker chairs.",
+        "accent_features": "Red awnings, climbing roses, trellises, grand archway.",
+        "dominant": "Warm gold lighting",
+        "secondary": "Brick, stone",
+        "accent": "Vibrant pink flora, red awnings",
+        "ambient": "Lively chatter, distant city sounds",
+        "genre": null,
+        "architectural_tone": "Weathered Victorian with Art Nouveau flourishes",
+        "cultural_tone": "Artistic, social, lively",
+        "palette_bias": "Warm, golden, vibrant",
+        "flora_base": "Climbing roses/bougainvillea",
+        "fauna_base": "None"
+      },
+      "description": "A lively district known for its charming courtyards, unique shops, and outdoor dining. This area buzzes with creative energy and offers intimate spaces for patrons to gather.",
+      "searchDesc": "Charming courtyards, unique shops, and outdoor dining in a lively district.",
+      "slug": "the-artisans-quarter",
+      "structure": {
+        "spatialLayout": "Sprawling courtyards, winding paths, intimate seating areas."
+      },
+      "primaryMedia": "media-1773219508906-1zimmmtoi"
+    },
+    "17a24e82-08c1-4489-8608-04d276ffd5bb": {
+      "id": "17a24e82-08c1-4489-8608-04d276ffd5bb",
+      "type": "location",
+      "name": "The Country Street Courtyard",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "The courtyard is an intimate, sprawling space defined by the towering verticality of surrounding buildings. Tall facades with numerous windows are broken by vibrant red awnings, creating a layered effect. A focal point is the grand archway at the far end, hinting at further exploration.",
+        "colorsAndLighting": "Warm, golden light emanates from countless string lights overhead, casting a soft glow that complements the twilight atmosphere. The vibrant pinks of climbing roses and the deep greens of artificial turf and potted plants provide strong color accents against the muted stone and brick of the buildings.",
+        "atmosphere": "The air is filled with the gentle murmur of conversation and the clinking of cutlery, suggesting a relaxed and social mood. A light, pleasant breeze might stir the foliage and the faint scent of blossoms, creating a welcoming, almost temperate, environment.",
+        "materials": "The primary materials are weathered stone and brick, providing a sense of history and permanence to the surrounding architecture. Accents of wrought iron, wicker, and wood are present in furniture, detailing, and the central fountain, adding texture and warmth.",
+        "mood": "The overall mood is one of convivial warmth and inviting relaxation, a perfect urban oasis for dining and socializing.",
+        "sounds": "Laughter, chatter, distant city hum, gentle fountain trickle, clinking glasses",
+        "primary_surfaces": "weathered stone, aged brick",
+        "secondary_surfaces": "wicker chairs, wooden tables, wrought iron",
+        "accent_features": "vibrant pink climbing roses, ornate stone fountain, warm string lights",
+        "dominant": "warm gold (lighting)",
+        "secondary": "deep green (turf, plants)",
+        "accent": "vibrant pink (roses), red (awnings)",
+        "ambient": "golden twilight",
+        "genre": null,
+        "architectural_tone": "weathered Victorian with Art Nouveau flourishes",
+        "cultural_tone": "urban social hub for dining and leisure",
+        "palette_bias": "earth tones with vibrant floral accents",
+        "flora_base": "climbing roses, potted plants",
+        "fauna_base": "None"
+      },
+      "description": "A charming and bustling outdoor dining area nestled between tall buildings.",
+      "searchDesc": "Charming courtyard dining between tall buildings with archway, fountain, and roses.",
+      "slug": "the-country-street-courtyard",
+      "structure": {
+        "spatialLayout": "The courtyard forms a compact, yet deep, open space hemmed in by tall, parallel buildings. A winding path adds a sense of gentle movement and organic flow within the more structured setting."
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "far end of the courtyard",
+          "description": "Leads to another area, marked by a \"COUNTRY STREET\" sign."
+        },
+        {
+          "type": "passage",
+          "position": "between buildings",
+          "description": "Provides access to the courtyard from the main street."
+        }
+      ],
+      "dominantElements": [
+        "building: shape=rectangular, orientation=vertical, scale=towering, style=victorian, surfaces=stone|brick, openings=arched-windows, interior_materials=plaster|wood|tile, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "Wrought iron detailing on archway",
+        "Red awnings on buildings",
+        "Winding brick path with artificial turf sections",
+        "Multi-tiered stone fountain",
+        "Overhead string lights"
+      ],
+      "primaryMedia": "media-1773219463706-d4bvfnm5h"
+    },
+    "niche-1773219536498-g8zp49969": {
+      "id": "niche-1773219536498-g8zp49969",
+      "type": "niche",
+      "name": "Victorian House Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A picturesque, multi-layered courtyard featuring weathered Victorian buildings adorned with elegant Art Nouveau ironwork, and vibrant flora. Shops and cafes spill out into the central space.",
+        "colorsAndLighting": "Dominated by warm golden light from gaslight-style lanterns, with splashes of vibrant pink from climbing flowers against muted brick and stone.",
+        "atmosphere": "Lively and convivial, with a gentle hum of conversation, the occasional burst of laughter, and a relaxed, inviting air.",
+        "materials": "Predominantly weathered brick and stone for walls, with extensive use of wrought iron for balconies, railings, and furniture, complemented by aged wood and wicker accents.",
+        "mood": "Convivial warmth, inviting relaxation, and a sense of vibrant social connection.",
+        "sounds": "Light chatter, distant city hum, occasional laughter, soft footsteps on cobblestones.",
+        "spatialLayout": "A central open courtyard surrounded by multi-story buildings, with shops and residences on lower floors and balconies on upper levels. Pockets of seating are arranged throughout.",
+        "primary_surfaces": "Weathered brick walls, aged cobblestone flooring.",
+        "secondary_surfaces": "Wrought iron railings and balconies, wooden shop fronts, wicker seating.",
+        "accent_features": "Vibrant pink bougainvillea and roses, ornate Art Nouveau ironwork detailing, small colorful awnings above shop windows.",
+        "dominant": "Warm gold lighting",
+        "secondary": "Weathered brick and stone",
+        "accent": "Vibrant pink flora",
+        "ambient": "Soft, inviting glow",
+        "genre": "Urban Fantasy",
+        "architectural_tone": "Weathered Victorian with Art Nouveau flourishes",
+        "cultural_tone": "Artistic, social, lively",
+        "palette_bias": "Warm, golden, vibrant",
+        "flora_base": "Climbing roses and bougainvillea",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1773219536450-egcl37ey5",
+      "description": "You are now inside a grand Victorian house. The air is filled with a sense of elegant history, with intricate details adorning every surface. A cozy atmosphere permeates the space, inviting exploration of its many rooms.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "vaulted",
+        "scale": "large",
+        "orientation": "cubic",
+        "openings": "arched-windows",
+        "openingShape": "arched",
+        "functionalType": "residential",
+        "elevation": "ground-level",
+        "spatialLayout": "A grand entrance hall opens into various rooms. The layout prioritizes a sense of spaciousness and ornate detail, typical of Victorian architecture.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "plush velvet armchairs",
+          "mahogany tables with lace doilies",
+          "a grand fireplace with a carved mantelpiece",
+          "ornate brass chandeliers",
+          "framed botanical prints",
+          "potted ferns",
+          "a well-stocked mahogany bar with mirrored back shelves"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front wall",
+          "description": "door grand wooden double s"
+        },
+        {
+          "type": "window",
+          "position": "left wall",
+          "description": "window stained-glass"
+        },
+        {
+          "type": "archway",
+          "position": "right",
+          "description": "archway ornate  leading to a dining hall"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object spiral staircase rear wall"
+        }
+      ],
+      "dominantElements": [
+        "Grand Staircase: shape=organic, orientation=vertical, scale=towering, style=victorian, surfaces=wood|carved, openings=none, interior_materials=wood|plaster|fabric, internal_atmosphere=elegant",
+        "Fireplace: shape=rectangular, orientation=compact, scale=medium, style=victorian, surfaces=stone|marble, openings=none, interior_materials=stone|tile, internal_atmosphere=cozy",
+        "Ornate Chandelier: shape=spherical, orientation=centered, scale=small, style=victorian, surfaces=glass|metal, openings=none, interior_materials=glass|metal, internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Victorian architectural details",
+        "Ornate decorative elements",
+        "High ceilings",
+        "Rich wood finishes"
+      ],
+      "searchDesc": "Artistic courtyard building, weathered Victorian/Art Nouveau, warm golden light, social and lively.",
+      "slug": "null-of-the-country-street-courtyard"
+    },
+    "niche-1773219580522-fkg4i6tot": {
+      "id": "niche-1773219580522-fkg4i6tot",
+      "type": "niche",
+      "name": "Second Floor",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A spacious landing with a beautifully crafted wrought iron railing featuring flowing, organic lines. A large, multi-paned stained-glass window bathes the area in colored light. A plush velvet bench offers a place to rest, adorned with carefully arranged fresh floral displays.",
+        "colorsAndLighting": "Warm, diffused light from gas-style wall lamps with frosted glass shades. The stained-glass window casts shifting patterns of amber, emerald, and rose onto the floor. Earth tones of the wood and upholstery are punctuated by vibrant floral colors.",
+        "atmosphere": "A gentle murmur of activity from below can be heard. The air is still but pleasantly warm, carrying faint floral scents and the appetizing aroma of food. It feels like a moment of calm anticipation.",
+        "materials": "Polished dark wood for flooring and trim, ornate wrought iron for the railing, velvet for upholstery, and stained glass.",
+        "mood": "Inviting, sophisticated, and a touch opulent, providing a moment of respite and anticipation before entering other spaces.",
+        "sounds": "Faint chatter from below, soft footsteps on wood, rustle of fabric, distant clinks.",
+        "spatialLayout": "Rectangular, open space centered around the top of the staircase.",
+        "primary_surfaces": "dark polished wood flooring, wrought iron railing",
+        "secondary_surfaces": "velvet upholstery, plaster walls",
+        "accent_features": "stained-glass window, floral arrangements, gas-style wall lamps",
+        "dominant": "warm gold (from lighting)",
+        "secondary": "deep green (from floral accents)",
+        "accent": "vibrant reds and pinks (from stained glass and flowers)",
+        "ambient": "warm, diffused light",
+        "genre": "Urban Fantasy",
+        "architectural_tone": "weathered Victorian with Art Nouveau flourishes",
+        "cultural_tone": "urban social hub for dining and leisure",
+        "palette_bias": "earth tones with vibrant floral accents",
+        "flora_base": "fresh floral arrangements",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1773219580517-1fr9joee7",
+      "description": "You ascend the grand staircase to the second floor. The hallway is bathed in soft light filtering through a stained-glass window. Doors to various rooms line the walls, hinting at the private spaces within this elevated level of the residence.",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "cubic",
+        "openings": "minimal",
+        "openingShape": "rectangular",
+        "functionalType": "residential",
+        "elevation": "elevated",
+        "spatialLayout": "A spacious floor with multiple rooms, accessed via a central staircase. Features large windows providing city views.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "velvet chaise lounge upholstered in damask",
+          "gilt-framed full-length mirror with Art Nouveau swirling motifs",
+          "Persian rug with intricate floral patterns",
+          "antique standing lamp with fringed shade"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door grand mahogany  top of stairs"
+        },
+        {
+          "type": "window",
+          "position": "right",
+          "description": "window stained glass  landing"
+        },
+        {
+          "type": "object",
+          "position": "center",
+          "description": "object ornate railing continuing upwards"
+        },
+        {
+          "type": "door",
+          "position": "left",
+          "description": "door smaller  landing"
+        }
+      ],
+      "dominantElements": [
+        "Master Bedroom: shape=rectangular, orientation=compact, scale=medium, style=victorian, surfaces=wood|stone, openings=large-glass, interior_materials=wood|fabric|stone, internal_atmosphere=cozy",
+        "Study: shape=rectangular, orientation=compact, scale=small, style=victorian, surfaces=wood|glass, openings=arched-windows, interior_materials=wood|leather|stone, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "ornate wooden banister",
+        "stained glass window on landing",
+        "city view from large windows"
+      ],
+      "searchDesc": "Elegant second floor landing with Victorian charm and Art Nouveau touches.",
+      "slug": "second-floor-landing"
+    },
+    "niche-1773219629942-z7juau27s": {
+      "id": "niche-1773219629942-z7juau27s",
+      "type": "niche",
+      "name": "Rooftop Terrace",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A sweeping open-air space with polished, dark wood flooring that hints at Victorian elegance, punctuated by wrought iron tables and chairs bearing Art Nouveau curves. Lush, vibrant floral displays spill from planters, contrasting with the weathered brick and stone of the building's upper facade, which is visible around the perimeter. String lights are woven through a decorative pergola, casting a warm, inviting glow.",
+        "colorsAndLighting": "Dominated by the warm, golden light of gas lamps and string lights, creating a twilight ambiance. Accents of deep emerald from foliage and vibrant fuchsia and crimson from abundant blooms pop against the muted tones of weathered brick and dark wood. Polished brass and aged copper gleam.",
+        "atmosphere": "A gentle breeze carries the mingled scents of blossoms, fine food, and a hint of city air. The air is filled with the murmur of convivial conversation and the clinking of glasses, fostering a relaxed and social mood. It feels like a secluded, temperate haven above the bustling city.",
+        "materials": "Weathered brick, aged stone, polished dark wood, wrought iron with intricate Art Nouveau detailing, plush velvet and linen upholstery.",
+        "mood": "Convivial warmth, inviting relaxation, a sophisticated yet comfortable urban oasis for socializing and dining.",
+        "sounds": "Distant city hum, gentle conversation, laughter, clinking glasses, soft music.",
+        "spatialLayout": "An expansive, open-air platform with distinct seating and dining zones, partially covered by a decorative pergola. The perimeter is defined by low walls and ornate railings.",
+        "primary_surfaces": "weathered brick, polished dark wood",
+        "secondary_surfaces": "wrought iron, plush upholstery, stone planters",
+        "accent_features": "Art Nouveau floral wrought iron, abundant climbing roses and flowering plants, glowing gas lamps, scattered velvet cushions",
+        "dominant": "warm gold (lighting)",
+        "secondary": "deep emerald (foliage)",
+        "accent": "vibrant fuchsia and crimson (blooms)",
+        "ambient": "golden twilight",
+        "genre": "Urban Fantasy",
+        "architectural_tone": "weathered Victorian with Art Nouveau flourishes",
+        "cultural_tone": "urban social hub for dining and leisure",
+        "palette_bias": "earth tones with vibrant floral accents",
+        "flora_base": "climbing roses, flowering vines, potted shrubs, potted trees, abundant flowering plants",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1773219629939-yu8lr2efk",
+      "description": "You are on a rooftop terrace, an open-air space with panoramic views, ideal for relaxation or social gatherings. The design features a blend of organic forms and lush greenery, complementing the surrounding architecture.",
+      "structure": {
+        "form": "organic",
+        "roofType": "open-sky",
+        "scale": "medium",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "entertainment",
+        "elevation": "rooftop",
+        "spatialLayout": "An open-air space situated on the highest level of a building, offering panoramic views and an area for relaxation or social gathering.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "wrought-iron tables with mosaic tops",
+          "plush velvet seating in jewel tones",
+          "ornate hanging lanterns with stained glass",
+          "potted flowering vines",
+          "decorative bird cages",
+          "a small marble fountain"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "door grand wrought-iron arched way rear wall"
+        },
+        {
+          "type": "window",
+          "position": "left",
+          "description": "window ornate casement s and right walls"
+        },
+        {
+          "type": "opening",
+          "position": "front wall",
+          "description": "opening vine-covered trellis"
+        }
+      ],
+      "dominantElements": [],
+      "uniqueIdentifiers": [
+        "panoramic city views",
+        "open-air seating",
+        "lush greenery"
+      ],
+      "searchDesc": "A Victorian Art Nouveau rooftop terrace, a warm social hub with floral accents.",
+      "slug": "the-rooftop-terrace"
+    },
+    "loc-1773219959160-r8q22di0w": {
+      "id": "loc-1773219959160-r8q22di0w",
+      "type": "host",
+      "name": "Metropolis",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Skyline silhouette blending ancient stone with organic, living towers, vast panoramic views, visible geographic features like the ocean and canals",
+        "colorsAndLighting": "Perpetual golden hour light, warm amber and gold hues, soft luminescence from structures, rich greens from vertical gardens",
+        "atmosphere": "Dreamlike, timeless, vibrant, harmonious, serene yet alive",
+        "materials": "Ancient stone, living architecture (vines, moss, plants), self-illuminating materials, reclaimed wood",
+        "mood": "Welcoming, inspiring, transformative, peaceful, deeply connected to nature",
+        "sounds": "Ocean's rhythm, gentle city hum, distant music, flowing water, wind chimes",
+        "primary_surfaces": "Ancient stone facades, living green walls",
+        "secondary_surfaces": "Organic towers, skybridges, water surfaces",
+        "accent_features": "Bioluminescent flora, glowing architectural elements, integrated gardens",
+        "dominant": "Light",
+        "secondary": "Stone",
+        "accent": "Living flora",
+        "ambient": "Salt-laced air",
+        "genre": "Magical Realism",
+        "architectural_tone": "Organic, biophilic, harmonious blend of ancient and futuristic",
+        "cultural_tone": "Transhumanist, nature-revering, community-focused, constantly evolving",
+        "palette_bias": "Warm earth tones, deep greens, golden and amber highlights",
+        "flora_base": "Abundant, diverse, integrated into architecture",
+        "fauna_base": "Subtle, integrated with the environment (e.g., birds, marine life)"
+      },
+      "description": "A city of perpetual golden hour, where ancient stone meets living architecture and the ocean's rhythm is a constant companion. It's a place of constant becoming, where inhabitants learn to breathe with the city itself.",
+      "searchDesc": "City of perpetual golden hour, living architecture, ancient stone, ocean's rhythm.",
+      "slug": "metropolis",
+      "structure": {
+        "spatialLayout": "Layered city structure, interconnected skybridges, prominent water channels, integration of natural and built environments"
+      },
+      "primaryMedia": "media-1773219999922-000wkz6h1"
+    },
+    "830c6e94-95fc-436f-bad8-b05289e2645e": {
+      "id": "830c6e94-95fc-436f-bad8-b05289e2645e",
+      "type": "region",
+      "name": "The Waterfront",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "Organic piers, promenades, open-air dining spaces, flowing architectural lines that echo the water",
+        "colorsAndLighting": "Warm, golden light reflecting off water, bioluminescent accents, naturalistic color palette",
+        "atmosphere": "Lively, relaxed, inviting, connected to the sea",
+        "materials": "Weathered wood, smooth stone, living plant integrations, reflective surfaces",
+        "mood": "Welcoming, vibrant, deeply connected to nature, communal enjoyment",
+        "sounds": "Ocean waves, gentle chimes, distant conversation, soft music",
+        "primary_surfaces": "Smooth stone walkways, weathered wood piers",
+        "secondary_surfaces": "Living green walls, water features, polished driftwood",
+        "accent_features": "Bioluminescent edges, organic structural curves, cascading flora",
+        "dominant": "Water",
+        "secondary": "Wood",
+        "accent": "Bioluminescence",
+        "ambient": "Ocean breeze",
+        "genre": null,
+        "architectural_tone": "Organic, fluid, nature-integrated",
+        "cultural_tone": "Communal, relaxed, appreciative of nature",
+        "palette_bias": "Earth tones with oceanic blues and golden highlights",
+        "flora_base": "Salt-tolerant plants, flowering vines",
+        "fauna_base": "Seabirds, marine life"
+      },
+      "description": "A vibrant district where the city meets the ocean, characterized by organic piers, promenades, and restaurants with open-air dining. The architecture embraces the natural flow of the water, with structures that seem to have grown from the sea.",
+      "searchDesc": "Oceanfront district with organic piers, promenades, and open-air dining.",
+      "slug": "the-waterfront",
+      "structure": {
+        "spatialLayout": "Sprawling promenades, interconnected piers, open-air dining areas, integration with natural water features"
+      },
+      "primaryMedia": "media-1773220013016-3674dtqpq"
+    },
+    "0d1a020d-cabb-439c-aecd-0e77792f6d6a": {
+      "id": "0d1a020d-cabb-439c-aecd-0e77792f6d6a",
+      "type": "location",
+      "name": "The Driftwood Grill",
+      "spaceType": "exterior",
+      "dna": {
+        "looks": "A sprawling, open-air structure with a rustic, organic design. Large, weathered wood elements are intertwined with living vines and sturdy stone columns, creating a natural and inviting facade. The communal dining table is visible through wide, open passages.",
+        "colorsAndLighting": "Dominant earth tones from weathered wood and stone are softened by the vibrant greens of lush vines and the bright hues of flowering plants. Ambient light filters through the foliage, creating dappled shadows and a warm, natural glow.",
+        "atmosphere": "The air is fresh, carrying the scent of salt from the nearby ocean and the sweet perfume of blossoms. A gentle breeze rustles the leaves, and the sounds of lively conversation drift from within. The atmosphere is one of relaxed conviviality and connection to nature.",
+        "materials": "The primary materials are weathered wood that appears reclaimed and smoothed by time, interspersed with substantial stone columns. Abundant, vibrant living vines and flowers create a rich, organic texture across the surfaces.",
+        "mood": "Welcoming, vibrant, and deeply connected to nature. A place that encourages communal enjoyment and a relaxed appreciation of the surroundings.",
+        "sounds": "Ocean breeze, rustling leaves, lively chatter, distant waves, chirping birds.",
+        "primary_surfaces": "Weathered driftwood, living green vines, thick stone columns.",
+        "secondary_surfaces": "Flowering blossoms, textured leaves.",
+        "accent_features": "Flowering vines, visible communal dining table.",
+        "dominant": "Earthy brown and deep green",
+        "secondary": "Stone grey and floral brights",
+        "accent": "Golden light, vibrant floral hues",
+        "ambient": "Warm, dappled sunlight",
+        "genre": null,
+        "architectural_tone": "Organic rustic",
+        "cultural_tone": "Communal dining, seafood lovers, waterfront patrons",
+        "palette_bias": "Earth tones, vibrant greens, floral accents",
+        "flora_base": "Flowering vines, lush foliage",
+        "fauna_base": "None"
+      },
+      "description": "An open-air restaurant on the waterfront, its roof supported by columns wrapped in flowering vines, offering a lively atmosphere with fresh seafood.",
+      "searchDesc": "Open-air seafood restaurant with vine-covered columns and waterfront views.",
+      "slug": "the-driftwood-grill",
+      "structure": {
+        "spatialLayout": "A broad, ground-level structure with a sprawling layout, characterized by open sides and a roof supported by numerous columns. The design emphasizes a seamless transition between the interior and exterior."
+      },
+      "navigableElements": [
+        {
+          "type": "passage",
+          "position": "center of the front facade",
+          "description": "Leads into the main dining area"
+        }
+      ],
+      "dominantElements": [
+        {
+          "shape": "organic",
+          "orientation": "sprawling",
+          "scale": "large",
+          "style": "rustic",
+          "surfaces": "weathered wood|living vines|stone columns",
+          "openings": "open-passages",
+          "interior_materials": "wood|stone|plants",
+          "internal_atmosphere": "lively"
+        }
+      ],
+      "uniqueIdentifiers": [
+        "Columns wrapped in flowering vines",
+        "Open-air dining concept",
+        "Waterfront location",
+        "Communal dining table visible from outside"
+      ]
+    },
+    "niche-1773219979037-f0wfojpud": {
+      "id": "niche-1773219979037-f0wfojpud",
+      "type": "niche",
+      "name": "Communal Dining Table",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A sprawling, open-air structure centered around a massive, communal dining table crafted from thick, weathered driftwood. Sturdy stone columns, partially embraced by lush green vines and vibrant flowering plants, support a rustic canopy. The table itself is adorned with a bounty of shared dishes, emphasizing connection.",
+        "colorsAndLighting": "Dominant earth tones from the weathered wood table and stone columns are enlivened by the vibrant greens of abundant vines and the bright, varied hues of diverse flowering plants. Warm, dappled sunlight filters through the overhead foliage, creating a natural, inviting glow.",
+        "atmosphere": "The air is filled with the fresh scent of the nearby sea, mingled with the sweet perfume of blossoms. A gentle, natural breeze rustles the leaves, and the inviting hum of lively conversation and shared laughter fills the space. The atmosphere is one of relaxed conviviality and deep connection.",
+        "materials": "The primary materials are weathered, reclaimed wood for the table and structural elements, and substantial, natural stone for columns. Abundant living green vines and a profusion of colorful flowering plants are integral to the structure and its decoration.",
+        "mood": "Welcoming, vibrant, deeply connected to nature, fostering community and relaxed appreciation.",
+        "sounds": "Laughter, conversation, gentle breeze, distant waves, rustling leaves, clinking of dishes.",
+        "spatialLayout": "A large, open central space dominated by the communal table, with open passages leading outwards to various seating and access areas.",
+        "primary_surfaces": "Weathered driftwood, living green vines, thick stone columns.",
+        "secondary_surfaces": "Flowering blossoms, textured leaves, woven textiles.",
+        "accent_features": "Carved wooden serving ware, decorative shells and driftwood, abundant floral arrangements on the table.",
+        "dominant": "Earthy brown and deep green",
+        "secondary": "Stone grey and floral brights",
+        "accent": "Golden light and vibrant floral hues",
+        "ambient": "Warm, dappled sunlight",
+        "genre": null,
+        "architectural_tone": "Organic rustic",
+        "cultural_tone": "Communal dining, waterfront patrons",
+        "palette_bias": "Earth tones, vibrant greens, floral accents",
+        "flora_base": "Flowering vines, lush foliage",
+        "fauna_base": "None"
+      },
+      "description": "You approach the large, central Communal Dining Table, a gathering point within the lively Driftwood Grill. The table is crafted from weathered wood, embodying the rustic charm of the restaurant, and is set to welcome diners for shared meals and conversation.",
+      "primaryMedia": "media-1773219979032-if6ua2bds",
+      "structure": {
+        "form": "rectangular",
+        "roofType": "null",
+        "scale": "medium",
+        "orientation": "compact",
+        "openings": "minimal",
+        "openingShape": "null",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A central, large table designed for shared dining within a larger communal space. It serves as the focal point for social interaction and meal consumption.",
+        "requiredElements": []
+      },
+      "navigableElements": [],
+      "dominantElements": [
+        "Communal Dining Table: shape=rectangular, orientation=compact, scale=medium, style=rustic, surfaces=wood, openings=minimal, interior_materials=wood|wood|null, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "Central placement",
+        "Shared seating arrangement",
+        "Fosters community"
+      ],
+      "searchDesc": "Communal dining table by the water, organic rustic, earth tones, vibrant greens, floral, welcoming.",
+      "slug": "communal-dining-table",
+      "parentId": "0d1a020d-cabb-439c-aecd-0e77792f6d6a"
+    },
+    "f8046164-f9d2-430c-ba7a-abb2881d1d4d": {
+      "id": "f8046164-f9d2-430c-ba7a-abb2881d1d4d",
+      "type": "region",
+      "name": "The Lumina Canvas",
+      "spaceType": "exterior",
+      "description": "A vibrant district where creativity blossoms under the perpetual golden hour. Here, living architecture intertwines with studios and galleries, reflecting the city's ever-evolving artistic spirit.",
+      "dna": {
+        "looks": "Buildings are adorned with vibrant, ever-changing murals and dynamic, kinetic sculptures that sway gently with the wind. Organic structures host open-air studios, their facades alive with climbing flora that blooms in luminous colors.",
+        "colorsAndLighting": "The golden hour light is amplified and refracted through translucent materials and iridescent paints, casting a kaleidoscope of warm hues. Soft, internal luminescence emanates from studios and galleries.",
+        "atmosphere": "The air is thick with a palpable sense of creative energy, buzzing with innovation and inspiration. Gentle breezes carry the faint scent of blooming flowers and the distant murmur of artistic discourse.",
+        "materials": "Self-illuminating pigments, polished reclaimed wood, living canvases woven from bio-engineered moss, and iridescent, light-reactive glass.",
+        "mood": "Inspiring, whimsical, and full of boundless creative potential.",
+        "sounds": "Whispers of inspiration, gentle hums of creation, distant music, flowing water, wind chimes",
+        "primary_surfaces": "Living mural walls, iridescent glass panels, polished organic wood",
+        "secondary_surfaces": "Glow-infused plaster, flexible bio-textiles, smooth stone pathways",
+        "accent_features": "Kinetic sculptures, holographic projections, bioluminescent flora",
+        "dominant": "Golden light, vibrant art",
+        "secondary": "Luminous hues, flowing structures",
+        "accent": "Iridescent shimmer, moving forms",
+        "ambient": "Warm, luminous glow",
+        "genre": null,
+        "architectural_tone": "Organic, biophilic, with an emphasis on interactive and living art integration",
+        "cultural_tone": "Bohemian, experimental, and deeply collaborative artistic community",
+        "palette_bias": "Vibrant, saturated hues, golden and amber highlights",
+        "flora_base": "Luminous flowering vines, bio-engineered mosses",
+        "fauna_base": "None"
+      },
+      "searchDesc": "Artist quarters of Metropolis, a vibrant district of living art, glowing murals, and studios.",
+      "slug": "the-lumina-canvas",
+      "structure": {
+        "spatialLayout": "A more intimate and winding layout than other districts, with hidden courtyards and elevated walkways connecting studios and galleries, fostering serendipitous discovery."
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a91b81d/r-rEvtsJtQHNUoxkdWkG2.jpg",
+      "primaryMedia": "media-1773220137814-8aqkw3b6k"
+    },
+    "25ec4428-75de-4009-aa62-0e692edaf60d": {
+      "id": "25ec4428-75de-4009-aa62-0e692edaf60d",
+      "type": "location",
+      "name": "The Gilded Sprout Cafe",
+      "spaceType": "exterior",
+      "description": "A vibrant cafe nestled within The Lumina Canvas, this spot pulsates with the district's creative energy. Its living facade and glowing interior offer a haven for artists and thinkers to recharge and connect.",
+      "dna": {
+        "looks": "The cafe's exterior is an organic, flowing structure, appearing almost as if it grew from the ground. Its walls are a living canvas of bio-engineered moss, interspersed with large panels of iridescent, light-reactive glass that shimmer and change hue. The building is adorned with subtle, wind-activated kinetic sculptures that add gentle movement.",
+        "colorsAndLighting": "The golden hour light is amplified and refracted by the iridescent glass, casting a warm, kaleidoscopic glow. Soft, internal luminescence emanates from within, inviting patrons. The living moss walls have subtle, bioluminescent properties that create a gentle, pulsating light at dusk.",
+        "atmosphere": "The air around the cafe is alive with creative energy, a palpable buzz of inspiration. Gentle breezes carry the faint scent of blooming flowers from the living facade, mingled with the subtle aroma of freshly brewed coffee. The atmosphere is welcoming and stimulating, encouraging conversation and collaboration.",
+        "materials": "The primary materials are self-illuminating pigments within the living moss, polished reclaimed wood for structural elements and accents, and iridescent, light-reactive glass. The textures are a mix of soft, velvety moss, smooth, cool glass, and warm, aged wood.",
+        "mood": "Inspiring and whimsical, fostering a sense of shared creativity and boundless potential for ideas.",
+        "sounds": "Whispers of inspiration, gentle hums of conversation, distant music, flowing water, wind chimes.",
+        "primary_surfaces": "Living canvas of bio-engineered moss, iridescent light-reactive glass",
+        "secondary_surfaces": "Polished reclaimed wood",
+        "accent_features": "Kinetic sculptures, integrated bioluminescent flora, evolving mural",
+        "dominant": "Golden hues and vibrant art",
+        "secondary": "Shimmering iridescent panels",
+        "accent": "Bioluminescent moss",
+        "ambient": "Warm, refracted golden light",
+        "genre": null,
+        "architectural_tone": "Organic, biophilic, with emphasis on interactive and living art integration",
+        "cultural_tone": "Bohemian, experimental, and deeply collaborative artistic community",
+        "palette_bias": "Vibrant, saturated hues, golden and amber highlights",
+        "flora_base": "Living canvas of bio-engineered moss",
+        "fauna_base": "None"
+      },
+      "searchDesc": "Design cafe with a living facade, iridescent glass, and vibrant art in The Lumina Canvas.",
+      "slug": "the-gilded-sprout-cafe",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "center",
+          "description": "the main entrance leading inside to the cafe's warm interior"
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "an open passage revealing glimpses of an artist's studio within the building"
+        },
+        {
+          "type": "window",
+          "position": "left",
+          "description": "large, iridescent glass window offering views into the cafe's bustling common area"
+        }
+      ],
+      "dominantElements": [
+        "The Gilded Sprout Cafe: shape=organic, orientation=sprawling, scale=medium, style=bohemian, surfaces=living-canvas|iridescent-glass, openings=open-passages, interior_materials=wood|fabric|glass, internal_atmosphere=cozy"
+      ],
+      "uniqueIdentifiers": [
+        "Living moss-covered facade that subtly shifts colors",
+        "Kinetic sculptures integrated into the building's organic curves",
+        "Large, translucent glass panels that refract golden hour light",
+        "A constantly evolving mural adorning the main entrance"
+      ],
+      "structure": {
+        "spatialLayout": "The cafe's structure is organic and sprawling, designed to integrate seamlessly with the surrounding region's biophilic architecture. Its dimensions are comfortable and inviting, with ample depth for various seating arrangements and artistic displays."
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a91b821/Z8yU9I4MgwEHQkDJkwyRT.jpg",
+      "primaryMedia": "media-1773220180574-hb8a2ls8a"
+    },
+    "niche-1773220202390-28g58to8u": {
+      "id": "niche-1773220202390-28g58to8u",
+      "type": "niche",
+      "name": "The Gilded Sprout Cafe Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "A shimmering, abstract void where light coalesces and dissipates, occasionally forming fleeting, recognizable shapes and patterns. Think of it as the moment before an idea solidifies, a dynamic interplay of pure potential.",
+        "colorsAndLighting": "Dominated by the subtle refraction of ambient golden light, interspersed with pulses of vibrant, almost electric hues. The lighting is dynamic, waxing and waning with the intensity of the conceptual energy within.",
+        "atmosphere": "The air crackles with an almost imperceptible energy, a tangible sense of anticipation and infinite possibility. It feels both vast and intimate, a crucible for burgeoning thought.",
+        "materials": "Primarily composed of shifting light, coalescing energy fields, and ephemeral, semi-tangible constructs that resemble polished wood and iridescent glass at their most defined moments, but are ultimately intangible.",
+        "mood": "Inspiring, whimsical, and full of boundless creative potential. It is the birthplace of all that happens within the cafe.",
+        "sounds": "Gentle hum, subtle whispers, nascent melodies, distant echoes of inspiration.",
+        "spatialLayout": "An amorphous, ever-shifting space that can contract and expand, suggesting infinite depth and potential within a contained conceptual boundary.",
+        "primary_surfaces": "Consist of pure, dynamic light and coalescing energy.",
+        "secondary_surfaces": "Fleeting impressions of polished organic wood and iridescent, light-reactive glass.",
+        "accent_features": "Shifting, holographic projections of embryonic artistic concepts, pulsing bioluminescent nodes of pure idea.",
+        "dominant": "Golden light",
+        "secondary": "Vibrant, fleeting hues",
+        "accent": "Iridescent shimmer",
+        "ambient": "Warm, luminous glow, tinged with electric possibility",
+        "genre": "Magical Realism",
+        "architectural_tone": "Organic, biophilic, with an emphasis on interactive and living art integration",
+        "cultural_tone": "Bohemian, experimental, and deeply collaborative artistic community",
+        "palette_bias": "Vibrant, saturated hues, golden and amber highlights",
+        "flora_base": "None (conceptual)",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1773220202387-97xznjhf8",
+      "description": "You step inside The Gilded Sprout Cafe, a cozy and organically shaped space where bohemian charm meets lush botanical elements.",
+      "structure": {
+        "form": "organic",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "sprawling",
+        "openings": "open-passages",
+        "openingShape": "irregular",
+        "functionalType": "commercial",
+        "elevation": "ground-level",
+        "spatialLayout": "The cafe's interior is a sprawling, organic space with a cozy, bohemian atmosphere. Living canvas walls and iridescent glass elements create a unique visual experience.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "plush velvet floor cushions in jewel tones",
+          "macrame plant hangers overflowing with trailing vines",
+          "carved wooden tables inlaid with mosaic tiles",
+          "low-slung bohemian sofas draped in colorful throws",
+          "a living wall of moss and ferns",
+          "glowing string lights interwoven with dried flowers",
+          "a central counter fashioned from reclaimed wood with iridescent glass accents."
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "left wall",
+          "description": "archway a sun-drenched atrium"
+        },
+        {
+          "type": "passage",
+          "position": "right",
+          "description": "passage open  to a leafy alcove"
+        },
+        {
+          "type": "window",
+          "position": "front wall",
+          "description": "window large iridescent glass   overlooking a garden"
+        },
+        {
+          "type": "opening",
+          "position": "center",
+          "description": "opening smaller  rear wall to a cozy reading nook"
+        }
+      ],
+      "dominantElements": [
+        "bohemian seating: shape=organic, orientation=compact, scale=small, style=bohemian, surfaces=velvet|wood, openings=none, interior_materials=fabric|wood|metal, internal_atmosphere=cozy",
+        "counter area: shape=organic, orientation=flowing, scale=medium, style=bohemian, surfaces=wood|glass, openings=none, interior_materials=wood|tile|glass, internal_atmosphere=bright",
+        "botanical displays: shape=organic, orientation=compact, scale=small, style=bohemian, surfaces=natural-vines|terracotta, openings=none, interior_materials=natural|stone, internal_atmosphere=fresh"
+      ],
+      "uniqueIdentifiers": [
+        "living canvas walls",
+        "iridescent glass accents",
+        "bohemian decor",
+        "botanical theme"
+      ],
+      "searchDesc": "The conceptual core of The Gilded Sprout Cafe, brimming with unmanifested creative energy.",
+      "slug": "null-of-the-gilded-sprout-cafe"
+    },
+    "niche-1773220268879-s4o0795ff": {
+      "id": "niche-1773220268879-s4o0795ff",
+      "type": "niche",
+      "name": "The Bar",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Organic architectural forms sculpted from dark, polished wood and stone, punctuated by flowing water channels and soft, golden-amber lighting. Integrated living moss panels subtly glow, contrasting with the darker, richer tones. Iridescent glass accents catch and refract light, adding subtle, dynamic color shifts.",
+        "colorsAndLighting": "Deep, saturated jewel tones like emerald, sapphire, and amethyst dominate, offset by abundant warm golden and amber light. Water features have a soft, internal luminescence, and bioluminescent flora provides gentle, pulsating accents.",
+        "atmosphere": "Cool and humid from the water, with a grounding, earthy scent mingled with exotic floral notes. The pervasive sound of gentle water flow creates a soothing, immersive ambiance, punctuated by hushed conversations and the clinking of glasses.",
+        "materials": "Polished dark wood, smooth, cool stone, living bio-engineered moss, iridescent glass, and water.",
+        "mood": "Intimate, serene, contemplative, yet vibrantly artistic. A sanctuary for creative thought and deep connection, where the natural world is brought indoors.",
+        "sounds": "Gentle flowing water, soft music, hushed conversations, clinking glasses, subtle ambient chimes.",
+        "spatialLayout": "A series of interconnected, organic chambers and alcoves, with a central bar area featuring prominent water flow. Seating is arranged in intimate groupings, some within small, semi-enclosed pods.",
+        "primary_surfaces": "Dark polished wood, carved stone, living moss panels.",
+        "secondary_surfaces": "Iridescent glass panels, textured stone tiles.",
+        "accent_features": "Cascading water walls, integrated bioluminescent flora, sculpted wood art installations, water-filled crystal decanters.",
+        "dominant": "Deep jewel tones (emerald, sapphire, amethyst)",
+        "secondary": "Golden amber hues",
+        "accent": "Soft bioluminescence",
+        "ambient": "Warm, diffused, and softly luminous, with cool undertones from water mist.",
+        "genre": "Magical Realism",
+        "architectural_tone": "Organic, biophilic, with emphasis on interactive and living art integration",
+        "cultural_tone": "Bohemian, experimental, and deeply collaborative artistic community",
+        "palette_bias": "Vibrant, saturated hues, golden and amber highlights",
+        "flora_base": "Living canvas of bio-engineered moss",
+        "fauna_base": "None"
+      },
+      "primaryMedia": "media-1773220268877-yxjxt9yb4",
+      "description": "You step into a dimly lit bar, its organic architecture weaving around you. Water flows artfully through the space, reflecting the vibrant, saturated hues and golden highlights that create an inviting, darker atmosphere.",
+      "structure": {
+        "form": "organic",
+        "roofType": "vaulted",
+        "scale": "medium",
+        "orientation": "flowing",
+        "openings": "large-glass",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A flowing, multi-level space where water features are integrated into the architecture and bar design. The atmosphere is dark and inviting.",
+        "requiredElements": [
+          "bar",
+          "flowing water",
+          "flowing water and darker atmosphere"
+        ]
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "moss-covered bar counter with integrated living planters",
+          "submerged bioluminescent flora in water features",
+          "woven vine seating with plush botanical cushions",
+          "intricately carved driftwood shelving displaying elixirs and artisanal tools"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "left wall",
+          "description": "archway dimly lit"
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "door rough-hewn wooden"
+        },
+        {
+          "type": "object",
+          "position": "back wall",
+          "description": "object cascading water feature inlet"
+        },
+        {
+          "type": "passage",
+          "position": "center",
+          "description": "passage flowing water outlet to unseen"
+        }
+      ],
+      "dominantElements": [
+        "Bar Counter: shape=organic, orientation=horizontal, scale=medium, style=biophilic, surfaces=wood|stone, openings=minimal, interior_materials=wood|stone|water, internal_atmosphere=dim"
+      ],
+      "uniqueIdentifiers": [
+        "integrated water features",
+        "organic architecture",
+        "vibrant saturated hues",
+        "golden and amber highlights"
+      ],
+      "searchDesc": "Bar with flowing water and darker atmosphere, blending magical realism with bohemian artistry.",
+      "slug": "bar-with-flowing"
+    },
+    "f0237d1e-4bd9-4d55-98b5-1d09dddde91d": {
+      "id": "f0237d1e-4bd9-4d55-98b5-1d09dddde91d",
+      "type": "region",
+      "name": "The Azure Marina",
+      "spaceType": "exterior",
+      "description": "A district where the city's living architecture gracefully descends to meet the gentle embrace of the ocean. Here, sleek vessels, some powered by bioluminescent algae, rest alongside floating gardens and artisanal markets.",
+      "dna": {
+        "looks": "Structures here extend towards the water, with living architecture forming integrated docks and piers. Buildings are scaled to offer open views of the ocean, featuring curved lines and smooth transitions to the water. Waterways are as prevalent as streets, often illuminated from beneath.",
+        "colorsAndLighting": "The perpetual golden hour light is softened by the shimmering reflection off the water. Hues of deep ocean blues and aquamarines are introduced, interspersed with the warm golds and greens of the city. Luminescence from the water and some vessels provides an ethereal glow.",
+        "atmosphere": "The air is crisp and carries the distinct briny scent of the ocean, mingled with the fresh perfume of seaside blossoms. A constant, gentle motion can be felt from the tides and the subtle swaying of boats. The atmosphere is one of tranquil movement and refreshing openness.",
+        "materials": "Boats are crafted from polished, reclaimed woods and bio-engineered materials that mimic natural textures. Docks incorporate living, water-resistant flora, seamlessly blending with smooth, self-illuminating stone and algae-coated surfaces.",
+        "mood": "Serene and refreshing, this district inspires a sense of calm exploration and connection with the vastness of the ocean.",
+        "sounds": "Ocean's rhythm, gentle hum of watercraft, distant seabird calls, wind chimes, flowing water",
+        "primary_surfaces": "Glistening, water-smoothed wood; bioluminescent-infused stone; living, mossy docks",
+        "secondary_surfaces": "Polished bio-resins; woven plant fibers; reflective glass",
+        "accent_features": "Floating floral displays; illuminated anchor lines; handcrafted seashell mosaics",
+        "dominant": "Deep ocean blue across water surfaces",
+        "secondary": "Warm amber and gold along waterfront structures",
+        "accent": "Soft green from abundant flora",
+        "ambient": "Soft, diffused golden light with water reflections",
+        "genre": null,
+        "architectural_tone": "Organic, biophilic, harmonious blend of ancient and futuristic",
+        "cultural_tone": "Maritime, artisanal, community-focused, leisure and trade",
+        "palette_bias": "Warm earth tones, deep greens, golden and amber highlights, with oceanic blues",
+        "flora_base": "Salt-tolerant flowering plants, sea mosses, vertical aquatic gardens",
+        "fauna_base": "Seabirds, small aquatic creatures, bio-luminescent organisms"
+      },
+      "searchDesc": "The Azure Marina: City meets ocean, bioluminescent docks, floating gardens, seaside charm.",
+      "slug": "the-azure-marina",
+      "structure": {
+        "spatialLayout": "A network of water channels and canals interweaves with pedestrian promenades and floating structures. The layout emphasizes horizontal spread and connection to the surrounding seascape."
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a91b831/yoUpn34nJSdq9VCNnPth3.jpg",
+      "primaryMedia": "media-1773220334696-ryiy3ol2y"
+    },
+    "4c42bbd8-2920-48ee-b39b-deae5d9dbea2": {
+      "id": "4c42bbd8-2920-48ee-b39b-deae5d9dbea2",
+      "type": "location",
+      "name": "The Lumina Bistro",
+      "spaceType": "exterior",
+      "description": "A visually striking restaurant gracing the Azure Marina's waterfront. Its facade features an iridescent mosaic-tiled arched entryway, large organically shaped windows, and a captivating wave-like sculpted sign.",
+      "dna": {
+        "looks": "This restaurant boasts a cool, contemporary design that harmonizes with its oceanic surroundings. The facade is a dynamic interplay of organic shapes and shimmering surfaces, with large, flowing windows and integrated planters.",
+        "colorsAndLighting": "The golden hour light is diffused by iridescent tiles and the bioluminescent flora, casting an ethereal glow. Deep ocean blues and aquamarine hues from the parent region are echoed in subtle accents.",
+        "atmosphere": "The crisp, briny air of the marina is present, mingled with a fresh, light fragrance. A sense of gentle movement is suggested by the wave-like signage, inviting patrons into a refreshing dining experience.",
+        "materials": "The building incorporates smooth, self-illuminating surfaces and polished materials that reflect the surrounding light. Bio-engineered elements blend seamlessly with the living architecture.",
+        "mood": "Serene and inviting, with a touch of futuristic wonder.",
+        "sounds": "Gentle hum of watercraft, distant seabird calls, faint chime.",
+        "primary_surfaces": "Iridescent mosaic tiles, polished bio-engineered materials, shimmering glass",
+        "secondary_surfaces": "Flowing metal frames, algae-coated stonework",
+        "accent_features": "Floating planters with bioluminescent flora, sculpted wave-like signage",
+        "dominant": "Deep ocean blue across the water, reflected on surfaces",
+        "secondary": "Golden and amber highlights from interior lighting and flora",
+        "accent": "Iridescent mosaic hues on the entryway",
+        "ambient": "Soft, ethereal glow",
+        "genre": null,
+        "architectural_tone": "Organic, biophilic, futuristic",
+        "cultural_tone": "Leisure, artisanal, community-focused",
+        "palette_bias": "Golden and amber highlights, deep greens, oceanic blues",
+        "flora_base": "Bioluminescent flora",
+        "fauna_base": "Seabirds, small aquatic creatures, bio-luminescent organisms"
+      },
+      "searchDesc": "Cool design restaurant with iridescent mosaic, bioluminescent flora, and wave signage. Features glass doors.",
+      "slug": "the-lumina-bistro",
+      "navigableElements": [
+        {
+          "type": "door",
+          "position": "front center",
+          "description": "Large double glass doors leading into the main dining area."
+        },
+        {
+          "type": "passage",
+          "position": "left wall",
+          "description": "A curved passage hinting at a hidden alcove or lounge area."
+        },
+        {
+          "type": "door",
+          "position": "right wall",
+          "description": "A small metal door leading to the kitchen."
+        }
+      ],
+      "dominantElements": [
+        "restaurant: shape=organic, orientation=sprawling, scale=large, style=futuristic, surfaces=organic-membrane|glass, openings=arched-windows|large-glass, interior_materials=\"wood|tile|glass\", internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "Iridescent mosaic tiled arched entryway",
+        "Floating planters with bioluminescent flora",
+        "Sculpted wave-like signage",
+        "Organic-shaped windows with flowing metal frames"
+      ],
+      "structure": {
+        "spatialLayout": "A sprawling structure that appears to meld with the waterfront, featuring a prominent, visually engaging facade."
+      },
+      "imageUrl": "https://v3b.fal.media/files/b/0a91b836/IKXUMlrTwNR12frD4dWzc.jpg",
+      "primaryMedia": "media-1773220383231-qwoalqu04"
+    },
+    "niche-1773220420912-ievut6sii": {
+      "id": "niche-1773220420912-ievut6sii",
+      "type": "niche",
+      "name": "The Lumina Bar Interior",
+      "spaceType": "interior",
+      "dna": {
+        "looks": "Curving organic forms, integrated water features, and seamless transitions between seating areas and flowing counter spaces. Natural light is amplified and diffused by water reflections, creating an ethereal glow.",
+        "colorsAndLighting": "Warm earth tones and deep greens dominate the materials, accented by shimmering golden and amber light from within structures and ambient luminescence. Deep oceanic blues are present in subtle water features and accent textiles. Soft, diffused golden light with water reflections.",
+        "atmosphere": "Crisp, briny air with a hint of sea blossoms. A gentle, calming motion is felt from subtle water currents and the sway of integrated flora. Serene and refreshing.",
+        "materials": "Polished, reclaimed woods with a subtle sheen; bio-resins that mimic organic textures and glow softly; woven plant fibers for seating and decorative elements; living, moss-like surfaces on structural elements.",
+        "mood": "Serene and refreshing, fostering calm exploration and connection.",
+        "sounds": "Gentle waves, distant sea-chimes, soft clinking of glasses, hushed conversations.",
+        "spatialLayout": "Open and flowing, with distinct zones for seating and the bar. Gentle curves and organic shapes guide movement and create intimate spaces within the larger area.",
+        "primary_surfaces": "Glistening, water-smoothed wood; bio-luminescent infused resin.",
+        "secondary_surfaces": "Woven plant fibers; living moss accents; polished seashell mosaics.",
+        "accent_features": "Floating floral displays in illuminated water channels; subtly glowing anchor-line inspired light fixtures; handcrafted seashell inlays.",
+        "dominant": "Warm earth tones and deep greens.",
+        "secondary": "Golden and amber highlights.",
+        "accent": "Oceanic blues.",
+        "ambient": "Soft, diffused golden light with water reflections.",
+        "genre": "Magical Realism",
+        "architectural_tone": "Organic, biophilic, harmonious blend of ancient and futuristic",
+        "cultural_tone": "Maritime, artisanal, community-focused, leisure and trade",
+        "palette_bias": "Warm earth tones, deep greens, golden and amber highlights, with oceanic blues",
+        "flora_base": "Salt-tolerant flowering plants, sea mosses, vertical aquatic gardens",
+        "fauna_base": "Bio-luminescent organisms (subtly integrated for lighting effects)"
+      },
+      "primaryMedia": "media-1773220420909-v3hxhwaso",
+      "description": "You step inside the Lumina Bar, a medium-scale, organically shaped interior that feels sprawling and designed for leisure. The style is futuristic, reflecting the artisanal and community-focused culture of The Azure Marina. Large, arched glass windows offer glimpses of the exterior, while the interior itself is bright and inviting.",
+      "structure": {
+        "form": "organic",
+        "roofType": "flat",
+        "scale": "medium",
+        "orientation": "sprawling",
+        "openings": "large-glass",
+        "openingShape": "arched",
+        "functionalType": "entertainment",
+        "elevation": "ground-level",
+        "spatialLayout": "A sprawling, organic space designed for leisure, featuring distinct areas for seating and service. The layout encourages community interaction.",
+        "requiredElements": []
+      },
+      "furnishingDetails": {
+        "userSpecified": [
+          "living plant wall feature",
+          "illuminated bio-luminescent bar counter",
+          "ergonomic lounge seating pods",
+          "suspended living moss ceiling installations"
+        ],
+        "suggested": [],
+        "placementNotes": []
+      },
+      "navigableElements": [
+        {
+          "type": "archway",
+          "position": "back wall",
+          "description": "archway recessed"
+        },
+        {
+          "type": "window",
+          "position": "right wall",
+          "description": "window large circular   with city view"
+        },
+        {
+          "type": "door",
+          "position": "left wall",
+          "description": "door concealed service"
+        }
+      ],
+      "dominantElements": [
+        "bar counter: shape=organic, orientation=flowing, scale=medium, style=futuristic, surfaces=metallic-polished|wood, openings=minimal, interior_materials=\"wood|stone|glass\", internal_atmosphere=bright"
+      ],
+      "uniqueIdentifiers": [
+        "organic architecture",
+        "artisanal focus",
+        "community-centric layout"
+      ],
+      "searchDesc": "Organic, biophilic bar with maritime artisanal and ancient-futuristic blend.",
+      "slug": "null-of-the-lumina-bistro"
     }
   },
   "views": {},
@@ -3747,6 +4755,101 @@
           ]
         }
       ]
+    },
+    {
+      "id": "loc-1773219449294-5a3flmw60",
+      "type": "host",
+      "children": [
+        {
+          "id": "9793fb42-3476-4f5e-8368-c86f3b62a5bc",
+          "type": "region",
+          "children": [
+            {
+              "id": "17a24e82-08c1-4489-8608-04d276ffd5bb",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1773219536498-g8zp49969",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1773219580522-fkg4i6tot",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1773219629942-z7juau27s",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "loc-1773219959160-r8q22di0w",
+      "type": "host",
+      "children": [
+        {
+          "id": "830c6e94-95fc-436f-bad8-b05289e2645e",
+          "type": "region",
+          "children": [
+            {
+              "id": "0d1a020d-cabb-439c-aecd-0e77792f6d6a",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1773219979037-f0wfojpud",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "f8046164-f9d2-430c-ba7a-abb2881d1d4d",
+          "type": "region",
+          "children": [
+            {
+              "id": "25ec4428-75de-4009-aa62-0e692edaf60d",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1773220202390-28g58to8u",
+                  "type": "niche",
+                  "children": []
+                },
+                {
+                  "id": "niche-1773220268879-s4o0795ff",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "f0237d1e-4bd9-4d55-98b5-1d09dddde91d",
+          "type": "region",
+          "children": [
+            {
+              "id": "4c42bbd8-2920-48ee-b39b-deae5d9dbea2",
+              "type": "location",
+              "children": [
+                {
+                  "id": "niche-1773220420912-ievut6sii",
+                  "type": "niche",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "pinnedIds": [
@@ -3755,6 +4858,8 @@
     "loc-1767295449666-biatufiam",
     "loc-1767295714361-wdsqtbsfj",
     "loc-1767297983822-18zvlqzx7",
-    "loc-1767349511191-1hecuqmok"
+    "loc-1767349511191-1hecuqmok",
+    "loc-1773219449294-5a3flmw60",
+    "loc-1773219959160-r8q22di0w"
   ]
 }
