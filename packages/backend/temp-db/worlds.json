@@ -1475,6 +1475,213 @@
       ],
       "parentId": "v2-1769342572922-qzu0qu9qv",
       "primaryMedia": "media-1769342580933-jwbcwkmpg"
+    },
+    "v2-1773218059908-t4ii905uq": {
+      "id": "v2-1773218059908-t4ii905uq",
+      "type": "view",
+      "name": "Close-up of a Yacht",
+      "slug": "close-up-of-a-yacht",
+      "description": "View: Detailed view of the yacht's hull, including its material texture, any hull art or markings, and the immediate surrounding deck features.",
+      "parentId": "v2-1769342350853-y7yz4l09a",
+      "primaryMedia": "media-1773218059904-mhtl0h3xw"
+    },
+    "v2-1773218119455-ros7zlbkv": {
+      "id": "v2-1773218119455-ros7zlbkv",
+      "type": "container",
+      "name": "Luxury Superyacht",
+      "slug": "luxury-superyacht",
+      "description": "A magnificent vessel designed for opulent travel and leisure on the open seas. This superyacht offers unparalleled comfort, cutting-edge technology, and exquisite accommodations for its discerning guests.",
+      "forbiddenTransformations": [
+        "exterior views from within",
+        "visible hull from interior spaces",
+        "docking infrastructure visible from inside",
+        "water textures as interior wall material",
+        "boat engine sounds",
+        "open sky visible from inside",
+        "maritime signal lights as primary interior lighting"
+      ],
+      "parentId": "v2-1773218059908-t4ii905uq"
+    },
+    "v2-1773218119455-fnp5uzphi": {
+      "id": "v2-1773218119455-fnp5uzphi",
+      "type": "space",
+      "name": "Main Salon",
+      "slug": "main-salon",
+      "description": "The heart of the yacht's living space, featuring plush seating, elegant decor, and panoramic windows that offer glimpses of the ocean. This is a space designed for relaxation and entertainment.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "maritime luxury",
+          "sophisticated leisure",
+          "opulent comfort"
+        ],
+        "formsAndMaterials": [
+          "polished wood veneers",
+          "plush upholstery",
+          "brushed metal accents",
+          "large glass panels"
+        ],
+        "colorAndLight": [
+          "warm neutrals",
+          "deep blues and creams",
+          "soft, indirect golden hour light"
+        ],
+        "atmosphere": [
+          "refined",
+          "exclusive",
+          "serene"
+        ],
+        "banned": [
+          "rough textures",
+          "overly utilitarian design",
+          "exposed machinery",
+          "garish colors"
+        ]
+      },
+      "forbiddenTransformations": [
+        "visible exterior deck from the salon",
+        "any direct view of the water's surface texture",
+        "engines or mechanical components",
+        "rough or unfinished surfaces",
+        "unshaded direct sunlight",
+        "open sky or ceiling gaps",
+        "loud or industrial noises",
+        "navigation equipment as decor"
+      ],
+      "parentId": "v2-1773218119455-ros7zlbkv",
+      "primaryMedia": "media-1773218126694-ynetnf2wm"
+    },
+    "v2-1773218208485-nj6hiro2s": {
+      "id": "v2-1773218208485-nj6hiro2s",
+      "type": "view",
+      "name": "The Painting Detail",
+      "slug": "the-painting-detail",
+      "description": "View: The detailed brushstrokes, textures, colors, and any fine details of the painting, revealing its artistic composition and any subtle imperfections or nuances.",
+      "parentId": "v2-1773218119455-fnp5uzphi",
+      "primaryMedia": "media-1773218208481-p4eiaxko7"
+    },
+    "v2-1773218396212-9018wxd5k": {
+      "id": "v2-1773218396212-9018wxd5k",
+      "type": "view",
+      "name": "Back of the Boat",
+      "slug": "back-of-the-boat",
+      "description": "View: The stern of the yacht, its aft deck, and any visible features such as swim platforms, railings, or seating arrangements.",
+      "parentId": "v2-1769342350853-y7yz4l09a",
+      "primaryMedia": "media-1773218396209-tikf4l630"
+    },
+    "v2-1773218583354-lmidko568": {
+      "id": "v2-1773218583354-lmidko568",
+      "type": "view",
+      "name": "At the Wooden Table",
+      "slug": "at-the-wooden-table",
+      "description": "View: The cafe terrace from a seated perspective, including the ocean panorama and surrounding seating arrangements. The edge of the wooden table and perhaps a place setting may be visible at the bottom of the frame.",
+      "parentId": "v2-1769098491394-19jxn4d90",
+      "primaryMedia": "media-1773218583350-yia8iggjf"
+    },
+    "v2-1773218626900-enrqdnoik": {
+      "id": "v2-1773218626900-enrqdnoik",
+      "type": "view",
+      "name": "Glass on the Table",
+      "slug": "glass-on-the-table",
+      "description": "View: Detailed view of the glass, its contents (if any), condensation, reflections, and the texture of the table surface immediately around it.",
+      "parentId": "v2-1769098491394-19jxn4d90",
+      "primaryMedia": "media-1773218626897-0bruw8lfk"
+    },
+    "v2-1773218718153-bve5lo5fo": {
+      "id": "v2-1773218718153-bve5lo5fo",
+      "type": "space",
+      "name": "Cafe Bar and Basement Entrance",
+      "slug": "cafe-bar-and-basement-entrance",
+      "description": "The interior of the cafe's bar area, featuring rustic decor, a stocked service window, and a discreet entrance leading down to the basement.",
+      "spaceType": "indoor",
+      "dna": {
+        "essence": [
+          "seaside charm",
+          "rustic elegance",
+          "coastal relaxation"
+        ],
+        "formsAndMaterials": [
+          "wooden beams",
+          "thatched textures",
+          "stone accents",
+          "glass and ceramic"
+        ],
+        "colorAndLight": [
+          "warm wood tones",
+          "ocean blues",
+          "sun-drenched",
+          "amber accents"
+        ],
+        "atmosphere": [
+          "welcoming",
+          "cozy",
+          "inviting"
+        ],
+        "banned": [
+          "harsh fluorescent lighting",
+          "modern minimalist design",
+          "cold metallic surfaces",
+          "overly formal upholstery"
+        ]
+      },
+      "forbiddenTransformations": [
+        "replacing wooden beams with metal girders",
+        "installing modern, sleek bar fixtures",
+        "painting the stone walls a uniform color",
+        "removing the blue service window",
+        "making the basement entrance look industrial",
+        "introducing neon lighting"
+      ],
+      "parentId": "v2-1769098598343-z2gczgstk",
+      "primaryMedia": "media-1773218724618-qm8eqowmh"
+    },
+    "v2-1773218768729-w0mg0k8jd": {
+      "id": "v2-1773218768729-w0mg0k8jd",
+      "type": "space",
+      "name": "Secret Basement Bar",
+      "slug": "secret-basement-bar",
+      "description": "A hidden, intimate bar located in the cafe's basement, offering a stark contrast to the bright terrace above. Rough-hewn stone walls and dim lighting create a sense of clandestine seclusion.",
+      "spaceType": "underground",
+      "dna": {
+        "essence": [
+          "hidden",
+          "intimate",
+          "underground",
+          "clandestine"
+        ],
+        "formsAndMaterials": [
+          "rough-hewn stone",
+          "dark wood",
+          "aged metal"
+        ],
+        "colorAndLight": [
+          "low-key jewel tones",
+          "dim, atmospheric lighting"
+        ],
+        "atmosphere": [
+          "cozy",
+          "exclusive",
+          "secluded"
+        ],
+        "banned": [
+          "open sky",
+          "direct sunlight",
+          "bright blues and greens",
+          "beach decor",
+          "thatched elements"
+        ]
+      },
+      "forbiddenTransformations": [
+        "visibility of the sky",
+        "bright daylight",
+        "open-air elements",
+        "thatched roofing materials",
+        "seaside-themed decor",
+        "prominent blue service window",
+        "cascading vines and flowers"
+      ],
+      "parentId": "v2-1769098598343-z2gczgstk",
+      "primaryMedia": "media-1773218775331-wnkhxxwz2"
     }
   },
   "views": {},
@@ -1572,8 +1779,28 @@
                       "id": "v2-1769098598343-93f7braav",
                       "type": "space",
                       "children": []
+                    },
+                    {
+                      "id": "v2-1773218718153-bve5lo5fo",
+                      "type": "space",
+                      "children": []
+                    },
+                    {
+                      "id": "v2-1773218768729-w0mg0k8jd",
+                      "type": "space",
+                      "children": []
                     }
                   ]
+                },
+                {
+                  "id": "v2-1773218583354-lmidko568",
+                  "type": "view",
+                  "children": []
+                },
+                {
+                  "id": "v2-1773218626900-enrqdnoik",
+                  "type": "view",
+                  "children": []
                 }
               ]
             }
@@ -1719,6 +1946,34 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "v2-1773218059908-t4ii905uq",
+              "type": "view",
+              "children": [
+                {
+                  "id": "v2-1773218119455-ros7zlbkv",
+                  "type": "container",
+                  "children": [
+                    {
+                      "id": "v2-1773218119455-fnp5uzphi",
+                      "type": "space",
+                      "children": [
+                        {
+                          "id": "v2-1773218208485-nj6hiro2s",
+                          "type": "view",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "v2-1773218396212-9018wxd5k",
+              "type": "view",
+              "children": []
             }
           ]
         }

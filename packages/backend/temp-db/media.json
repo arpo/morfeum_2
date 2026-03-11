@@ -1079,6 +1079,253 @@
         "v2-1769342572922-16tb26b7s"
       ],
       "parentMedia": "media-1769342453909-53rirg8v0"
+    },
+    "media-1773217934285-20yjlv6da": {
+      "id": "media-1773217934285-20yjlv6da",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a91b740/wuZOo7oMSUhL2ESHi9WDp.jpg",
+      "createdAt": "2026-03-11T08:32:14.285Z",
+      "metadata": {
+        "prompt": "living-surface sheen, sharp highlights, deep detailed shadows, saturated luminous accents, soft bioluminescent glow, crisp color separation, subtle depth mist, gentle halation, controlled high contrast, dreamlike clarity\n\nHalf portrait, with Clara Finch facing the camera directly and making steady eye contact, her face in crisp focus with a natural depth of field and gentle bokeh in the background. The scene is the exterior of the Metropolis Marina Cafe during golden hour, under a clear and sunny sky. Clara, an adult Caucasian female with warm, sun-kissed skin and light freckles across her nose, has shoulder-length wavy brown hair with sun-lightened strands, pulled into a functional, slightly messy bun. She wears a crisp navy blue canvas apron cinched at the waist over a plain white cotton t-shirt and dark wash denim jeans. A slender, polished silver bracelet gleams on her left wrist. Her posture is relaxed but ready. The soft, directional golden hour light enhances her skin texture and highlights the subtle hum of industrious energy and quiet competence she exudes. The atmosphere is lively, sophisticated, inviting, and relaxed, unified by the warm, low light casting long shadows across the cafe's polished surfaces and reflecting off the marina's water.\n\ncrisp micro-detail, refined surfaces, natural texture, balanced high dynamic range, soft highlight bloom, controlled contrast, subtle volumetric light, smooth bokeh, rich color separation, gentle halation, mild cohesive grain",
+        "model": "FLUX",
+        "width": 1024,
+        "height": 1024
+      },
+      "entityRefs": [
+        "char-1773217934281-3pmnfbnrx"
+      ]
+    },
+    "media-1773218059904-mhtl0h3xw": {
+      "id": "media-1773218059904-mhtl0h3xw",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a91b74d/IZTfNaZJzWnKWK6xn8k5g_vk72kJyo.png",
+      "createdAt": "2026-03-11T08:34:19.904Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nMove closer to one of the large yachts, framing its hull and deck details tightly. Use 85mm lens, close shot, f/4.\n\nShow one of the big boats prominently - it should fill most of the frame.\n\nSame Metropolis Marina, same golden hour lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "Metropolis Marina",
+          "description": "A vibrant and bustling marina district within Metropolis, bathed in the warm hues of the golden hour.",
+          "background": "Distant skyscrapers of Metropolis with sharp, clean architectural lines, reflecting the warm hues of the golden hour sunset, hinting at a clear and sunny sky.",
+          "midground": "Expansive yacht docks with sleek, polished wooden decks and brushed metal railings, a network of gleaming white and navy yachts moored side-by-side. Maritime architecture with clean facades and large windows overlooks the water, showcasing sophisticated design.",
+          "foreground": "Sparkling, clear turquoise water reflecting the warm sunset palette. Gentle ripples on the water's surface and the shimmering reflections of the yachts and surrounding buildings create a lively and inviting scene. Scattered, high-end speedboats and smaller leisure craft are visible.",
+          "lighting": "Warm, golden hour light casting long shadows and illuminating the scene with a soft, diffused glow. The sunlight creates brilliant, sparkling reflections on the water's surface and highlights the polished surfaces of the yachts and architecture. The sky is a gradient of warm oranges, pinks, and yellows.",
+          "atmosphere": "A sophisticated and lively atmosphere emanates from the bustling marina. The combination of opulent leisure and the warm, inviting light creates an upscale, vibrant ambiance. The clear, sunny weather enhances the feeling of a perfect, inviting day."
+        },
+        "promptData": {
+          "command": "LOOK"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1773218059908-t4ii905uq"
+      ],
+      "parentMedia": "media-1769342358785-uheg66p2m"
+    },
+    "media-1773218126694-ynetnf2wm": {
+      "id": "media-1773218126694-ynetnf2wm",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a91b754/oa9bAItYnAi6_p8RVfn2v_1AxSo4ol.png",
+      "createdAt": "2026-03-11T08:35:26.694Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and step into Main Salon.\n\nTarget location:\nInterior space carved inside Close-up of a Yacht.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: GOLDEN HOUR\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect golden hour conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nLuxurious, cream-colored sofas and armchairs arranged around a central coffee table made of polished wood and metal. Subtle art pieces adorn the walls.\nPlush, deep blue carpeting underfoot, with small, elegant side tables featuring polished metal bases. The base of the windows shows a subtle trim of brushed metal.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: A sophisticated and lively atmosphere emanates from the bustling marina. The combination of opulent leisure and the warm, inviting light creates an upscale, vibrant ambiance. The clear, sunny weather enhances the feeling of a perfect, inviting day.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nPolished, dark wood paneled walls seamlessly transitioning to a high ceiling with recessed cove lighting. Large, elegant windows offer subdued views of the exterior.\n\nInterior lighting and atmosphere (MUST MATCH GOLDEN HOUR):\nLighting appropriate for golden hour interior.\nAn atmosphere of refined tranquility, where the opulence of the materials is balanced by a serene and inviting mood.\n\nPhysical constraints:\nSolid ceiling above. Fully enclosed interior. No sky visible.\nThe space is carved into the structure's mass — not a void containing the structure.\nThe structure itself is NOT visible as an object from inside.\nIndirect lighting only — light enters through openings not visible in frame.\nThe entrance is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible through ceiling\n* No open roof or atrium to sky\n* No exterior landscape visible\n* No exterior vegetation unless interior description specifies overgrowth/abandoned\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
+        "promptLayers": {
+          "name": "Main Salon",
+          "description": "The heart of the yacht's living space, featuring plush seating, elegant decor, and panoramic windows that offer glimpses of the ocean. This is a space designed for relaxation and entertainment.",
+          "background": "Polished, dark wood paneled walls seamlessly transitioning to a high ceiling with recessed cove lighting. Large, elegant windows offer subdued views of the exterior.",
+          "midground": "Luxurious, cream-colored sofas and armchairs arranged around a central coffee table made of polished wood and metal. Subtle art pieces adorn the walls.",
+          "foreground": "Plush, deep blue carpeting underfoot, with small, elegant side tables featuring polished metal bases. The base of the windows shows a subtle trim of brushed metal.",
+          "lighting": "Soft, indirect light emanating from the ceiling coves and integrated into the wall panels, mimicking the warm golden hour glow from outside but diffused and ambient.",
+          "atmosphere": "An atmosphere of refined tranquility, where the opulence of the materials is balanced by a serene and inviting mood."
+        },
+        "promptData": {
+          "command": "GO_INSIDE"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1773218119455-fnp5uzphi"
+      ],
+      "parentMedia": "media-1773218059904-mhtl0h3xw"
+    },
+    "media-1773218208481-p4eiaxko7": {
+      "id": "media-1773218208481-p4eiaxko7",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a91b75c/Q5EXl8t5QII-y_srekcyS_COoh7mej.png",
+      "createdAt": "2026-03-11T08:36:48.481Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nStep closer to the wall and frame the painting tightly. Use 85mm lens, close shot, f/2.8, focusing on the texture and details of the artwork.\n\nShow the painting on the wall prominently - it should fill most of the frame.\n\nSame Main Salon, same golden hour lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "Main Salon",
+          "description": "The heart of the yacht's living space, featuring plush seating, elegant decor, and panoramic windows that offer glimpses of the ocean. This is a space designed for relaxation and entertainment.",
+          "background": "Polished, dark wood paneled walls seamlessly transitioning to a high ceiling with recessed cove lighting. Large, elegant windows offer subdued views of the exterior.",
+          "midground": "Luxurious, cream-colored sofas and armchairs arranged around a central coffee table made of polished wood and metal. Subtle art pieces adorn the walls.",
+          "foreground": "Plush, deep blue carpeting underfoot, with small, elegant side tables featuring polished metal bases. The base of the windows shows a subtle trim of brushed metal.",
+          "lighting": "Soft, indirect light emanating from the ceiling coves and integrated into the wall panels, mimicking the warm golden hour glow from outside but diffused and ambient.",
+          "atmosphere": "An atmosphere of refined tranquility, where the opulence of the materials is balanced by a serene and inviting mood."
+        },
+        "promptData": {
+          "command": "LOOK"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1773218208485-nj6hiro2s"
+      ],
+      "parentMedia": "media-1773218126694-ynetnf2wm"
+    },
+    "media-1773218396209-tikf4l630": {
+      "id": "media-1773218396209-tikf4l630",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a91b76f/MtyLmfkAFISBP67f2qvO3_UyNz2Uf8.png",
+      "createdAt": "2026-03-11T08:39:56.209Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nTurn camera to face the rear of the yacht's hull and stern. Use 35mm lens, medium shot, f/5.6.\n\nShow the back side of the boat prominently - it should fill most of the frame.\n\nSame Close-up of a Yacht, same golden hour lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "Metropolis Marina",
+          "description": "A vibrant and bustling marina district within Metropolis, bathed in the warm hues of the golden hour.",
+          "background": "Distant skyscrapers of Metropolis with sharp, clean architectural lines, reflecting the warm hues of the golden hour sunset, hinting at a clear and sunny sky.",
+          "midground": "Expansive yacht docks with sleek, polished wooden decks and brushed metal railings, a network of gleaming white and navy yachts moored side-by-side. Maritime architecture with clean facades and large windows overlooks the water, showcasing sophisticated design.",
+          "foreground": "Sparkling, clear turquoise water reflecting the warm sunset palette. Gentle ripples on the water's surface and the shimmering reflections of the yachts and surrounding buildings create a lively and inviting scene. Scattered, high-end speedboats and smaller leisure craft are visible.",
+          "lighting": "Warm, golden hour light casting long shadows and illuminating the scene with a soft, diffused glow. The sunlight creates brilliant, sparkling reflections on the water's surface and highlights the polished surfaces of the yachts and architecture. The sky is a gradient of warm oranges, pinks, and yellows.",
+          "atmosphere": "A sophisticated and lively atmosphere emanates from the bustling marina. The combination of opulent leisure and the warm, inviting light creates an upscale, vibrant ambiance. The clear, sunny weather enhances the feeling of a perfect, inviting day."
+        },
+        "promptData": {
+          "command": "LOOK"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1773218396212-9018wxd5k"
+      ],
+      "parentMedia": "media-1773218059904-mhtl0h3xw"
+    },
+    "media-1773218583350-yia8iggjf": {
+      "id": "media-1773218583350-yia8iggjf",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a91b782/NMvKaiNsJDfX7nak3tB3W_zlgOsrIU.png",
+      "createdAt": "2026-03-11T08:43:03.351Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nPosition the camera as if seated at one of the wooden tables, looking outward into the cafe terrace and the ocean view beyond. Use 35mm lens, medium shot, f/5.6.\n\nShow the view from the wooden table prominently - it should fill most of the frame.\n\nSame Seaside Cafe Terrace, same midday lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "Seaside Cafe Terrace",
+          "description": "A charming cafe terrace overlooking the turquoise ocean and lush green trees. Features a rustic thatched roof, wooden beams, decorative lights, a stone wall with shells and a vintage lamp, a bright blue service window stocked with provisions, wooden tables, chairs, and a breakfast bar.",
+          "background": "The deep, clear turquoise ocean stretches to the horizon, meeting a bright, cloudless sky. Lush green trees and distant, colorful buildings of Portofino provide a vibrant backdrop to the scene.",
+          "midground": "The charming Seaside Cafe Terrace itself is the main focus. A rustic thatched roof is supported by visible wooden beams. A stone wall, adorned with decorative shells and a vintage lamp, forms part of the structure. A bright blue service window, fully stocked with wine bottles, glasses, and plates, is prominent.  Wooden tables and chairs are arranged invitingly.",
+          "foreground": "Closer to the viewer are more details of the cafe's outdoor dining setup. A breakfast bar with wicker chairs and a woven rug.  Wooden tables with place settings.  The light blue wooden floor is visible underfoot.  Green vines with pops of red flowers cascade along the edges of the terrace.",
+          "lighting": "Bright daylight floods the scene, creating a sun-drenched atmosphere. The sunlight reflects off the turquoise ocean, casting a warm glow. Decorative lights, though likely not illuminated at midday, add to the charming ambiance and will be rendered as subtle accents.",
+          "atmosphere": "Charming and picturesque, with a tranquil, sun-drenched mood. The overall feeling is one of relaxed seaside dining."
+        },
+        "promptData": {
+          "command": "LOOK"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1773218583354-lmidko568"
+      ],
+      "parentMedia": "media-1769098495152-c6ms0q87n"
+    },
+    "media-1773218626897-0bruw8lfk": {
+      "id": "media-1773218626897-0bruw8lfk",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a91b786/n5rabHNapyQ856E_zu526_P1GPznW2.png",
+      "createdAt": "2026-03-11T08:43:46.897Z",
+      "metadata": {
+        "prompt": "REFRAME THIS IMAGE:\n\nLean forward slightly and frame the glass on the table tightly. Use 85mm lens, close shot, f/2.8.\n\nShow the glass on the table prominently - it should fill most of the frame.\n\nSame At the Wooden Table, same midday lighting, same style.\n\nFIRST-PERSON POV: This is through the viewer's eyes. No visible body, hands, feet, or person. No reflection of a person in water.\n\nOnly change the camera angle and/or position. Do not invent or add new objects. Do not add duplicate objects that already exist in the scene. Show only what already exists from this new viewpoint.",
+        "promptLayers": {
+          "name": "Seaside Cafe Terrace",
+          "description": "A charming cafe terrace overlooking the turquoise ocean and lush green trees. Features a rustic thatched roof, wooden beams, decorative lights, a stone wall with shells and a vintage lamp, a bright blue service window stocked with provisions, wooden tables, chairs, and a breakfast bar.",
+          "background": "The deep, clear turquoise ocean stretches to the horizon, meeting a bright, cloudless sky. Lush green trees and distant, colorful buildings of Portofino provide a vibrant backdrop to the scene.",
+          "midground": "The charming Seaside Cafe Terrace itself is the main focus. A rustic thatched roof is supported by visible wooden beams. A stone wall, adorned with decorative shells and a vintage lamp, forms part of the structure. A bright blue service window, fully stocked with wine bottles, glasses, and plates, is prominent.  Wooden tables and chairs are arranged invitingly.",
+          "foreground": "Closer to the viewer are more details of the cafe's outdoor dining setup. A breakfast bar with wicker chairs and a woven rug.  Wooden tables with place settings.  The light blue wooden floor is visible underfoot.  Green vines with pops of red flowers cascade along the edges of the terrace.",
+          "lighting": "Bright daylight floods the scene, creating a sun-drenched atmosphere. The sunlight reflects off the turquoise ocean, casting a warm glow. Decorative lights, though likely not illuminated at midday, add to the charming ambiance and will be rendered as subtle accents.",
+          "atmosphere": "Charming and picturesque, with a tranquil, sun-drenched mood. The overall feeling is one of relaxed seaside dining."
+        },
+        "promptData": {
+          "command": "LOOK"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1773218626900-enrqdnoik"
+      ],
+      "parentMedia": "media-1773218583350-yia8iggjf"
+    },
+    "media-1773218724618-qm8eqowmh": {
+      "id": "media-1773218724618-qm8eqowmh",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a91b790/6UyU7t3B39SgMAV10aZib_uesTzLH2.png",
+      "createdAt": "2026-03-11T08:45:24.618Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and step into Cafe Bar and Basement Entrance.\n\nTarget location:\nInterior space carved inside Seaside Cafe Terrace.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect midday conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nThe breakfast bar counter with its wicker chairs, transitioning into the main bar area.  Wooden tables and chairs are arranged neatly.  A discreet, dark wooden door or archway with a hint of a staircase leading down is visible.\nThe light blue wooden floor continues inside, with a woven rug near the breakfast bar.  Close-up details of bar tools and decorative items on the counter.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: Charming and picturesque, with a tranquil, sun-drenched mood. The overall feeling is one of relaxed seaside dining.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nCarved stone walls with embedded shells continue inside, meeting a ceiling of rustic wooden beams and subtle thatched texture. The bright blue service window is visible, now with interior shelving behind it.\n\nInterior lighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday interior.\nCozy and inviting, retaining the charming seaside essence while providing a comfortable, enclosed bar environment, with an undertone of intrigue from the basement entrance.\n\nPhysical constraints:\nSolid ceiling above. Fully enclosed interior. No sky visible.\nThe space is carved into the structure's mass — not a void containing the structure.\nThe structure itself is NOT visible as an object from inside.\nIndirect lighting only — light enters through openings not visible in frame.\nThe entrance is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible through ceiling\n* No open roof or atrium to sky\n* No exterior landscape visible\n* No exterior vegetation unless interior description specifies overgrowth/abandoned\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
+        "promptLayers": {
+          "name": "Cafe Bar and Basement Entrance",
+          "description": "The interior of the cafe's bar area, featuring rustic decor, a stocked service window, and a discreet entrance leading down to the basement.",
+          "background": "Carved stone walls with embedded shells continue inside, meeting a ceiling of rustic wooden beams and subtle thatched texture. The bright blue service window is visible, now with interior shelving behind it.",
+          "midground": "The breakfast bar counter with its wicker chairs, transitioning into the main bar area.  Wooden tables and chairs are arranged neatly.  A discreet, dark wooden door or archway with a hint of a staircase leading down is visible.",
+          "foreground": "The light blue wooden floor continues inside, with a woven rug near the breakfast bar.  Close-up details of bar tools and decorative items on the counter.",
+          "lighting": "Warm, indirect sunlight filters in from the open service window and any interior lighting sources like vintage lamps, casting soft shadows and maintaining the sun-drenched feel. Amber accents from any decorative lights.",
+          "atmosphere": "Cozy and inviting, retaining the charming seaside essence while providing a comfortable, enclosed bar environment, with an undertone of intrigue from the basement entrance."
+        },
+        "promptData": {
+          "command": "GO_INSIDE"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1773218718153-bve5lo5fo"
+      ],
+      "parentMedia": "media-1769098495152-c6ms0q87n"
+    },
+    "media-1773218775331-wnkhxxwz2": {
+      "id": "media-1773218775331-wnkhxxwz2",
+      "type": "image",
+      "url": "https://v3b.fal.media/files/b/0a91b795/j6yjhUCkq_Cxg1IxIdQlo_clKyXJ7c.png",
+      "createdAt": "2026-03-11T08:46:15.331Z",
+      "metadata": {
+        "prompt": "Action:\nMove the camera forward and step into Secret Basement Bar.\n\nTarget location:\nInterior space carved inside Seaside Cafe Terrace.\n\nCamera:\nHuman eye level, positioned well inside the structure.\nThe camera is past the entrance and past any exterior-facing opening.\n\nOrientation:\nFacing inward toward the interior.\nThe entrance is behind the camera and must not be visible.\n\nLIGHTING CONDITIONS (MANDATORY - DO NOT IGNORE):\nTime of day: MIDDAY\nDAYTIME interior - natural indirect light filtering through unseen openings, brighter ambient illumination, softer shadows.\nInterior lighting MUST reflect midday conditions even though sky is not visible.\n\nReveal:\nAn enclosed interior space within the structure.\nA small, sturdy wooden bar counter, a few intimate seating nooks carved into alcoves, and shelves stocked with vintage bottles.\nA worn, dark stone floor, perhaps with scattered rugs or mats, and the bases of stone support columns.\n\nPreserve (visual identity as SURFACE TREATMENT ONLY):\nThe exterior's visual signature applied to interior walls and surfaces:\n* Atmosphere tone: Charming and picturesque, with a tranquil, sun-drenched mood. The overall feeling is one of relaxed seaside dining.\n\nStyle lock:\nPreserve the exterior's aesthetic as surface treatment for interior walls.\n\nCarry forward (apply to enclosing walls, floor, ceiling):\nRough, irregularly shaped stone walls that descend into shadow, accented by dark, aged wooden beams overhead.\n\nInterior lighting and atmosphere (MUST MATCH MIDDAY):\nLighting appropriate for midday interior.\nIntimate, cozy, and slightly mysterious, with a feeling of being completely cut off from the world above.\n\nPhysical constraints:\nSolid rock/earth ceiling above. Fully enclosed underground space. No sky, no exterior openings.\nThe space is carved into the mass — not a void or cavern containing structures.\nIndirect or artificial lighting only.\nThe entrance passage is behind the camera position.\n\nProhibitions:\n* Do not frame the entrance door/opening in the view\n* Do not show exterior establishing shot\n* Do not reinterpret the architectural style\n* No sky visible\n* No surface-level features\n* No central pillar/spire structure\n* No atrium or void to surface\n* Do not create a central pillar, spire, column, or tower form inside the space\n* Do not show the structure as an object visible from inside\n* Do not show windows or openings to the exterior\n\nFinal constraint:\nShow a grounded, enclosed interior that clearly belongs inside this structure and leads further inward.",
+        "promptLayers": {
+          "name": "Secret Basement Bar",
+          "description": "A hidden, intimate bar located in the cafe's basement, offering a stark contrast to the bright terrace above. Rough-hewn stone walls and dim lighting create a sense of clandestine seclusion.",
+          "background": "Rough, irregularly shaped stone walls that descend into shadow, accented by dark, aged wooden beams overhead.",
+          "midground": "A small, sturdy wooden bar counter, a few intimate seating nooks carved into alcoves, and shelves stocked with vintage bottles.",
+          "foreground": "A worn, dark stone floor, perhaps with scattered rugs or mats, and the bases of stone support columns.",
+          "lighting": "Dim, warm light emanating from strategically placed vintage lamps and perhaps subtle, colored spotlights, casting long shadows and highlighting textures.",
+          "atmosphere": "Intimate, cozy, and slightly mysterious, with a feeling of being completely cut off from the world above."
+        },
+        "promptData": {
+          "command": "GOTO"
+        },
+        "model": "fal-flux-2-turbo-edit",
+        "width": 1920,
+        "height": 1080,
+        "aspectRatio": "landscape_16_9"
+      },
+      "entityRefs": [
+        "v2-1773218768729-w0mg0k8jd"
+      ],
+      "parentMedia": "media-1769098495152-c6ms0q87n"
     }
   }
 }
